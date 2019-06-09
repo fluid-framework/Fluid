@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Before opening**
-- [Search for duplicate or closed issues](https://github.com/boundary-studio/Fluid/issues?q=is%3Aissue+sort%3Aupdated-desc)
+- [Search for duplicate or closed issues](https://github.com/BoundaryStudio/Fluid/issues?q=is%3Aissue+sort%3Aupdated-desc)
 - [Validate](https://html5.validator.nu/)
 
 **Describe the bug**

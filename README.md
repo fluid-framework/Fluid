@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/boundary-studio/Fluid/tree/master/dist">
+  <a href="https://github.com/BoundaryStudio/Fluid/tree/master/dist">
     <img src="http://ashfahan.com/fluid/logo.svg" alt="Fluid logo" width="256" height="256">
   </a>
 </p>
@@ -8,9 +8,9 @@
   Modern, Stylish, Easier and Powerful front-end framework for faster web development.
   <br>
   <br>
-  <a href="https://github.com/boundary-studio/fluid/issues/new?template=bug.md">Report bug</a>
+  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=bug.md">Report bug</a>
   |
-  <a href="https://github.com/boundary-studio/fluid/issues/new?template=feature.md&labels=feature">Request feature</a>
+  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=feature.md&labels=feature">Request feature</a>
 </p>
 
 <p align="center">
@@ -29,7 +29,7 @@
 
 ## Copyright and license
 
-Code copyright (c) 2019-2027 [Boundary Studio](https://boundarystudio.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/boundary-studio/Fluid/graphs/contributors).
+Code copyright (c) 2019-2027 [Boundary Studio](https://boundarystudio.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/BoundaryStudio/Fluid/graphs/contributors).
 <br>
 <br>
-Code released under the [MIT License](https://github.com/boundary-studio/Fluid/blob/master/LICENSE).
+Code released under the [MIT License](https://github.com/BoundaryStudio/Fluid/blob/master/LICENSE).
