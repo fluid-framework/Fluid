@@ -19,25 +19,17 @@
 
 ## Creators
 
-👷 **Ashfahan**
+👷 **Ashfahan** ◾️ [Portfolio](https://ashfahan.com) | [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
 
-[Portfolio](https://ashfahan.com)
-|
-[Github](https://github.com/ashfahan)
-|
-[Gitlab](https://gitlab.com/ashfahan)
-
-## Thanks
+## Sponsors
 
 <a href="https://www.browserstack.com/">
   <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
 </a>
 
-Thanks to [BrowserStack](https://www.browserstack.com/) for providing open source testing in real browsers.
-
 ## Copyright and license
 
-Code copyright (c) 2019-2027 [Boundary Studio](https://boundarystudio.com) and [Ashfahan](https://Ashfahan.com).
+Code copyright (c) 2019-2027 [Boundary Studio](https://boundarystudio.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/boundary-studio/Fluid/graphs/contributors).
 <br>
 <br>
 Code released under the [MIT License](https://github.com/boundary-studio/Fluid/blob/master/LICENSE).
