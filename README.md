@@ -5,8 +5,7 @@
 </p>
 
 <p align="center">
-  Modern, Stylish, Easier and Powerful front-end framework for faster and easier web development.
-  <br>
+  Modern, Stylish, Easier and Powerful front-end framework for faster web development.
   <br>
   <br>
   <a href="https://github.com/boundary-studio/fluid/issues/new?template=bug.md">Report bug</a>
