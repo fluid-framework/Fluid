@@ -34,16 +34,16 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
 
-- OS: <input type="text" name="Desktop_OS"/> [e.g. iOS]
-- Browser <input type="text" name="Desktop_Browser"/> [e.g. chrome, safari]
-- Version <input type="text" name="Desktop_Version"/> [e.g. 22]
+- OS: [e.g. iOS]
+- Browser [e.g. chrome, safari]
+- Version [e.g. 22]
 
 **Smartphone (please complete the following information):**
 
-- Device: <input type="text" name="Smartphone_Device"/> [e.g. iPhone6]
-- OS: <input type="text" name="Smartphone_OS"/> [e.g. iOS8.1]
-- Browser <input type="text" name="Smartphone_Browser"/> [e.g. stock browser, safari]
-- Version <input type="text" name="Smartphone_Version"/> [e.g. 22]
+- Device: [e.g. iPhone6]
+- OS: [e.g. iOS8.1]
+- Browser [e.g. stock browser, safari]
+- Version [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.
