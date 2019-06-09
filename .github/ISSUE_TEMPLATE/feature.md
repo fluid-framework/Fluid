@@ -1,14 +1,14 @@
 ---
 name: Feature
 about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
 
 **Before opening**
-- [Search for duplicate or closed issues](https://github.com/BoundaryStudio/Fluid/issues?q=is%3Aissue+sort%3Aupdated-desc)
+
+- [ ] [Search for duplicate or closed issues](https://github.com/BoundaryStudio/Fluid/issues?q=is%3Aissue+sort%3Aupdated-desc)
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is.
