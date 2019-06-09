@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="">
+  <a href="https://github.com/boundary-studio/Fluid/tree/master/dist">
     <img src="http://ashfahan.com/fluid/logo.svg" alt="Fluid logo" width="256" height="256">
   </a>
 </p>
