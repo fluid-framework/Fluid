@@ -1,25 +1,42 @@
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# Testing
 /coverage
 
-# production
+# Production
 /build
 
-# local editor settings
+# Local editor settings
 .vscode/*
+.settings
+.project
+.tmproj
+*.esproj
+nbproject
 
-# misc
+
+
+# Log and Temp extensions
+.cache
+*.diff
+*.err
+*.log
+*.rej
+*.zip
+*~
+
+
+# OS or Editor folders
+._*
+.idea
+Thumbs.db
+
+# Misc
 .DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-
-# log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
