@@ -1,11 +1,3 @@
----
-name: Pull Request Template
-about: ""
-title: Pull Request
-labels: ""
-assignees: ""
----
-
 **Before submitting**
 
 - Update your code to latest [master branch](https://github.com/BoundaryStudio/Fluid/tree/master)
