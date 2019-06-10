@@ -6,6 +6,8 @@ labels: ""
 assignees: ""
 ---
 
+Note: use x to mark checkbox inputs e.g [x] is considered checked and [ ] is considered unchecked
+
 **Before opening**
 
 - [ ] [Search for duplicate or closed issues](https://github.com/BoundaryStudio/Fluid/issues?q=is%3Aissue+sort%3Aupdated-desc)

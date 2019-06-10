@@ -1,3 +1,5 @@
+Note: use x to mark checkbox inputs e.g [x] is considered checked and [ ] is considered unchecked
+
 **Before submitting**
 
 - Update your code to latest [master branch](https://github.com/BoundaryStudio/Fluid/tree/master)
