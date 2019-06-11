@@ -34,12 +34,12 @@
   },
   "scripts": {
     "start": "yarn run build:compile -w",
+    "lint": "yarn run build:lint",
     "deploy": "yarn run build",
-    "lint": "npm-run-all -s build:compile build:lint",
     "build": "npm-run-all -s build:*",
+    "build:lint": "stylelint src/**/*.scss --fix",
     "build:clean": "rimraf dist",
     "build:compile": "node-sass ./src --output ./dist/ --output-style expanded --indent-type space --indent-width 2 --source-map true",
-    "build:lint": "foreach -g ./dist/*.css -i ./dist/*.min.css -x \"stylelint ./dist/#{name}.css --fix\"",
     "build:prefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer --map false",
     "build:minify": "foreach -g ./dist/*.css -i ./dist/*.min.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed --source-map true\""
   },
