@@ -35,6 +35,7 @@
   "scripts": {
     "start": "yarn run build:compile -w",
     "lint": "yarn run build:lint",
+    "test": "yarn run build:lint",
     "deploy": "yarn run build",
     "build": "npm-run-all -s build:*",
     "build:lint": "stylelint src/**/*.scss --fix",
