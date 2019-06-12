@@ -17,6 +17,26 @@
  ⚠️ Under Heavy Construction ⚠️
 </p>
 
+## 📂 Structure
+
+```
+src
+├───settings
+│   ├───breakpoints
+│   ├───containers
+│   ├───grid
+│   ├───misc
+│   ├───space
+│   ├───theme
+│   └───typography
+├───tools
+│   ├───functions
+│   └───mixins
+└───trumps
+    ├───helpers
+    └───utilities
+```
+
 ## Creators
 
 👷 **Ashfahan** ◾️ [Portfolio](https://ashfahan.com) | [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
