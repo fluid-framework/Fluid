@@ -3,8 +3,8 @@
 // Takes two lists, the first for key(s), second for value(s).
 //
 // Required arguments:
-// {List or String} $key(s) - Key(s) for new map
-// [optional] {List or String} $value(s) - Value(s) for new map
+// {List or String} $keys - Key(s) for new map
+// [optional] {List or String} $values - Value(s) for new map
 //
 // Example of use:
 // $a: a b c d;
