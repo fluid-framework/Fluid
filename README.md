@@ -45,6 +45,19 @@ src
     └───utilities
 ```
 
+## 🌐 Browser Support
+
+Fluid Uses Css version 3 so it is supported by majority of browsers. Fluid is compatible with recent versions of:
+
+- Chrome
+- Edge
+- Firefox
+- Opera
+- Safari
+- Internet Explorer (10+) is only partially supported.
+
+Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibility with earlier versions of browsers. [For more info](https://github.com/BoundaryStudio/Fluid/tree/master/.browserslistrc)
+
 ## 🧠 Creators
 
 👨‍💻 **Ashfahan** ◾️ [Portfolio](https://ashfahan.com) | [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
