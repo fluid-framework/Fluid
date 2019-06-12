@@ -1,6 +1,5 @@
 //
 // Todo : Optimization and improvement
-// Todo : Add check to prefix or suffix only if not null or ""
 //
 
 //
@@ -13,6 +12,8 @@
   $class: map-get($class-config, "class");
   $infixes: map-has-key($class-config, "infixes") and map-get($class-config, "infixes");
   $responsive: map-has-key($class-config, responsive) and map-get($class-config, responsive) == true;
+  $disable-prefix-infixes-keys: map-has-key($class-config, "disable-prefix-infixes-keys") and map-get($class-config, "disable-prefix-infixes-keys");
+  $disable-prefix-infixes-values: map-has-key($class-config, "disable-prefix-infixes-values") and map-get($class-config, "disable-prefix-infixes-values");
 
   @if $responsive {
     @each $breakpoint in map-keys($breakpoints) {
@@ -20,8 +21,13 @@
         @if $infixes {
           $infixes: to-map($infixes);
           @each $infix-key, $infix-value in $infixes {
-            $infix-key: prefix($infix-key, "-");
-            $infix-value: prefix($infix-value, "-");
+            @if not $disable-prefix-infixes-keys {
+              $infix-key: prefix($infix-key, "-");
+            }
+
+            @if not $disable-prefix-infixes-values {
+              $infix-value: prefix($infix-value, "-");
+            }
 
             @include generate-inner-class($class, $infix-key, $infix-value, $breakpoint, $properties, $values);
           }
@@ -34,8 +40,13 @@
     @if $infixes {
       $infixes: to-map($infixes);
       @each $infix-key, $infix-value in $infixes {
-        $infix-key: prefix($infix-key, "-");
-        $infix-value: prefix($infix-value, "-");
+        @if not $disable-prefix-infixes-keys {
+          $infix-key: prefix($infix-key, "-");
+        }
+
+        @if not $disable-prefix-infixes-values {
+          $infix-value: prefix($infix-value, "-");
+        }
 
         @include generate-inner-class($class, $infix-key, $infix-value, null, $properties, $values);
       }
