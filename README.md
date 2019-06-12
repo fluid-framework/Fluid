@@ -60,7 +60,7 @@ Fluid Uses Css version 3 so it is supported by majority of browsers. Fluid is co
 - Safari
 - Internet Explorer (10+) is only partially supported.
 
-Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibility with earlier versions of browsers. [For more info](https://github.com/BoundaryStudio/Fluid/tree/master/.browserslistrc)
+Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibility with earlier versions of [browsers](https://github.com/BoundaryStudio/Fluid/tree/master/.browserslistrc)
 
 ## 🛠 Customization
 
