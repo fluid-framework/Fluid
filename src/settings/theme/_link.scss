@@ -1,0 +1,9 @@
+//
+// Anchor elements Settings
+//
+
+$link-color:                      $primary !default;
+$link-decoration:                 none !default;
+$link-hover-decoration:           none !default;
+$link-hover-darken-percentage:    15% !default;
+$link-hover-color:                darken($link-color, $link-hover-darken-percentage) !default;

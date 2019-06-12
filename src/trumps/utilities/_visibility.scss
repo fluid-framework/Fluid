@@ -1,0 +1,8 @@
+//
+// Visibility
+//
+
+@if $generate-utilities-classes {
+  .visible { visibility: visible; }
+  .invisible { visibility: hidden; }
+}

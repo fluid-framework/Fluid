@@ -1,0 +1,40 @@
+//
+// Overflow
+//
+
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: overflow,
+    class: overflow,
+    values: (
+      scroll,
+      hidden,
+      auto,
+      visible
+    )
+  );
+
+  @include generate-class($config);
+
+  //
+  // Overflow horizontal and vertical
+  //
+
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: overflow,
+    class: overflow,
+    values: (
+      scroll,
+      hidden,
+      auto,
+      visible
+    ),
+    infixes: x y
+  );
+
+  @include generate-class($config);
+}

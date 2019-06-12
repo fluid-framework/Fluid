@@ -1,0 +1,55 @@
+//
+// to-map
+// Takes two lists, the first for key(s), second for value(s).
+//
+// Required arguments:
+// {List or String} $key(s) - Key(s) for new map
+// [optional] {List or String} $value(s) - Value(s) for new map
+//
+// Example of use:
+// $a: a b c d;
+// $b: 1 2 3 4;
+// $result: to-map($a,$b); => $result : (a:1,b:2,c:3,d:4);
+//
+// Return :
+// {List} new Map
+//
+@function to-map($keys, $values: $keys) {
+  // return if its already a map
+  @if type-of($keys) == "map" or type-of($values) == "map" {
+    @return $keys;
+  }
+
+  @if type-of($keys) == "string" or type-of(nth($keys, 1)) != "list" {
+    $map: ();
+    $length-keys: length($keys);
+    $length-values: length($values);
+    $min-length: min($length-keys, $length-values);
+
+    // Warn if the Length of keys and values are not the same
+    @if $length-keys != $length-values {
+      @warn "There are #{$length-keys} key(s) for #{$length-values} value(s) in the map for `map-zip`. Resulting map will only have #{$min-length} pairs.";
+    }
+
+    // return if keys are empty list
+    @if $length-keys == 0 {
+      @error "The length of keys `#{$keys}` is `#{$length-keys}` , cannot merge empty keys";
+    }
+
+    @if $length-values == 0 {
+      @error "The length of values `#{$values}` is `#{$length-values}` , cannot merge empty values";
+    }
+
+    // Convert to map
+    @for $i from 1 through $min-length {
+      $map: map-merge(
+        $map,
+        (
+          nth($keys, $i): nth($values, $i)
+        )
+      );
+    }
+    @return $map;
+  }
+  @error "Unexpected Error";
+}

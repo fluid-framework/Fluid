@@ -1,0 +1,11 @@
+@if $generate-utilities-classes {
+  .event-none,
+  .event-none * {
+    pointer-events: none;
+  }
+
+  .event-auto,
+  .event-auto * {
+    pointer-events: auto;
+  }
+}

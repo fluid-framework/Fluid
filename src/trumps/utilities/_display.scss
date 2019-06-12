@@ -1,0 +1,25 @@
+//
+// Display
+//
+
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: true,
+    properties: display,
+    class: d,
+    values: (
+      hide: none,
+      inline: inline,
+      inline-block: inline-block,
+      block: block,
+      table: table,
+      table-row: table-row,
+      table-cell: table-cell,
+      flex: flex,
+      inline-fle: inline-flex
+    )
+  );
+
+  @include generate-class($config);
+}

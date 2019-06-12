@@ -1,0 +1,37 @@
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: color,
+    class: clr,
+    values:
+    map-merge(
+      $theme-colors,
+      (
+        body: $body-color,
+        black: $black,
+        black-25: rgba($black, .25),
+        black-50: rgba($black, .5),
+        black-75: rgba($black, .75),
+        white: $white,
+        white-25: rgba($white, .25),
+        white-50: rgba($white, .5),
+        white-75: rgba($white, .75),
+        hide: transparent,
+      )
+    )
+  );
+
+  @include generate-class($config);
+
+  @each $color, $value in map-remove(map-get($config, "values"), inherit) {
+    @if $link-hover-darken-percentage != 0 {
+      a.#{map-get($config,"class")}-#{$color} {
+        &:hover,
+        &:focus {
+          color: darken($value, $link-hover-darken-percentage);
+        }
+      }
+    }
+  }
+}

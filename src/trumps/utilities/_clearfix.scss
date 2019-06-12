@@ -1,0 +1,16 @@
+//
+// clearfix
+//
+
+@if $generate-utilities-classes {
+  //
+  // Doc : add Doc
+  //
+  .clearfix {
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+  }
+}

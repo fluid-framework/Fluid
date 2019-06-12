@@ -1,0 +1,22 @@
+//
+// gradient
+// returns the gradient color if gradient style is enabled in Settings
+// else return solid style color
+//
+// Required arguments:
+// {Color} $color : color used to generate gradient
+// {Rotation} $angle : angle at which gradient will be generated
+//
+// Example of use:
+// gradient(#805ad5) => #805ad5 linear-gradient(180deg, mix(#fff, #805ad5, 15%), #805ad5) repeat-x
+//
+// Return:
+// {Color} Gradient or background
+//
+@function gradient($color, $angle) {
+  @if $style-gradients-else-solid {
+    @return $color linear-gradient($angle, mix($body-bg, $color, 15%), $color) repeat-x;
+  } @else {
+    @return $color;
+  }
+}

@@ -1,0 +1,23 @@
+//
+// prefix
+// Trim and prefix the value with symbol
+//
+// Required arguments:
+// {*} $value - value
+// {String} $symbol - symbol to prefix
+//
+// Example of use:
+// prefix('manta', "~"); // ~manta
+//
+// Return :
+// prefixed Value or empty if value is empty or null
+//
+@function prefix($value, $symbol) {
+  @if $value == null or $value == "" {
+    @return "";
+  }
+  @if type-of($value) == "string" {
+    $value: trim($value);
+  }
+  @return #{$symbol}#{$value};
+}

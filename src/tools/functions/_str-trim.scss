@@ -1,0 +1,23 @@
+//
+// trim
+// removed spaces.
+//
+// Required arguments:
+// {*} $value - value to trim
+//
+// Example of use:
+// trim(' te st ing '); => testing
+//
+// Return :
+// {*} trimmed value
+//
+@function trim($value) {
+  @if type-of($value) != "string" {
+    @error "The argument $value: `#{$value}` is of incorrect type: `#{type-of($value)}`. Type of `string` is required!";
+  }
+  @while (str-index($value, " ") != null) {
+    $index: str-index($value, " ");
+    $value: "#{str-slice($value, 0, $index - 1)}#{str-slice($value, $index + 1)}";
+  }
+  @return $value;
+}

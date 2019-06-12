@@ -1,0 +1,37 @@
+//
+// to-list
+// Takes a map and convert it into list
+//
+// Required arguments:
+// {Map} $map - map to convert
+// [optional] {String} $keep - check to keep value(s) or key(s) or both in result list
+//
+// Example of use:
+// $a : (a:1,b:2,c:3,d:4);
+// $result: to-list($a,'keys'); => $result : (a,b,c,d);
+//
+// Return :
+// {List} new list
+//
+@function to-list($map, $keep: "both") {
+  $keep: if(index("keys" "values", $keep), $keep, "both");
+
+  @if type-of($map) != "map" {
+    @error "The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!";
+  }
+  $keys: ();
+  $values: ();
+
+  @each $key, $val in $map {
+    $keys: append($keys, $key);
+    $values: append($values, $val);
+  }
+
+  @if $keep == "keys" {
+    @return map-keys($map);
+  } @else if $keep == "values" {
+    @return map-values($map);
+  } @else {
+    @return zip($keys, $values);
+  }
+}

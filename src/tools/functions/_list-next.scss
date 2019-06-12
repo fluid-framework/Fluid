@@ -1,0 +1,21 @@
+//
+// list-next
+// return the next value in list
+//
+// Required arguments:
+// {*} $value - value to find next to
+//
+// Example of use:
+// $a: (a b c d);
+// list-next(b) => c
+//
+// Return :
+// {*} next value to $value, null if $value is last.
+//
+@function list-next($list, $value) {
+  $index: index($list, $value);
+  @if not $index  {
+    @error "value `#{$value}` not found in `#{$list}`";
+  }
+  @return if($index < length($list), nth($list, $index + 1), null);
+}

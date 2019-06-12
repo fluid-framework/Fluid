@@ -1,0 +1,9 @@
+//
+// Grid Settings
+//
+
+$grid-columns:       24 !default; // Set the number of columns
+
+// specify the width of the gap
+// Using unit `px` for consistent and independent Spacing between columns
+$grid-gap:       24px !default;
