@@ -3,6 +3,7 @@
 //
 
 @if $generate-utilities-classes {
+  // Idea : reduce values because it isn't used often ?
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
