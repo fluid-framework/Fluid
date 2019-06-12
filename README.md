@@ -8,7 +8,7 @@
   Modern, Stylish, Easier and Powerful front-end framework for faster web development.
   <br>
   <br>
-  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=bug.md">Report bug 🐛 </a>
+  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=bug.md">Report bug 🐛</a>
   |
   <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=feature.md&labels=feature">Request feature ✨ </a>
 </p>
