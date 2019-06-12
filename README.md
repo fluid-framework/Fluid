@@ -45,6 +45,10 @@ src
     └───utilities
 ```
 
+## 💅 CSS only
+
+Fluid is a CSS implementation only means it components are faster than JavaScript Components but being a CSS only framework also means that for components like Alerts Popup User have to implement there own JavaScript Implementation and logics.
+
 ## 🌐 Browser Support
 
 Fluid Uses Css version 3 so it is supported by majority of browsers. Fluid is compatible with recent versions of:
