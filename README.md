@@ -17,6 +17,14 @@
  🚧 Under Heavy Construction 🚧
 </p>
 
+## 🚀 Quick Start
+
+- Using Repository
+
+1. [Download](https://github.com/BoundaryStudio/Fluid/archive/master.zip) Latest master branch
+2. Extract and copy to project folder
+3. Import into page using <link href="./Fluid-master/dist/fluid.css" rel="stylesheet" />
+
 ## 📂 Structure
 
 ```
