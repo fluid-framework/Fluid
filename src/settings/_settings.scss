@@ -7,6 +7,7 @@
 $default-unit:                                0% !default;      // Zero is used to keep the variable type number
 $style-gradients-else-solid:                  false !default;   // Let you chose between gradient vs solid Style UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
+$generate-spacing-classes:                    true !default;    // Enable Grid Classes
 $generate-helper-classes:                     true !default;    // Enable helper Classes
 $generate-utilities-classes:                  true !default;    // Enable utilities Classes
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
