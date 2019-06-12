@@ -8,13 +8,13 @@
   Modern, Stylish, Easier and Powerful front-end framework for faster web development.
   <br>
   <br>
-  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=bug.md">Report bug</a>
+  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=bug.md">Report bug 🐛 </a>
   |
-  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=feature.md&labels=feature">Request feature</a>
+  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=feature.md&labels=feature">Request feature ✨ </a>
 </p>
 
 <p align="center">
- ⚠️ Under Heavy Construction ⚠️
+ 🚧 Under Heavy Construction 🚧
 </p>
 
 ## 📂 Structure
@@ -37,17 +37,17 @@ src
     └───utilities
 ```
 
-## Creators
+## 🧠 Creators
 
-👷 **Ashfahan** ◾️ [Portfolio](https://ashfahan.com) | [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
+👨‍💻 **Ashfahan** ◾️ [Portfolio](https://ashfahan.com) | [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
 
-## Sponsors
+## 🤝 Sponsors
 
 <a href="https://www.browserstack.com/">
   <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
 </a>
 
-## Copyright and license
+## ©️ Copyright and license
 
 Code copyright (c) 2019-2027 [Boundary Studio](https://boundarystudio.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/BoundaryStudio/Fluid/graphs/contributors).
 <br>
