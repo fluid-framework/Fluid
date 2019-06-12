@@ -1,0 +1,19 @@
+//
+// Float
+//
+
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: true,
+    properties: float,
+    class: float,
+    values: (
+      left,
+      right,
+      none
+    )
+  );
+
+  @include generate-class($config);
+}

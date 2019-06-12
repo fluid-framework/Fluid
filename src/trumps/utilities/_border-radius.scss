@@ -1,0 +1,39 @@
+//
+// Border-radius
+//
+
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: border-radius,
+    class: is-rounded,
+    values: (
+      null: $border-radius-default,
+      sm: $border-radius-sm,
+      lg: $border-radius-lg,
+      circle: 50%,
+      pill: $border-radius-pill,
+      none: none
+    )
+  );
+
+  @include generate-class($config);
+
+  .is-rounded-top {
+    border-top-left-radius: $border-radius-default;
+    border-top-right-radius: $border-radius-default;
+  }
+  .is-rounded-right {
+    border-top-right-radius: $border-radius-default;
+    border-bottom-right-radius: $border-radius-default;
+  }
+  .is-rounded-bottom {
+    border-bottom-right-radius: $border-radius-default;
+    border-bottom-left-radius: $border-radius-default;
+  }
+  .is-rounded-left {
+    border-top-left-radius: $border-radius-default;
+    border-bottom-left-radius: $border-radius-default;
+  }
+}

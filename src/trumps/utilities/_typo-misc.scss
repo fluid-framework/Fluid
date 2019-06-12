@@ -1,0 +1,19 @@
+//
+// Misc
+//
+@if $generate-utilities-classes {
+  .text-decoration-none {
+    text-decoration: none;
+  }
+  .text-break {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .text-clip {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .italic {
+    font-style: italic;
+  }
+}

@@ -1,0 +1,35 @@
+//
+// Space Settings
+//
+
+$space-default:       1rem !default; // Default Space Between elements
+
+// Types of spaces
+$space-types: (
+  m: margin,
+  p: padding
+) !default;
+
+// Default Sizes of spaces
+$space-sizes: (
+  auto: auto,
+  0: 0,
+  1: 1 + $default-unit,
+  2: 2 + $default-unit,
+  3: 3 + $default-unit,
+  4: 4 + $default-unit,
+  5: 5 + $default-unit,
+  6: 6 + $default-unit,
+  7: 7 + $default-unit,
+  8: 8 + $default-unit,
+  9: 9 + $default-unit,
+  10: 10 + $default-unit,
+  15: 15 + $default-unit,
+  20: 20 + $default-unit,
+  25: 25 + $default-unit,
+  30: 30 + $default-unit,
+  35: 35 + $default-unit,
+  40: 40 + $default-unit,
+  45: 45 + $default-unit,
+  50: 50 + $default-unit
+) !default;

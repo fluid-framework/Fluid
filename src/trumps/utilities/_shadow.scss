@@ -1,0 +1,24 @@
+//
+// Shadow
+//
+
+//
+// Todo : add color variants
+//
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: box-shadow,
+    class: shadow,
+    values: (
+      sm: 1px 1px 3px 0 rgba($black, .075),
+      null: 1px 4px 6px 0 rgba($black, .15),
+      lg: 2px 10px 15px 0 rgba($black, .175),
+      round: 0 5px 15px rgba($black, .15),
+      none: none
+    )
+  );
+
+  @include generate-class($config);
+}

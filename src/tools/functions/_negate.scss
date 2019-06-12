@@ -1,0 +1,46 @@
+//
+// negate
+// negate value(s) or key(s) or both in a list or map
+//
+// Note:
+// if string is supplied as key or value it will just prefix `-` to string
+//
+// Required arguments:
+// {List|Map} $list-map - list or map
+// [optional] {String} $negate - check to negate value(s) or key(s) or both
+//
+// Example of use:
+// $a: (foo:1, bar:2, baz:3, qux:4);
+// $result: negate($a, "both") =>  (-foo:-1, -bar:-2, -baz:-3, -qux:-4)
+//
+// Return :
+// {List|Map} processed list or map
+//
+@function negate($list-map, $negate: "value") {
+  $result: ();
+
+  @if $negate != "both" and $negate != "keys" and $negate != "value" {
+    @error "invalid $negate value `#{$negate}` . value must be `both` or `keys` or `value`";
+  }
+
+  @if type-of($list-map) != "map" and type-of($list-map) != "list" {
+    @error "invalid type of $list-map `#{type-of($list-map)}` . Type must be `map` or `list`";
+  }
+
+  @if type-of($list-map) == "map" {
+    @each $key, $value in $list-map {
+      @if $negate == "both" {
+        $result: map-merge($result, (-$key: - $value));
+      } @else if $negate == "keys" {
+        $result: map-merge($result, (-$key: $value));
+      } @else if $negate == "value" {
+        $result: map-merge($result, ($key: - $value));
+      }
+    }
+  } @else if type-of($list-map) == "list" {
+    @each $value in $list-map {
+      $result: join($result, -$value);
+    }
+  }
+  @return $result;
+}

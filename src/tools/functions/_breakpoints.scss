@@ -1,0 +1,71 @@
+//
+// Breakpoints Functions
+//
+
+//
+// breakpoint-next
+// return the name of the breakpoint next of supplied breakpoint
+//
+// Required arguments:
+// {String} $breakpoint - name of the breakpoint to find next of
+// {Map} $breakpoints - breakpoints map to look into
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// breakpoint-next(sm) => md
+// breakpoint-next(sm, $breakpoints) => md
+// breakpoint-next(sm, (xs sm md lg xl)) => md
+//
+// Return :
+// {String|null} the name of the breakpoint next of supplied breakpoint or null for the last breakpoint.
+//
+@function breakpoint-next($name, $breakpoints: $breakpoints) {
+  $breakpoints: to-list($breakpoints, "keys");
+  @return list-next($breakpoints, $name);
+}
+
+//
+// breakpoint-lower
+// return the lower value of the breakpoint
+//
+// Required arguments:
+// {String} $breakpoint - name of the breakpoint
+// {Map} $breakpoints - breakpoints map to look into
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// breakpoint-lower(xs) => 0
+// breakpoint-lower(sm, $breakpoints) => 576px44
+//
+// Return :
+// {Number} Starting point of the breakpoint. Null for the smallest (first) breakpoint.
+//
+@function breakpoint-lower($name, $breakpoint: $breakpoints) {
+  $lower: map-get($breakpoint, $name);
+  @return if($lower == 0, null, $lower);
+}
+
+//
+// breakpoint-upper
+// return the upper value of the breakpoint
+//
+// Required arguments:
+// {String} $breakpoint - name of the breakpoint
+// {Map} $breakpoints - breakpoints map to look into
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// breakpoint-upper(xs) => 575.5px
+// breakpoint-upper(sm, $breakpoints) => 767.5px
+//
+// Return :
+// {Number} Ending point of the breakpoint. Null for the largest (last) breakpoint.
+//
+@function breakpoint-upper($name, $breakpoint: $breakpoints) {
+  $next: breakpoint-next($name, $breakpoint);
+  @if not $next {
+    @return null;
+  }
+  $next-lower: breakpoint-lower($next, $breakpoint);
+  @return $next-lower - .05;
+}

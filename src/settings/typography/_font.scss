@@ -1,0 +1,20 @@
+//
+// Font Settings
+//
+
+$font-size-default:       14px !default;
+
+$font-family-sans-serif:       -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif:            georgia, cambria, "Times New Roman", times, serif !default;
+$font-family-monospace:        sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-default:          $font-family-sans-serif !default;
+
+$font-weight-lighter:       lighter !default;
+$font-weight-light:         300 !default;
+$font-weight-normal:        400 !default;
+$font-weight-bold:          700 !default;
+$font-weight-bolder:        bolder !default;
+$font-weight-default:       $font-weight-normal !default;
+
+$small-font-size:       80% !default;
+$large-font-size:       120% !default;

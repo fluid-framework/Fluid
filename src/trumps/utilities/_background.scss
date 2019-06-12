@@ -1,0 +1,65 @@
+//
+// Background
+//
+
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: background-color,
+    class: bg,
+    values:
+    map-merge(
+      $theme-colors,
+      (
+        body: $body-color,
+        black: $black,
+        black-25: rgba($black, .25),
+        black-50: rgba($black, .5),
+        black-75: rgba($black, .75),
+        white: $white,
+        white-25: rgba($white, .25),
+        white-50: rgba($white, .5),
+        white-75: rgba($white, .75),
+        hide: transparent,
+      )
+    )
+  );
+
+  @include generate-class($config);
+
+  //
+  // Gradient Background
+  //
+
+  @if $style-gradients-else-solid {
+    $GRADIENTS: ();
+
+    @each $color, $value in $theme-colors {
+      $GRADIENTS: map-merge(
+        $GRADIENTS,
+        (
+          $color: gradient($value, 180deg)
+        )
+      );
+    }
+
+    // stylelint-disable-next-line scss/dollar-variable-default
+    $config: (
+      responsive: false,
+      properties: background,
+      class: bg-gradient,
+      values:
+      map-merge(
+        $GRADIENTS,
+        (
+          body: $body-color linear-gradient(180deg, mix($body-bg, $body-color, 15%), $body-color) repeat-x,
+          black: $black linear-gradient(180deg, mix($body-bg, $black, 15%), $black) repeat-x,
+          white: $white linear-gradient(180deg, mix($body-bg, $white, 15%), $white) repeat-x
+        )
+      )
+    );
+
+    @include generate-class($config);
+  }
+}

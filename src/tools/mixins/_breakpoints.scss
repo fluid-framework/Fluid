@@ -1,0 +1,123 @@
+//
+// Breakpoints Mixins
+//
+
+//
+// media-breakpoint-above
+// Generate a media query for given breakpoint and above it
+// No media query for the smallest breakpoint as it doesn't requires media query
+//
+// Required arguments:
+// {String} $breakpoint - name of the breakpoint
+// [optional] {Map} $breakpoints - breakpoints map
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// media-breakpoint-above(sm){
+//    @debug 'This media query works in sm and above it';
+// }
+//
+@mixin media-breakpoint-above($breakpoint, $breakpoints: $breakpoints) {
+  $min: breakpoint-lower($breakpoint, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+//
+// media-breakpoint-below
+// Generate a media query for given breakpoint and below it
+// No media query for the largest breakpoint as it doesn't requires media query
+//
+// Required arguments:
+// {String} $breakpoint - name of the breakpoint
+// [optional] {Map} $breakpoints - breakpoints map
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// media-breakpoint-below(md){
+//    @debug 'This media query works in md and below it';
+// }
+//
+@mixin media-breakpoint-below($breakpoint, $breakpoints: $breakpoints) {
+  $max: breakpoint-lower($breakpoint, $breakpoints);
+  @if $max {
+    @media (min-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+//
+// media-breakpoint-between
+// Generate a media query for given minimum breakpoint and maximum breakpoint only
+//
+// Required arguments:
+// {String} $minimum - name of the minimum breakpoint
+// {String} $maximum - name of the maximum breakpoint
+// [optional] {Map} $breakpoints - breakpoints map
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// media-breakpoint-between(md, lg){
+//    @debug 'This media query works in between md and lg only';
+// }
+//
+@mixin media-breakpoint-between($minimum, $maximum, $breakpoints: $breakpoints) {
+  $min: breakpoint-lower($minimum, $breakpoints);
+  $max: breakpoint-upper($maximum, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-above($minimum, $breakpoint) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-below($maximum, $breakpoint) {
+      @content;
+    }
+  }
+}
+
+//
+// media-breakpoint-only
+// Generate a media query only for given breakpoint
+// No media query for the smallest and largest breakpoint as it doesn't requires media query
+//
+// Required arguments:
+// {String} $breakpoint - name of the breakpoint
+// [optional] {Map} $breakpoints - breakpoints map
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// media-breakpoint-only(lg){
+//    @debug 'This media query works only in lg';
+// }
+//
+@mixin media-breakpoint-only($breakpoint, $breakpoint: $breakpoints) {
+  $min: breakpoint-lower($breakpoint, $breakpoint);
+  $max: breakpoint-upper($breakpoint, $breakpoint);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-above($breakpoint, $breakpoint) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-below($breakpoint, $breakpoint) {
+      @content;
+    }
+  }
+}

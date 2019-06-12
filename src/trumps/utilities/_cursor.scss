@@ -1,0 +1,23 @@
+//
+// Cursor
+//
+
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: cursor,
+    class: cursor,
+    values: (
+      hand: pointer,
+      hide: none,
+      wait: wait,
+      move: move,
+      not-allowed: not-allowed,
+      help: help,
+      grab: grab
+    )
+  );
+
+  @include generate-class($config);
+}

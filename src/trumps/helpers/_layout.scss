@@ -1,0 +1,41 @@
+//
+// Layout helper
+//
+
+@if $generate-helper-classes {
+  //
+  // Doc : add Doc
+  //
+  .layout-content {
+    z-index: 1;
+    color: $body-color;
+    background-color: $body-bg;
+  }
+
+  //
+  // Doc : add Doc
+  //
+  .layout-header {
+    z-index: 10;
+    color: $header-color;
+    background-color: $header-bg;
+  }
+
+  //
+  // Doc : add Doc
+  //
+  .layout-sidebar {
+    z-index: 15;
+    color: $sidebar-color;
+    background-color: $sidebar-bg;
+  }
+
+  //
+  // Doc : add Doc
+  //
+  .layout-footer {
+    z-index: 0;
+    color: $footer-color;
+    background-color: $footer-bg;
+  }
+}

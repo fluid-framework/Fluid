@@ -1,0 +1,29 @@
+//
+// Width
+//
+
+@if $generate-utilities-classes {
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: false,
+    properties: width,
+    class: w,
+    values:
+    map-merge(
+      $sizes,
+      (
+        25vw: 25vw,
+        50vw: 50vw,
+        75vw: 75vw,
+        100vw: 100vw,
+        auto: auto,
+        fit: fit-content,
+        vmax: 100vmax,
+        vmin: 100vmin,
+        fill: stretch
+      )
+    )
+  );
+
+  @include generate-class($config);
+}

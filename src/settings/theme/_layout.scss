@@ -1,0 +1,21 @@
+//
+// Layout Settings
+//
+
+// Header
+$header-border-top:           $border-width-wide solid $primary !default;
+$header-bg:                   $white !default;
+$header-color:                $gray-900 !default;
+
+// Main and body content
+$main-padding:                5% !default;
+$body-bg:                     $white !default;
+$body-color:                  $gray-900 !default;
+
+// Footer
+$footer-bg:                   $gray-900 !default;
+$footer-color:                $gray-100 !default;
+
+// Sidebar
+$sidebar-bg:                   $gray-800 !default;
+$sidebar-color:                $white !default;

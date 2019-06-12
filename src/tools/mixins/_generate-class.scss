@@ -1,0 +1,60 @@
+//
+// Todo : Optimization and improvement
+// Todo : Add check to prefix or suffix only if not null or ""
+//
+
+//
+// DOC : Add Documentation
+//
+
+@mixin generate-class($class-config) {
+  $properties: map-get($class-config, "properties");
+  $values: to-map(map-get($class-config, "values"));
+  $class: map-get($class-config, "class");
+  $infixes: map-has-key($class-config, "infixes") and map-get($class-config, "infixes");
+  $responsive: map-has-key($class-config, responsive) and map-get($class-config, responsive) == true;
+
+  @if $responsive {
+    @each $breakpoint in map-keys($breakpoints) {
+      @include media-breakpoint-above($breakpoint) {
+        @if $infixes {
+          $infixes: to-map($infixes);
+          @each $infix-key, $infix-value in $infixes {
+            $infix-key: prefix($infix-key, "-");
+            $infix-value: prefix($infix-value, "-");
+
+            @include generate-inner-class($class, $infix-key, $infix-value, $breakpoint, $properties, $values);
+          }
+        } @else {
+          @include generate-inner-class($class, null, null, $breakpoint, $properties, $values);
+        }
+      }
+    }
+  } @else {
+    @if $infixes {
+      $infixes: to-map($infixes);
+      @each $infix-key, $infix-value in $infixes {
+        $infix-key: prefix($infix-key, "-");
+        $infix-value: prefix($infix-value, "-");
+
+        @include generate-inner-class($class, $infix-key, $infix-value, null, $properties, $values);
+      }
+    } @else {
+      @include generate-inner-class($class, null, null, null, $properties, $values);
+    }
+  }
+}
+
+@mixin generate-inner-class($class, $infix-key, $infix-value, $breakpoint, $properties, $values) {
+  $breakpoint-suffix: prefix($breakpoint, "\\@");
+
+  @each $key, $value in $values {
+    $key: prefix($key, "-");
+
+    .#{$class}#{$infix-key}#{$key}#{$breakpoint-suffix} {
+      @each $property in $properties {
+        #{$property}#{$infix-value}: $value;
+      }
+    }
+  }
+}

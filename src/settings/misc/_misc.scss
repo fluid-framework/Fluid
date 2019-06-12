@@ -1,0 +1,40 @@
+//
+// Miscellaneous Settings
+//
+
+// Various Directions
+$directions: (
+  t:    top,
+  b:    bottom,
+  r:    right,
+  l:    left
+) !default;
+
+// Various Sizes
+$sizes: (
+  0:	  0,
+  25:	  25 + $default-unit,
+  50:	  50 + $default-unit,
+  75:	  75 + $default-unit,
+  100:  100 + $default-unit
+) !default;
+
+// Various Rotations
+$rotations: (
+  0:	   0deg,
+  45:	   45deg,
+  90:	   90deg,
+  135:   135deg,
+  180:   180deg,
+  225:   225deg,
+  270:   270deg
+) !default;
+
+// Various Aspect Ratios
+$aspect-ratios: (
+  "21-9":  ( x: 21, y: 9 ),
+  "1-1":   ( x: 1,  y: 1 ),
+  "4-3":   ( x: 4,  y: 3 ),
+  "16-9":  ( x: 16, y: 9 ),
+  "16-10": ( x: 16, y: 10 )
+) !default;
