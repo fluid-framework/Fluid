@@ -27,6 +27,8 @@
 
 ## 📂 Structure
 
+Fluid uses [ITCSS architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture) for its files and folder structure.
+
 ```
 src
 ├───settings
