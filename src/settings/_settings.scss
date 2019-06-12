@@ -5,11 +5,11 @@
 // Options: Quickly modify global styling by enabling or disabling optional features.
 // Todo : Implement these options
 $default-unit:                                0% !default;      // Zero is used to keep the variable type number
-$style-gradients-else-solid:                  true !default;   // Let you chose between gradient vs solid Style UI
+$style-gradients-else-solid:                  false !default;   // Let you chose between gradient vs solid Style UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
 $generate-helper-classes:                     true !default;    // Enable helper Classes
 $generate-utilities-classes:                  true !default;    // Enable utilities Classes
-$enable-all-color-variant:                    true !default;    // Generate Every Color styles
+$enable-all-color-variant:                    false !default;    // Generate Every Color styles
 
 //
 // Breakpoints
