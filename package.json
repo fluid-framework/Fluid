@@ -2,7 +2,7 @@
   "name": "fluid",
   "version": "0.1.0",
   "version_short": "0.1",
-  "homepage": "https://boundarystudio/fluid",
+  "homepage": "https://fluid-framework/fluid",
   "author": {
     "name": "Ashfahan",
     "email": "me@ashfahan.com",
@@ -27,10 +27,10 @@
     "flexbox"
   ],
   "contributors": [
-    "Boundary Studio"
+    "fluid-framework"
   ],
   "bugs": {
-    "url": "https://github.com/BoundaryStudio/fluid/issues/"
+    "url": "https://github.com/fluid-framework/fluid/issues/"
   },
   "scripts": {
     "start": "yarn run watch",
@@ -47,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BoundaryStudio/Fluid.git"
+    "url": "git+https://github.com/fluid-framework/Fluid.git"
   },
   "license": "MIT",
   "dependencies": {},

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/BoundaryStudio/Fluid/tree/master/dist">
+  <a href="https://github.com/fluid-framework/Fluid/tree/master/dist">
     <img src="http://ashfahan.com/fluid/logo.svg" alt="Fluid logo" width="256" height="256">
   </a>
 </p>
@@ -8,9 +8,9 @@
   Modern, Stylish, Easier and Powerful front-end framework for faster web development.
   <br>
   <br>
-  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=bug.md">Report bug 🐛</a>
+  <a href="https://github.com/fluid-framework/fluid/issues/new?template=bug.md">Report bug 🐛</a>
   |
-  <a href="https://github.com/BoundaryStudio/fluid/issues/new?template=feature.md&labels=feature">Request feature ✨ </a>
+  <a href="https://github.com/fluid-framework/fluid/issues/new?template=feature.md&labels=feature">Request feature ✨ </a>
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 - Using Repository
 
-1. [Download](https://github.com/BoundaryStudio/Fluid/archive/master.zip) Latest master branch
+1. [Download](https://github.com/fluid-framework/Fluid/archive/master.zip) Latest master branch
 2. Extract and copy to project folder
 3. Import into page using `<link href="./Fluid-master/dist/fluid.min.css" rel="stylesheet" />`
 
@@ -67,11 +67,11 @@ Fluid Uses Css version 3 so it is supported by majority of browsers. Fluid is co
 - Safari
 - Internet Explorer (10+) is only partially supported.
 
-Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibility with earlier versions of [browsers](https://github.com/BoundaryStudio/Fluid/tree/master/.browserslistrc)
+Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibility with earlier versions of [browsers](https://github.com/fluid-framework/Fluid/tree/master/.browserslistrc)
 
 ## 🛠 Customization
 
-1. [Download](https://github.com/BoundaryStudio/Fluid/archive/master.zip) Latest master branch
+1. [Download](https://github.com/fluid-framework/Fluid/archive/master.zip) Latest master branch
 2. Extract files
 3. Customize the Scss files and variables located in `settings` folder
 4. Build Scss using `yarn build` for [yarn](https://yarnpkg.com/lang/en/docs/install/#windows-stable) or `npm build` for [npm](https://nodejs.org/en/download/)
@@ -88,7 +88,7 @@ Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibi
 
 ## ©️ Copyright and license
 
-Code copyright (c) 2019-2027 [Boundary Studio](https://boundarystudio.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/BoundaryStudio/Fluid/graphs/contributors).
+Code copyright (c) 2019-2027 [fluid-framework](https://fluid-framework.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/fluid-framework/Fluid/graphs/contributors).
 <br>
 <br>
-Code released under the [MIT License](https://github.com/BoundaryStudio/Fluid/blob/master/LICENSE).
+Code released under the [MIT License](https://github.com/fluid-framework/Fluid/blob/master/LICENSE).
