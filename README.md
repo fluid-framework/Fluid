@@ -74,6 +74,7 @@ Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibi
 1. [Download](https://github.com/BoundaryStudio/Fluid/archive/master.zip) Latest master branch
 2. Extract files
 3. Customize the Scss files and variables located in `settings` folder
+4. Build Scss using `yarn build` for [yarn](https://yarnpkg.com/lang/en/docs/install/#windows-stable) or `npm build` for [npm](https://nodejs.org/en/download/)
 
 ## 🧠 Creators
 
