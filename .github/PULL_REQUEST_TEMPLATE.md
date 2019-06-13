@@ -4,6 +4,7 @@ Note: use x to mark checkbox inputs e.g [x] is considered checked and [ ] is con
 
 - Update your code to latest [master branch](https://github.com/BoundaryStudio/Fluid/tree/master)
 - Make sure your code is compliant with the style guidelines. Run yarn test to check.
+- Build css.
 
 **Describe the reason of this pull request**
 
