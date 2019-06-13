@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/fluid-framework/Fluid/tree/master/dist">
-    <img src="http://ashfahan.com/fluid/logo.svg" alt="Fluid logo" width="256" height="256">
+    <img src="http://ashfahan.com/fluid/logo.svg?" alt="Fluid logo" width="256" height="256">
   </a>
 </p>
 
