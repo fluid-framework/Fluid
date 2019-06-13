@@ -14,8 +14,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.badgesize.io/https://github.com/ashfahan/Fluid/blob/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=30000&max=50000"/>
-  <img src="https://img.badgesize.io/https://github.com/ashfahan/Fluid/blob/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000"/>
+  <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/blob/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=30000&max=50000"/>
+  <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/blob/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000"/>
 </p>
 
 <p align="center">
