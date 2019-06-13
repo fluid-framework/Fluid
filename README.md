@@ -72,7 +72,7 @@ Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibi
 
 ## 🧠 Creators
 
-👨‍💻 **Ashfahan** ◾️ [Portfolio](https://ashfahan.com) | [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
+👨‍💻 **Ashfahan** ◾️ [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
 
 ## 🤝 Sponsors
 
