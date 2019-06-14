@@ -14,8 +14,27 @@
 </p>
 
 <p align="center">
-  <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/blob/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=30000&max=50000"/>
-  <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/blob/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000"/>
+  <a href="https://en.wikipedia.org/wiki/Gzip">
+    <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=30000&max=50000&style=for-the-badge"/>
+  </a>
+  <a href="https://en.wikipedia.org/wiki/Brotli">
+    <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000&style=for-the-badge"/>
+  </a>
+  <a href="https://github.com/fluid-framework/Fluid/tree/master/LICENSE">
+    <img src="https://img.shields.io/github/license/fluid-framework/Fluid.svg?style=for-the-badge"/>
+  </a>
+  <a href="https://github.com/fluid-framework/Fluid/releases">
+    <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?style=for-the-badge"/>
+  </a>
+  <a href="https://github.com/fluid-framework/Fluid/issues">
+    <img src="https://img.shields.io/github/issues/fluid-framework/Fluid.svg?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/fluid-framework/Fluid/commits">
+    <img src="https://img.shields.io/github/commit-activity/w/fluid-framework/fluid.svg?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/fluid-framework/Fluid/pulls">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" />
+  </a>
 </p>
 
 <p align="center">
@@ -92,3 +111,7 @@ Code copyright (c) 2019-2027 [fluid-framework](https://fluid-framework.com) and 
 <br>
 <br>
 Code released under the [MIT License](https://github.com/fluid-framework/Fluid/tree/master/LICENSE).
+
+<p align="center">
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
+</p>
