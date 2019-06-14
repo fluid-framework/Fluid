@@ -107,7 +107,7 @@ Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibi
   </a>
 </p>
 
-## ©️ Copyright and license
+## 📜 Copyright and license
 
 Code copyright (c) 2019-2027 [fluid-framework](https://fluid-framework.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/fluid-framework/Fluid/graphs/contributors).
 <br>
