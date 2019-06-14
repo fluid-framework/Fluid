@@ -91,4 +91,4 @@ Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibi
 Code copyright (c) 2019-2027 [fluid-framework](https://fluid-framework.com) and [Ashfahan](https://Ashfahan.com) and [Contributors](https://github.com/fluid-framework/Fluid/graphs/contributors).
 <br>
 <br>
-Code released under the [MIT License](https://github.com/fluid-framework/Fluid/blob/master/LICENSE).
+Code released under the [MIT License](https://github.com/fluid-framework/Fluid/tree/master/LICENSE).
