@@ -46,7 +46,7 @@
 @mixin media-breakpoint-below($breakpoint, $breakpoints: $breakpoints) {
   $max: breakpoint-lower($breakpoint, $breakpoints);
   @if $max {
-    @media (min-width: $max) {
+    @media (max-width: $max) {
       @content;
     }
   } @else {
