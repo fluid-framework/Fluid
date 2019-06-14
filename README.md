@@ -101,9 +101,11 @@ Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibi
 
 ## 🤝 Sponsors
 
-<a href="https://www.browserstack.com/">
-  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
-</a>
+<p align="center">
+  <a href="https://www.browserstack.com/">
+    <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="153.6" height="33.6">
+  </a>
+</p>
 
 ## ©️ Copyright and license
 
