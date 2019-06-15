@@ -7172,7 +7172,7 @@ html {
   box-sizing: inherit;
 }
 
-.row {
+.grid {
   display: flex;
   flex-wrap: wrap;
 }
