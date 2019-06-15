@@ -1,24 +1,19 @@
 //
-// flex-Align
+// Align
 //
 
 @if $generate-utilities-classes {
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
-    properties: align,
-    class: grid-align,
+    properties: align-items,
+    class: grid,
     values: (
-      start: flex-start,
-      end: flex-end,
-      center: center,
+      top: flex-start,
+      middle: center,
+      bottom: flex-end,
       baseline: baseline,
       stretch: stretch
-    ),
-    infixes: (
-      items,
-      self,
-      content
     )
   );
 
@@ -27,12 +22,28 @@
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
-    properties: align-items,
-    class: grid-align,
+    properties: align-content,
+    class: grid-content,
     values: (
-      start: flex-start,
-      end: flex-end,
-      center: center,
+      top: flex-start,
+      middle: center,
+      bottom: flex-end,
+      baseline: baseline,
+      stretch: stretch
+    )
+  );
+
+  @include generate-class($config);
+
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: true,
+    properties: align-self,
+    class: align,
+    values: (
+      top: flex-start,
+      middle: center,
+      bottom: flex-end,
       baseline: baseline,
       stretch: stretch
     )
