@@ -1,16 +1,19 @@
 //
-// Flex-shrink
+// Justify-content
 //
 
 @if $generate-utilities-classes {
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
-    properties: flex-shrink,
-    class: flex,
+    properties: justify-content,
+    class: grid-justify,
     values: (
-      shrink: 1,
-      shrink-0: 0
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around
     )
   );
 

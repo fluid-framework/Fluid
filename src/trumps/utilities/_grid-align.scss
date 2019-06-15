@@ -7,7 +7,7 @@
   $config: (
     responsive: true,
     properties: align,
-    class: align,
+    class: grid-align,
     values: (
       start: flex-start,
       end: flex-end,
@@ -19,6 +19,22 @@
       items,
       self,
       content
+    )
+  );
+
+  @include generate-class($config);
+
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: true,
+    properties: align-items,
+    class: grid-align,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch
     )
   );
 
