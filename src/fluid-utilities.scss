@@ -40,9 +40,6 @@
 // clear fix Utility
 @import "./trumps/utilities/clearfix";
 
-// align Utility
-@import "./trumps/utilities/align";
-
 // float Utility
 @import "./trumps/utilities/float";
 
@@ -56,20 +53,20 @@
 @import "./trumps/utilities/shadow";
 
 // transform Utility
-@import "./trumps/utilities/transform-rotation";
-@import "./trumps/utilities/transform-position";
+@import "./trumps/utilities/transform/rotation";
+@import "./trumps/utilities/transform/position";
 
 // border Utility
-@import "./trumps/utilities/border";
-@import "./trumps/utilities/border-directional";
-@import "./trumps/utilities/border-size";
-@import "./trumps/utilities/border-color";
-@import "./trumps/utilities/border-style";
-@import "./trumps/utilities/border-radius";
+@import "./trumps/utilities/border/basic";
+@import "./trumps/utilities/border/directional";
+@import "./trumps/utilities/border/size";
+@import "./trumps/utilities/border/color";
+@import "./trumps/utilities/border/style";
+@import "./trumps/utilities/border/radius";
 
 // sizing Utility
-@import "./trumps/utilities/sizing-width";
-@import "./trumps/utilities/sizing-height";
+@import "./trumps/utilities/sizing/width";
+@import "./trumps/utilities/sizing/height";
 
 // color Utility
 @import "./trumps/utilities/color";
@@ -77,24 +74,14 @@
 // background Utility
 @import "./trumps/utilities/background";
 
-// flex Utility
-@import "./trumps/utilities/flex-fill";
-@import "./trumps/utilities/flex-direction";
-@import "./trumps/utilities/flex-grow";
-@import "./trumps/utilities/flex-shrink";
-@import "./trumps/utilities/flex-wrap";
-@import "./trumps/utilities/flex-align";
-@import "./trumps/utilities/flex-justify-content";
-@import "./trumps/utilities/flex-order";
-
 // typo Utility
-@import "./trumps/utilities/typo-text-transform";
-@import "./trumps/utilities/typo-text-align";
-@import "./trumps/utilities/typo-text-shadow";
-@import "./trumps/utilities/typo-text-wrap";
-@import "./trumps/utilities/typo-font-weight";
-@import "./trumps/utilities/typo-font-family";
-@import "./trumps/utilities/typo-misc";
+@import "./trumps/utilities/typography/text-transform";
+@import "./trumps/utilities/typography/text-align";
+@import "./trumps/utilities/typography/text-shadow";
+@import "./trumps/utilities/typography/text-wrap";
+@import "./trumps/utilities/typography/font-weight";
+@import "./trumps/utilities/typography/font-family";
+@import "./trumps/utilities/typography/misc";
 
 // cursor Utility
 @import "./trumps/utilities/cursor";

@@ -12,4 +12,9 @@
   );
 
   @include generate-class($config);
+
+  .text-baseline { vertical-align: baseline; }
+  .text-top { vertical-align: top; }
+  .text-middle { vertical-align: middle; }
+  .text-bottom { vertical-align: bottom; }
 }

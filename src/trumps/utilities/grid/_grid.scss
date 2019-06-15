@@ -1,24 +1,19 @@
 //
-// flex-Align
+// Justify-content
 //
 
-@if $generate-utilities-classes {
+@if $generate-grid-classes {
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
-    properties: align,
-    class: align,
+    properties: justify-content,
+    class: grid,
     values: (
       start: flex-start,
       end: flex-end,
       center: center,
-      baseline: baseline,
-      stretch: stretch
-    ),
-    infixes: (
-      items,
-      self,
-      content
+      between: space-between,
+      around: space-around
     )
   );
 

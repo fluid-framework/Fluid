@@ -2,12 +2,12 @@
 // Flex-shrink
 //
 
-@if $generate-utilities-classes {
+@if $generate-grid-classes {
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: flex-shrink,
-    class: flex,
+    class: grid,
     values: (
       shrink: 1,
       shrink-0: 0

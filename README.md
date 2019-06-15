@@ -70,6 +70,11 @@ src
 └───trumps
     ├───helpers
     └───utilities
+        ├───border
+        ├───grid
+        ├───sizing
+        ├───transform
+        └───typography
 ```
 
 ## 💅 CSS only

@@ -1,14 +1,16 @@
 //
-// Flex-wrap
+// Flex-fill
 //
 
-@if $generate-utilities-classes {
+@if $generate-grid-classes {
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
-    properties: flex-wrap,
-    class: flex,
-    values: wrap nowrap wrap-reverse
+    properties: flex,
+    class: grid,
+    values: (
+      fill: 1 1 auto
+    )
   );
 
   @include generate-class($config);
