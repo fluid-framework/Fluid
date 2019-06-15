@@ -1057,78 +1057,78 @@ a.clr-hide:hover, a.clr-hide:focus {
   }
 }
 
-.flex-row {
+.grid-row {
   flex-direction: row;
 }
 
-.flex-column {
+.grid-column {
   flex-direction: column;
 }
 
-.flex-row-reverse {
+.grid-row-reverse {
   flex-direction: row-reverse;
 }
 
-.flex-column-reverse {
+.grid-column-reverse {
   flex-direction: column-reverse;
 }
 
 @media (min-width: 576px) {
-  .flex-row\@sm {
+  .grid-row\@sm {
     flex-direction: row;
   }
-  .flex-column\@sm {
+  .grid-column\@sm {
     flex-direction: column;
   }
-  .flex-row-reverse\@sm {
+  .grid-row-reverse\@sm {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@sm {
+  .grid-column-reverse\@sm {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 768px) {
-  .flex-row\@md {
+  .grid-row\@md {
     flex-direction: row;
   }
-  .flex-column\@md {
+  .grid-column\@md {
     flex-direction: column;
   }
-  .flex-row-reverse\@md {
+  .grid-row-reverse\@md {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@md {
+  .grid-column-reverse\@md {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 992px) {
-  .flex-row\@lg {
+  .grid-row\@lg {
     flex-direction: row;
   }
-  .flex-column\@lg {
+  .grid-column\@lg {
     flex-direction: column;
   }
-  .flex-row-reverse\@lg {
+  .grid-row-reverse\@lg {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@lg {
+  .grid-column-reverse\@lg {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 1200px) {
-  .flex-row\@xl {
+  .grid-row\@xl {
     flex-direction: row;
   }
-  .flex-column\@xl {
+  .grid-column\@xl {
     flex-direction: column;
   }
-  .flex-row-reverse\@xl {
+  .grid-row-reverse\@xl {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@xl {
+  .grid-column-reverse\@xl {
     flex-direction: column-reverse;
   }
 }
