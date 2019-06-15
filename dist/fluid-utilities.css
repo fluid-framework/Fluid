@@ -152,30 +152,6 @@
   content: "";
 }
 
-.align-baseline {
-  vertical-align: baseline;
-}
-
-.align-top {
-  vertical-align: top;
-}
-
-.align-middle {
-  vertical-align: middle;
-}
-
-.align-bottom {
-  vertical-align: bottom;
-}
-
-.align-text-bottom {
-  vertical-align: text-bottom;
-}
-
-.align-text-top {
-  vertical-align: text-top;
-}
-
 .float-left {
   float: left;
 }
@@ -2119,6 +2095,22 @@ a.clr-hide:hover, a.clr-hide:focus {
   .text-justify\@xl {
     text-align: justify;
   }
+}
+
+.text-baseline {
+  vertical-align: baseline;
+}
+
+.text-top {
+  vertical-align: top;
+}
+
+.text-middle {
+  vertical-align: middle;
+}
+
+.text-bottom {
+  vertical-align: bottom;
 }
 
 .text-shadow-sm {
