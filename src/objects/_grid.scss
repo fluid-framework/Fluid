@@ -1,0 +1,101 @@
+//
+// Grid
+//
+
+@if $generate-grid-classes {
+  // Reset Styles only for grid
+  html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+  }
+
+  // Reset Styles only for grid
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  //
+  // Grid row
+  //
+
+  .row {
+    display: flex;
+    flex-wrap: wrap; // wrap grid to multiline if overflow
+    margin-top: $grid-gap / 4;
+    margin-bottom: $grid-gap / 4;
+  }
+
+  // Remove gap from grid layout
+  @if $enable-grid-gap {
+    .no-gap > .column {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  //
+  // Grid row child
+  //
+
+  .column {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+    width: 100%;
+
+    // Grid Gap
+    @if $enable-grid-gap {
+      padding-right: $grid-gap / 2;
+      padding-left: $grid-gap / 2;
+    }
+
+    // remove Gap from first child
+    &:first-child {
+      padding-left: 0;
+    }
+    // remove Gap from last child
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-above($breakpoint) {
+      $breakpoint: prefix($breakpoint, "\\@");
+
+      // Auto flex
+      .is-auto#{$breakpoint} {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+      }
+
+      // Grid child sizing classes
+      @for $i from 1 through $grid-columns {
+        .is-#{$i}#{$breakpoint} {
+          flex: 0 0 grid-col-width($i);
+          max-width: grid-col-width($i);
+        }
+      }
+    }
+  }
+
+  //
+  // Grid row offset
+  //
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-above($breakpoint, $breakpoints) {
+      $breakpoint: prefix($breakpoint, "\\@");
+
+      // removing last column because cannot offset a whole row
+      @for $i from 1 through ($grid-columns - 1) {
+        .off-#{$i}#{$breakpoint} {
+          margin-left: grid-col-width($i);
+        }
+      }
+    }
+  }
+}

@@ -8,8 +8,10 @@ $default-unit:                                0% !default;      // Zero is used 
 $style-gradients-else-solid:                  false !default;   // Let you chose between gradient vs solid Style UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
 $generate-spacing-classes:                    true !default;    // Enable Grid Classes
+$generate-grid-classes:                       true !default;    // Enable Grid Classes
 $generate-helper-classes:                     true !default;    // Enable helper Classes
 $generate-utilities-classes:                  true !default;    // Enable utilities Classes
+$enable-grid-gap:                             true !default;   // Enable Spacing/Gutter between Grid elements
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
 
 //
