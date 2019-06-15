@@ -1,0 +1,12 @@
+//
+// transition
+// Add transition if enable
+//
+// Required arguments:
+// {String} $transition - transition String
+//
+@mixin transition($transition) {
+  @if $style-transitions {
+    transition: $transition;
+  }
+}

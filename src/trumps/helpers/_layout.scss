@@ -6,7 +6,7 @@
   //
   // Doc : add Doc
   //
-  .layout-content {
+  .layout-main {
     z-index: 1;
     color: $body-color;
     background-color: $body-bg;
@@ -16,7 +16,12 @@
   // Doc : add Doc
   //
   .layout-header {
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding-left: $header-padding/2;
+    padding-right: $header-padding/2;
+    z-index: $header-zindex;
     color: $header-color;
     background-color: $header-bg;
   }
@@ -25,9 +30,45 @@
   // Doc : add Doc
   //
   .layout-sidebar {
-    z-index: 15;
+    @include transition(left 0.5s ease-in-out);
+    position: fixed;
+    left: calc(-100% - (5px * 2));
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    padding: $sidebar-padding;
+    z-index: $sidebar-zindex;
     color: $sidebar-color;
     background-color: $sidebar-bg;
+  }
+
+  .layout-sidebar:target,
+  .layout-sidebar.is-show {
+    left: 0;
+  }
+
+  .layout-sidebar.active ~ .layout-sidebar-overley,
+  .layout-sidebar:target ~ .layout-sidebar-overley {
+    display: block;
+  }
+
+  .layout-sidebar-overley {
+    background: rgba(48, 55, 66, 0.1);
+    border-color: transparent;
+    border-radius: 0;
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+  @include media-breakpoint-below(sm) {
+    .layout-sidebar {
+      width: 100%;
+    }
   }
 
   //
