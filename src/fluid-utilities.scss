@@ -74,6 +74,11 @@
 // background Utility
 @import "./trumps/utilities/background";
 
+// Flex Utility
+@import "./trumps/utilities/grid-flex/fill";
+@import "./trumps/utilities/grid-flex/grow";
+@import "./trumps/utilities/grid-flex/shrink";
+
 // typo Utility
 @import "./trumps/utilities/typography/text-transform";
 @import "./trumps/utilities/typography/text-align";
