@@ -71,7 +71,7 @@ src
     ├───helpers
     └───utilities
         ├───border
-        ├───grid
+        ├───grid-flex
         ├───sizing
         ├───transform
         └───typography
