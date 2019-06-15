@@ -23,8 +23,6 @@
   .row {
     display: flex;
     flex-wrap: wrap; // wrap grid to multiline if overflow
-    margin-top: $grid-gap / 4;
-    margin-bottom: $grid-gap / 4;
   }
 
   // Remove gap from grid layout
@@ -44,20 +42,13 @@
     flex-basis: 0;
     flex-grow: 1;
     width: 100%;
+    padding-top: $grid-gap / 4;
+    padding-bottom: $grid-gap / 4;
 
     // Grid Gap
     @if $enable-grid-gap {
       padding-right: $grid-gap / 2;
       padding-left: $grid-gap / 2;
-    }
-
-    // remove Gap from first child
-    &:first-child {
-      padding-left: 0;
-    }
-    // remove Gap from last child
-    &:last-child {
-      padding-right: 0;
     }
   }
 
@@ -65,7 +56,7 @@
     @include media-breakpoint-above($breakpoint) {
       $breakpoint: prefix($breakpoint, "\\@");
 
-      // Auto flex
+      // Grid child Auto width
       .is-auto#{$breakpoint} {
         flex: 0 0 auto;
         width: auto;

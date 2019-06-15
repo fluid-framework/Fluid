@@ -18,8 +18,6 @@ html {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 6px;
-  margin-bottom: 6px;
 }
 
 .no-gap > .column {
@@ -32,16 +30,10 @@ html {
   flex-basis: 0;
   flex-grow: 1;
   width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-right: 12px;
   padding-left: 12px;
-}
-
-.column:first-child {
-  padding-left: 0;
-}
-
-.column:last-child {
-  padding-right: 0;
 }
 
 .is-auto {
