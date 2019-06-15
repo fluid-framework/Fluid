@@ -1,16 +1,15 @@
 //
-// Grid-grow
+// Flex-fill
 //
 
-@if $generate-grid-classes {
+@if $generate-utilities-classes {
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
-    properties: flex-grow,
-    class: grid,
+    properties: flex,
+    class: flex,
     values: (
-      grow: 1,
-      grow-0: 0
+      fill: 1 1 auto
     )
   );
 

@@ -13,11 +13,8 @@
 @import "./objects/grid";
 
 // Grid Utility
-@import "./trumps/utilities/grid/fill";
-@import "./trumps/utilities/grid/direction";
-@import "./trumps/utilities/grid/grow";
-@import "./trumps/utilities/grid/shrink";
-@import "./trumps/utilities/grid/wrap";
-@import "./trumps/utilities/grid/align";
-@import "./trumps/utilities/grid/justify";
-@import "./trumps/utilities/grid/order";
+@import "./trumps/utilities/grid-flex/direction";
+@import "./trumps/utilities/grid-flex/wrap";
+@import "./trumps/utilities/grid-flex/align";
+@import "./trumps/utilities/grid-flex/justify";
+@import "./trumps/utilities/grid-flex/order";
