@@ -19,19 +19,19 @@
   @if type-of($map) != "map" {
     @error "The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!";
   }
-  $keys: ();
-  $values: ();
-
-  @each $key, $val in $map {
-    $keys: append($keys, $key);
-    $values: append($values, $val);
-  }
 
   @if $keep == "keys" {
     @return map-keys($map);
   } @else if $keep == "values" {
     @return map-values($map);
   } @else {
+    $keys: ();
+    $values: ();
+
+    @each $key, $val in $map {
+      $keys: append($keys, $key);
+      $values: append($values, $val);
+    }
     @return zip($keys, $values);
   }
 }
