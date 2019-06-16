@@ -3,6 +3,7 @@
 //
 
 @if $generate-grid-classes {
+  // Idea : reduce values because it isn't used often ?
   // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
@@ -23,7 +24,7 @@
       10: 10,
       11: 11,
       12: 12,
-      last: 25
+      last: 13
     )
   );
 
