@@ -5,6 +5,19 @@
  * Licensed under MIT (https://github.com/boundary-studio/Fluid/blob/master/LICENSE)
 */
 
+// Reset Styles only for grid
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+// Reset Styles only for grid
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 // Configuration
 
 @import "./vendors/vendors";

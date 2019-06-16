@@ -3,19 +3,6 @@
 //
 
 @if $generate-grid-classes {
-  // Reset Styles only for grid
-  html {
-    box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
-  }
-
-  // Reset Styles only for grid
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-
   //
   // Grid
   //
