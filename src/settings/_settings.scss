@@ -50,9 +50,12 @@ $enable-all-color-variant:                    false !default;   // Generate Ever
 // Typography
 //
 
+@import "./typography/text";
 @import "./typography/font";
 @import "./typography/line_height";
 @import "./typography/heading";
+@import "./typography/paragraph";
+@import "./typography/misc";
 
 //
 // Design
@@ -62,6 +65,8 @@ $enable-all-color-variant:                    false !default;   // Generate Ever
 @import "./design/layout";
 @import "./design/link";
 @import "./design/hr";
+@import "./design/table";
+@import "./design/forms";
 
 //
 // Miscellaneous
