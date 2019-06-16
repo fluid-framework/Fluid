@@ -4,12 +4,6 @@
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
 */
-/**
- * Fluid Utilities v0.1
- * Copyright (c) 2019-2027 fluid-framework
- * Copyright (c) 2019-2027 Ashfahan
- * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
-*/
 *,
 *::before,
 *::after {
@@ -390,12 +384,6 @@ template {
   display: none !important;
 }
 
-/**
- * Fluid Utilities v0.1
- * Copyright (c) 2019-2027 fluid-framework
- * Copyright (c) 2019-2027 Ashfahan
- * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
-*/
 .embed-responsive {
   position: relative;
   display: block;
@@ -1850,12 +1838,6 @@ a.clr-disabled:hover, a.clr-disabled:focus {
   z-index: -9999;
 }
 
-/**
- * Fluid Spacing +ive v0.1
- * Copyright (c) 2019-2027 fluid-framework
- * Copyright (c) 2019-2027 Ashfahan
- * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
-*/
 /**
  * Table of Contents:
  *        Basic Margin
@@ -5627,12 +5609,6 @@ a.clr-disabled:hover, a.clr-disabled:focus {
 }
 
 /**
- * Fluid Spacing -ive v0.1
- * Copyright (c) 2019-2027 fluid-framework
- * Copyright (c) 2019-2027 Ashfahan
- * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
-*/
-/**
  * Table of Contents:
  *        Basic Margin
  *        Margin top
@@ -6781,23 +6757,6 @@ a.clr-disabled:hover, a.clr-disabled:focus {
     margin-top: -50%;
     margin-bottom: -50%;
   }
-}
-
-/**
- * Fluid Grid v0.1
- * Copyright (c) 2019-2027 Boundary Studio
- * Copyright (c) 2019-2027 Ashfahan
- * Licensed under MIT (https://github.com/boundary-studio/Fluid/blob/master/LICENSE)
-*/
-html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 .grid {

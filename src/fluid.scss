@@ -5,25 +5,116 @@
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
 */
 
-//
+// Configuration
+
+@import "./vendors/vendors";
+@import "./settings/settings";
+@import "./tools/tools";
+
 // Fluid Sanitize
-//
-@import "./fluid-sanitize.scss";
+@import "./generics/reboot";
 
-//
 // Fluid Utilities
-//
-@import "./fluid-utilities.scss";
+// Helpers
 
-//
-// Fluid Spacing
-//
-// +ive
-@import "./fluid-spacing+ive.scss";
-// -ive
-@import "./fluid-spacing-ive.scss";
+// embed Helper
+@import "./trumps/helpers/embed";
 
-//
+// screen readers Helper
+@import "./trumps/helpers/screenreaders";
+
+// stretched-link Helper
+@import "./trumps/helpers/stretched-link";
+
+// container Helper
+@import "./trumps/helpers/container";
+
+// layout Helper
+@import "./trumps/helpers/layout";
+
+// img Helper
+@import "./trumps/helpers/image";
+
+// Utilities
+
+// clear fix Utility
+@import "./trumps/utilities/clearfix";
+
+// float Utility
+@import "./trumps/utilities/float";
+
+// overflow Utility
+@import "./trumps/utilities/overflow";
+
+// display Utility
+@import "./trumps/utilities/display";
+
+// shadow Utility
+@import "./trumps/utilities/shadow";
+
+// transform Utility
+@import "./trumps/utilities/transform/rotation";
+@import "./trumps/utilities/transform/position";
+
+// border Utility
+@import "./trumps/utilities/border/basic";
+@import "./trumps/utilities/border/directional";
+@import "./trumps/utilities/border/size";
+@import "./trumps/utilities/border/color";
+@import "./trumps/utilities/border/style";
+@import "./trumps/utilities/border/radius";
+
+// sizing Utility
+@import "./trumps/utilities/sizing/width";
+@import "./trumps/utilities/sizing/height";
+
+// color Utility
+@import "./trumps/utilities/color";
+
+// background Utility
+@import "./trumps/utilities/background";
+
+// Flex Utility
+@import "./trumps/utilities/grid-flex/fill";
+@import "./trumps/utilities/grid-flex/grow";
+@import "./trumps/utilities/grid-flex/shrink";
+
+// typo Utility
+@import "./trumps/utilities/typography/text-transform";
+@import "./trumps/utilities/typography/text-align";
+@import "./trumps/utilities/typography/text-shadow";
+@import "./trumps/utilities/typography/text-wrap";
+@import "./trumps/utilities/typography/font-weight";
+@import "./trumps/utilities/typography/font-family";
+@import "./trumps/utilities/typography/misc";
+
+// cursor Utility
+@import "./trumps/utilities/cursor";
+
+// appearance Utility
+@import "./trumps/utilities/visibility";
+@import "./trumps/utilities/opacity";
+
+// event Utility
+@import "./trumps/utilities/event";
+
+// svg Utility
+@import "./trumps/utilities/svg-shadow";
+
+// zindex Utility
+@import "./trumps/utilities/zindex";
+
+// Fluid Spacing +ive
+@import "./objects/spacing+ive";
+// Fluid Spacing -ive
+@import "./objects/spacing-ive";
+
 // Fluid Grid
-//
-@import "./fluid-grid.scss";
+@import "./objects/grid";
+
+// Grid Utility
+@import "./trumps/utilities/grid-flex/direction";
+@import "./trumps/utilities/grid-flex/wrap";
+@import "./trumps/utilities/grid-flex/align";
+@import "./trumps/utilities/grid-flex/justify";
+@import "./trumps/utilities/grid-flex/order";
