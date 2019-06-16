@@ -57,7 +57,7 @@
 }
 
 @mixin generate-inner-class($class, $infix-key, $infix-value, $breakpoint, $properties, $values) {
-  $breakpoint-suffix: prefix($breakpoint, "\\"+ $breakpoints-prefix);
+  $breakpoint-suffix: prefix(breakpoint-name($breakpoint), "\\"+ $breakpoints-prefix);
 
   @each $key, $value in $values {
     $key: prefix($key, "-");

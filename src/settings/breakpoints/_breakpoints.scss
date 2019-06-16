@@ -4,20 +4,12 @@
 
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
-@if $breakpoints-short-else-readable { // if short breakpoints are preferred
-  $breakpoints: (
-    null:       0,
-    sm:         576px,
-    md:         768px,
-    lg:         992px,
-    xl:         1200px
-  ) !default !global;
-}@else{ // if user friendly and readable breakpoints are preferred
-  $breakpoints: (
-    null:          0,
-    mobile:        576px,
-    tablet:        768px,
-    desktop:       992px,
-    large:         1200px
-  ) !default !global;
-}
+$breakpoints: (
+  null: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$breakpoints-readable: null mobile tablet desktop large !default;

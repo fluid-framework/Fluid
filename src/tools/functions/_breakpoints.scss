@@ -69,3 +69,31 @@
   $next-lower: breakpoint-lower($next, $breakpoint);
   @return $next-lower - .05;
 }
+
+//
+// breakpoint-name
+// return breakpoint name based on setting `breakpoints-short-else-readable`
+//
+// Required arguments:
+// {String} $breakpoint - name of the breakpoint
+// [optional] {Map} $breakpoints - breakpoints map
+//
+// Example of use:
+// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $breakpoints-readable: null mobile tablet desktop large;
+// $breakpoints-short-else-readable: true;
+// breakpoint-only(md) => desktop
+//
+@function breakpoint-name($breakpoint, $breakpoints: $breakpoints) {
+  $breakpoints-keys: map-has-key($breakpoints, $breakpoint);
+
+  @if $breakpoints-short-else-readable {
+    // if short breakpoints are preferred
+    @return $breakpoint;
+  } @else {
+    // if user friendly breakpoints are preferred
+    $breakpoints-keys: map-keys($breakpoints);
+    $breakpoints-index: index($breakpoints-keys, $breakpoint);
+    @return nth($breakpoints-readable, $breakpoints-index);
+  }
+}
