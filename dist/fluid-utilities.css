@@ -835,6 +835,10 @@
   color: transparent;
 }
 
+.clr-disabled {
+  color: #757575;
+}
+
 a.clr-primary:hover, a.clr-primary:focus {
   color: #582eb5;
 }
@@ -905,6 +909,10 @@ a.clr-white-75:hover, a.clr-white-75:focus {
 
 a.clr-hide:hover, a.clr-hide:focus {
   color: rgba(0, 0, 0, 0);
+}
+
+a.clr-disabled:hover, a.clr-disabled:focus {
+  color: #4f4f4f;
 }
 
 .bg-primary {
