@@ -1519,7 +1519,7 @@ html {
 }
 
 .order-last {
-  order: 13;
+  order: 25;
 }
 
 @media (min-width: 576px) {
@@ -1566,7 +1566,7 @@ html {
     order: 12;
   }
   .order-last\@sm {
-    order: 13;
+    order: 25;
   }
 }
 
@@ -1614,7 +1614,7 @@ html {
     order: 12;
   }
   .order-last\@md {
-    order: 13;
+    order: 25;
   }
 }
 
@@ -1662,7 +1662,7 @@ html {
     order: 12;
   }
   .order-last\@lg {
-    order: 13;
+    order: 25;
   }
 }
 
@@ -1710,7 +1710,7 @@ html {
     order: 12;
   }
   .order-last\@xl {
-    order: 13;
+    order: 25;
   }
 }
 /*# sourceMappingURL=fluid-grid.css.map */
