@@ -14,8 +14,9 @@
 // {List} new list
 //
 @function to-list($map, $keep: "both") {
-  $keep: if(index("keys" "values", $keep), $keep, "both");
-
+  @if $keep != "keys" or $keep != "values" or $keep != "both" {
+    @error "The argument $keep have incorrect value: `#{$keep}`. value `keys` `values` `both` is expected!";
+  }
   @if type-of($map) != "map" {
     @error "The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!";
   }
