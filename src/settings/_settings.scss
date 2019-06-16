@@ -1,9 +1,10 @@
 //
 // Settings
 //
+// Todo : use map-merge for default map values
+// Todo : Implement options
 
 // Options: Quickly modify global styling by enabling or disabling optional features.
-// Todo : Implement these options
 $default-unit:                                0% !default;      // Zero is used to keep the variable type number
 $style-gradients-else-solid:                  false !default;   // Let you chose between gradient vs solid Style UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
