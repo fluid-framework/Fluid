@@ -16,8 +16,5 @@
   @if $value == null or $value == "" {
     @return "";
   }
-  @if type-of($value) == "string" {
-    $value: trim($value);
-  }
   @return #{$symbol}#{$value};
 }
