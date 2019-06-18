@@ -17,6 +17,7 @@ $enable-grid-gap:                             true !default;   // Enable Spacing
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
 $enable-transitions:                          true !default;    // Enable transitions and animations
 $enable-prefers-reduced-motion-media-query:   true !default;    // Disable transitions in Reduced Motion Media Query
+$enable-fluid-font-sizes:                     false !default;   // Enable Fluid typography
 
 //
 // Breakpoints
