@@ -234,158 +234,158 @@
   overflow-y: visible;
 }
 
-.d-hide {
+.hidden {
   display: none;
 }
 
-.d-inline {
+.inline {
   display: inline;
 }
 
-.d-inline-block {
+.inline-block {
   display: inline-block;
 }
 
-.d-block {
+.block {
   display: block;
 }
 
-.d-table {
+.table {
   display: table;
 }
 
-.d-table-row {
+.table-row {
   display: table-row;
 }
 
-.d-table-cell {
+.table-cell {
   display: table-cell;
 }
 
-.d-flex {
+.flex {
   display: flex;
 }
 
-.d-inline-fle {
+.inline-flex {
   display: inline-flex;
 }
 
 @media (min-width: 576px) {
-  .d-hide\@sm {
+  .hidden\@sm {
     display: none;
   }
-  .d-inline\@sm {
+  .inline\@sm {
     display: inline;
   }
-  .d-inline-block\@sm {
+  .inline-block\@sm {
     display: inline-block;
   }
-  .d-block\@sm {
+  .block\@sm {
     display: block;
   }
-  .d-table\@sm {
+  .table\@sm {
     display: table;
   }
-  .d-table-row\@sm {
+  .table-row\@sm {
     display: table-row;
   }
-  .d-table-cell\@sm {
+  .table-cell\@sm {
     display: table-cell;
   }
-  .d-flex\@sm {
+  .flex\@sm {
     display: flex;
   }
-  .d-inline-fle\@sm {
+  .inline-flex\@sm {
     display: inline-flex;
   }
 }
 
 @media (min-width: 768px) {
-  .d-hide\@md {
+  .hidden\@md {
     display: none;
   }
-  .d-inline\@md {
+  .inline\@md {
     display: inline;
   }
-  .d-inline-block\@md {
+  .inline-block\@md {
     display: inline-block;
   }
-  .d-block\@md {
+  .block\@md {
     display: block;
   }
-  .d-table\@md {
+  .table\@md {
     display: table;
   }
-  .d-table-row\@md {
+  .table-row\@md {
     display: table-row;
   }
-  .d-table-cell\@md {
+  .table-cell\@md {
     display: table-cell;
   }
-  .d-flex\@md {
+  .flex\@md {
     display: flex;
   }
-  .d-inline-fle\@md {
+  .inline-flex\@md {
     display: inline-flex;
   }
 }
 
 @media (min-width: 992px) {
-  .d-hide\@lg {
+  .hidden\@lg {
     display: none;
   }
-  .d-inline\@lg {
+  .inline\@lg {
     display: inline;
   }
-  .d-inline-block\@lg {
+  .inline-block\@lg {
     display: inline-block;
   }
-  .d-block\@lg {
+  .block\@lg {
     display: block;
   }
-  .d-table\@lg {
+  .table\@lg {
     display: table;
   }
-  .d-table-row\@lg {
+  .table-row\@lg {
     display: table-row;
   }
-  .d-table-cell\@lg {
+  .table-cell\@lg {
     display: table-cell;
   }
-  .d-flex\@lg {
+  .flex\@lg {
     display: flex;
   }
-  .d-inline-fle\@lg {
+  .inline-flex\@lg {
     display: inline-flex;
   }
 }
 
 @media (min-width: 1200px) {
-  .d-hide\@xl {
+  .hidden\@xl {
     display: none;
   }
-  .d-inline\@xl {
+  .inline\@xl {
     display: inline;
   }
-  .d-inline-block\@xl {
+  .inline-block\@xl {
     display: inline-block;
   }
-  .d-block\@xl {
+  .block\@xl {
     display: block;
   }
-  .d-table\@xl {
+  .table\@xl {
     display: table;
   }
-  .d-table-row\@xl {
+  .table-row\@xl {
     display: table-row;
   }
-  .d-table-cell\@xl {
+  .table-cell\@xl {
     display: table-cell;
   }
-  .d-flex\@xl {
+  .flex\@xl {
     display: flex;
   }
-  .d-inline-fle\@xl {
+  .inline-flex\@xl {
     display: inline-flex;
   }
 }
