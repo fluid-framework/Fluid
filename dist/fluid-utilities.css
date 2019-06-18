@@ -539,7 +539,7 @@
   border-color: #fadb14;
 }
 
-.border-invalid {
+.border-error {
   border-color: #f5222d;
 }
 
@@ -783,7 +783,7 @@
   color: #fadb14;
 }
 
-.clr-invalid {
+.clr-error {
   color: #f5222d;
 }
 
@@ -859,7 +859,7 @@ a.clr-warn:hover, a.clr-warn:focus {
   color: #bda404;
 }
 
-a.clr-invalid:hover, a.clr-invalid:focus {
+a.clr-error:hover, a.clr-error:focus {
   color: #c20912;
 }
 
@@ -935,7 +935,7 @@ a.clr-disabled:hover, a.clr-disabled:focus {
   background-color: #fadb14;
 }
 
-.bg-invalid {
+.bg-error {
   background-color: #f5222d;
 }
 

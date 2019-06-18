@@ -62,7 +62,7 @@ $gray:            $gray-400 !default;
 $valid:           $green !default;
 $info:            $cyan !default;
 $warn:            $yellow !default;
-$invalid:         $red !default;
+$error:           $red !default;
 $light:           $gray-100 !default;
 $dark:            $gray-700 !default;
 
@@ -72,7 +72,7 @@ $theme-colors: (
   "valid":           $valid,
   "info":            $info,
   "warn":            $warn,
-  "invalid":         $invalid,
+  "error":           $error,
   "light":           $light,
   "dark":            $dark
 ) !default;
