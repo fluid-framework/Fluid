@@ -3,6 +3,16 @@
 //
 
 @if $generate-utilities-classes {
-  .visible { visibility: visible; }
-  .invisible { visibility: hidden; }
+  // stylelint-disable-next-line scss/dollar-variable-default
+  $config: (
+    responsive: true,
+    properties: visibility,
+    class: is,
+    values: (
+      visible: visible,
+      invisible: hidden
+    )
+  );
+
+  @include generate-class($config);
 }

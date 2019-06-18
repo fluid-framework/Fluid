@@ -1379,12 +1379,48 @@ a.clr-disabled:hover, a.clr-disabled:focus {
   cursor: grab;
 }
 
-.visible {
+.is-visible {
   visibility: visible;
 }
 
-.invisible {
+.is-invisible {
   visibility: hidden;
+}
+
+@media (min-width: 576px) {
+  .is-visible\@sm {
+    visibility: visible;
+  }
+  .is-invisible\@sm {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .is-visible\@md {
+    visibility: visible;
+  }
+  .is-invisible\@md {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 992px) {
+  .is-visible\@lg {
+    visibility: visible;
+  }
+  .is-invisible\@lg {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1200px) {
+  .is-visible\@xl {
+    visibility: visible;
+  }
+  .is-invisible\@xl {
+    visibility: hidden;
+  }
 }
 
 .opacity-25 {
