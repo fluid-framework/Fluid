@@ -38,7 +38,7 @@
     "test": "npm-run-all -s lint:*",
     "deploy": "npm-run-all -s build",
     "lint": "npm-run-all -s lint:*",
-    "lint:usedvar": "fusv ./src --ignore \"$gray-200,$gray-500\"",
+    "lint:usedvar": "fusv ./src",
     "lint:stylelint": "stylelint src/**/*.scss --fix",
     "build": "npm-run-all -s lint:* build:*",
     "build:clean": "shx rm -rf ./dist",
