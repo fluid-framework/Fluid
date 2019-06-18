@@ -33,11 +33,11 @@
     "url": "https://github.com/fluid-framework/fluid/issues/"
   },
   "scripts": {
-    "start": "yarn run watch",
+    "start": "npm-run-all -s watch",
     "watch": "node-sass ./src --output ./dist/ --output-style compact --indent-type space --indent-width 2 --source-map true -w",
-    "lint": "yarn run build:lint",
-    "test": "yarn run build:lint",
-    "deploy": "yarn run build",
+    "lint": "npm-run-all -s build:lint",
+    "test": "npm-run-all -s build:lint",
+    "deploy": "npm-run-all -s build",
     "build": "npm-run-all -s build:*",
     "build:lint": "stylelint src/**/*.scss --fix",
     "build:clean": "rimraf dist",
