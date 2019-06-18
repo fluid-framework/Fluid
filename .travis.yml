@@ -1,0 +1,7 @@
+language: node_js
+git:
+  depth: 3
+script:
+  - yarn test || travis_terminate 1
+notifications:
+  email: false
