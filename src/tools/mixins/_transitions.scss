@@ -1,20 +1,22 @@
 @mixin transition($transitions...) {
-  @if length($transitions) != 0 {
-    $transition-combined: all 0.2s ease-in-out;
-  } @else {
-    $transition-combined: "";
-    @each $transition in $transitions {
-      @if type-of($transition) != string {
-        @error "The argument transitions: `#{transitions}` is of incorrect type: `#{type-of(transitions)}`. Type of `string` is required!";
+  @if $enable-transitions {
+    @if length($transitions) != 0 {
+      $transition-combined: all .2s ease-in-out;
+    } @else {
+      $transition-combined: "";
+      @each $transition in $transitions {
+        @if type-of($transition) != string {
+          @error "The argument transitions: `#{transitions}` is of incorrect type: `#{type-of(transitions)}`. Type of `string` is required!";
+        }
+        $transition-combined: suffix($transition-combined, ",") + $transition;
       }
-      $transition-combined: suffix($transition-combined, ",") + $transition;
     }
-  }
-  transition: $transition-combined;
+    transition: $transition-combined;
 
-  @if $enable-prefers-reduced-motion-media-query {
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
+    @if $enable-prefers-reduced-motion-media-query {
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
     }
   }
 }
