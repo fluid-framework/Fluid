@@ -1,0 +1,99 @@
+/**
+ * Fluid Grid v0.1
+ * Copyright (c) 2019-2027 Boundary Studio
+ * Copyright (c) 2019-2027 Ashfahan
+ * Licensed under MIT (https://github.com/boundary-studio/Fluid/blob/master/LICENSE)
+*/
+.button { display: inline-block; font-weight: 400; color: #262626; text-align: center; vertical-align: middle; user-select: none; background-color: transparent; border: 1px solid transparent; padding: 0.375rem 0.75rem; font-size: 0.875rem; line-height: 1.5; border-radius: 0.25rem; transition: all 0.2s ease-in-out; }
+
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }
+
+.button:hover, .button.hover { color: #262626; text-decoration: none; }
+
+.button:focus, .button.focus { outline: 0; box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25); }
+
+.button:disabled, .button.disabled { opacity: 0.65; }
+
+.button.is-theme { color: #fafafa; background-color: #805ad5; border-color: #805ad5; }
+
+.button.is-theme:hover, .button.is-theme.hover { color: #fafafa; background-color: #693ccd; border-color: #6133c9; }
+
+.button.is-theme:focus, .button.is-theme.focus { color: #fafafa; background-color: #693ccd; border-color: #6133c9; }
+
+.button.is-theme:disabled, .button.is-theme.disabled { color: #fafafa; background-color: #805ad5; border-color: #805ad5; }
+
+.show > .button.is-theme.dropdown-toggle, .button.is-theme:not(:disabled):not(.disabled):active, .button.is-theme:not(:disabled):not(.disabled).active { color: #fafafa; background-color: #6133c9; border-color: #5c31bf; }
+
+.button.is-gray { color: #262626; background-color: #d4d4d4; border-color: #d4d4d4; }
+
+.button.is-gray:hover, .button.is-gray.hover { color: #262626; background-color: #c1c1c1; border-color: #bababa; }
+
+.button.is-gray:focus, .button.is-gray.focus { color: #262626; background-color: #c1c1c1; border-color: #bababa; }
+
+.button.is-gray:disabled, .button.is-gray.disabled { color: #262626; background-color: #d4d4d4; border-color: #d4d4d4; }
+
+.show > .button.is-gray.dropdown-toggle, .button.is-gray:not(:disabled):not(.disabled):active, .button.is-gray:not(:disabled):not(.disabled).active { color: #262626; background-color: #bababa; border-color: #b4b4b4; }
+
+.button.is-valid { color: #fafafa; background-color: #52c41a; border-color: #52c41a; }
+
+.button.is-valid:hover, .button.is-valid.hover { color: #fafafa; background-color: #44a216; border-color: #3f9714; }
+
+.button.is-valid:focus, .button.is-valid.focus { color: #fafafa; background-color: #44a216; border-color: #3f9714; }
+
+.button.is-valid:disabled, .button.is-valid.disabled { color: #fafafa; background-color: #52c41a; border-color: #52c41a; }
+
+.show > .button.is-valid.dropdown-toggle, .button.is-valid:not(:disabled):not(.disabled):active, .button.is-valid:not(:disabled):not(.disabled).active { color: #fafafa; background-color: #3f9714; border-color: #3a8c13; }
+
+.button.is-info { color: #fafafa; background-color: #13c2c2; border-color: #13c2c2; }
+
+.button.is-info:hover, .button.is-info.hover { color: #fafafa; background-color: #109f9f; border-color: #0e9494; }
+
+.button.is-info:focus, .button.is-info.focus { color: #fafafa; background-color: #109f9f; border-color: #0e9494; }
+
+.button.is-info:disabled, .button.is-info.disabled { color: #fafafa; background-color: #13c2c2; border-color: #13c2c2; }
+
+.show > .button.is-info.dropdown-toggle, .button.is-info:not(:disabled):not(.disabled):active, .button.is-info:not(:disabled):not(.disabled).active { color: #fafafa; background-color: #0e9494; border-color: #0d8888; }
+
+.button.is-warn { color: #262626; background-color: #fadb14; border-color: #fadb14; }
+
+.button.is-warn:hover, .button.is-warn.hover { color: #262626; background-color: #e3c505; border-color: #d6ba05; }
+
+.button.is-warn:focus, .button.is-warn.focus { color: #262626; background-color: #e3c505; border-color: #d6ba05; }
+
+.button.is-warn:disabled, .button.is-warn.disabled { color: #262626; background-color: #fadb14; border-color: #fadb14; }
+
+.show > .button.is-warn.dropdown-toggle, .button.is-warn:not(:disabled):not(.disabled):active, .button.is-warn:not(:disabled):not(.disabled).active { color: #262626; background-color: #d6ba05; border-color: #caaf04; }
+
+.button.is-error { color: #fafafa; background-color: #f5222d; border-color: #f5222d; }
+
+.button.is-error:hover, .button.is-error.hover { color: #fafafa; background-color: #e60a16; border-color: #da0a15; }
+
+.button.is-error:focus, .button.is-error.focus { color: #fafafa; background-color: #e60a16; border-color: #da0a15; }
+
+.button.is-error:disabled, .button.is-error.disabled { color: #fafafa; background-color: #f5222d; border-color: #f5222d; }
+
+.show > .button.is-error.dropdown-toggle, .button.is-error:not(:disabled):not(.disabled):active, .button.is-error:not(:disabled):not(.disabled).active { color: #fafafa; background-color: #da0a15; border-color: #ce0914; }
+
+.button.is-light { color: #262626; background-color: #fafafa; border-color: #fafafa; }
+
+.button.is-light:hover, .button.is-light.hover { color: #262626; background-color: #e7e7e7; border-color: #e0e0e0; }
+
+.button.is-light:focus, .button.is-light.focus { color: #262626; background-color: #e7e7e7; border-color: #e0e0e0; }
+
+.button.is-light:disabled, .button.is-light.disabled { color: #262626; background-color: #fafafa; border-color: #fafafa; }
+
+.show > .button.is-light.dropdown-toggle, .button.is-light:not(:disabled):not(.disabled):active, .button.is-light:not(:disabled):not(.disabled).active { color: #262626; background-color: #e0e0e0; border-color: #dadada; }
+
+.button.is-dark { color: #fafafa; background-color: #4f4f4f; border-color: #4f4f4f; }
+
+.button.is-dark:hover, .button.is-dark.hover { color: #fafafa; background-color: #3c3c3c; border-color: #363636; }
+
+.button.is-dark:focus, .button.is-dark.focus { color: #fafafa; background-color: #3c3c3c; border-color: #363636; }
+
+.button.is-dark:disabled, .button.is-dark.disabled { color: #fafafa; background-color: #4f4f4f; border-color: #4f4f4f; }
+
+.show > .button.is-dark.dropdown-toggle, .button.is-dark:not(:disabled):not(.disabled):active, .button.is-dark:not(:disabled):not(.disabled).active { color: #fafafa; background-color: #363636; border-color: #2f2f2f; }
+
+a.button.disabled, fieldset:disabled a.button { pointer-events: none; }
+
+/*# sourceMappingURL=fluid-component.css.map */
