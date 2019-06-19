@@ -82,3 +82,5 @@ $theme-colors: (
 @if $enable-all-color-variant {
   $theme-colors: map-merge($colors, $theme-colors);
 }
+
+$clr-contrasted-threshold:  150 !default;
