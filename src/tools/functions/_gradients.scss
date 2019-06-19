@@ -14,7 +14,7 @@
 // {Color} Gradient or background
 //
 @function gradient($color, $angle) {
-  @if $design-gradients-else-solid {
+  @if not $design-solid-else-gradients {
     @return $color linear-gradient($angle, mix($body-bg, $color, 15%), $color) repeat-x;
   } @else {
     @return $color;
