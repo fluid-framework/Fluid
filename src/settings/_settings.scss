@@ -9,12 +9,12 @@ $default-unit:                                0% !default;      // Zero is used 
 $design-gradients-else-solid:                 false !default;   // Let you chose between gradient vs solid design UI
 $design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
-$breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints use
-$generate-spacing-classes:                    true !default;    // Enable Grid Classes
+$breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints
+$generate-spacing-classes:                    true !default;    // Enable Spacing Classes
 $generate-grid-classes:                       true !default;    // Enable Grid Classes
 $generate-helper-classes:                     true !default;    // Enable helper Classes
 $generate-utilities-classes:                  true !default;    // Enable utilities Classes
-$enable-grid-gap:                             true !default;   // Enable Spacing/Gutter between Grid elements
+$enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
 $enable-transitions:                          true !default;    // Enable transitions and animations
 $enable-prefers-reduced-motion-media-query:   true !default;    // Disable transitions in Reduced Motion Media Query
