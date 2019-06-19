@@ -1,9 +1,9 @@
 @mixin transition($transitions...) {
+  $transition-combined: "";
   @if $enable-transitions {
     @if length($transitions) != 0 {
-      $transition-combined: all .2s ease-in-out;
+      $transition-combined: all 0.2s ease-in-out;
     } @else {
-      $transition-combined: "";
       @each $transition in $transitions {
         @if type-of($transition) != string {
           @error "The argument transitions: `#{transitions}` is of incorrect type: `#{type-of(transitions)}`. Type of `string` is required!";
