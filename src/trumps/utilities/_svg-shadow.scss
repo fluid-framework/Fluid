@@ -9,10 +9,10 @@
     properties: filter,
     class: svg-shadow,
     values: (
-      sm: drop-shadow(-.62rem .125rem .05rem rgba(0, 0, 0, .075)),
-      null: drop-shadow(-.25rem .5rem .2rem rgba(0, 0, 0, .15)),
-      lg: drop-shadow(-.5rem 1rem .6rem rgba(0, 0, 0, .175)),
-      round: drop-shadow(-.5rem 1rem .04rem rgba(0, 0, 0, 1)),
+      sm: drop-shadow(-0.62rem 0.125rem 0.05rem rgba(0, 0, 0, 0.075)),
+      null: drop-shadow(-0.25rem 0.5rem 0.2rem rgba(0, 0, 0, 0.15)),
+      lg: drop-shadow(-0.5rem 1rem 0.6rem rgba(0, 0, 0, 0.175)),
+      round: drop-shadow(-0.5rem 1rem 0.04rem rgba(0, 0, 0, 1)),
       none: drop-shadow(none)
     )
   );

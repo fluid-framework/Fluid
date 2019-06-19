@@ -13,7 +13,6 @@ $breakpoints-short-else-readable:             true !default;    // Let you chose
 $breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints
 $generate-spacing-classes:                    true !default;    // Enable Spacing Classes
 $generate-grid-classes:                       true !default;    // Enable Grid Classes
-$generate-component-classes:                  true !default;    // Enable utilities Classes
 $generate-helper-classes:                     true !default;    // Enable helper Classes
 $generate-utilities-classes:                  true !default;    // Enable utilities Classes
 $enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
@@ -79,10 +78,3 @@ $enable-fluid-font-sizes:                     false !default;   // Enable Fluid 
 //
 
 @import "./misc/misc";
-
-//
-// Components
-//
-
-@import "./components/input";
-@import "./components/button";
