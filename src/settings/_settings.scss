@@ -7,6 +7,7 @@
 // Options: Quickly modify global styling by enabling or disabling optional features.
 $default-unit:                                0% !default;      // Zero is used to keep the variable type number
 $design-gradients-else-solid:                 false !default;   // Let you chose between gradient vs solid design UI
+$design-shadow-else-border:                   true !default;    // Let you chose between shadow vs box border design UI
 $design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
 $breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints

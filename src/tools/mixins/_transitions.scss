@@ -1,8 +1,18 @@
+//
+// Transition Mixin
+//
+
+//
+// transition
+// Mixin Used to control and generate transition
+//
+// Required arguments:
+// {String} $transitions - transitions strings
 @mixin transition($transitions...) {
   $transition-combined: "";
   @if $enable-transitions {
-    @if length($transitions) != 0 {
-      $transition-combined: all 0.2s ease-in-out;
+    @if length($transitions) != 0 { // if no input argument is give
+      $transition-combined: all 0.2s ease-in-out;  // Default transition
     } @else {
       @each $transition in $transitions {
         @if type-of($transition) != string {
