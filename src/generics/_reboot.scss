@@ -27,7 +27,7 @@ body {
   font-family: $font-family-default;
   @include fontsize($font-size-default);
   font-weight: $font-weight-default;
-  line-height: $line-height-default;
+  line-height: $line-height;
   color: $body-color;
   text-align: left; // 2
   background-color: $body-bg; // 3
