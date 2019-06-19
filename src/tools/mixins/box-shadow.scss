@@ -1,0 +1,27 @@
+//
+// Shadow Mixin
+//
+
+//
+// box-shadow
+// Mixin Used to control and generate box-shadow
+//
+// Required arguments:
+// {String} $shadows - shadows strings
+@mixin box-shadow($shadows...) {
+  @if $design-shadow-else-border {
+    $result: ();
+
+    // Filter to avoid invalid values
+    // for example `box-shadow: none, 1px 1px black;`
+    @for $i from 1 through length($shadow) {
+      @if nth($shadow, $i) != "none" {
+        $result: suffix($result, ",") + nth($shadow, $i);
+      }
+    }
+  }
+  // if there are some values left after filtration
+  @if (length($result) > 0) {
+    box-shadow: $result;
+  }
+}
