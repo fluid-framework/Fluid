@@ -10,8 +10,8 @@
     class: is-rounded,
     values: (
       null: $border-radius-default,
-      sm: $border-radius-sm,
-      lg: $border-radius-lg,
+      sm: $border-radius-small,
+      lg: $border-radius-large,
       circle: 50%,
       pill: $border-radius-pill,
       none: none

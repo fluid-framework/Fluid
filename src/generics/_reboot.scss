@@ -180,7 +180,7 @@ strong {
 }
 
 small {
-  @include fontsize($small-font-size); // Add the correct font size in all browsers
+  @include fontsize($font-size-small); // Add the correct font size in all browsers
 }
 
 //
