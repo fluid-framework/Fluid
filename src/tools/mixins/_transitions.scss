@@ -12,7 +12,7 @@
   $transition-combined: "";
   @if $enable-transitions {
     @if length($transitions) != 0 { // if no input argument is give
-      $transition-combined: all 0.2s ease-in-out;  // Default transition
+      $transition-combined: all .2s ease-in-out;  // Default transition
     } @else {
       @each $transition in $transitions {
         @if type-of($transition) != string {
