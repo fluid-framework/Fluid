@@ -32,7 +32,7 @@
   // Gradient Background
   //
 
-  @if $design-gradients-else-solid {
+  @if not $design-solid-else-gradients {
     $GRADIENTS: ();
 
     @each $color, $value in $theme-colors {
