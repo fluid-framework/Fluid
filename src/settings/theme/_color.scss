@@ -83,4 +83,5 @@ $theme-colors: (
   $theme-colors: map-merge($colors, $theme-colors);
 }
 
-$clr-contrasted-threshold:  150 !default;
+// design clr contrast threshold
+$clr-contrast-threshold:  150 !default;

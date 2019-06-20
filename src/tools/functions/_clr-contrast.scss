@@ -22,5 +22,5 @@
 
   $contrast: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
-  @return if($contrast >= $clr-contrasted-threshold, $dark, $light);
+  @return if($contrast >= $clr-contrast-threshold, $dark, $light);
 }
