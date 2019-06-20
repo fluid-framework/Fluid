@@ -2,6 +2,20 @@
 // Misc
 //
 @if $generate-utilities-classes {
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .text-vertical {
+    writing-mode: vertical-lr;
+  }
+  .text-initial {
+    float: left;
+    padding-right: .5rem;
+    font-size: 3em;
+    line-height: 1;
+  }
   .text-decoration-none {
     text-decoration: none;
   }
