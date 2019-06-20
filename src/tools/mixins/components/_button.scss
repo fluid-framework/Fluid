@@ -1,0 +1,47 @@
+//
+// Buttons Mixin
+//
+
+//
+// Sizing Mixin
+//
+
+@mixin button-sizing($padding-y, $padding-x, $border-radius) {
+  padding: $padding-y $padding-x;
+  margin-right: $padding-x / 3.7;
+  margin-left: $padding-x / 3.7;
+  @if $design-rounded-else-box {
+    @include border-radius($border-radius);
+  }
+}
+
+//
+// Theme Variants Mixin
+//
+
+// Solid button
+@mixin button-theme-solid($color) {
+  $hover-background: darken($color, 10%);
+  $active-background: darken($color, 20%);
+  color: clr-contrast($color);
+  @include gradient-bg($color);
+
+  @include hover() {
+    color: clr-contrast($hover-background);
+    @include gradient-bg($hover-background);
+    box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+  }
+
+  @include focus() {
+    color: clr-contrast($hover-background);
+    @include gradient-bg($hover-background);
+  }
+
+  @include active() {
+    color: clr-contrast($active-background);
+    background-color: $active-background;
+    @if not $design-solid-else-gradients {
+      background-image: none; // Remove CSS gradients if they're enabled
+    }
+  }
+}

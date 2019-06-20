@@ -1,0 +1,30 @@
+//
+// Button Settings
+//
+
+// Settings
+
+$button-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// Derived Settings
+
+$button-font-family:                             $input-font-family !default;
+$button-line-height:                             $input-line-height !default;
+
+$button-padding-x-small:                         $input-padding-x-small !default;
+$button-padding-x:                               $input-padding-x !default;
+$button-padding-x-large:                         $input-padding-x-large !default;
+
+$button-padding-y-small:                         $input-padding-y-small !default;
+$button-padding-y:                               $input-padding-y !default;
+$button-padding-y-large:                         $input-padding-y-large !default;
+
+$button-font-weight:                             $font-weight-normal !default;
+$button-focus-width:                             $input-focus-width !default;
+
+$button-border-radius:                           $border-radius-default !default;
+$button-border-radius-large:                     $border-radius-large !default;
+$button-border-radius-small:                     $border-radius-small !default;
+
+$button-disabled-opacity:                        $input-disabled-opacity !default;
+$button-disabled-bg:                             $input-disabled-bg !default;

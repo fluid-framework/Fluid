@@ -1,0 +1,100 @@
+//
+// Buttons
+//
+
+@if $generate-component-classes {
+  // Button Base styles
+  .button {
+    display: inline-block;
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    color: $body-color;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 0;
+    @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
+    @include font-size($font-size-default);
+    @include transition($button-transition);
+
+    @include hover() {
+      color: $body-color;
+      box-shadow: 0 0 0 $button-focus-width rgba($black, .5);
+    }
+
+    @include focus() {
+      outline: 0;
+      @include animation-pulse();
+    }
+
+    @include disabled() {
+      // stylelint-disable-next-line declaration-no-important
+      box-shadow: none !important;
+      opacity: $button-disabled-opacity;
+      animation: none;
+    }
+  }
+
+  //
+  // Size Variants
+  //
+
+  .button.is-small {
+    @include button-sizing($button-padding-y-small, $button-padding-x-small, $button-border-radius-small);
+  }
+
+  .button.is-large {
+    @include button-sizing($button-padding-y-large, $button-padding-x-large, $button-border-radius-large);
+  }
+
+  //
+  // Theme Variants
+  //
+
+  // Is-solid
+  .button.is-solid {
+    $hover-background: darken($gray-600, 12.5%);
+    $active-background: darken($gray-600, 15%);
+    color: clr-contrast($gray-600);
+    @include gradient-bg($gray-600, 45deg);
+
+    @include hover() {
+      color: clr-contrast($hover-background);
+      @include gradient-bg($hover-background, 45deg);
+    }
+
+    @include focus() {
+      color: clr-contrast($hover-background);
+      @include gradient-bg($hover-background, 45deg);
+    }
+
+    @include active() {
+      color: clr-contrast($active-background);
+      @if $design-solid-else-gradients {
+        background: $active-background;
+      } @else {
+        background-image: none; // Remove the gradient for the pressed/active state
+      }
+    }
+
+    @include disabled {
+      color: $white;
+      @if $design-solid-else-gradients {
+        // stylelint-disable-next-line declaration-no-important
+        background: $button-disabled-bg !important;
+      } @else {
+        background-image: none; // Remove CSS gradients if they're enabled
+      }
+    }
+
+    // Color variants
+    @each $color, $value in $theme-colors {
+      &.is-#{$color} {
+        @include button-theme-solid($value);
+      }
+    }
+  }
+}
