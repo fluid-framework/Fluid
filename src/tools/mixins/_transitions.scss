@@ -11,8 +11,9 @@
 @mixin transition($transitions...) {
   $transition-combined: "";
   @if $enable-transitions {
-    @if length($transitions) != 0 { // if no input argument is give
-      $transition-combined: all .2s ease-in-out;  // Default transition
+    // if no input argument is give
+    @if length($transitions) != 0 {
+      $transition-combined: all .2s ease-in-out; // Default transition
     } @else {
       @each $transition in $transitions {
         @if type-of($transition) != string {
@@ -28,5 +29,34 @@
         transition: none;
       }
     }
+  }
+}
+
+//
+// animation-pulse
+// Mixin Used to control and generate pulse animation
+//
+// Arguments:
+// [optional] {Boolean} $infinite - used to set animation to infinite
+// [optional] {Color} $color - Color used to animate shadow
+// [optional] {Time} $Duration - Duration of animation
+// [optional] {Animation function} $function - Animation function
+//
+@mixin animation-pulse($infinite: false, $duration: 1s, $function: ease-out, $width: .3rem) {
+  @if $enable-transitions {
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba($dark, .4);
+      }
+      70% {
+        box-shadow: 0 0 0 $width rgba($dark, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba($dark, 0);
+      }
+    }
+
+    $infinite: if($infinite, infinite, null);
+    animation: pulse $duration $function both $infinite;
   }
 }
