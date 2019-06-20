@@ -2573,7 +2573,7 @@ template {
 }
 
 .border-secondary {
-  border-color: #d4d4d4;
+  border-color: #b5b5b5;
 }
 
 .border-valid {
@@ -2817,7 +2817,7 @@ template {
 }
 
 .clr-secondary {
-  color: #d4d4d4;
+  color: #b5b5b5;
 }
 
 .clr-valid {
@@ -2893,7 +2893,7 @@ a.clr-primary:hover, a.clr-primary:focus {
 }
 
 a.clr-secondary:hover, a.clr-secondary:focus {
-  color: #adadad;
+  color: #8f8f8f;
 }
 
 a.clr-valid:hover, a.clr-valid:focus {
@@ -2969,7 +2969,7 @@ a.clr-disabled:hover, a.clr-disabled:focus {
 }
 
 .bg-secondary {
-  background-color: #d4d4d4;
+  background-color: #b5b5b5;
 }
 
 .bg-valid {
