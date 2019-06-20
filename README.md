@@ -55,6 +55,7 @@ Fluid uses [ITCSS architecture](https://www.xfive.co/blog/itcss-scalable-maintai
 
 ```
 src
+├───generics
 ├───objects
 ├───settings
 │   ├───breakpoints
@@ -68,14 +69,15 @@ src
 ├───tools
 │   ├───functions
 │   └───mixins
-└───trumps
-    ├───helpers
-    └───utilities
-        ├───border
-        ├───grid-flex
-        ├───sizing
-        ├───transform
-        └───typography
+├───trumps
+│   ├───helpers
+│   └───utilities
+│       ├───border
+│       ├───grid-flex
+│       ├───sizing
+│       ├───transform
+│       └───typography
+└───vendors
 ```
 
 ## 💅 CSS only
