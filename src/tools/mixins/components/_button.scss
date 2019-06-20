@@ -26,18 +26,18 @@
   color: clr-contrast($color);
   @include gradient-bg($color);
 
-  @include hover() {
+  @include hover {
     color: clr-contrast($hover-background);
     @include gradient-bg($hover-background);
     box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
   }
 
-  @include focus() {
+  @include focus {
     color: clr-contrast($hover-background);
     @include gradient-bg($hover-background);
   }
 
-  @include active() {
+  @include active {
     color: clr-contrast($active-background);
     background-color: $active-background;
     @if not $design-solid-else-gradients {

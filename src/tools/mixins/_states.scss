@@ -7,7 +7,7 @@
 // Active
 // Generate active state
 @mixin active() {
-  @include not-disabled() {
+  @include not-disabled {
     &:active,
     &.active {
       @content;

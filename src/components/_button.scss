@@ -20,17 +20,17 @@
     @include font-size($font-size-default);
     @include transition($button-transition);
 
-    @include hover() {
+    @include hover {
       color: $body-color;
       box-shadow: 0 0 0 $button-focus-width rgba($black, .5);
     }
 
-    @include focus() {
+    @include focus {
       outline: 0;
       @include animation-pulse();
     }
 
-    @include disabled() {
+    @include disabled {
       // stylelint-disable-next-line declaration-no-important
       box-shadow: none !important;
       opacity: $button-disabled-opacity;
@@ -61,17 +61,17 @@
     color: clr-contrast($gray-600);
     @include gradient-bg($gray-600, 45deg);
 
-    @include hover() {
+    @include hover {
       color: clr-contrast($hover-background);
       @include gradient-bg($hover-background, 45deg);
     }
 
-    @include focus() {
+    @include focus {
       color: clr-contrast($hover-background);
       @include gradient-bg($hover-background, 45deg);
     }
 
-    @include active() {
+    @include active {
       color: clr-contrast($active-background);
       @if $design-solid-else-gradients {
         background: $active-background;
