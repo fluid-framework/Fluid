@@ -7,9 +7,11 @@
 // Active
 // Generate active state
 @mixin active() {
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    @content;
+  @include not-disabled() {
+    &:active,
+    &.active {
+      @content;
+    }
   }
 }
 
@@ -36,6 +38,14 @@
 @mixin disabled() {
   &:disabled,
   &.disabled {
+    @content;
+  }
+}
+
+// Disabled
+// Generate not disabled state
+@mixin not-disabled() {
+  &:not(:disabled):not(.disabled) {
     @content;
   }
 }
