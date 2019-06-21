@@ -33,6 +33,17 @@
   }
 }
 
+// Hover
+// Generate hover state
+@mixin hover-focus() {
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    @content;
+  }
+}
+
 // Disabled
 // Generate disabled state
 @mixin disabled() {
