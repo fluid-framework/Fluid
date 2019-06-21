@@ -15,7 +15,7 @@
 // Return :
 // {Color} $dark or $light based on $color contrast
 //
-@function clr-contrast($color, $dark: $gray-900, $light: $gray-100) {
+@function clr-contrast($color, $dark: $gray-900, $light: $white) {
   $r: red($color);
   $g: green($color);
   $b: blue($color);

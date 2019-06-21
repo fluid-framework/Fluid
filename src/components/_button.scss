@@ -22,12 +22,15 @@
 
     @include hover {
       color: $body-color;
+      box-shadow: 0 0 0 $button-focus-width rgba($button-theme-default, .5);
       @include focus {
         @include animation-pulse(); // pulse animation on click event
       }
     }
 
     @include active {
+      // stylelint-disable-next-line declaration-no-important
+      box-shadow: none !important; // no shadow in clicked state
       animation: none;
     }
 
@@ -61,39 +64,12 @@
 
   // Is-solid
   .button.is-solid {
-    $hover-background: darken($gray-600, 12.5%);
-    $active-background: darken($gray-600, 15%);
-    color: clr-contrast($gray-600);
-    @include gradient-bg($gray-600, 45deg);
-
-    @include hover {
-      color: clr-contrast($hover-background);
-      @include gradient-bg($hover-background, 45deg);
-      box-shadow: 0 0 0 $button-focus-width rgba($black, .5);
-    }
-
-    @include focus {
-      color: clr-contrast($hover-background);
-      @include gradient-bg($hover-background, 45deg);
-    }
+    color: clr-contrast($button-theme-default);
+    @include button-theme-solid($button-theme-default);
 
     @include active {
-      color: clr-contrast($active-background);
-      box-shadow: none; // no shadow in clicked state
-      @if $design-solid-else-gradients {
-        background: $active-background;
-      } @else {
+      @if not $design-solid-else-gradients {
         background-image: none; // Remove the gradient for the pressed/active state
-      }
-    }
-
-    @include disabled {
-      color: $white;
-      @if $design-solid-else-gradients {
-        // stylelint-disable-next-line declaration-no-important
-        background: $button-disabled-bg !important;
-      } @else {
-        background-image: none; // Remove CSS gradients if they're enabled
       }
     }
 
@@ -101,6 +77,16 @@
     @each $color, $value in $theme-colors {
       &.is-#{$color} {
         @include button-theme-solid($value);
+      }
+    }
+
+    // disable must override all theme styles
+    @include disabled {
+      color: $white;
+      // stylelint-disable-next-line declaration-no-important
+      background: $button-disabled-bg !important;
+      @if not $design-solid-else-gradients {
+        background-image: none; // Remove CSS gradients if they're enabled
       }
     }
   }
