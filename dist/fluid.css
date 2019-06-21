@@ -2053,7 +2053,7 @@ template {
   }
 }
 
-.embed-responsive {
+.embed {
   position: relative;
   display: block;
   width: 100%;
@@ -2061,16 +2061,16 @@ template {
   overflow: hidden;
 }
 
-.embed-responsive::before {
+.embed::before {
   display: block;
   content: "";
 }
 
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
+.embed .embed-item,
+.embed iframe,
+.embed embed,
+.embed object,
+.embed video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2080,23 +2080,23 @@ template {
   border: 0;
 }
 
-.embed-responsive-21-9::before {
+.embed-21-9::before {
   padding-top: 42.85714%;
 }
 
-.embed-responsive-1-1::before {
+.embed-1-1::before {
   padding-top: 100%;
 }
 
-.embed-responsive-4-3::before {
+.embed-4-3::before {
   padding-top: 75%;
 }
 
-.embed-responsive-16-9::before {
+.embed-16-9::before {
   padding-top: 56.25%;
 }
 
-.embed-responsive-16-10::before {
+.embed-16-10::before {
   padding-top: 62.5%;
 }
 
