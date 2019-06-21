@@ -3,7 +3,6 @@
 //
 
 @if $generate-utilities-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: position,
@@ -17,7 +16,6 @@
   // Doc : Add Documentation
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $classname: null;
 
   // if values $config contain "absolute"

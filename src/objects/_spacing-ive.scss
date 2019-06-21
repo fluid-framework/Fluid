@@ -11,23 +11,15 @@
 */
 
 @if $generate-spacing-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $sizes: $space-sizes;
-
-  // stylelint-disable-next-line scss/dollar-variable-default
   $sizes: map-remove($sizes, 0); // Remove 0 in -ive spacing
-
-  // stylelint-disable-next-line scss/dollar-variable-default
   $sizes: map-remove($sizes, auto); // Remove auto in -ive spacing
-
-  // stylelint-disable-next-line scss/dollar-variable-default
   $sizes: negate($sizes, "both"); // add -ive sigh to both size and value
 
   //
   // Basic Margin
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: margin,
@@ -41,7 +33,6 @@
   // Directional Margin
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: margin,
@@ -58,7 +49,6 @@
   //
 
   // Idea : remove because it isn't used often ?
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: margin-left margin-right,
@@ -73,7 +63,6 @@
   //
 
   // Idea : remove because it isn't used often ?
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: margin-top margin-bottom,

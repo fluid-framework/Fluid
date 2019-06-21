@@ -41,6 +41,7 @@
 
 // Functions related to color
 @import "./functions/clr-contrast";
+@import "./functions/clr-step";
 
 //
 // Mixin
@@ -67,5 +68,15 @@
 // Mixin Used for element states
 @import "./mixins/states";
 
+// Mixin Used for pseudo elements
+@import "./mixins/pseudo-elements";
+
 // Mixin Used for transitions
 @import "./mixins/transitions";
+
+//
+// Components
+//
+
+// Mixin Used for buttons
+@import "./mixins/components/button";

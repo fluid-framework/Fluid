@@ -1,0 +1,76 @@
+//
+// Buttons Mixin
+//
+
+//
+// Sizing Mixin
+//
+
+@mixin button-sizing($padding-y, $padding-x, $border-radius) {
+  padding: $padding-y $padding-x;
+  margin-right: $padding-x / 3.7;
+  margin-left: $padding-x / 3.7;
+  @if $design-rounded-else-box {
+    @include border-radius($border-radius);
+  }
+}
+
+//
+// Theme Variants Mixin
+//
+
+// Solid button
+@mixin button-theme-solid($color) {
+  $hover-background: darken($color, 10%);
+  $focus-background: lighten($color, 10%);
+  $active-background: darken($color, 20%);
+  color: if(clr-contrast($color) != clr-contrast($button-theme-default), clr-contrast($color), null); // to avoid adding extra color override
+  @include gradient-bg($color);
+
+  @include hover {
+    color: clr-contrast($hover-background);
+    box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+    @include gradient-bg($hover-background);
+  }
+
+  @include focus {
+    color: clr-contrast($focus-background);
+    @include gradient-bg($focus-background);
+  }
+
+  @include active {
+    color: clr-contrast($active-background);
+    @if $design-solid-else-gradients {
+      background-color: $active-background;
+    }
+  }
+}
+
+// outline button
+@mixin button-theme-outline($color) {
+  $hover-border: darken($color, 10%);
+  $active-border: darken($color, 20%);
+
+  @include hover {
+    box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+  }
+
+  @include hover-focus {
+    color: $hover-border;
+    border-color: $hover-border;
+  }
+
+  @include active {
+    color: $active-border;
+    border-color: $active-border;
+  }
+}
+
+// minimal button
+@mixin button-theme-minimal($color) {
+  @include after {
+    background-color: $color;
+  }
+
+  color: $color;
+}

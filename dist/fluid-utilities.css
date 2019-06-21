@@ -4,6 +4,53 @@
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
 */
+@-webkit-keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
+  }
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
+  }
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
 .embed-responsive {
   position: relative;
   display: block;
@@ -92,26 +139,26 @@
 
 .layout-content {
   z-index: 1;
-  color: #262626;
+  color: #0f0f0f;
   background-color: #fff;
 }
 
 .layout-header {
   z-index: 10;
-  color: #262626;
+  color: #0f0f0f;
   background-color: #fff;
 }
 
 .layout-sidebar {
   z-index: 15;
   color: #fff;
-  background-color: #3b3b3b;
+  background-color: #2b2b2b;
 }
 
 .layout-footer {
   z-index: 0;
-  color: #fafafa;
-  background-color: #262626;
+  color: #f0f0f0;
+  background-color: #0f0f0f;
 }
 
 .img-bg {
@@ -411,31 +458,31 @@
 }
 
 .rotate-0 {
-  rotate: 0deg;
+  transform: rotate(0deg);
 }
 
 .rotate-45 {
-  rotate: 45deg;
+  transform: rotate(45deg);
 }
 
 .rotate-90 {
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 
 .rotate-135 {
-  rotate: 135deg;
+  transform: rotate(135deg);
 }
 
 .rotate-180 {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 .rotate-225 {
-  rotate: 225deg;
+  transform: rotate(225deg);
 }
 
 .rotate-270 {
-  rotate: 270deg;
+  transform: rotate(270deg);
 }
 
 .position-static {
@@ -492,7 +539,7 @@
 }
 
 .border {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #b8b8b8;
 }
 
 .border-none {
@@ -500,19 +547,19 @@
 }
 
 .border-t {
-  border-top: 1px solid #e3e3e3;
+  border-top: 1px solid #b8b8b8;
 }
 
 .border-b {
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #b8b8b8;
 }
 
 .border-r {
-  border-right: 1px solid #e3e3e3;
+  border-right: 1px solid #b8b8b8;
 }
 
 .border-l {
-  border-left: 1px solid #e3e3e3;
+  border-left: 1px solid #b8b8b8;
 }
 
 .border-wide {
@@ -524,7 +571,7 @@
 }
 
 .border-secondary {
-  border-color: #d4d4d4;
+  border-color: gray;
 }
 
 .border-valid {
@@ -544,11 +591,11 @@
 }
 
 .border-light {
-  border-color: #fafafa;
+  border-color: #f0f0f0;
 }
 
 .border-dark {
-  border-color: #4f4f4f;
+  border-color: #474747;
 }
 
 .border-white {
@@ -768,7 +815,7 @@
 }
 
 .clr-secondary {
-  color: #d4d4d4;
+  color: gray;
 }
 
 .clr-valid {
@@ -788,15 +835,15 @@
 }
 
 .clr-light {
-  color: #fafafa;
+  color: #f0f0f0;
 }
 
 .clr-dark {
-  color: #4f4f4f;
+  color: #474747;
 }
 
 .clr-body {
-  color: #262626;
+  color: #0f0f0f;
 }
 
 .clr-black {
@@ -836,7 +883,7 @@
 }
 
 .clr-disabled {
-  color: #757575;
+  color: #636363;
 }
 
 a.clr-primary:hover, a.clr-primary:focus {
@@ -844,7 +891,7 @@ a.clr-primary:hover, a.clr-primary:focus {
 }
 
 a.clr-secondary:hover, a.clr-secondary:focus {
-  color: #adadad;
+  color: #595959;
 }
 
 a.clr-valid:hover, a.clr-valid:focus {
@@ -864,11 +911,11 @@ a.clr-error:hover, a.clr-error:focus {
 }
 
 a.clr-light:hover, a.clr-light:focus {
-  color: #d4d4d4;
+  color: #c9c9c9;
 }
 
 a.clr-dark:hover, a.clr-dark:focus {
-  color: #292929;
+  color: #212121;
 }
 
 a.clr-body:hover, a.clr-body:focus {
@@ -912,7 +959,7 @@ a.clr-hide:hover, a.clr-hide:focus {
 }
 
 a.clr-disabled:hover, a.clr-disabled:focus {
-  color: #4f4f4f;
+  color: #3d3d3d;
 }
 
 .bg-primary {
@@ -920,7 +967,7 @@ a.clr-disabled:hover, a.clr-disabled:focus {
 }
 
 .bg-secondary {
-  background-color: #d4d4d4;
+  background-color: gray;
 }
 
 .bg-valid {
@@ -940,15 +987,15 @@ a.clr-disabled:hover, a.clr-disabled:focus {
 }
 
 .bg-light {
-  background-color: #fafafa;
+  background-color: #f0f0f0;
 }
 
 .bg-dark {
-  background-color: #4f4f4f;
+  background-color: #474747;
 }
 
 .bg-body {
-  background-color: #262626;
+  background-color: #0f0f0f;
 }
 
 .bg-black {
