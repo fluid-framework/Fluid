@@ -10,7 +10,7 @@
   $config: (
     responsive: false,
     properties: box-shadow,
-    class: shadow,
+    class: has-shadow,
     values: (
       sm: 1px 1px 3px 0 rgba($black, .075),
       null: 1px 4px 6px 0 rgba($black, .15),
