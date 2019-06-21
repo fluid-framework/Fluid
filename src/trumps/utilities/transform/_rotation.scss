@@ -3,12 +3,16 @@
 //
 
 @if $generate-utilities-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
+  $ROTATIONS: ();
+  @each $key, $value in $rotations {
+    $ROTATIONS: map-merge($ROTATIONS, ($key : rotate($value)));
+  }
+
   $config: (
     responsive: false,
-    properties: "rotate",
+    properties: transform,
     class: rotate,
-    values: $rotations
+    values: $ROTATIONS
   );
 
   @include generate-class($config);
