@@ -90,4 +90,24 @@
       }
     }
   }
+
+  // Is-outline
+  .button.is-outline {
+    border: $border-width-default solid $button-outline-normal-border;
+    @include button-theme-outline($button-theme-default); // Default button theme
+
+    // Color variants
+    @each $color, $value in $theme-colors {
+      &.is-#{$color} {
+        @include button-theme-outline($value);
+      }
+    }
+
+    // disable must override all theme styles
+    @include disabled {
+      color: $white;
+      // stylelint-disable-next-line declaration-no-important
+      border-color: $button-disabled-bg !important;
+    }
+  }
 }

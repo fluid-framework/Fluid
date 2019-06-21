@@ -45,3 +45,23 @@
     }
   }
 }
+
+// outline button
+@mixin button-theme-outline($color) {
+  $hover-border: darken($color, 10%);
+  $active-border: darken($color, 20%);
+
+  @include hover {
+    box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+  }
+
+  @include hover-focus {
+    color: $hover-border;
+    border-color: $hover-border;
+  }
+
+  @include active {
+    color: $active-border;
+    border-color: $active-border;
+  }
+}
