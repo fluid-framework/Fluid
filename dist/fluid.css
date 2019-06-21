@@ -2083,11 +2083,9 @@ template {
 
 .button:hover, .button.hover {
   color: #0f0f0f;
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
 }
 
-.button:focus, .button.focus {
-  outline: 0;
+.button:hover:focus, .button:hover.focus, .button.hover:focus, .button.hover.focus {
   -webkit-animation: pulse 1s ease-out both;
           animation: pulse 1s ease-out both;
 }
@@ -2114,6 +2112,15 @@ template {
   100% {
     box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
   }
+}
+
+.button:not(:disabled):not(.disabled):active, .button:not(:disabled):not(.disabled).active {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.button:focus, .button.focus {
+  outline: 0;
 }
 
 .button:disabled, .button.disabled {
@@ -2145,6 +2152,7 @@ template {
 .button.is-solid:hover, .button.is-solid.hover {
   color: #f0f0f0;
   background-color: #444444;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .button.is-solid:focus, .button.is-solid.focus {
@@ -2154,6 +2162,7 @@ template {
 
 .button.is-solid:not(:disabled):not(.disabled):active, .button.is-solid:not(:disabled):not(.disabled).active {
   color: #f0f0f0;
+  box-shadow: none;
   background: #3d3d3d;
 }
 

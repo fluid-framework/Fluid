@@ -22,12 +22,17 @@
 
     @include hover {
       color: $body-color;
-      box-shadow: 0 0 0 $button-focus-width rgba($black, .5);
+      @include focus {
+        @include animation-pulse(); // pulse animation on click event
+      }
+    }
+
+    @include active {
+      animation: none;
     }
 
     @include focus {
       outline: 0;
-      @include animation-pulse();
     }
 
     @include disabled {
@@ -64,6 +69,7 @@
     @include hover {
       color: clr-contrast($hover-background);
       @include gradient-bg($hover-background, 45deg);
+      box-shadow: 0 0 0 $button-focus-width rgba($black, .5);
     }
 
     @include focus {
@@ -73,6 +79,7 @@
 
     @include active {
       color: clr-contrast($active-background);
+      box-shadow: none; // no shadow in clicked state
       @if $design-solid-else-gradients {
         background: $active-background;
       } @else {
