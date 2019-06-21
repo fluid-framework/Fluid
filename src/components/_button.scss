@@ -15,7 +15,7 @@
     vertical-align: middle;
     user-select: none;
     background-color: transparent;
-    border: 0;
+    border: 1px solid transparent;
     @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
     @include font-size($font-size-default);
     @include transition($button-transition);
