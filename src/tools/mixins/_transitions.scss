@@ -33,99 +33,52 @@
 }
 
 //
-// animation-pulse
-// Mixin Used to control and generate pulse animation
+// animation
+// Mixin Used to generate animation
 //
 // Arguments:
+// {String} $name - Name of the animation
 // [optional] {Boolean} $infinite - used to set animation to infinite
 // [optional] {Color} $color - Color used to animate shadow
 // [optional] {Time} $Duration - Duration of animation
 // [optional] {Animation function} $function - Animation function
 //
-@mixin animation-pulse($infinite: false, $duration: 1s, $function: ease-out, $width: .3rem) {
+@mixin animation($name, $important: false, $infinite: false, $duration: 1s, $function: ease-out) {
   @if $enable-transitions {
-    @keyframes pulse {
-      from {
-        box-shadow: 0 0 0 0 rgba($dark, .4);
-      }
-      70% {
-        box-shadow: 0 0 0 $width rgba($dark, 0);
-      }
-      to {
-        box-shadow: 0 0 0 0 rgba($dark, 0);
-      }
+    $important: if($important, !important, null);
+    @if ($name == none) {
+      animation: none $important;
+    } @else {
+      $infinite: if($infinite, infinite, null);
+      animation: $name $duration $function both $infinite $important;
     }
-
-    $infinite: if($infinite, infinite, null);
-    animation: pulse $duration $function both $infinite;
   }
 }
 
-//
-// animation-shake
-// Mixin Used to control and generate shake animation
-//
-// Arguments:
-// [optional] {Boolean} $infinite - used to set animation to infinite
-// [optional] {Color} $color - Color used to animate shadow
-// [optional] {Time} $Duration - Duration of animation
-// [optional] {Animation function} $function - Animation function
-//
-@mixin animation-shake($infinite: false, $duration: .5s, $function: ease-out) {
-  @if $enable-transitions {
-    @keyframes shake {
-      from,
-      to {
-        transform: translate3d(0, 0, 0);
-      }
-
-      10%,
-      30%,
-      50%,
-      70%,
-      90% {
-        transform: translate3d(-10px, 0, 0);
-      }
-
-      20%,
-      40%,
-      60%,
-      80% {
-        transform: translate3d(10px, 0, 0);
-      }
+// Animation Keyframes
+@if $enable-transitions {
+  @keyframes pulse {
+    from {
+      box-shadow: 0 0 0 0 rgba($dark, .4);
     }
-
-    $infinite: if($infinite, infinite, null);
-    animation: shake $duration $function both $infinite;
+    70% {
+      box-shadow: 0 0 0 .3rem rgba($dark, 0);
+    }
+    to {
+      box-shadow: 0 0 0 0 rgba($dark, 0);
+    }
   }
-}
 
-//
-// animation-flash
-// Mixin Used to control and generate flash animation
-//
-// Arguments:
-// [optional] {Boolean} $infinite - used to set animation to infinite
-// [optional] {Color} $color - Color used to animate shadow
-// [optional] {Time} $Duration - Duration of animation
-// [optional] {Animation function} $function - Animation function
-//
-@mixin animation-flash($infinite: false, $duration: .5s, $function: ease-out) {
-  @if $enable-transitions {
-    @keyframes flash {
-      from,
-      50%,
-      to {
-        opacity: 1;
-      }
-
-      25%,
-      75% {
-        opacity: 0;
-      }
+  @keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
     }
 
-    $infinite: if($infinite, infinite, null);
-    animation: flash $duration $function both $infinite;
+    25%,
+    75% {
+      opacity: 0;
+    }
   }
 }

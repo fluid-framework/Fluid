@@ -4,6 +4,53 @@
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
 */
+@-webkit-keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
+  }
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
+  }
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
 *,
 *::before,
 *::after {

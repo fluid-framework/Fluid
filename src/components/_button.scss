@@ -24,14 +24,14 @@
       color: $body-color;
       box-shadow: 0 0 0 $button-focus-width rgba($button-theme-default, .5);
       @include focus {
-        @include animation-pulse(); // pulse animation on click event
+        @include animation(pulse); // pulse animation on click event
       }
     }
 
     @include active {
       // stylelint-disable-next-line declaration-no-important
       box-shadow: none !important; // no shadow in clicked state
-      animation: none; // disable animations and play again on click event
+      @include animation(none); // disable animations and play again on click event
     }
 
     @include focus {
@@ -42,8 +42,7 @@
       // stylelint-disable-next-line declaration-no-important
       box-shadow: none !important;
       opacity: $button-disabled-opacity;
-      // stylelint-disable-next-line declaration-no-important
-      animation: none !important;
+      @include animation(none, true);
     }
   }
 
@@ -134,16 +133,18 @@
       @include after {
         top: 80%;
       }
+
       @include focus {
-        animation: none; // disable pulse animation
+        @include animation(none); // disable pulse animation
         @include after {
-          @include animation-flash(); // flash animation for underline
+          @include animation(flash); // flash animation for underline
         }
       }
     }
+
     @include active {
       @include after {
-        animation: none; // disable animations and play again on click event
+        @include animation(none); // disable animations and play again on click event
       }
     }
 
