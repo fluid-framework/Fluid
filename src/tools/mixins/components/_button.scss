@@ -65,3 +65,12 @@
     border-color: $active-border;
   }
 }
+
+// minimal button
+@mixin button-theme-minimal($color) {
+  @include after {
+    background-color: $color;
+  }
+
+  color: $color;
+}
