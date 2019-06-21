@@ -163,6 +163,7 @@
       @include after {
         top: 100%;
         background-color: $button-disabled-bg;
+        @include animation(none, true);
       }
     }
   }
