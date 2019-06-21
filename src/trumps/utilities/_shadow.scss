@@ -6,7 +6,6 @@
 // Todo : add color variants
 //
 @if $generate-utilities-classes and $design-shadow-else-border{
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: box-shadow,

@@ -3,7 +3,6 @@
 //
 
 @if $generate-utilities-classes and $design-rounded-else-box {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: border-radius,
