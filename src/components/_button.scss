@@ -39,10 +39,8 @@
     }
 
     @include disabled {
-      // stylelint-disable-next-line declaration-no-important
-      box-shadow: none !important;
+      pointer-events: none;
       opacity: $button-disabled-opacity;
-      @include animation(none, true);
     }
   }
 
@@ -83,8 +81,7 @@
     // disable must override all theme styles
     @include disabled {
       color: $white;
-      // stylelint-disable-next-line declaration-no-important
-      background: $button-disabled-bg !important;
+      background: $button-disabled-bg;
       @if not $design-solid-else-gradients {
         background-image: none; // Remove CSS gradients if they're enabled
       }
@@ -106,8 +103,7 @@
     // disable must override all theme styles
     @include disabled {
       color: $button-theme-default;
-      // stylelint-disable-next-line declaration-no-important
-      border-color: $button-disabled-bg !important;
+      border-color: $button-disabled-bg;
     }
   }
 
@@ -161,9 +157,7 @@
     @include disabled {
       color: $button-theme-default;
       @include after {
-        top: 100%;
         background-color: $button-disabled-bg;
-        @include animation(none, true);
       }
     }
   }

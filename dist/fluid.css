@@ -2149,10 +2149,8 @@ template {
 }
 
 .button:disabled, .button.disabled {
-  box-shadow: none !important;
+  pointer-events: none;
   opacity: 0.65;
-  -webkit-animation: none !important;
-          animation: none !important;
 }
 
 .button.is-small {
@@ -2354,7 +2352,7 @@ template {
 
 .button.is-solid:disabled, .button.is-solid.disabled {
   color: #fff;
-  background: #636363 !important;
+  background: #636363;
 }
 
 .button.is-outline {
@@ -2489,7 +2487,7 @@ template {
 
 .button.is-outline:disabled, .button.is-outline.disabled {
   color: #636363;
-  border-color: #636363 !important;
+  border-color: #636363;
 }
 
 .button.is-minimal {
@@ -2602,10 +2600,7 @@ template {
 }
 
 .button.is-minimal:disabled::after, .button.is-minimal.disabled::after {
-  top: 100%;
   background-color: #636363;
-  -webkit-animation: none !important;
-          animation: none !important;
 }
 
 .embed-responsive {
