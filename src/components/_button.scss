@@ -9,6 +9,8 @@
 
   .button {
     display: inline-block;
+    margin-top: .1rem;
+    margin-bottom: .1rem;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
     line-height: $button-line-height;
@@ -19,6 +21,7 @@
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
+
     @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
     @include font-size($font-size-default);
     @include transition($button-transition);
