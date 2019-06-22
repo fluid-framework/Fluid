@@ -168,6 +168,7 @@
   //
   // Loading Animation
   //
+
   .button.is-loading {
     // stylelint-disable-next-line declaration-no-important
     color: transparent !important;
@@ -183,5 +184,12 @@
       border-radius: $border-radius-pill;
       animation: spin 1s infinite linear;
     }
+  }
+  //
+  // Block
+  //
+
+  .button.is-block {
+    width: 100%;
   }
 }
