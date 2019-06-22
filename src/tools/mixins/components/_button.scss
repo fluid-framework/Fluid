@@ -19,7 +19,7 @@
 //
 
 // Solid button
-@mixin button-theme-solid($color) {
+@mixin button-design-solid-varient($color) {
   $hover-background: darken($color, 10%);
   $focus-background: lighten($color, 10%);
   $active-background: darken($color, 20%);
@@ -52,7 +52,7 @@
 }
 
 // outline button
-@mixin button-theme-outline($color) {
+@mixin button-design-outline-varient($color) {
   $hover-border: darken($color, 10%);
   $active-border: darken($color, 20%);
 
@@ -78,7 +78,7 @@
 }
 
 // minimal button
-@mixin button-theme-minimal($color) {
+@mixin button-design-minimal-varient($color) {
   @include after {
     background-color: $color;
   }
