@@ -43,6 +43,12 @@
       background-color: $active-background;
     }
   }
+
+  &.is-loading {
+    @include before {
+      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+    }
+  }
 }
 
 // outline button
@@ -63,6 +69,12 @@
     color: $active-border;
     border-color: $active-border;
   }
+
+  &.is-loading {
+    @include before {
+      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+    }
+  }
 }
 
 // minimal button
@@ -72,4 +84,9 @@
   }
 
   color: $color;
+  &.is-loading {
+    @include before {
+      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+    }
+  }
 }
