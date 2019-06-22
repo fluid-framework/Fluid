@@ -8,8 +8,7 @@
 
 @mixin button-sizing($padding-y, $padding-x, $border-radius) {
   padding: $padding-y $padding-x;
-  margin-right: $padding-x / 3.7;
-  margin-left: $padding-x / 3.7;
+  margin: ($padding-y / 3.7) ($padding-x / 3.7);
   @if $design-rounded-else-box {
     @include border-radius($border-radius);
   }

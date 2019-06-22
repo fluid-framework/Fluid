@@ -2115,8 +2115,7 @@ template {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  margin-right: 0.2027rem;
-  margin-left: 0.2027rem;
+  margin: 0.10135rem 0.2027rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
   transition: all 0.2s ease-in-out;
@@ -2155,15 +2154,13 @@ template {
 
 .button.is-small {
   padding: 0.25rem 0.5rem;
-  margin-right: 0.13514rem;
-  margin-left: 0.13514rem;
+  margin: 0.06757rem 0.13514rem;
   border-radius: 0.2rem;
 }
 
 .button.is-large {
   padding: 0.5rem 1rem;
-  margin-right: 0.27027rem;
-  margin-left: 0.27027rem;
+  margin: 0.13514rem 0.27027rem;
   border-radius: 0.3rem;
 }
 
