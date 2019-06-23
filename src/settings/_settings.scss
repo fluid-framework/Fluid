@@ -10,7 +10,7 @@ $design-solid-else-gradients:                 true !default;    // Let you chose
 $design-shadow-else-border:                   true !default;    // Let you chose between shadow vs box border design UI
 $design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
-$breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints
+$breakpoints-prefix:                          "@"  !default;     // Symbol used to prefix Breakpoints
 $generate-spacing-classes:                    true !default;    // Enable Spacing Classes
 $generate-grid-classes:                       true !default;    // Enable Grid Classes
 $generate-helper-classes:                     true !default;    // Enable helper Classes
