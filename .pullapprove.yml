@@ -1,0 +1,30 @@
+ersion: 3
+
+# extends: https://api.github.com/repos/example/pullapprove-config/contents/.pullapprove.yml
+
+pullapprove_conditions:
+- "'WIP' not in title"
+- "base.ref == 'master'"
+- "'hotfix' not in labels"
+- "'*travis*' in statuses.succeeded"
+
+notifications:
+- when: pull_request.opened
+  # only need to send this to external-contributors
+  if: "author_association in ['FIRST_TIMER', 'FIRST_TIME_CONTRIBUTOR', 'CONTRIBUTOR']"
+  comment: >
+    Hey @{{ author }}, please make sure your tests pass and you have looked everything over. Then we will review.
+
+    Thanks for the PR!
+- when: pullapprove.approved
+  comment: "The review is completed. @{{ author }}, please merge this in when ready."
+
+groups:
+  code:
+    reviewers:
+      users:
+      - ashfahan
+    reviews:
+      required: 1  # number of approvals required from this group
+      request: 1  # number of review requests sent at a time
+      request_order: random  # "random" or "given"
