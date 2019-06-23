@@ -20,7 +20,7 @@
     vertical-align: middle;
     user-select: none;
     background-color: transparent;
-    border: 1px solid transparent;
+    border: $border-width-default solid transparent;
 
     @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
     @include font-size($font-size-default);
@@ -71,7 +71,7 @@
 
     // Is-outline
     &.is-outline {
-      border: $border-width-default solid $button-outline-normal-border;
+      border-color: $button-outline-normal-border;
       @include button-design-outline-varient($button-theme-default); // Default button theme
 
       // Color variants

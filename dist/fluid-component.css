@@ -330,7 +330,7 @@
 }
 
 .button.is-outline {
-  border: 1px solid #b8b8b8;
+  border-color: #b8b8b8;
 }
 
 .button.is-outline:hover, .button.is-outline.hover {
