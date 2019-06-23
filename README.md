@@ -21,19 +21,19 @@
     <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000&style=for-the-badge"/>
   </a>
   <a href="https://github.com/fluid-framework/Fluid/tree/master/LICENSE">
-    <img src="https://img.shields.io/github/license/fluid-framework/Fluid.svg?style=for-the-badge&color=blueviolet"/>
+    <img src="https://img.shields.io/github/license/fluid-framework/Fluid.svg?style=for-the-badge&color=805ad5"/>
   </a>
   <a href="https://github.com/fluid-framework/Fluid/releases">
     <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?style=for-the-badge"/>
   </a>
-  <a href="https://github.com/fluid-framework/Fluid/issues">
-    <img src="https://img.shields.io/github/issues/fluid-framework/Fluid.svg?style=for-the-badge" />
+  <a href="https://travis-ci.com/fluid-framework/Fluid">
+    <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
   </a>
   <a href="https://github.com/fluid-framework/Fluid/commits">
     <img src="https://img.shields.io/github/commit-activity/w/fluid-framework/fluid.svg?style=for-the-badge" />
   </a>
   <a href="https://github.com/fluid-framework/Fluid/pulls">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Pull%20Request-Welcome_%E2%9D%A4-805ad5.svg?style=for-the-badge" />
   </a>
 </p>
 
@@ -55,9 +55,14 @@ Fluid uses [ITCSS architecture](https://www.xfive.co/blog/itcss-scalable-maintai
 
 ```
 src
+├───components
+├───generics
+├───objects
 ├───settings
 │   ├───breakpoints
+│   ├───components
 │   ├───containers
+│   ├───design
 │   ├───grid
 │   ├───misc
 │   ├───space
@@ -66,9 +71,16 @@ src
 ├───tools
 │   ├───functions
 │   └───mixins
-└───trumps
-    ├───helpers
-    └───utilities
+│       └───components
+├───trumps
+│   ├───helpers
+│   └───utilities
+│       ├───border
+│       ├───grid-flex
+│       ├───sizing
+│       ├───transform
+│       └───typography
+└───vendors
 ```
 
 ## 💅 CSS only

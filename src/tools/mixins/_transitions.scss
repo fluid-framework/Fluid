@@ -1,0 +1,90 @@
+//
+// Transition Mixin
+//
+
+//
+// transition
+// Mixin Used to control and generate transition
+//
+// Required arguments:
+// {String} $transitions - transitions strings
+@mixin transition($transitions...) {
+  $transition-combined: "";
+  @if $enable-transitions {
+    // if no input argument is give
+    @if length($transitions) != 0 {
+      $transition-combined: all .2s ease-in-out; // Default transition
+    } @else {
+      @each $transition in $transitions {
+        @if type-of($transition) != string {
+          @error "The argument transitions: `#{transitions}` is of incorrect type: `#{type-of(transitions)}`. Type of `string` is required!";
+        }
+        $transition-combined: suffix($transition-combined, ",") + $transition;
+      }
+    }
+    transition: $transition-combined;
+
+    @if $enable-prefers-reduced-motion-media-query {
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+}
+
+//
+// animation
+// Mixin Used to generate animation
+//
+// Arguments:
+// {String} $name - Name of the animation
+// [optional] {Boolean} $infinite - used to set animation to infinite
+// [optional] {Color} $color - Color used to animate shadow
+// [optional] {Time} $Duration - Duration of animation
+// [optional] {Animation function} $function - Animation function
+//
+@mixin animation($name, $important: false, $infinite: false, $duration: 1s, $function: ease-out) {
+  @if $enable-transitions {
+    $important: if($important, !important, null);
+    @if ($name == none) {
+      animation: none $important;
+    } @else {
+      $infinite: if($infinite, infinite, null);
+      animation: $name $duration $function both $infinite $important;
+    }
+  }
+}
+
+// Animation Keyframes
+@if $enable-transitions {
+  @keyframes pulse {
+    from {
+      box-shadow: 0 0 0 0 rgba($dark, .4);
+    }
+    70% {
+      box-shadow: 0 0 0 .3rem rgba($dark, 0);
+    }
+    to {
+      box-shadow: 0 0 0 0 rgba($dark, 0);
+    }
+  }
+
+  @keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

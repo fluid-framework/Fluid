@@ -1,0 +1,34 @@
+/**
+ * Fluid Grid v0.1
+ * Copyright (c) 2019-2027 Boundary Studio
+ * Copyright (c) 2019-2027 Ashfahan
+ * Licensed under MIT (https://github.com/boundary-studio/Fluid/blob/master/LICENSE)
+*/
+
+// Reset Styles only for grid
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+// Reset Styles only for grid
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Configuration
+
+@import "./vendors/vendors";
+@import "./settings/settings";
+@import "./tools/tools";
+
+@import "./objects/grid";
+
+// Grid Utility
+@import "./trumps/utilities/grid-flex/direction";
+@import "./trumps/utilities/grid-flex/wrap";
+@import "./trumps/utilities/grid-flex/align";
+@import "./trumps/utilities/grid-flex/justify";
+@import "./trumps/utilities/grid-flex/order";

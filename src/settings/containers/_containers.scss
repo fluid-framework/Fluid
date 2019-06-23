@@ -2,12 +2,4 @@
 // Containers Settings
 //
 
-// Define the maximum width a container can expend to at different screen sizes / Breakpoints.
-$container-max-widths: (
-  sm: 528px,
-  md: 720px,
-  lg: 960px,
-  xl: 1152px
-) !default;
-
 $container-padding-x: $grid-gap / 2 !default; // Container padding left and right

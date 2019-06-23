@@ -1,0 +1,26 @@
+//
+// Color contrast
+//
+
+//
+// clr-contrast
+// Functions used to return the inverted contrast of the color.
+// for light color it will return $dark for dark color it will return $light
+//
+// Required arguments:
+// {Color} $color - Color to test
+// [optional] {Color} $dark - color to return if it have high contrast
+// [optional] {Color} $light - color to return if it have high contrast
+//
+// Return :
+// {Color} $dark or $light based on $color contrast
+//
+@function clr-contrast($color, $dark: $gray-900, $light: $white) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $contrast: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @return if($contrast >= $clr-contrast-threshold, $dark, $light);
+}

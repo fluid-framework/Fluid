@@ -1,0 +1,16 @@
+//
+// Flex-fill
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: true,
+    properties: flex,
+    class: flex,
+    values: (
+      fill: 1 1 auto
+    )
+  );
+
+  @include generate-class($config);
+}

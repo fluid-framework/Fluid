@@ -1,0 +1,14 @@
+//
+// Grid-wrap
+//
+
+@if $generate-grid-classes {
+  $config: (
+    responsive: true,
+    properties: flex-wrap,
+    class: grid,
+    values: wrap nowrap wrap-reverse
+  );
+
+  @include generate-class($config);
+}

@@ -103,20 +103,20 @@
 //    @debug 'This media query works only in lg';
 // }
 //
-@mixin media-breakpoint-only($breakpoint, $breakpoint: $breakpoints) {
-  $min: breakpoint-lower($breakpoint, $breakpoint);
-  $max: breakpoint-upper($breakpoint, $breakpoint);
+@mixin media-breakpoint-only($breakpoint, $breakpoints: $breakpoints) {
+  $min: breakpoint-lower($breakpoint, $breakpoints);
+  $max: breakpoint-upper($breakpoint, $breakpoints);
 
   @if $min != null and $max != null {
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
   } @else if $max == null {
-    @include media-breakpoint-above($breakpoint, $breakpoint) {
+    @include media-breakpoint-above($breakpoint, $breakpoints) {
       @content;
     }
   } @else if $min == null {
-    @include media-breakpoint-below($breakpoint, $breakpoint) {
+    @include media-breakpoint-below($breakpoint, $breakpoints) {
       @content;
     }
   }

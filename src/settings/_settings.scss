@@ -1,17 +1,26 @@
 //
 // Settings
 //
+// Todo : use map-merge for default map values
+// Todo : Implement options
 
 // Options: Quickly modify global styling by enabling or disabling optional features.
-// Todo : Implement these options
 $default-unit:                                0% !default;      // Zero is used to keep the variable type number
-$style-gradients-else-solid:                  false !default;   // Let you chose between gradient vs solid Style UI
-$style-transitions:                           true !default;    // Enable transitions and animations
+$design-solid-else-gradients:                 true !default;    // Let you chose between gradient vs solid design UI
+$design-shadow-else-border:                   true !default;    // Let you chose between shadow vs box border design UI
+$design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
-$generate-spacing-classes:                    true !default;    // Enable Grid Classes
+$breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints
+$generate-spacing-classes:                    true !default;    // Enable Spacing Classes
+$generate-grid-classes:                       true !default;    // Enable Grid Classes
 $generate-helper-classes:                     true !default;    // Enable helper Classes
 $generate-utilities-classes:                  true !default;    // Enable utilities Classes
+$generate-component-classes:                  true !default;    // Enable helper Classes
+$enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
+$enable-transitions:                          true !default;    // Enable transitions and animations
+$enable-prefers-reduced-motion-media-query:   true !default;    // Disable transitions in Reduced Motion Media Query
+$enable-fluid-font-sizes:                     false !default;   // Enable Fluid typography
 
 //
 // Breakpoints
@@ -43,22 +52,35 @@ $enable-all-color-variant:                    false !default;   // Generate Ever
 
 @import "./theme/color";
 
-@import "./theme/border";
-@import "./theme/layout";
-
-@import "./theme/link";
-@import "./theme/hr";
-
 //
 // Typography
 //
 
+@import "./typography/text";
 @import "./typography/font";
-@import "./typography/line_height";
 @import "./typography/heading";
+@import "./typography/paragraph";
+
+//
+// Design
+//
+
+@import "./design/border";
+@import "./design/layout";
+@import "./design/link";
+@import "./design/hr";
+@import "./design/table";
+@import "./design/forms";
 
 //
 // Miscellaneous
 //
 
 @import "./misc/misc";
+
+//
+// Components
+//
+
+@import "./components/input";
+@import "./components/button";

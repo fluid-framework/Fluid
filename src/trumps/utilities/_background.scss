@@ -3,7 +3,6 @@
 //
 
 @if $generate-utilities-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: background-color,
@@ -32,7 +31,7 @@
   // Gradient Background
   //
 
-  @if $style-gradients-else-solid {
+  @if not $design-solid-else-gradients {
     $GRADIENTS: ();
 
     @each $color, $value in $theme-colors {

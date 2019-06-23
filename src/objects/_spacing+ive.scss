@@ -1,0 +1,130 @@
+/**
+ * Table of Contents:
+ *        Basic Margin
+ *        Margin top
+ *        Margin right
+ *        Margin bottom
+ *        Margin left
+ *        Margin horizontal
+ *        Margin vertical
+ *        Basic Padding
+ *        Padding top
+ *        Padding right
+ *        Padding bottom
+ *        Padding left
+ *        padding horizontal
+ *        padding vertical
+* ===============================================
+*/
+
+@if $generate-spacing-classes {
+  $sizes: $space-sizes;
+
+  //
+  // Basic Margin
+  //
+
+  $config: (
+    responsive: false,
+    properties: margin,
+    class: m,
+    values: $sizes
+  );
+
+  @include generate-class($config);
+
+  //
+  // Directional Margin
+  //
+
+  $config: (
+    responsive: false,
+    properties: margin,
+    class: m,
+    values: $sizes,
+    infixes: $directions,
+    disable-prefix-infixes-keys: true
+  );
+
+  @include generate-class($config);
+
+  //
+  //  Margin horizontal
+  //
+
+  $config: (
+    responsive: true,
+    properties: margin-left margin-right,
+    class: mx,
+    values: $sizes
+  );
+
+  @include generate-class($config);
+
+  //
+  //  Margin vertical
+  //
+
+  $config: (
+    responsive: true,
+    properties: margin-top margin-bottom,
+    class: my,
+    values: $sizes
+  );
+
+  @include generate-class($config);
+
+  //
+  // Basic padding
+  //
+
+  $config: (
+    responsive: true,
+    properties: padding,
+    class: p,
+    values: $sizes
+  );
+
+  @include generate-class($config);
+
+  //
+  // Directional padding
+  //
+
+  $config: (
+    responsive: true,
+    properties: padding,
+    class: p,
+    values: $sizes,
+    infixes: $directions,
+    disable-prefix-infixes-keys: true
+  );
+
+  @include generate-class($config);
+
+  //
+  //  padding horizontal
+  //
+
+  $config: (
+    responsive: true,
+    properties: padding-left padding-right,
+    class: px,
+    values: $sizes
+  );
+
+  @include generate-class($config);
+
+  //
+  //  padding vertical
+  //
+
+  $config: (
+    responsive: true,
+    properties: padding-top padding-bottom,
+    class: py,
+    values: $sizes
+  );
+
+  @include generate-class($config);
+}

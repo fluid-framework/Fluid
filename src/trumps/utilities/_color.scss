@@ -1,5 +1,4 @@
 @if $generate-utilities-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: color,
@@ -18,6 +17,7 @@
         white-50: rgba($white, .5),
         white-75: rgba($white, .75),
         hide: transparent,
+        disabled: $text-disabled,
       )
     )
   );

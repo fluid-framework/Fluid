@@ -1,0 +1,17 @@
+//
+// Basic Border
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: false,
+    properties: border,
+    class: border,
+    values: (
+      null: $border-width-default solid $border-color,
+      none: none
+    )
+  );
+
+  @include generate-class($config);
+}

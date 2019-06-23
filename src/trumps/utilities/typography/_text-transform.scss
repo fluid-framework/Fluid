@@ -1,0 +1,19 @@
+//
+// Text-transform
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: true,
+    properties: text-transform,
+    class: text,
+    values: (
+      lowercase: lowercase,
+      uppercase: uppercase,
+      capitalize: capitalize,
+      reset: initial
+    )
+  );
+
+  @include generate-class($config);
+}

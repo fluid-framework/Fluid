@@ -1,0 +1,21 @@
+//
+// Border-color
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: false,
+    properties: border-color,
+    class: border,
+    values:
+    map-merge(
+      $theme-colors,
+      (
+        white: $white,
+        black: $black
+      )
+    )
+  );
+
+  @include generate-class($config);
+}

@@ -2,8 +2,7 @@
 // SVG shadow
 //
 
-@if $generate-utilities-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
+@if $generate-utilities-classes and $design-shadow-else-border {
   $config: (
     responsive: false,
     properties: filter,

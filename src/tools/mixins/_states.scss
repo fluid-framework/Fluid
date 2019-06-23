@@ -1,0 +1,62 @@
+//
+// States
+//
+// These mixins are used for various elements states.
+// These mixins allow us to quickly modify changes.
+
+// Active
+// Generate active state
+@mixin active() {
+  @include not-disabled {
+    &:active,
+    &.active {
+      @content;
+    }
+  }
+}
+
+// Hover
+// Generate hover state
+@mixin hover() {
+  &:hover,
+  &.hover {
+    @content;
+  }
+}
+
+// Focus
+// Generate focus state
+@mixin focus() {
+  &:focus,
+  &.focus {
+    @content;
+  }
+}
+
+// Hover
+// Generate hover state
+@mixin hover-focus() {
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    @content;
+  }
+}
+
+// Disabled
+// Generate disabled state
+@mixin disabled() {
+  &:disabled,
+  &.disabled {
+    @content;
+  }
+}
+
+// Disabled
+// Generate not disabled state
+@mixin not-disabled() {
+  &:not(:disabled):not(.disabled) {
+    @content;
+  }
+}

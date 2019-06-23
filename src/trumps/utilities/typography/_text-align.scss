@@ -1,0 +1,19 @@
+//
+// Text-align
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: true,
+    properties: text-align,
+    class: text,
+    values: left right center justify
+  );
+
+  @include generate-class($config);
+
+  .text-baseline { vertical-align: baseline; }
+  .text-top { vertical-align: top; }
+  .text-middle { vertical-align: middle; }
+  .text-bottom { vertical-align: bottom; }
+}

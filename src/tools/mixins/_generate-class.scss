@@ -1,8 +1,4 @@
 //
-// Todo : Optimization and improvement
-//
-
-//
 // DOC : Add Documentation
 //
 
@@ -12,33 +8,13 @@
   $class: map-get($class-config, "class");
   $infixes: map-has-key($class-config, "infixes") and map-get($class-config, "infixes");
   $responsive: map-has-key($class-config, responsive) and map-get($class-config, responsive) == true;
+  $disable-prefix-values-keys: map-has-key($class-config, "disable-prefix-values-keys") and map-get($class-config, "disable-prefix-values-keys");
   $disable-prefix-infixes-keys: map-has-key($class-config, "disable-prefix-infixes-keys") and map-get($class-config, "disable-prefix-infixes-keys");
   $disable-prefix-infixes-values: map-has-key($class-config, "disable-prefix-infixes-values") and map-get($class-config, "disable-prefix-infixes-values");
 
-  @if $responsive {
-    @each $breakpoint in map-keys($breakpoints) {
-      @include media-breakpoint-above($breakpoint) {
-        @if $infixes {
-          $infixes: to-map($infixes);
-          @each $infix-key, $infix-value in $infixes {
-            @if not $disable-prefix-infixes-keys {
-              $infix-key: prefix($infix-key, "-");
-            }
-
-            @if not $disable-prefix-infixes-values {
-              $infix-value: prefix($infix-value, "-");
-            }
-
-            @include generate-inner-class($class, $infix-key, $infix-value, $breakpoint, $properties, $values);
-          }
-        } @else {
-          @include generate-inner-class($class, null, null, $breakpoint, $properties, $values);
-        }
-      }
-    }
-  } @else {
-    @if $infixes {
-      $infixes: to-map($infixes);
+  @each $breakpoint in map-keys( if($responsive, $breakpoints, (null: null)) ) {
+    @include media-breakpoint-above($breakpoint) {
+      $infixes: to-map(if($infixes, $infixes, null));
       @each $infix-key, $infix-value in $infixes {
         @if not $disable-prefix-infixes-keys {
           $infix-key: prefix($infix-key, "-");
@@ -48,23 +24,19 @@
           $infix-value: prefix($infix-value, "-");
         }
 
-        @include generate-inner-class($class, $infix-key, $infix-value, null, $properties, $values);
-      }
-    } @else {
-      @include generate-inner-class($class, null, null, null, $properties, $values);
-    }
-  }
-}
+        $breakpoint-suffix: prefix(breakpoint-name($breakpoint), "\\"+ $breakpoints-prefix);
 
-@mixin generate-inner-class($class, $infix-key, $infix-value, $breakpoint, $properties, $values) {
-  $breakpoint-suffix: prefix($breakpoint, "\\@");
+        @each $key, $value in $values {
+          @if not $disable-prefix-values-keys {
+            $key: prefix($key, "-");
+          }
 
-  @each $key, $value in $values {
-    $key: prefix($key, "-");
-
-    .#{$class}#{$infix-key}#{$key}#{$breakpoint-suffix} {
-      @each $property in $properties {
-        #{$property}#{$infix-value}: $value;
+          .#{$class}#{$infix-key}#{$key}#{$breakpoint-suffix} {
+            @each $property in $properties {
+              #{$property}#{$infix-value}: $value;
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,23 @@
+//
+// Layout Settings
+//
+
+// Header
+$header-bg:                   $white !default;
+$header-color:                $gray-900 !default;
+$header-padding:              5px !default;
+$header-zindex:               10;
+
+// Main and body content
+$body-bg:                     $white !default;
+$body-color:                  $gray-900 !default;
+
+// Footer
+$footer-bg:                   $gray-900 !default;
+$footer-color:                $gray-100 !default;
+
+// Sidebar
+$sidebar-bg:                   $gray-800 !default;
+$sidebar-color:                $white !default;
+$sidebar-padding:              5px !default;
+$sidebar-zindex:               15;

@@ -13,11 +13,10 @@
 // suffixed Value or empty if value is empty or null
 //
 @function suffix($value, $symbol) {
-  @if $value == null or $value == "" {
+  @if $value == () {
+    @return ();
+  } @else if $value == null or $value == "" {
     @return "";
-  }
-  @if type-of($value) == "string" {
-    $value: trim($value);
   }
   @return #{$value}#{$symbol};
 }

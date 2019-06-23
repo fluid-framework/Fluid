@@ -1,0 +1,23 @@
+//
+// grid-col-width
+// calculates percentage of the column(s)
+//
+// Required arguments:
+// {Number} $index index of current grid column
+// [optional] {Number} $columns total no of grid column
+//
+// Example of use:
+// grid-col-width(3, 12) => 12.5%
+//
+// Return:
+// {Number} percentage of the given column
+//
+@function grid-col-width($index, $columns: $grid-columns) {
+  @if type-of($index) != "number" {
+    @error "The argument $index: `#{$index}` is of incorrect type: `#{type-of($index)}`. Type of `Number` is required!";
+  } @else if type-of($columns) != "number" {
+    @error "The argument $columns: `#{$columns}` is of incorrect type: `#{type-of($columns)}`. Type of `Number` is required!";
+  }
+
+  @return percentage($index / $grid-columns);
+}

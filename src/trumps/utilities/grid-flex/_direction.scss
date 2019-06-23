@@ -1,0 +1,14 @@
+//
+// Grid direction
+//
+
+@if $generate-grid-classes {
+  $config: (
+    responsive: true,
+    properties: flex-direction,
+    class: grid,
+    values: row column row-reverse column-reverse
+  );
+
+  @include generate-class($config);
+}

@@ -3,9 +3,8 @@
 //
 
 @if $generate-helper-classes {
-  //
-  // Doc : add Doc
-  //
+  // Basic container
+  // center and contain its content. decreases the size to 90% above breakpoint sm
   .container {
     width: 100%;
     padding-right: $container-padding-x;
@@ -13,24 +12,8 @@
     margin-right: auto;
     margin-left: auto;
 
-    // For each breakpoint, define the maximum width of the container in a media query
-    @each $breakpoint, $container-max-width in $container-max-widths {
-      @include media-breakpoint-above($breakpoint) {
-        max-width: $container-max-width;
-      }
+    @include media-breakpoint-above(sm) {
+      max-width: 90%;
     }
-  }
-
-  // Fluid container
-  //
-  // Utilizes the mixin meant for fixed width containers, but with 100% width for
-  // fluid, full width layouts.
-
-  .container-fluid {
-    width: 100%;
-    padding-right: $container-padding-x;
-    padding-left: $container-padding-x;
-    margin-right: auto;
-    margin-left: auto;
   }
 }

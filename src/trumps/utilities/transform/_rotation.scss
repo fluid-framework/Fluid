@@ -1,0 +1,19 @@
+//
+// Rotation
+//
+
+@if $generate-utilities-classes {
+  $ROTATIONS: ();
+  @each $key, $value in $rotations {
+    $ROTATIONS: map-merge($ROTATIONS, ($key : rotate($value)));
+  }
+
+  $config: (
+    responsive: false,
+    properties: transform,
+    class: rotate,
+    values: $ROTATIONS
+  );
+
+  @include generate-class($config);
+}

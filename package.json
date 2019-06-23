@@ -1,7 +1,7 @@
 {
   "name": "fluid",
-  "version": "0.1.0",
-  "version_short": "0.1",
+  "version": "0.4.0",
+  "version_short": "0.4",
   "homepage": "https://fluid-framework/fluid",
   "author": {
     "name": "Ashfahan",
@@ -33,14 +33,15 @@
     "url": "https://github.com/fluid-framework/fluid/issues/"
   },
   "scripts": {
-    "start": "yarn run watch",
+    "start": "npm-run-all -s watch",
     "watch": "node-sass ./src --output ./dist/ --output-style compact --indent-type space --indent-width 2 --source-map true -w",
-    "lint": "yarn run build:lint",
-    "test": "yarn run build:lint",
-    "deploy": "yarn run build",
-    "build": "npm-run-all -s build:*",
-    "build:lint": "stylelint src/**/*.scss --fix",
-    "build:clean": "rimraf dist",
+    "test": "npm-run-all -s lint:*",
+    "deploy": "npm-run-all -s build",
+    "lint": "npm-run-all -s lint:*",
+    "lint:usedvar": "fusv ./src",
+    "lint:stylelint": "stylelint src/**/*.scss --fix",
+    "build": "npm-run-all -s lint:* build:*",
+    "build:clean": "shx rm -rf ./dist",
     "build:compile": "node-sass ./src --output ./dist/ --output-style expanded --indent-type space --indent-width 2 --source-map true",
     "build:prefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer --map false",
     "build:minify": "foreach -g ./dist/*.css -i ./dist/*.min.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed --source-map true\""
@@ -52,12 +53,14 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "rfs": "^8.0.4",
     "foreach-cli": "^1.8.1",
     "autoprefixer": "^9.6.0",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.2",
-    "rimraf": "^2.6.3",
+    "shx": "^0.3.2",
+    "find-unused-sass-variables": "^0.3.3",
     "stylelint": "^10.1.0",
     "stylelint-scss": "^3.8.0",
     "stylelint-order": "^3.0.0",

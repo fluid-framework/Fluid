@@ -3,13 +3,12 @@
 //
 
 @if $generate-utilities-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: display,
-    class: d,
+    class: "",
     values: (
-      hide: none,
+      hidden: none,
       inline: inline,
       inline-block: inline-block,
       block: block,
@@ -17,8 +16,9 @@
       table-row: table-row,
       table-cell: table-cell,
       flex: flex,
-      inline-fle: inline-flex
-    )
+      inline-flex: inline-flex
+    ),
+    disable-prefix-values-keys: true
   );
 
   @include generate-class($config);

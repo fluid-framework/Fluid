@@ -1,0 +1,20 @@
+//
+// Color step
+//
+
+//
+// clr-step
+// Functions used to return step of a given color.
+//
+// Required arguments:
+// {Color} $color - Color
+// {Number} $step - color step number
+//
+// Return :
+// {Color} value of color step
+//
+@function clr-step($color: $primary, $step: 0) {
+  $base-color: if($step > 0, $black, $white);
+  $step: abs($step);
+  @return mix($base-color, $color, $step * $color-step-interval);
+}

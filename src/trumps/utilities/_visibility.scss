@@ -3,6 +3,15 @@
 //
 
 @if $generate-utilities-classes {
-  .visible { visibility: visible; }
-  .invisible { visibility: hidden; }
+  $config: (
+    responsive: true,
+    properties: visibility,
+    class: is,
+    values: (
+      visible: visible,
+      invisible: hidden
+    )
+  );
+
+  @include generate-class($config);
 }

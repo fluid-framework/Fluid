@@ -1,0 +1,17 @@
+//
+// Flex-grow
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: true,
+    properties: flex-grow,
+    class: flex,
+    values: (
+      grow: 1,
+      grow-0: 0
+    )
+  );
+
+  @include generate-class($config);
+}

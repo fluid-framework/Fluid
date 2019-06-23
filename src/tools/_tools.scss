@@ -3,47 +3,80 @@
 //
 
 //
-// Add check functions
+// Todo : Add check functions
 //
 
-// Functions that are related to list
+// Functions related to list
 @import "./functions/to-list";
 @import "./functions/list-next";
 
-// Functions that are related to Map
+// Functions related to Map
 @import "./functions/to-map";
 
-// Functions that are related to Remove objects
+// Functions related to Remove objects
 @import "./functions/remove";
 
-// Functions that are related to String
+// Functions related to String
 @import "./functions/str-trim";
 @import "./functions/str-capitalize";
 @import "./functions/str-explode";
 @import "./functions/str-replace";
 
-// Functions that are related to prefix and suffix
+// Functions related to prefix and suffix
 @import "./functions/prefix";
 @import "./functions/suffix";
 
-// Functions that are related to units
+// Functions related to units
 @import "./functions/negate";
 @import "./functions/strip-unit";
 
-// Functions that are related to breakpoints
+// Functions related to breakpoints
 @import "./functions/breakpoints";
 
-// Functions that are related to gradients
+// Functions related to gradients
 @import "./functions/gradients";
+
+// Functions related to grid
+@import "./functions/grid";
+
+// Functions related to color
+@import "./functions/clr-contrast";
+@import "./functions/clr-step";
 
 //
 // Mixin
 //
+
+// Mixin Used for borderradius
+@import "./mixins/borderradius";
+
+// Mixin Used for box-shadow
+@import "./mixins/box-shadow";
+
+// Mixin Used for font
+@import "./mixins/font";
+
+// Mixin Used for gradients
+@import "./mixins/gradients";
+
 // Mixin Used for breakpoints
 @import "./mixins/breakpoints";
 
 // Mixin Used to Generate rapid classes
 @import "./mixins/generate-class";
 
-// Mixin Used for transition
-@import "./mixins/transition";
+// Mixin Used for element states
+@import "./mixins/states";
+
+// Mixin Used for pseudo elements
+@import "./mixins/pseudo-elements";
+
+// Mixin Used for transitions
+@import "./mixins/transitions";
+
+//
+// Components
+//
+
+// Mixin Used for buttons
+@import "./mixins/components/button";

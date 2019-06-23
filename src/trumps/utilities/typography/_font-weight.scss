@@ -1,0 +1,20 @@
+//
+// Font-weight
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: false,
+    properties: font-weight,
+    class: font,
+    values: (
+      light: $font-weight-light,
+      lighter: $font-weight-lighter,
+      normal: $font-weight-normal,
+      bold: $font-weight-bold,
+      bolder: $font-weight-bolder
+    )
+  );
+
+  @include generate-class($config);
+}

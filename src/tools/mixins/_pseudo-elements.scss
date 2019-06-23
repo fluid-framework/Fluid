@@ -1,0 +1,48 @@
+//
+// Pseudo elements Mixin
+//
+// These mixins are used for pseudo-elements
+
+// before
+// Generate before Pseudo element
+@mixin before() {
+  &::before {
+    @content;
+  }
+}
+
+// before-absolute
+// Generate fully expended before Pseudo element
+@mixin before-absolute() {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @content;
+  }
+}
+
+// after
+// Generate after Pseudo element
+@mixin after() {
+  &::after {
+    @content;
+  }
+}
+
+// after-absolute
+// Generate fully expended before Pseudo element
+@mixin after-absolute() {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @content;
+  }
+}

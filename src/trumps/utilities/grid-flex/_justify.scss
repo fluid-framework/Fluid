@@ -1,0 +1,20 @@
+//
+// Justify-content
+//
+
+@if $generate-grid-classes {
+  $config: (
+    responsive: true,
+    properties: justify-content,
+    class: grid,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around
+    )
+  );
+
+  @include generate-class($config);
+}

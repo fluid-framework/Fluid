@@ -3,14 +3,12 @@
 //
 
 @if $generate-utilities-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $SIZES: ();
 
   @each $key, $value in map-remove($sizes, 0) {
     $SIZES: map-merge($SIZES, ($key: strip-unit($value) / 100));
   }
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: opacity,

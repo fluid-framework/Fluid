@@ -1,0 +1,19 @@
+//
+// Font Mixin
+//
+
+//
+// Responsive font size
+// Generate font size based on on setting `$enable-fluid-font-sizes`
+//
+// Required arguments:
+// {String} $font-size - font size in rem and pm , RFS only support px and rem for now
+// [optional] {Map} $important - set important in css style
+//
+@mixin fontsize($font-size, $important: false) {
+  @if $enable-fluid-font-sizes {
+    @include rfs($font-size, $important);
+  } @else {
+    font-size: $font-size;
+  }
+}

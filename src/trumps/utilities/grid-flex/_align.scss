@@ -1,0 +1,50 @@
+//
+// Align
+//
+
+@if $generate-grid-classes {
+  $config: (
+    responsive: true,
+    properties: align-items,
+    class: grid,
+    values: (
+      top: flex-start,
+      middle: center,
+      bottom: flex-end,
+      baseline: baseline,
+      stretch: stretch
+    )
+  );
+
+  @include generate-class($config);
+
+  $config: (
+    responsive: true,
+    properties: align-content,
+    class: grid-content,
+    values: (
+      top: flex-start,
+      middle: center,
+      bottom: flex-end,
+      baseline: baseline,
+      stretch: stretch
+    )
+  );
+
+  @include generate-class($config);
+
+  $config: (
+    responsive: true,
+    properties: align-self,
+    class: align,
+    values: (
+      top: flex-start,
+      middle: center,
+      bottom: flex-end,
+      baseline: baseline,
+      stretch: stretch
+    )
+  );
+
+  @include generate-class($config);
+}

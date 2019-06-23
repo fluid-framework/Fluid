@@ -1,0 +1,35 @@
+//
+// Gradients Mixin
+//
+
+//
+// gradient-bg
+// Generate gradient background if gradient style is enabled in Settings
+// else solid background is generated
+//
+// Required arguments:
+// {Color} $color : color used to generate gradient
+// {Rotation} $angle : angle at which gradient will be generated
+//
+@mixin gradient-bg($color-value, $angle) {
+  $gradient: gradient($color-value, $angle);
+
+  @if $gradient != $color-value {
+    background: $gradient;
+  } @else {
+    background-color: $gradient;
+  }
+}
+
+//
+// gradient-striped-bg
+// Generate striped gradient background
+//
+// Required arguments:
+// {Color} $color : color used to generate gradient
+// {Rotation} $angle : angle at which gradient will be generated
+//
+@mixin gradient-striped-bg($color, $angle) {
+  $color-trans: rgba($color, .15);
+  background: linear-gradient($angle, $color-trans 25%, transparent 25%, transparent 50%, $color-trans 50%, $color-trans 75%, transparent 75%, transparent);
+}
