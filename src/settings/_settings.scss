@@ -6,7 +6,7 @@
 
 // Options: Quickly modify global styling by enabling or disabling optional features.
 $default-unit:                                0% !default;      // Zero is used to keep the variable type number
-$design-solid-else-gradients:                 true !default;   // Let you chose between gradient vs solid design UI
+$design-solid-else-gradients:                 true !default;    // Let you chose between gradient vs solid design UI
 $design-shadow-else-border:                   true !default;    // Let you chose between shadow vs box border design UI
 $design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
 $breakpoints-short-else-readable:             true !default;    // Let you chose between short breakpoints like `md` vs readable breakpoints like `desktop`
@@ -15,6 +15,7 @@ $generate-spacing-classes:                    true !default;    // Enable Spacin
 $generate-grid-classes:                       true !default;    // Enable Grid Classes
 $generate-helper-classes:                     true !default;    // Enable helper Classes
 $generate-utilities-classes:                  true !default;    // Enable utilities Classes
+$generate-component-classes:                  true !default;    // Enable helper Classes
 $enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
 $enable-transitions:                          true !default;    // Enable transitions and animations
@@ -76,3 +77,10 @@ $enable-fluid-font-sizes:                     false !default;   // Enable Fluid 
 //
 
 @import "./misc/misc";
+
+//
+// Components
+//
+
+@import "./components/input";
+@import "./components/button";

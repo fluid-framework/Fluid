@@ -18,14 +18,12 @@
 */
 
 @if $generate-spacing-classes {
-  // stylelint-disable-next-line scss/dollar-variable-default
   $sizes: $space-sizes;
 
   //
   // Basic Margin
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: margin,
@@ -39,7 +37,6 @@
   // Directional Margin
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: false,
     properties: margin,
@@ -55,7 +52,6 @@
   //  Margin horizontal
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: margin-left margin-right,
@@ -69,7 +65,6 @@
   //  Margin vertical
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: margin-top margin-bottom,
@@ -83,7 +78,6 @@
   // Basic padding
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: padding,
@@ -97,7 +91,6 @@
   // Directional padding
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: padding,
@@ -113,7 +106,6 @@
   //  padding horizontal
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: padding-left padding-right,
@@ -127,7 +119,6 @@
   //  padding vertical
   //
 
-  // stylelint-disable-next-line scss/dollar-variable-default
   $config: (
     responsive: true,
     properties: padding-top padding-bottom,

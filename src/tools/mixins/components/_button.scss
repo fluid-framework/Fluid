@@ -1,0 +1,91 @@
+//
+// Buttons Mixin
+//
+
+//
+// Sizing Mixin
+//
+
+@mixin button-sizing($padding-y, $padding-x, $border-radius) {
+  padding: $padding-y $padding-x;
+  @if $design-rounded-else-box {
+    @include border-radius($border-radius);
+  }
+}
+
+//
+// Theme Variants Mixin
+//
+
+// Solid button
+@mixin button-design-solid-varient($color) {
+  $hover-background: darken($color, 10%);
+  $focus-background: lighten($color, 10%);
+  $active-background: darken($color, 20%);
+  color: if(clr-contrast($color) != clr-contrast($button-theme-default), clr-contrast($color), null); // to avoid adding extra color override
+  @include gradient-bg($color, 180deg);
+
+  @include hover {
+    color: clr-contrast($hover-background);
+    box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+    @include gradient-bg($hover-background, 180deg);
+  }
+
+  @include focus {
+    color: clr-contrast($focus-background);
+    @include gradient-bg($focus-background, 180deg);
+  }
+
+  @include active {
+    color: clr-contrast($active-background);
+    @if $design-solid-else-gradients {
+      background-color: $active-background;
+    }
+  }
+
+  &.is-loading {
+    @include before {
+      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+    }
+  }
+}
+
+// outline button
+@mixin button-design-outline-varient($color) {
+  $hover-border: darken($color, 10%);
+  $active-border: darken($color, 20%);
+
+  @include hover {
+    box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+  }
+
+  @include hover-focus {
+    color: $hover-border;
+    border-color: $hover-border;
+  }
+
+  @include active {
+    color: $active-border;
+    border-color: $active-border;
+  }
+
+  &.is-loading {
+    @include before {
+      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+    }
+  }
+}
+
+// minimal button
+@mixin button-design-minimal-varient($color) {
+  @include after {
+    background-color: $color;
+  }
+
+  color: $color;
+  &.is-loading {
+    @include before {
+      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+    }
+  }
+}

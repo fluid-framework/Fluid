@@ -15,12 +15,12 @@
 // Return :
 // {Color} $dark or $light based on $color contrast
 //
-@function clr-contrast($color, $dark: $gray-900, $light: $gray-100) {
+@function clr-contrast($color, $dark: $gray-900, $light: $white) {
   $r: red($color);
   $g: green($color);
   $b: blue($color);
 
   $contrast: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
-  @return if($contrast >= $clr-contrasted-threshold, $dark, $light);
+  @return if($contrast >= $clr-contrast-threshold, $dark, $light);
 }

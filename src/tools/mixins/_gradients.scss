@@ -11,7 +11,7 @@
 // {Color} $color : color used to generate gradient
 // {Rotation} $angle : angle at which gradient will be generated
 //
-@mixin gradient-bg($color-value, $angle: 180deg) {
+@mixin gradient-bg($color-value, $angle) {
   $gradient: gradient($color-value, $angle);
 
   @if $gradient != $color-value {
@@ -29,7 +29,7 @@
 // {Color} $color : color used to generate gradient
 // {Rotation} $angle : angle at which gradient will be generated
 //
-@mixin gradient-striped-bg($color, $angle: 45deg) {
+@mixin gradient-striped-bg($color, $angle) {
   $color-trans: rgba($color, .15);
   background: linear-gradient($angle, $color-trans 25%, transparent 25%, transparent 50%, $color-trans 50%, $color-trans 75%, transparent 75%, transparent);
 }

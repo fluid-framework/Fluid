@@ -27,7 +27,7 @@
     <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?style=for-the-badge"/>
   </a>
   <a href="https://travis-ci.com/fluid-framework/Fluid">
-    <img src="https://img.shields.io/travis/com/fluid-framework/fluid.svg?style=for-the-badge" />
+    <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
   </a>
   <a href="https://github.com/fluid-framework/Fluid/commits">
     <img src="https://img.shields.io/github/commit-activity/w/fluid-framework/fluid.svg?style=for-the-badge" />
@@ -55,10 +55,12 @@ Fluid uses [ITCSS architecture](https://www.xfive.co/blog/itcss-scalable-maintai
 
 ```
 src
+├───components
 ├───generics
 ├───objects
 ├───settings
 │   ├───breakpoints
+│   ├───components
 │   ├───containers
 │   ├───design
 │   ├───grid
@@ -69,6 +71,7 @@ src
 ├───tools
 │   ├───functions
 │   └───mixins
+│       └───components
 ├───trumps
 │   ├───helpers
 │   └───utilities
