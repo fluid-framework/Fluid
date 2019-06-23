@@ -502,6 +502,8 @@
 
 .button.is-minimal {
   position: relative;
+  border-right: 0;
+  border-left: 0;
   box-shadow: none;
   color: #636363;
 }
@@ -694,5 +696,36 @@
 
 .button.is-block {
   width: 100%;
+}
+
+.group {
+  display: inline-flex;
+}
+
+.group > .input:not(:first-child):not(:last-child),
+.group > .button:not(:first-child):not(:last-child) {
+  margin-right: -0.5px;
+  margin-left: -0.5px;
+  border-radius: 0;
+}
+
+.group > .input:first-child,
+.group > .button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.group > .input:last-child,
+.group > .button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.group > .input:hover, .group > .input.hover, .group > .input:focus, .group > .input.focus,
+.group > .button:hover,
+.group > .button.hover,
+.group > .button:focus,
+.group > .button.focus {
+  z-index: 10;
 }
 /*# sourceMappingURL=fluid-component.css.map */
