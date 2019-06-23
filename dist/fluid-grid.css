@@ -63,6 +63,18 @@ html {
   }
 }
 
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;

@@ -51,8 +51,22 @@
   }
 }
 
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .button {
   display: inline-block;
+  margin-top: .1rem;
+  margin-bottom: .1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #0f0f0f;
@@ -66,8 +80,6 @@
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  margin-right: 0.2027rem;
-  margin-left: 0.2027rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
   transition: all 0.2s ease-in-out;
@@ -89,35 +101,8 @@
           animation: pulse 1s ease-out both;
 }
 
-.button:not(:disabled):not(.disabled):active, .button:not(:disabled):not(.disabled).active {
-  box-shadow: none !important;
-  -webkit-animation: none;
-          animation: none;
-}
-
 .button:focus, .button.focus {
   outline: 0;
-}
-
-.button:disabled, .button.disabled {
-  box-shadow: none !important;
-  opacity: 0.65;
-  -webkit-animation: none !important;
-          animation: none !important;
-}
-
-.button.is-small {
-  padding: 0.25rem 0.5rem;
-  margin-right: 0.13514rem;
-  margin-left: 0.13514rem;
-  border-radius: 0.2rem;
-}
-
-.button.is-large {
-  padding: 0.5rem 1rem;
-  margin-right: 0.27027rem;
-  margin-left: 0.27027rem;
-  border-radius: 0.3rem;
 }
 
 .button.is-solid {
@@ -141,6 +126,10 @@
   background-color: #303030;
 }
 
+.button.is-solid.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-solid.is-primary {
   background-color: #805ad5;
 }
@@ -159,6 +148,10 @@
 .button.is-solid.is-primary:not(:disabled):not(.disabled):active, .button.is-solid.is-primary:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #4e29a0;
+}
+
+.button.is-solid.is-primary.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-solid.is-secondary {
@@ -181,6 +174,10 @@
   background-color: #4d4d4d;
 }
 
+.button.is-solid.is-secondary.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-solid.is-valid {
   background-color: #52c41a;
 }
@@ -201,6 +198,10 @@
   background-color: #2c6a0e;
 }
 
+.button.is-solid.is-valid.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-solid.is-info {
   background-color: #13c2c2;
 }
@@ -219,6 +220,10 @@
 .button.is-solid.is-info:not(:disabled):not(.disabled):active, .button.is-solid.is-info:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #0a6565;
+}
+
+.button.is-solid.is-info.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-solid.is-warn {
@@ -242,6 +247,10 @@
   background-color: #a58f04;
 }
 
+.button.is-solid.is-warn.is-loading::before {
+  border-color: transparent transparent #0f0f0f #0f0f0f;
+}
+
 .button.is-solid.is-error {
   background-color: #f5222d;
 }
@@ -260,6 +269,10 @@
 .button.is-solid.is-error:not(:disabled):not(.disabled):active, .button.is-solid.is-error:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #a90810;
+}
+
+.button.is-solid.is-error.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-solid.is-light {
@@ -283,6 +296,10 @@
   background-color: #bdbdbd;
 }
 
+.button.is-solid.is-light.is-loading::before {
+  border-color: transparent transparent #0f0f0f #0f0f0f;
+}
+
 .button.is-solid.is-dark {
   background-color: #474747;
 }
@@ -303,13 +320,17 @@
   background-color: #141414;
 }
 
+.button.is-solid.is-dark.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-solid:disabled, .button.is-solid.disabled {
   color: #fff;
-  background: #636363 !important;
+  background: #636363;
 }
 
 .button.is-outline {
-  border: 1px solid #b8b8b8;
+  border-color: #b8b8b8;
 }
 
 .button.is-outline:hover, .button.is-outline.hover {
@@ -326,6 +347,10 @@
   border-color: #303030;
 }
 
+.button.is-outline.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-outline.is-primary:hover, .button.is-outline.is-primary.hover {
   box-shadow: 0 0 0 0.2rem rgba(128, 90, 213, 0.5);
 }
@@ -338,6 +363,10 @@
 .button.is-outline.is-primary:not(:disabled):not(.disabled):active, .button.is-outline.is-primary:not(:disabled):not(.disabled).active {
   color: #4e29a0;
   border-color: #4e29a0;
+}
+
+.button.is-outline.is-primary.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-outline.is-secondary:hover, .button.is-outline.is-secondary.hover {
@@ -354,6 +383,10 @@
   border-color: #4d4d4d;
 }
 
+.button.is-outline.is-secondary.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-outline.is-valid:hover, .button.is-outline.is-valid.hover {
   box-shadow: 0 0 0 0.2rem rgba(82, 196, 26, 0.5);
 }
@@ -366,6 +399,10 @@
 .button.is-outline.is-valid:not(:disabled):not(.disabled):active, .button.is-outline.is-valid:not(:disabled):not(.disabled).active {
   color: #2c6a0e;
   border-color: #2c6a0e;
+}
+
+.button.is-outline.is-valid.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-outline.is-info:hover, .button.is-outline.is-info.hover {
@@ -382,6 +419,10 @@
   border-color: #0a6565;
 }
 
+.button.is-outline.is-info.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-outline.is-warn:hover, .button.is-outline.is-warn.hover {
   box-shadow: 0 0 0 0.2rem rgba(250, 219, 20, 0.5);
 }
@@ -394,6 +435,10 @@
 .button.is-outline.is-warn:not(:disabled):not(.disabled):active, .button.is-outline.is-warn:not(:disabled):not(.disabled).active {
   color: #a58f04;
   border-color: #a58f04;
+}
+
+.button.is-outline.is-warn.is-loading::before {
+  border-color: transparent transparent #0f0f0f #0f0f0f;
 }
 
 .button.is-outline.is-error:hover, .button.is-outline.is-error.hover {
@@ -410,6 +455,10 @@
   border-color: #a90810;
 }
 
+.button.is-outline.is-error.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-outline.is-light:hover, .button.is-outline.is-light.hover {
   box-shadow: 0 0 0 0.2rem rgba(240, 240, 240, 0.5);
 }
@@ -422,6 +471,10 @@
 .button.is-outline.is-light:not(:disabled):not(.disabled):active, .button.is-outline.is-light:not(:disabled):not(.disabled).active {
   color: #bdbdbd;
   border-color: #bdbdbd;
+}
+
+.button.is-outline.is-light.is-loading::before {
+  border-color: transparent transparent #0f0f0f #0f0f0f;
 }
 
 .button.is-outline.is-dark:hover, .button.is-outline.is-dark.hover {
@@ -438,15 +491,17 @@
   border-color: #141414;
 }
 
+.button.is-outline.is-dark.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-outline:disabled, .button.is-outline.disabled {
   color: #636363;
-  border-color: #636363 !important;
+  border-color: #636363;
 }
 
 .button.is-minimal {
   position: relative;
-  padding-right: 0;
-  padding-left: 0;
   box-shadow: none;
   color: #636363;
 }
@@ -475,13 +530,12 @@
           animation: flash 1s ease-out both;
 }
 
-.button.is-minimal:not(:disabled):not(.disabled):active::after, .button.is-minimal:not(:disabled):not(.disabled).active::after {
-  -webkit-animation: none;
-          animation: none;
-}
-
 .button.is-minimal::after {
   background-color: #636363;
+}
+
+.button.is-minimal.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-minimal.is-primary {
@@ -492,12 +546,20 @@
   background-color: #805ad5;
 }
 
+.button.is-minimal.is-primary.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-minimal.is-secondary {
   color: gray;
 }
 
 .button.is-minimal.is-secondary::after {
   background-color: gray;
+}
+
+.button.is-minimal.is-secondary.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-minimal.is-valid {
@@ -508,12 +570,20 @@
   background-color: #52c41a;
 }
 
+.button.is-minimal.is-valid.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
 .button.is-minimal.is-info {
   color: #13c2c2;
 }
 
 .button.is-minimal.is-info::after {
   background-color: #13c2c2;
+}
+
+.button.is-minimal.is-info.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-minimal.is-warn {
@@ -524,12 +594,20 @@
   background-color: #fadb14;
 }
 
+.button.is-minimal.is-warn.is-loading::before {
+  border-color: transparent transparent #0f0f0f #0f0f0f;
+}
+
 .button.is-minimal.is-error {
   color: #f5222d;
 }
 
 .button.is-minimal.is-error::after {
   background-color: #f5222d;
+}
+
+.button.is-minimal.is-error.is-loading::before {
+  border-color: transparent transparent #fff #fff;
 }
 
 .button.is-minimal.is-light {
@@ -540,6 +618,10 @@
   background-color: #f0f0f0;
 }
 
+.button.is-minimal.is-light.is-loading::before {
+  border-color: transparent transparent #0f0f0f #0f0f0f;
+}
+
 .button.is-minimal.is-dark {
   color: #474747;
 }
@@ -548,12 +630,69 @@
   background-color: #474747;
 }
 
+.button.is-minimal.is-dark.is-loading::before {
+  border-color: transparent transparent #fff #fff;
+}
+
+.button.is-minimal:not(:disabled):not(.disabled):active::after, .button.is-minimal:not(:disabled):not(.disabled).active::after {
+  -webkit-animation: none;
+          animation: none;
+}
+
 .button.is-minimal:disabled, .button.is-minimal.disabled {
   color: #636363;
 }
 
 .button.is-minimal:disabled::after, .button.is-minimal.disabled::after {
-  top: 100%;
   background-color: #636363;
+}
+
+.button:not(:disabled):not(.disabled):active, .button:not(:disabled):not(.disabled).active {
+  box-shadow: none;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.button:disabled, .button.disabled {
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.button.is-small {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.button.is-large {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+
+.button.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+}
+
+.button.is-loading::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: calc(50% - (1em / 2));
+  left: calc(50% - (1em / 2));
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  border: .15rem solid;
+  border-color: transparent transparent #fff #fff;
+  border-radius: 50rem;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+.button.is-block {
+  width: 100%;
 }
 /*# sourceMappingURL=fluid-component.css.map */
