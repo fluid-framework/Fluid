@@ -502,8 +502,6 @@
 
 .button.is-minimal {
   position: relative;
-  padding-right: 0;
-  padding-left: 0;
   box-shadow: none;
   color: #636363;
 }

@@ -90,8 +90,6 @@
     // Is-minimal
     &.is-minimal {
       position: relative;
-      padding-right: 0; // make container fit to input text
-      padding-left: 0; // make container fit to input text
       box-shadow: none; // remove focus box shadow
 
       @include after {
