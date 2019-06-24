@@ -4147,7 +4147,7 @@ a.clr-disabled:hover, a.clr-disabled:focus {
   cursor: pointer;
 }
 
-.cursor-hide {
+.cursor-none {
   cursor: none;
 }
 
