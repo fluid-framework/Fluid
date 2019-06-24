@@ -3205,35 +3205,35 @@ template {
   position: sticky;
 }
 
-.position-absolute.top-0, .position-fixed.top-0, .position-sticky.top-0 {
+.top-0 {
   top: 0%;
 }
 
-.position-absolute.bottom-0, .position-fixed.bottom-0, .position-sticky.bottom-0 {
+.bottom-0 {
   bottom: 0%;
 }
 
-.position-absolute.right-0, .position-fixed.right-0, .position-sticky.right-0 {
+.right-0 {
   right: 0%;
 }
 
-.position-absolute.left-0, .position-fixed.left-0, .position-sticky.left-0 {
+.left-0 {
   left: 0%;
 }
 
-.position-absolute.top-100, .position-fixed.top-100, .position-sticky.top-100 {
+.top-100 {
   top: 100%;
 }
 
-.position-absolute.bottom-100, .position-fixed.bottom-100, .position-sticky.bottom-100 {
+.bottom-100 {
   bottom: 100%;
 }
 
-.position-absolute.right-100, .position-fixed.right-100, .position-sticky.right-100 {
+.right-100 {
   right: 100%;
 }
 
-.position-absolute.left-100, .position-fixed.left-100, .position-sticky.left-100 {
+.left-100 {
   left: 100%;
 }
 
