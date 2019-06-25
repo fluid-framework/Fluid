@@ -71,6 +71,8 @@
 
 // outline button
 @mixin button-design-outline-varient($color) {
+  color: $color;
+  border-color: $color;
   $hover-border: darken($color, 10%);
   $active-border: darken($color, 20%);
 

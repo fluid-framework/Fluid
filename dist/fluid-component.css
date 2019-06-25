@@ -310,6 +310,8 @@
 
 .button.is-outline {
   border-color: #b8b8b8;
+  color: #636363;
+  border-color: #636363;
 }
 
 .button.is-outline:hover, .button.is-outline.hover {
@@ -330,6 +332,11 @@
   border-color: transparent transparent #636363 #636363;
 }
 
+.button.is-outline.is-primary {
+  color: #805ad5;
+  border-color: #805ad5;
+}
+
 .button.is-outline.is-primary:hover, .button.is-outline.is-primary.hover {
   box-shadow: 0 0 0 0.2rem rgba(128, 90, 213, 0.5);
 }
@@ -346,6 +353,11 @@
 
 .button.is-outline.is-primary.is-loading::before {
   border-color: transparent transparent #805ad5 #805ad5;
+}
+
+.button.is-outline.is-secondary {
+  color: gray;
+  border-color: gray;
 }
 
 .button.is-outline.is-secondary:hover, .button.is-outline.is-secondary.hover {
@@ -366,6 +378,11 @@
   border-color: transparent transparent gray gray;
 }
 
+.button.is-outline.is-valid {
+  color: #52c41a;
+  border-color: #52c41a;
+}
+
 .button.is-outline.is-valid:hover, .button.is-outline.is-valid.hover {
   box-shadow: 0 0 0 0.2rem rgba(82, 196, 26, 0.5);
 }
@@ -382,6 +399,11 @@
 
 .button.is-outline.is-valid.is-loading::before {
   border-color: transparent transparent #52c41a #52c41a;
+}
+
+.button.is-outline.is-info {
+  color: #13c2c2;
+  border-color: #13c2c2;
 }
 
 .button.is-outline.is-info:hover, .button.is-outline.is-info.hover {
@@ -402,6 +424,11 @@
   border-color: transparent transparent #13c2c2 #13c2c2;
 }
 
+.button.is-outline.is-warn {
+  color: #fadb14;
+  border-color: #fadb14;
+}
+
 .button.is-outline.is-warn:hover, .button.is-outline.is-warn.hover {
   box-shadow: 0 0 0 0.2rem rgba(250, 219, 20, 0.5);
 }
@@ -418,6 +445,11 @@
 
 .button.is-outline.is-warn.is-loading::before {
   border-color: transparent transparent #fadb14 #fadb14;
+}
+
+.button.is-outline.is-error {
+  color: #f5222d;
+  border-color: #f5222d;
 }
 
 .button.is-outline.is-error:hover, .button.is-outline.is-error.hover {
@@ -438,6 +470,11 @@
   border-color: transparent transparent #f5222d #f5222d;
 }
 
+.button.is-outline.is-light {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
 .button.is-outline.is-light:hover, .button.is-outline.is-light.hover {
   box-shadow: 0 0 0 0.2rem rgba(240, 240, 240, 0.5);
 }
@@ -454,6 +491,11 @@
 
 .button.is-outline.is-light.is-loading::before {
   border-color: transparent transparent #f0f0f0 #f0f0f0;
+}
+
+.button.is-outline.is-dark {
+  color: #474747;
+  border-color: #474747;
 }
 
 .button.is-outline.is-dark:hover, .button.is-outline.is-dark.hover {
