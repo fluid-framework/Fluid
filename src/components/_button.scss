@@ -179,7 +179,7 @@
       height: 1rem;
       content: "";
       border: .15rem solid;
-      border-color: transparent transparent clr-contrast($button-theme-default) clr-contrast($button-theme-default);
+      border-color: transparent transparent $button-theme-default $button-theme-default;
       border-radius: $border-radius-pill;
       animation: spin 1s infinite linear;
     }

@@ -348,7 +348,7 @@
 }
 
 .button.is-outline.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #636363 #636363;
 }
 
 .button.is-outline.is-primary:hover, .button.is-outline.is-primary.hover {
@@ -366,7 +366,7 @@
 }
 
 .button.is-outline.is-primary.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #805ad5 #805ad5;
 }
 
 .button.is-outline.is-secondary:hover, .button.is-outline.is-secondary.hover {
@@ -384,7 +384,7 @@
 }
 
 .button.is-outline.is-secondary.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent gray gray;
 }
 
 .button.is-outline.is-valid:hover, .button.is-outline.is-valid.hover {
@@ -402,7 +402,7 @@
 }
 
 .button.is-outline.is-valid.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #52c41a #52c41a;
 }
 
 .button.is-outline.is-info:hover, .button.is-outline.is-info.hover {
@@ -420,7 +420,7 @@
 }
 
 .button.is-outline.is-info.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #13c2c2 #13c2c2;
 }
 
 .button.is-outline.is-warn:hover, .button.is-outline.is-warn.hover {
@@ -438,7 +438,7 @@
 }
 
 .button.is-outline.is-warn.is-loading::before {
-  border-color: transparent transparent #0f0f0f #0f0f0f;
+  border-color: transparent transparent #fadb14 #fadb14;
 }
 
 .button.is-outline.is-error:hover, .button.is-outline.is-error.hover {
@@ -456,7 +456,7 @@
 }
 
 .button.is-outline.is-error.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #f5222d #f5222d;
 }
 
 .button.is-outline.is-light:hover, .button.is-outline.is-light.hover {
@@ -474,7 +474,7 @@
 }
 
 .button.is-outline.is-light.is-loading::before {
-  border-color: transparent transparent #0f0f0f #0f0f0f;
+  border-color: transparent transparent #f0f0f0 #f0f0f0;
 }
 
 .button.is-outline.is-dark:hover, .button.is-outline.is-dark.hover {
@@ -492,7 +492,7 @@
 }
 
 .button.is-outline.is-dark.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #474747 #474747;
 }
 
 .button.is-outline:disabled, .button.is-outline.disabled {
@@ -535,7 +535,7 @@
 }
 
 .button.is-minimal.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #636363 #636363;
 }
 
 .button.is-minimal.is-primary {
@@ -547,7 +547,7 @@
 }
 
 .button.is-minimal.is-primary.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #805ad5 #805ad5;
 }
 
 .button.is-minimal.is-secondary {
@@ -559,7 +559,7 @@
 }
 
 .button.is-minimal.is-secondary.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent gray gray;
 }
 
 .button.is-minimal.is-valid {
@@ -571,7 +571,7 @@
 }
 
 .button.is-minimal.is-valid.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #52c41a #52c41a;
 }
 
 .button.is-minimal.is-info {
@@ -583,7 +583,7 @@
 }
 
 .button.is-minimal.is-info.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #13c2c2 #13c2c2;
 }
 
 .button.is-minimal.is-warn {
@@ -595,7 +595,7 @@
 }
 
 .button.is-minimal.is-warn.is-loading::before {
-  border-color: transparent transparent #0f0f0f #0f0f0f;
+  border-color: transparent transparent #fadb14 #fadb14;
 }
 
 .button.is-minimal.is-error {
@@ -607,7 +607,7 @@
 }
 
 .button.is-minimal.is-error.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #f5222d #f5222d;
 }
 
 .button.is-minimal.is-light {
@@ -619,7 +619,7 @@
 }
 
 .button.is-minimal.is-light.is-loading::before {
-  border-color: transparent transparent #0f0f0f #0f0f0f;
+  border-color: transparent transparent #f0f0f0 #f0f0f0;
 }
 
 .button.is-minimal.is-dark {
@@ -631,7 +631,7 @@
 }
 
 .button.is-minimal.is-dark.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #474747 #474747;
 }
 
 .button.is-minimal:not(:disabled):not(.disabled):active::after, .button.is-minimal:not(:disabled):not(.disabled).active::after {
@@ -686,7 +686,7 @@
   height: 1rem;
   content: "";
   border: .15rem solid;
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent #636363 #636363;
   border-radius: 50rem;
   -webkit-animation: spin 1s infinite linear;
           animation: spin 1s infinite linear;

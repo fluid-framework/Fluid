@@ -71,7 +71,7 @@
 
   &.is-loading {
     @include before {
-      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+      border-color: transparent transparent $color $color;
     }
   }
 }
@@ -85,7 +85,7 @@
   color: $color;
   &.is-loading {
     @include before {
-      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
+      border-color: transparent transparent $color $color;
     }
   }
 }
