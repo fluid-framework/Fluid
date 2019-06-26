@@ -2,7 +2,7 @@
 // Justify-content
 //
 
-@if $generate-grid-classes {
+@if $generate-utilities-classes {
   $config: (
     responsive: true,
     properties: justify-content,

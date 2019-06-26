@@ -2,7 +2,7 @@
 // Grid-wrap
 //
 
-@if $generate-grid-classes {
+@if $generate-utilities-classes {
   $config: (
     responsive: true,
     properties: flex-wrap,
