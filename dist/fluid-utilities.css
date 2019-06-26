@@ -1330,6 +1330,14 @@ a.clr-disabled:hover, a.clr-disabled:focus {
   vertical-align: bottom;
 }
 
+.text-sub {
+  vertical-align: sub;
+}
+
+.text-super {
+  vertical-align: super;
+}
+
 .text-shadow-sm {
   text-shadow: 1.5px 1.75px 1px rgba(0, 0, 0, 0.075);
 }
