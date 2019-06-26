@@ -38,7 +38,7 @@
       $GRADIENTS: map-merge(
         $GRADIENTS,
         (
-          $color: gradient($value, 180deg)
+          $color: gradient($value, 140deg)
         )
       );
     }
@@ -52,9 +52,9 @@
       map-merge(
         $GRADIENTS,
         (
-          body: $body-color linear-gradient(180deg, mix($body-bg, $body-color, 15%), $body-color) repeat-x,
-          black: $black linear-gradient(180deg, mix($body-bg, $black, 15%), $black) repeat-x,
-          white: $white linear-gradient(180deg, mix($body-bg, $white, 15%), $white) repeat-x
+          body: $body-color linear-gradient(140deg, mix($body-bg, $body-color, 15%), $body-color) repeat-x,
+          black: $black linear-gradient(140deg, mix($body-bg, $black, 15%), $black) repeat-x,
+          white: $white linear-gradient(140deg, mix($body-bg, $white, 15%), $white) repeat-x
         )
       )
     );
