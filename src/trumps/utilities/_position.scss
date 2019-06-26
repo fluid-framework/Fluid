@@ -16,34 +16,12 @@
   // Doc : Add Documentation
   //
 
-  $classname: null;
-
-  // if values $config contain "absolute"
-  @if map-has-key(to-map(map-get($config, values)), "absolute") {
-    $classname: join($classname, #{".#{map-get($config, class)}"}-absolute, comma);
-  }
-  // if values $config contain "fixed"
-  @if map-has-key(to-map(map-get($config, values)), "fixed") {
-    $classname: join($classname, #{".#{map-get($config, class)}"}-fixed, comma);
-  }
-  // if values $config contain "sticky"
-  @if map-has-key(to-map(map-get($config, values)), "sticky") {
-    $classname: join($classname, #{".#{map-get($config, class)}"}-sticky, comma);
-  }
-
-  @if $classname {
-    #{$classname} {
-      @each $direction-infix, $direction in $directions {
-        &.#{$direction}-0 {
-          #{$direction}: 0%;
-        }
-      }
-
-      @each $direction-infix, $direction in $directions {
-        &.#{$direction}-100 {
-          #{$direction}: 100%;
-        }
-      }
-    }
-  }
+  .top-0 { top: 0%; }
+  .bottom-0 { bottom: 0%; }
+  .right-0 { right: 0%; }
+  .left-0 { left: 0%; }
+  .top-100 { top: 100%; }
+  .bottom-100 { bottom: 100%; }
+  .right-100 { right: 100%; }
+  .left-100 { left: 100%; }
 }

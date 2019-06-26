@@ -2,7 +2,7 @@
 // Border-radius
 //
 
-@if $generate-utilities-classes and $design-rounded-else-box {
+@if $generate-utilities-classes {
   $config: (
     responsive: false,
     properties: border-radius,
@@ -20,18 +20,22 @@
   @include generate-class($config);
 
   .is-rounded-top {
+    // avoid using @mixin is-rounded-top to generate radius independent of `$design-rounded-else-box` option
     border-top-left-radius: $border-radius-default;
     border-top-right-radius: $border-radius-default;
   }
   .is-rounded-right {
+    // avoid using @mixin is-rounded-right to generate radius independent of `$design-rounded-else-box` option
     border-top-right-radius: $border-radius-default;
     border-bottom-right-radius: $border-radius-default;
   }
   .is-rounded-bottom {
+    // avoid using @mixin is-rounded-bottom to generate radius independent of `$design-rounded-else-box` option
     border-bottom-right-radius: $border-radius-default;
     border-bottom-left-radius: $border-radius-default;
   }
   .is-rounded-left {
+    // avoid using @mixin is-rounded-left to generate radius independent of `$design-rounded-else-box` option
     border-top-left-radius: $border-radius-default;
     border-bottom-left-radius: $border-radius-default;
   }

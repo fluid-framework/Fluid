@@ -25,4 +25,20 @@
   );
 
   @include generate-class($config);
+
+  $config: (
+    responsive: false,
+    properties: min-width,
+    class: w-min,
+    values: (
+      25vw: 25vw,
+      50vw: 50vw,
+      75vw: 75vw,
+      100vw: 100vw,
+      vmax: 100vmax,
+      vmin: 100vmin
+    )
+  );
+
+  @include generate-class($config);
 }

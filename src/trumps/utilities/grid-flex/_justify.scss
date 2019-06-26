@@ -2,15 +2,15 @@
 // Justify-content
 //
 
-@if $generate-grid-classes {
+@if $generate-utilities-classes {
   $config: (
     responsive: true,
     properties: justify-content,
-    class: grid,
+    class: justify,
     values: (
       start: flex-start,
-      end: flex-end,
       center: center,
+      end: flex-end,
       between: space-between,
       around: space-around
     )

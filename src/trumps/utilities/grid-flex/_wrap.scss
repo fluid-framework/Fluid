@@ -2,11 +2,11 @@
 // Grid-wrap
 //
 
-@if $generate-grid-classes {
+@if $generate-utilities-classes {
   $config: (
     responsive: true,
     properties: flex-wrap,
-    class: grid,
+    class: flex,
     values: wrap nowrap wrap-reverse
   );
 

@@ -2,7 +2,7 @@
 // Order
 //
 
-@if $generate-grid-classes {
+@if $generate-utilities-classes {
   $config: (
     responsive: true,
     properties: order,
