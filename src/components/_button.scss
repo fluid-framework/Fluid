@@ -90,6 +90,8 @@
     // Is-minimal
     &.is-minimal {
       position: relative;
+      border-right: 0; // remove border to remove border spacing between minimal button groups
+      border-left: 0; // remove border to remove border spacing between minimal button groups
       box-shadow: none; // remove focus box shadow
 
       @include after {

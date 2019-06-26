@@ -6,7 +6,7 @@
   //
   // Doc : add Doc
   //
-  .embed-responsive {
+  .embed {
     position: relative;
     display: block;
     width: 100%;
@@ -18,7 +18,7 @@
       content: "";
     }
 
-    .embed-responsive-item,
+    .embed-item,
     iframe,
     embed,
     object,
@@ -34,7 +34,7 @@
   }
 
   @each $key, $ratio in $aspect-ratios {
-    .embed-responsive-#{$key} {
+    .embed-#{$key} {
       &::before {
         padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
       }
