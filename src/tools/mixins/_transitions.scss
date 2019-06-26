@@ -12,17 +12,17 @@
   $transition-combined: "";
   @if $enable-transitions {
     // if no input argument is give
-    @if length($transitions) != 0 {
+    @if length($transitions) == 0 {
       $transition-combined: all .2s ease-in-out; // Default transition
     } @else {
       @each $transition in $transitions {
-        @if type-of($transition) != string {
-          @error "The argument transitions: `#{transitions}` is of incorrect type: `#{type-of(transitions)}`. Type of `string` is required!";
+        @if type-of($transition) != string and type-of($transition) != list {
+          @error "The argument transitions: `#{transitions}` is of incorrect type: `#{type-of(transitions)}`. Type of `string` or `list` is required!";
         }
         $transition-combined: suffix($transition-combined, ",") + $transition;
       }
     }
-    transition: $transition-combined;
+    transition: unquote($transition-combined);
 
     @if $enable-prefers-reduced-motion-media-query {
       @media (prefers-reduced-motion: reduce) {

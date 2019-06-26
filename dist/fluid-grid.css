@@ -1270,370 +1270,370 @@ html {
   }
 }
 
-.flex-top {
-  align-items: flex-start;
-}
-
-.flex-middle {
-  align-items: center;
-}
-
-.flex-bottom {
-  align-items: flex-end;
-}
-
-.flex-baseline {
-  align-items: baseline;
-}
-
-.flex-stretch {
-  align-items: stretch;
-}
-
-@media (min-width: 576px) {
-  .flex-top\@sm {
-    align-items: flex-start;
-  }
-  .flex-middle\@sm {
-    align-items: center;
-  }
-  .flex-bottom\@sm {
-    align-items: flex-end;
-  }
-  .flex-baseline\@sm {
-    align-items: baseline;
-  }
-  .flex-stretch\@sm {
-    align-items: stretch;
-  }
-}
-
-@media (min-width: 768px) {
-  .flex-top\@md {
-    align-items: flex-start;
-  }
-  .flex-middle\@md {
-    align-items: center;
-  }
-  .flex-bottom\@md {
-    align-items: flex-end;
-  }
-  .flex-baseline\@md {
-    align-items: baseline;
-  }
-  .flex-stretch\@md {
-    align-items: stretch;
-  }
-}
-
-@media (min-width: 992px) {
-  .flex-top\@lg {
-    align-items: flex-start;
-  }
-  .flex-middle\@lg {
-    align-items: center;
-  }
-  .flex-bottom\@lg {
-    align-items: flex-end;
-  }
-  .flex-baseline\@lg {
-    align-items: baseline;
-  }
-  .flex-stretch\@lg {
-    align-items: stretch;
-  }
-}
-
-@media (min-width: 1200px) {
-  .flex-top\@xl {
-    align-items: flex-start;
-  }
-  .flex-middle\@xl {
-    align-items: center;
-  }
-  .flex-bottom\@xl {
-    align-items: flex-end;
-  }
-  .flex-baseline\@xl {
-    align-items: baseline;
-  }
-  .flex-stretch\@xl {
-    align-items: stretch;
-  }
-}
-
-.flex-content-top {
+.align-content-top {
   align-content: flex-start;
 }
 
-.flex-content-middle {
+.align-content-middle {
   align-content: center;
 }
 
-.flex-content-bottom {
+.align-content-bottom {
   align-content: flex-end;
 }
 
-.flex-content-baseline {
-  align-content: baseline;
+.align-content-between {
+  align-content: space-between;
 }
 
-.flex-content-stretch {
-  align-content: stretch;
+.align-content-around {
+  align-content: space-around;
 }
 
 @media (min-width: 576px) {
-  .flex-content-top\@sm {
+  .align-content-top\@sm {
     align-content: flex-start;
   }
-  .flex-content-middle\@sm {
+  .align-content-middle\@sm {
     align-content: center;
   }
-  .flex-content-bottom\@sm {
+  .align-content-bottom\@sm {
     align-content: flex-end;
   }
-  .flex-content-baseline\@sm {
-    align-content: baseline;
+  .align-content-between\@sm {
+    align-content: space-between;
   }
-  .flex-content-stretch\@sm {
-    align-content: stretch;
+  .align-content-around\@sm {
+    align-content: space-around;
   }
 }
 
 @media (min-width: 768px) {
-  .flex-content-top\@md {
+  .align-content-top\@md {
     align-content: flex-start;
   }
-  .flex-content-middle\@md {
+  .align-content-middle\@md {
     align-content: center;
   }
-  .flex-content-bottom\@md {
+  .align-content-bottom\@md {
     align-content: flex-end;
   }
-  .flex-content-baseline\@md {
-    align-content: baseline;
+  .align-content-between\@md {
+    align-content: space-between;
   }
-  .flex-content-stretch\@md {
-    align-content: stretch;
+  .align-content-around\@md {
+    align-content: space-around;
   }
 }
 
 @media (min-width: 992px) {
-  .flex-content-top\@lg {
+  .align-content-top\@lg {
     align-content: flex-start;
   }
-  .flex-content-middle\@lg {
+  .align-content-middle\@lg {
     align-content: center;
   }
-  .flex-content-bottom\@lg {
+  .align-content-bottom\@lg {
     align-content: flex-end;
   }
-  .flex-content-baseline\@lg {
-    align-content: baseline;
+  .align-content-between\@lg {
+    align-content: space-between;
   }
-  .flex-content-stretch\@lg {
-    align-content: stretch;
+  .align-content-around\@lg {
+    align-content: space-around;
   }
 }
 
 @media (min-width: 1200px) {
-  .flex-content-top\@xl {
+  .align-content-top\@xl {
     align-content: flex-start;
   }
-  .flex-content-middle\@xl {
+  .align-content-middle\@xl {
     align-content: center;
   }
-  .flex-content-bottom\@xl {
+  .align-content-bottom\@xl {
     align-content: flex-end;
   }
-  .flex-content-baseline\@xl {
-    align-content: baseline;
+  .align-content-between\@xl {
+    align-content: space-between;
   }
-  .flex-content-stretch\@xl {
-    align-content: stretch;
+  .align-content-around\@xl {
+    align-content: space-around;
   }
 }
 
 .align-top {
-  align-self: flex-start;
+  align-items: flex-start;
 }
 
 .align-middle {
-  align-self: center;
+  align-items: center;
 }
 
 .align-bottom {
-  align-self: flex-end;
+  align-items: flex-end;
 }
 
 .align-baseline {
-  align-self: baseline;
+  align-items: baseline;
 }
 
 .align-stretch {
-  align-self: stretch;
+  align-items: stretch;
 }
 
 @media (min-width: 576px) {
   .align-top\@sm {
-    align-self: flex-start;
+    align-items: flex-start;
   }
   .align-middle\@sm {
-    align-self: center;
+    align-items: center;
   }
   .align-bottom\@sm {
-    align-self: flex-end;
+    align-items: flex-end;
   }
   .align-baseline\@sm {
-    align-self: baseline;
+    align-items: baseline;
   }
   .align-stretch\@sm {
-    align-self: stretch;
+    align-items: stretch;
   }
 }
 
 @media (min-width: 768px) {
   .align-top\@md {
-    align-self: flex-start;
+    align-items: flex-start;
   }
   .align-middle\@md {
-    align-self: center;
+    align-items: center;
   }
   .align-bottom\@md {
-    align-self: flex-end;
+    align-items: flex-end;
   }
   .align-baseline\@md {
-    align-self: baseline;
+    align-items: baseline;
   }
   .align-stretch\@md {
-    align-self: stretch;
+    align-items: stretch;
   }
 }
 
 @media (min-width: 992px) {
   .align-top\@lg {
-    align-self: flex-start;
+    align-items: flex-start;
   }
   .align-middle\@lg {
-    align-self: center;
+    align-items: center;
   }
   .align-bottom\@lg {
-    align-self: flex-end;
+    align-items: flex-end;
   }
   .align-baseline\@lg {
-    align-self: baseline;
+    align-items: baseline;
   }
   .align-stretch\@lg {
-    align-self: stretch;
+    align-items: stretch;
   }
 }
 
 @media (min-width: 1200px) {
   .align-top\@xl {
-    align-self: flex-start;
+    align-items: flex-start;
   }
   .align-middle\@xl {
-    align-self: center;
+    align-items: center;
   }
   .align-bottom\@xl {
-    align-self: flex-end;
+    align-items: flex-end;
   }
   .align-baseline\@xl {
-    align-self: baseline;
+    align-items: baseline;
   }
   .align-stretch\@xl {
+    align-items: stretch;
+  }
+}
+
+.align-self-top {
+  align-self: flex-start;
+}
+
+.align-self-middle {
+  align-self: center;
+}
+
+.align-self-bottom {
+  align-self: flex-end;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.align-self-stretch {
+  align-self: stretch;
+}
+
+@media (min-width: 576px) {
+  .align-self-top\@sm {
+    align-self: flex-start;
+  }
+  .align-self-middle\@sm {
+    align-self: center;
+  }
+  .align-self-bottom\@sm {
+    align-self: flex-end;
+  }
+  .align-self-baseline\@sm {
+    align-self: baseline;
+  }
+  .align-self-stretch\@sm {
     align-self: stretch;
   }
 }
 
-.flex-start {
+@media (min-width: 768px) {
+  .align-self-top\@md {
+    align-self: flex-start;
+  }
+  .align-self-middle\@md {
+    align-self: center;
+  }
+  .align-self-bottom\@md {
+    align-self: flex-end;
+  }
+  .align-self-baseline\@md {
+    align-self: baseline;
+  }
+  .align-self-stretch\@md {
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 992px) {
+  .align-self-top\@lg {
+    align-self: flex-start;
+  }
+  .align-self-middle\@lg {
+    align-self: center;
+  }
+  .align-self-bottom\@lg {
+    align-self: flex-end;
+  }
+  .align-self-baseline\@lg {
+    align-self: baseline;
+  }
+  .align-self-stretch\@lg {
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 1200px) {
+  .align-self-top\@xl {
+    align-self: flex-start;
+  }
+  .align-self-middle\@xl {
+    align-self: center;
+  }
+  .align-self-bottom\@xl {
+    align-self: flex-end;
+  }
+  .align-self-baseline\@xl {
+    align-self: baseline;
+  }
+  .align-self-stretch\@xl {
+    align-self: stretch;
+  }
+}
+
+.justify-start {
   justify-content: flex-start;
 }
 
-.flex-end {
-  justify-content: flex-end;
-}
-
-.flex-center {
+.justify-center {
   justify-content: center;
 }
 
-.flex-between {
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
   justify-content: space-between;
 }
 
-.flex-around {
+.justify-around {
   justify-content: space-around;
 }
 
 @media (min-width: 576px) {
-  .flex-start\@sm {
+  .justify-start\@sm {
     justify-content: flex-start;
   }
-  .flex-end\@sm {
-    justify-content: flex-end;
-  }
-  .flex-center\@sm {
+  .justify-center\@sm {
     justify-content: center;
   }
-  .flex-between\@sm {
+  .justify-end\@sm {
+    justify-content: flex-end;
+  }
+  .justify-between\@sm {
     justify-content: space-between;
   }
-  .flex-around\@sm {
+  .justify-around\@sm {
     justify-content: space-around;
   }
 }
 
 @media (min-width: 768px) {
-  .flex-start\@md {
+  .justify-start\@md {
     justify-content: flex-start;
   }
-  .flex-end\@md {
-    justify-content: flex-end;
-  }
-  .flex-center\@md {
+  .justify-center\@md {
     justify-content: center;
   }
-  .flex-between\@md {
+  .justify-end\@md {
+    justify-content: flex-end;
+  }
+  .justify-between\@md {
     justify-content: space-between;
   }
-  .flex-around\@md {
+  .justify-around\@md {
     justify-content: space-around;
   }
 }
 
 @media (min-width: 992px) {
-  .flex-start\@lg {
+  .justify-start\@lg {
     justify-content: flex-start;
   }
-  .flex-end\@lg {
-    justify-content: flex-end;
-  }
-  .flex-center\@lg {
+  .justify-center\@lg {
     justify-content: center;
   }
-  .flex-between\@lg {
+  .justify-end\@lg {
+    justify-content: flex-end;
+  }
+  .justify-between\@lg {
     justify-content: space-between;
   }
-  .flex-around\@lg {
+  .justify-around\@lg {
     justify-content: space-around;
   }
 }
 
 @media (min-width: 1200px) {
-  .flex-start\@xl {
+  .justify-start\@xl {
     justify-content: flex-start;
   }
-  .flex-end\@xl {
-    justify-content: flex-end;
-  }
-  .flex-center\@xl {
+  .justify-center\@xl {
     justify-content: center;
   }
-  .flex-between\@xl {
+  .justify-end\@xl {
+    justify-content: flex-end;
+  }
+  .justify-between\@xl {
     justify-content: space-between;
   }
-  .flex-around\@xl {
+  .justify-around\@xl {
     justify-content: space-around;
   }
 }
