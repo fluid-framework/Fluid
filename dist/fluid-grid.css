@@ -1018,322 +1018,438 @@ html {
   }
 }
 
-.grid-row {
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+@media (min-width: 576px) {
+  .flex-fill\@sm {
+    flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex-fill\@md {
+    flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .flex-fill\@lg {
+    flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flex-fill\@xl {
+    flex: 1 1 auto;
+  }
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+@media (min-width: 576px) {
+  .flex-grow\@sm {
+    flex-grow: 1;
+  }
+  .flex-grow-0\@sm {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex-grow\@md {
+    flex-grow: 1;
+  }
+  .flex-grow-0\@md {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .flex-grow\@lg {
+    flex-grow: 1;
+  }
+  .flex-grow-0\@lg {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flex-grow\@xl {
+    flex-grow: 1;
+  }
+  .flex-grow-0\@xl {
+    flex-grow: 0;
+  }
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+@media (min-width: 576px) {
+  .flex-shrink\@sm {
+    flex-shrink: 1;
+  }
+  .flex-shrink-0\@sm {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex-shrink\@md {
+    flex-shrink: 1;
+  }
+  .flex-shrink-0\@md {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .flex-shrink\@lg {
+    flex-shrink: 1;
+  }
+  .flex-shrink-0\@lg {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flex-shrink\@xl {
+    flex-shrink: 1;
+  }
+  .flex-shrink-0\@xl {
+    flex-shrink: 0;
+  }
+}
+
+.flex-row {
   flex-direction: row;
 }
 
-.grid-column {
+.flex-column {
   flex-direction: column;
 }
 
-.grid-row-reverse {
+.flex-row-reverse {
   flex-direction: row-reverse;
 }
 
-.grid-column-reverse {
+.flex-column-reverse {
   flex-direction: column-reverse;
 }
 
 @media (min-width: 576px) {
-  .grid-row\@sm {
+  .flex-row\@sm {
     flex-direction: row;
   }
-  .grid-column\@sm {
+  .flex-column\@sm {
     flex-direction: column;
   }
-  .grid-row-reverse\@sm {
+  .flex-row-reverse\@sm {
     flex-direction: row-reverse;
   }
-  .grid-column-reverse\@sm {
+  .flex-column-reverse\@sm {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 768px) {
-  .grid-row\@md {
+  .flex-row\@md {
     flex-direction: row;
   }
-  .grid-column\@md {
+  .flex-column\@md {
     flex-direction: column;
   }
-  .grid-row-reverse\@md {
+  .flex-row-reverse\@md {
     flex-direction: row-reverse;
   }
-  .grid-column-reverse\@md {
+  .flex-column-reverse\@md {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 992px) {
-  .grid-row\@lg {
+  .flex-row\@lg {
     flex-direction: row;
   }
-  .grid-column\@lg {
+  .flex-column\@lg {
     flex-direction: column;
   }
-  .grid-row-reverse\@lg {
+  .flex-row-reverse\@lg {
     flex-direction: row-reverse;
   }
-  .grid-column-reverse\@lg {
+  .flex-column-reverse\@lg {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 1200px) {
-  .grid-row\@xl {
+  .flex-row\@xl {
     flex-direction: row;
   }
-  .grid-column\@xl {
+  .flex-column\@xl {
     flex-direction: column;
   }
-  .grid-row-reverse\@xl {
+  .flex-row-reverse\@xl {
     flex-direction: row-reverse;
   }
-  .grid-column-reverse\@xl {
+  .flex-column-reverse\@xl {
     flex-direction: column-reverse;
   }
 }
 
-.grid-wrap {
+.flex-wrap {
   flex-wrap: wrap;
 }
 
-.grid-nowrap {
+.flex-nowrap {
   flex-wrap: nowrap;
 }
 
-.grid-wrap-reverse {
+.flex-wrap-reverse {
   flex-wrap: wrap-reverse;
 }
 
 @media (min-width: 576px) {
-  .grid-wrap\@sm {
+  .flex-wrap\@sm {
     flex-wrap: wrap;
   }
-  .grid-nowrap\@sm {
+  .flex-nowrap\@sm {
     flex-wrap: nowrap;
   }
-  .grid-wrap-reverse\@sm {
+  .flex-wrap-reverse\@sm {
     flex-wrap: wrap-reverse;
   }
 }
 
 @media (min-width: 768px) {
-  .grid-wrap\@md {
+  .flex-wrap\@md {
     flex-wrap: wrap;
   }
-  .grid-nowrap\@md {
+  .flex-nowrap\@md {
     flex-wrap: nowrap;
   }
-  .grid-wrap-reverse\@md {
+  .flex-wrap-reverse\@md {
     flex-wrap: wrap-reverse;
   }
 }
 
 @media (min-width: 992px) {
-  .grid-wrap\@lg {
+  .flex-wrap\@lg {
     flex-wrap: wrap;
   }
-  .grid-nowrap\@lg {
+  .flex-nowrap\@lg {
     flex-wrap: nowrap;
   }
-  .grid-wrap-reverse\@lg {
+  .flex-wrap-reverse\@lg {
     flex-wrap: wrap-reverse;
   }
 }
 
 @media (min-width: 1200px) {
-  .grid-wrap\@xl {
+  .flex-wrap\@xl {
     flex-wrap: wrap;
   }
-  .grid-nowrap\@xl {
+  .flex-nowrap\@xl {
     flex-wrap: nowrap;
   }
-  .grid-wrap-reverse\@xl {
+  .flex-wrap-reverse\@xl {
     flex-wrap: wrap-reverse;
   }
 }
 
-.grid-top {
+.flex-top {
   align-items: flex-start;
 }
 
-.grid-middle {
+.flex-middle {
   align-items: center;
 }
 
-.grid-bottom {
+.flex-bottom {
   align-items: flex-end;
 }
 
-.grid-baseline {
+.flex-baseline {
   align-items: baseline;
 }
 
-.grid-stretch {
+.flex-stretch {
   align-items: stretch;
 }
 
 @media (min-width: 576px) {
-  .grid-top\@sm {
+  .flex-top\@sm {
     align-items: flex-start;
   }
-  .grid-middle\@sm {
+  .flex-middle\@sm {
     align-items: center;
   }
-  .grid-bottom\@sm {
+  .flex-bottom\@sm {
     align-items: flex-end;
   }
-  .grid-baseline\@sm {
+  .flex-baseline\@sm {
     align-items: baseline;
   }
-  .grid-stretch\@sm {
+  .flex-stretch\@sm {
     align-items: stretch;
   }
 }
 
 @media (min-width: 768px) {
-  .grid-top\@md {
+  .flex-top\@md {
     align-items: flex-start;
   }
-  .grid-middle\@md {
+  .flex-middle\@md {
     align-items: center;
   }
-  .grid-bottom\@md {
+  .flex-bottom\@md {
     align-items: flex-end;
   }
-  .grid-baseline\@md {
+  .flex-baseline\@md {
     align-items: baseline;
   }
-  .grid-stretch\@md {
+  .flex-stretch\@md {
     align-items: stretch;
   }
 }
 
 @media (min-width: 992px) {
-  .grid-top\@lg {
+  .flex-top\@lg {
     align-items: flex-start;
   }
-  .grid-middle\@lg {
+  .flex-middle\@lg {
     align-items: center;
   }
-  .grid-bottom\@lg {
+  .flex-bottom\@lg {
     align-items: flex-end;
   }
-  .grid-baseline\@lg {
+  .flex-baseline\@lg {
     align-items: baseline;
   }
-  .grid-stretch\@lg {
+  .flex-stretch\@lg {
     align-items: stretch;
   }
 }
 
 @media (min-width: 1200px) {
-  .grid-top\@xl {
+  .flex-top\@xl {
     align-items: flex-start;
   }
-  .grid-middle\@xl {
+  .flex-middle\@xl {
     align-items: center;
   }
-  .grid-bottom\@xl {
+  .flex-bottom\@xl {
     align-items: flex-end;
   }
-  .grid-baseline\@xl {
+  .flex-baseline\@xl {
     align-items: baseline;
   }
-  .grid-stretch\@xl {
+  .flex-stretch\@xl {
     align-items: stretch;
   }
 }
 
-.grid-content-top {
+.flex-content-top {
   align-content: flex-start;
 }
 
-.grid-content-middle {
+.flex-content-middle {
   align-content: center;
 }
 
-.grid-content-bottom {
+.flex-content-bottom {
   align-content: flex-end;
 }
 
-.grid-content-baseline {
+.flex-content-baseline {
   align-content: baseline;
 }
 
-.grid-content-stretch {
+.flex-content-stretch {
   align-content: stretch;
 }
 
 @media (min-width: 576px) {
-  .grid-content-top\@sm {
+  .flex-content-top\@sm {
     align-content: flex-start;
   }
-  .grid-content-middle\@sm {
+  .flex-content-middle\@sm {
     align-content: center;
   }
-  .grid-content-bottom\@sm {
+  .flex-content-bottom\@sm {
     align-content: flex-end;
   }
-  .grid-content-baseline\@sm {
+  .flex-content-baseline\@sm {
     align-content: baseline;
   }
-  .grid-content-stretch\@sm {
+  .flex-content-stretch\@sm {
     align-content: stretch;
   }
 }
 
 @media (min-width: 768px) {
-  .grid-content-top\@md {
+  .flex-content-top\@md {
     align-content: flex-start;
   }
-  .grid-content-middle\@md {
+  .flex-content-middle\@md {
     align-content: center;
   }
-  .grid-content-bottom\@md {
+  .flex-content-bottom\@md {
     align-content: flex-end;
   }
-  .grid-content-baseline\@md {
+  .flex-content-baseline\@md {
     align-content: baseline;
   }
-  .grid-content-stretch\@md {
+  .flex-content-stretch\@md {
     align-content: stretch;
   }
 }
 
 @media (min-width: 992px) {
-  .grid-content-top\@lg {
+  .flex-content-top\@lg {
     align-content: flex-start;
   }
-  .grid-content-middle\@lg {
+  .flex-content-middle\@lg {
     align-content: center;
   }
-  .grid-content-bottom\@lg {
+  .flex-content-bottom\@lg {
     align-content: flex-end;
   }
-  .grid-content-baseline\@lg {
+  .flex-content-baseline\@lg {
     align-content: baseline;
   }
-  .grid-content-stretch\@lg {
+  .flex-content-stretch\@lg {
     align-content: stretch;
   }
 }
 
 @media (min-width: 1200px) {
-  .grid-content-top\@xl {
+  .flex-content-top\@xl {
     align-content: flex-start;
   }
-  .grid-content-middle\@xl {
+  .flex-content-middle\@xl {
     align-content: center;
   }
-  .grid-content-bottom\@xl {
+  .flex-content-bottom\@xl {
     align-content: flex-end;
   }
-  .grid-content-baseline\@xl {
+  .flex-content-baseline\@xl {
     align-content: baseline;
   }
-  .grid-content-stretch\@xl {
+  .flex-content-stretch\@xl {
     align-content: stretch;
   }
 }
@@ -1430,94 +1546,94 @@ html {
   }
 }
 
-.grid-start {
+.flex-start {
   justify-content: flex-start;
 }
 
-.grid-end {
+.flex-end {
   justify-content: flex-end;
 }
 
-.grid-center {
+.flex-center {
   justify-content: center;
 }
 
-.grid-between {
+.flex-between {
   justify-content: space-between;
 }
 
-.grid-around {
+.flex-around {
   justify-content: space-around;
 }
 
 @media (min-width: 576px) {
-  .grid-start\@sm {
+  .flex-start\@sm {
     justify-content: flex-start;
   }
-  .grid-end\@sm {
+  .flex-end\@sm {
     justify-content: flex-end;
   }
-  .grid-center\@sm {
+  .flex-center\@sm {
     justify-content: center;
   }
-  .grid-between\@sm {
+  .flex-between\@sm {
     justify-content: space-between;
   }
-  .grid-around\@sm {
+  .flex-around\@sm {
     justify-content: space-around;
   }
 }
 
 @media (min-width: 768px) {
-  .grid-start\@md {
+  .flex-start\@md {
     justify-content: flex-start;
   }
-  .grid-end\@md {
+  .flex-end\@md {
     justify-content: flex-end;
   }
-  .grid-center\@md {
+  .flex-center\@md {
     justify-content: center;
   }
-  .grid-between\@md {
+  .flex-between\@md {
     justify-content: space-between;
   }
-  .grid-around\@md {
+  .flex-around\@md {
     justify-content: space-around;
   }
 }
 
 @media (min-width: 992px) {
-  .grid-start\@lg {
+  .flex-start\@lg {
     justify-content: flex-start;
   }
-  .grid-end\@lg {
+  .flex-end\@lg {
     justify-content: flex-end;
   }
-  .grid-center\@lg {
+  .flex-center\@lg {
     justify-content: center;
   }
-  .grid-between\@lg {
+  .flex-between\@lg {
     justify-content: space-between;
   }
-  .grid-around\@lg {
+  .flex-around\@lg {
     justify-content: space-around;
   }
 }
 
 @media (min-width: 1200px) {
-  .grid-start\@xl {
+  .flex-start\@xl {
     justify-content: flex-start;
   }
-  .grid-end\@xl {
+  .flex-end\@xl {
     justify-content: flex-end;
   }
-  .grid-center\@xl {
+  .flex-center\@xl {
     justify-content: center;
   }
-  .grid-between\@xl {
+  .flex-between\@xl {
     justify-content: space-between;
   }
-  .grid-around\@xl {
+  .flex-around\@xl {
     justify-content: space-around;
   }
 }

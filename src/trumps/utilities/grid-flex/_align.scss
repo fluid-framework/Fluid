@@ -6,7 +6,7 @@
   $config: (
     responsive: true,
     properties: align-items,
-    class: grid,
+    class: flex,
     values: (
       top: flex-start,
       middle: center,
@@ -21,7 +21,7 @@
   $config: (
     responsive: true,
     properties: align-content,
-    class: grid-content,
+    class: flex-content,
     values: (
       top: flex-start,
       middle: center,
