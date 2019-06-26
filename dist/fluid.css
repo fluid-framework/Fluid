@@ -2116,31 +2116,58 @@ template {
   display: inline-flex;
 }
 
-.group > .input:not(:first-child):not(:last-child),
-.group > .button:not(:first-child):not(:last-child) {
-  margin-right: -0.5px;
-  margin-left: -0.5px;
-  border-radius: 0;
-}
-
-.group > .input:first-child,
-.group > .button:first-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.group > .input:last-child,
-.group > .button:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .group > .input:hover, .group > .input.hover, .group > .input:focus, .group > .input.focus,
 .group > .button:hover,
 .group > .button.hover,
 .group > .button:focus,
 .group > .button.focus {
   z-index: 10;
+}
+
+.group:not(.is-vertical) > .input,
+.group:not(.is-vertical) > .button {
+  margin-right: -0.5px;
+  margin-left: -0.5px;
+}
+
+.group:not(.is-vertical) > .input:not(:first-child):not(:last-child),
+.group:not(.is-vertical) > .button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.group:not(.is-vertical) > .input:first-child,
+.group:not(.is-vertical) > .button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.group:not(.is-vertical) > .input:last-child,
+.group:not(.is-vertical) > .button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.group.is-vertical > .input,
+.group.is-vertical > .button {
+  margin-top: -0.5px;
+  margin-bottom: -0.5px;
+}
+
+.group.is-vertical > .input:not(:first-child):not(:last-child),
+.group.is-vertical > .button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.group.is-vertical > .input:first-child,
+.group.is-vertical > .button:first-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.group.is-vertical > .input:last-child,
+.group.is-vertical > .button:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .button {
