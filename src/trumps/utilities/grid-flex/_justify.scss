@@ -6,11 +6,11 @@
   $config: (
     responsive: true,
     properties: justify-content,
-    class: flex,
+    class: justify,
     values: (
       start: flex-start,
-      end: flex-end,
       center: center,
+      end: flex-end,
       between: space-between,
       around: space-around
     )

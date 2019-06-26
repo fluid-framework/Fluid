@@ -5,14 +5,14 @@
 @if $generate-utilities-classes {
   $config: (
     responsive: true,
-    properties: align-items,
-    class: flex,
+    properties: align-content,
+    class: align-content,
     values: (
       top: flex-start,
       middle: center,
       bottom: flex-end,
-      baseline: baseline,
-      stretch: stretch
+      between: space-between,
+      around: space-around
     )
   );
 
@@ -20,8 +20,8 @@
 
   $config: (
     responsive: true,
-    properties: align-content,
-    class: flex-content,
+    properties: align-items,
+    class: align,
     values: (
       top: flex-start,
       middle: center,
@@ -36,7 +36,7 @@
   $config: (
     responsive: true,
     properties: align-self,
-    class: align,
+    class: align-self,
     values: (
       top: flex-start,
       middle: center,
