@@ -2742,6 +2742,30 @@ template {
   width: stretch;
 }
 
+.w-min-25vw {
+  min-width: 25vw;
+}
+
+.w-min-50vw {
+  min-width: 50vw;
+}
+
+.w-min-75vw {
+  min-width: 75vw;
+}
+
+.w-min-100vw {
+  min-width: 100vw;
+}
+
+.w-min-vmax {
+  min-width: 100vmax;
+}
+
+.w-min-vmin {
+  min-width: 100vmin;
+}
+
 .h-0 {
   height: 0;
 }
@@ -2800,6 +2824,30 @@ template {
   height: -webkit-fill-available;
   height: -moz-available;
   height: stretch;
+}
+
+.h-min-25vh {
+  min-height: 25vh;
+}
+
+.h-min-50vh {
+  min-height: 50vh;
+}
+
+.h-min-75vh {
+  min-height: 75vh;
+}
+
+.h-min-100vh {
+  min-height: 100vh;
+}
+
+.h-min-vmax {
+  min-height: 100vmax;
+}
+
+.h-min-vmin {
+  min-height: 100vmin;
 }
 
 .clr-primary {

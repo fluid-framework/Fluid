@@ -25,4 +25,20 @@
   );
 
   @include generate-class($config);
+
+  $config: (
+    responsive: false,
+    properties: min-height,
+    class: h-min,
+    values: (
+      25vh: 25vh,
+      50vh: 50vh,
+      75vh: 75vh,
+      100vh: 100vh,
+      vmax: 100vmax,
+      vmin: 100vmin
+    )
+  );
+
+  @include generate-class($config);
 }
