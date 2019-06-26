@@ -6,8 +6,13 @@
   $config: (
     responsive: true,
     properties: flex-direction,
-    class: flex,
-    values: row column row-reverse column-reverse
+    class: is,
+    values: (
+      horizontal: row,
+      vertical: column,
+      horizontal-reverse: row-reverse,
+      vertical-reverse: column-reverse
+    )
   );
 
   @include generate-class($config);

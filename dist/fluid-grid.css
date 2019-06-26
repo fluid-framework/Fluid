@@ -1134,78 +1134,78 @@ html {
   }
 }
 
-.flex-row {
+.is-horizontal {
   flex-direction: row;
 }
 
-.flex-column {
+.is-vertical {
   flex-direction: column;
 }
 
-.flex-row-reverse {
+.is-horizontal-reverse {
   flex-direction: row-reverse;
 }
 
-.flex-column-reverse {
+.is-vertical-reverse {
   flex-direction: column-reverse;
 }
 
 @media (min-width: 576px) {
-  .flex-row\@sm {
+  .is-horizontal\@sm {
     flex-direction: row;
   }
-  .flex-column\@sm {
+  .is-vertical\@sm {
     flex-direction: column;
   }
-  .flex-row-reverse\@sm {
+  .is-horizontal-reverse\@sm {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@sm {
+  .is-vertical-reverse\@sm {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 768px) {
-  .flex-row\@md {
+  .is-horizontal\@md {
     flex-direction: row;
   }
-  .flex-column\@md {
+  .is-vertical\@md {
     flex-direction: column;
   }
-  .flex-row-reverse\@md {
+  .is-horizontal-reverse\@md {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@md {
+  .is-vertical-reverse\@md {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 992px) {
-  .flex-row\@lg {
+  .is-horizontal\@lg {
     flex-direction: row;
   }
-  .flex-column\@lg {
+  .is-vertical\@lg {
     flex-direction: column;
   }
-  .flex-row-reverse\@lg {
+  .is-horizontal-reverse\@lg {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@lg {
+  .is-vertical-reverse\@lg {
     flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 1200px) {
-  .flex-row\@xl {
+  .is-horizontal\@xl {
     flex-direction: row;
   }
-  .flex-column\@xl {
+  .is-vertical\@xl {
     flex-direction: column;
   }
-  .flex-row-reverse\@xl {
+  .is-horizontal-reverse\@xl {
     flex-direction: row-reverse;
   }
-  .flex-column-reverse\@xl {
+  .is-vertical-reverse\@xl {
     flex-direction: column-reverse;
   }
 }
