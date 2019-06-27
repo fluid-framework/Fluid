@@ -151,7 +151,7 @@
 
 .layout-content {
   z-index: 1;
-  color: #0f0f0f;
+  color: #2b2b2b;
   background-color: #fff;
 }
 
@@ -903,7 +903,7 @@
 }
 
 .clr-body {
-  color: #0f0f0f;
+  color: #2b2b2b;
 }
 
 .clr-black {
@@ -979,7 +979,7 @@ a.clr-dark:hover, a.clr-dark:focus {
 }
 
 a.clr-body:hover, a.clr-body:focus {
-  color: black;
+  color: #050505;
 }
 
 a.clr-black:hover, a.clr-black:focus {
@@ -1055,7 +1055,7 @@ a.clr-disabled:hover, a.clr-disabled:focus {
 }
 
 .bg-body {
-  background-color: #0f0f0f;
+  background-color: #2b2b2b;
 }
 
 .bg-black {
