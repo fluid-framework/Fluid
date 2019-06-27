@@ -6,14 +6,14 @@
   $config: (
     responsive: false,
     properties: border-radius,
-    class: is-rounded,
+    class: is,
     values: (
-      null: $border-radius-default,
-      sm: $border-radius-small,
-      lg: $border-radius-large,
+      rounded: $border-radius-default,
+      rounded-sm: $border-radius-small,
+      rounded-lg: $border-radius-large,
       circle: 50%,
       pill: $border-radius-pill,
-      none: none
+      boxed: 0
     )
   );
 
