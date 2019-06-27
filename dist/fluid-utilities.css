@@ -947,79 +947,79 @@
 }
 
 a.clr-primary:hover, a.clr-primary:focus {
-  color: #582eb5;
+  color: #5a3f95;
 }
 
 a.clr-secondary:hover, a.clr-secondary:focus {
-  color: #595959;
+  color: #5a3f95;
 }
 
 a.clr-valid:hover, a.clr-valid:focus {
-  color: #368011;
+  color: #5a3f95;
 }
 
 a.clr-info:hover, a.clr-info:focus {
-  color: #0c7c7c;
+  color: #5a3f95;
 }
 
 a.clr-warn:hover, a.clr-warn:focus {
-  color: #bda404;
+  color: #5a3f95;
 }
 
 a.clr-error:hover, a.clr-error:focus {
-  color: #c20912;
+  color: #5a3f95;
 }
 
 a.clr-light:hover, a.clr-light:focus {
-  color: #c9c9c9;
+  color: #5a3f95;
 }
 
 a.clr-dark:hover, a.clr-dark:focus {
-  color: #212121;
+  color: #5a3f95;
 }
 
 a.clr-body:hover, a.clr-body:focus {
-  color: #050505;
+  color: #5a3f95;
 }
 
 a.clr-black:hover, a.clr-black:focus {
-  color: black;
+  color: #5a3f95;
 }
 
 a.clr-black-25:hover, a.clr-black-25:focus {
-  color: rgba(0, 0, 0, 0.25);
+  color: #5a3f95;
 }
 
 a.clr-black-50:hover, a.clr-black-50:focus {
-  color: rgba(0, 0, 0, 0.5);
+  color: #5a3f95;
 }
 
 a.clr-black-75:hover, a.clr-black-75:focus {
-  color: rgba(0, 0, 0, 0.75);
+  color: #5a3f95;
 }
 
 a.clr-white:hover, a.clr-white:focus {
-  color: #d9d9d9;
+  color: #5a3f95;
 }
 
 a.clr-white-25:hover, a.clr-white-25:focus {
-  color: rgba(217, 217, 217, 0.25);
+  color: #5a3f95;
 }
 
 a.clr-white-50:hover, a.clr-white-50:focus {
-  color: rgba(217, 217, 217, 0.5);
+  color: #5a3f95;
 }
 
 a.clr-white-75:hover, a.clr-white-75:focus {
-  color: rgba(217, 217, 217, 0.75);
+  color: #5a3f95;
 }
 
 a.clr-hide:hover, a.clr-hide:focus {
-  color: rgba(0, 0, 0, 0);
+  color: #5a3f95;
 }
 
 a.clr-disabled:hover, a.clr-disabled:focus {
-  color: #3d3d3d;
+  color: #5a3f95;
 }
 
 .bg-primary {
