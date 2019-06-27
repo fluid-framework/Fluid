@@ -17,9 +17,9 @@
 
 // Solid button
 @mixin button-design-solid-varient($color) {
-  $hover-background: darken($color, 10%);
-  $focus-background: lighten($color, 10%);
-  $active-background: darken($color, 20%);
+  $hover-background: clr-step($color, 2);
+  $focus-background: clr-step($color, -2);
+  $active-background: clr-step($color, 4);
   // to avoid adding extra color override
   color: if(clr-contrast($color) != clr-contrast($button-theme-default) or clr-contrast($color) != clr-contrast($gray-900), clr-contrast($color), null);
   @include gradient-bg($color, 180deg);
@@ -71,8 +71,8 @@
 @mixin button-design-outline-varient($color) {
   color: $color;
   border-color: $color;
-  $hover-border: darken($color, 10%);
-  $active-border: darken($color, 20%);
+  $hover-border: clr-step($color, 2);
+  $active-border: clr-step($color, 4);
 
   @include hover {
     box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
