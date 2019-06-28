@@ -72,7 +72,7 @@
   color: $color;
   border-color: $color;
   $hover-border: clr-step($color, 2);
-  $focus-background: clr-step($color, -9);
+  $focus-background: clr-step($color, -8);
   $active-border: clr-step($color, 4);
 
   @include hover {

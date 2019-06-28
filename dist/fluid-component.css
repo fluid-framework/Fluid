@@ -316,7 +316,7 @@
 }
 
 .button.is-outline:focus, .button.is-outline.focus {
-  background-color: #efefef;
+  background-color: #e0e0e0;
 }
 
 .button.is-outline:hover, .button.is-outline.hover, .button.is-outline:focus, .button.is-outline.focus {
@@ -342,7 +342,7 @@
 }
 
 .button.is-outline.is-primary:focus, .button.is-outline.is-primary.focus {
-  background-color: #f2effb;
+  background-color: #e6def7;
 }
 
 .button.is-outline.is-primary:hover, .button.is-outline.is-primary.hover, .button.is-outline.is-primary:focus, .button.is-outline.is-primary.focus {
@@ -368,7 +368,7 @@
 }
 
 .button.is-outline.is-secondary:focus, .button.is-outline.is-secondary.focus {
-  background-color: #f2f2f2;
+  background-color: #e6e6e6;
 }
 
 .button.is-outline.is-secondary:hover, .button.is-outline.is-secondary.hover, .button.is-outline.is-secondary:focus, .button.is-outline.is-secondary.focus {
@@ -394,7 +394,7 @@
 }
 
 .button.is-outline.is-valid:focus, .button.is-outline.is-valid.focus {
-  background-color: #eef9e8;
+  background-color: #dcf3d1;
 }
 
 .button.is-outline.is-valid:hover, .button.is-outline.is-valid.hover, .button.is-outline.is-valid:focus, .button.is-outline.is-valid.focus {
@@ -420,7 +420,7 @@
 }
 
 .button.is-outline.is-info:focus, .button.is-outline.is-info.focus {
-  background-color: #e7f9f9;
+  background-color: #d0f3f3;
 }
 
 .button.is-outline.is-info:hover, .button.is-outline.is-info.hover, .button.is-outline.is-info:focus, .button.is-outline.is-info.focus {
@@ -446,7 +446,7 @@
 }
 
 .button.is-outline.is-warn:focus, .button.is-outline.is-warn.focus {
-  background-color: #fffbe8;
+  background-color: #fef8d0;
 }
 
 .button.is-outline.is-warn:hover, .button.is-outline.is-warn.hover, .button.is-outline.is-warn:focus, .button.is-outline.is-warn.focus {
@@ -472,7 +472,7 @@
 }
 
 .button.is-outline.is-error:focus, .button.is-outline.is-error.focus {
-  background-color: #fee9ea;
+  background-color: #fdd3d5;
 }
 
 .button.is-outline.is-error:hover, .button.is-outline.is-error.hover, .button.is-outline.is-error:focus, .button.is-outline.is-error.focus {
@@ -498,7 +498,7 @@
 }
 
 .button.is-outline.is-light:focus, .button.is-outline.is-light.focus {
-  background-color: #fdfdfd;
+  background-color: #fcfcfc;
 }
 
 .button.is-outline.is-light:hover, .button.is-outline.is-light.hover, .button.is-outline.is-light:focus, .button.is-outline.is-light.focus {
@@ -524,7 +524,7 @@
 }
 
 .button.is-outline.is-dark:focus, .button.is-outline.is-dark.focus {
-  background-color: #ededed;
+  background-color: #dadada;
 }
 
 .button.is-outline.is-dark:hover, .button.is-outline.is-dark.hover, .button.is-outline.is-dark:focus, .button.is-outline.is-dark.focus {
