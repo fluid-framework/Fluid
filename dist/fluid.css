@@ -2224,30 +2224,6 @@ template {
   }
 }
 
-.layout-content {
-  z-index: 1;
-  color: #2b2b2b;
-  background-color: #fff;
-}
-
-.layout-header {
-  z-index: 10;
-  color: #0f0f0f;
-  background-color: #fff;
-}
-
-.layout-sidebar {
-  z-index: 15;
-  color: #fff;
-  background-color: #2b2b2b;
-}
-
-.layout-footer {
-  z-index: 0;
-  color: #f0f0f0;
-  background-color: #0f0f0f;
-}
-
 .img-bg {
   background-repeat: no-repeat;
   background-position: center;
