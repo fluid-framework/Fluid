@@ -96,20 +96,16 @@
 
       @include after {
         position: absolute;
-        top: 100%;
         right: 0;
+        bottom: 0;
         left: 0;
-        height: $border-width-default; // width of underline
         content: "";
+        border-bottom: $border-width-default solid;
 
-        transition: top .15s ease-in-out;
+        @include transition(box-shadow .15s ease-in-out, bottom .15s ease-in-out);
       }
 
       @include hover {
-        @include after {
-          top: 80%;
-        }
-
         @include focus {
           @include animation(none); // disable pulse animation
           @include after {
@@ -124,6 +120,14 @@
       @each $color, $value in $theme-colors {
         &.is-#{$color} {
           @include button-design-minimal-varient($value);
+        }
+      }
+
+      @include focus {
+        @include after {
+          bottom: 20%;
+          // stylelint-disable-next-line declaration-no-important
+          box-shadow: none !important;
         }
       }
 
