@@ -189,4 +189,13 @@
   .button.is-block {
     width: 100%;
   }
+
+  //
+  // Round Circle
+  //
+
+  // useful for button with only icons
+  .button.is-circle {
+    padding: .375em;
+  }
 }

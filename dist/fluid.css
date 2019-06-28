@@ -1354,6 +1354,30 @@ template {
   }
 }
 
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: bottom;
+}
+
+.icon.is-small {
+  width: 1em;
+  height: 1em;
+}
+
+.icon.is-medium {
+  width: 2em;
+  height: 2em;
+}
+
+.icon.is-large {
+  width: 3em;
+  height: 3em;
+}
+
 .group {
   display: inline-flex;
 }
@@ -2130,6 +2154,10 @@ template {
 
 .button.is-block {
   width: 100%;
+}
+
+.button.is-circle {
+  padding: .375em;
 }
 
 .embed {

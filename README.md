@@ -64,6 +64,7 @@ src
 │   ├───containers
 │   ├───design
 │   ├───grid
+│   ├───icon
 │   ├───misc
 │   ├───space
 │   ├───theme
