@@ -140,7 +140,7 @@
       @include disabled {
         color: $button-theme-default;
         @include after {
-          background-color: $button-disabled-bg;
+          border-bottom-color: $button-disabled-bg;
         }
       }
     }

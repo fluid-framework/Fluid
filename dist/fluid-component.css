@@ -737,7 +737,7 @@
 }
 
 .button.is-minimal:disabled::after, .button.is-minimal.disabled::after {
-  background-color: #636363;
+  border-bottom-color: #636363;
 }
 
 .button:not(:disabled):not(.disabled):active, .button:not(:disabled):not(.disabled).active {
