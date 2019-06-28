@@ -72,15 +72,19 @@
   color: $color;
   border-color: $color;
   $hover-border: clr-step($color, 2);
+  $focus-background: clr-step($color, -9);
   $active-border: clr-step($color, 4);
 
   @include hover {
     box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
   }
 
+  @include focus {
+    background-color: $focus-background;
+  }
+
   @include hover-focus {
     color: $hover-border;
-    border-color: $hover-border;
   }
 
   @include active {
@@ -97,11 +101,18 @@
 
 // minimal button
 @mixin button-design-minimal-varient($color) {
+  color: $color;
+
   @include after {
-    background-color: $color;
+    border-bottom-color: $color;
   }
 
-  color: $color;
+  @include hover {
+    @include after {
+      box-shadow: 0 (-($button-focus-width / 4)) 0 $button-focus-width / 4 rgba($color, .5);
+    }
+  }
+
   &.is-loading {
     @include before {
       border-color: transparent transparent $color $color;
