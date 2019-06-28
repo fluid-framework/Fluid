@@ -1445,12 +1445,9 @@ template {
   box-shadow: 0 0 0 0.2rem rgba(99, 99, 99, 0.5);
 }
 
-.button:hover:focus, .button:hover.focus, .button.hover:focus, .button.hover.focus {
+.button:focus, .button.focus {
   -webkit-animation: pulse 1s ease-out both;
           animation: pulse 1s ease-out both;
-}
-
-.button:focus, .button.focus {
   outline: 0;
 }
 
@@ -1921,16 +1918,6 @@ template {
   }
 }
 
-.button.is-minimal:hover:focus, .button.is-minimal:hover.focus, .button.is-minimal.hover:focus, .button.is-minimal.hover.focus {
-  -webkit-animation: none;
-          animation: none;
-}
-
-.button.is-minimal:hover:focus::after, .button.is-minimal:hover.focus::after, .button.is-minimal.hover:focus::after, .button.is-minimal.hover.focus::after {
-  -webkit-animation: flash 1s ease-out both;
-          animation: flash 1s ease-out both;
-}
-
 .button.is-minimal::after {
   border-bottom-color: #636363;
 }
@@ -2071,7 +2058,14 @@ template {
   border-color: transparent transparent #474747 #474747;
 }
 
+.button.is-minimal:focus, .button.is-minimal.focus {
+  -webkit-animation: none;
+          animation: none;
+}
+
 .button.is-minimal:focus::after, .button.is-minimal.focus::after {
+  -webkit-animation: flash 1s ease-out both;
+          animation: flash 1s ease-out both;
   bottom: 20%;
   box-shadow: none !important;
 }

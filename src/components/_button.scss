@@ -29,12 +29,10 @@
     @include hover {
       color: $body-color;
       box-shadow: 0 0 0 $button-focus-width rgba($button-theme-default, .5);
-      @include focus {
-        @include animation(pulse); // pulse animation on click event
-      }
     }
 
     @include focus {
+      @include animation(pulse); // pulse animation on click event
       outline: 0;
     }
 
@@ -105,15 +103,6 @@
         @include transition(box-shadow .15s ease-in-out, bottom .15s ease-in-out);
       }
 
-      @include hover {
-        @include focus {
-          @include animation(none); // disable pulse animation
-          @include after {
-            @include animation(flash); // flash animation for underline
-          }
-        }
-      }
-
       @include button-design-minimal-varient($button-theme-default); // Default button theme
 
       // Color variants
@@ -124,7 +113,9 @@
       }
 
       @include focus {
+        @include animation(none); // disable animations and play again on click event
         @include after {
+          @include animation(flash); // flash animation for underline
           bottom: 20%;
           // stylelint-disable-next-line declaration-no-important
           box-shadow: none !important;
