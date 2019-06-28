@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://en.wikipedia.org/wiki/Gzip">
-    <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=30000&max=50000&style=for-the-badge"/>
+    <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=35000&max=50000&style=for-the-badge"/>
   </a>
   <a href="https://en.wikipedia.org/wiki/Brotli">
     <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000&style=for-the-badge"/>
