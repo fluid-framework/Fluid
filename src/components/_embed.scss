@@ -1,8 +1,8 @@
 //
-// Embed Helper
+// Embed
 //
 
-@if $generate-helper-classes {
+@if $generate-component-classes {
   //
   // Doc : add Doc
   //
@@ -15,14 +15,11 @@
 
     &::before {
       display: block;
+      padding-top: percentage(9 / 16);
       content: "";
     }
 
-    .embed-item,
-    iframe,
-    embed,
-    object,
-    video {
+    > * {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -34,7 +31,7 @@
   }
 
   @each $key, $ratio in $aspect-ratios {
-    .embed-#{$key} {
+    .embed.is-#{$key} {
       &::before {
         padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
       }
