@@ -1015,79 +1015,79 @@
   color: #636363;
 }
 
-a.clr-primary:hover, a.clr-primary:focus {
+a.clr-primary.hover, a.clr-primary:hover, a.clr-primary.focus, a.clr-primary:focus {
   color: #5a3f95;
 }
 
-a.clr-secondary:hover, a.clr-secondary:focus {
+a.clr-secondary.hover, a.clr-secondary:hover, a.clr-secondary.focus, a.clr-secondary:focus {
   color: #5a3f95;
 }
 
-a.clr-valid:hover, a.clr-valid:focus {
+a.clr-valid.hover, a.clr-valid:hover, a.clr-valid.focus, a.clr-valid:focus {
   color: #5a3f95;
 }
 
-a.clr-info:hover, a.clr-info:focus {
+a.clr-info.hover, a.clr-info:hover, a.clr-info.focus, a.clr-info:focus {
   color: #5a3f95;
 }
 
-a.clr-warn:hover, a.clr-warn:focus {
+a.clr-warn.hover, a.clr-warn:hover, a.clr-warn.focus, a.clr-warn:focus {
   color: #5a3f95;
 }
 
-a.clr-error:hover, a.clr-error:focus {
+a.clr-error.hover, a.clr-error:hover, a.clr-error.focus, a.clr-error:focus {
   color: #5a3f95;
 }
 
-a.clr-light:hover, a.clr-light:focus {
+a.clr-light.hover, a.clr-light:hover, a.clr-light.focus, a.clr-light:focus {
   color: #5a3f95;
 }
 
-a.clr-dark:hover, a.clr-dark:focus {
+a.clr-dark.hover, a.clr-dark:hover, a.clr-dark.focus, a.clr-dark:focus {
   color: #5a3f95;
 }
 
-a.clr-body:hover, a.clr-body:focus {
+a.clr-body.hover, a.clr-body:hover, a.clr-body.focus, a.clr-body:focus {
   color: #5a3f95;
 }
 
-a.clr-black:hover, a.clr-black:focus {
+a.clr-black.hover, a.clr-black:hover, a.clr-black.focus, a.clr-black:focus {
   color: #5a3f95;
 }
 
-a.clr-black-25:hover, a.clr-black-25:focus {
+a.clr-black-25.hover, a.clr-black-25:hover, a.clr-black-25.focus, a.clr-black-25:focus {
   color: #5a3f95;
 }
 
-a.clr-black-50:hover, a.clr-black-50:focus {
+a.clr-black-50.hover, a.clr-black-50:hover, a.clr-black-50.focus, a.clr-black-50:focus {
   color: #5a3f95;
 }
 
-a.clr-black-75:hover, a.clr-black-75:focus {
+a.clr-black-75.hover, a.clr-black-75:hover, a.clr-black-75.focus, a.clr-black-75:focus {
   color: #5a3f95;
 }
 
-a.clr-white:hover, a.clr-white:focus {
+a.clr-white.hover, a.clr-white:hover, a.clr-white.focus, a.clr-white:focus {
   color: #5a3f95;
 }
 
-a.clr-white-25:hover, a.clr-white-25:focus {
+a.clr-white-25.hover, a.clr-white-25:hover, a.clr-white-25.focus, a.clr-white-25:focus {
   color: #5a3f95;
 }
 
-a.clr-white-50:hover, a.clr-white-50:focus {
+a.clr-white-50.hover, a.clr-white-50:hover, a.clr-white-50.focus, a.clr-white-50:focus {
   color: #5a3f95;
 }
 
-a.clr-white-75:hover, a.clr-white-75:focus {
+a.clr-white-75.hover, a.clr-white-75:hover, a.clr-white-75.focus, a.clr-white-75:focus {
   color: #5a3f95;
 }
 
-a.clr-hide:hover, a.clr-hide:focus {
+a.clr-hide.hover, a.clr-hide:hover, a.clr-hide.focus, a.clr-hide:focus {
   color: #5a3f95;
 }
 
-a.clr-disabled:hover, a.clr-disabled:focus {
+a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled:focus {
   color: #5a3f95;
 }
 
