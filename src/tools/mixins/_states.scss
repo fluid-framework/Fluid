@@ -8,8 +8,8 @@
 // Generate active state
 @mixin active() {
   @include not-disabled {
-    &:active,
-    &.active {
+    &.active,
+    &:active {
       @content;
     }
   }
@@ -18,8 +18,8 @@
 // Hover
 // Generate hover state
 @mixin hover() {
-  &:hover,
-  &.hover {
+  &.hover,
+  &:hover {
     @content;
   }
 }
@@ -27,8 +27,8 @@
 // Focus
 // Generate focus state
 @mixin focus() {
-  &:focus,
-  &.focus {
+  &.focus,
+  &:focus {
     @content;
   }
 }
@@ -36,10 +36,10 @@
 // Hover
 // Generate hover state
 @mixin hover-focus() {
-  &:hover,
   &.hover,
-  &:focus,
-  &.focus {
+  &:hover,
+  &.focus,
+  &:focus {
     @content;
   }
 }
@@ -47,8 +47,8 @@
 // Disabled
 // Generate disabled state
 @mixin disabled() {
-  &:disabled,
-  &.disabled {
+  &.disabled,
+  &:disabled {
     @content;
   }
 }
@@ -56,7 +56,7 @@
 // Disabled
 // Generate not disabled state
 @mixin not-disabled() {
-  &:not(:disabled):not(.disabled) {
+  &:not(.disabled):not(:disabled) {
     @content;
   }
 }
