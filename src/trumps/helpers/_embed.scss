@@ -19,11 +19,7 @@
       content: "";
     }
 
-    .embed-item,
-    iframe,
-    embed,
-    object,
-    video {
+    > * {
       position: absolute;
       top: 0;
       bottom: 0;
