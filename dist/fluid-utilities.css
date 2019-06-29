@@ -473,23 +473,23 @@
   transform: rotate(270deg);
 }
 
-.position-static {
+.static {
   position: static;
 }
 
-.position-relative {
+.relative {
   position: relative;
 }
 
-.position-absolute {
+.absolute {
   position: absolute;
 }
 
-.position-fixed {
+.fixed {
   position: fixed;
 }
 
-.position-sticky {
+.sticky {
   position: -webkit-sticky;
   position: sticky;
 }
