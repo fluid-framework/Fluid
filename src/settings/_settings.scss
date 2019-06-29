@@ -23,6 +23,12 @@ $enable-prefers-reduced-motion-media-query:   true !default;    // Disable trans
 $enable-fluid-font-sizes:                     false !default;   // Enable Fluid typography
 
 //
+// icons
+//
+
+@import "./icon/icon";
+
+//
 // Breakpoints
 //
 
