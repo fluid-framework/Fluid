@@ -4,7 +4,7 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: true,
+    responsive: false,
     properties: flex-wrap,
     class: flex,
     values: wrap nowrap wrap-reverse

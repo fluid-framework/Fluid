@@ -473,23 +473,23 @@
   transform: rotate(270deg);
 }
 
-.position-static {
+.static {
   position: static;
 }
 
-.position-relative {
+.relative {
   position: relative;
 }
 
-.position-absolute {
+.absolute {
   position: absolute;
 }
 
-.position-fixed {
+.fixed {
   position: fixed;
 }
 
-.position-sticky {
+.sticky {
   position: -webkit-sticky;
   position: sticky;
 }
@@ -1074,30 +1074,6 @@ a.clr-disabled:hover, a.clr-disabled:focus {
   flex: 1 1 auto;
 }
 
-@media (min-width: 576px) {
-  .flex-fill\@sm {
-    flex: 1 1 auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .flex-fill\@md {
-    flex: 1 1 auto;
-  }
-}
-
-@media (min-width: 992px) {
-  .flex-fill\@lg {
-    flex: 1 1 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .flex-fill\@xl {
-    flex: 1 1 auto;
-  }
-}
-
 .flex-grow {
   flex-grow: 1;
 }
@@ -1106,84 +1082,12 @@ a.clr-disabled:hover, a.clr-disabled:focus {
   flex-grow: 0;
 }
 
-@media (min-width: 576px) {
-  .flex-grow\@sm {
-    flex-grow: 1;
-  }
-  .flex-grow-0\@sm {
-    flex-grow: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .flex-grow\@md {
-    flex-grow: 1;
-  }
-  .flex-grow-0\@md {
-    flex-grow: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .flex-grow\@lg {
-    flex-grow: 1;
-  }
-  .flex-grow-0\@lg {
-    flex-grow: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .flex-grow\@xl {
-    flex-grow: 1;
-  }
-  .flex-grow-0\@xl {
-    flex-grow: 0;
-  }
-}
-
 .flex-shrink {
   flex-shrink: 1;
 }
 
 .flex-shrink-0 {
   flex-shrink: 0;
-}
-
-@media (min-width: 576px) {
-  .flex-shrink\@sm {
-    flex-shrink: 1;
-  }
-  .flex-shrink-0\@sm {
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .flex-shrink\@md {
-    flex-shrink: 1;
-  }
-  .flex-shrink-0\@md {
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .flex-shrink\@lg {
-    flex-shrink: 1;
-  }
-  .flex-shrink-0\@lg {
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .flex-shrink\@xl {
-    flex-shrink: 1;
-  }
-  .flex-shrink-0\@xl {
-    flex-shrink: 0;
-  }
 }
 
 .text-lowercase {
@@ -1200,66 +1104,6 @@ a.clr-disabled:hover, a.clr-disabled:focus {
 
 .text-reset {
   text-transform: initial;
-}
-
-@media (min-width: 576px) {
-  .text-lowercase\@sm {
-    text-transform: lowercase;
-  }
-  .text-uppercase\@sm {
-    text-transform: uppercase;
-  }
-  .text-capitalize\@sm {
-    text-transform: capitalize;
-  }
-  .text-reset\@sm {
-    text-transform: initial;
-  }
-}
-
-@media (min-width: 768px) {
-  .text-lowercase\@md {
-    text-transform: lowercase;
-  }
-  .text-uppercase\@md {
-    text-transform: uppercase;
-  }
-  .text-capitalize\@md {
-    text-transform: capitalize;
-  }
-  .text-reset\@md {
-    text-transform: initial;
-  }
-}
-
-@media (min-width: 992px) {
-  .text-lowercase\@lg {
-    text-transform: lowercase;
-  }
-  .text-uppercase\@lg {
-    text-transform: uppercase;
-  }
-  .text-capitalize\@lg {
-    text-transform: capitalize;
-  }
-  .text-reset\@lg {
-    text-transform: initial;
-  }
-}
-
-@media (min-width: 1200px) {
-  .text-lowercase\@xl {
-    text-transform: lowercase;
-  }
-  .text-uppercase\@xl {
-    text-transform: uppercase;
-  }
-  .text-capitalize\@xl {
-    text-transform: capitalize;
-  }
-  .text-reset\@xl {
-    text-transform: initial;
-  }
 }
 
 .text-left {
@@ -1495,42 +1339,6 @@ a.clr-disabled:hover, a.clr-disabled:focus {
 
 .is-invisible {
   visibility: hidden;
-}
-
-@media (min-width: 576px) {
-  .is-visible\@sm {
-    visibility: visible;
-  }
-  .is-invisible\@sm {
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 768px) {
-  .is-visible\@md {
-    visibility: visible;
-  }
-  .is-invisible\@md {
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 992px) {
-  .is-visible\@lg {
-    visibility: visible;
-  }
-  .is-invisible\@lg {
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 1200px) {
-  .is-visible\@xl {
-    visibility: visible;
-  }
-  .is-invisible\@xl {
-    visibility: hidden;
-  }
 }
 
 .opacity-25 {
