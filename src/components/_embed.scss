@@ -1,8 +1,8 @@
 //
-// Embed Helper
+// Embed
 //
 
-@if $generate-helper-classes {
+@if $generate-component-classes {
   //
   // Doc : add Doc
   //
@@ -14,8 +14,8 @@
     overflow: hidden;
 
     &::before {
-      padding-top: percentage(9 / 16);
       display: block;
+      padding-top: percentage(9 / 16);
       content: "";
     }
 
