@@ -21,6 +21,7 @@
 
 @import "./components/group";
 @import "./components/button";
+@import "./components/embed";
 
 // Helpers
 
@@ -55,6 +56,9 @@
 
 // display
 @import "./trumps/utilities/display";
+
+// objectfit Utility
+@import "./trumps/utilities/objectfit";
 
 // shadow
 @import "./trumps/utilities/shadow";

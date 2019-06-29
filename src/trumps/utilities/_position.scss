@@ -6,8 +6,9 @@
   $config: (
     responsive: false,
     properties: position,
-    class: position,
-    values: static relative absolute fixed sticky
+    class: "",
+    values: static relative absolute fixed sticky,
+    disable-prefix-values-keys: true
   );
 
   @include generate-class($config);
