@@ -17,15 +17,15 @@
 // Grid
 @import "./objects/grid";
 
-// Icon
-@import "./objects/icon";
-
 // Components
 
 @import "./components/group";
 @import "./components/button";
 
 // Helpers
+
+// icon
+@import "./trumps/helpers/icon";
 
 // embed
 @import "./trumps/helpers/embed";
