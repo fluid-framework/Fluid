@@ -1,0 +1,55 @@
+//
+// Breadcrumb
+//
+
+@if $generate-component-classes {
+  //
+  // Base styles
+  //
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+    margin-bottom: $breadcrumb-margin-bottom;
+    list-style: none;
+
+    a {
+      @include hover {
+        text-decoration: none;
+      }
+    }
+
+    > * {
+      padding-right: $breadcrumb-item-padding-x;
+
+      &:not(:first-child) {
+        @include before {
+          padding-right: $breadcrumb-item-padding-x;
+          color: $breadcrumb-divider-color;
+          content: quote($breadcrumb-divider);
+        }
+      }
+
+      @include active {
+        color: $breadcrumb-active-color;
+      }
+
+      &[data-separator]{
+        &:not(:first-child) {
+          @include before {
+            content: attr(data-separator);
+          }
+        }
+      }
+    }
+  }
+
+  .breadcrumb.is-small {
+    font-size: $font-size-small;
+  }
+
+  .breadcrumb.is-large {
+    font-size: $font-size-large;
+  }
+}
