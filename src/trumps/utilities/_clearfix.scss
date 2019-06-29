@@ -7,7 +7,7 @@
   // Doc : add Doc
   //
   .clearfix {
-    &::after {
+    @include after {
       display: block;
       clear: both;
       content: "";

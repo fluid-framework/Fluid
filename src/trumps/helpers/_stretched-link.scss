@@ -7,7 +7,7 @@
   // Doc : add Doc
   //
   .stretched-link {
-    &::after {
+    @include after {
       position: absolute;
       top: 0;
       right: 0;
