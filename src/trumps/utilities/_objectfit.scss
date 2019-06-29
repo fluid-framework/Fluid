@@ -1,0 +1,14 @@
+//
+// Display
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    responsive: true,
+    properties: object-fit,
+    class: object,
+    values: contain cover fill none scale-down
+  );
+
+  @include generate-class($config);
+}
