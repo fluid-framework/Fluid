@@ -10,7 +10,8 @@
     values: (
       wrap: normal,
       nowrap: nowrap
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

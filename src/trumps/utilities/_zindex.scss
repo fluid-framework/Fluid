@@ -13,7 +13,8 @@
       0: 0,
       -10: -10,
       bottom: -9999
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

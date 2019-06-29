@@ -7,7 +7,8 @@
     responsive: true,
     properties: object-fit,
     class: object,
-    values: contain cover fill none scale-down
+    values: contain cover fill none scale-down,
+    enable-important-values: true
   );
 
   @include generate-class($config);

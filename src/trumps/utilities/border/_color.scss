@@ -14,7 +14,8 @@
         white: $white,
         black: $black
       )
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

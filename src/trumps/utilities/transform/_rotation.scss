@@ -12,7 +12,8 @@
     responsive: false,
     properties: transform,
     class: rotate,
-    values: $ROTATIONS
+    values: $ROTATIONS,
+    enable-important-values: true
   );
 
   @include generate-class($config);

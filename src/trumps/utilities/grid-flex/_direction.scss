@@ -12,7 +12,8 @@
       vertical: column,
       horizontal-reverse: row-reverse,
       vertical-reverse: column-reverse
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

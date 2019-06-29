@@ -10,7 +10,8 @@
     values: (
       visible: visible,
       invisible: hidden
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

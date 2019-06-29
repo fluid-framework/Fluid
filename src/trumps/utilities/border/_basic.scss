@@ -10,7 +10,8 @@
     values: (
       null: $border-width-default solid $border-color,
       none: none
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

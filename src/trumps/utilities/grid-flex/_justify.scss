@@ -13,7 +13,8 @@
       end: flex-end,
       between: space-between,
       around: space-around
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

@@ -15,7 +15,8 @@
       not-allowed: not-allowed,
       help: help,
       grab: grab
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

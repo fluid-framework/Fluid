@@ -13,7 +13,8 @@
     responsive: false,
     properties: opacity,
     class: opacity,
-    values: $SIZES
+    values: $SIZES,
+    enable-important-values: true
   );
 
   @include generate-class($config);

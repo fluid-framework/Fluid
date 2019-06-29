@@ -12,7 +12,8 @@
       uppercase: uppercase,
       capitalize: capitalize,
       reset: initial
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

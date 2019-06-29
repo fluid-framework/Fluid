@@ -15,7 +15,8 @@
       lg: 4px 4.25px 3px rgba($black, .175),
       round: 0 0 3px rgba($black, .15),
       none: none
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

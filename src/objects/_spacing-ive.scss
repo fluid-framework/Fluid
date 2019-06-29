@@ -24,7 +24,8 @@
     responsive: false,
     properties: margin,
     class: m,
-    values: $sizes
+    values: $sizes,
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -39,7 +40,8 @@
     class: m,
     values: $sizes,
     infixes: $directions,
-    disable-prefix-infixes-keys: true
+    disable-prefix-infixes-keys: true,
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -53,7 +55,8 @@
     responsive: true,
     properties: margin-left margin-right,
     class: mx,
-    values: $sizes
+    values: $sizes,
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -67,7 +70,8 @@
     responsive: true,
     properties: margin-top margin-bottom,
     class: my,
-    values: $sizes
+    values: $sizes,
+    enable-important-values: true
   );
 
   @include generate-class($config);

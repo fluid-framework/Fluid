@@ -17,9 +17,10 @@
         white-50: rgba($white, .5),
         white-75: rgba($white, .75),
         hide: transparent,
-        disabled: $text-disabled,
+        disabled: $text-disabled
       )
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -28,7 +29,8 @@
     @if $link-hover-dark-step != 0 {
       a.#{map-get($config,"class")}-#{$color} {
         @include hover-focus {
-          color: clr-step($link-color, $link-hover-dark-step);
+          // stylelint-disable-next-line declaration-no-important
+          color: clr-step($link-color, $link-hover-dark-step) !important;
         }
       }
     }

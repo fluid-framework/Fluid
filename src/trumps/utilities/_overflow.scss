@@ -12,7 +12,8 @@
       hidden,
       auto,
       visible
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -31,7 +32,8 @@
       auto,
       visible
     ),
-    infixes: x y
+    infixes: x y,
+    enable-important-values: true
   );
 
   @include generate-class($config);

@@ -11,7 +11,8 @@
       sans-serif: $font-family-sans-serif,
       serif: $font-family-serif,
       monospace: $font-family-monospace
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);
