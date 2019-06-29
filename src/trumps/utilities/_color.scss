@@ -27,8 +27,7 @@
   @each $color, $value in map-remove(map-get($config, "values"), inherit) {
     @if $link-hover-dark-step != 0 {
       a.#{map-get($config,"class")}-#{$color} {
-        &:hover,
-        &:focus {
+        @include hover-focus {
           color: clr-step($link-color, $link-hover-dark-step);
         }
       }

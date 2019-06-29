@@ -13,7 +13,7 @@
     padding: 0;
     overflow: hidden;
 
-    &::before {
+    @include before {
       display: block;
       padding-top: percentage(9 / 16);
       content: "";
@@ -32,7 +32,7 @@
 
   @each $key, $ratio in $aspect-ratios {
     .embed.is-#{$key} {
-      &::before {
+      @include before {
         padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
       }
     }
