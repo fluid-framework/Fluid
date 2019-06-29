@@ -14,7 +14,6 @@
   @include generate-class($config);
 
   $config: (
-    responsive: false,
     properties: vertical-align,
     class: text,
     values: baseline top middle bottom sub super,

@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: overflow,
     class: overflow,
     values: (
@@ -23,7 +22,6 @@
   //
 
   $config: (
-    responsive: false,
     properties: overflow,
     class: overflow,
     values: (

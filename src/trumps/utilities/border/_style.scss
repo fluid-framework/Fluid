@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: border-style,
     class: border,
     values: dotted dashed solid double groove ridge inset outset none hidden,

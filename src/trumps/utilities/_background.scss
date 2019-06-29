@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: background-color,
     class: bg,
     values:
@@ -46,7 +45,6 @@
 
     // stylelint-disable-next-line scss/dollar-variable-default
     $config: (
-      responsive: false,
       properties: background,
       class: bg-gradient,
       values:

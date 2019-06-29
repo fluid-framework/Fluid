@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: width,
     class: w,
     values:
@@ -28,7 +27,6 @@
   @include generate-class($config);
 
   $config: (
-    responsive: false,
     properties: min-width,
     class: w-min,
     values: (
