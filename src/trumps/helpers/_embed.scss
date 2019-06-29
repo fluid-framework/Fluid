@@ -34,7 +34,7 @@
   }
 
   @each $key, $ratio in $aspect-ratios {
-    .embed-#{$key} {
+    .embed.is-#{$key} {
       &::before {
         padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
       }
