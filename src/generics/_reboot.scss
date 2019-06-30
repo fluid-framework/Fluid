@@ -125,20 +125,18 @@ p {
 
 // Abbreviations
 //
-// 1. Duplicate behavior to the data-* attribute for our tooltip plugin
-// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-// 3. Add explicit cursor to indicate changed behavior.
-// 4. Remove the bottom border in Firefox 39-.
-// 5. Prevent the text-decoration to be skipped.
+// 1. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 2. Add explicit cursor to indicate changed behavior.
+// 3. Remove the bottom border in Firefox 39-.
+// 4. Prevent the text-decoration to be skipped.
 
 abbr[title],
 abbr[data-original-title] {
-  // 1
-  text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
-  cursor: help; // 3
-  border-bottom: 0; // 4
-  text-decoration-skip-ink: none; // 5
+  text-decoration: underline; // 1
+  text-decoration: underline dotted; // 1
+  cursor: help; // 2
+  border-bottom: 0; // 3
+  text-decoration-skip-ink: none; // 4
 }
 
 address {
@@ -253,15 +251,6 @@ pre {
   margin-bottom: 1rem;
   // Don't allow content to break outside
   overflow: auto;
-}
-
-//
-// Figures
-//
-
-figure {
-  // Apply a consistent margin strategy (matches our type styles).
-  margin: 0 0 1rem;
 }
 
 //
