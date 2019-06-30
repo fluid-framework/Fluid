@@ -1,0 +1,26 @@
+//
+// Layout helper
+//
+
+@if $generate-helper-classes {
+  //
+  // Doc : add Doc
+  //
+  .layout-header {
+    z-index: $header-zindex;
+    width: 100%;
+    height: $header-height;
+    padding-right: $header-padding-x / 2;
+    padding-left: $header-padding-x / 2;
+    color: $header-color;
+    background-color: $header-bg;
+    line-height: $header-height;
+
+    @include transition(height .35s ease-in-out, line-height .35s ease-in-out);
+
+    &.is-collapse {
+      height: $header-height-collapse;
+      line-height: $header-height-collapse;
+    }
+  }
+}

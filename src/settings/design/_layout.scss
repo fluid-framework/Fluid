@@ -2,6 +2,14 @@
 // Layout Settings
 //
 
+// Header
+$header-bg:                   $white !default;
+$header-color:                $gray-900 !default;
+$header-padding-x:            3rem !default;
+$header-zindex:               10 !default;
+$header-height:               4rem !default;
+$header-height-collapse:      3rem !default;
+
 // main and body layout
-$body-bg:                     $white !default;
-$body-color:                  $gray-800 !default;
+$body-bg:                     $light !default;
+$body-color:                  $dark !default;
