@@ -8,9 +8,9 @@
   //
   .clearfix {
     @include after {
+      content: "";
       display: block;
       clear: both;
-      content: "";
     }
   }
 }

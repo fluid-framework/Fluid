@@ -9,14 +9,14 @@
   .embed {
     position: relative;
     display: block;
+    overflow: hidden;
     width: 100%;
     padding: 0;
-    overflow: hidden;
 
     @include before {
+      content: "";
       display: block;
       padding-top: percentage(9 / 16);
-      content: "";
     }
 
     > * {

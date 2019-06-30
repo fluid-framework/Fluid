@@ -9,18 +9,18 @@
 
   .button {
     display: inline-block;
+    user-select: none;
     margin-top: .1rem;
     margin-bottom: .1rem;
+    border: $border-width-default solid transparent;
+    color: $body-color;
+    background-color: transparent;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
     line-height: $button-line-height;
-    color: $body-color;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    user-select: none;
-    background-color: transparent;
-    border: $border-width-default solid transparent;
 
     @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
     @include font-size($font-size-default);
@@ -80,8 +80,8 @@
       }
 
       @include disabled {
-        color: $button-theme-default;
         border-color: $button-disabled-bg;
+        color: $button-theme-default;
       }
     }
 
@@ -93,11 +93,11 @@
       box-shadow: none; // remove focus box shadow
 
       @include after {
+        content: "";
         position: absolute;
         right: 0;
         bottom: 0;
         left: 0;
-        content: "";
         border-bottom: $border-width-default solid;
 
         @include transition(box-shadow .15s ease-in-out, bottom .15s ease-in-out);
@@ -166,15 +166,15 @@
   //
 
   .button.is-loading {
+    pointer-events: none;
     // stylelint-disable-next-line declaration-no-important
     color: transparent !important;
-    pointer-events: none;
     @include before-absolute {
+      content: "";
       top: calc(50% - (1em / 2));
       left: calc(50% - (1em / 2));
       width: 1rem;
       height: 1rem;
-      content: "";
       border: .15rem solid;
       border-color: transparent transparent $button-theme-default $button-theme-default;
       border-radius: $border-radius-pill;

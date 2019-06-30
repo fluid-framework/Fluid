@@ -73,8 +73,8 @@
 
 // outline button
 @mixin button-design-outline-varient($color) {
-  color: $color;
   border-color: $color;
+  color: $color;
   $hover-border: clr-step($color, 2);
   $focus-background: clr-step($color, -8);
   $active-border: clr-step($color, 4);
@@ -92,8 +92,8 @@
   }
 
   @include active {
-    color: $active-border;
     border-color: $active-border;
+    color: $active-border;
   }
 
   &.is-loading {
