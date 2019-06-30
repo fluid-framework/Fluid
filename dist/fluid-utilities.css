@@ -1,5 +1,5 @@
 /**
- * Fluid Utilities v0.1
+ * Fluid Utilities v0.5.2
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -913,7 +913,7 @@
 }
 
 .clr-body {
-  color: #2b2b2b !important;
+  color: #474747 !important;
 }
 
 .clr-black {
@@ -1065,7 +1065,7 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .bg-body {
-  background-color: #2b2b2b !important;
+  background-color: #f0f0f0 !important;
 }
 
 .bg-black {

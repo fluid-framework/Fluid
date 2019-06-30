@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid Utilities v0.1
+ * Fluid Utilities v0.5.2
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -17,8 +17,8 @@ main {
 
 body {
   margin: 0;
-  color: #2b2b2b;
-  background-color: #fff;
+  color: #474747;
+  background-color: #f0f0f0;
   text-align: left;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
@@ -1359,7 +1359,7 @@ template {
   margin-top: .1rem;
   margin-bottom: .1rem;
   border: 1px solid transparent;
-  color: #2b2b2b;
+  color: #474747;
   background-color: transparent;
   text-align: center;
   vertical-align: middle;
@@ -1379,7 +1379,7 @@ template {
 }
 
 .button.hover, .button:hover {
-  color: #2b2b2b;
+  color: #474747;
   box-shadow: 0 0 0 0.2rem rgba(99, 99, 99, 0.5);
 }
 
@@ -1432,7 +1432,7 @@ template {
 }
 
 .button.is-solid.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent #fff #fff #fff;
 }
 
 .button.is-solid.is-primary {
@@ -1453,7 +1453,7 @@ template {
 }
 
 .button.is-solid.is-primary.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent #fff #fff #fff;
 }
 
 .button.is-solid.is-secondary {
@@ -1474,7 +1474,7 @@ template {
 }
 
 .button.is-solid.is-secondary.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent #fff #fff #fff;
 }
 
 .button.is-solid.is-valid {
@@ -1495,7 +1495,7 @@ template {
 }
 
 .button.is-solid.is-valid.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent #fff #fff #fff;
 }
 
 .button.is-solid.is-info {
@@ -1516,7 +1516,7 @@ template {
 }
 
 .button.is-solid.is-info.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent #fff #fff #fff;
 }
 
 .button.is-solid.is-warn {
@@ -1541,7 +1541,7 @@ template {
 }
 
 .button.is-solid.is-warn.is-loading::before {
-  border-color: transparent transparent #0f0f0f #0f0f0f;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-error {
@@ -1562,7 +1562,7 @@ template {
 }
 
 .button.is-solid.is-error.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent #fff #fff #fff;
 }
 
 .button.is-solid.is-light {
@@ -1587,7 +1587,7 @@ template {
 }
 
 .button.is-solid.is-light.is-loading::before {
-  border-color: transparent transparent #0f0f0f #0f0f0f;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-dark {
@@ -1608,7 +1608,7 @@ template {
 }
 
 .button.is-solid.is-dark.is-loading::before {
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent #fff #fff #fff;
 }
 
 .button.is-solid.disabled, .button.is-solid:disabled {
@@ -1640,7 +1640,7 @@ template {
 }
 
 .button.is-outline.is-loading::before {
-  border-color: transparent transparent #636363 #636363;
+  border-color: transparent #636363 #636363 #636363;
 }
 
 .button.is-outline.is-primary {
@@ -1666,7 +1666,7 @@ template {
 }
 
 .button.is-outline.is-primary.is-loading::before {
-  border-color: transparent transparent #805ad5 #805ad5;
+  border-color: transparent #805ad5 #805ad5 #805ad5;
 }
 
 .button.is-outline.is-secondary {
@@ -1692,7 +1692,7 @@ template {
 }
 
 .button.is-outline.is-secondary.is-loading::before {
-  border-color: transparent transparent gray gray;
+  border-color: transparent gray gray gray;
 }
 
 .button.is-outline.is-valid {
@@ -1718,7 +1718,7 @@ template {
 }
 
 .button.is-outline.is-valid.is-loading::before {
-  border-color: transparent transparent #52c41a #52c41a;
+  border-color: transparent #52c41a #52c41a #52c41a;
 }
 
 .button.is-outline.is-info {
@@ -1744,7 +1744,7 @@ template {
 }
 
 .button.is-outline.is-info.is-loading::before {
-  border-color: transparent transparent #13c2c2 #13c2c2;
+  border-color: transparent #13c2c2 #13c2c2 #13c2c2;
 }
 
 .button.is-outline.is-warn {
@@ -1770,7 +1770,7 @@ template {
 }
 
 .button.is-outline.is-warn.is-loading::before {
-  border-color: transparent transparent #fadb14 #fadb14;
+  border-color: transparent #fadb14 #fadb14 #fadb14;
 }
 
 .button.is-outline.is-error {
@@ -1796,7 +1796,7 @@ template {
 }
 
 .button.is-outline.is-error.is-loading::before {
-  border-color: transparent transparent #f5222d #f5222d;
+  border-color: transparent #f5222d #f5222d #f5222d;
 }
 
 .button.is-outline.is-light {
@@ -1822,7 +1822,7 @@ template {
 }
 
 .button.is-outline.is-light.is-loading::before {
-  border-color: transparent transparent #f0f0f0 #f0f0f0;
+  border-color: transparent #f0f0f0 #f0f0f0 #f0f0f0;
 }
 
 .button.is-outline.is-dark {
@@ -1848,7 +1848,7 @@ template {
 }
 
 .button.is-outline.is-dark.is-loading::before {
-  border-color: transparent transparent #474747 #474747;
+  border-color: transparent #474747 #474747 #474747;
 }
 
 .button.is-outline.disabled, .button.is-outline:disabled {
@@ -1889,7 +1889,7 @@ template {
 }
 
 .button.is-minimal.is-loading::before {
-  border-color: transparent transparent #636363 #636363;
+  border-color: transparent #636363 #636363 #636363;
 }
 
 .button.is-minimal.is-primary {
@@ -1905,7 +1905,7 @@ template {
 }
 
 .button.is-minimal.is-primary.is-loading::before {
-  border-color: transparent transparent #805ad5 #805ad5;
+  border-color: transparent #805ad5 #805ad5 #805ad5;
 }
 
 .button.is-minimal.is-secondary {
@@ -1921,7 +1921,7 @@ template {
 }
 
 .button.is-minimal.is-secondary.is-loading::before {
-  border-color: transparent transparent gray gray;
+  border-color: transparent gray gray gray;
 }
 
 .button.is-minimal.is-valid {
@@ -1937,7 +1937,7 @@ template {
 }
 
 .button.is-minimal.is-valid.is-loading::before {
-  border-color: transparent transparent #52c41a #52c41a;
+  border-color: transparent #52c41a #52c41a #52c41a;
 }
 
 .button.is-minimal.is-info {
@@ -1953,7 +1953,7 @@ template {
 }
 
 .button.is-minimal.is-info.is-loading::before {
-  border-color: transparent transparent #13c2c2 #13c2c2;
+  border-color: transparent #13c2c2 #13c2c2 #13c2c2;
 }
 
 .button.is-minimal.is-warn {
@@ -1969,7 +1969,7 @@ template {
 }
 
 .button.is-minimal.is-warn.is-loading::before {
-  border-color: transparent transparent #fadb14 #fadb14;
+  border-color: transparent #fadb14 #fadb14 #fadb14;
 }
 
 .button.is-minimal.is-error {
@@ -1985,7 +1985,7 @@ template {
 }
 
 .button.is-minimal.is-error.is-loading::before {
-  border-color: transparent transparent #f5222d #f5222d;
+  border-color: transparent #f5222d #f5222d #f5222d;
 }
 
 .button.is-minimal.is-light {
@@ -2001,7 +2001,7 @@ template {
 }
 
 .button.is-minimal.is-light.is-loading::before {
-  border-color: transparent transparent #f0f0f0 #f0f0f0;
+  border-color: transparent #f0f0f0 #f0f0f0 #f0f0f0;
 }
 
 .button.is-minimal.is-dark {
@@ -2017,7 +2017,7 @@ template {
 }
 
 .button.is-minimal.is-dark.is-loading::before {
-  border-color: transparent transparent #474747 #474747;
+  border-color: transparent #474747 #474747 #474747;
 }
 
 .button.is-minimal.focus, .button.is-minimal:focus {
@@ -2097,18 +2097,16 @@ template {
 }
 
 .button.is-loading::before {
+  content: "";
   position: absolute;
-  top: 0;
+  top: calc(50% - (1em / 2));
   right: 0;
   bottom: 0;
-  left: 0;
-  content: "";
-  top: calc(50% - (1em / 2));
   left: calc(50% - (1em / 2));
   width: 1rem;
   height: 1rem;
   border: .15rem solid;
-  border-color: transparent transparent #636363 #636363;
+  border-color: transparent #636363 #636363 #636363;
   border-radius: 50rem;
   -webkit-animation: spin 1s infinite linear;
           animation: spin 1s infinite linear;
@@ -3121,7 +3119,7 @@ template {
 }
 
 .clr-body {
-  color: #2b2b2b !important;
+  color: #474747 !important;
 }
 
 .clr-black {
@@ -3273,7 +3271,7 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .bg-body {
-  background-color: #2b2b2b !important;
+  background-color: #f0f0f0 !important;
 }
 
 .bg-black {
