@@ -46,6 +46,56 @@
   //
   // Doc : add Doc
   //
+  .layout-sidebar {
+    @extend %position-relative;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(-100% - (#{$sidebar-padding} * 2));
+    z-index: $sidebar-zindex;
+    min-width: 16.5rem;
+    padding: $sidebar-padding;
+    color: $sidebar-color;
+    background-color: $sidebar-bg;
+    @include transition(left .5s ease-in-out);
+
+    @include media-breakpoint-below(sm) {
+      width: 100%;
+    }
+  }
+
+  .layout-sidebar:target,
+  .layout-sidebar.show {
+    left: 0;
+  }
+
+  //
+  // Doc : add Doc
+  //
+  .overley {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $overlay-zindex;
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-color: transparent;
+    border-radius: 0;
+    background: rgba($black, .75);
+  }
+
+  .layout-sidebar.show ~ .overley,
+  .layout-sidebar.active ~ .overley,
+  .layout-sidebar:target ~ .overley {
+    display: block;
+  }
+
+  //
+  // Doc : add Doc
+  //
   .layout-footer {
     @extend %position-relative;
     z-index: $footer-zindex;
