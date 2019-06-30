@@ -15,66 +15,6 @@ html {
   box-sizing: inherit;
 }
 
-@-webkit-keyframes pulse {
-  from {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
-  }
-  to {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
-  }
-}
-
-@keyframes pulse {
-  from {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
-  }
-  to {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
-  }
-}
-
-@-webkit-keyframes flash {
-  from,
-  50%,
-  to {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-
-@keyframes flash {
-  from,
-  50%,
-  to {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -1019,670 +959,670 @@ html {
 }
 
 .flex-fill {
-  flex: 1 1 auto;
+  flex: 1 1 auto !important;
 }
 
 .flex-grow {
-  flex-grow: 1;
+  flex-grow: 1 !important;
 }
 
 .flex-grow-0 {
-  flex-grow: 0;
+  flex-grow: 0 !important;
 }
 
 .flex-shrink {
-  flex-shrink: 1;
+  flex-shrink: 1 !important;
 }
 
 .flex-shrink-0 {
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
 }
 
 .is-horizontal {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .is-vertical {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .is-horizontal-reverse {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse !important;
 }
 
 .is-vertical-reverse {
-  flex-direction: column-reverse;
+  flex-direction: column-reverse !important;
 }
 
 .flex-wrap {
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
 }
 
 .flex-nowrap {
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
 }
 
 .flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse !important;
 }
 
 .align-content-top {
-  align-content: flex-start;
+  align-content: flex-start !important;
 }
 
 .align-content-middle {
-  align-content: center;
+  align-content: center !important;
 }
 
 .align-content-bottom {
-  align-content: flex-end;
+  align-content: flex-end !important;
 }
 
 .align-content-between {
-  align-content: space-between;
+  align-content: space-between !important;
 }
 
 .align-content-around {
-  align-content: space-around;
+  align-content: space-around !important;
 }
 
 @media (min-width: 576px) {
   .align-content-top\@sm {
-    align-content: flex-start;
+    align-content: flex-start !important;
   }
   .align-content-middle\@sm {
-    align-content: center;
+    align-content: center !important;
   }
   .align-content-bottom\@sm {
-    align-content: flex-end;
+    align-content: flex-end !important;
   }
   .align-content-between\@sm {
-    align-content: space-between;
+    align-content: space-between !important;
   }
   .align-content-around\@sm {
-    align-content: space-around;
+    align-content: space-around !important;
   }
 }
 
 @media (min-width: 768px) {
   .align-content-top\@md {
-    align-content: flex-start;
+    align-content: flex-start !important;
   }
   .align-content-middle\@md {
-    align-content: center;
+    align-content: center !important;
   }
   .align-content-bottom\@md {
-    align-content: flex-end;
+    align-content: flex-end !important;
   }
   .align-content-between\@md {
-    align-content: space-between;
+    align-content: space-between !important;
   }
   .align-content-around\@md {
-    align-content: space-around;
+    align-content: space-around !important;
   }
 }
 
 @media (min-width: 992px) {
   .align-content-top\@lg {
-    align-content: flex-start;
+    align-content: flex-start !important;
   }
   .align-content-middle\@lg {
-    align-content: center;
+    align-content: center !important;
   }
   .align-content-bottom\@lg {
-    align-content: flex-end;
+    align-content: flex-end !important;
   }
   .align-content-between\@lg {
-    align-content: space-between;
+    align-content: space-between !important;
   }
   .align-content-around\@lg {
-    align-content: space-around;
+    align-content: space-around !important;
   }
 }
 
 @media (min-width: 1200px) {
   .align-content-top\@xl {
-    align-content: flex-start;
+    align-content: flex-start !important;
   }
   .align-content-middle\@xl {
-    align-content: center;
+    align-content: center !important;
   }
   .align-content-bottom\@xl {
-    align-content: flex-end;
+    align-content: flex-end !important;
   }
   .align-content-between\@xl {
-    align-content: space-between;
+    align-content: space-between !important;
   }
   .align-content-around\@xl {
-    align-content: space-around;
+    align-content: space-around !important;
   }
 }
 
 .align-top {
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 
 .align-middle {
-  align-items: center;
+  align-items: center !important;
 }
 
 .align-bottom {
-  align-items: flex-end;
+  align-items: flex-end !important;
 }
 
 .align-baseline {
-  align-items: baseline;
+  align-items: baseline !important;
 }
 
 .align-stretch {
-  align-items: stretch;
+  align-items: stretch !important;
 }
 
 @media (min-width: 576px) {
   .align-top\@sm {
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
   .align-middle\@sm {
-    align-items: center;
+    align-items: center !important;
   }
   .align-bottom\@sm {
-    align-items: flex-end;
+    align-items: flex-end !important;
   }
   .align-baseline\@sm {
-    align-items: baseline;
+    align-items: baseline !important;
   }
   .align-stretch\@sm {
-    align-items: stretch;
+    align-items: stretch !important;
   }
 }
 
 @media (min-width: 768px) {
   .align-top\@md {
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
   .align-middle\@md {
-    align-items: center;
+    align-items: center !important;
   }
   .align-bottom\@md {
-    align-items: flex-end;
+    align-items: flex-end !important;
   }
   .align-baseline\@md {
-    align-items: baseline;
+    align-items: baseline !important;
   }
   .align-stretch\@md {
-    align-items: stretch;
+    align-items: stretch !important;
   }
 }
 
 @media (min-width: 992px) {
   .align-top\@lg {
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
   .align-middle\@lg {
-    align-items: center;
+    align-items: center !important;
   }
   .align-bottom\@lg {
-    align-items: flex-end;
+    align-items: flex-end !important;
   }
   .align-baseline\@lg {
-    align-items: baseline;
+    align-items: baseline !important;
   }
   .align-stretch\@lg {
-    align-items: stretch;
+    align-items: stretch !important;
   }
 }
 
 @media (min-width: 1200px) {
   .align-top\@xl {
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
   .align-middle\@xl {
-    align-items: center;
+    align-items: center !important;
   }
   .align-bottom\@xl {
-    align-items: flex-end;
+    align-items: flex-end !important;
   }
   .align-baseline\@xl {
-    align-items: baseline;
+    align-items: baseline !important;
   }
   .align-stretch\@xl {
-    align-items: stretch;
+    align-items: stretch !important;
   }
 }
 
 .align-self-top {
-  align-self: flex-start;
+  align-self: flex-start !important;
 }
 
 .align-self-middle {
-  align-self: center;
+  align-self: center !important;
 }
 
 .align-self-bottom {
-  align-self: flex-end;
+  align-self: flex-end !important;
 }
 
 .align-self-baseline {
-  align-self: baseline;
+  align-self: baseline !important;
 }
 
 .align-self-stretch {
-  align-self: stretch;
+  align-self: stretch !important;
 }
 
 @media (min-width: 576px) {
   .align-self-top\@sm {
-    align-self: flex-start;
+    align-self: flex-start !important;
   }
   .align-self-middle\@sm {
-    align-self: center;
+    align-self: center !important;
   }
   .align-self-bottom\@sm {
-    align-self: flex-end;
+    align-self: flex-end !important;
   }
   .align-self-baseline\@sm {
-    align-self: baseline;
+    align-self: baseline !important;
   }
   .align-self-stretch\@sm {
-    align-self: stretch;
+    align-self: stretch !important;
   }
 }
 
 @media (min-width: 768px) {
   .align-self-top\@md {
-    align-self: flex-start;
+    align-self: flex-start !important;
   }
   .align-self-middle\@md {
-    align-self: center;
+    align-self: center !important;
   }
   .align-self-bottom\@md {
-    align-self: flex-end;
+    align-self: flex-end !important;
   }
   .align-self-baseline\@md {
-    align-self: baseline;
+    align-self: baseline !important;
   }
   .align-self-stretch\@md {
-    align-self: stretch;
+    align-self: stretch !important;
   }
 }
 
 @media (min-width: 992px) {
   .align-self-top\@lg {
-    align-self: flex-start;
+    align-self: flex-start !important;
   }
   .align-self-middle\@lg {
-    align-self: center;
+    align-self: center !important;
   }
   .align-self-bottom\@lg {
-    align-self: flex-end;
+    align-self: flex-end !important;
   }
   .align-self-baseline\@lg {
-    align-self: baseline;
+    align-self: baseline !important;
   }
   .align-self-stretch\@lg {
-    align-self: stretch;
+    align-self: stretch !important;
   }
 }
 
 @media (min-width: 1200px) {
   .align-self-top\@xl {
-    align-self: flex-start;
+    align-self: flex-start !important;
   }
   .align-self-middle\@xl {
-    align-self: center;
+    align-self: center !important;
   }
   .align-self-bottom\@xl {
-    align-self: flex-end;
+    align-self: flex-end !important;
   }
   .align-self-baseline\@xl {
-    align-self: baseline;
+    align-self: baseline !important;
   }
   .align-self-stretch\@xl {
-    align-self: stretch;
+    align-self: stretch !important;
   }
 }
 
 .justify-start {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .justify-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .justify-end {
-  justify-content: flex-end;
+  justify-content: flex-end !important;
 }
 
 .justify-between {
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
 
 .justify-around {
-  justify-content: space-around;
+  justify-content: space-around !important;
 }
 
 @media (min-width: 576px) {
   .justify-start\@sm {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
   }
   .justify-center\@sm {
-    justify-content: center;
+    justify-content: center !important;
   }
   .justify-end\@sm {
-    justify-content: flex-end;
+    justify-content: flex-end !important;
   }
   .justify-between\@sm {
-    justify-content: space-between;
+    justify-content: space-between !important;
   }
   .justify-around\@sm {
-    justify-content: space-around;
+    justify-content: space-around !important;
   }
 }
 
 @media (min-width: 768px) {
   .justify-start\@md {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
   }
   .justify-center\@md {
-    justify-content: center;
+    justify-content: center !important;
   }
   .justify-end\@md {
-    justify-content: flex-end;
+    justify-content: flex-end !important;
   }
   .justify-between\@md {
-    justify-content: space-between;
+    justify-content: space-between !important;
   }
   .justify-around\@md {
-    justify-content: space-around;
+    justify-content: space-around !important;
   }
 }
 
 @media (min-width: 992px) {
   .justify-start\@lg {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
   }
   .justify-center\@lg {
-    justify-content: center;
+    justify-content: center !important;
   }
   .justify-end\@lg {
-    justify-content: flex-end;
+    justify-content: flex-end !important;
   }
   .justify-between\@lg {
-    justify-content: space-between;
+    justify-content: space-between !important;
   }
   .justify-around\@lg {
-    justify-content: space-around;
+    justify-content: space-around !important;
   }
 }
 
 @media (min-width: 1200px) {
   .justify-start\@xl {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
   }
   .justify-center\@xl {
-    justify-content: center;
+    justify-content: center !important;
   }
   .justify-end\@xl {
-    justify-content: flex-end;
+    justify-content: flex-end !important;
   }
   .justify-between\@xl {
-    justify-content: space-between;
+    justify-content: space-between !important;
   }
   .justify-around\@xl {
-    justify-content: space-around;
+    justify-content: space-around !important;
   }
 }
 
 .order-first {
-  order: -1;
+  order: -1 !important;
 }
 
 .order-0 {
-  order: 0;
+  order: 0 !important;
 }
 
 .order-1 {
-  order: 1;
+  order: 1 !important;
 }
 
 .order-2 {
-  order: 2;
+  order: 2 !important;
 }
 
 .order-3 {
-  order: 3;
+  order: 3 !important;
 }
 
 .order-4 {
-  order: 4;
+  order: 4 !important;
 }
 
 .order-5 {
-  order: 5;
+  order: 5 !important;
 }
 
 .order-6 {
-  order: 6;
+  order: 6 !important;
 }
 
 .order-7 {
-  order: 7;
+  order: 7 !important;
 }
 
 .order-8 {
-  order: 8;
+  order: 8 !important;
 }
 
 .order-9 {
-  order: 9;
+  order: 9 !important;
 }
 
 .order-10 {
-  order: 10;
+  order: 10 !important;
 }
 
 .order-11 {
-  order: 11;
+  order: 11 !important;
 }
 
 .order-12 {
-  order: 12;
+  order: 12 !important;
 }
 
 .order-last {
-  order: 25;
+  order: 25 !important;
 }
 
 @media (min-width: 576px) {
   .order-first\@sm {
-    order: -1;
+    order: -1 !important;
   }
   .order-0\@sm {
-    order: 0;
+    order: 0 !important;
   }
   .order-1\@sm {
-    order: 1;
+    order: 1 !important;
   }
   .order-2\@sm {
-    order: 2;
+    order: 2 !important;
   }
   .order-3\@sm {
-    order: 3;
+    order: 3 !important;
   }
   .order-4\@sm {
-    order: 4;
+    order: 4 !important;
   }
   .order-5\@sm {
-    order: 5;
+    order: 5 !important;
   }
   .order-6\@sm {
-    order: 6;
+    order: 6 !important;
   }
   .order-7\@sm {
-    order: 7;
+    order: 7 !important;
   }
   .order-8\@sm {
-    order: 8;
+    order: 8 !important;
   }
   .order-9\@sm {
-    order: 9;
+    order: 9 !important;
   }
   .order-10\@sm {
-    order: 10;
+    order: 10 !important;
   }
   .order-11\@sm {
-    order: 11;
+    order: 11 !important;
   }
   .order-12\@sm {
-    order: 12;
+    order: 12 !important;
   }
   .order-last\@sm {
-    order: 25;
+    order: 25 !important;
   }
 }
 
 @media (min-width: 768px) {
   .order-first\@md {
-    order: -1;
+    order: -1 !important;
   }
   .order-0\@md {
-    order: 0;
+    order: 0 !important;
   }
   .order-1\@md {
-    order: 1;
+    order: 1 !important;
   }
   .order-2\@md {
-    order: 2;
+    order: 2 !important;
   }
   .order-3\@md {
-    order: 3;
+    order: 3 !important;
   }
   .order-4\@md {
-    order: 4;
+    order: 4 !important;
   }
   .order-5\@md {
-    order: 5;
+    order: 5 !important;
   }
   .order-6\@md {
-    order: 6;
+    order: 6 !important;
   }
   .order-7\@md {
-    order: 7;
+    order: 7 !important;
   }
   .order-8\@md {
-    order: 8;
+    order: 8 !important;
   }
   .order-9\@md {
-    order: 9;
+    order: 9 !important;
   }
   .order-10\@md {
-    order: 10;
+    order: 10 !important;
   }
   .order-11\@md {
-    order: 11;
+    order: 11 !important;
   }
   .order-12\@md {
-    order: 12;
+    order: 12 !important;
   }
   .order-last\@md {
-    order: 25;
+    order: 25 !important;
   }
 }
 
 @media (min-width: 992px) {
   .order-first\@lg {
-    order: -1;
+    order: -1 !important;
   }
   .order-0\@lg {
-    order: 0;
+    order: 0 !important;
   }
   .order-1\@lg {
-    order: 1;
+    order: 1 !important;
   }
   .order-2\@lg {
-    order: 2;
+    order: 2 !important;
   }
   .order-3\@lg {
-    order: 3;
+    order: 3 !important;
   }
   .order-4\@lg {
-    order: 4;
+    order: 4 !important;
   }
   .order-5\@lg {
-    order: 5;
+    order: 5 !important;
   }
   .order-6\@lg {
-    order: 6;
+    order: 6 !important;
   }
   .order-7\@lg {
-    order: 7;
+    order: 7 !important;
   }
   .order-8\@lg {
-    order: 8;
+    order: 8 !important;
   }
   .order-9\@lg {
-    order: 9;
+    order: 9 !important;
   }
   .order-10\@lg {
-    order: 10;
+    order: 10 !important;
   }
   .order-11\@lg {
-    order: 11;
+    order: 11 !important;
   }
   .order-12\@lg {
-    order: 12;
+    order: 12 !important;
   }
   .order-last\@lg {
-    order: 25;
+    order: 25 !important;
   }
 }
 
 @media (min-width: 1200px) {
   .order-first\@xl {
-    order: -1;
+    order: -1 !important;
   }
   .order-0\@xl {
-    order: 0;
+    order: 0 !important;
   }
   .order-1\@xl {
-    order: 1;
+    order: 1 !important;
   }
   .order-2\@xl {
-    order: 2;
+    order: 2 !important;
   }
   .order-3\@xl {
-    order: 3;
+    order: 3 !important;
   }
   .order-4\@xl {
-    order: 4;
+    order: 4 !important;
   }
   .order-5\@xl {
-    order: 5;
+    order: 5 !important;
   }
   .order-6\@xl {
-    order: 6;
+    order: 6 !important;
   }
   .order-7\@xl {
-    order: 7;
+    order: 7 !important;
   }
   .order-8\@xl {
-    order: 8;
+    order: 8 !important;
   }
   .order-9\@xl {
-    order: 9;
+    order: 9 !important;
   }
   .order-10\@xl {
-    order: 10;
+    order: 10 !important;
   }
   .order-11\@xl {
-    order: 11;
+    order: 11 !important;
   }
   .order-12\@xl {
-    order: 12;
+    order: 12 !important;
   }
   .order-last\@xl {
-    order: 25;
+    order: 25 !important;
   }
 }
 /*# sourceMappingURL=fluid-grid.css.map */
