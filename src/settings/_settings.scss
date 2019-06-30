@@ -5,7 +5,6 @@
 // Todo : Implement options
 
 // Options: Quickly modify global styling by enabling or disabling optional features.
-$default-unit:                                0% !default;      // Zero is used to keep the variable type number
 $design-solid-else-gradients:                 true !default;    // Let you chose between gradient vs solid design UI
 $design-shadow-else-border:                   true !default;    // Let you chose between shadow vs box border design UI
 $design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
