@@ -43,14 +43,13 @@
 // [optional] {Time} $Duration - Duration of animation
 // [optional] {Animation function} $function - Animation function
 //
-@mixin animation($name, $important: false, $infinite: false, $duration: 1s, $function: ease-out) {
+@mixin animation($name, $infinite: false, $duration: 1s, $function: ease-out) {
   @if $enable-transitions {
-    $important: if($important, !important, null);
     @if ($name == none) {
-      animation: none $important;
+      animation: none;
     } @else {
       $infinite: if($infinite, infinite, null);
-      animation: $name $duration $function both $infinite $important;
+      animation: $name $duration $function both $infinite;
     }
   }
 }
