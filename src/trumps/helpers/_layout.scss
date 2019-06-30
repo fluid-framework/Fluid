@@ -37,6 +37,15 @@
   //
   // Doc : add Doc
   //
+  .layout-main {
+    @extend %position-relative;
+    z-index: $main-zindex;
+    background: $body-bg;
+  }
+
+  //
+  // Doc : add Doc
+  //
   .layout-footer {
     @extend %position-relative;
     z-index: $footer-zindex;
