@@ -24,15 +24,15 @@ main {
 // 5. Change the default tap highlight to be completely transparent in iOS.
 body {
   margin: 0; // 1
+  color: $body-color;
+  background-color: $body-bg; // 3
+  text-align: left; // 2
   font-family: $font-family-default;
-  @include fontsize($font-size-default);
   font-weight: $font-weight-default;
   line-height: $line-height;
-  color: $body-color;
-  text-align: left; // 2
-  background-color: $body-bg; // 3
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
+  @include fontsize($font-size-default);
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
@@ -56,10 +56,10 @@ body {
 
 hr {
   margin: $hr-margin-y 0;
-  color: $hr-color; // 1
-  background-color: currentColor;
   border: 0;
   opacity: $hr-opacity;
+  color: $hr-color; // 1
+  background-color: currentColor;
 }
 
 hr:not([size]) {
@@ -77,11 +77,11 @@ hr:not([size]) {
 %heading {
   margin-top: 0;
   margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
-  font-style: $headings-font-style;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
   color: $headings-color;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  font-style: $headings-font-style;
+  line-height: $headings-line-height;
 }
 
 h1 {
@@ -132,11 +132,12 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline; // 1
-  text-decoration: underline dotted; // 1
-  cursor: help; // 2
-  border-bottom: 0; // 3
-  text-decoration-skip-ink: none; // 4
+  // 1
+  cursor: help; // 3
+  border-bottom: 0; // 4
+  text-decoration: underline; // 2
+  text-decoration: underline dotted; // 2
+  text-decoration-skip-ink: none; // 5
 }
 
 address {
@@ -189,9 +190,9 @@ small {
 sub,
 sup {
   position: relative;
-  @include fontsize(75%);
-  line-height: 0;
   vertical-align: baseline;
+  line-height: 0;
+  @include fontsize(75%);
 }
 
 sub {
@@ -207,8 +208,8 @@ sup {
 
 a {
   color: $link-color;
-  text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
+  text-decoration: $link-decoration;
 
   &:hover {
     color: clr-step($link-color, $link-hover-dark-step);
@@ -226,9 +227,9 @@ a:not([href]):not([tabindex]) {
   &,
   &:hover,
   &:focus {
+    outline: 0;
     color: inherit;
     text-decoration: none;
-    outline: 0;
   }
 }
 
@@ -245,12 +246,12 @@ samp {
 }
 
 pre {
+  // Don't allow content to break outside
+  overflow: auto;
   // Remove browser default top margin
   margin-top: 0;
   // Reset browser default of `1em` to use `rem`s
   margin-bottom: 1rem;
-  // Don't allow content to break outside
-  overflow: auto;
 }
 
 //
@@ -258,8 +259,8 @@ pre {
 //
 
 img {
-  vertical-align: middle;
   border-style: none; // Remove the border on images inside links in IE 10-.
+  vertical-align: middle;
 }
 
 svg {
@@ -278,11 +279,11 @@ table {
 }
 
 caption {
+  caption-side: bottom;
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
   color: $table-caption-color;
   text-align: left;
-  caption-side: bottom;
 }
 
 th {
@@ -414,10 +415,10 @@ legend {
   max-width: 100%; // 1
   padding: 0;
   margin-bottom: .5rem;
-  @include fontsize(1.5rem);
-  line-height: inherit;
   color: inherit; // 2
   white-space: normal; // 1
+  line-height: inherit;
+  @include fontsize(1.5rem);
 }
 
 mark {
@@ -458,8 +459,8 @@ progress {
 //
 
 ::-webkit-file-upload-button {
-  font: inherit; // 1
   -webkit-appearance: button; // 2
+  font: inherit; // 1
 }
 
 //
