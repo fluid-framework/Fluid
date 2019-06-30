@@ -43,48 +43,57 @@
 // [optional] {Time} $Duration - Duration of animation
 // [optional] {Animation function} $function - Animation function
 //
-@mixin animation($name, $important: false, $infinite: false, $duration: 1s, $function: ease-out) {
+@mixin animation($name, $infinite: false, $duration: 1s, $function: ease-out) {
   @if $enable-transitions {
-    $important: if($important, !important, null);
     @if ($name == none) {
-      animation: none $important;
+      animation: none;
     } @else {
+      @include include-keyframe($name);
       $infinite: if($infinite, infinite, null);
-      animation: $name $duration $function both $infinite $important;
+      animation: $name $duration $function both $infinite;
     }
   }
 }
 
-// Animation Keyframes
-@if $enable-transitions {
-  @keyframes pulse {
-    from {
-      box-shadow: 0 0 0 0 rgba($dark, .4);
-    }
-    70% {
-      box-shadow: 0 0 0 .3rem rgba($dark, 0);
-    }
-    to {
-      box-shadow: 0 0 0 0 rgba($dark, 0);
-    }
-  }
+@mixin include-keyframe($name) {
+  $imported-pulse: false !default;
+  $imported-flash: false !default;
+  $imported-spin: false !default;
 
-  @keyframes flash {
-    from,
-    50%,
-    to {
-      opacity: 1;
+  @if $name == pulse and not $imported-pulse {
+    $imported-pulse: true;
+    @keyframes pulse {
+      from {
+        box-shadow: 0 0 0 0 rgba($dark, .4);
+      }
+      70% {
+        box-shadow: 0 0 0 .3rem rgba($dark, 0);
+      }
+      to {
+        box-shadow: 0 0 0 0 rgba($dark, 0);
+      }
     }
-
-    25%,
-    75% {
-      opacity: 0;
+  } @else if $name == flash and not $imported-flash {
+    $imported-flash: true;
+    @keyframes flash {
+      from,
+      50%,
+      to {
+        opacity: 1;
+      }
+      25%,
+      75% {
+        opacity: 0;
+      }
     }
-  }
-
-  @keyframes spin {
-    100% {
-      transform: rotate(360deg);
+  } @else if $name == spin and not $imported-spin {
+    $imported-spin: true;
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
     }
+  } @else {
+    @error "animation keyframe for animation #{$name} not found.";
   }
 }
