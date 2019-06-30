@@ -6,7 +6,12 @@
   //
   // Doc : add Doc
   //
+  %position-relative {
+    position: relative;
+  }
+
   .layout-header {
+    @extend %position-relative;
     z-index: $header-zindex;
     width: 100%;
     height: $header-height;
@@ -27,5 +32,16 @@
       height: $header-height-large;
       line-height: $header-height-large;
     }
+  }
+
+  //
+  // Doc : add Doc
+  //
+  .layout-footer {
+    @extend %position-relative;
+    z-index: $footer-zindex;
+    padding: ($footer-padding-y / 2) ($footer-padding-x / 2);
+    color: $footer-color;
+    background-color: $footer-bg;
   }
 }

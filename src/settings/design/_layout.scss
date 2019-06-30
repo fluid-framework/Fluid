@@ -14,3 +14,10 @@ $header-height-large:         $default-large-quantity !default;
 // main and body layout
 $body-bg:                     $light !default;
 $body-color:                  $dark !default;
+
+// Footer
+$footer-bg:                   $gray-900 !default;
+$footer-color:                $gray-100 !default;
+$footer-padding-x:            3rem !default;
+$footer-padding-y:            6rem !default;
+$footer-zindex:               0 !default;
