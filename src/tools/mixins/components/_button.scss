@@ -65,9 +65,7 @@
   }
 
   &.is-loading {
-    @include before {
-      border-color: transparent transparent clr-contrast($color) clr-contrast($color);
-    }
+    @include loading-spinner-color(clr-contrast($color));
   }
 }
 
@@ -97,9 +95,7 @@
   }
 
   &.is-loading {
-    @include before {
-      border-color: transparent transparent $color $color;
-    }
+    @include loading-spinner-color($color);
   }
 }
 
@@ -118,8 +114,6 @@
   }
 
   &.is-loading {
-    @include before {
-      border-color: transparent transparent $color $color;
-    }
+    @include loading-spinner-color($color);
   }
 }
