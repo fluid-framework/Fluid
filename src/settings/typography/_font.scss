@@ -16,7 +16,7 @@ $font-weight-bold:          700 !default;
 $font-weight-bolder:        bolder !default;
 $font-weight-default:       $font-weight-normal !default;
 
-$font-size-small:       80% !default;
-$font-size-large:       120% !default;
+$font-size-small:              percentage($default-small-quantity) !default;
+$font-size-large:              percentage($default-large-quantity) !default;
 
 $line-height:                  1.5 !default;
