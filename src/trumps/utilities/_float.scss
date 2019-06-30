@@ -11,7 +11,8 @@
       left,
       right,
       none
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

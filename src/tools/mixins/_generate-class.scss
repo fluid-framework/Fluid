@@ -8,6 +8,7 @@
   $class: map-get($class-config, "class");
   $infixes: map-has-key($class-config, "infixes") and map-get($class-config, "infixes");
   $responsive: map-has-key($class-config, responsive) and map-get($class-config, responsive) == true;
+  $enable-important-values: map-has-key($class-config, "enable-important-values") and map-get($class-config, "enable-important-values");
   $disable-prefix-values-keys: map-has-key($class-config, "disable-prefix-values-keys") and map-get($class-config, "disable-prefix-values-keys");
   $disable-prefix-infixes-keys: map-has-key($class-config, "disable-prefix-infixes-keys") and map-get($class-config, "disable-prefix-infixes-keys");
   $disable-prefix-infixes-values: map-has-key($class-config, "disable-prefix-infixes-values") and map-get($class-config, "disable-prefix-infixes-values");
@@ -33,7 +34,8 @@
 
           .#{$class}#{$infix-key}#{$key}#{$breakpoint-suffix} {
             @each $property in $properties {
-              #{$property}#{$infix-value}: $value;
+              $enable-important-values: if($enable-important-values, !important, null);
+              #{$property}#{$infix-value}: $value $enable-important-values;
             }
           }
         }

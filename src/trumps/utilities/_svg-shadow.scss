@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes and $design-shadow-else-border {
   $config: (
-    responsive: false,
     properties: filter,
     class: svg-shadow,
     values: (
@@ -13,7 +12,8 @@
       lg: drop-shadow(-.5rem 1rem .6rem rgba(0, 0, 0, .175)),
       round: drop-shadow(-.5rem 1rem .04rem rgba(0, 0, 0, 1)),
       none: drop-shadow(none)
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

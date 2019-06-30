@@ -4,10 +4,10 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: flex-wrap,
     class: flex,
-    values: wrap nowrap wrap-reverse
+    values: wrap nowrap wrap-reverse,
+    enable-important-values: true
   );
 
   @include generate-class($config);

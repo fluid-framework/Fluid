@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: flex-direction,
     class: is,
     values: (
@@ -12,7 +11,8 @@
       vertical: column,
       horizontal-reverse: row-reverse,
       vertical-reverse: column-reverse
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: text-transform,
     class: text,
     values: (
@@ -12,7 +11,8 @@
       uppercase: uppercase,
       capitalize: capitalize,
       reset: initial
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

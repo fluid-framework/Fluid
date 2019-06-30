@@ -4,13 +4,13 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: visibility,
     class: is,
     values: (
       visible: visible,
       invisible: hidden
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

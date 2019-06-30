@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: cursor,
     class: cursor,
     values: (
@@ -15,7 +14,8 @@
       not-allowed: not-allowed,
       help: help,
       grab: grab
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

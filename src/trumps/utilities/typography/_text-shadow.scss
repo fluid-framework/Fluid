@@ -6,7 +6,6 @@
 
 @if $generate-utilities-classes and $design-shadow-else-border {
   $config: (
-    responsive: false,
     properties: text-shadow,
     class: text-shadow,
     values: (
@@ -15,7 +14,8 @@
       lg: 4px 4.25px 3px rgba($black, .175),
       round: 0 0 3px rgba($black, .15),
       none: none
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

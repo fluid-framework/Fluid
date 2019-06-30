@@ -4,11 +4,11 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: position,
     class: "",
     values: static relative absolute fixed sticky,
-    disable-prefix-values-keys: true
+    disable-prefix-values-keys: true,
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -17,12 +17,36 @@
   // Doc : Add Documentation
   //
 
-  .top-0 { top: 0%; }
-  .bottom-0 { bottom: 0%; }
-  .right-0 { right: 0%; }
-  .left-0 { left: 0%; }
-  .top-100 { top: 100%; }
-  .bottom-100 { bottom: 100%; }
-  .right-100 { right: 100%; }
-  .left-100 { left: 100%; }
+  .top-0 {
+    // stylelint-disable-next-line declaration-no-important
+    top: 0% !important;
+  }
+  .bottom-0 {
+    // stylelint-disable-next-line declaration-no-important
+    bottom: 0% !important;
+  }
+  .right-0 {
+    // stylelint-disable-next-line declaration-no-important
+    right: 0% !important;
+  }
+  .left-0 {
+    // stylelint-disable-next-line declaration-no-important
+    left: 0% !important;
+  }
+  .top-100 {
+    // stylelint-disable-next-line declaration-no-important
+    top: 100% !important;
+  }
+  .bottom-100 {
+    // stylelint-disable-next-line declaration-no-important
+    bottom: 100% !important;
+  }
+  .right-100 {
+    // stylelint-disable-next-line declaration-no-important
+    right: 100% !important;
+  }
+  .left-100 {
+    // stylelint-disable-next-line declaration-no-important
+    left: 100% !important;
+  }
 }

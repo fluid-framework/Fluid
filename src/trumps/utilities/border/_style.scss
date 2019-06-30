@@ -4,10 +4,10 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: border-style,
     class: border,
-    values: dotted dashed solid double groove ridge inset outset none hidden
+    values: dotted dashed solid double groove ridge inset outset none hidden,
+    enable-important-values: true
   );
 
   @include generate-class($config);

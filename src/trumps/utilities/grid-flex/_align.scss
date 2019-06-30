@@ -13,7 +13,8 @@
       bottom: flex-end,
       between: space-between,
       around: space-around
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -28,7 +29,8 @@
       bottom: flex-end,
       baseline: baseline,
       stretch: stretch
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -43,7 +45,8 @@
       bottom: flex-end,
       baseline: baseline,
       stretch: stretch
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

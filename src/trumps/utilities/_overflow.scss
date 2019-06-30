@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: overflow,
     class: overflow,
     values: (
@@ -12,7 +11,8 @@
       hidden,
       auto,
       visible
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -22,7 +22,6 @@
   //
 
   $config: (
-    responsive: false,
     properties: overflow,
     class: overflow,
     values: (
@@ -31,7 +30,8 @@
       auto,
       visible
     ),
-    infixes: x y
+    infixes: x y,
+    enable-important-values: true
   );
 
   @include generate-class($config);

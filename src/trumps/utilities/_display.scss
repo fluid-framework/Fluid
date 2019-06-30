@@ -18,7 +18,8 @@
       flex: flex,
       inline-flex: inline-flex
     ),
-    disable-prefix-values-keys: true
+    disable-prefix-values-keys: true,
+    enable-important-values: true
   );
 
   @include generate-class($config);

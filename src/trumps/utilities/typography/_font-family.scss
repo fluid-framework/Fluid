@@ -4,14 +4,14 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: font-family,
     class: font,
     values: (
       sans-serif: $font-family-sans-serif,
       serif: $font-family-serif,
       monospace: $font-family-monospace
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

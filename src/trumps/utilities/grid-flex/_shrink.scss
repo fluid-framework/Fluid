@@ -4,13 +4,13 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: flex-shrink,
     class: flex,
     values: (
       shrink: 1,
       shrink-0: 0
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: font-weight,
     class: font,
     values: (
@@ -13,7 +12,8 @@
       normal: $font-weight-normal,
       bold: $font-weight-bold,
       bolder: $font-weight-bolder
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

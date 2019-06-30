@@ -4,13 +4,13 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: white-space,
     class: text,
     values: (
       wrap: normal,
       nowrap: nowrap
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

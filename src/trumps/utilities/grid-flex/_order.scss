@@ -23,7 +23,8 @@
       11: 11,
       12: 12,
       last: 25
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

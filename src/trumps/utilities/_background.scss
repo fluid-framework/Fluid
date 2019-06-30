@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: background-color,
     class: bg,
     values:
@@ -20,9 +19,10 @@
         white-25: rgba($white, .25),
         white-50: rgba($white, .5),
         white-75: rgba($white, .75),
-        hide: transparent,
+        hide: transparent
       )
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);
@@ -44,7 +44,6 @@
     }
 
     $config: (
-      responsive: false,
       properties: background,
       class: bg-gradient,
       values:
@@ -55,7 +54,8 @@
           black: $black linear-gradient(140deg, mix($body-bg, $black, 15%), $black) repeat-x,
           white: $white linear-gradient(140deg, mix($body-bg, $white, 15%), $white) repeat-x
         )
-      )
+      ),
+      enable-important-values: true
     );
 
     @include generate-class($config);

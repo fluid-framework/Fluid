@@ -4,7 +4,6 @@
 
 @if $generate-utilities-classes {
   $config: (
-    responsive: false,
     properties: border-color,
     class: border,
     values:
@@ -14,7 +13,8 @@
         white: $white,
         black: $black
       )
-    )
+    ),
+    enable-important-values: true
   );
 
   @include generate-class($config);

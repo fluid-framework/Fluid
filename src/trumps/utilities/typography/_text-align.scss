@@ -7,15 +7,18 @@
     responsive: true,
     properties: text-align,
     class: text,
-    values: left right center justify
+    values: left right center justify,
+    enable-important-values: true
   );
 
   @include generate-class($config);
 
-  .text-baseline { vertical-align: baseline; }
-  .text-top { vertical-align: top; }
-  .text-middle { vertical-align: middle; }
-  .text-bottom { vertical-align: bottom; }
-  .text-sub { vertical-align: sub; }
-  .text-super { vertical-align: super; }
+  $config: (
+    properties: vertical-align,
+    class: text,
+    values: baseline top middle bottom sub super,
+    enable-important-values: true
+  );
+
+  @include generate-class($config);
 }
