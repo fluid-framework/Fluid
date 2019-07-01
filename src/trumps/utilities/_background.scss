@@ -10,7 +10,7 @@
     map-merge(
       $theme-colors,
       (
-        body: $body-color,
+        body: $body-bg,
         black: $black,
         black-25: rgba($black, .25),
         black-50: rgba($black, .5),
