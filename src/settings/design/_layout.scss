@@ -2,6 +2,31 @@
 // Layout Settings
 //
 
+// Header
+$header-bg:                   $white !default;
+$header-color:                $gray-900 !default;
+$header-padding-x:            3rem !default;
+$header-zindex:               10 !default;
+$header-height:               4rem !default;
+$header-height-small:         $header-height * $default-small-quantity !default;
+$header-height-large:         $header-height * $default-large-quantity !default;
+
 // main and body layout
 $body-bg:                     $light !default;
 $body-color:                  $dark !default;
+$main-zindex:                 1 !default;
+
+// Footer
+$footer-bg:                   $gray-900 !default;
+$footer-color:                $gray-100 !default;
+$footer-padding-x:            3rem !default;
+$footer-padding-y:            6rem !default;
+$footer-zindex:               0 !default;
+
+// Sidebar
+$sidebar-bg:                  $gray-800 !default;
+$sidebar-color:               $white !default;
+$sidebar-padding:             2rem 1rem !default;
+$sidebar-zindex:              15 !default;
+
+$overlay-zindex:              11 !default;
