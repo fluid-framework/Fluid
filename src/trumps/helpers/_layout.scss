@@ -53,14 +53,15 @@
     bottom: 0;
     left: calc(-100% - (#{$sidebar-padding} * 2));
     z-index: $sidebar-zindex;
-    min-width: 16.5rem;
+    width: 100%;
     padding: $sidebar-padding;
     color: $sidebar-color;
     background-color: $sidebar-bg;
     @include transition(left .5s ease-in-out);
 
-    @include media-breakpoint-below(sm) {
-      width: 100%;
+    @include media-breakpoint-above(sm) {
+      min-width: 16.5rem;
+      max-width: 60vw;
     }
   }
 
