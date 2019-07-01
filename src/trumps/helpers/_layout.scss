@@ -89,7 +89,7 @@
 
     @if $enable-transitions {
       opacity: 0;
-      @include transition(opacity 0.35s ease-in-out, visibility 0.35s ease-in-out);
+      @include transition(opacity .35s ease-in-out, visibility .35s ease-in-out);
     }
   }
 
