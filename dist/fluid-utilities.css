@@ -1,9 +1,15 @@
 /**
- * Fluid Utilities v0.5.2
+ * Fluid Utilities v0.6.0
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
 */
+@media (prefers-reduced-motion: reduce) {
+  .layout-header, .layout-sidebar, .overley {
+    transition: none;
+  }
+}
+
 .icon {
   display: inline-flex;
   align-items: center;
@@ -64,6 +70,94 @@
   .container {
     max-width: 90%;
   }
+}
+
+.layout-header, .layout-main, .layout-sidebar, .layout-footer {
+  position: relative;
+}
+
+.layout-header {
+  z-index: 10;
+  width: 100%;
+  height: 4rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  border-top: 3px solid #805ad5;
+  color: #0f0f0f;
+  background-color: #fff;
+  line-height: 4rem;
+  transition: height 0.35s ease-in-out,line-height 0.35s ease-in-out;
+}
+
+.layout-header.is-small {
+  height: 3.2rem;
+  line-height: 3.2rem;
+}
+
+.layout-header.is-large {
+  height: 4.8rem;
+  line-height: 4.8rem;
+}
+
+.layout-main {
+  z-index: 1;
+  background: #f0f0f0;
+}
+
+.layout-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: calc(-100% - (2rem 1rem * 2));
+  z-index: 15;
+  width: 100%;
+  padding: 2rem 1rem;
+  color: #fff;
+  background-color: #2b2b2b;
+  transition: left 0.5s ease-in-out;
+}
+
+@media (min-width: 576px) {
+  .layout-sidebar {
+    min-width: 16.5rem;
+    max-width: 60vw;
+  }
+}
+
+.layout-sidebar:target,
+.layout-sidebar.show {
+  left: 0;
+}
+
+.overley {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out,visibility 0.35s ease-in-out;
+}
+
+.layout-sidebar.show ~ .overley,
+.layout-sidebar.active ~ .overley,
+.layout-sidebar:target ~ .overley {
+  visibility: visible;
+  opacity: 1;
+}
+
+.layout-footer {
+  z-index: 0;
+  padding: 3rem 1.5rem;
+  color: #f0f0f0;
+  background-color: #0f0f0f;
 }
 
 .img-bg {

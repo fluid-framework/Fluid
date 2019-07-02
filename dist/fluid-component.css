@@ -1,18 +1,24 @@
 @charset "UTF-8";
 /**
- * Fluid Grid v0.5.2
+ * Fluid Grid v0.6.0
  * Copyright (c) 2019-2027 Boundary Studio
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/boundary-studio/Fluid/blob/master/LICENSE)
 */
+@media (prefers-reduced-motion: reduce) {
+  .button, .button.is-minimal::after {
+    transition: none;
+  }
+}
+
 .button {
   display: inline-block;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin-top: .1rem;
-  margin-bottom: .1rem;
+  margin-top: .125rem;
+  margin-bottom: .125rem;
   border: 1px solid transparent;
   color: #474747;
   background-color: transparent;
@@ -25,12 +31,6 @@
   border-radius: 0.25rem;
   font-size: 0.875rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .button {
-    transition: none;
-  }
 }
 
 .button.hover, .button:hover {
@@ -527,12 +527,6 @@
   left: 0;
   border-bottom: 1px solid;
   transition: box-shadow 0.15s ease-in-out,bottom 0.15s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .button.is-minimal::after {
-    transition: none;
-  }
 }
 
 .button.is-minimal::after {
