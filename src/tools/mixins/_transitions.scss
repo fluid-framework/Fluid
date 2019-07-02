@@ -2,6 +2,14 @@
 // Transition Mixin
 //
 
+
+// Placeholder for prefers-reduced-motion query
+%prefers-reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
 //
 // transition
 // Mixin Used to control and generate transition
@@ -25,9 +33,7 @@
     transition: unquote($transition-combined);
 
     @if $enable-prefers-reduced-motion-media-query {
-      @media (prefers-reduced-motion: reduce) {
-        transition: none;
-      }
+      @extend %prefers-reduced-motion;
     }
   }
 }
