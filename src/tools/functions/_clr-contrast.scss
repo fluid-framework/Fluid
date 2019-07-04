@@ -10,12 +10,12 @@
 //
 // Required arguments:
 // {Color} $color - Color
-// [optional] {Color} $base - Color used as $base
+// {Color} $base - Color used as $base
 //
 // Return :
 // {Number} 1 is for 0% contrast, 21 is for 100% contrast
 //
-@function clr-contrast($color, $base: white) {
+@function clr-contrast($color, $base) {
   $color-luminance: clr-luminance($color) + .05;
   $fore-luminance: clr-luminance($base) + .05;
 
