@@ -42,7 +42,7 @@
 
     // Is-solid
     &.is-solid {
-      color: clr-contrast($button-theme-default);
+      color: clr-auto($button-theme-default);
       @include button-design-solid-varient($button-theme-default);
 
       // Color variants

@@ -1,26 +1,25 @@
 //
-// Color contrast
+// Color Contrast
 //
 
 //
 // clr-contrast
-// Functions used to return the inverted contrast of the color.
-// for light color it will return $dark for dark color it will return $light
+// Functions used to get contrast of a given $color.
+// Contrast is the difference in luminance or colour that makes an object distinguishable.
+// For more info see https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
 //
 // Required arguments:
-// {Color} $color - Color to test
-// [optional] {Color} $dark - color to return if it have high contrast
-// [optional] {Color} $light - color to return if it have high contrast
+// {Color} $color - Color
+// [optional] {Color} $base - Color used as $base
 //
 // Return :
-// {Color} $dark or $light based on $color contrast
+// {Number} 1 is for 0% contrast, 21 is for 100% contrast
 //
-@function clr-contrast($color, $dark: $gray-900, $light: $white) {
-  $r: red($color);
-  $g: green($color);
-  $b: blue($color);
+@function clr-contrast($color, $base: white) {
+  $color-luminance: clr-luminance($color) + .05;
+  $fore-luminance: clr-luminance($base) + .05;
 
-  $contrast: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  $contrast: max($color-luminance, $fore-luminance) / min($color-luminance, $fore-luminance);
 
-  @return if($contrast >= $clr-contrast-threshold, $dark, $light);
+  @return $contrast;
 }
