@@ -23,4 +23,18 @@ code {
   }
 }
 
+// Blocks of code
+pre {
+  code {
+    padding: 1rem;
+    @if $design-shadow-else-border {
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-left: $border-width-wide solid;
+      border-color: $primary;
+    }
+    display: block;
+    @include border-radius(0);
+  }
 }
