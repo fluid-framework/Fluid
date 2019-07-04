@@ -3,16 +3,18 @@
 //
 
 code {
-  @include font-size($code-font-size);
   position: relative;
   padding: $code-padding;
   margin-right: $code-margin-x;
   margin-left: $code-margin-x;
   background: $code-bg;
+
   @if $design-shadow-else-border {
     border: $border-width-default solid $border-color;
   }
+
   @include border-radius($border-radius-default);
+  @include font-size($code-font-size);
   @include before {
     content: attr(fluid-lang);
     position: absolute;
