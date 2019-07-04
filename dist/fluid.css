@@ -1478,45 +1478,53 @@ template {
 }
 
 .button.is-solid.is-valid {
+  color: #0f0f0f;
   background-color: #52c41a;
 }
 
 .button.is-solid.is-valid.hover, .button.is-solid.is-valid:hover {
+  color: #0f0f0f;
   box-shadow: 0 0 0 0.2rem rgba(82, 196, 26, 0.5);
   background-color: #429d15;
 }
 
 .button.is-solid.is-valid.focus, .button.is-solid.is-valid:focus {
+  color: #0f0f0f;
   background-color: #75d048;
 }
 
 .button.is-solid.is-valid:not(.disabled):not(:disabled).active, .button.is-solid.is-valid:not(.disabled):not(:disabled):active {
+  color: #fff;
   background-color: #317610;
 }
 
 .button.is-solid.is-valid.is-loading::before {
-  border-color: transparent #fff #fff #fff;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-info {
+  color: #0f0f0f;
   background-color: #13c2c2;
 }
 
 .button.is-solid.is-info.hover, .button.is-solid.is-info:hover {
+  color: #0f0f0f;
   box-shadow: 0 0 0 0.2rem rgba(19, 194, 194, 0.5);
   background-color: #0f9b9b;
 }
 
 .button.is-solid.is-info.focus, .button.is-solid.is-info:focus {
+  color: #0f0f0f;
   background-color: #42cece;
 }
 
 .button.is-solid.is-info:not(.disabled):not(:disabled).active, .button.is-solid.is-info:not(.disabled):not(:disabled):active {
+  color: #fff;
   background-color: #0b7474;
 }
 
 .button.is-solid.is-info.is-loading::before {
-  border-color: transparent #fff #fff #fff;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-warn {
@@ -1545,24 +1553,28 @@ template {
 }
 
 .button.is-solid.is-error {
+  color: #0f0f0f;
   background-color: #f5222d;
 }
 
 .button.is-solid.is-error.hover, .button.is-solid.is-error:hover {
+  color: #fff;
   box-shadow: 0 0 0 0.2rem rgba(245, 34, 45, 0.5);
   background-color: #c41b24;
 }
 
 .button.is-solid.is-error.focus, .button.is-solid.is-error:focus {
+  color: #0f0f0f;
   background-color: #f74e57;
 }
 
 .button.is-solid.is-error:not(.disabled):not(:disabled).active, .button.is-solid.is-error:not(.disabled):not(:disabled):active {
+  color: #fff;
   background-color: #93141b;
 }
 
 .button.is-solid.is-error.is-loading::before {
-  border-color: transparent #fff #fff #fff;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-light {
@@ -1582,7 +1594,7 @@ template {
 }
 
 .button.is-solid.is-light:not(.disabled):not(:disabled).active, .button.is-solid.is-light:not(.disabled):not(:disabled):active {
-  color: #fff;
+  color: #0f0f0f;
   background-color: #909090;
 }
 
