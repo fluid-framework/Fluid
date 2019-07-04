@@ -35,6 +35,6 @@ pre {
       border-color: $primary;
     }
     display: block;
-    @include border-radius(0);
+    @include border-radius-left(0);
   }
 }
