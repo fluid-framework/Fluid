@@ -35,7 +35,7 @@
   "scripts": {
     "start": "npm-run-all -s watch",
     "watch": "node-sass ./src --output ./temp/ --output-style compact --indent-type space --indent-width 2 --source-map true -w",
-    "check": "npm-run-all -s lint test",
+    "try": "npm-run-all -s lint test",
     "lint": "stylelint src/**/*.scss --fix",
     "test": "npm-run-all -p test:*",
     "test:usedvar": "fusv ./src",
