@@ -23,8 +23,8 @@ code {
 // Blocks of code
 pre {
   code {
-    padding: 1rem;
     display: block;
+    padding: 1rem;
     border-left: $border-width-wide solid $primary;
     @include border-radius-left(0);
   }
