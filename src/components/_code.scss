@@ -12,15 +12,6 @@ code {
   @include border();
   @include border-radius($border-radius-default);
   @include font-size($code-font-size);
-  @include before {
-    content: attr(fluid-lang);
-    position: absolute;
-    top: 5px;
-    right: 7.5px;
-    color: clr-auto($code-bg, $black, $white);
-    text-transform: uppercase;
-    font-weight: bolder;
-  }
 }
 
 // Blocks of code
@@ -30,5 +21,14 @@ pre {
     padding: 1rem;
     border-left: $border-width-wide solid $primary;
     @include border-radius-left(0);
+    @include before {
+      content: attr(fluid-lang);
+      position: absolute;
+      top: 5px;
+      right: 7.5px;
+      color: clr-auto($code-bg, $black, $white);
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
   }
 }
