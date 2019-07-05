@@ -17,6 +17,9 @@ code {
     position: absolute;
     top: 5px;
     right: 7.5px;
+    color: clr-auto($code-bg, $black, $white);
+    text-transform: uppercase;
+    font-weight: bolder;
   }
 }
 
