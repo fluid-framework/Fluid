@@ -25,10 +25,13 @@ pre {
       content: attr(fluid-lang);
       position: absolute;
       top: 5px;
-      right: 7.5px;
-      color: clr-auto($code-bg, $black, $white);
+      right: -2px;
+      padding: 2px 16px 2px 8px;
+      color: clr-auto($primary, $black, $white);
+      background: $primary;
       text-transform: uppercase;
       font-weight: bolder;
+      @include border-radius-left($border-radius-default);
     }
   }
 }
