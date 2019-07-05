@@ -41,11 +41,11 @@
     "test:compile": "node-sass ./src --output ./temp",
     "lint": "stylelint src/**/*.scss --fix",
     "deploy": "npm-run-all -s build",
-    "build": "npm-run-all -s lint:* build:*",
-    "build:clean": "shx rm -rf ./dist",
-    "build:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map true",
-    "build:prefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer --map false",
-    "build:minify": "foreach -g ./dist/*.css -i ./dist/*.min.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed --source-map true\""
+    "dist": "npm-run-all -s test:* dist:*",
+    "dist:clean": "shx rm -rf ./dist",
+    "dist:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map true",
+    "dist:prefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer --map false",
+    "dist:minify": "foreach -g ./dist/*.css -i ./dist/*.min.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed --source-map true\""
   },
   "repository": {
     "type": "git",
