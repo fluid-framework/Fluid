@@ -3,7 +3,7 @@ Note: use x to mark checkbox inputs e.g [x] is considered checked and [ ] is con
 **Before submitting**
 
 - Update your code to latest [master branch](https://github.com/fluid-framework/Fluid/tree/master)
-- Test your code. Run `yarn check` to check.
+- Test your code. Run `yarn try` to check.
 
 **Describe the reason of this pull request**
 
