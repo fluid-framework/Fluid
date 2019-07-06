@@ -1,0 +1,16 @@
+//
+// List
+//
+
+@if $generate-utilities-classes {
+  $config: (
+    properties: list-style,
+    class: list,
+    values: (
+      unstyle: none
+    ),
+    enable-important-values: true
+  );
+
+  @include generate-class($config);
+}
