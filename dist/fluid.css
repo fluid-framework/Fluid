@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid v0.6.0
+ * Fluid v0.7.0
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -1373,7 +1373,7 @@ template {
   font-weight: 400;
   line-height: 1.5;
   padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
+  border-radius: 0.25em;
   font-size: 0.875rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -1478,45 +1478,53 @@ template {
 }
 
 .button.is-solid.is-valid {
+  color: #0f0f0f;
   background-color: #52c41a;
 }
 
 .button.is-solid.is-valid.hover, .button.is-solid.is-valid:hover {
+  color: #0f0f0f;
   box-shadow: 0 0 0 0.2rem rgba(82, 196, 26, 0.5);
   background-color: #429d15;
 }
 
 .button.is-solid.is-valid.focus, .button.is-solid.is-valid:focus {
+  color: #0f0f0f;
   background-color: #75d048;
 }
 
 .button.is-solid.is-valid:not(.disabled):not(:disabled).active, .button.is-solid.is-valid:not(.disabled):not(:disabled):active {
+  color: #fff;
   background-color: #317610;
 }
 
 .button.is-solid.is-valid.is-loading::before {
-  border-color: transparent #fff #fff #fff;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-info {
+  color: #0f0f0f;
   background-color: #13c2c2;
 }
 
 .button.is-solid.is-info.hover, .button.is-solid.is-info:hover {
+  color: #0f0f0f;
   box-shadow: 0 0 0 0.2rem rgba(19, 194, 194, 0.5);
   background-color: #0f9b9b;
 }
 
 .button.is-solid.is-info.focus, .button.is-solid.is-info:focus {
+  color: #0f0f0f;
   background-color: #42cece;
 }
 
 .button.is-solid.is-info:not(.disabled):not(:disabled).active, .button.is-solid.is-info:not(.disabled):not(:disabled):active {
+  color: #fff;
   background-color: #0b7474;
 }
 
 .button.is-solid.is-info.is-loading::before {
-  border-color: transparent #fff #fff #fff;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-warn {
@@ -1545,24 +1553,28 @@ template {
 }
 
 .button.is-solid.is-error {
+  color: #0f0f0f;
   background-color: #f5222d;
 }
 
 .button.is-solid.is-error.hover, .button.is-solid.is-error:hover {
+  color: #fff;
   box-shadow: 0 0 0 0.2rem rgba(245, 34, 45, 0.5);
   background-color: #c41b24;
 }
 
 .button.is-solid.is-error.focus, .button.is-solid.is-error:focus {
+  color: #0f0f0f;
   background-color: #f74e57;
 }
 
 .button.is-solid.is-error:not(.disabled):not(:disabled).active, .button.is-solid.is-error:not(.disabled):not(:disabled):active {
+  color: #fff;
   background-color: #93141b;
 }
 
 .button.is-solid.is-error.is-loading::before {
-  border-color: transparent #fff #fff #fff;
+  border-color: transparent #0f0f0f #0f0f0f #0f0f0f;
 }
 
 .button.is-solid.is-light {
@@ -1582,7 +1594,7 @@ template {
 }
 
 .button.is-solid.is-light:not(.disabled):not(:disabled).active, .button.is-solid.is-light:not(.disabled):not(:disabled):active {
-  color: #fff;
+  color: #0f0f0f;
   background-color: #909090;
 }
 
@@ -2076,12 +2088,12 @@ template {
 
 .button.is-small {
   padding: 0.25rem 0.5rem;
-  border-radius: 0.2rem;
+  border-radius: 0.2em;
 }
 
 .button.is-large {
   padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  border-radius: 0.3em;
 }
 
 .button.is-loading {
@@ -2101,7 +2113,7 @@ template {
   height: 1rem;
   border: .15rem solid;
   border-color: transparent #636363 #636363 #636363;
-  border-radius: 50rem;
+  border-radius: 50em;
   -webkit-animation: spin 1s infinite linear;
           animation: spin 1s infinite linear;
 }
@@ -2192,8 +2204,8 @@ template {
   color: #636363;
 }
 
-.breadcrumb > *[data-separator]:not(:first-child)::before {
-  content: attr(data-separator);
+.breadcrumb > *[fluid-separator]:not(:first-child)::before {
+  content: attr(fluid-separator);
 }
 
 .breadcrumb.is-small {
@@ -2202,6 +2214,38 @@ template {
 
 .breadcrumb.is-large {
   font-size: 120%;
+}
+
+code {
+  position: relative;
+  padding: 0.2em 0.4em 0.1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  background: #d4d4d4;
+  border-radius: 0.25em;
+  font-size: 85%;
+}
+
+pre code {
+  display: block;
+  padding: 1rem;
+  border-left: 3px solid #805ad5;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+pre code::before {
+  content: attr(fluid-lang);
+  position: absolute;
+  top: 5px;
+  right: -2px;
+  padding: 2px 16px 2px 8px;
+  color: #fff;
+  background: #805ad5;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
 }
 
 .icon {
@@ -2258,6 +2302,7 @@ template {
   padding-left: 12px;
   margin-right: auto;
   margin-left: auto;
+  background-color: #fff;
 }
 
 @media (min-width: 576px) {
@@ -2957,15 +3002,15 @@ template {
 }
 
 .is-rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 0.25em !important;
 }
 
 .is-rounded-sm {
-  border-radius: 0.2rem !important;
+  border-radius: 0.2em !important;
 }
 
 .is-rounded-lg {
-  border-radius: 0.3rem !important;
+  border-radius: 0.3em !important;
 }
 
 .is-circle {
@@ -2973,7 +3018,7 @@ template {
 }
 
 .is-pill {
-  border-radius: 50rem !important;
+  border-radius: 50em !important;
 }
 
 .is-boxed {
@@ -2981,23 +3026,23 @@ template {
 }
 
 .is-rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 0.25em !important;
+  border-top-right-radius: 0.25em !important;
 }
 
 .is-rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 0.25em !important;
+  border-bottom-right-radius: 0.25em !important;
 }
 
 .is-rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25em !important;
+  border-bottom-left-radius: 0.25em !important;
 }
 
 .is-rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25em !important;
+  border-bottom-left-radius: 0.25em !important;
 }
 
 .w-0 {

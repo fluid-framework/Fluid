@@ -14,6 +14,13 @@ main {
   display: block;
 }
 
+// Html
+// 1. rem unit follow html head font size using this will set the font size to framework font size
+//    this will lead to consistent rem unit among all browsers
+html {
+  @include fontsize($font-size-default); // 1
+}
+
 // Body
 //
 // 1. Remove the margin in all browsers.
@@ -32,7 +39,6 @@ body {
   line-height: $line-height;
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
-  @include fontsize($font-size-default);
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline

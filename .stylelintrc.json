@@ -45,7 +45,7 @@
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": [
-      "numeric",
+      "named-where-possible",
       {
         "ignore": ["relative"]
       }

@@ -1,0 +1,30 @@
+//
+// Power function
+//
+
+//
+//  pow
+//  Functions calulate math power of a given value
+//
+//  Required arguments:
+//  {Number} $base - the base value to calculate power
+//  {Number} $exponent - the exponent value to calculate power
+//
+//  Return :
+//  {Number} $result
+//
+@function power($base, $exponent) {
+  $result: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $result: $result * $base;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through (-1 * $exponent) {
+      $result: $result / $base;
+    }
+  }
+
+  @return $result;
+}

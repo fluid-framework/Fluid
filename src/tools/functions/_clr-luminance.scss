@@ -1,0 +1,37 @@
+//
+// Color Luminance
+//
+
+//
+// clr-luminance
+// Functions used to get luminance of a given $color.
+// For more info see https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+//
+// Required arguments:
+// {Color} $color - Color
+//
+// Return :
+// {Number} 1 is pure white, 0 is pure black
+//
+@function clr-luminance($color) {
+  $RGB: (
+    "red": red($color),
+    "green": green($color),
+    "blue": blue($color)
+  );
+
+  @each $name, $value in $RGB {
+    $value: $value / 255;
+
+    @if $value < .03928 {
+      $value: $value / 12.92;
+    } @else {
+      $value: ($value + .055) / 1.055;
+      $value: power($value, 2.4);
+    }
+
+    $RGB: map-merge($RGB, ($name: $value));
+  }
+
+  @return (map-get($RGB, "red") * .2126) + (map-get($RGB, "green") * .7152) + (map-get($RGB, "blue") * .0722);
+}

@@ -2,6 +2,9 @@
 // Function
 //
 
+// Functions related to Math
+@import "./functions/power";
+
 // Functions related to list
 @import "./functions/to-list";
 @import "./functions/list-next";
@@ -36,12 +39,17 @@
 @import "./functions/grid";
 
 // Functions related to color
+@import "./functions/clr-luminance";
 @import "./functions/clr-contrast";
 @import "./functions/clr-step";
+@import "./functions/clr-auto";
 
 //
 // Mixin
 //
+
+// Mixin Used for border
+@import "./mixins/border";
 
 // Mixin Used for borderradius
 @import "./mixins/borderradius";
