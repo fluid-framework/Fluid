@@ -1,5 +1,5 @@
 /**
- * Fluid Utilities v0.6.0
+ * Fluid Utilities v0.7.0
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -64,6 +64,7 @@
   padding-left: 12px;
   margin-right: auto;
   margin-left: auto;
+  background-color: #fff;
 }
 
 @media (min-width: 576px) {
@@ -763,15 +764,15 @@
 }
 
 .is-rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 0.25em !important;
 }
 
 .is-rounded-sm {
-  border-radius: 0.2rem !important;
+  border-radius: 0.2em !important;
 }
 
 .is-rounded-lg {
-  border-radius: 0.3rem !important;
+  border-radius: 0.3em !important;
 }
 
 .is-circle {
@@ -779,7 +780,7 @@
 }
 
 .is-pill {
-  border-radius: 50rem !important;
+  border-radius: 50em !important;
 }
 
 .is-boxed {
@@ -787,23 +788,23 @@
 }
 
 .is-rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 0.25em !important;
+  border-top-right-radius: 0.25em !important;
 }
 
 .is-rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 0.25em !important;
+  border-bottom-right-radius: 0.25em !important;
 }
 
 .is-rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25em !important;
+  border-bottom-left-radius: 0.25em !important;
 }
 
 .is-rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25em !important;
+  border-bottom-left-radius: 0.25em !important;
 }
 
 .w-0 {
