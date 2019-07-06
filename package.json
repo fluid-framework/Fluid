@@ -41,7 +41,7 @@
     "test:usedvar": "fusv ./src",
     "test:stylelint": "stylelint src/**/*.scss",
     "test:compile": "node-sass ./src --output ./temp",
-    "dist": "npm-run-all -s test:* dist:*",
+    "dist": "npm-run-all -s test dist:*",
     "dist:clean": "shx rm -rf ./dist",
     "dist:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map true",
     "dist:prefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer --map false",
