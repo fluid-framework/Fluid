@@ -23,7 +23,7 @@
     line-height: $button-line-height;
 
     @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
-    @include font-size($font-size-default);
+    @include fontsize($font-size-default);
     @include transition($button-transition);
 
     @include hover {
