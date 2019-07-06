@@ -30,7 +30,7 @@ pre {
       color: clr-auto($primary, $black, $white);
       background: $primary;
       text-transform: uppercase;
-      font-weight: bolder;
+      font-weight: bold;
       @include border-radius-left($border-radius-default);
     }
   }
