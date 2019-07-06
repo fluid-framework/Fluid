@@ -1,0 +1,16 @@
+//
+// Border Mixin
+//
+
+//
+// border
+// Mixin Used to control and generate border
+//
+// Required arguments:
+// {String} $border - border strings
+@mixin border($border: $border-width-default solid $border-color, $direction: null) {
+  @if not $design-shadow-else-border {
+    $direction: if($direction, prefix($direction, "-"), null);
+    border#{$direction}: $border;
+  }
+}

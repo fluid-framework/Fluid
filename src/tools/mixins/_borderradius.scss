@@ -10,7 +10,7 @@
 }
 
 // top side border radius
-@mixin border-top-radius($radius) {
+@mixin border-radius-top($radius) {
   @if $design-rounded-else-box {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
@@ -18,7 +18,7 @@
 }
 
 // right side border radius
-@mixin border-right-radius($radius) {
+@mixin border-radius-right($radius) {
   @if $design-rounded-else-box {
     border-top-right-radius: $radius;
     border-bottom-right-radius: $radius;
@@ -26,7 +26,7 @@
 }
 
 // bottom side border radius
-@mixin border-bottom-radius($radius) {
+@mixin border-radius-bottom($radius) {
   @if $design-rounded-else-box {
     border-bottom-right-radius: $radius;
     border-bottom-left-radius: $radius;
@@ -34,7 +34,7 @@
 }
 
 // left side border radius
-@mixin border-left-radius($radius) {
+@mixin border-radius-left($radius) {
   @if $design-rounded-else-box {
     border-top-left-radius: $radius;
     border-bottom-left-radius: $radius;
@@ -42,28 +42,28 @@
 }
 
 // top side border radius
-@mixin border-top-left-radius($radius) {
+@mixin border-radius-top-left($radius) {
   @if $design-rounded-else-box {
     border-top-left-radius: $radius;
   }
 }
 
 // top side border radius
-@mixin border-top-right-radius($radius) {
+@mixin border-radius-top-right($radius) {
   @if $design-rounded-else-box {
     border-top-right-radius: $radius;
   }
 }
 
 // bottom side border radius
-@mixin border-bottom-right-radius($radius) {
+@mixin border-radius-bottom-right($radius) {
   @if $design-rounded-else-box {
     border-bottom-right-radius: $radius;
   }
 }
 
 // bottom side border radius
-@mixin border-bottom-left-radius($radius) {
+@mixin border-radius-bottom-left($radius) {
   @if $design-rounded-else-box {
     border-bottom-left-radius: $radius;
   }

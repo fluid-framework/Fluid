@@ -1,0 +1,37 @@
+//
+// COde
+//
+
+code {
+  position: relative;
+  padding: $code-padding;
+  margin-right: $code-margin-x;
+  margin-left: $code-margin-x;
+  background: $code-bg;
+
+  @include border();
+  @include border-radius($border-radius-default);
+  @include font-size($code-font-size);
+}
+
+// Blocks of code
+pre {
+  code {
+    display: block;
+    padding: 1rem;
+    border-left: $border-width-wide solid $primary;
+    @include border-radius-left(0);
+    @include before {
+      content: attr(fluid-lang);
+      position: absolute;
+      top: 5px;
+      right: -2px;
+      padding: 2px 16px 2px 8px;
+      color: clr-auto($primary, $black, $white);
+      background: $primary;
+      text-transform: uppercase;
+      font-weight: bold;
+      @include border-radius-left($border-radius-default);
+    }
+  }
+}
