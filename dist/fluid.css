@@ -2471,10 +2471,6 @@ pre code::before {
   }
 }
 
-.list-unstyle {
-  list-style: none !important;
-}
-
 .overflow-scroll {
   overflow: scroll !important;
 }
