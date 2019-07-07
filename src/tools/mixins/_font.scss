@@ -12,8 +12,15 @@
 //
 @mixin fontsize($font-size, $important: false) {
   @if $enable-fluid-font-sizes {
-    @include rfs($font-size, $important);
+    $font-size-unit: if(type-of($font-size) == "number", unit($font-size), false);
+
+    // If $font-size is not a number (like inherit) or $font-size has a unit other than px or rem or its value is 0
+    @if ($font-size == 0) or (not $font-size-unit) or ($font-size-unit != "" and $font-size-unit != "px" and $font-size-unit != "rem") {
+      font-size: #{$font-size}#{if($important, !important, null)};
+    } @else {
+      @include rfs($font-size, $important);
+    }
   } @else {
-    font-size: $font-size;
+    font-size: #{$font-size}#{if($important, !important, null)};
   }
 }
