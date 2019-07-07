@@ -69,7 +69,6 @@
 
     // Is-outline
     &.is-outline {
-      border-color: $button-outline-normal-border;
       @include button-design-outline-varient($button-theme-default); // Default button theme
 
       // Color variants
