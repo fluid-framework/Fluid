@@ -13,6 +13,7 @@
     flex-wrap: wrap;
     padding: $breadcrumb-padding-y $breadcrumb-padding-x;
     margin-bottom: $breadcrumb-margin-bottom;
+    @include fontsize($font-size-default);
 
     a {
       @include hover {
