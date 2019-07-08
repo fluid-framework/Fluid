@@ -10,8 +10,9 @@
   .button {
     display: inline-block;
     user-select: none;
-    margin-top: .125rem;
-    margin-bottom: .125rem;
+    // Using px unit to keep margin constant regardless of font-size
+    margin-top: 2.25px;
+    margin-bottom: 2.25px;
     border: $border-width-default solid transparent;
     color: $body-color;
     background-color: transparent;
