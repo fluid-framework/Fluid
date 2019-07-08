@@ -12,6 +12,7 @@
 
     > .input,
     > .button {
+      @include fontsize(inherit);
       @include hover-focus {
         z-index: 10;
       }
