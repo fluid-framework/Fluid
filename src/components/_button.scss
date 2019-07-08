@@ -24,7 +24,6 @@
     font-weight: $button-font-weight;
     line-height: $button-line-height;
 
-    @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
     @include fontsize($font-size-default);
     @include transition($button-transition);
 
