@@ -6,7 +6,7 @@
 
 // Options: Quickly modify global styling by enabling or disabling optional features.
 $default-small-quantity:                      .75 !default;     // Default multiplicative value to generate small styles
-$default-large-quantity:                      1.25 !default;     // Default multiplicative value to generate large styles
+$default-large-quantity:                      1.25 !default;    // Default multiplicative value to generate large styles
 $design-solid-else-gradients:                 true !default;    // Let you chose between gradient vs solid design UI
 $design-shadow-else-border:                   true !default;    // Let you chose between shadow vs box border design UI
 $design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
