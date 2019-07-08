@@ -11,7 +11,7 @@
     display: inline-block;
     user-select: none;
     padding: $button-padding-y $button-padding-x;
-    // Using px unit to keep margin constant regardless of font-size
+    // Using px unit to keep spacing constant regardless of font-size
     margin-top: 2.25px;
     margin-bottom: 2.25px;
     border: $border-width-default solid transparent;
