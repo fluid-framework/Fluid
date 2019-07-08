@@ -24,9 +24,9 @@
 
     @include transition(height .35s ease-in-out, line-height .35s ease-in-out);
 
-    &.is-small {
-      height: $header-height-small;
-      line-height: $header-height-small;
+    &.is-collapsed {
+      height: $header-height-collapsed;
+      line-height: $header-height-collapsed;
     }
   }
 
