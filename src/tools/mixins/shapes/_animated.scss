@@ -12,9 +12,9 @@
     right: 0;
     bottom: 0;
     left: calc(50% - (1em / 2));
-    width: 1rem;
-    height: 1rem;
-    border: .15rem solid;
+    width: 1em;
+    height: 1em;
+    border: .15em solid;
     border-color: transparent $color $color $color;
     border-radius: $border-radius-pill;
     // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
