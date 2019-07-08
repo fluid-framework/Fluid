@@ -1,14 +1,15 @@
 //
 // Layout Settings
 //
+// Using px unit to keep spacing constant regardless of font-size
 
 // Header
 $header-border-top:           $border-width-wide solid $primary !default;
 $header-bg:                   $white !default;
 $header-color:                $gray-900 !default;
-$header-padding-x:            3rem !default;
+$header-padding-x:            48px !default;
 $header-zindex:               10 !default;
-$header-height:               4.5rem !default;
+$header-height:               64px !default;
 $header-height-collapsed:     $header-height * $default-small-quantity !default;
 
 // main and body layout
@@ -19,14 +20,14 @@ $main-zindex:                 1 !default;
 // Footer
 $footer-bg:                   $gray-900 !default;
 $footer-color:                $gray-100 !default;
-$footer-padding-x:            3rem !default;
-$footer-padding-y:            6rem !default;
+$footer-padding-x:            48px !default;
+$footer-padding-y:            96px !default;
 $footer-zindex:               0 !default;
 
 // Sidebar
 $sidebar-bg:                  $gray-800 !default;
 $sidebar-color:               $white !default;
-$sidebar-padding:             2rem 1rem !default;
+$sidebar-padding:             28px 14px !default;
 $sidebar-zindex:              15 !default;
 
 $overlay-zindex:              11 !default;
