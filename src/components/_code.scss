@@ -18,7 +18,7 @@ code {
 pre {
   code {
     display: block;
-    padding: 1rem;
+    padding: 1em;
     border-left: $border-width-wide solid $primary;
     @include border-radius-left(0);
     @include before {
