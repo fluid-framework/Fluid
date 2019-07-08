@@ -4,18 +4,12 @@
 
 // Shared Settings between various Inputs
 
-$input-padding-y:                                .375rem !default;
-$input-padding-x:                                .75rem !default;
+$input-padding-y:                                .375em !default;
+$input-padding-x:                                .75em !default;
 $input-font-family:                              null !default;
 $input-line-height:                              $line-height !default;
 
-$input-focus-width:                              .2rem !default;
-
-$input-padding-y-small:                          .25rem !default;
-$input-padding-x-small:                          .5rem !default;
-
-$input-padding-y-large:                          .5rem !default;
-$input-padding-x-large:                          1rem !default;
+$input-focus-width:                              .2em !default;
 
 $input-disabled-bg:                              $gray-600 !default;
 $input-disabled-opacity:                         .65 !default;

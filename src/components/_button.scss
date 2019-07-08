@@ -10,6 +10,7 @@
   .button {
     display: inline-block;
     user-select: none;
+    padding: $button-padding-y $button-padding-x;
     // Using px unit to keep margin constant regardless of font-size
     margin-top: 2.25px;
     margin-bottom: 2.25px;
@@ -23,7 +24,7 @@
     font-weight: $button-font-weight;
     line-height: $button-line-height;
 
-    @include button-sizing($button-padding-y, $button-padding-x, $button-border-radius);
+    @include border-radius($button-border-radius);
     @include transition($button-transition);
 
     @include hover {
@@ -146,18 +147,6 @@
       pointer-events: none;
       opacity: $button-disabled-opacity;
     }
-  }
-
-  //
-  // Size Variants
-  //
-
-  .button.is-small {
-    @include button-sizing($button-padding-y-small, $button-padding-x-small, $button-border-radius-small);
-  }
-
-  .button.is-large {
-    @include button-sizing($button-padding-y-large, $button-padding-x-large, $button-border-radius-large);
   }
 
   //
