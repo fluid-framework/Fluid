@@ -185,7 +185,7 @@ strong {
 }
 
 small {
-  @include fontsize($font-size-small); // Add the correct font size in all browsers
+  font-size: percentage($default-small-quantity); // Add the correct font size in all browsers
 }
 
 //
