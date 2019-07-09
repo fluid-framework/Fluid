@@ -3,14 +3,14 @@
 //
 
 // all side border radius
-@mixin border-radius($radius: $border-radius) {
+@mixin border-radius($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-radius: $radius;
   }
 }
 
 // top side border radius
-@mixin border-radius-top($radius) {
+@mixin border-radius-top($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
@@ -18,7 +18,7 @@
 }
 
 // right side border radius
-@mixin border-radius-right($radius) {
+@mixin border-radius-right($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-top-right-radius: $radius;
     border-bottom-right-radius: $radius;
@@ -26,7 +26,7 @@
 }
 
 // bottom side border radius
-@mixin border-radius-bottom($radius) {
+@mixin border-radius-bottom($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-bottom-right-radius: $radius;
     border-bottom-left-radius: $radius;
@@ -34,7 +34,7 @@
 }
 
 // left side border radius
-@mixin border-radius-left($radius) {
+@mixin border-radius-left($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-top-left-radius: $radius;
     border-bottom-left-radius: $radius;
@@ -42,28 +42,28 @@
 }
 
 // top side border radius
-@mixin border-radius-top-left($radius) {
+@mixin border-radius-top-left($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-top-left-radius: $radius;
   }
 }
 
 // top side border radius
-@mixin border-radius-top-right($radius) {
+@mixin border-radius-top-right($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-top-right-radius: $radius;
   }
 }
 
 // bottom side border radius
-@mixin border-radius-bottom-right($radius) {
+@mixin border-radius-bottom-right($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-bottom-right-radius: $radius;
   }
 }
 
 // bottom side border radius
-@mixin border-radius-bottom-left($radius) {
+@mixin border-radius-bottom-left($radius: $border-radius-default) {
   @if $design-rounded-else-box {
     border-bottom-left-radius: $radius;
   }
