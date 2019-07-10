@@ -1,0 +1,24 @@
+//
+// List
+//
+
+@if $generate-component-classes {
+  .list {
+    padding-left: 0;
+    text-decoration: none;
+
+    > .list-item {
+      display: block;
+    }
+
+    &.is-inline {
+      display: block;
+      > .list-item {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: $list-inline-padding;
+        }
+      }
+    }
+  }
+}
