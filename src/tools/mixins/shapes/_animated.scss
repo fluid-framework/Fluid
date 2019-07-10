@@ -14,11 +14,12 @@
     left: calc(50% - (1em / 2));
     width: 1em;
     height: 1em;
-    border: .15em solid;
-    border-color: transparent $color $color $color;
+    border: .15em solid currentColor;
+    border-right-color: transparent;
     border-radius: $border-radius-pill;
     // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
     animation: spin 1s infinite linear;
+    color: $color;
     @include include-keyframe(spin);
   }
 }
@@ -26,6 +27,6 @@
 // Mixin to override Loading spinner shape color
 @mixin loading-spinner-color($color) {
   @include before {
-    border-color: transparent $color $color $color;
+    color: $color;
   }
 }
