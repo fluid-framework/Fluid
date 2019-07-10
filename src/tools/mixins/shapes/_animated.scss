@@ -14,18 +14,17 @@
     left: calc(50% - (1em / 2));
     width: 1em;
     height: 1em;
-    border: .15em solid;
-    border-color: transparent $color $color $color;
-    border-radius: $border-radius-pill;
+    border: .15em solid currentColor;
     // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
-    animation: spin 1s infinite linear;
-    @include include-keyframe(spin);
+    animation: loading-spinner 2s infinite cubic-bezier(.65, 0, .35, 1);
+    color: $color;
+    @include include-keyframe(loading-spinner);
   }
 }
 
 // Mixin to override Loading spinner shape color
 @mixin loading-spinner-color($color) {
   @include before {
-    border-color: transparent $color $color $color;
+    color: $color;
   }
 }

@@ -2,7 +2,6 @@
 // Transition Mixin
 //
 
-
 // Placeholder for prefers-reduced-motion query
 %prefers-reduced-motion {
   @media (prefers-reduced-motion: reduce) {
@@ -65,6 +64,7 @@
   $imported-pulse: false !default;
   $imported-flash: false !default;
   $imported-spin: false !default;
+  $imported-loading-spinner: false !default;
 
   @if $name == pulse and not $imported-pulse {
     $imported-pulse: true;
@@ -90,6 +90,23 @@
       25%,
       75% {
         opacity: 0;
+      }
+    }
+  } @else if $name == loading-spinner and not $imported-loading-spinner {
+    $imported-loading-spinner: true;
+    @keyframes loading-spinner {
+      from,
+      to {
+        transform: rotate(-360deg);
+        border-radius: 50%;
+      }
+      50% {
+        transform: rotate(0deg);
+        border-radius: 0;
+      }
+      to {
+        transform: rotate(360deg);
+        border-radius: 50%;
       }
     }
   } @else if $name == spin and not $imported-spin {
