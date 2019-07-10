@@ -102,7 +102,7 @@
 
         @include disabled {
           pointer-events: none;
-          opacity: 0.65;
+          opacity: .65;
           color: $list-group-disabled-color;
         }
 
