@@ -1,5 +1,5 @@
 /**
- * Fluid Utilities v0.8.0
+ * Fluid Utilities v0.9.0
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -14,23 +14,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.icon.is-small {
-  width: 1rem;
-  height: 1rem;
-}
-
-.icon.is-medium {
-  width: 2rem;
-  height: 2rem;
-}
-
-.icon.is-large {
-  width: 3rem;
-  height: 3rem;
+  width: 1.75em;
+  height: 1.75em;
 }
 
 .sr-only,
@@ -81,24 +66,19 @@
 .layout-header {
   z-index: 10;
   width: 100%;
-  height: 4rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  height: 64px;
+  padding-right: 24px;
+  padding-left: 24px;
   border-top: 3px solid #805ad5;
   color: #0f0f0f;
   background-color: #fff;
-  line-height: 4rem;
+  line-height: 64px;
   transition: height 0.35s ease-in-out,line-height 0.35s ease-in-out;
 }
 
-.layout-header.is-small {
-  height: 3.2rem;
-  line-height: 3.2rem;
-}
-
-.layout-header.is-large {
-  height: 4.8rem;
-  line-height: 4.8rem;
+.layout-header.is-collapsed {
+  height: 48px;
+  line-height: 48px;
 }
 
 .layout-main {
@@ -110,10 +90,10 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  left: calc(-100% - (2rem 1rem * 2));
+  left: calc(-100% - (28px 14px * 2));
   z-index: 15;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 28px 14px;
   color: #fff;
   background-color: #2b2b2b;
   transition: left 0.5s ease-in-out;
@@ -157,7 +137,7 @@
 
 .layout-footer {
   z-index: 0;
-  padding: 3rem 1.5rem;
+  padding: 48px 24px;
   color: #f0f0f0;
   background-color: #0f0f0f;
 }
@@ -1397,11 +1377,11 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .is-small {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .is-large {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .text-truncate {
