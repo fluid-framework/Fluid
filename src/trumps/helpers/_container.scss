@@ -12,10 +12,6 @@
     margin-right: auto;
     margin-left: auto;
 
-    @include border();
-    @include border-radius();
-    @include gradient-bg($white, 141deg);
-
     @include media-breakpoint-above(sm) {
       max-width: 90%;
     }
