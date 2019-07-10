@@ -44,4 +44,12 @@
       }
     }
   }
+
+  .breadcrumb.is-small {
+    @include fontsize($font-size-small);
+  }
+
+  .breadcrumb.is-large {
+    @include fontsize($font-size-large);
+  }
 }
