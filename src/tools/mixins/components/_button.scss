@@ -66,6 +66,10 @@
     box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
   }
 
+  @include focus {
+    background-color: rgba($color, .25);
+  }
+
   @include hover-focus {
     color: $hover-border;
   }
