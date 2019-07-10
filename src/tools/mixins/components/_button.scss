@@ -60,7 +60,6 @@
   border-color: $color;
   color: $color;
   $hover-border: clr-step($color, 2);
-  $focus-background: clr-step($color, -8);
   $active-border: clr-step($color, 4);
 
   @include hover {
@@ -68,7 +67,7 @@
   }
 
   @include focus {
-    background-color: $focus-background;
+    background-color: rgba($color, .25);
   }
 
   @include hover-focus {

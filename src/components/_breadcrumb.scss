@@ -19,27 +19,27 @@
         text-decoration: none;
       }
     }
+  }
 
-    > * {
-      padding-right: $breadcrumb-item-padding-x;
+  .breadcrumb-item {
+    padding-right: $breadcrumb-item-padding-x;
 
+    &:not(:first-child) {
+      @include before {
+        content: quote($breadcrumb-divider);
+        padding-right: $breadcrumb-item-padding-x;
+        color: $breadcrumb-divider-color;
+      }
+    }
+
+    @include active {
+      color: $breadcrumb-active-color;
+    }
+
+    &[fluid-separator] {
       &:not(:first-child) {
         @include before {
-          content: quote($breadcrumb-divider);
-          padding-right: $breadcrumb-item-padding-x;
-          color: $breadcrumb-divider-color;
-        }
-      }
-
-      @include active {
-        color: $breadcrumb-active-color;
-      }
-
-      &[fluid-separator]{
-        &:not(:first-child) {
-          @include before {
-            content: attr(fluid-separator);
-          }
+          content: attr(fluid-separator);
         }
       }
     }

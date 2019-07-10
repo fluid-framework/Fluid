@@ -9,7 +9,6 @@ code {
   margin-left: $code-margin-x;
   background: $code-bg;
 
-  @include border();
   @include border-radius($border-radius-default);
   @include font-size($code-font-size);
 }
