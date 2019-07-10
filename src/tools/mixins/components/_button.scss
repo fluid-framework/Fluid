@@ -60,15 +60,10 @@
   border-color: $color;
   color: $color;
   $hover-border: clr-step($color, 2);
-  $focus-background: clr-step($color, -8);
   $active-border: clr-step($color, 4);
 
   @include hover {
     box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
-  }
-
-  @include focus {
-    background-color: $focus-background;
   }
 
   @include hover-focus {
