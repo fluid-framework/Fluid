@@ -1,0 +1,9 @@
+@if $generate-helper-classes {
+  //
+  // Doc : add Doc
+  //
+  .float {
+    @extend %clearfix;
+    display: block;
+  }
+}
