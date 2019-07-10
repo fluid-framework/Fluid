@@ -9,7 +9,8 @@ $input-padding-x:                                .75em !default;
 $input-font-family:                              null !default;
 $input-line-height:                              $line-height !default;
 
-$input-focus-width:                              .2em !default;
+// Using rem for consistent focus width
+$input-focus-width:                              .2rem !default;
 
 $input-disabled-bg:                              $gray-600 !default;
 $input-disabled-opacity:                         .65 !default;
