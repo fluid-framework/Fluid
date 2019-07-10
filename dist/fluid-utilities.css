@@ -1,5 +1,5 @@
 /**
- * Fluid Utilities v0.7.0
+ * Fluid Utilities v0.8.0
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -64,6 +64,7 @@
   padding-left: 12px;
   margin-right: auto;
   margin-left: auto;
+  border-radius: 0.25em;
   background-color: #fff;
 }
 
@@ -656,7 +657,7 @@
 }
 
 .border {
-  border: 1px solid #b8b8b8 !important;
+  border: 1px solid #d4d4d4 !important;
 }
 
 .border-none {
@@ -664,19 +665,19 @@
 }
 
 .border-t {
-  border-top: 1px solid #b8b8b8 !important;
+  border-top: 1px solid #d4d4d4 !important;
 }
 
 .border-b {
-  border-bottom: 1px solid #b8b8b8 !important;
+  border-bottom: 1px solid #d4d4d4 !important;
 }
 
 .border-r {
-  border-right: 1px solid #b8b8b8 !important;
+  border-right: 1px solid #d4d4d4 !important;
 }
 
 .border-l {
-  border-left: 1px solid #b8b8b8 !important;
+  border-left: 1px solid #d4d4d4 !important;
 }
 
 .border-wide {
@@ -1384,7 +1385,7 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .font-sans-serif {
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .font-serif {
@@ -1393,6 +1394,14 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 
 .font-monospace {
   font-family: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+.is-small {
+  font-size: 0.8rem;
+}
+
+.is-large {
+  font-size: 1.2rem;
 }
 
 .text-truncate {

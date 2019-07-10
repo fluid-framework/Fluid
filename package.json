@@ -1,6 +1,6 @@
 {
   "name": "fluid",
-  "version": "v0.7.0",
+  "version": "v0.8.0",
   "version_short": "0.4",
   "homepage": "https://fluid-framework/fluid",
   "author": {
@@ -41,6 +41,7 @@
     "test:usedvar": "fusv ./src",
     "test:stylelint": "stylelint src/**/*.scss",
     "test:compile": "node-sass ./src --output ./temp",
+    "build": "npm-run-all dist",
     "dist": "npm-run-all -s test dist:*",
     "dist:clean": "shx rm -rf ./dist",
     "dist:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map true",

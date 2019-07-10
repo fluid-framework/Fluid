@@ -1,5 +1,5 @@
 /**
- * Fluid Utilities v0.7.0
+ * Fluid Utilities v0.8.0
  * Copyright (c) 2019-2027 fluid-framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -14,17 +14,20 @@ main {
   display: block;
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   margin: 0;
   color: #474747;
   background-color: #f0f0f0;
   text-align: left;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-size: 14px;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -32,7 +35,7 @@ body {
 }
 
 hr {
-  margin: 1rem 0;
+  margin: 1em 0;
   border: 0;
   opacity: 0.25;
   color: inherit;
@@ -45,7 +48,8 @@ hr:not([size]) {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
+  color: #0f0f0f;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -76,7 +80,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 abbr[title],
@@ -305,7 +309,7 @@ legend {
 
 mark {
   padding: .2em;
-  background-color: #fcf8e3;
+  background-color: #ffe58f;
 }
 
 progress {
