@@ -14,10 +14,9 @@ main {
   display: block;
 }
 
-// Html
-// 1. rem unit follow html head font size using this will set the font size to framework font size
-//    this will lead to consistent rem unit among all browsers
-html {
+// root
+// 1. set the font size root, this will lead to consistent rem unit among all browsers
+:root {
   @include fontsize($font-size-default); // 1
 }
 
