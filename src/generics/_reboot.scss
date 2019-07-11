@@ -15,7 +15,7 @@ main {
 }
 
 // root
-// 1. set the font size root, this will lead to consistent rem unit among all browsers
+// 1. set the font size at root, this will lead to consistent rem unit among all browsers
 :root {
   @include fontsize($font-size-default); // 1
 }
