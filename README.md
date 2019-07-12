@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Modern, Stylish, Easier and Powerful front-end framework for faster web development.
+  Modern, Stylish, Easier and Powerful Css framework for faster and hassle free web development.
   <br>
   <br>
   <a href="https://github.com/fluid-framework/fluid/issues/new?template=bug.md">Report bug 🐛</a>
