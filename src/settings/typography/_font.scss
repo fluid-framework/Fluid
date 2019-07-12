@@ -11,9 +11,9 @@ $font-family-sans-serif:       -apple-system, // Safari for OS X and iOS (San Fr
                                "Segoe UI", // Windows 6+
                                "PingFang SC", // East Asian languages // Simplified Chinese
                                "Hiragino Sans GB", // East Asian languages // Japanese
-                               Ubuntu, // Ubuntu 10.10+
-                               Cantarell, // Gnome 3+
-                               Noto Sans, // KDE Plasma 5+
+                               "Ubuntu", // Ubuntu 10.10+
+                               "Cantarell", // Gnome 3+
+                               "Noto Sans", // KDE Plasma 5+
                                "Helvetica Neue", // fallback
                                arial, // fallback
                                sans-serif, // fallback
@@ -22,10 +22,10 @@ $font-family-sans-serif:       -apple-system, // Safari for OS X and iOS (San Fr
                                "Segoe UI Symbol", // Windows emoji
                                "Noto Color Emoji" !default; // Linux emoji
 $font-family-serif:            georgia, cambria, "Times New Roman", times, serif !default;
-$font-family-monospace:        menlo, // macOS 10.10+
-                               ubuntu monospace, // Ubuntu 10.10+
-                               noto mono, // KDE Plasma 5+
-                               oxygen mono, // KDE Plasma 4+
+$font-family-monospace:        "Menlo", // macOS 10.10+
+                               "Ubuntu monospace", // Ubuntu 10.10+
+                               "Noto Mono", // KDE Plasma 5+
+                               "Oxygen Mono", // KDE Plasma 4+
                                "Liberation Mono", // Linux/OpenOffice
                                "Courier New", // fallback
                                monospace !default; // fallback
