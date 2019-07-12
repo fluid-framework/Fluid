@@ -6,7 +6,19 @@ $font-size-default:            14px !default;
 $font-size-small:              $default-small-quantity * 1rem !default;
 $font-size-large:              $default-large-quantity * 1rem !default;
 
-$font-family-sans-serif:       -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:       -apple-system, // Safari for OS X and iOS (San Francisco)
+                               blinkmacsystemfont, // Chrome < 56 for OS X (San Francisco)
+                               "Segoe UI", // Windows
+                               "PingFang SC", // East Asian languages // Simplified Chinese
+                               "Hiragino Sans GB", // East Asian languages // Japanese
+                               "Helvetica Neue", // fallback
+                               arial, // fallback
+                               sans-serif, // fallback
+                               "Apple Color Emoji", // macOS emoji
+                               "Segoe UI Emoji", // Windows emoji
+                               "Segoe UI Symbol", // Windows emoji
+                               "Noto Color Emoji" !default; // Linux emoji
+
 $font-family-serif:            georgia, cambria, "Times New Roman", times, serif !default;
 $font-family-monospace:        sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-default:          $font-family-sans-serif !default;
