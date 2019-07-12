@@ -43,6 +43,13 @@
     "declaration-block-semicolon-space-after": "always-single-line",
     "declaration-empty-line-before": null,
     "declaration-no-important": true,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates"]
+      }
+    ],
+
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": [
       "named-where-possible",
