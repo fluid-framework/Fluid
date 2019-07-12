@@ -1,0 +1,74 @@
+@if $generate-helper-classes {
+  //
+  // Doc : add Doc
+  //
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  //
+  // Doc : add doc
+  //
+  .text-initial {
+    float: left;
+    padding-right: .5rem;
+    font-size: 3em;
+    line-height: 1;
+  }
+
+  //
+  // Doc : add doc
+  //
+  .text-break {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  //
+  // Doc : add doc
+  //
+  .text-clip {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  //
+  // Doc : add doc
+  //
+  .text-reset {
+    text-transform: none;
+    // Fallback for where `start` is not supported
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    word-break: normal;
+    white-space: normal;
+    text-shadow: none;
+    font-family: $font-family-default;
+    font-weight: $font-weight-default;
+    font-style: normal;
+    line-height: $line-height;
+    line-break: auto;
+  }
+
+  //
+  // Doc : add doc
+  //
+  .text-hide {
+    // stylelint-disable-next-line declaration-no-important
+    border: 0 !important;
+    // stylelint-disable-next-line declaration-no-important
+    color: transparent !important;
+    // stylelint-disable-next-line declaration-no-important
+    background-color: transparent !important;
+    // stylelint-disable-next-line declaration-no-important
+    text-shadow: none !important;
+    // stylelint-disable-next-line font-family-no-missing-generic-family-keyword, declaration-no-important
+    font: "0/0" a !important;
+  }
+}

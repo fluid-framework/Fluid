@@ -13,7 +13,7 @@
 
 // Helpers
 
-// icon
+// icon Helper
 @import "./trumps/helpers/icon";
 
 // screen readers Helper
@@ -31,14 +31,15 @@
 // img Helper
 @import "./trumps/helpers/image";
 
+// typo Utility
+@import "./trumps/helpers/typography";
+
+// clear fix Utility
+@import "./trumps/helpers/clearfix";
+
 //
 // Utilities
 //
-
-// Todo : review Utilities to use is and has
-
-// clear fix Utility
-@import "./trumps/utilities/clearfix";
 
 // float Utility
 @import "./trumps/utilities/float";
@@ -83,6 +84,11 @@
 @import "./trumps/utilities/grid-flex/fill";
 @import "./trumps/utilities/grid-flex/grow";
 @import "./trumps/utilities/grid-flex/shrink";
+@import "./trumps/utilities/grid-flex/direction";
+@import "./trumps/utilities/grid-flex/wrap";
+@import "./trumps/utilities/grid-flex/align";
+@import "./trumps/utilities/grid-flex/justify";
+@import "./trumps/utilities/grid-flex/order";
 
 // typo Utility
 @import "./trumps/utilities/typography/text-transform";
