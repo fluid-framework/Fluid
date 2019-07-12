@@ -800,6 +800,11 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
+commander@^2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
+  integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
+
 component-emitter@^1.2.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
@@ -1261,14 +1266,15 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-find-unused-sass-variables@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/find-unused-sass-variables/-/find-unused-sass-variables-0.3.3.tgz#ef5ce2eab20d1aea486b6c88fb6b44de31e58c63"
-  integrity sha512-WLUWWkJIxxKjbR8tKQoZcGJrjxJRU36q28snybRu9nzB04/HNUoBU265AYsImND3G4NV46rdTMyqf+YTtuSVMA==
+find-unused-sass-variables@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/find-unused-sass-variables/-/find-unused-sass-variables-0.4.0.tgz#771cdbbc6e18c21ec3b4f9e7241a0b1052653ddc"
+  integrity sha512-7lD9m+ujksQAHThLB7doiiCWsM575IKBQgc+0ZdHt38UsWYuspzyz1e5ZJBQ5SCJAmX7in03x02A/mOEBpCoqg==
   dependencies:
     chalk "^2.4.2"
+    commander "^2.20.0"
     glob "^7.1.3"
-    ora "^3.2.0"
+    ora "^3.4.0"
     postcss "^7.0.14"
     postcss-scss "^2.0.0"
 
@@ -2745,7 +2751,7 @@ ora@^0.2.3:
     cli-spinners "^0.1.2"
     object-assign "^4.0.1"
 
-ora@^3.2.0:
+ora@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/ora/-/ora-3.4.0.tgz#bf0752491059a3ef3ed4c85097531de9fdbcd318"
   integrity sha512-eNwHudNbO1folBP3JsZ19v9azXWtQZjICdr3Q0TDPIaeBQ3mXLrh54wM+er0+hSp+dWKf+Z8KM58CYzEyIYxYg==
