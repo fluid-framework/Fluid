@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid v0.9.4
+ * Fluid v0.9.5
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -30,7 +30,7 @@ body {
   color: #474747;
   background-color: #f0f0f0;
   text-align: left;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -180,7 +180,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -4344,7 +4344,7 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .font-sans-serif {
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .font-serif {
@@ -4352,7 +4352,7 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .font-monospace {
-  font-family: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", "Courier New", monospace !important;
 }
 
 .is-small {
