@@ -10,7 +10,7 @@
     map-merge(
       $theme-colors,
       (
-        body: $body-bg,
+        body: $body-background,
         black: $black,
         black-25: rgba($black, .25),
         black-50: rgba($black, .5),
@@ -50,9 +50,9 @@
       map-merge(
         $GRADIENTS,
         (
-          body: $body-color linear-gradient(140deg, mix($body-bg, $body-color, 15%), $body-color) repeat-x,
-          black: $black linear-gradient(140deg, mix($body-bg, $black, 15%), $black) repeat-x,
-          white: $white linear-gradient(140deg, mix($body-bg, $white, 15%), $white) repeat-x
+          body: $body-color linear-gradient(140deg, mix($body-background, $body-color, 15%), $body-color) repeat-x,
+          black: $black linear-gradient(140deg, mix($body-background, $black, 15%), $black) repeat-x,
+          white: $white linear-gradient(140deg, mix($body-background, $white, 15%), $white) repeat-x
         )
       ),
       enable-important-values: true

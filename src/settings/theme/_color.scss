@@ -52,7 +52,6 @@ $gray-800:       hsl(0, 0%, 17%) !default;
 $gray-900:       hsl(0, 0%, 6%) !default;
 $black:          #000 !default;
 
-
 //
 // Theme Colors Settings
 //
@@ -76,7 +75,6 @@ $theme-colors: (
   "light":           $light,
   "dark":            $dark
 ) !default;
-
 
 // Combine All colors if $enable-all-color-variant option is enabled
 @if $enable-all-color-variant {

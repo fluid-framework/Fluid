@@ -15,14 +15,14 @@
     z-index: $header-zindex;
     width: 100%;
     height: $header-height;
-    padding-right: $header-padding-x / 2;
-    padding-left: $header-padding-x / 2;
+    padding-right: $header-padding-x;
+    padding-left: $header-padding-x;
     border-top: $header-border-top;
     color: $header-color;
-    background-color: $header-bg;
+    background-color: $header-background;
     line-height: $header-height;
 
-    @include transition(height .35s ease-in-out, line-height .35s ease-in-out);
+    @include transition($header-transition);
 
     &.is-collapsed {
       height: $header-height-collapsed;
@@ -36,7 +36,7 @@
   .layout-main {
     @extend %position-relative;
     z-index: $main-zindex;
-    background: $body-bg;
+    background: $body-background;
   }
 
   //
@@ -52,12 +52,12 @@
     width: 100%;
     padding: $sidebar-padding;
     color: $sidebar-color;
-    background-color: $sidebar-bg;
-    @include transition(left .5s ease-in-out);
+    background-color: $sidebar-background;
+    @include transition($sidebar-transition);
 
     @include media-breakpoint-above(sm) {
-      min-width: 16.5rem;
-      max-width: 60vw;
+      min-width: $sidebar-min-width;
+      max-width: $sidebar-max-width;
     }
   }
 
@@ -81,11 +81,11 @@
     height: 100%;
     border-color: transparent;
     border-radius: 0;
-    background: rgba($black, .75);
+    background: $overlay-background;
 
     @if $enable-transitions {
       opacity: 0;
-      @include transition(opacity .35s ease-in-out, visibility .35s ease-in-out);
+      @include transition($overlay-transition);
     }
   }
 
@@ -104,8 +104,8 @@
   .layout-footer {
     @extend %position-relative;
     z-index: $footer-zindex;
-    padding: ($footer-padding-y / 2) ($footer-padding-x / 2);
+    padding: $footer-padding-y $footer-padding-x;
     color: $footer-color;
-    background-color: $footer-bg;
+    background-color: $footer-background;
   }
 }
