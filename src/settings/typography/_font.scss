@@ -24,7 +24,7 @@ $font-family-monospace:        "Menlo", // macOS 10.10+
                                "Noto Mono", // KDE Plasma 5+
                                "Oxygen Mono", // KDE Plasma 4+
                                "Liberation Mono", // Linux/OpenOffice
-                               "Courier New", // fallback
+                               consolas, // fallback
                                monospace !default; // fallback
 $font-weight-lighter:          lighter !default;
 $font-weight-light:            300 !default;
