@@ -24,7 +24,7 @@ pre {
       content: attr(fluid-lang);
       position: absolute;
       top: 5px;
-      right: -2px;
+      right: -1px;
       padding: $pre-code-langbadge-padding;
       color: clr-auto($pre-code-langbadge-background, $black, $white);
       background: $pre-code-langbadge-background;
