@@ -103,6 +103,7 @@
         border: $border-width-default solid $gray-200;
         color: $group-list-color;
         background-color: $group-list-background;
+        text-decoration: none;
 
         @include border-radius();
         @include transition($button-transition);
