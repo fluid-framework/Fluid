@@ -15,6 +15,7 @@ code {
 // Blocks of code
 pre {
   > code {
+    @include font-size(inherit);
     position: relative;
     display: block;
     padding: $pre-code-padding;
