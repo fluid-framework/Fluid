@@ -9,6 +9,7 @@
   //
   .group {
     display: inline-flex;
+    flex-wrap: wrap;
 
     > .input,
     > .button,
