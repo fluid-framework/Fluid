@@ -3,13 +3,15 @@
 //
 
 $border-color:                    $gray-200 !default;
-
-$border-width-default:            1px !default;
+$border-width-normal:             1px !default;
 $border-width-wide:               3px !default;
-
-$border-defaut:                   $border-width-default solid $border-color !default;
-
-$border-radius-default:           .25em !default;
-$border-radius-small:             .2em !default;
-$border-radius-large:             .3em !default;
+$border-radius-small:             .25em !default;
+$border-radius-normal:            .5em !default;
+$border-radius-large:             1em !default;
 $border-radius-pill:              50em !default;
+
+// Derived Settings
+
+$border-width-default:            $border-width-normal !default;
+$border-radius-default:           $border-radius-normal !default;
+$border-defaut:                   $border-width-default solid $border-color !default;

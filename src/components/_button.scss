@@ -24,12 +24,12 @@
     line-height: $button-line-height;
 
     @include border-radius($button-border-radius);
-    @include fontsize($font-size-default);
+    @include fontsize($font-size);
     @include transition($button-transition);
 
     @include hover {
       color: $body-color;
-      box-shadow: 0 0 0 $button-focus-width rgba($button-theme-default, .5);
+      box-shadow: 0 0 0 $button-focus-width rgba($button-theme, .5);
     }
 
     @include focus {
@@ -43,8 +43,8 @@
 
     // Is-solid
     &.is-solid {
-      color: clr-auto($button-theme-default);
-      @include button-design-solid-varient($button-theme-default);
+      color: clr-auto($button-theme);
+      @include button-design-solid-varient($button-theme);
 
       // Color variants
       @each $color, $value in $theme-colors {
@@ -70,7 +70,7 @@
 
     // Is-outline
     &.is-outline {
-      @include button-design-outline-varient($button-theme-default); // Default button theme
+      @include button-design-outline-varient($button-theme); // Default button theme
 
       // Color variants
       @each $color, $value in $theme-colors {
@@ -81,7 +81,7 @@
 
       @include disabled {
         border-color: $button-disabled-background;
-        color: $button-theme-default;
+        color: $button-theme;
       }
     }
 
@@ -103,7 +103,7 @@
         @include transition(box-shadow .15s ease-in-out, bottom .15s ease-in-out);
       }
 
-      @include button-design-minimal-varient($button-theme-default); // Default button theme
+      @include button-design-minimal-varient($button-theme); // Default button theme
 
       // Color variants
       @each $color, $value in $theme-colors {
@@ -129,7 +129,7 @@
       }
 
       @include disabled {
-        color: $button-theme-default;
+        color: $button-theme;
         @include after {
           border-bottom-color: $button-disabled-background;
         }
@@ -157,7 +157,7 @@
     pointer-events: none;
     // stylelint-disable-next-line declaration-no-important
     color: transparent !important;
-    @include loading-spinner($button-theme-default);
+    @include loading-spinner($button-theme);
   }
 
   //

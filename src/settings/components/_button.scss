@@ -7,10 +7,10 @@ $button-iscircle-padding:                        1em !default;
 
 // Derived Settings
 
-$button-theme-default:                           $input-theme-default !default;
+$button-theme:                                   $input-theme !default;
 $button-padding-x:                               $input-padding-x !default;
 $button-padding-y:                               $input-padding-y !default;
-$button-border-radius:                           $border-radius-default !default;
+$button-border-radius:                           $input-radius !default;
 $button-focus-width:                             $input-focus-width !default;
 $button-font-family:                             $input-font-family !default;
 $button-font-weight:                             $font-weight-normal !default;
