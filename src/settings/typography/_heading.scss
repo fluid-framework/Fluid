@@ -3,13 +3,14 @@
 //
 
 $headings-color:               $gray-900 !default;
-
 $headings-font-family:         null !default;
 $headings-font-weight:         500 !default;
 $headings-font-style:          null !default;
-
 $headings-line-height:         1.2 !default;
-$headings-margin-bottom:       $space-default / 2 !default;
+
+// Derived Settings
+
+$headings-margin-bottom:       $space-default-typography / 2 !default;
 
 $h1-font-size:                 $font-size-default * 2.5 !default;
 $h2-font-size:                 $font-size-default * 2 !default;

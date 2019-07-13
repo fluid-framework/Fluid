@@ -98,25 +98,25 @@
     &.list {
       display: flex; // override group inline-flex
       > .list-item {
-        padding: $list-group-item-padding-y $list-group-item-padding-x;
+        padding: $group-list-item-padding-y $group-list-item-padding-x;
         // avoid using @mixin to generate borders independent of `$design-shadow-else-border` option
         border: $border-width-default solid $gray-200;
-        color: $list-group-color;
-        background-color: $list-group-background;
+        color: $group-list-color;
+        background-color: $group-list-background;
 
         @include border-radius($border-radius-default);
         @include transition($button-transition);
 
         @include disabled {
           pointer-events: none;
-          opacity: $input-disabled-opacity;
-          color: $list-group-disabled-color;
+          opacity: $group-list-item-disabled-opacity;
+          color: $group-list-disabled-color;
         }
 
         @include active {
-          border-color: $list-group-active-border-color;
-          color: clr-auto($list-group-active-background);
-          background-color: $list-group-active-background;
+          border-color: $group-list-active-border-color;
+          color: clr-auto($group-list-active-background);
+          background-color: $group-list-active-background;
         }
       }
     }

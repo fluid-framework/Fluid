@@ -2,13 +2,11 @@
 // Button Settings
 //
 
-// Settings
-
-$button-theme-default:                           $gray-600 !default;
 $button-transition:                              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // Derived Settings
 
+$button-theme-default:                           $input-theme-default !default;
 $button-padding-x:                               $input-padding-x !default;
 $button-padding-y:                               $input-padding-y !default;
 $button-border-radius:                           $border-radius-default !default;
