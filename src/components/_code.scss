@@ -14,7 +14,7 @@ code {
 
 // Blocks of code
 pre {
-  code {
+  > code {
     position: relative;
     display: block;
     padding: $pre-code-padding;
