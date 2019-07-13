@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid Grid v0.9.6
+ * Fluid Grid v0.9.7
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -935,7 +935,7 @@
 
 .group.list > .list-item.disabled, .group.list > .list-item:disabled {
   pointer-events: none;
-  opacity: .65;
+  opacity: 0.65;
   color: #636363;
 }
 

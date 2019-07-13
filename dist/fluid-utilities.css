@@ -1,5 +1,5 @@
 /**
- * Fluid Utilities v0.9.6
+ * Fluid Utilities v0.9.7
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -71,7 +71,7 @@
   color: #0f0f0f;
   background-color: #fff;
   line-height: 64px;
-  transition: height 0.35s ease-in-out,line-height 0.35s ease-in-out;
+  transition: height 0.35s ease-in-out, line-height 0.35s ease-in-out;
 }
 
 .layout-header.is-collapsed {
@@ -92,14 +92,13 @@
   z-index: 15;
   width: 100%;
   padding: 28px 14px;
-  color: #fff;
-  background-color: #2b2b2b;
+  background-color: #fff;
   transition: left 0.5s ease-in-out;
 }
 
 @media (min-width: 576px) {
   .layout-sidebar {
-    min-width: 16.5rem;
+    min-width: 250px;
     max-width: 60vw;
   }
 }
@@ -123,7 +122,7 @@
   border-radius: 0;
   background: rgba(0, 0, 0, 0.75);
   opacity: 0;
-  transition: opacity 0.35s ease-in-out,visibility 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
 }
 
 .layout-sidebar.show ~ .overley,
