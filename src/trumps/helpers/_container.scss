@@ -15,5 +15,8 @@
     @include media-breakpoint-above(sm) {
       max-width: $container-max-width;
     }
+    & + & {
+      margin-top: 0.5rem;
+    }
   }
 }
