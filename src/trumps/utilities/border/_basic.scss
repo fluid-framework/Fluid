@@ -7,7 +7,7 @@
     properties: border,
     class: border,
     values: (
-      null: $border-width-default solid $border-color,
+      null: $border-defaut,
       none: none
     ),
     enable-important-values: true
