@@ -11,9 +11,8 @@
     display: inline-block;
     user-select: none;
     padding: $button-padding-y $button-padding-x;
-    // Using px unit to keep spacing constant regardless of font-size
-    margin-top: 2.25px;
-    margin-bottom: 2.25px;
+    margin-top: 2.25px; // Using px unit to keep spacing constant regardless of font-size
+    margin-bottom: 2.25px; // Using px unit to keep spacing constant regardless of font-size
     border: $border-width-default solid transparent;
     color: $body-color;
     background-color: transparent;
@@ -175,6 +174,6 @@
 
   // useful for button with only icons
   .button.is-circle {
-    padding: .375em;
+    padding: $button-iscircle-padding;
   }
 }

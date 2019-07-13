@@ -145,7 +145,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: $space-default-typography;
   font-style: normal;
   line-height: inherit;
 }
@@ -169,7 +169,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: $space-default-typography;
   margin-left: 0; // Undo browser default
 }
 
@@ -183,7 +183,7 @@ strong {
 }
 
 small {
-  font-size: percentage($default-small-quantity); // Add the correct font size in all browsers
+  @include fontsize(percentage($default-small-quantity)); // Add the correct font size in all browsers
 }
 
 //
@@ -196,14 +196,15 @@ sup {
   position: relative;
   vertical-align: baseline;
   line-height: 0;
-  @include fontsize(75%);
+  @include fontsize(percentage($default-small-quantity));
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -$space-default-typography * .5;
 }
+
 sup {
-  top: -.5em;
+  top: -$space-default-typography;
 }
 
 //
@@ -426,11 +427,11 @@ legend {
   color: inherit; // 2
   white-space: normal; // 1
   line-height: inherit;
-  @include fontsize(1.5rem);
+  @include fontsize($font-size-large);
 }
 
 mark {
-  padding: .2em;
+  padding: $space-default-typography * .5;
   background-color: #ffe58f;
 }
 

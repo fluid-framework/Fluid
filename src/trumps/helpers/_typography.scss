@@ -13,8 +13,8 @@
   //
   .text-initial {
     float: left;
-    padding-right: .5rem;
-    font-size: 3em;
+    padding-right: .18em;
+    @include fontsize(3em);
     line-height: 1;
   }
 
