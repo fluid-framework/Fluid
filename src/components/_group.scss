@@ -104,7 +104,7 @@
         color: $group-list-color;
         background-color: $group-list-background;
 
-        @include border-radius($border-radius-default);
+        @include border-radius();
         @include transition($button-transition);
 
         @include disabled {
