@@ -79,6 +79,3 @@ $theme-colors: (
 @if $enable-all-color-variant {
   $theme-colors: map-merge($colors, $theme-colors);
 }
-
-// design color steps interval
-$color-step-interval:       10% !default;
