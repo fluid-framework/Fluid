@@ -24,12 +24,6 @@ $enable-prefers-reduced-motion-media-query:   true !default;    // Disable trans
 $enable-fluid-font-sizes:                     false !default;   // Enable Fluid typography
 
 //
-// icons
-//
-
-@import "./icon/icon";
-
-//
 // Breakpoints
 //
 
@@ -46,6 +40,12 @@ $enable-fluid-font-sizes:                     false !default;   // Enable Fluid 
 //
 
 @import "./containers/containers";
+
+//
+// icons
+//
+
+@import "./icon/icon";
 
 //
 // Spacing
@@ -66,7 +66,6 @@ $enable-fluid-font-sizes:                     false !default;   // Enable Fluid 
 @import "./typography/text";
 @import "./typography/font";
 @import "./typography/heading";
-@import "./typography/paragraph";
 @import "./typography/code";
 
 //
@@ -78,7 +77,6 @@ $enable-fluid-font-sizes:                     false !default;   // Enable Fluid 
 @import "./design/link";
 @import "./design/hr";
 @import "./design/table";
-@import "./design/forms";
 
 //
 // Miscellaneous

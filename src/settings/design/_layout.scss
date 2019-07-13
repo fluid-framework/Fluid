@@ -8,7 +8,6 @@ $header-background:                  $white !default;
 $header-color:                       $gray-900 !default;
 $header-border-top:                  $border-width-wide solid $primary !default;
 $header-height:                      64px !default;
-$header-height-collapsed:            $header-height * $default-small-quantity !default;
 $header-padding-x:                   24px !default;
 $header-zindex:                      10 !default;
 $header-transition:                  height .35s ease-in-out, line-height .35s ease-in-out !default;
@@ -37,3 +36,8 @@ $sidebar-max-width:                  60vw !default;
 $overlay-background:                 rgba($black, .75) !default;
 $overlay-zindex:                     11 !default;
 $overlay-transition:                 opacity .35s ease-in-out, visibility .35s ease-in-out !default;
+
+// Derived Settings
+
+// Header
+$header-height-collapsed:            $header-height * $default-small-quantity !default;

@@ -3,9 +3,6 @@
 //
 
 $font-size-default:            14px !default;
-$font-size-small:              $default-small-quantity * 1rem !default;
-$font-size-large:              $default-large-quantity * 1rem !default;
-
 $font-family-sans-serif:       -apple-system, // Safari for OS X and iOS (San Francisco)
                                blinkmacsystemfont, // Chrome < 56 for OS X (San Francisco)
                                "Segoe UI", // Windows 6+
@@ -29,13 +26,16 @@ $font-family-monospace:        "Menlo", // macOS 10.10+
                                "Liberation Mono", // Linux/OpenOffice
                                "Courier New", // fallback
                                monospace !default; // fallback
-$font-family-default:          $font-family-sans-serif !default;
-
 $font-weight-lighter:          lighter !default;
 $font-weight-light:            300 !default;
 $font-weight-normal:           400 !default;
 $font-weight-bold:             700 !default;
 $font-weight-bolder:           bolder !default;
-$font-weight-default:          $font-weight-normal !default;
-
 $line-height:                  1.5 !default;
+
+// Derived Settings
+
+$font-size-small:              $default-small-quantity * 1rem !default;
+$font-size-large:              $default-large-quantity * 1rem !default;
+$font-family-default:          $font-family-sans-serif !default;
+$font-weight-default:          $font-weight-normal !default;

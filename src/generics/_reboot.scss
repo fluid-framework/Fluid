@@ -124,7 +124,7 @@ h6 {
 // Similarly, the top margin on `<p>`s get reset.
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: $space-default-typography;
 }
 
 // Abbreviations

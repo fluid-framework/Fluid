@@ -8,7 +8,7 @@
 //
 // Required arguments:
 // {String} $border - border strings
-@mixin border($border: $border-width-default solid $border-color, $direction: null) {
+@mixin border($border: $border-defaut, $direction: null) {
   @if not $design-shadow-else-border {
     $direction: if($direction, prefix($direction, "-"), null);
     border#{$direction}: $border;

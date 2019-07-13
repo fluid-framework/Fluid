@@ -4,10 +4,16 @@
 
 // Shared Settings between various Inputs
 
-$input-disabled-background:                      $gray-600 !default;
+$input-theme-default:                            $gray-600 !default;
+$input-disabled-background:                      $input-theme-default !default;
 $input-disabled-opacity:                         .65 !default;
 $input-padding-y:                                .375em !default;
 $input-padding-x:                                .75em !default;
 $input-font-family:                              null !default;
-$input-line-height:                              $line-height !default;
 $input-focus-width:                              .2rem !default; // Using rem for consistent focus width
+
+// Derived Settings
+
+$input-line-height:                              $line-height !default;
+
+$label-margin-bottom:                            $space-default-typography !default;
