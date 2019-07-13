@@ -62,7 +62,7 @@
 
       @include disabled {
         color: $white;
-        background: $button-disabled-bg;
+        background: $button-disabled-background;
         @if not $design-solid-else-gradients {
           background-image: none; // Remove CSS gradients if they're enabled
         }
@@ -81,7 +81,7 @@
       }
 
       @include disabled {
-        border-color: $button-disabled-bg;
+        border-color: $button-disabled-background;
         color: $button-theme-default;
       }
     }
@@ -132,7 +132,7 @@
       @include disabled {
         color: $button-theme-default;
         @include after {
-          border-bottom-color: $button-disabled-bg;
+          border-bottom-color: $button-disabled-background;
         }
       }
     }

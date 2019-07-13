@@ -1,0 +1,14 @@
+//
+// Group Settings
+//
+
+$group-elments-zindex:                   10 !default;
+
+// list Group Setting
+$list-group-color:                       inherit !default;
+$list-group-background:                  $white !default;
+$list-group-active-background:           $primary !default;
+$list-group-active-border-color:         $list-group-active-background !default;
+$list-group-disabled-color:              $text-disabled !default;
+$list-group-item-padding-y:              .75em !default;
+$list-group-item-padding-x:              1.25em !default;

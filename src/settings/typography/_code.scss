@@ -2,7 +2,13 @@
 // Code Settings
 //
 
-$code-font-size:                    .85em !default;
-$code-bg:                           $gray-200 !default;
-$code-margin-x:                     .2em !default;
-$code-padding:                      .2em .4em .1em !default;
+$code-font-size:                       .85em !default;
+$code-background:                      $gray-200 !default;
+$code-margin-x:                        .2em !default;
+$code-padding:                         .2em .4em .1em !default;
+
+$pre-code-padding:                     1em !default;
+$pre-code-langbadge-background:        $primary !default;
+$pre-code-langbadge-texttransform:     uppercase !default;
+$pre-code-langbadge-fontweight:        bold !default;
+$pre-code-langbadge-padding:           2px 16px 2px 8px !default;

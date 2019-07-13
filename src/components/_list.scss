@@ -8,6 +8,8 @@
     text-decoration: none;
 
     > .list-item {
+      // no need to set list-style to none as the list items are already set to display block
+      // instead of display list
       display: block;
     }
 

@@ -29,11 +29,3 @@ $rotations: (
   225:   225deg,
   270:   270deg
 ) !default;
-
-// Various Aspect Ratios
-$aspect-ratios: (
-  "1-1":   ( x: 1,  y: 1  ),
-  "4-3":   ( x: 4,  y: 3  ),
-  "16-10": ( x: 16, y: 10 ),
-  "21-9":  ( x: 21, y: 9  )
-) !default;

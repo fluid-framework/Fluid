@@ -4,30 +4,36 @@
 // Using px unit to keep spacing constant regardless of font-size
 
 // Header
-$header-border-top:           $border-width-wide solid $primary !default;
-$header-bg:                   $white !default;
-$header-color:                $gray-900 !default;
-$header-padding-x:            48px !default;
-$header-zindex:               10 !default;
-$header-height:               64px !default;
-$header-height-collapsed:     $header-height * $default-small-quantity !default;
+$header-background:                  $white !default;
+$header-color:                       $gray-900 !default;
+$header-border-top:                  $border-width-wide solid $primary !default;
+$header-height:                      64px !default;
+$header-height-collapsed:            $header-height * $default-small-quantity !default;
+$header-padding-x:                   24px !default;
+$header-zindex:                      10 !default;
+$header-transition:                  height .35s ease-in-out, line-height .35s ease-in-out !default;
 
 // main and body layout
-$body-bg:                     $light !default;
-$body-color:                  $dark !default;
-$main-zindex:                 1 !default;
+$body-background:                    $light !default;
+$body-color:                         $dark !default;
+$main-zindex:                        1 !default;
 
 // Footer
-$footer-bg:                   $gray-900 !default;
-$footer-color:                $gray-100 !default;
-$footer-padding-x:            48px !default;
-$footer-padding-y:            96px !default;
-$footer-zindex:               0 !default;
+$footer-background:                  $gray-900 !default;
+$footer-color:                       $gray-100 !default;
+$footer-padding-x:                   24px !default;
+$footer-padding-y:                   48px !default;
+$footer-zindex:                      0 !default;
 
 // Sidebar
-$sidebar-bg:                  $gray-800 !default;
-$sidebar-color:               $white !default;
-$sidebar-padding:             28px 14px !default;
-$sidebar-zindex:              15 !default;
+$sidebar-background:                 $white !default;
+$sidebar-color:                      null !default;
+$sidebar-padding:                    28px 14px !default;
+$sidebar-zindex:                     15 !default;
+$sidebar-transition:                 left .5s ease-in-out !default;
+$sidebar-min-width:                  250px !default;
+$sidebar-max-width:                  60vw !default;
 
-$overlay-zindex:              11 !default;
+$overlay-background:                 rgba($black, .75) !default;
+$overlay-zindex:                     11 !default;
+$overlay-transition:                 opacity .35s ease-in-out, visibility .35s ease-in-out !default;

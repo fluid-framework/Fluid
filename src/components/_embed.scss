@@ -6,6 +6,7 @@
   //
   // Doc : add Doc
   //
+
   .embed {
     position: relative;
     display: block;
@@ -16,7 +17,8 @@
     @include before {
       content: "";
       display: block;
-      padding-top: percentage(9 / 16);
+      $EMBED-RATIO-DEFAULT: map-get($aspect-ratios, $embed-ratio-default); // get default embed ratio from map $aspect-ratio
+      padding-top: percentage(map-get($EMBED-RATIO-DEFAULT, x) / map-get($EMBED-RATIO-DEFAULT, y)); // get co-ordinates of default embed ratio
     }
   }
 
@@ -30,7 +32,8 @@
     border: 0;
   }
 
-  @each $key, $ratio in $aspect-ratios {
+  $ASPECT-RATIOS: map-remove($aspect-ratios, $embed-ratio-default); // remove default embed-ratio as its already set on embed
+  @each $key, $ratio in $ASPECT-RATIOS {
     .embed.is-#{$key} {
       @include before {
         padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
