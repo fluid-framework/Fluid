@@ -15,8 +15,7 @@
   // Remove gap from grid layout
   @if $enable-grid-gap {
     .no-gap > .column {
-      padding-right: 0;
-      padding-left: 0;
+      padding: 0
     }
   }
 
