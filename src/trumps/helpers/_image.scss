@@ -2,9 +2,16 @@
   //
   // Doc : add Doc
   //
-  .img-bg {
+  .image-bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+  //
+  // Doc : add Doc
+  //
+  .image {
+    max-width: 100%;
+    height: auto;
   }
 }
