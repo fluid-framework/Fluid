@@ -3,9 +3,6 @@
 //
 
 @if $generate-helper-classes {
-  //
-  // Doc : add Doc
-  //
   %position-relative {
     position: relative;
   }
@@ -14,6 +11,9 @@
     position: fixed;
   }
 
+  //
+  // Doc : add Doc
+  //
   .layout-header {
     @extend %position-relative;
     z-index: $header-zindex;
@@ -64,16 +64,28 @@
       min-width: $sidebar-min-width;
       max-width: $sidebar-max-width;
     }
-  }
 
-  .layout-sidebar:target,
-  .layout-sidebar.show {
-    left: 0;
+    &:target,
+    &.active {
+      left: 0;
+
+      & ~ .overley {
+        @extend %overlay-active;
+      }
+    }
   }
 
   //
   // Doc : add Doc
   //
+
+  %overlay-active {
+    visibility: visible;
+    @if $enable-transitions {
+      opacity: 1;
+    }
+  }
+
   .overley {
     @extend %position-fixed;
     top: 0;
@@ -90,14 +102,9 @@
       opacity: 0;
       @include transition($overlay-transition);
     }
-  }
 
-  .layout-sidebar.show ~ .overley,
-  .layout-sidebar.active ~ .overley,
-  .layout-sidebar:target ~ .overley {
-    visibility: visible;
-    @if $enable-transitions {
-      opacity: 1;
+    &.active {
+      @extend %overlay-active;
     }
   }
 
