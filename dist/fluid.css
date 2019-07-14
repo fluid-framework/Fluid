@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid v0.9.7
+ * Fluid v0.9.8
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -102,7 +102,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5em;
   font-style: normal;
   line-height: inherit;
 }
@@ -126,7 +126,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5em;
   margin-left: 0;
 }
 
@@ -152,11 +152,11 @@ sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 a {
@@ -180,7 +180,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", "Courier New", monospace;
+  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", consolas, monospace;
   font-size: 1em;
 }
 
@@ -315,11 +315,11 @@ legend {
   color: inherit;
   white-space: normal;
   line-height: inherit;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 mark {
-  padding: .2em;
+  padding: 0.25em;
   background-color: #ffe58f;
 }
 
@@ -369,8 +369,7 @@ template {
 }
 
 .no-gap > .column {
-  padding-right: 0;
-  padding-left: 0;
+  padding: 0;
 }
 
 .column {
@@ -1323,7 +1322,7 @@ template {
   text-decoration: none;
   font-weight: 400;
   line-height: 1.5;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
   font-size: 14px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2075,12 +2074,11 @@ template {
 }
 
 .button.is-circle {
-  padding: .375em;
+  padding: 1em;
 }
 
 .list {
   padding-left: 0;
-  text-decoration: none;
 }
 
 .list > .list-item {
@@ -2101,6 +2099,7 @@ template {
 
 .group {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .group > .input,
@@ -2220,11 +2219,12 @@ template {
 }
 
 .group.list > .list-item {
-  padding: 0.75em 1.25em;
+  padding: 0.75rem 1.25rem;
   border: 1px solid #d4d4d4;
   color: inherit;
   background-color: #fff;
-  border-radius: 0.25em;
+  text-decoration: none;
+  border-radius: 0.5em;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -2285,7 +2285,7 @@ template {
   list-style: none;
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   font-size: 14px;
 }
 
@@ -2299,7 +2299,7 @@ template {
 
 .breadcrumb-item:not(:first-child)::before {
   content: "🠚";
-  padding-right: 0.5em;
+  padding-right: 0.25em;
   color: #636363;
 }
 
@@ -2312,16 +2312,17 @@ template {
 }
 
 code {
-  position: relative;
   padding: 0.2em 0.4em 0.1em;
   margin-right: 0.2em;
   margin-left: 0.2em;
   background: #d4d4d4;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
   font-size: 0.85em;
 }
 
-pre code {
+pre > code {
+  font-size: inherit;
+  position: relative;
   display: block;
   padding: 1em;
   border-left: 3px solid #805ad5;
@@ -2329,18 +2330,18 @@ pre code {
   border-bottom-left-radius: 0;
 }
 
-pre code::before {
+pre > code::before {
   content: attr(fluid-lang);
   position: absolute;
   top: 5px;
-  right: -2px;
+  right: -1px;
   padding: 2px 16px 2px 8px;
   color: #fff;
   background: #805ad5;
   text-transform: uppercase;
   font-weight: bold;
-  border-top-left-radius: 0.25em;
-  border-bottom-left-radius: 0.25em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
 }
 
 .icon {
@@ -2388,6 +2389,10 @@ pre code::before {
   .container {
     max-width: 90%;
   }
+}
+
+.container + .container {
+  margin-top: .5rem;
 }
 
 .layout-header, .layout-main, .layout-sidebar, .layout-footer {
@@ -2486,7 +2491,7 @@ pre code::before {
 
 .text-initial {
   float: left;
-  padding-right: .5rem;
+  padding-right: .18em;
   font-size: 3em;
   line-height: 1;
 }
@@ -3021,7 +3026,7 @@ pre code::before {
 }
 
 .border-none {
-  border: none !important;
+  border: 0 !important;
 }
 
 .border-t {
@@ -3116,24 +3121,16 @@ pre code::before {
   border-style: outset !important;
 }
 
-.border-none {
-  border-style: none !important;
-}
-
-.border-hidden {
-  border-style: hidden !important;
-}
-
 .is-rounded {
-  border-radius: 0.25em !important;
+  border-radius: 0.5em !important;
 }
 
 .is-rounded-sm {
-  border-radius: 0.2em !important;
+  border-radius: 0.25em !important;
 }
 
 .is-rounded-lg {
-  border-radius: 0.3em !important;
+  border-radius: 1em !important;
 }
 
 .is-circle {
@@ -3149,23 +3146,23 @@ pre code::before {
 }
 
 .is-rounded-top {
-  border-top-left-radius: 0.25em !important;
-  border-top-right-radius: 0.25em !important;
+  border-top-left-radius: 0.5em !important;
+  border-top-right-radius: 0.5em !important;
 }
 
 .is-rounded-right {
-  border-top-right-radius: 0.25em !important;
-  border-bottom-right-radius: 0.25em !important;
+  border-top-right-radius: 0.5em !important;
+  border-bottom-right-radius: 0.5em !important;
 }
 
 .is-rounded-bottom {
-  border-bottom-right-radius: 0.25em !important;
-  border-bottom-left-radius: 0.25em !important;
+  border-bottom-right-radius: 0.5em !important;
+  border-bottom-left-radius: 0.5em !important;
 }
 
 .is-rounded-left {
-  border-top-left-radius: 0.25em !important;
-  border-bottom-left-radius: 0.25em !important;
+  border-top-left-radius: 0.5em !important;
+  border-bottom-left-radius: 0.5em !important;
 }
 
 .w-0 {
@@ -3976,10 +3973,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   }
 }
 
-.order-first {
-  order: -1 !important;
-}
-
 .order-0 {
   order: 0 !important;
 }
@@ -4028,8 +4021,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   order: 11 !important;
 }
 
-.order-12 {
-  order: 12 !important;
+.order-first {
+  order: -1 !important;
 }
 
 .order-last {
@@ -4037,9 +4030,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 576px) {
-  .order-first\@sm {
-    order: -1 !important;
-  }
   .order-0\@sm {
     order: 0 !important;
   }
@@ -4076,8 +4066,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@sm {
     order: 11 !important;
   }
-  .order-12\@sm {
-    order: 12 !important;
+  .order-first\@sm {
+    order: -1 !important;
   }
   .order-last\@sm {
     order: 25 !important;
@@ -4085,9 +4075,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 768px) {
-  .order-first\@md {
-    order: -1 !important;
-  }
   .order-0\@md {
     order: 0 !important;
   }
@@ -4124,8 +4111,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@md {
     order: 11 !important;
   }
-  .order-12\@md {
-    order: 12 !important;
+  .order-first\@md {
+    order: -1 !important;
   }
   .order-last\@md {
     order: 25 !important;
@@ -4133,9 +4120,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 992px) {
-  .order-first\@lg {
-    order: -1 !important;
-  }
   .order-0\@lg {
     order: 0 !important;
   }
@@ -4172,8 +4156,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@lg {
     order: 11 !important;
   }
-  .order-12\@lg {
-    order: 12 !important;
+  .order-first\@lg {
+    order: -1 !important;
   }
   .order-last\@lg {
     order: 25 !important;
@@ -4181,9 +4165,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 1200px) {
-  .order-first\@xl {
-    order: -1 !important;
-  }
   .order-0\@xl {
     order: 0 !important;
   }
@@ -4220,8 +4201,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@xl {
     order: 11 !important;
   }
-  .order-12\@xl {
-    order: 12 !important;
+  .order-first\@xl {
+    order: -1 !important;
   }
   .order-last\@xl {
     order: 25 !important;
@@ -4401,7 +4382,7 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .font-monospace {
-  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", "Courier New", monospace !important;
+  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", consolas, monospace !important;
 }
 
 .is-small {
