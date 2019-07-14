@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid v0.9.9
+ * Fluid v0.9.10
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -2395,8 +2395,12 @@ pre > code::before {
   margin-top: .5rem;
 }
 
-.layout-header, .layout-main, .layout-sidebar, .layout-footer {
+.layout-header, .layout-main, .layout-footer {
   position: relative;
+}
+
+.layout-sidebar, .overley {
+  position: fixed;
 }
 
 .layout-header {
@@ -2423,11 +2427,11 @@ pre > code::before {
 }
 
 .layout-sidebar {
-  position: fixed;
   top: 0;
   bottom: 0;
-  left: calc(-100% - (28px 14px * 2));
+  left: -100%;
   z-index: 15;
+  overflow: auto;
   width: 100%;
   padding: 28px 14px;
   background-color: #fff;
@@ -2436,18 +2440,22 @@ pre > code::before {
 
 @media (min-width: 576px) {
   .layout-sidebar {
+    width: inherit;
     min-width: 250px;
     max-width: 60vw;
   }
 }
 
-.layout-sidebar:target,
-.layout-sidebar.show {
+.layout-sidebar:target, .layout-sidebar.active {
   left: 0;
 }
 
+.layout-sidebar:target ~ .overley, .layout-sidebar.active ~ .overley, .overley.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .overley {
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -2456,18 +2464,9 @@ pre > code::before {
   visibility: hidden;
   width: 100%;
   height: 100%;
-  border-color: transparent;
-  border-radius: 0;
   background: rgba(0, 0, 0, 0.75);
   opacity: 0;
   transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
-}
-
-.layout-sidebar.show ~ .overley,
-.layout-sidebar.active ~ .overley,
-.layout-sidebar:target ~ .overley {
-  visibility: visible;
-  opacity: 1;
 }
 
 .layout-footer {
@@ -2477,10 +2476,15 @@ pre > code::before {
   background-color: #0f0f0f;
 }
 
-.img-bg {
+.image-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
 }
 
 .text-truncate {
