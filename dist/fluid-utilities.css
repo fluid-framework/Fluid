@@ -1,5 +1,5 @@
 /**
- * Fluid Utilities v0.9.8
+ * Fluid Utilities v0.9.9
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -812,23 +812,23 @@
 }
 
 .is-rounded-top {
-  border-top-left-radius: 0.5em !important;
-  border-top-right-radius: 0.5em !important;
+  border-top-left-radius: 0.25em !important;
+  border-top-right-radius: 0.25em !important;
 }
 
 .is-rounded-right {
-  border-top-right-radius: 0.5em !important;
-  border-bottom-right-radius: 0.5em !important;
+  border-top-right-radius: 0.25em !important;
+  border-bottom-right-radius: 0.25em !important;
 }
 
 .is-rounded-bottom {
-  border-bottom-right-radius: 0.5em !important;
-  border-bottom-left-radius: 0.5em !important;
+  border-bottom-right-radius: 0.25em !important;
+  border-bottom-left-radius: 0.25em !important;
 }
 
 .is-rounded-left {
-  border-top-left-radius: 0.5em !important;
-  border-bottom-left-radius: 0.5em !important;
+  border-top-left-radius: 0.25em !important;
+  border-bottom-left-radius: 0.25em !important;
 }
 
 .w-0 {
