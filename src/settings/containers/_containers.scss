@@ -2,4 +2,8 @@
 // Containers Settings
 //
 
-$container-padding-x: $grid-gap / 2 !default; // Container padding left and right
+$container-max-width:            90% !default;
+
+// Derived Settings
+
+$container-padding-x:            $grid-gap / 2 !default; // Container padding left and right

@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     padding: $breadcrumb-padding-y $breadcrumb-padding-x;
     margin-bottom: $breadcrumb-margin-bottom;
-    @include fontsize($font-size-default);
+    @include fontsize($font-size);
 
     a {
       @include hover {
@@ -28,7 +28,7 @@
     &:not(:first-child) {
       @include before {
         content: quote($breadcrumb-divider);
-        padding-right: $breadcrumb-item-padding-x;
+        padding-right: $breadcrumb-item-padding-x / 2;
         color: $breadcrumb-divider-color;
       }
     }

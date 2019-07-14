@@ -4,7 +4,7 @@
 
 @if $generate-helper-classes {
   // Basic container
-  // center and contain its content. decreases the size to 90% above breakpoint sm
+  // center and contain its content. decreases the size to `$container-max-width : 90%` above breakpoint sm
   .container {
     width: 100%;
     padding-right: $container-padding-x;
@@ -13,7 +13,10 @@
     margin-left: auto;
 
     @include media-breakpoint-above(sm) {
-      max-width: 90%;
+      max-width: $container-max-width;
+    }
+    & + & {
+      margin-top: .5rem;
     }
   }
 }

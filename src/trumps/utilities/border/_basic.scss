@@ -7,8 +7,8 @@
     properties: border,
     class: border,
     values: (
-      null: $border-width-default solid $border-color,
-      none: none
+      null: $border-defaut,
+      none: 0
     ),
     enable-important-values: true
   );

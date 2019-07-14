@@ -1,5 +1,5 @@
 /**
- * Fluid Grid v0.9.2
+ * Fluid Grid v0.9.10
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -21,8 +21,7 @@ html {
 }
 
 .no-gap > .column {
-  padding-right: 0;
-  padding-left: 0;
+  padding: 0;
 }
 
 .column {
@@ -1374,10 +1373,6 @@ html {
   }
 }
 
-.order-first {
-  order: -1 !important;
-}
-
 .order-0 {
   order: 0 !important;
 }
@@ -1426,8 +1421,8 @@ html {
   order: 11 !important;
 }
 
-.order-12 {
-  order: 12 !important;
+.order-first {
+  order: -1 !important;
 }
 
 .order-last {
@@ -1435,9 +1430,6 @@ html {
 }
 
 @media (min-width: 576px) {
-  .order-first\@sm {
-    order: -1 !important;
-  }
   .order-0\@sm {
     order: 0 !important;
   }
@@ -1474,8 +1466,8 @@ html {
   .order-11\@sm {
     order: 11 !important;
   }
-  .order-12\@sm {
-    order: 12 !important;
+  .order-first\@sm {
+    order: -1 !important;
   }
   .order-last\@sm {
     order: 25 !important;
@@ -1483,9 +1475,6 @@ html {
 }
 
 @media (min-width: 768px) {
-  .order-first\@md {
-    order: -1 !important;
-  }
   .order-0\@md {
     order: 0 !important;
   }
@@ -1522,8 +1511,8 @@ html {
   .order-11\@md {
     order: 11 !important;
   }
-  .order-12\@md {
-    order: 12 !important;
+  .order-first\@md {
+    order: -1 !important;
   }
   .order-last\@md {
     order: 25 !important;
@@ -1531,9 +1520,6 @@ html {
 }
 
 @media (min-width: 992px) {
-  .order-first\@lg {
-    order: -1 !important;
-  }
   .order-0\@lg {
     order: 0 !important;
   }
@@ -1570,8 +1556,8 @@ html {
   .order-11\@lg {
     order: 11 !important;
   }
-  .order-12\@lg {
-    order: 12 !important;
+  .order-first\@lg {
+    order: -1 !important;
   }
   .order-last\@lg {
     order: 25 !important;
@@ -1579,9 +1565,6 @@ html {
 }
 
 @media (min-width: 1200px) {
-  .order-first\@xl {
-    order: -1 !important;
-  }
   .order-0\@xl {
     order: 0 !important;
   }
@@ -1618,8 +1601,8 @@ html {
   .order-11\@xl {
     order: 11 !important;
   }
-  .order-12\@xl {
-    order: 12 !important;
+  .order-first\@xl {
+    order: -1 !important;
   }
   .order-last\@xl {
     order: 25 !important;

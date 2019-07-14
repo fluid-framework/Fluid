@@ -48,17 +48,15 @@
 // Mixin
 //
 
-// Mixin Used for border
+// Mixin Used for borders
 @import "./mixins/border";
-
-// Mixin Used for borderradius
-@import "./mixins/borderradius";
+@import "./mixins/border-radius";
 
 // Mixin Used for box-shadow
 @import "./mixins/box-shadow";
 
 // Mixin Used for font
-@import "./mixins/font";
+@import "./mixins/font-size";
 
 // Mixin Used for gradients
 @import "./mixins/gradients";

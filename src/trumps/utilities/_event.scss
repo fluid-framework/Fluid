@@ -1,11 +1,14 @@
-@if $generate-utilities-classes {
-  .event-none,
-  .event-none * {
-    pointer-events: none;
-  }
+//
+// Pointer events
+//
 
-  .event-auto,
-  .event-auto * {
-    pointer-events: auto;
-  }
+@if $generate-utilities-classes {
+  $config: (
+    properties: pointer-events,
+    class: event,
+    values: none auto,
+    enable-important-values: true
+  );
+
+  @include generate-class($config);
 }

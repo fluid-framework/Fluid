@@ -3,34 +3,35 @@
 //
 
 code {
-  position: relative;
   padding: $code-padding;
   margin-right: $code-margin-x;
   margin-left: $code-margin-x;
-  background: $code-bg;
+  background: $code-background;
 
-  @include border-radius($border-radius-default);
+  @include border-radius();
   @include font-size($code-font-size);
 }
 
 // Blocks of code
 pre {
-  code {
+  > code {
+    @include font-size(inherit);
+    position: relative;
     display: block;
-    padding: 1em;
+    padding: $pre-code-padding;
     border-left: $border-width-wide solid $primary;
     @include border-radius-left(0);
     @include before {
       content: attr(fluid-lang);
       position: absolute;
       top: 5px;
-      right: -2px;
-      padding: 2px 16px 2px 8px;
-      color: clr-auto($primary, $black, $white);
-      background: $primary;
-      text-transform: uppercase;
-      font-weight: bold;
-      @include border-radius-left($border-radius-default);
+      right: -1px;
+      padding: $pre-code-langbadge-padding;
+      color: clr-auto($pre-code-langbadge-background, $black, $white);
+      background: $pre-code-langbadge-background;
+      text-transform: $pre-code-langbadge-texttransform;
+      font-weight: $pre-code-langbadge-fontweight;
+      @include border-radius-left();
     }
   }
 }

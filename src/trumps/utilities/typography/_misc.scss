@@ -3,32 +3,16 @@
 //
 
 @if $generate-utilities-classes {
-  .text-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
   .text-vertical {
-    writing-mode: vertical-lr;
-  }
-  .text-initial {
-    float: left;
-    padding-right: .5rem;
-    font-size: 3em;
-    line-height: 1;
+    // stylelint-disable-next-line declaration-no-important
+    writing-mode: vertical-lr !important;
   }
   .text-decoration-none {
-    text-decoration: none;
-  }
-  .text-break {
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-  .text-clip {
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // stylelint-disable-next-line declaration-no-important
+    text-decoration: none !important;
   }
   .italic {
-    font-style: italic;
+    // stylelint-disable-next-line declaration-no-important
+    font-style: italic !important;
   }
 }

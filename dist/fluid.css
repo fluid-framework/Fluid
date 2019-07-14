@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid v0.9.2
+ * Fluid v0.9.10
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -21,7 +21,7 @@ main {
   display: block;
 }
 
-html {
+:root {
   font-size: 14px;
 }
 
@@ -30,7 +30,7 @@ body {
   color: #474747;
   background-color: #f0f0f0;
   text-align: left;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -102,7 +102,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5em;
   font-style: normal;
   line-height: inherit;
 }
@@ -126,7 +126,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5em;
   margin-left: 0;
 }
 
@@ -152,11 +152,11 @@ sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 a {
@@ -180,7 +180,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", consolas, monospace;
   font-size: 1em;
 }
 
@@ -198,6 +198,10 @@ img {
 svg {
   overflow: hidden;
   vertical-align: middle;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
 }
 
 table {
@@ -311,11 +315,11 @@ legend {
   color: inherit;
   white-space: normal;
   line-height: inherit;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 mark {
-  padding: .2em;
+  padding: 0.25em;
   background-color: #ffe58f;
 }
 
@@ -365,8 +369,7 @@ template {
 }
 
 .no-gap > .column {
-  padding-right: 0;
-  padding-left: 0;
+  padding: 0;
 }
 
 .column {
@@ -2071,12 +2074,11 @@ template {
 }
 
 .button.is-circle {
-  padding: .375em;
+  padding: 1em;
 }
 
 .list {
   padding-left: 0;
-  text-decoration: none;
 }
 
 .list > .list-item {
@@ -2097,6 +2099,7 @@ template {
 
 .group {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .group > .input,
@@ -2216,17 +2219,18 @@ template {
 }
 
 .group.list > .list-item {
-  padding: 0.75em 1.25em;
+  padding: 0.75rem 1.25rem;
   border: 1px solid #d4d4d4;
   color: inherit;
   background-color: #fff;
+  text-decoration: none;
   border-radius: 0.25em;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .group.list > .list-item.disabled, .group.list > .list-item:disabled {
   pointer-events: none;
-  opacity: .65;
+  opacity: 0.65;
   color: #636363;
 }
 
@@ -2281,7 +2285,7 @@ template {
   list-style: none;
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   font-size: 14px;
 }
 
@@ -2295,7 +2299,7 @@ template {
 
 .breadcrumb-item:not(:first-child)::before {
   content: "🠚";
-  padding-right: 0.5em;
+  padding-right: 0.25em;
   color: #636363;
 }
 
@@ -2308,7 +2312,6 @@ template {
 }
 
 code {
-  position: relative;
   padding: 0.2em 0.4em 0.1em;
   margin-right: 0.2em;
   margin-left: 0.2em;
@@ -2317,7 +2320,9 @@ code {
   font-size: 0.85em;
 }
 
-pre code {
+pre > code {
+  font-size: inherit;
+  position: relative;
   display: block;
   padding: 1em;
   border-left: 3px solid #805ad5;
@@ -2325,11 +2330,11 @@ pre code {
   border-bottom-left-radius: 0;
 }
 
-pre code::before {
+pre > code::before {
   content: attr(fluid-lang);
   position: absolute;
   top: 5px;
-  right: -2px;
+  right: -1px;
   padding: 2px 16px 2px 8px;
   color: #fff;
   background: #805ad5;
@@ -2386,8 +2391,16 @@ pre code::before {
   }
 }
 
-.layout-header, .layout-main, .layout-sidebar, .layout-footer {
+.container + .container {
+  margin-top: .5rem;
+}
+
+.layout-header, .layout-main, .layout-footer {
   position: relative;
+}
+
+.layout-sidebar, .overley {
+  position: fixed;
 }
 
 .layout-header {
@@ -2400,7 +2413,7 @@ pre code::before {
   color: #0f0f0f;
   background-color: #fff;
   line-height: 64px;
-  transition: height 0.35s ease-in-out,line-height 0.35s ease-in-out;
+  transition: height 0.35s ease-in-out, line-height 0.35s ease-in-out;
 }
 
 .layout-header.is-collapsed {
@@ -2414,32 +2427,35 @@ pre code::before {
 }
 
 .layout-sidebar {
-  position: fixed;
   top: 0;
   bottom: 0;
-  left: calc(-100% - (28px 14px * 2));
+  left: -100%;
   z-index: 15;
+  overflow: auto;
   width: 100%;
   padding: 28px 14px;
-  color: #fff;
-  background-color: #2b2b2b;
+  background-color: #fff;
   transition: left 0.5s ease-in-out;
 }
 
 @media (min-width: 576px) {
   .layout-sidebar {
-    min-width: 16.5rem;
+    width: inherit;
+    min-width: 250px;
     max-width: 60vw;
   }
 }
 
-.layout-sidebar:target,
-.layout-sidebar.show {
+.layout-sidebar:target, .layout-sidebar.active {
   left: 0;
 }
 
+.layout-sidebar:target ~ .overley, .layout-sidebar.active ~ .overley, .overley.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .overley {
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -2448,18 +2464,9 @@ pre code::before {
   visibility: hidden;
   width: 100%;
   height: 100%;
-  border-color: transparent;
-  border-radius: 0;
   background: rgba(0, 0, 0, 0.75);
   opacity: 0;
-  transition: opacity 0.35s ease-in-out,visibility 0.35s ease-in-out;
-}
-
-.layout-sidebar.show ~ .overley,
-.layout-sidebar.active ~ .overley,
-.layout-sidebar:target ~ .overley {
-  visibility: visible;
-  opacity: 1;
+  transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
 }
 
 .layout-footer {
@@ -2469,10 +2476,65 @@ pre code::before {
   background-color: #0f0f0f;
 }
 
-.img-bg {
+.image-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-initial {
+  float: left;
+  padding-right: .18em;
+  font-size: 3em;
+  line-height: 1;
+}
+
+.text-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.text-clip {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-reset {
+  text-transform: none;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  word-break: normal;
+  white-space: normal;
+  text-shadow: none;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  line-break: auto;
+}
+
+.text-hide {
+  border: 0 !important;
+  color: transparent !important;
+  background-color: transparent !important;
+  text-shadow: none !important;
+  font: "0/0" a !important;
 }
 
 .clearfix::after {
@@ -2882,6 +2944,34 @@ pre code::before {
   box-shadow: none !important;
 }
 
+.rotate-0 {
+  transform: rotate(0deg) !important;
+}
+
+.rotate-45 {
+  transform: rotate(45deg) !important;
+}
+
+.rotate-90 {
+  transform: rotate(90deg) !important;
+}
+
+.rotate-135 {
+  transform: rotate(135deg) !important;
+}
+
+.rotate-180 {
+  transform: rotate(180deg) !important;
+}
+
+.rotate-225 {
+  transform: rotate(225deg) !important;
+}
+
+.rotate-270 {
+  transform: rotate(270deg) !important;
+}
+
 .static {
   position: static !important;
 }
@@ -2935,40 +3025,12 @@ pre code::before {
   left: 100% !important;
 }
 
-.rotate-0 {
-  transform: rotate(0deg) !important;
-}
-
-.rotate-45 {
-  transform: rotate(45deg) !important;
-}
-
-.rotate-90 {
-  transform: rotate(90deg) !important;
-}
-
-.rotate-135 {
-  transform: rotate(135deg) !important;
-}
-
-.rotate-180 {
-  transform: rotate(180deg) !important;
-}
-
-.rotate-225 {
-  transform: rotate(225deg) !important;
-}
-
-.rotate-270 {
-  transform: rotate(270deg) !important;
-}
-
 .border {
   border: 1px solid #d4d4d4 !important;
 }
 
 .border-none {
-  border: none !important;
+  border: 0 !important;
 }
 
 .border-t {
@@ -2988,7 +3050,7 @@ pre code::before {
 }
 
 .border-wide {
-  border-width: 3px;
+  border-width: 3px !important;
 }
 
 .border-primary {
@@ -3063,24 +3125,16 @@ pre code::before {
   border-style: outset !important;
 }
 
-.border-none {
-  border-style: none !important;
-}
-
-.border-hidden {
-  border-style: hidden !important;
-}
-
 .is-rounded {
-  border-radius: 0.25em !important;
+  border-radius: 0.5em !important;
 }
 
 .is-rounded-sm {
-  border-radius: 0.2em !important;
+  border-radius: 0.25em !important;
 }
 
 .is-rounded-lg {
-  border-radius: 0.3em !important;
+  border-radius: 1em !important;
 }
 
 .is-circle {
@@ -3923,10 +3977,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   }
 }
 
-.order-first {
-  order: -1 !important;
-}
-
 .order-0 {
   order: 0 !important;
 }
@@ -3975,8 +4025,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   order: 11 !important;
 }
 
-.order-12 {
-  order: 12 !important;
+.order-first {
+  order: -1 !important;
 }
 
 .order-last {
@@ -3984,9 +4034,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 576px) {
-  .order-first\@sm {
-    order: -1 !important;
-  }
   .order-0\@sm {
     order: 0 !important;
   }
@@ -4023,8 +4070,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@sm {
     order: 11 !important;
   }
-  .order-12\@sm {
-    order: 12 !important;
+  .order-first\@sm {
+    order: -1 !important;
   }
   .order-last\@sm {
     order: 25 !important;
@@ -4032,9 +4079,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 768px) {
-  .order-first\@md {
-    order: -1 !important;
-  }
   .order-0\@md {
     order: 0 !important;
   }
@@ -4071,8 +4115,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@md {
     order: 11 !important;
   }
-  .order-12\@md {
-    order: 12 !important;
+  .order-first\@md {
+    order: -1 !important;
   }
   .order-last\@md {
     order: 25 !important;
@@ -4080,9 +4124,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 992px) {
-  .order-first\@lg {
-    order: -1 !important;
-  }
   .order-0\@lg {
     order: 0 !important;
   }
@@ -4119,8 +4160,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@lg {
     order: 11 !important;
   }
-  .order-12\@lg {
-    order: 12 !important;
+  .order-first\@lg {
+    order: -1 !important;
   }
   .order-last\@lg {
     order: 25 !important;
@@ -4128,9 +4169,6 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 @media (min-width: 1200px) {
-  .order-first\@xl {
-    order: -1 !important;
-  }
   .order-0\@xl {
     order: 0 !important;
   }
@@ -4167,8 +4205,8 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   .order-11\@xl {
     order: 11 !important;
   }
-  .order-12\@xl {
-    order: 12 !important;
+  .order-first\@xl {
+    order: -1 !important;
   }
   .order-last\@xl {
     order: 25 !important;
@@ -4340,7 +4378,7 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .font-sans-serif {
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .font-serif {
@@ -4348,53 +4386,29 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
 }
 
 .font-monospace {
-  font-family: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: "Menlo", "Ubuntu monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", consolas, monospace !important;
 }
 
 .is-small {
-  font-size: 0.75rem;
+  font-size: 0.75rem!important;
 }
 
 .is-large {
-  font-size: 1.25rem;
-}
-
-.text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 1.25rem!important;
 }
 
 .text-vertical {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-}
-
-.text-initial {
-  float: left;
-  padding-right: .5rem;
-  font-size: 3em;
-  line-height: 1;
+  -webkit-writing-mode: vertical-lr !important;
+      -ms-writing-mode: tb-lr !important;
+          writing-mode: vertical-lr !important;
 }
 
 .text-decoration-none {
-  text-decoration: none;
-}
-
-.text-break {
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.text-clip {
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-decoration: none !important;
 }
 
 .italic {
-  font-style: italic;
+  font-style: italic !important;
 }
 
 .cursor-hand {
@@ -4450,14 +4464,12 @@ a.clr-disabled.hover, a.clr-disabled:hover, a.clr-disabled.focus, a.clr-disabled
   opacity: 1 !important;
 }
 
-.event-none,
-.event-none * {
-  pointer-events: none;
+.event-none {
+  pointer-events: none !important;
 }
 
-.event-auto,
-.event-auto * {
-  pointer-events: auto;
+.event-auto {
+  pointer-events: auto !important;
 }
 
 .svg-shadow-sm {

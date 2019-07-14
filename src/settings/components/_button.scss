@@ -2,21 +2,18 @@
 // Button Settings
 //
 
-// Settings
-
-$button-theme-default:                           $gray-600 !default;
-$button-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$button-transition:                              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$button-iscircle-padding:                        1em !default;
 
 // Derived Settings
 
+$button-theme:                                   $input-theme !default;
 $button-padding-x:                               $input-padding-x !default;
 $button-padding-y:                               $input-padding-y !default;
-$button-border-radius:                           $border-radius-default !default;
+$button-border-radius:                           $input-radius !default;
 $button-focus-width:                             $input-focus-width !default;
-
 $button-font-family:                             $input-font-family !default;
 $button-font-weight:                             $font-weight-normal !default;
 $button-line-height:                             $input-line-height !default;
-
 $button-disabled-opacity:                        $input-disabled-opacity !default;
-$button-disabled-bg:                             $input-disabled-bg !default;
+$button-disabled-background:                     $input-disabled-background !default;

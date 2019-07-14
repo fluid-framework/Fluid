@@ -14,11 +14,10 @@ main {
   display: block;
 }
 
-// Html
-// 1. rem unit follow html head font size using this will set the font size to framework font size
-//    this will lead to consistent rem unit among all browsers
-html {
-  @include fontsize($font-size-default); // 1
+// root
+// 1. set the font size at root, this will lead to consistent rem unit among all browsers
+:root {
+  @include fontsize($font-size); // 1
 }
 
 // Body
@@ -32,7 +31,7 @@ html {
 body {
   margin: 0; // 1
   color: $body-color;
-  background-color: $body-bg; // 3
+  background-color: $body-background; // 3
   text-align: left; // 2
   font-family: $font-family-default;
   font-weight: $font-weight-default;
@@ -122,11 +121,10 @@ h6 {
 
 // Reset margins on paragraphs
 //
-// Similarly, the top margin on `<p>`s get reset. However, we also reset the
-// bottom margin to use `rem` units instead of `em`.
+// Similarly, the top margin on `<p>`s get reset.
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: $space-default-typography;
 }
 
 // Abbreviations
@@ -147,7 +145,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: $space-default-typography;
   font-style: normal;
   line-height: inherit;
 }
@@ -171,7 +169,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: $space-default-typography;
   margin-left: 0; // Undo browser default
 }
 
@@ -185,7 +183,7 @@ strong {
 }
 
 small {
-  font-size: percentage($default-small-quantity); // Add the correct font size in all browsers
+  @include fontsize(percentage($default-small-quantity)); // Add the correct font size in all browsers
 }
 
 //
@@ -198,14 +196,15 @@ sup {
   position: relative;
   vertical-align: baseline;
   line-height: 0;
-  @include fontsize(75%);
+  @include fontsize(percentage($default-small-quantity));
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -$space-default-typography * .5;
 }
+
 sup {
-  top: -.5em;
+  top: -$space-default-typography;
 }
 
 //
@@ -270,6 +269,10 @@ img {
 }
 
 svg {
+  // SVGs fallback to the current text color
+  &:not([fill]) {
+    fill: currentColor;
+  }
   // Workaround for the SVG overflow bug in IE10/11 is still required.
   // See https://github.com/twbs/bootstrap/issues/26878
   overflow: hidden;
@@ -424,11 +427,11 @@ legend {
   color: inherit; // 2
   white-space: normal; // 1
   line-height: inherit;
-  @include fontsize(1.5rem);
+  @include fontsize($font-size-large);
 }
 
 mark {
-  padding: .2em;
+  padding: $space-default-typography * .5;
   background-color: #ffe58f;
 }
 

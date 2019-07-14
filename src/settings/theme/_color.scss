@@ -48,10 +48,8 @@ $gray-200:       hsl(0, 0%, 83%) !default;
 $gray-500:       hsl(0, 0%, 50%) !default;
 $gray-600:       hsl(0, 0%, 39%) !default;
 $gray-700:       hsl(0, 0%, 28%) !default;
-$gray-800:       hsl(0, 0%, 17%) !default;
 $gray-900:       hsl(0, 0%, 6%) !default;
 $black:          #000 !default;
-
 
 //
 // Theme Colors Settings
@@ -77,11 +75,7 @@ $theme-colors: (
   "dark":            $dark
 ) !default;
 
-
 // Combine All colors if $enable-all-color-variant option is enabled
 @if $enable-all-color-variant {
   $theme-colors: map-merge($colors, $theme-colors);
 }
-
-// design color steps interval
-$color-step-interval:       10% !default;

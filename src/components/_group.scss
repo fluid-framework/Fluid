@@ -9,13 +9,14 @@
   //
   .group {
     display: inline-flex;
+    flex-wrap: wrap;
 
     > .input,
     > .button,
     > .list-item {
       @include fontsize(inherit);
       @include hover-focus {
-        z-index: 10;
+        z-index: $group-elments-zindex;
       }
     }
 
@@ -59,14 +60,17 @@
         > .input,
         > .button,
         > .list-item {
+          // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-top: 0;
           border-bottom: 0;
           @include border-radius(0);
 
           &:first-child {
+            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
             border-left: 0;
           }
           &:last-child {
+            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
             border-right: 0;
           }
         }
@@ -75,14 +79,17 @@
         > .input,
         > .button,
         > .list-item {
+          // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-right: 0;
           border-left: 0;
           @include border-radius(0);
 
           &:first-child {
+            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
             border-top: 0;
           }
           &:last-child {
+            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
             border-bottom: 0;
           }
         }
@@ -92,24 +99,26 @@
     &.list {
       display: flex; // override group inline-flex
       > .list-item {
-        padding: $list-group-item-padding-y $list-group-item-padding-x;
+        padding: $group-list-item-padding-y $group-list-item-padding-x;
+        // avoid using @mixin to generate borders independent of `$design-shadow-else-border` option
         border: $border-width-default solid $gray-200;
-        color: $list-group-color;
-        background-color: $list-group-bg;
+        color: $group-list-color;
+        background-color: $group-list-background;
+        text-decoration: none;
 
-        @include border-radius($border-radius-default);
+        @include border-radius();
         @include transition($button-transition);
 
         @include disabled {
           pointer-events: none;
-          opacity: .65;
-          color: $list-group-disabled-color;
+          opacity: $group-list-item-disabled-opacity;
+          color: $group-list-disabled-color;
         }
 
         @include active {
-          border-color: $list-group-active-border-color;
-          color: clr-auto($list-group-active-bg);
-          background-color: $list-group-active-bg;
+          border-color: $group-list-active-border-color;
+          color: clr-auto($group-list-active-background);
+          background-color: $group-list-active-background;
         }
       }
     }

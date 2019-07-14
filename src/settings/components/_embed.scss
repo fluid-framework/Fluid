@@ -1,0 +1,14 @@
+//
+// Embed Settings
+//
+
+// Various Aspect Ratios
+$aspect-ratios: (
+  "1-1":   ( x: 1,  y: 1  ),
+  "4-3":   ( x: 4,  y: 3  ),
+  "16-10": ( x: 16, y: 10 ),
+  "9-16":  ( x: 9,  y: 16 ),
+  "21-9":  ( x: 21, y: 9 )
+) !default;
+
+$embed-ratio-default:       "9-16" !default;
