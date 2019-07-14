@@ -10,6 +10,10 @@
     position: relative;
   }
 
+  %position-fixed {
+    position: fixed;
+  }
+
   .layout-header {
     @extend %position-relative;
     z-index: $header-zindex;
@@ -43,7 +47,7 @@
   // Doc : add Doc
   //
   .layout-sidebar {
-    position: fixed;
+    @extend %position-fixed;
     top: 0;
     bottom: 0;
     left: -100%;
@@ -69,7 +73,7 @@
   // Doc : add Doc
   //
   .overley {
-    position: fixed;
+    @extend %position-fixed;
     top: 0;
     right: 0;
     bottom: 0;
