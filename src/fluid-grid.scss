@@ -26,16 +26,12 @@
 //
 
 // Reset Styles only for grid
-html {
-  box-sizing: border-box;
-}
-
-// Reset Styles only for grid
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
+
 //
 // Objects
 //
