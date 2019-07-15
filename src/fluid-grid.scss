@@ -5,6 +5,26 @@
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
 */
 
+// Configuration
+
+@import "./vendors/vendors";
+
+//
+// Settings
+//
+
+@import "./settings/settings";
+
+//
+// Tools
+//
+
+@import "./tools/tools";
+
+//
+// Generics
+//
+
 // Reset Styles only for grid
 html {
   box-sizing: border-box;
@@ -17,14 +37,15 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
-// Configuration
-
-@import "./vendors/vendors";
-@import "./settings/settings";
-@import "./tools/tools";
+//
+// Objects
+//
 
 @import "./objects/grid";
+
+//
+// Trumps
+//
 
 // Flex Utility for Grid system
 @import "./trumps/utilities/grid-flex/fill";

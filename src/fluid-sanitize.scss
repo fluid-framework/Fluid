@@ -8,7 +8,21 @@
 // Configuration
 
 @import "./vendors/vendors";
+
+//
+// Settings
+//
+
 @import "./settings/settings";
+
+//
+// Tools
+//
+
 @import "./tools/tools";
+
+//
+// Generics
+//
 
 @import "./generics/sanatize";
