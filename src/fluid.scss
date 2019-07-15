@@ -14,6 +14,12 @@
 // Sanitize
 @import "./generics/reboot";
 
+//
+// Elements
+//
+
+@import "./elements/code";
+
 // Grid
 @import "./objects/grid";
 
@@ -24,7 +30,6 @@
 @import "./components/group";
 @import "./components/embed";
 @import "./components/breadcrumb";
-@import "./components/code";
 
 // Helpers
 

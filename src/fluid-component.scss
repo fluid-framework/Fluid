@@ -9,9 +9,18 @@
 @import "./settings/settings";
 @import "./tools/tools";
 
+//
+// Elements
+//
+
+@import "./elements/code";
+
+//
+// Components
+//
+
 @import "./components/button";
 @import "./components/list";
 @import "./components/group";
 @import "./components/embed";
 @import "./components/breadcrumb";
-@import "./components/code";
