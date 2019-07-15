@@ -70,13 +70,13 @@
     $imported-pulse: true;
     @keyframes pulse {
       from {
-        box-shadow: 0 0 0 0 rgba($dark, .4);
+        box-shadow: 0 0 0 0 currentColor;
       }
-      70% {
-        box-shadow: 0 0 0 .3rem rgba($dark, 0);
+      75%{
+        box-shadow: 0 0 0 ($input-focus-width * 1.5) transparent;
       }
       to {
-        box-shadow: 0 0 0 0 rgba($dark, 0);
+        box-shadow: 0 0 0 0 transparent;
       }
     }
   } @else if $name == flash and not $imported-flash {
