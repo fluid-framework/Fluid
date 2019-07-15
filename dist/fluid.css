@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid v0.9.10
+ * Fluid v0.9.11
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -361,6 +361,39 @@ template {
 
 [hidden] {
   display: none !important;
+}
+
+code {
+  padding: 0.2em 0.4em 0.1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  background: #d4d4d4;
+  border-radius: 0.25em;
+  font-size: 0.85em;
+}
+
+pre > code {
+  font-size: inherit;
+  position: relative;
+  display: block;
+  padding: 1em;
+  border-left: 3px solid #805ad5;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+pre > code::before {
+  content: attr(fluid-lang);
+  position: absolute;
+  top: 5px;
+  right: -1px;
+  padding: 2px 16px 2px 8px;
+  color: #fff;
+  background: #805ad5;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
 }
 
 .grid {
@@ -2311,39 +2344,6 @@ template {
   content: attr(fluid-separator);
 }
 
-code {
-  padding: 0.2em 0.4em 0.1em;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
-  background: #d4d4d4;
-  border-radius: 0.25em;
-  font-size: 0.85em;
-}
-
-pre > code {
-  font-size: inherit;
-  position: relative;
-  display: block;
-  padding: 1em;
-  border-left: 3px solid #805ad5;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-pre > code::before {
-  content: attr(fluid-lang);
-  position: absolute;
-  top: 5px;
-  right: -1px;
-  padding: 2px 16px 2px 8px;
-  color: #fff;
-  background: #805ad5;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-top-left-radius: 0.25em;
-  border-bottom-left-radius: 0.25em;
-}
-
 .icon {
   display: inline-flex;
   align-items: center;
@@ -2537,10 +2537,14 @@ pre > code::before {
   font: "0/0" a !important;
 }
 
-.clearfix::after {
+.clearfix::after, .float::after {
   content: "";
   display: block;
   clear: both;
+}
+
+.float {
+  display: block;
 }
 
 .float-left {
