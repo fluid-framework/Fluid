@@ -67,6 +67,7 @@ $enable-fluid-font-sizes:                     false !default;   // Enable Fluid 
 @import "./typography/font";
 @import "./typography/heading";
 @import "./typography/code";
+@import "./typography/hr";
 
 //
 // Design
@@ -75,7 +76,6 @@ $enable-fluid-font-sizes:                     false !default;   // Enable Fluid 
 @import "./design/border";
 @import "./design/layout";
 @import "./design/link";
-@import "./design/hr";
 @import "./design/table";
 
 //
