@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Fluid Grid v0.9.11
+ * Fluid Grid v0.9.12
  * Copyright (c) 2019-2027 Fluid Framework
  * Copyright (c) 2019-2027 Ashfahan
  * Licensed under MIT (https://github.com/fluid-framework/Fluid/blob/master/LICENSE)
@@ -9,39 +9,6 @@
   .button, .button.is-minimal::after, .group.list > .list-item {
     transition: none;
   }
-}
-
-code {
-  padding: 0.2em 0.4em 0.1em;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
-  background: #d4d4d4;
-  border-radius: 0.25em;
-  font-size: 0.85em;
-}
-
-pre > code {
-  font-size: inherit;
-  position: relative;
-  display: block;
-  padding: 1em;
-  border-left: 3px solid #805ad5;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-pre > code::before {
-  content: attr(fluid-lang);
-  position: absolute;
-  top: 5px;
-  right: -1px;
-  padding: 2px 16px 2px 8px;
-  color: #fff;
-  background: #805ad5;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-top-left-radius: 0.25em;
-  border-bottom-left-radius: 0.25em;
 }
 
 .button {
@@ -79,25 +46,25 @@ pre > code::before {
 
 @-webkit-keyframes pulse {
   from {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
+    box-shadow: 0 0 0 0 currentColor;
   }
-  70% {
-    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
+  75% {
+    box-shadow: 0 0 0 0.3rem transparent;
   }
   to {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 
 @keyframes pulse {
   from {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0.4);
+    box-shadow: 0 0 0 0 currentColor;
   }
-  70% {
-    box-shadow: 0 0 0 0.3rem rgba(71, 71, 71, 0);
+  75% {
+    box-shadow: 0 0 0 0.3rem transparent;
   }
   to {
-    box-shadow: 0 0 0 0 rgba(71, 71, 71, 0);
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 
