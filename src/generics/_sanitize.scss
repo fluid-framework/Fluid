@@ -2,42 +2,29 @@
 
 // Forked from bootstrap-reboot.css, licensed MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
-// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+// Fluid Sanitize
+//
+// Fluid Sanitize only deals with browsers inconsistency and bug fixes
+
+//
+// Layout
+//
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`
 }
 
-// Shim for IE11
-main {
-  display: block;
-}
-
-// root
-// 1. set the font size at root, this will lead to consistent rem unit among all browsers
-:root {
-  @include fontsize($font-size); // 1
-}
-
-// Body
-//
-// 1. Remove the margin in all browsers.
-// 2. Set an explicit initial text-align value so that we can later use
-//    the `inherit` value on things like `<th>` elements.
-// 3. As a best practice, apply a default `background-color`.
-// 4. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
-// 5. Change the default tap highlight to be completely transparent in iOS.
 body {
-  margin: 0; // 1
-  color: $body-color;
-  background-color: $body-background; // 3
-  text-align: left; // 2
-  font-family: $font-family-default;
-  font-weight: $font-weight-default;
-  line-height: $line-height;
-  -webkit-text-size-adjust: 100%; // 4
-  -webkit-tap-highlight-color: transparent; // 5
+  @extend %margin-0; // Remove the margin in all browsers
+  line-height: $line-height; // Correct the line height in all browsers
+  -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
+  -webkit-tap-highlight-color: transparent; // Change the default tap highlight to be completely transparent in iOS
+}
+
+main {
+  @extend %display-block; // Render the `main` element consistently in IE
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
@@ -45,7 +32,7 @@ body {
 // focus outline. In general, this would mean that the outline is only applied if the
 // interaction that led to the element receiving programmatic focus was a keyboard interaction,
 // or the browser has somehow determined that the user is primarily a keyboard user and/or
-// wants focus outlines to always be presented.
+// wants focus outlines to always be presented
 //
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
 // and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
@@ -53,129 +40,9 @@ body {
   outline: 0 !important;
 }
 
-// Content grouping
 //
-// 1. Reset Firefox's gray color
-// 2. Set correct height and prevent the `size` attribute to make the `hr` look like an input field
-//    See https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_hr_size
-
-hr {
-  margin: $hr-margin-y 0;
-  border: 0;
-  opacity: $hr-opacity;
-  color: $hr-color; // 1
-  background-color: currentColor;
-}
-
-hr:not([size]) {
-  height: $hr-height; // 2
-}
-
+// typography
 //
-// Typography
-//
-
-// Remove top margins from headings
-//
-// By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
-// margin for easier control within type scales as it avoids margin collapsing.
-%heading {
-  margin-top: 0;
-  margin-bottom: $headings-margin-bottom;
-  color: $headings-color;
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  font-style: $headings-font-style;
-  line-height: $headings-line-height;
-}
-
-h1 {
-  @extend %heading;
-  @include fontsize($h1-font-size);
-}
-
-h2 {
-  @extend %heading;
-  @include fontsize($h2-font-size);
-}
-
-h3 {
-  @extend %heading;
-  @include fontsize($h3-font-size);
-}
-
-h4 {
-  @extend %heading;
-  @include fontsize($h4-font-size);
-}
-
-h5 {
-  @extend %heading;
-  @include fontsize($h5-font-size);
-}
-
-h6 {
-  @extend %heading;
-  @include fontsize($h6-font-size);
-}
-
-// Reset margins on paragraphs
-//
-// Similarly, the top margin on `<p>`s get reset.
-p {
-  margin-top: 0;
-  margin-bottom: $space-default-typography;
-}
-
-// Abbreviations
-//
-// 1. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-// 2. Add explicit cursor to indicate changed behavior.
-// 3. Remove the bottom border in Firefox 39-.
-// 4. Prevent the text-decoration to be skipped.
-
-abbr[title],
-abbr[data-original-title] {
-  // 1
-  cursor: help; // 3
-  border-bottom: 0; // 4
-  text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
-  text-decoration-skip-ink: none; // 5
-}
-
-address {
-  margin-bottom: $space-default-typography;
-  font-style: normal;
-  line-height: inherit;
-}
-
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
-}
-
-dt {
-  font-weight: $font-weight-bold;
-}
-
-dd {
-  margin-bottom: $space-default-typography;
-  margin-left: 0; // Undo browser default
-}
-
-blockquote {
-  margin: 0 0 1rem;
-}
 
 b,
 strong {
@@ -186,25 +53,94 @@ small {
   @include fontsize(percentage($default-small-quantity)); // Add the correct font size in all browsers
 }
 
-//
-// Prevent `sub` and `sup` elements from affecting the line height in
-// all browsers.
-//
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
+}
 
-sub,
-sup {
-  position: relative;
-  vertical-align: baseline;
-  line-height: 0;
-  @include fontsize(percentage($default-small-quantity));
+// Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari
+h1 {
+  margin-bottom: .67em;
+  font-size: 2em;
+}
+
+p {
+  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
+}
+
+hr {
+  @extend %border-0; // Use background and height instead of border for hr
+  color: $hr-color; // Reset Firefox's gray color
+  background-color: currentColor; // Use background and height instead of border for hr
+}
+
+hr:not([size]) {
+  // Set correct height and prevent the `size` attribute to make the `hr` look like an input field
+  // See https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_hr_size
+  height: $hr-height;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help; // Add explicit cursor to indicate changed behavior
+  border-bottom: 0; // Remove the bottom border in Firefox 39-
+  text-decoration: underline; // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari
+  text-decoration: underline dotted; // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari
+  text-decoration-skip-ink: none; // Prevent the text-decoration to be skipped
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-family-monospace; // Correct the font in all browsers.
+  @include fontsize(1em); // Correct the odd `em` font sizing in all browsers
+}
+
+pre {
+  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
+  @extend %overflow-auto; // Don't allow content to break outside
+  margin-bottom: 1rem; // Reset browser default of `1em` to use `rem`s
 }
 
 sub {
-  bottom: -$space-default-typography * .5;
+  @extend %sub-sup; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
+  bottom: -$space-default-typography * .5; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
 }
 
 sup {
-  top: -$space-default-typography;
+  @extend %sub-sup; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
+  top: -$space-default-typography; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
+}
+
+//
+// List
+//
+
+ul,
+ol,
+dl {
+  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
+}
+
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl,
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0; // Remove the margin on nested lists in Edge 18- and IE
 }
 
 //
@@ -212,51 +148,7 @@ sup {
 //
 
 a {
-  color: $link-color;
-  background-color: transparent; // Remove the gray background on active links in IE 10.
-  text-decoration: $link-decoration;
-
-  &:hover {
-    color: clr-step($link-color, $link-hover-dark-step);
-    text-decoration: $link-hover-decoration;
-  }
-}
-
-// And undo these styles for placeholder links/named anchors (without href)
-// which have not been made explicitly keyboard-focusable (without tabindex).
-// It would be more straightforward to just use a[href] in previous block, but that
-// causes specificity issues in many other styles that are too complex to fix.
-// See https://github.com/twbs/bootstrap/issues/19402
-
-a:not([href]):not([tabindex]) {
-  &,
-  &:hover,
-  &:focus {
-    outline: 0;
-    color: inherit;
-    text-decoration: none;
-  }
-}
-
-//
-// Code
-//
-
-pre,
-code,
-kbd,
-samp {
-  font-family: $font-family-monospace;
-  @include fontsize(1em); // Correct the odd `em` font sizing in all browsers.
-}
-
-pre {
-  // Don't allow content to break outside
-  overflow: auto;
-  // Remove browser default top margin
-  margin-top: 0;
-  // Reset browser default of `1em` to use `rem`s
-  margin-bottom: 1rem;
+  background-color: transparent; // Remove the gray background on active links in IE 10
 }
 
 //
@@ -264,19 +156,22 @@ pre {
 //
 
 img {
-  border-style: none; // Remove the border on images inside links in IE 10-.
-  vertical-align: middle;
+  @extend %borderstyle-none; // Remove the border on images inside links in IE 10-
 }
 
 svg {
-  // SVGs fallback to the current text color
-  &:not([fill]) {
-    fill: currentColor;
-  }
-  // Workaround for the SVG overflow bug in IE10/11 is still required.
+  // Workaround for the SVG overflow bug in IE10/11 is still required
   // See https://github.com/twbs/bootstrap/issues/26878
   overflow: hidden;
-  vertical-align: middle;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; // Change the alignment on media elements in all browsers
 }
 
 //
@@ -287,32 +182,19 @@ table {
   border-collapse: collapse; // Prevent double borders
 }
 
-caption {
-  caption-side: bottom;
-  padding-top: $table-cell-padding;
-  padding-bottom: $table-cell-padding;
-  color: $table-caption-color;
-  text-align: left;
-}
-
 th {
-  // Matches default `<td>` alignment by inheriting from the `<body>`, or the
-  // closest parent with a set `text-align`.
-  text-align: inherit;
+  text-align: inherit; // Matches default `<td>` alignment by inheriting from the `<body>`, or the closest parent with a set `text-align`
 }
 
 //
-// Forms
+// Input
 //
 
 label {
-  // Allow labels to use `margin` for spacing.
-  display: inline-block;
-  margin-bottom: $label-margin-bottom;
+  @extend %display-inlineblock; // Allow labels to use `margin` for spacing
 }
 
-// Remove the default `border-radius` that macOS Chrome adds.
-//
+// Remove the default `border-radius` that macOS Chrome adds
 // Details at https://github.com/twbs/bootstrap/issues/24093
 button {
   // stylelint-disable-next-line property-blacklist
@@ -320,8 +202,7 @@ button {
 }
 
 // Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-//
+// results in a loss of the default `button` focus styles
 // Credit: https://github.com/suitcss/default/
 button:focus {
   outline: 1px dotted;
@@ -333,10 +214,10 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0; // Remove the margin in Firefox and Safari
-  font-family: inherit;
-  @include fontsize(inherit);
-  line-height: inherit;
+  @extend %margin-0; // Remove the margin in Firefox and Safari
+  font-family: inherit; // Change the font styles in all browsers
+  @include fontsize(inherit); // Change the font styles in all browsers
+  @extend %lineheight-inherit; // Change the font styles in all browsers
 }
 
 button,
@@ -349,40 +230,32 @@ select {
   text-transform: none; // Remove the inheritance of text transform in Firefox
 }
 
-// Remove the inheritance of word-wrap in Safari.
-//
+// Remove the inheritance of word-wrap in Safari
 // Details at https://github.com/twbs/bootstrap/issues/24990
 select {
   word-wrap: normal;
 }
 
-// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
-//    controls in Android 4.
-// 2. Correct the inability to style clickable types in iOS and Safari.
 button,
-[type="button"], // 1
+[type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; // 2
-  // Opinionated: add "hand" cursor to non-disabled button elements.
-  &:not(:disabled) {
-    cursor: pointer;
-  }
+  @extend %-webkitappearance-button; // Correct the inability to style clickable types in iOS and Safari
 }
 
-// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
+  @extend %padding-0;
+  @extend %borderstyle-none;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  box-sizing: border-box; // 1. Add the correct box sizing in IE 10-
-  padding: 0; // 2. Remove the padding in IE 10-
+  box-sizing: border-box; // Add the correct box sizing in IE 10-
+  @extend %padding-0; // Remove the padding in IE 10-
 }
 
 input[type="date"],
@@ -391,93 +264,80 @@ input[type="datetime-local"],
 input[type="month"] {
   // Remove the default appearance of temporal inputs to avoid a Mobile Safari
   // bug where setting a custom line-height prevents text from being vertically
-  // centered within the input.
+  // centered within the input
   // See https://bugs.webkit.org/show_bug.cgi?id=139848
   // and https://github.com/twbs/bootstrap/issues/11266
   -webkit-appearance: listbox;
 }
 
 textarea {
-  overflow: auto; // Remove the default vertical scrollbar in IE.
-  // Textareas should really only resize vertically so they don't break their (horizontal) containers.
-  resize: vertical;
+  @extend %overflow-auto; // Remove the default vertical scrollbar in IE
+  resize: vertical; // Textareas should really only resize vertically so they don't break their (horizontal) containers
 }
 
 fieldset {
   // Browsers set a default `min-width: min-content;` on fieldsets,
-  // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
-  // So we reset that to ensure fieldsets behave more like a standard block element.
+  // unlike e.g. `<div>`s, which have `min-width: 0;` by default
+  // So we reset that to ensure fieldsets behave more like a standard block element
   // See https://github.com/twbs/bootstrap/issues/12359
   // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
   min-width: 0;
-  // Reset the default outline behavior of fieldsets so they don't affect page layout.
-  padding: 0;
-  margin: 0;
-  border: 0;
+  // Reset the default outline behavior of fieldsets so they don't affect page layout
+  @extend %padding-0;
+  @extend %margin-0;
+  @extend %border-0;
 }
 
-// 1. Correct the text wrapping in Edge and IE.
-// 2. Correct the color inheritance from `fieldset` elements in IE.
 legend {
-  display: block;
-  width: 100%;
-  max-width: 100%; // 1
-  padding: 0;
-  margin-bottom: .5rem;
-  color: inherit; // 2
-  white-space: normal; // 1
-  line-height: inherit;
-  @include fontsize($font-size-large);
+  @extend %display-block;
+  max-width: 100%; // Correct the text wrapping in Edge and IE
+  @extend %padding-0; // Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers.
+  @extend %color-inherit; // Correct the color inheritance from `fieldset` elements in IE
+  white-space: normal; // Correct the text wrapping in Edge and IE
+  @extend %lineheight-inherit;
 }
 
-mark {
-  padding: $space-default-typography * .5;
-  background-color: #ffe58f;
+progress,
+audio,
+video {
+  @extend %display-inlineblock; // Add the correct display in Edge 18- and IE 9-
+}
+
+output {
+  @extend %display-inlineblock;
 }
 
 progress {
-  vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+  @extend %verticalalign-baseline; // progress: Add the correct vertical alignment in Chrome, Firefox, and Opera
 }
 
-// Correct the cursor style of increment and decrement buttons in Chrome.
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
+  height: auto; // Correct the cursor style of increment and decrement buttons in Chrome
 }
 
 [type="search"] {
-  // This overrides the extra rounded corners on search inputs in iOS so that our
-  // `.form-control` class can properly style them. Note that this cannot simply
-  // be added to `.form-control` as it's not specific enough. For details, see
-  // https://github.com/twbs/bootstrap/issues/11586.
-  outline-offset: -2px; // 2. Correct the outline style in Safari.
-  -webkit-appearance: none;
+  outline-offset: -2px; // Correct the outline style in Safari
+  // This overrides the extra rounded corners on search inputs in iOS so that we can style them our self
+  // For details, see https://github.com/twbs/bootstrap/issues/11586
+  @extend %-webkitappearance-none;
 }
-
-//
-// Remove the inner padding in Chrome and Safari on macOS.
-//
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  @extend %-webkitappearance-none; // Remove the inner padding in Chrome and Safari on macOS
 }
 
-//
-// 1. Change font properties to `inherit` in Safari.
-// 2. Correct the inability to style clickable types in iOS and Safari.
-//
-
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; // 2
-  font: inherit; // 1
+  @extend %-webkitappearance-button; // Correct the inability to style clickable types in iOS and Safari
+  font: inherit; // Change font properties to `inherit` in Safari
 }
 
 //
 // Correct element displays
 //
 
-output {
-  display: inline-block;
+details {
+  @extend %display-block; // Add the correct display in Edge 18- and IE.
 }
 
 summary {
@@ -489,8 +349,70 @@ template {
   display: none; // Add the correct display in IE
 }
 
-// Always hide an element with the `hidden` HTML attribute (from PureCSS).
-// Needed for proper display in IE 10-.
 [hidden] {
-  display: none !important;
+  display: none !important; // Always hide an element with the `hidden` HTML attribute // Needed for proper display in IE 10-
+}
+
+//
+// Placeholders
+//
+
+%display-block {
+  display: block;
+}
+
+%display-inlineblock {
+  display: inline-block;
+}
+
+%margintop-0 {
+  margin-top: 0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
+}
+
+%verticalalign-baseline {
+  vertical-align: baseline;
+}
+
+%-webkitappearance-none {
+  -webkit-appearance: none;
+}
+
+%-webkitappearance-button {
+  -webkit-appearance: button;
+}
+
+%color-inherit {
+  color: inherit;
+}
+
+%lineheight-inherit {
+  line-height: inherit;
+}
+
+%padding-0 {
+  padding: 0;
+}
+
+%border-0 {
+  border: 0;
+}
+
+%borderstyle-none {
+  border-style: none;
+}
+
+%margin-0 {
+  margin: 0;
+}
+
+%overflow-auto {
+  overflow: auto;
+}
+
+// Prevent `sub` and `sup` elements from affecting the line height in all browsers
+%sub-sup {
+  position: relative;
+  @extend %verticalalign-baseline;
+  line-height: 0;
+  @extend small;
 }

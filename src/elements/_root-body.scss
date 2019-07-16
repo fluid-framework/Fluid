@@ -1,0 +1,20 @@
+//
+// Root Element
+//
+
+:root {
+  @include fontsize($font-size); // set the font size at root, this will lead to consistent rem unit among all browsers
+}
+
+//
+// body Element
+//
+
+body {
+  color: $body-color;
+  background-color: $body-background; // As a best practice, apply a default `background-color`.
+  text-align: left; // Set an explicit initial text-align value
+  tab-size: 4; // Use a 4-space tab width in all browsers
+  font-family: $font-family-default; // add native font family stack to the browser
+  font-weight: $font-weight-default; // add font-weight to normalize the font-weight
+}

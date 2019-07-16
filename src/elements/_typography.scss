@@ -1,0 +1,127 @@
+//
+// heading Element
+//
+
+%heading {
+  margin-bottom: $headings-margin-bottom;
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  font-style: $headings-font-style;
+  line-height: $headings-line-height;
+}
+
+h1 {
+  @extend %heading;
+  @include fontsize($h1-font-size);
+}
+
+h2 {
+  @extend %heading;
+  @include fontsize($h2-font-size);
+}
+
+h3 {
+  @extend %heading;
+  @include fontsize($h3-font-size);
+}
+
+h4 {
+  @extend %heading;
+  @include fontsize($h4-font-size);
+}
+
+h5 {
+  @extend %heading;
+  @include fontsize($h5-font-size);
+}
+
+h6 {
+  @extend %heading;
+  @include fontsize($h6-font-size);
+}
+
+//
+// paragraph Element
+//
+
+p {
+  margin-bottom: $space-default-typography;
+}
+
+//
+// mark Element
+//
+
+mark {
+  padding: $space-default-typography * .5;
+  background-color: #ffe58f;
+}
+
+//
+// horizontal rule Element
+//
+
+hr {
+  margin: $hr-margin-y 0;
+  opacity: $hr-opacity;
+}
+
+//
+// blockquote Element
+//
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+//
+// address Element
+//
+
+address {
+  margin-bottom: $space-default-typography;
+  font-style: normal;
+  line-height: inherit;
+}
+
+//
+// code Element
+//
+
+code {
+  padding: $code-padding;
+  margin-right: $code-margin-x;
+  margin-left: $code-margin-x;
+  background: $code-background;
+
+  @include border-radius();
+  @include font-size($code-font-size);
+}
+
+//
+// Blocks of code Element
+//
+
+pre {
+  > code {
+    @include font-size(inherit);
+    position: relative;
+    display: block;
+    padding: $pre-code-padding;
+    border-left: $border-width-wide solid $primary;
+    @include border-radius-left(0);
+    @include before {
+      content: attr(fluid-lang);
+      position: absolute;
+      top: 5px;
+      right: -1px;
+      padding: $pre-code-langbadge-padding;
+      color: clr-auto($pre-code-langbadge-background, $black, $white);
+      background: $pre-code-langbadge-background;
+      text-transform: $pre-code-langbadge-texttransform;
+      font-weight: $pre-code-langbadge-fontweight;
+      @include border-radius-left();
+    }
+  }
+}

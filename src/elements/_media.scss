@@ -1,0 +1,14 @@
+//
+// image and graphics Element
+//
+
+svg {
+  // SVGs fallback to the current text color
+  &:not([fill]) {
+    fill: currentColor;
+  }
+
+  &:not(:root) {
+    overflow: hidden;
+  }
+}

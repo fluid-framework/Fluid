@@ -1,0 +1,23 @@
+//
+// list
+//
+
+ol,
+ul {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: $font-weight-bold;
+}
+
+dd {
+  margin-bottom: $space-default-typography;
+}

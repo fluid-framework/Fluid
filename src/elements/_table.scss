@@ -1,0 +1,11 @@
+//
+// Table Element
+//
+
+caption {
+  caption-side: bottom;
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+  color: $table-caption-color;
+  text-align: left;
+}
