@@ -48,7 +48,7 @@
     "dist:prefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer --map false",
     "dist:mqpacker": "foreach -g ./dist/*.css -x \"mqpacker --sort --sourcemap ./dist/#{name}.css ./dist/#{name}.css\"",
     "dist:combine-duplicated-selectors": "foreach -g ./dist/*.css -x \"postcss ./dist/#{name}.css --use postcss-combine-duplicated-selectors --output ./dist/#{name}.css\"",
-    "dist:minify": "foreach -g ./dist/*.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed --source-map true\""
+    "dist:minify": "foreach -g ./dist/*.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed\""
   },
   "repository": {
     "type": "git",
