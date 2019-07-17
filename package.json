@@ -46,8 +46,9 @@
     "dist:clean": "shx rm -rf ./dist",
     "dist:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map true",
     "dist:prefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer --map false",
-    "dist:mqpacker": "foreach -g ./dist/*.css -x \"mqpacker -s ./dist/#{name}.css ./dist/#{name}.min.css\"",
-    "dist:minify": "foreach -g ./dist/*.min.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.css --output-style compressed --source-map true\""
+    "dist:mqpacker": "foreach -g ./dist/*.css -x \"mqpacker --sort --sourcemap ./dist/#{name}.css ./dist/#{name}.css\"",
+    "dist:combine-duplicated-selectors": "foreach -g ./dist/*.css -x \"postcss ./dist/#{name}.css --use postcss-combine-duplicated-selectors --output ./dist/#{name}.css\"",
+    "dist:minify": "foreach -g ./dist/*.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed --source-map true\""
   },
   "repository": {
     "type": "git",
@@ -56,20 +57,21 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "rfs": "^8.0.4",
-    "foreach-cli": "^1.8.1",
-    "css-mqpacker": "^7.0.0",
     "autoprefixer": "^9.6.1",
+    "css-mqpacker": "^7.0.0",
+    "find-unused-sass-variables": "^0.4.1",
+    "foreach-cli": "^1.8.1",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.3",
+    "postcss-combine-duplicated-selectors": "^8.0.1",
+    "rfs": "^8.0.4",
     "shx": "^0.3.2",
-    "find-unused-sass-variables": "^0.4.1",
     "stylelint": "^10.1.0",
-    "stylelint-scss": "^3.9.1",
-    "stylelint-order": "^3.0.1",
+    "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-config-recommended-scss": "^3.3.0"
+    "stylelint-order": "^3.0.1",
+    "stylelint-scss": "^3.9.1"
   },
   "engines": {
     "node": ">=8"

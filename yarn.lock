@@ -3008,6 +3008,14 @@ postcss-cli@^6.1.3:
     read-cache "^1.0.0"
     yargs "^12.0.1"
 
+postcss-combine-duplicated-selectors@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-combine-duplicated-selectors/-/postcss-combine-duplicated-selectors-8.0.1.tgz#4bdb5503397975ebf84caeacff2ec23b0634dd00"
+  integrity sha512-+qEtdM1wL4VMNkiNPIMW51tJqPxbctPmQmMVqDmeaMHCwbJaa/yXHpnQCPiLhteobgRQQc29HusYyw6ilReI/Q==
+  dependencies:
+    postcss "^7.0.0"
+    postcss-selector-parser "^6.0.0"
+
 postcss-html@^0.36.0:
   version "0.36.0"
   resolved "https://registry.yarnpkg.com/postcss-html/-/postcss-html-0.36.0.tgz#b40913f94eaacc2453fd30a1327ad6ee1f88b204"
@@ -3096,7 +3104,7 @@ postcss-selector-parser@^3.1.0:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-selector-parser@^6.0.2:
+postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.2.tgz#934cf799d016c83411859e09dcecade01286ec5c"
   integrity sha512-36P2QR59jDTOAiIkqEprfJDsoNrvwFei3eCqKd1Y0tUsBimsq39BLp7RD+JWny3WgB1zGhJX8XVePwm9k4wdBg==
