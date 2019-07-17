@@ -15,12 +15,10 @@
     width: 1em;
     height: 1em;
     border: .15em solid currentColor;
-    border-right-color: transparent;
-    border-radius: $border-radius-pill;
     // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
-    animation: spin 1s infinite linear;
+    animation: loading-spinner 2s infinite cubic-bezier(.65, 0, .35, 1);
     color: $color;
-    @include include-keyframe(spin);
+    @include include-keyframe(loading-spinner);
   }
 }
 
