@@ -52,7 +52,7 @@
 
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": [
-      "named-where-possible",
+      "numeric",
       {
         "ignore": ["relative"]
       }
