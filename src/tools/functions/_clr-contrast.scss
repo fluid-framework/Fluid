@@ -12,7 +12,7 @@
 // {Color} $color - Color
 // {Color} $base - Color used as $base
 //
-// Return :
+// Return:
 // {Number} 1 is for 0% contrast, 21 is for 100% contrast
 //
 @function clr-contrast($color, $base) {

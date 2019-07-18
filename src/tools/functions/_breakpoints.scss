@@ -16,7 +16,7 @@
 // breakpoint-next(sm, $breakpoints) => md
 // breakpoint-next(sm, (xs sm md lg xl)) => md
 //
-// Return :
+// Return:
 // {String|null} the name of the breakpoint next of supplied breakpoint or null for the last breakpoint.
 //
 @function breakpoint-next($name, $breakpoints: $breakpoints) {
@@ -37,7 +37,7 @@
 // breakpoint-lower(xs) => 0
 // breakpoint-lower(sm, $breakpoints) => 576px44
 //
-// Return :
+// Return:
 // {Number} Starting point of the breakpoint. Null for the smallest (first) breakpoint.
 //
 @function breakpoint-lower($name, $breakpoint: $breakpoints) {
@@ -58,7 +58,7 @@
 // breakpoint-upper(xs) => 575.5px
 // breakpoint-upper(sm, $breakpoints) => 767.5px
 //
-// Return :
+// Return:
 // {Number} Ending point of the breakpoint. Null for the largest (last) breakpoint.
 //
 @function breakpoint-upper($name, $breakpoint: $breakpoints) {

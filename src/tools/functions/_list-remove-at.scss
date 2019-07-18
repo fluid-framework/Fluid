@@ -13,7 +13,7 @@
 // $result: list-remove-at($a, 2) =>  foo baz qux
 // $result: list-remove-at($b, 2) =>  [foo baz qux]
 //
-// Return :
+// Return:
 // {List} new list
 //
 @function remove-at($list, $index) {

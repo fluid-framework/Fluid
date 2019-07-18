@@ -9,7 +9,7 @@
 // Required arguments:
 // {Color} $color - Color
 //
-// Return :
+// Return:
 // {Color} Returns $dark for light color and $light for dark color
 //
 @function clr-auto($color, $light: $white, $dark: $gray-900) {

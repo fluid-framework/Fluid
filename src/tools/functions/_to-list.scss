@@ -10,7 +10,7 @@
 // $a : (a:1,b:2,c:3,d:4);
 // $result: to-list($a,'keys'); => $result : (a,b,c,d);
 //
-// Return :
+// Return:
 // {List} new list
 //
 @function to-list($map, $keep: "both") {

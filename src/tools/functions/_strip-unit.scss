@@ -8,7 +8,7 @@
 // Example of use:
 // $result: strip-unit(42px) =>  $result: 42
 //
-// Return :
+// Return:
 // {Number} Unitless number
 //
 @function strip-unit($number) {

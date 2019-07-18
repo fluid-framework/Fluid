@@ -11,7 +11,7 @@
 // $b: 1 2 3 4;
 // $result: to-map($a,$b); => $result : (a:1,b:2,c:3,d:4);
 //
-// Return :
+// Return:
 // {List} new Map
 //
 @function to-map($keys, $values: $keys) {

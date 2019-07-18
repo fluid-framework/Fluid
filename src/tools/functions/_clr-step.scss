@@ -11,7 +11,7 @@
 // {Number} $step - color step number
 // [optional] {Number} $color-step-interval - How much to mix $base-color into $color in each step
 //
-// Return :
+// Return:
 // {Color} value of color step
 //
 @function clr-step($color, $step, $color-step-interval: 10%) {

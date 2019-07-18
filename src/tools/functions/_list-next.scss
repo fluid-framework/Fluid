@@ -9,7 +9,7 @@
 // $a: (a b c d);
 // list-next(b) => c
 //
-// Return :
+// Return:
 // {*} next value to $value, null if $value is last.
 //
 @function list-next($list, $value) {
