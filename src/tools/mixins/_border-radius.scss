@@ -2,13 +2,6 @@
 // Border Radius
 //
 
-// all side border radius
-@mixin border-radius($radius: $border-radius-default) {
-  @if $design-rounded-else-box {
-    border-radius: $radius;
-  }
-}
-
 // top side border radius
 @mixin border-radius-top($radius: $border-radius-default) {
   @if $design-rounded-else-box {

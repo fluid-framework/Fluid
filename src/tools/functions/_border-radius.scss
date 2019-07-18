@@ -1,0 +1,17 @@
+//
+// Border Radius Function
+//
+
+//
+// border-radius
+// Function Used to control and generate border-radius
+//
+// Required arguments:
+// {Number} $radius - border-radius
+@function border-radius($radius: $border-radius-default) {
+  @if $design-rounded-else-box {
+    @return $radius;
+  }
+
+  @return null;
+}

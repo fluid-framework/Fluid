@@ -93,9 +93,8 @@ code {
   padding: $code-padding;
   margin-right: $code-margin-x;
   margin-left: $code-margin-x;
+  border-radius: border-radius();
   background: $code-background;
-
-  @include border-radius();
   @include font-size($code-font-size);
 }
 

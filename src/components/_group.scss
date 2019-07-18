@@ -27,7 +27,7 @@
         margin-right: -$border-width-default / 2;
         margin-left: -$border-width-default / 2;
         &:not(:first-child):not(:last-child) {
-          @include border-radius(0);
+          border-radius: border-radius(0);
         }
         &:first-child {
           @include border-radius-right(0);
@@ -44,7 +44,7 @@
         margin-top: -$border-width-default / 2;
         margin-bottom: -$border-width-default / 2;
         &:not(:first-child):not(:last-child) {
-          @include border-radius(0);
+          border-radius: border-radius(0);
         }
         &:first-child {
           @include border-radius-bottom(0);
@@ -63,7 +63,7 @@
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-top: 0;
           border-bottom: 0;
-          @include border-radius(0);
+          border-radius: border-radius(0);
 
           &:first-child {
             // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
@@ -82,7 +82,7 @@
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-right: 0;
           border-left: 0;
-          @include border-radius(0);
+          border-radius: border-radius(0);
 
           &:first-child {
             // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
@@ -102,11 +102,10 @@
         padding: $group-list-item-padding-y $group-list-item-padding-x;
         // avoid using @mixin to generate borders independent of `$design-shadow-else-border` option
         border: $border-width-default solid $gray-200;
+        border-radius: border-radius();
         color: $group-list-color;
         background-color: $group-list-background;
         text-decoration: none;
-
-        @include border-radius();
         @include transition($button-transition);
 
         @include disabled {

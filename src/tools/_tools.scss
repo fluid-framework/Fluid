@@ -35,6 +35,10 @@
 // Functions related to gradients
 @import "./functions/gradients";
 
+// Functions related to borders
+@import "./functions/border";
+@import "./functions/border-radius";
+
 // Functions related to grid
 @import "./functions/grid";
 
@@ -49,7 +53,6 @@
 //
 
 // Mixin Used for borders
-@import "./mixins/border";
 @import "./mixins/border-radius";
 
 // Mixin Used for box-shadow
