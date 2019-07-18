@@ -28,15 +28,10 @@
     flex-basis: 0;
     flex-grow: 1;
     width: 100%;
-    // top and bottom gap padding
-    padding-top: $grid-gap / 4;
-    padding-bottom: $grid-gap / 4;
 
     // Grid Gap
     @if $enable-grid-gap {
-      // left and right gap padding
-      padding-right: $grid-gap / 2;
-      padding-left: $grid-gap / 2;
+      padding: $grid-gap / 2;
     }
   }
 
