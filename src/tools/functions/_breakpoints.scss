@@ -82,7 +82,7 @@
 // $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // $breakpoints-readable: null mobile tablet desktop large;
 // $breakpoints-short-else-readable: true;
-// breakpoint-only(md) => desktop
+// breakpoint-only(sm) => mobile
 //
 @function breakpoint-name($breakpoint, $breakpoints: $breakpoints) {
   $breakpoints-keys: map-has-key($breakpoints, $breakpoint);
