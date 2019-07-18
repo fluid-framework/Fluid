@@ -86,6 +86,9 @@
 //
 @function breakpoint-name($breakpoint, $breakpoints: $breakpoints) {
   $breakpoints-keys: map-has-key($breakpoints, $breakpoint);
+  @if not $breakpoints-keys {
+    @error "$breakpoint `#{$breakpoint}` not found inside $breakpoints `#{$breakpoints}`.";
+  }
 
   @if $breakpoints-short-else-readable {
     // if short breakpoints are preferred
