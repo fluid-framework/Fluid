@@ -8,12 +8,11 @@
 // Functions related to list
 @import "./functions/to-list";
 @import "./functions/list-next";
+@import "./functions/list-remove";
+@import "./functions/list-remove-at";
 
 // Functions related to Map
 @import "./functions/to-map";
-
-// Functions related to Remove objects
-@import "./functions/remove";
 
 // Functions related to String
 @import "./functions/str-trim";
@@ -29,24 +28,24 @@
 @import "./functions/negate";
 @import "./functions/strip-unit";
 
-// Functions related to breakpoints
-@import "./functions/breakpoints";
-
-// Functions related to gradients
-@import "./functions/gradients";
-
-// Functions related to borders
-@import "./functions/border";
-@import "./functions/border-radius";
-
-// Functions related to grid
-@import "./functions/grid";
-
 // Functions related to color
 @import "./functions/clr-luminance";
 @import "./functions/clr-contrast";
 @import "./functions/clr-step";
 @import "./functions/clr-auto";
+
+// Functions related to breakpoints
+@import "./functions/breakpoints";
+
+// Functions related to borders
+@import "./functions/border";
+@import "./functions/border-radius";
+
+// Functions related to gradients
+@import "./functions/gradients";
+
+// Functions related to grid
+@import "./functions/grid";
 
 //
 // Mixin

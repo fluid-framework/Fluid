@@ -1,0 +1,39 @@
+//
+// list-remove-at
+// remove value from a list at a specified index
+// we can also use negative index to remove from end of list
+//
+// Required arguments:
+// {List} $list - list to remove from
+// {Number} $index - index to remove at
+//
+// Example of use:
+// $a: (foo bar baz qux);
+// $b: [foo bar baz qux];
+// $result: list-remove-at($a, 2) =>  foo baz qux
+// $result: list-remove-at($b, 2) =>  [foo baz qux]
+//
+// Return :
+// {List} new list
+//
+@function remove-at($list, $index) {
+  $result: null;
+  @if type-of($index) != number {
+    @error "The argument $index: `#{$index}` is of incorrect type: `#{type-of($index)}`. Type of `Number` is required!";
+  } @else if $index == 0 {
+    @error "The argument $index: `#{$index}` must be a non-zero integer!";
+  } @else if abs($index) > length($list) {
+    @error "The argument $index: `#{$index}` is greater than $list length #{length($list)}. It should be inside $list length";
+  }
+
+  $result: ();
+  $index: if($index < 0, length($list) + $index + 1, $index);
+
+  @for $i from 1 through length($list) {
+    @if $i != $index {
+      $result: append($result, nth($list, $i));
+    }
+  }
+
+  @return $result;
+}
