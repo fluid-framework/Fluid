@@ -13,10 +13,11 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`
+  box-sizing: inherit; // Set box-sizing to inherit from its parent so that user can easily override
 }
 
 body {
+  box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`
   @extend %margin-0; // Remove the margin in all browsers
   line-height: $line-height; // Correct the line height in all browsers
   -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
