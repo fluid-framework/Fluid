@@ -1,8 +1,8 @@
 //
-// Container helper
+// Container
 //
 
-@if $generate-helper-classes {
+@if $generate-object-classes {
   // Basic container
   // center and contain its content. decreases the size to `$container-max-width : 90%` above breakpoint sm
   .container {

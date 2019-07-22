@@ -28,15 +28,15 @@
 @import "./objects/grid";
 
 //
-// Trumps
+// Utilities
 //
 
 // Flex Utility for Grid system
-@import "./trumps/utilities/grid-flex/fill";
-@import "./trumps/utilities/grid-flex/grow";
-@import "./trumps/utilities/grid-flex/shrink";
-@import "./trumps/utilities/grid-flex/direction";
-@import "./trumps/utilities/grid-flex/wrap";
-@import "./trumps/utilities/grid-flex/align";
-@import "./trumps/utilities/grid-flex/justify";
-@import "./trumps/utilities/grid-flex/order";
+@import "./utilities/grid-flex/fill";
+@import "./utilities/grid-flex/grow";
+@import "./utilities/grid-flex/shrink";
+@import "./utilities/grid-flex/direction";
+@import "./utilities/grid-flex/wrap";
+@import "./utilities/grid-flex/align";
+@import "./utilities/grid-flex/justify";
+@import "./utilities/grid-flex/order";

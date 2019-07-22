@@ -1,8 +1,8 @@
 //
-// Layout helper
+// Layout
 //
 
-@if $generate-helper-classes {
+@if $generate-object-classes {
   %position-relative {
     position: relative;
   }

@@ -22,114 +22,97 @@
 @import "./tools/tools";
 
 //
-// Trumps
+// Objects
 //
 
-// Helpers
-
-// icon
-@import "./trumps/helpers/icon";
-
-// screen readers
-@import "./trumps/helpers/screenreaders";
-
-// stretched-link
-@import "./trumps/helpers/stretched-link";
-
-// container
-@import "./trumps/helpers/container";
-
-// layout
-@import "./trumps/helpers/layout";
-
-// Image
-@import "./trumps/helpers/image";
-
-// typography
-@import "./trumps/helpers/typography";
-
-// clear fix
-@import "./trumps/helpers/clearfix";
-
-// Float
-@import "./trumps/helpers/float";
-
+// All objects except grid because grid is already shipped separately
+@import "./objects/layout";
+@import "./objects/container";
+@import "./objects/icon";
+@import "./objects/float";
+@import "./objects/stretched-link";
+@import "./objects/image";
+@import "./objects/clearfix";
+@import "./objects/typography";
+@import "./objects/screenreaders";
+//
 // Utilities
+//
 
 // float
-@import "./trumps/utilities/float";
+@import "./utilities/float";
 
 // overflow
-@import "./trumps/utilities/overflow";
+@import "./utilities/overflow";
 
 // display
-@import "./trumps/utilities/display";
+@import "./utilities/display";
 
 // object fit
-@import "./trumps/utilities/objectfit";
+@import "./utilities/objectfit";
 
 // shadow
-@import "./trumps/utilities/shadow";
+@import "./utilities/shadow";
 
 // transform
-@import "./trumps/utilities/transform/rotation";
+@import "./utilities/transform/rotation";
 
 // position
-@import "./trumps/utilities/position";
+@import "./utilities/position";
 
 // border
-@import "./trumps/utilities/border/basic";
-@import "./trumps/utilities/border/directional";
-@import "./trumps/utilities/border/size";
-@import "./trumps/utilities/border/color";
-@import "./trumps/utilities/border/style";
-@import "./trumps/utilities/border/radius";
+@import "./utilities/border/basic";
+@import "./utilities/border/directional";
+@import "./utilities/border/size";
+@import "./utilities/border/color";
+@import "./utilities/border/style";
+@import "./utilities/border/radius";
 
 // sizing
-@import "./trumps/utilities/sizing/width";
-@import "./trumps/utilities/sizing/height";
+@import "./utilities/sizing/width";
+@import "./utilities/sizing/height";
 
 // color
-@import "./trumps/utilities/color";
+@import "./utilities/color";
 
 // background
-@import "./trumps/utilities/background";
+@import "./utilities/background";
 
 // Flex
-@import "./trumps/utilities/grid-flex/fill";
-@import "./trumps/utilities/grid-flex/grow";
-@import "./trumps/utilities/grid-flex/shrink";
-@import "./trumps/utilities/grid-flex/direction";
-@import "./trumps/utilities/grid-flex/wrap";
-@import "./trumps/utilities/grid-flex/align";
-@import "./trumps/utilities/grid-flex/justify";
-@import "./trumps/utilities/grid-flex/order";
+@import "./utilities/grid-flex/fill";
+@import "./utilities/grid-flex/grow";
+@import "./utilities/grid-flex/shrink";
+@import "./utilities/grid-flex/direction";
+@import "./utilities/grid-flex/wrap";
+@import "./utilities/grid-flex/align";
+@import "./utilities/grid-flex/justify";
+@import "./utilities/grid-flex/order";
 
 // typography
-@import "./trumps/utilities/typography/text-transform";
-@import "./trumps/utilities/typography/text-align";
-@import "./trumps/utilities/typography/text-shadow";
-@import "./trumps/utilities/typography/text-wrap";
-@import "./trumps/utilities/typography/font-weight";
-@import "./trumps/utilities/typography/font-family";
-@import "./trumps/utilities/typography/font-sizing";
-@import "./trumps/utilities/typography/misc";
+@import "./utilities/typography/text-transform";
+@import "./utilities/typography/text-align";
+@import "./utilities/typography/text-shadow";
+@import "./utilities/typography/text-wrap";
+@import "./utilities/typography/font-weight";
+@import "./utilities/typography/font-family";
+@import "./utilities/typography/font-sizing";
+@import "./utilities/typography/misc";
 
 // cursor
-@import "./trumps/utilities/cursor";
+@import "./utilities/cursor";
 
 // appearance
-@import "./trumps/utilities/visibility";
-@import "./trumps/utilities/opacity";
+@import "./utilities/visibility";
+@import "./utilities/opacity";
 
 // event
-@import "./trumps/utilities/event";
+@import "./utilities/event";
 
 // svg
-@import "./trumps/utilities/svg-shadow";
+@import "./utilities/svg-shadow";
 
 // zindex
-@import "./trumps/utilities/zindex";
+@import "./utilities/zindex";
 
 // Spacing
 @import "./objects/spacing+ive";

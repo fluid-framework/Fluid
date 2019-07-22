@@ -75,14 +75,12 @@ src
 │   └───mixins
 │       ├───components
 │       └───shapes
-├───trumps
-│   ├───helpers
-│   └───utilities
-│       ├───border
-│       ├───grid-flex
-│       ├───sizing
-│       ├───transform
-│       └───typography
+├───utilities
+│   ├───border
+│   ├───grid-flex
+│   ├───sizing
+│   ├───transform
+│   └───typography
 └───vendors
 ```
 
