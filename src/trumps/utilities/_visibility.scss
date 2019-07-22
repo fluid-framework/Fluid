@@ -2,7 +2,7 @@
 // Visibility
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: visibility,
     class: is,

@@ -2,7 +2,7 @@
 // Display
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     responsive: false,
     properties: object-fit,

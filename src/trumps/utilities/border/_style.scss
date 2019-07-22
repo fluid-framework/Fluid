@@ -2,7 +2,7 @@
 // Border-style
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: border-style,
     class: border,

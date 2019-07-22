@@ -2,7 +2,7 @@
 // Misc
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   .text-vertical {
     // stylelint-disable-next-line declaration-no-important
     writing-mode: vertical-lr !important;

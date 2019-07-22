@@ -2,7 +2,7 @@
 // Justify-content
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     responsive: true,
     properties: justify-content,

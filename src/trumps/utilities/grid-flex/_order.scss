@@ -2,7 +2,7 @@
 // Order
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $HALFORDERS: ();
   @for $index from 0 to $grid-columns / 2 {
     $HALFORDERS: map-merge($HALFORDERS, ($index: $index));

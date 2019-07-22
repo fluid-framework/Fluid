@@ -2,7 +2,7 @@
 // Basic Border
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: border,
     class: border,

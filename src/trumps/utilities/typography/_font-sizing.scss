@@ -2,7 +2,7 @@
 // font-size
 //
 
-@if $generate-utilities-classes or $generate-component-classes {
+@if $generate-utility-classes or $generate-component-classes {
   .is-small {
     @include fontsize($font-size-small, true);
   }

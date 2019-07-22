@@ -2,7 +2,7 @@
 // Cursor
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: cursor,
     class: cursor,

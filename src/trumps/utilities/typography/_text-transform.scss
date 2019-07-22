@@ -2,7 +2,7 @@
 // Text-transform
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: text-transform,
     class: text,

@@ -2,7 +2,7 @@
 // Font-family
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: font-family,
     class: font,

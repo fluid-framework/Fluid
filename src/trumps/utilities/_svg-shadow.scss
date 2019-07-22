@@ -2,7 +2,7 @@
 // SVG shadow
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: filter,
     class: svg-shadow,

@@ -2,7 +2,7 @@
 // Font-weight
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: font-weight,
     class: font,

@@ -2,7 +2,7 @@
 // Height
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: height,
     class: h,

@@ -2,7 +2,7 @@
 // Border-Size
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   // stylelint-disable-next-line declaration-no-important
   .border-wide { border-width: $border-width-wide !important; }
 }

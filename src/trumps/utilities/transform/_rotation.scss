@@ -2,7 +2,7 @@
 // Rotation
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $ROTATIONS: ();
   @each $key, $value in $rotations {
     $ROTATIONS: map-merge($ROTATIONS, ($key : rotate($value)));

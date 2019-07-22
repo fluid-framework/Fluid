@@ -2,7 +2,7 @@
 // Opacity
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $SIZES: ();
 
   @each $key, $value in map-remove($sizes, 0) {

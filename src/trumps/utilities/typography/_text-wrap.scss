@@ -2,7 +2,7 @@
 // Text-wrap
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: white-space,
     class: text,

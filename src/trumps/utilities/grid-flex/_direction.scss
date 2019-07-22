@@ -2,7 +2,7 @@
 // Grid direction
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: flex-direction,
     class: is,

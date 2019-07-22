@@ -5,7 +5,7 @@
 //
 // Todo : add color variants
 //
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: box-shadow,
     class: has-shadow,

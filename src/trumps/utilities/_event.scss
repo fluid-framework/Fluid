@@ -2,7 +2,7 @@
 // Pointer events
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: pointer-events,
     class: event,

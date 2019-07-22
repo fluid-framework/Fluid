@@ -2,7 +2,7 @@
 // Grid-wrap
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: flex-wrap,
     class: flex,

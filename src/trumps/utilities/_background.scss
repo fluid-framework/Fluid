@@ -2,7 +2,7 @@
 // Background
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: background-color,
     class: bg,

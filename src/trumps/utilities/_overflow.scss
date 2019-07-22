@@ -2,7 +2,7 @@
 // Overflow
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: overflow,
     class: overflow,

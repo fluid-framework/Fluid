@@ -2,7 +2,7 @@
 // Width
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     properties: width,
     class: w,

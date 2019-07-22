@@ -2,7 +2,7 @@
 // Align
 //
 
-@if $generate-utilities-classes {
+@if $generate-utility-classes {
   $config: (
     responsive: true,
     properties: align-content,
