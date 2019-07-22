@@ -2,8 +2,8 @@
 // negate
 // negate value(s) or key(s) or both in a list or map
 //
-// Note:
-// if string is supplied as key or value it will just prefix `-` to string
+// Warning:
+// if string is supplied as key or value inside $list-map. just `-` will be prefixed to string.
 //
 // Required arguments:
 // {List|Map} $list-map - list or map
