@@ -44,11 +44,12 @@
     "build": "npm-run-all dist",
     "dist": "npm-run-all -s test dist:**",
     "dist:clean": "shx rm -rf ./dist",
-    "dist:packer:mediaQuery": "foreach -g ./dist/*.css -x \"mqpacker --sort ./dist/#{name}.css ./dist/#{name}.css\"",
-    "dist:compile:minify": "foreach -g ./dist/*.css -x \"node-sass ./dist/#{name}.css ./dist/#{name}.min.css --output-style compressed\"",
-    "dist:packer:duplicateSelectors": "foreach -g ./dist/*.min.css -x \"postcss ./dist/#{name}.css --use postcss-combine-duplicated-selectors --output ./dist/#{name}.css --no-map\""
     "dist:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map-embed",
     "dist:vendorPrefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer",
+    "dist:optimize:mediaQuery": "foreach -g ./dist/*.css -x \"mqpacker --sort ./dist/#{name}.css ./dist/#{name}.css\"",
+    "dist:optimize:duplicateSelectors": "foreach -g ./dist/*.css -x \"postcss ./dist/#{name}.css --output ./dist/#{name}.min.css --use postcss-combine-duplicated-selectors --no-map\"",
+    "dist:optimize:cssNano:compile": "foreach -g ./dist/*.min.css -x \"postcss ./dist/#{name}.css > ./dist/#{name}.temp\"",
+    "dist:optimize:cssNano:rename": "foreach -g ./dist/*.temp -x \"shx mv ./dist/#{name}.temp ./dist/#{name}.css\""
   },
   "repository": {
     "type": "git",
@@ -59,6 +60,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
     "find-unused-sass-variables": "^0.4.1",
     "foreach-cli": "^1.8.1",
     "node-sass": "^4.12.0",
