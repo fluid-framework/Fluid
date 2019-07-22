@@ -41,6 +41,10 @@
 // {Number} Starting point of the breakpoint. Null for the smallest (first) breakpoint.
 //
 @function breakpoint-lower($name, $breakpoint: $breakpoints) {
+  @if not map-has-key($breakpoint, $name) {
+    @error "$name `#{$name}` not found inside $breakpoint `#{$breakpoint}`.";
+  }
+
   $lower: map-get($breakpoint, $name);
   @return if($lower == 0, null, $lower);
 }
