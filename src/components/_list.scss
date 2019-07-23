@@ -11,14 +11,14 @@
       // instead of display list
       display: block;
     }
+  }
 
-    &.is-inline {
-      display: block;
-      > .list-item {
-        display: inline-block;
-        &:not(:last-child) {
-          margin-right: $list-inline-padding;
-        }
+  .list.is-inline {
+    display: block;
+    > .list-item {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: $list-inline-padding;
       }
     }
   }
