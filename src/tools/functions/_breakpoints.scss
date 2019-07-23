@@ -6,7 +6,7 @@
 // breakpoint-next
 // return the name of the breakpoint next of supplied breakpoint
 //
-// Required arguments:
+// Parameters:
 // {String} $breakpoint - name of the breakpoint to find next of
 // {Map} $breakpoints - breakpoints map to look into
 //
@@ -28,7 +28,7 @@
 // breakpoint-lower
 // return the lower value of the breakpoint
 //
-// Required arguments:
+// Parameters:
 // {String} $breakpoint - name of the breakpoint
 // {Map} $breakpoints - breakpoints map to look into
 //
@@ -53,7 +53,7 @@
 // breakpoint-upper
 // return the upper value of the breakpoint
 //
-// Required arguments:
+// Parameters:
 // {String} $breakpoint - name of the breakpoint
 // {Map} $breakpoints - breakpoints map to look into
 //
@@ -78,7 +78,7 @@
 // breakpoint-name
 // return breakpoint name based on setting `breakpoints-short-else-readable`
 //
-// Required arguments:
+// Parameters:
 // {String} $breakpoint - name of the breakpoint
 // [optional] {Map} $breakpoints - breakpoints map
 //

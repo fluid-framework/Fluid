@@ -5,7 +5,7 @@
 // Warning:
 // if string is supplied as key or value inside $list-map. just `-` will be prefixed to string.
 //
-// Required arguments:
+// Parameters:
 // {List|Map} $list-map - list or map
 // [optional] {String} $negate - check to negate value(s) or key(s) or both
 //

@@ -2,13 +2,13 @@
 // str-capitalize
 // Make string's first character uppercase
 //
-// Required arguments:
+// Parameters:
 // `$string` String
 //
 // Example of use:
 // $result: str-capitalize('abcd') => $result : Abcd
 //
-// Required arguments:
+// Parameters:
 // {String}
 //
 @function str-capitalize($string) {

@@ -7,7 +7,7 @@
 // Generate a media query for given breakpoint and above it
 // No media query for the smallest breakpoint as it doesn't requires media query
 //
-// Required arguments:
+// Parameters:
 // {String} $breakpoint - name of the breakpoint
 // [optional] {Map} $breakpoints - breakpoints map
 //
@@ -33,7 +33,7 @@
 // Generate a media query for given breakpoint and below it
 // No media query for the largest breakpoint as it doesn't requires media query
 //
-// Required arguments:
+// Parameters:
 // {String} $breakpoint - name of the breakpoint
 // [optional] {Map} $breakpoints - breakpoints map
 //
@@ -58,7 +58,7 @@
 // media-breakpoint-between
 // Generate a media query for given minimum breakpoint and maximum breakpoint only
 //
-// Required arguments:
+// Parameters:
 // {String} $minimum - name of the minimum breakpoint
 // {String} $maximum - name of the maximum breakpoint
 // [optional] {Map} $breakpoints - breakpoints map
@@ -93,7 +93,7 @@
 // Generate a media query only for given breakpoint
 // No media query for the smallest and largest breakpoint as it doesn't requires media query
 //
-// Required arguments:
+// Parameters:
 // {String} $breakpoint - name of the breakpoint
 // [optional] {Map} $breakpoints - breakpoints map
 //

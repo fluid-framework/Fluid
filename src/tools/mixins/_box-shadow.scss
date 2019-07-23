@@ -6,7 +6,7 @@
 // box-shadow
 // Mixin Used to control and generate box-shadow
 //
-// Required arguments:
+// Parameters:
 // {String} $shadows - shadows strings
 @mixin box-shadow($shadows...) {
   @if $design-shadow-else-border {

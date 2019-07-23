@@ -14,7 +14,7 @@
 // transition
 // Mixin Used to control and generate transition
 //
-// Required arguments:
+// Parameters:
 // {String} $transitions - transitions strings
 @mixin transition($transitions...) {
   $transition-combined: "";

@@ -6,7 +6,7 @@
 // border
 // Function Used to control and generate border
 //
-// Required arguments:
+// Parameters:
 // {String} $border - border strings
 @function border($border: $border-defaut) {
   @if not $design-shadow-else-border {
