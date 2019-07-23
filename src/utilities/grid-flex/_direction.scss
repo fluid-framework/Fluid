@@ -5,13 +5,14 @@
 @if $generate-utility-classes {
   $config: (
     properties: flex-direction,
-    selector: is,
+    selector: "",
     values: (
       horizontal: row,
       vertical: column,
       horizontal-reverse: row-reverse,
       vertical-reverse: column-reverse
     ),
+    disable-prefix-values-keys: true,
     enable-important-values: true
   );
 
