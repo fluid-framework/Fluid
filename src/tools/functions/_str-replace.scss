@@ -3,15 +3,15 @@
 // Replace occurrence of a string
 //
 // Parameters:
-// `$string` String
-// `$search` String
-// [optional] `$replace` String
+// {String} $string : String containing the word to replace
+// {String} $search : word to replace
+// [optional] {String} $replace : String to replace with
 //
 // Example of use:
 // $result: str-replace('This is just an example', 'just', 'not') => $result: This is not an example
 //
 // Return:
-// String with replaced words
+// {String} String with replaced words
 //
 @function str-replace($string, $search, $replace: " ") {
   @if type-of($string) != "string" {
