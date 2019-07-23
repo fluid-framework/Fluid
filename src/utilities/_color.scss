@@ -26,7 +26,7 @@
 
   @each $color, $value in map-remove(map-get($config, "values"), inherit) {
     @if $link-hover-dark-step != 0 {
-      a.#{map-get($config,"class")}-#{$color} {
+      a.#{map-get($config,"selector")}-#{$color} {
         @include hover-focus {
           // stylelint-disable-next-line declaration-no-important
           color: clr-step($link-color, $link-hover-dark-step) !important;
