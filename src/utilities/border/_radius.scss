@@ -18,33 +18,47 @@
   );
 
   @include generate-style($config);
+  $config: (
+    properties: border-top-left-radius border-top-right-radius,
+    selector: rounded,
+    values: (
+      top: $border-radius-default
+    ),
+    enable-important-values: true
+  );
 
-  .is-rounded-top {
-    // avoid using @mixin is-rounded-top to generate radius independent of `$design-rounded-else-box` option
-    // stylelint-disable-next-line declaration-no-important
-    border-top-left-radius: $border-radius-default !important;
-    // stylelint-disable-next-line declaration-no-important
-    border-top-right-radius: $border-radius-default !important;
-  }
-  .is-rounded-right {
-    // avoid using @mixin is-rounded-right to generate radius independent of `$design-rounded-else-box` option
-    // stylelint-disable-next-line declaration-no-important
-    border-top-right-radius: $border-radius-default !important;
-    // stylelint-disable-next-line declaration-no-important
-    border-bottom-right-radius: $border-radius-default !important;
-  }
-  .is-rounded-bottom {
-    // avoid using @mixin is-rounded-bottom to generate radius independent of `$design-rounded-else-box` option
-    // stylelint-disable-next-line declaration-no-important
-    border-bottom-right-radius: $border-radius-default !important;
-    // stylelint-disable-next-line declaration-no-important
-    border-bottom-left-radius: $border-radius-default !important;
-  }
-  .is-rounded-left {
-    // avoid using @mixin is-rounded-left to generate radius independent of `$design-rounded-else-box` option
-    // stylelint-disable-next-line declaration-no-important
-    border-top-left-radius: $border-radius-default !important;
-    // stylelint-disable-next-line declaration-no-important
-    border-bottom-left-radius: $border-radius-default !important;
-  }
+  @include generate-style($config);
+
+  $config: (
+    properties: border-top-right-radius border-bottom-right-radius,
+    selector: rounded,
+    values: (
+      right: $border-radius-default
+    ),
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
+
+  $config: (
+    properties: border-bottom-right-radius border-bottom-left-radius,
+    selector: rounded,
+    values: (
+      bottom: $border-radius-default
+    ),
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
+
+  $config: (
+    properties: border-top-left-radius border-bottom-left-radius,
+    selector: rounded,
+    values: (
+      left: $border-radius-default
+    ),
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
 }
