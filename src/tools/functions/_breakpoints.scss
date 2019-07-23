@@ -34,11 +34,11 @@
 //
 // Example of use:
 // $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
-// breakpoint-lower(xs) => 0
-// breakpoint-lower(sm, $breakpoints) => 576px44
+// breakpoint-lower(xs) => null
+// breakpoint-lower(sm, $breakpoints) => 576px
 //
 // Return:
-// {Number} Starting point of the breakpoint. Null for the smallest (first) breakpoint.
+// {Number,null} Starting point of the breakpoint. Null for the first breakpoint.
 //
 @function breakpoint-lower($name, $breakpoint: $breakpoints) {
   @if not map-has-key($breakpoint, $name) {

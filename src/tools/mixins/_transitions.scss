@@ -2,7 +2,6 @@
 // Transition Mixin
 //
 
-
 // Placeholder for prefers-reduced-motion query
 %prefers-reduced-motion {
   @media (prefers-reduced-motion: reduce) {
@@ -45,8 +44,7 @@
 // Arguments:
 // {String} $name - Name of the animation
 // [optional] {Boolean} $infinite - used to set animation to infinite
-// [optional] {Color} $color - Color used to animate shadow
-// [optional] {Time} $Duration - Duration of animation
+// [optional] {Time} $duration - Duration of animation
 // [optional] {Animation function} $function - Animation function
 //
 @mixin animation($name, $infinite: false, $duration: 1s, $function: ease-out) {
@@ -72,7 +70,7 @@
       from {
         box-shadow: 0 0 0 0 currentColor;
       }
-      75%{
+      75% {
         box-shadow: 0 0 0 ($input-focus-width * 1.5) transparent;
       }
       to {
