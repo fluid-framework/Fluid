@@ -103,6 +103,7 @@
         // avoid using @mixin to generate borders independent of `$design-shadow-else-border` option
         border: $border-width-default solid $gray-200;
         border-radius: border-radius();
+        outline: 0;
         color: $group-list-color;
         background-color: $group-list-background;
         text-decoration: none;
@@ -113,7 +114,10 @@
           opacity: $group-list-item-disabled-opacity;
           color: $group-list-disabled-color;
         }
+      }
 
+      a.list-item,
+      button.list-item {
         @include active {
           border-color: $group-list-active-border-color;
           color: clr-auto($group-list-active-background);
