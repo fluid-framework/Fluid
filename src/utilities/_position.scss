@@ -5,13 +5,13 @@
 @if $generate-utility-classes {
   $config: (
     properties: position,
-    class: "",
+    selector: "",
     values: static relative absolute fixed sticky,
     disable-prefix-values-keys: true,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   //
   // Doc : Add Documentation
@@ -19,7 +19,7 @@
 
   $config: (
     properties: "",
-    class: "",
+    selector: "",
     values: (
       0: 0%,
       100: 100%
@@ -30,5 +30,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

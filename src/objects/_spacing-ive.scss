@@ -22,12 +22,12 @@
 
   $config: (
     properties: margin,
-    class: m,
+    selector: m,
     values: $sizes,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   //
   // Directional Margin
@@ -35,14 +35,14 @@
 
   $config: (
     properties: margin,
-    class: m,
+    selector: m,
     values: $sizes,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   //
   //  Margin horizontal
@@ -52,12 +52,12 @@
   $config: (
     responsive: true,
     properties: margin-left margin-right,
-    class: mx,
+    selector: mx,
     values: $sizes,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   //
   //  Margin vertical
@@ -67,10 +67,10 @@
   $config: (
     responsive: true,
     properties: margin-top margin-bottom,
-    class: my,
+    selector: my,
     values: $sizes,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

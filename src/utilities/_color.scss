@@ -1,7 +1,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: color,
-    class: clr,
+    selector: clr,
     values:
     map-merge(
       $theme-colors,
@@ -22,7 +22,7 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   @each $color, $value in map-remove(map-get($config, "values"), inherit) {
     @if $link-hover-dark-step != 0 {

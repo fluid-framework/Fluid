@@ -6,7 +6,7 @@
   $config: (
     responsive: true,
     properties: align-content,
-    class: align-content,
+    selector: align-content,
     values: (
       top: flex-start,
       middle: center,
@@ -17,12 +17,12 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   $config: (
     responsive: true,
     properties: align-items,
-    class: align,
+    selector: align,
     values: (
       top: flex-start,
       middle: center,
@@ -33,12 +33,12 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   $config: (
     responsive: true,
     properties: align-self,
-    class: align-self,
+    selector: align-self,
     values: (
       top: flex-start,
       middle: center,
@@ -49,5 +49,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

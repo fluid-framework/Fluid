@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: border,
-    class: border,
+    selector: border,
     values: (
       null: $border-defaut,
       none: 0
@@ -13,5 +13,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

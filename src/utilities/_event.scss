@@ -5,10 +5,10 @@
 @if $generate-utility-classes {
   $config: (
     properties: pointer-events,
-    class: event,
+    selector: event,
     values: none auto,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

@@ -6,19 +6,19 @@
   $config: (
     responsive: true,
     properties: text-align,
-    class: text,
+    selector: text,
     values: left right center justify,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 
   $config: (
     properties: vertical-align,
-    class: text,
+    selector: text,
     values: baseline top middle bottom sub super,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

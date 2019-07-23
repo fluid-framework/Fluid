@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: border-color,
-    class: border,
+    selector: border,
     values:
     map-merge(
       $theme-colors,
@@ -17,5 +17,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

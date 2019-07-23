@@ -6,10 +6,10 @@
   $config: (
     responsive: false,
     properties: object-fit,
-    class: object,
+    selector: object,
     values: contain cover fill none scale-down,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

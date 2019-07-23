@@ -6,7 +6,7 @@
   $config: (
     responsive: true,
     properties: display,
-    class: "",
+    selector: "",
     values: (
       hidden: none,
       inline: inline,
@@ -22,5 +22,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

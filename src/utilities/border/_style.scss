@@ -5,10 +5,10 @@
 @if $generate-utility-classes {
   $config: (
     properties: border-style,
-    class: border,
+    selector: border,
     values: dotted dashed solid double groove ridge inset outset,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

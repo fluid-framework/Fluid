@@ -5,10 +5,10 @@
 @if $generate-utility-classes {
   $config: (
     properties: flex-wrap,
-    class: flex,
+    selector: flex,
     values: wrap nowrap wrap-reverse,
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

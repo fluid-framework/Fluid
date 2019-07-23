@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: font-family,
-    class: font,
+    selector: font,
     values: (
       sans-serif: $font-family-sans-serif,
       serif: $font-family-serif,
@@ -14,5 +14,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

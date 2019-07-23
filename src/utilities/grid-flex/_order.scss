@@ -11,7 +11,7 @@
   $config: (
     responsive: true,
     properties: order,
-    class: order,
+    selector: order,
     values:
     map-merge(
       $HALFORDERS,
@@ -23,5 +23,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

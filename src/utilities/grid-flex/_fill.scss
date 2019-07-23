@@ -5,12 +5,12 @@
 @if $generate-utility-classes {
   $config: (
     properties: flex,
-    class: flex,
+    selector: flex,
     values: (
       fill: 1 1 auto
     ),
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

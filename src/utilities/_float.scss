@@ -6,7 +6,7 @@
   $config: (
     responsive: true,
     properties: float,
-    class: float,
+    selector: float,
     values: (
       left,
       right,
@@ -15,5 +15,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }

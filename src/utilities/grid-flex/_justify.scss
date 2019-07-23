@@ -6,7 +6,7 @@
   $config: (
     responsive: true,
     properties: justify-content,
-    class: justify,
+    selector: justify,
     values: (
       start: flex-start,
       center: center,
@@ -17,5 +17,5 @@
     enable-important-values: true
   );
 
-  @include generate-class($config);
+  @include generate-style($config);
 }
