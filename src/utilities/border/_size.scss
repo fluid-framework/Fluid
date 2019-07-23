@@ -3,6 +3,14 @@
 //
 
 @if $generate-utility-classes {
-  // stylelint-disable-next-line declaration-no-important
-  .border-wide { border-width: $border-width-wide !important; }
+  $config: (
+    properties: border-width,
+    selector: border,
+    values: (
+      wide: $border-width-wide
+    ),
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
 }

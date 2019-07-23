@@ -3,20 +3,33 @@
 //
 
 @if $generate-utility-classes {
-  .text-vertical {
-    // stylelint-disable-next-line declaration-no-important
-    writing-mode: vertical-lr !important;
-  }
-  .text-decoration-none {
-    // stylelint-disable-next-line declaration-no-important
-    text-decoration: none !important;
-  }
-  .italic {
-    // stylelint-disable-next-line declaration-no-important
-    font-style: italic !important;
-  }
-  .underline {
-    // stylelint-disable-next-line declaration-no-important
-    text-decoration: underline !important;
-  }
+  $config: (
+    properties: writing-mode,
+    selector: text,
+    values: (
+      vertical: vertical-lr
+    ),
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
+
+  $config: (
+    properties: text-decoration,
+    selector: text-decoration,
+    values: none underline,
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
+
+  $config: (
+    properties: font-style,
+    selector: "",
+    values: italic,
+    disable-prefix-values-keys: true,
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
 }
