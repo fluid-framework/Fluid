@@ -7,7 +7,7 @@ button,
 [type="reset"],
 [type="submit"] {
   // add "hand" cursor to non-disabled button elements.
-  &:not(:disabled) {
+  @include disabled {
     cursor: pointer;
   }
 }
