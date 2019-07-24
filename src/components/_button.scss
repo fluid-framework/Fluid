@@ -52,6 +52,11 @@
         }
       }
 
+      @include focus {
+        @include animation(pulse-solid); // pulse animation on click event
+        outline: 0;
+      }
+
       @include active {
         @if not $design-solid-else-gradients {
           background-image: none; // Remove the gradient for the pressed/active state
