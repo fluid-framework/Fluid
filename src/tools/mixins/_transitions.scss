@@ -73,8 +73,8 @@
       75% {
         box-shadow: 0 0 0 ($input-focus-width * 1.5) transparent;
       }
-      to {
-        box-shadow: 0 0 0 0 transparent;
+      76% {
+        box-shadow: none;
       }
     }
   } @else if $name == flash and not $imported-flash {
