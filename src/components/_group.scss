@@ -12,7 +12,7 @@
     flex-wrap: wrap;
 
     > .input,
-    > .button,
+    > .btn,
     > .list-item {
       @include fontsize(inherit);
       @include hover-focus {
@@ -20,9 +20,9 @@
       }
     }
 
-    &:not(.is-x) {
+    &:not(.is-y) {
       > .input,
-      > .button,
+      > .btn,
       > .list-item {
         margin-right: -$border-width-default / 2;
         margin-left: -$border-width-default / 2;
@@ -37,9 +37,9 @@
         }
       }
     }
-    &.is-x {
+    &.is-y {
       > .input,
-      > .button,
+      > .btn,
       > .list-item {
         margin-top: -$border-width-default / 2;
         margin-bottom: -$border-width-default / 2;
@@ -56,9 +56,9 @@
     }
 
     &.is-purge {
-      &:not(.is-x) {
+      &:not(.is-y) {
         > .input,
-        > .button,
+        > .btn,
         > .list-item {
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-top: 0;
@@ -75,9 +75,9 @@
           }
         }
       }
-      &.is-x {
+      &.is-y {
         > .input,
-        > .button,
+        > .btn,
         > .list-item {
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-right: 0;
