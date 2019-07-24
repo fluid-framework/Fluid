@@ -28,7 +28,7 @@
 
     @include transition($header-transition);
 
-    &.is-collapsed {
+    &.is-collapse {
       height: $header-height-collapsed;
       line-height: $header-height-collapsed;
     }

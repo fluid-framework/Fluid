@@ -7,12 +7,12 @@
     properties: border-radius,
     selector: "is",
     values: (
-      rounded: $border-radius-normal,
-      rounded-sm: $border-radius-small,
-      rounded-lg: $border-radius-large,
+      round: $border-radius-normal,
+      round-sm: $border-radius-small,
+      round-lg: $border-radius-large,
       circle: 50%,
       pill: $border-radius-pill,
-      boxed: 0
+      box: 0
     ),
     enable-important-values: true
   );
@@ -20,7 +20,7 @@
   @include generate-style($config);
   $config: (
     properties: border-top-left-radius border-top-right-radius,
-    selector: rounded,
+    selector: round,
     values: (
       top: $border-radius-default
     ),
@@ -31,7 +31,7 @@
 
   $config: (
     properties: border-top-right-radius border-bottom-right-radius,
-    selector: rounded,
+    selector: round,
     values: (
       right: $border-radius-default
     ),
@@ -42,7 +42,7 @@
 
   $config: (
     properties: border-bottom-right-radius border-bottom-left-radius,
-    selector: rounded,
+    selector: round,
     values: (
       bottom: $border-radius-default
     ),
@@ -53,7 +53,7 @@
 
   $config: (
     properties: border-top-left-radius border-bottom-left-radius,
-    selector: rounded,
+    selector: round,
     values: (
       left: $border-radius-default
     ),
