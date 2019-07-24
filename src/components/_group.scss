@@ -116,8 +116,8 @@
         }
       }
 
-      a.list-item,
-      button.list-item {
+      > a.list-item,
+      > button.list-item {
         @include active {
           border-color: $group-list-active-border-color;
           color: clr-auto($group-list-active-background);
