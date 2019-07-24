@@ -20,7 +20,7 @@
       }
     }
 
-    &:not(.is-vertical) {
+    &:not(.is-x) {
       > .input,
       > .button,
       > .list-item {
@@ -37,7 +37,7 @@
         }
       }
     }
-    &.is-vertical {
+    &.is-x {
       > .input,
       > .button,
       > .list-item {
@@ -56,7 +56,7 @@
     }
 
     &.is-purge {
-      &:not(.is-vertical) {
+      &:not(.is-x) {
         > .input,
         > .button,
         > .list-item {
@@ -75,7 +75,7 @@
           }
         }
       }
-      &.is-vertical {
+      &.is-x {
         > .input,
         > .button,
         > .list-item {

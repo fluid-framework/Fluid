@@ -14,7 +14,7 @@
   //
   // Doc : add Doc
   //
-  .layout-header {
+  .lyt-header {
     @extend %position-relative;
     z-index: $header-zindex;
     width: 100%;
@@ -37,7 +37,7 @@
   //
   // Doc : add Doc
   //
-  .layout-main {
+  .lyt-main {
     @extend %position-relative;
     z-index: $main-zindex;
     background: $body-background;
@@ -46,7 +46,7 @@
   //
   // Doc : add Doc
   //
-  .layout-sidebar {
+  .lyt-sidebar {
     @extend %position-fixed;
     top: 0;
     bottom: 0;
@@ -111,7 +111,7 @@
   //
   // Doc : add Doc
   //
-  .layout-footer {
+  .lyt-footer {
     @extend %position-relative;
     z-index: $footer-zindex;
     padding: $footer-padding-y $footer-padding-x;

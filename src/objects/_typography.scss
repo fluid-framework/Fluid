@@ -2,7 +2,7 @@
   //
   // Doc : add Doc
   //
-  .text-truncate {
+  .txt-truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -11,7 +11,7 @@
   //
   // Doc : add doc
   //
-  .text-initial {
+  .txt-initial {
     float: left;
     padding-right: .18em;
     @include fontsize(3em);
@@ -21,7 +21,7 @@
   //
   // Doc : add doc
   //
-  .text-break {
+  .txt-break {
     word-break: break-word;
     overflow-wrap: break-word;
   }
@@ -29,7 +29,7 @@
   //
   // Doc : add doc
   //
-  .text-clip {
+  .txt-clip {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -37,7 +37,7 @@
   //
   // Doc : add doc
   //
-  .text-reset {
+  .txt-reset {
     text-transform: none;
     // Fallback for where `start` is not supported
     text-align: left;
@@ -59,7 +59,7 @@
   //
   // Doc : add doc
   //
-  .text-hide {
+  .txt-hide {
     // stylelint-disable-next-line declaration-no-important
     border: 0 !important;
     // stylelint-disable-next-line declaration-no-important

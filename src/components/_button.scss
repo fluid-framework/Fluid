@@ -7,7 +7,7 @@
   // Base styles
   //
 
-  .button {
+  .btn {
     display: inline-block;
     user-select: none;
     padding: $button-padding-y $button-padding-x;
@@ -40,8 +40,8 @@
     // Theme Variants
     //
 
-    // Is-solid
-    &.is-solid {
+    // Solid Theme
+    &.is-sld {
       color: clr-auto($button-theme);
       @include button-design-solid-varient($button-theme);
 
@@ -72,8 +72,8 @@
       }
     }
 
-    // Is-outline
-    &.is-outline {
+    // Outline theme
+    &.is-out {
       @include button-design-outline-varient($button-theme); // Default button theme
 
       // Color variants
@@ -89,8 +89,8 @@
       }
     }
 
-    // Is-minimal
-    &.is-minimal {
+    // Minimal theme
+    &.is-min {
       position: relative;
       border-right: 0; // remove border to remove border spacing between minimal button groups
       border-left: 0; // remove border to remove border spacing between minimal button groups
@@ -157,7 +157,7 @@
   // Loading Animation
   //
 
-  .button.is-loading {
+  .btn.is-loading {
     pointer-events: none;
     // stylelint-disable-next-line declaration-no-important
     color: transparent !important;
@@ -168,7 +168,7 @@
   // Block
   //
 
-  .button.is-block {
+  .btn.is-block {
     width: 100%;
   }
 
@@ -177,7 +177,7 @@
   //
 
   // useful for button with only icons
-  .button.is-circle {
+  .btn.is-circle {
     padding: $button-iscircle-padding;
   }
 }

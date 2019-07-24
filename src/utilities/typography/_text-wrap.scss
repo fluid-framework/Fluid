@@ -1,11 +1,11 @@
 //
-// Text-wrap
+// Text wrap
 //
 
 @if $generate-utility-classes {
   $config: (
     properties: white-space,
-    selector: text,
+    selector: txt,
     values: (
       wrap: normal,
       nowrap: nowrap

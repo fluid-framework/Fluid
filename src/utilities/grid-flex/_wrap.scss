@@ -6,7 +6,11 @@
   $config: (
     properties: flex-wrap,
     selector: flex,
-    values: wrap nowrap wrap-reverse,
+    values: (
+      wrap: wrap,
+      nowrap: nowrap,
+      wrap-rev: wrap-reverse
+    ),
     enable-important-values: true
   );
 

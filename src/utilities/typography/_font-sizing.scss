@@ -3,11 +3,11 @@
 //
 
 @if $generate-utility-classes or $generate-component-classes {
-  .is-small {
+  .is-sm {
     @include fontsize($font-size-small, true);
   }
 
-  .is-large {
+  .is-lg {
     @include fontsize($font-size-large, true);
   }
 }

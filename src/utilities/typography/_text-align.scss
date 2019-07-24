@@ -1,12 +1,12 @@
 //
-// Text-align
+// Text align
 //
 
 @if $generate-utility-classes {
   $config: (
     responsive: true,
     properties: text-align,
-    selector: text,
+    selector: txt,
     values: left right center justify,
     enable-important-values: true
   );
@@ -15,7 +15,7 @@
 
   $config: (
     properties: vertical-align,
-    selector: text,
+    selector: txt,
     values: baseline top middle bottom sub super,
     enable-important-values: true
   );

@@ -1,15 +1,15 @@
 //
-// Text-transform
+// Text transform
 //
 
 @if $generate-utility-classes {
   $config: (
     properties: text-transform,
-    selector: text,
+    selector: txt,
     values: (
-      lowercase: lowercase,
-      uppercase: uppercase,
-      capitalize: capitalize,
+      lower: lowercase,
+      upper: uppercase,
+      cap: capitalize,
     ),
     enable-important-values: true
   );

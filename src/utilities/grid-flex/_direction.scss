@@ -7,10 +7,10 @@
     properties: flex-direction,
     selector: is,
     values: (
-      horizontal: row,
-      vertical: column,
-      horizontal-reverse: row-reverse,
-      vertical-reverse: column-reverse
+      y: row,
+      x: column,
+      y-rev: row-reverse,
+      x-rev: column-reverse
     ),
     enable-important-values: true
   );
