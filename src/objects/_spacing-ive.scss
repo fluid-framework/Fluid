@@ -11,10 +11,10 @@
 */
 
 @if $generate-spacing-classes {
-  $sizes: $space-sizes;
-  $sizes: map-remove($sizes, 0); // Remove 0 in -ive spacing
-  $sizes: map-remove($sizes, auto); // Remove auto in -ive spacing
-  $sizes: negate($sizes, "both"); // add -ive sigh to both size and value
+  $SIZES: $space-sizes;
+  $SIZES: map-remove($SIZES, 0); // Remove 0 in -ive spacing
+  $SIZES: map-remove($SIZES, auto); // Remove auto in -ive spacing
+  $SIZES: negate($SIZES, "both"); // add -ive sigh to both size and value
 
   //
   // Basic Margin
@@ -23,7 +23,7 @@
   $config: (
     properties: margin,
     selector: m,
-    values: $sizes,
+    values: $SIZES,
     enable-important-values: true
   );
 
@@ -36,7 +36,7 @@
   $config: (
     properties: margin,
     selector: m,
-    values: $sizes,
+    values: $SIZES,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
     enable-important-values: true
@@ -53,7 +53,7 @@
     responsive: true,
     properties: margin-left margin-right,
     selector: mx,
-    values: $sizes,
+    values: $SIZES,
     enable-important-values: true
   );
 
@@ -68,7 +68,7 @@
     responsive: true,
     properties: margin-top margin-bottom,
     selector: my,
-    values: $sizes,
+    values: $SIZES,
     enable-important-values: true
   );
 
