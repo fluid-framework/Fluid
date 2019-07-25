@@ -3,10 +3,6 @@
 //
 
 @if $generate-grid-classes {
-  //
-  // Grid
-  //
-
   .grid {
     display: flex;
     flex-wrap: wrap; // wrap grid to multiline if overflow
@@ -20,7 +16,7 @@
   }
 
   //
-  // Grid child
+  // Grid column
   //
 
   .column {

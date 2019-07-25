@@ -11,10 +11,10 @@
 // {Map} $breakpoints - breakpoints map to look into
 //
 // Example of use:
-// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // breakpoint-next(sm) => md
 // breakpoint-next(sm, $breakpoints) => md
-// breakpoint-next(sm, (xs sm md lg xl)) => md
+// breakpoint-next(sm, (null sm md lg xl)) => md
 //
 // Return:
 // {String|null} the name of the breakpoint next of supplied breakpoint or null for the last breakpoint.
@@ -33,8 +33,8 @@
 // {Map} $breakpoints - breakpoints map to look into
 //
 // Example of use:
-// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
-// breakpoint-lower(xs) => null
+// $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// breakpoint-lower(null) => null
 // breakpoint-lower(sm, $breakpoints) => 576px
 //
 // Return:
@@ -58,8 +58,8 @@
 // {Map} $breakpoints - breakpoints map to look into
 //
 // Example of use:
-// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
-// breakpoint-upper(xs) => 575.5px
+// $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// breakpoint-upper(null) => 575.5px
 // breakpoint-upper(sm, $breakpoints) => 767.5px
 //
 // Return:

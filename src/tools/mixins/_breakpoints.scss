@@ -12,7 +12,7 @@
 // [optional] {Map} $breakpoints - breakpoints map
 //
 // Example of use:
-// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // media-breakpoint-above(sm){
 //    @debug 'This media query works in sm and above it';
 // }
@@ -38,7 +38,7 @@
 // [optional] {Map} $breakpoints - breakpoints map
 //
 // Example of use:
-// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // media-breakpoint-below(md){
 //    @debug 'This media query works in md and below it';
 // }
@@ -64,7 +64,7 @@
 // [optional] {Map} $breakpoints - breakpoints map
 //
 // Example of use:
-// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // media-breakpoint-between(md, lg){
 //    @debug 'This media query works in between md and lg only';
 // }
@@ -98,7 +98,7 @@
 // [optional] {Map} $breakpoints - breakpoints map
 //
 // Example of use:
-// $breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // media-breakpoint-only(lg){
 //    @debug 'This media query works only in lg';
 // }
