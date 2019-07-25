@@ -1,0 +1,66 @@
+//
+// naming
+// convert abbreviate / acronym to readable words
+//
+// Parameters:
+// {String} $short - abbreviate / acronym
+// {Map} $short-words - map containing abbreviate / acronym (keys) and words (values)
+// {boolean} $convert - weather to convert the word to readable words
+//
+// Example of use:
+// $short-words: (sm: mobile, md: tablet, lg: desktop, xl: large);
+// naming(sm, $short-words, true) => mobile
+// naming(sm, $short-words, false) => sm
+//
+@function naming($short, $short-words, $convert) {
+  @if $convert {
+    // if readable words are preferred
+
+    // filter out empty words because string explode can not split them
+    @if $short == null or $short == () {
+      @return $short;
+    }
+
+    $sub-string: str-explode($short, "-");
+
+    $short: null;
+    @each $string in $sub-string {
+      // filter out empty words inside $sub-string
+      @if $string == null or $string == () {
+        @return $short;
+      }
+
+      $key: map-has-key($short-words, $string);
+      @if $key {
+        $string: str-readable($string, $short-words);
+      } @else {
+        @warn "acronym / abbreviate `#{$string}` not found inside $short-words map `#{$short-words}`.";
+      }
+
+      $short: suffix($short, "-") + $string;
+    }
+
+    @return $short;
+  } @else {
+    // if acronym/abbreviate are preferred
+    @return $short;
+  }
+}
+
+//
+// name-breakpoint
+// convert breakpoints abbreviate / acronym to readable words based on setting `$breakpoints-readable-else-short`
+//
+// Parameters:
+// {String} $short - abbreviate / acronym form of breakpoint
+// [optional] {Map} $short-words - map containing abbreviate / acronym (keys) and words (values)
+// [optional] {boolean} $convert - weather to convert the word to readable breakpoints
+//
+// Example of use:
+// $short-words: (sm: mobile, md: tablet, lg: desktop, xl: large);
+// name-breakpoint(sm, $short-words, true) => mobile
+// name-breakpoint(sm, $short-words, false) => sm
+//
+@function name-breakpoint($breakpoint, $readable: $breakpoints-readable, $convert: $breakpoints-readable-else-short) {
+  @return naming($breakpoint, $breakpoints-readable, $breakpoints-readable-else-short);
+}

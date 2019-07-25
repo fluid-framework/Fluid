@@ -19,6 +19,7 @@
 @import "./functions/str-capitalize";
 @import "./functions/str-explode";
 @import "./functions/str-replace";
+@import "./functions/str-readable";
 
 // Functions related to prefix and suffix
 @import "./functions/prefix";
@@ -33,6 +34,9 @@
 @import "./functions/clr-contrast";
 @import "./functions/clr-step";
 @import "./functions/clr-auto";
+
+// Functions related to naming
+@import "./functions/naming";
 
 // Functions related to breakpoints
 @import "./functions/breakpoints";

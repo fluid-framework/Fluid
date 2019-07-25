@@ -67,6 +67,7 @@ src
 │   ├───grid
 │   ├───icon
 │   ├───misc
+│   ├───naming
 │   ├───space
 │   ├───theme
 │   └───typography

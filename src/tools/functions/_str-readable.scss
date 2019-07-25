@@ -1,0 +1,24 @@
+//
+// str-readable
+// convert abbreviate / acronym to readable words
+//
+// Parameters:
+// {String} $short - abbreviate / acronym
+// {Map} $dictionary - map containing abbreviate / acronym (keys) and words (values)
+//
+// Return:
+// {*} readable words belonging to its abbreviate / acronym.
+//
+// Example of use:
+// $dictionary: (sm: mobile, md: tablet, lg: desktop, xl: large);
+// str-readable(sm, $dictionary) => mobile
+//
+
+@function str-readable($short, $dictionary) {
+  $key: map-has-key($dictionary, $short);
+  @if not $key {
+    @error "$abbreviate / acronym `#{$short}` not found inside $dictionary `#{$dictionary}`.";
+  }
+
+  @return map-get($dictionary, $short);
+}
