@@ -15,8 +15,11 @@
   $focus-background: clr-step($color, -2);
   $active-background: clr-step($color, 4);
 
+  $active-default: clr-step($button-theme, 4);
+
   // to avoid adding extra color override
-  color: if(clr-auto($color) != clr-auto($button-theme) or clr-auto($color) != clr-auto($gray-900), clr-auto($color), null);
+  // - clr-auto($button-theme) is already inside default is-solid button
+  color: if(clr-auto($color) != clr-auto($button-theme), clr-auto($color), null);
   @include gradient-bg($color, 180deg);
 
   @include hover {
@@ -29,14 +32,19 @@
 
   @include active {
     // to avoid adding extra color override
-    color: if(clr-auto($color) != clr-auto($button-theme) or clr-auto($color) != clr-auto($gray-900), clr-auto($active-background), null);
+    // - clr-auto(clr-step($button-theme, 4)) is already inside default is-solid button
+    color: if(clr-auto($color) != clr-auto($active-default), clr-auto($active-background), null);
     @if $design-solid-else-gradients {
       background-color: $active-background;
     }
   }
 
   &.is-loading {
-    @include loading-spinner-color(clr-auto($color));
+    // to avoid adding extra color override
+    // - clr-auto($button-theme) is already inside default is-solid button
+    @if clr-auto($color) != clr-auto($button-theme) {
+      @include loading-spinner-color(clr-auto($color));
+    }
   }
 }
 
