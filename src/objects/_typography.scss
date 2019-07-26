@@ -30,8 +30,12 @@
   // Doc : add doc
   //
   .txt-clip {
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // stylelint-disable-next-line declaration-no-important
+    color: transparent !important;
+    // stylelint-disable-next-line declaration-no-important, property-no-vendor-prefix
+    -webkit-background-clip: text !important;
+    // stylelint-disable-next-line declaration-no-important
+    background-clip: text !important;
   }
 
   //
