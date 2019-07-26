@@ -27,7 +27,6 @@
     @include transition($button-transition);
 
     @include hover {
-      color: $body-color;
       box-shadow: 0 0 0 $button-focus-width rgba($button-theme, .5);
     }
 
