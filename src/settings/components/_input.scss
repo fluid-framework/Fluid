@@ -1,21 +1,24 @@
 //
-// Shared Input Settings
+// Input Settings
 //
-
 // Shared Settings between various Inputs
 
+//
+// Inherit
+//
+$input-line-height:                              $line-height !default;
+$input-radius:                                   $border-radius-default !default;
+$input-font-weight:                              $font-weight-normal !default;
+
+$label-margin-bottom:                            $space-default-typography !default;
+
+//
+// Setting
+//
 $input-theme:                                    $gray-600 !default;
-$input-disabled-background:                      $input-theme !default;
-$input-disabled-opacity:                         .65 !default;
 $input-padding-y:                                .375em !default;
 $input-padding-x:                                .75em !default;
 $input-font-family:                              null !default;
 $input-focus-width:                              .2rem !default;
-
-// Derived Settings
-
-$input-font-weight:                              $font-weight-normal !default;
-$input-line-height:                              $line-height !default;
-$input-radius:                                   $border-radius-default !default;
-
-$label-margin-bottom:                            $space-default-typography !default;
+$input-disabled-background:                      $input-theme !default;
+$input-disabled-opacity:                         .65 !default;

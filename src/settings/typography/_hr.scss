@@ -2,10 +2,14 @@
 // Horizontal rule Settings
 //
 
-$hr-color:           inherit !default;
-$hr-opacity:         .25 !default;
-
-// Derived Settings
-
-$hr-height:          1px !default;
+//
+// Inherit
+//
 $hr-margin-y:        $space-default-typography * 2 !default;
+
+//
+// Setting
+//
+$hr-color:           inherit !default;
+$hr-height:          1px !default;
+$hr-opacity:         .25 !default;

@@ -2,16 +2,24 @@
 // Group Settings
 //
 
+//
+// Inherit
+//
+$group-list-item-disabled-opacity:       $input-disabled-opacity !default;
+
+//
+// Setting
+//
 $group-items-zindex:                     10 !default;
 
 $group-list-color:                       inherit !default;
+$group-list-disabled-color:              $text-disabled !default;
 $group-list-background:                  $white !default;
 $group-list-active-background:           $primary !default;
 $group-list-item-padding-y:              .75rem !default;
 $group-list-item-padding-x:              1.25rem !default;
 
-// Derived Settings
-
-$group-list-item-disabled-opacity:       $input-disabled-opacity !default;
+//
+// Derived
+//
 $group-list-active-border-color:         $group-list-active-background !default;
-$group-list-disabled-color:              $text-disabled !default;

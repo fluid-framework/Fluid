@@ -26,7 +26,6 @@
           $infix-value: prefix($infix-value, "-");
         }
 
-
         @each $key, $value in $values {
           @if not $disable-prefix-values-keys {
             $key: prefix($key, "-");

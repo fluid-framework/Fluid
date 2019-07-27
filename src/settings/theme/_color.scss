@@ -2,6 +2,9 @@
 // Basic Colors Settings
 //
 
+//
+// Setting
+//
 $blue:          #1890ff !default;
 $indigo:        #5400ff !default;
 $purple:        #805ad5 !default;
@@ -39,7 +42,7 @@ $colors: (
 ) !default;
 
 //
-// Grayscale Colors Settings
+// Grayscale Colors
 //
 
 $white:          #fff !default;
@@ -52,7 +55,11 @@ $gray-900:       hsl(0, 0%, 6%) !default;
 $black:          #000 !default;
 
 //
-// Theme Colors Settings
+// Derived
+//
+
+//
+// Theme Colors
 //
 
 $primary:         $purple !default;

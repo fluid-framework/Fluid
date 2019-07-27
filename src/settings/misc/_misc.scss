@@ -2,7 +2,10 @@
 // Miscellaneous Settings
 //
 
-// Various Directions
+//
+// Setting
+//
+// Directions
 $directions: (
   t:    top,
   b:    bottom,
@@ -10,7 +13,7 @@ $directions: (
   l:    left
 ) !default;
 
-// Various Sizes
+// Sizes
 $sizes: (
   0:	  0,
   25:	  25%,
@@ -19,7 +22,7 @@ $sizes: (
   100:  100%
 ) !default;
 
-// Various Rotations
+// Rotations
 $rotations: (
   0:	   0deg,
   45:	   45deg,

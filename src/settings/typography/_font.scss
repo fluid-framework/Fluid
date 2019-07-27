@@ -2,6 +2,15 @@
 // Font Settings
 //
 
+//
+// Inherit
+//
+$font-size-small:              $default-small-quantity * 1rem !default;
+$font-size-large:              $default-large-quantity * 1rem !default;
+
+//
+// Setting
+//
 $font-size:                    14px !default;
 $font-size-normal:             1rem !default;
 $font-family-sans-serif:       -apple-system, // Safari for OS X and iOS (San Francisco)
@@ -34,9 +43,8 @@ $font-weight-bold:             700 !default;
 $font-weight-bolder:           bolder !default;
 $line-height:                  1.5 !default;
 
-// Derived Settings
-
-$font-size-small:              $default-small-quantity * 1rem !default;
-$font-size-large:              $default-large-quantity * 1rem !default;
+//
+// Derived
+//
 $font-family-default:          $font-family-sans-serif !default;
 $font-weight-default:          $font-weight-normal !default;

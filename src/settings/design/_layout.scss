@@ -3,6 +3,9 @@
 //
 // Using px unit to keep spacing constant regardless of font-size
 
+//
+// Setting
+//
 // Header
 $header-background:                  $white !default;
 $header-color:                       $gray-900 !default;
@@ -37,7 +40,8 @@ $overlay-background:                 rgba($black, .75) !default;
 $overlay-zindex:                     11 !default;
 $overlay-transition:                 opacity .35s ease-in-out, visibility .35s ease-in-out !default;
 
-// Derived Settings
-
+//
+// Derived
+//
 // Header
 $header-height-collapsed:            $header-height * $default-small-quantity !default;

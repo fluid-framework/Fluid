@@ -2,9 +2,13 @@
 // Title Settings
 //
 
-$title-size:                   5rem !default;
-$title-color:                  $headings-color !default;
-
-// Derived Settings
-
+//
+// Inherit
+//
 $title-line-height:            $headings-line-height !default;
+
+//
+// Setting
+//
+$title-color:                  $headings-color !default;
+$title-size:                   5rem !default;
