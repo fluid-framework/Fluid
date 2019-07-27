@@ -1,6 +1,7 @@
 @if $generate-object-classes {
   .title {
     @include fontsize($title-size);
+    color: $title-color;
     line-height: $title-line-height;
 
     &.is-sm {
