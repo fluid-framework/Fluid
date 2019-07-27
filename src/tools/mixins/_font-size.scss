@@ -10,7 +10,7 @@
 // [optional] {String,Number} $font-size - font size in rem and pm , RFS only support px and rem
 // [optional] {Map} $important - set important in css style
 //
-@mixin fontsize($font-size: $font-size, $important: false) {
+@mixin fontsize($font-size: $font-size-normal, $important: false) {
   @if $enable-fluid-font-sizes {
     $font-size-unit: if(type-of($font-size) == "number", unit($font-size), false);
 

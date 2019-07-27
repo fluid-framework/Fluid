@@ -3,7 +3,7 @@
 //
 
 :root {
-  @include fontsize(); // set the font size at root, this will lead to consistent rem unit among all browsers
+  @include fontsize($font-size); // set the font size at root, this will lead to consistent rem unit among all browsers
 }
 
 //
