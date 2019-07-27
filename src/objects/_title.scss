@@ -1,0 +1,14 @@
+@if $generate-object-classes {
+  .title {
+    @include fontsize($title-size);
+    line-height: $title-line-height;
+
+    &.is-sm {
+      @include fontsize($title-size * $default-small-quantity, true);
+    }
+
+    &.is-lg {
+      @include fontsize($title-size * $default-large-quantity, true);
+    }
+  }
+}
