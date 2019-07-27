@@ -139,7 +139,7 @@
         left: 0;
         border-bottom: $border-width-default solid;
 
-        @include transition(box-shadow .15s ease-in-out, bottom .15s ease-in-out);
+        @include transition($button-transition-minimal);
       }
 
       @include button-design-minimal-varient($button-theme); // Default button theme
