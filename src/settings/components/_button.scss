@@ -20,5 +20,5 @@ $button-disabled-opacity:                        $input-disabled-opacity !defaul
 $button-theme:                                   $input-theme !default;
 $button-disabled-background:                     $input-disabled-background !default;
 $button-iscircle-padding:                        1em !default;
-$button-transition:                              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-$button-transition-minimal:                      box-shadow .15s ease-in-out, bottom .15s ease-in-out !default;
+$button-transition:                              color, background-color, border-color, box-shadow !default;
+$button-transition-minimal:                      box-shadow, bottom !default;

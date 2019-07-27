@@ -12,30 +12,54 @@
 
 //
 // transition
-// Mixin Used to control and generate transition
+// Mixin using transition function to optimize transition and
+// disable transition at prefers-reduced-motion-media-query
 //
 // Parameters:
-// {String} $transitions - transitions strings
+// {String,List} $transitions - transitions strings
 @mixin transition($transitions...) {
-  $transition-combined: "";
   @if $enable-transitions {
-    // if no input argument is give
-    @if length($transitions) == 0 {
-      $transition-combined: all .2s ease-in-out; // Default transition
-    } @else {
-      @each $transition in $transitions {
-        @if type-of($transition) != string and type-of($transition) != list {
-          @error "The argument transitions: `#{transitions}` is of incorrect type: `#{type-of(transitions)}`. Type of `string` or `list` is required!";
-        }
-        $transition-combined: suffix($transition-combined, ",") + $transition;
-      }
-    }
-    transition: unquote($transition-combined);
+    transition: transition($transitions);
 
     @if $enable-prefers-reduced-motion-media-query {
       @extend %prefers-reduced-motion;
     }
   }
+}
+
+//
+// transition
+// Function optimize, check and control transition
+//
+// Parameters:
+// {String,List} $transitions - transitions strings
+@function transition($transitions...) {
+  $transition-combined: ();
+  $first-value: nth($transitions, 1);
+
+  // if no input argument is give
+  @if length($transitions) == 0 {
+    $transition-combined: all .2s ease-in-out; // Default transition
+  } @else if length($transitions) == 1 and ($first-value == none or $first-value == null or $first-value == auto or $first-value == inherit) {
+    $transition-combined: $first-value;
+  } @else {
+    @each $transition in $transitions {
+      @if list-separator($transition) == comma {
+        @each $sub-transition in $transition {
+          // reclusively check each value in list
+          $transition-combined: suffix($transition-combined, ",") + transition($sub-transition);
+        }
+        @return $transition-combined;
+      }
+
+      @if length($transition) == 1 {
+        $transition-combined: suffix($transition-combined, ",") + $transition .15s ease-in-out;
+      } @else {
+        $transition-combined: suffix($transition-combined, ",") + $transition;
+      }
+    }
+  }
+  @return $transition-combined;
 }
 
 //
