@@ -15,15 +15,6 @@
   @include generate-style($config);
 
   $config: (
-    properties: text-decoration,
-    selector: txt-decor,
-    values: none underline,
-    enable-important-values: true
-  );
-
-  @include generate-style($config);
-
-  $config: (
     properties: font-style,
     selector: "",
     values: italic,
