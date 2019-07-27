@@ -278,6 +278,15 @@
       "line-height"
     ],
     "property-no-vendor-prefix": true,
+    "property-blacklist": [
+      "font-size",
+      "animation",
+      "transition",
+      "border-top-left-radius",
+      "border-top-right-radius",
+      "border-bottom-right-radius",
+      "border-bottom-left-radius"
+    ],
     "rule-empty-line-before": null,
     "selector-attribute-quotes": "always",
     "selector-class-pattern": "^[.a-z][a-z0-9\\-]*[a-z0-9\\@]*[a-z0-9]$",

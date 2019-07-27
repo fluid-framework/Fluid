@@ -18,6 +18,7 @@
     border-right-color: transparent;
     border-radius: $border-radius-pill;
     // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
+    // stylelint-disable-next-line property-blacklist
     animation: spin 1s infinite linear;
     color: $color;
     @include include-keyframe(spin);
