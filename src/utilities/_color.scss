@@ -24,7 +24,7 @@
 
   @include generate-style($config);
 
-  @each $color, $value in map-remove(map-get($config, "values"), inherit) {
+  @each $color, $value in map-remove(map-get($config, "values"), hide, disabled) {
     @if $link-hover-dark-step != 0 {
       a.#{map-get($config,"selector")}-#{$color} {
         @include hover-focus {
