@@ -4,24 +4,57 @@
 
 //
 // box-shadow
-// Mixin Used to control and generate box-shadow
+// Function optimize, check and control box-shadow
+
 //
 // Parameters:
 // {String} $shadows - shadows strings
-@mixin box-shadow($shadows...) {
+@function box-shadow($shadows...) {
   @if $design-shadow-else-border {
-    $result: ();
-
     // Filter to avoid invalid values
-    // for example `box-shadow: none, 1px 1px black;`
-    @for $i from 1 through length($shadows) {
-      @if nth($shadows, $i) != "none" {
-        $result: suffix($result, ",") + nth($shadows, $i);
+    // for example `box-shadow: none, 0 0 currentColor;`
+
+    $first-value: nth($shadows, 1);
+
+    @if length($shadows) > 1 or ($first-value != none and $first-value != null) {
+      $result: ();
+
+      @each $shadow in $shadows {
+        @if $shadow != "none" and $shadow != null {
+          // if list is supplied as a variable to this function
+          @if list-separator($shadow) == comma {
+            @each $sub-shadow in $shadow {
+              // reclusively check each value in list
+              $result: suffix($result, ",") + box-shadow($sub-shadow);
+            }
+            @return $result;
+          }
+
+          // if there are some values left after checking
+          @if type-of($shadow) != "list" {
+            @error "invalid type `#{type-of($shadow)}` or value `#{$shadow}` of $shadow inside $shadows `#{shadows}` . Type must be `list` or value must be valid shadow value";
+          }
+
+          @if length($shadow) < 3 and length($shadow) > 5 {
+            @error "invalid length #{length($shadow)} of $shadow `#{$shadow}` inside $shadows `#{shadows}`. shadow must have 5 parameters";
+          }
+          $result: suffix($result, ",") + $shadow;
+        }
       }
+      // if there are some values left after checking
+      @if length($result) > 0 {
+        @return $result;
+      }
+
+      // after checking and filtering each shadow if the result is empty
+      @error "invalid value of $shadows `#{$shadows}`";
     }
-    // if there are some values left after filtration
-    @if (length($result) > 0) {
-      box-shadow: $result;
+
+    // if she value is other than none e.g inherit
+    @if $first-value != none and $first-value != null {
+      @error "invalid value of $shadows `#{$shadows}`";
     }
+    @return $shadows;
   }
+  @return null;
 }

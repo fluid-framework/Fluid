@@ -27,7 +27,7 @@
     @include transition($button-transition);
 
     @include hover {
-      box-shadow: 0 0 0 $button-focus-width rgba($button-theme, .5);
+      box-shadow: box-shadow(0 0 0 $button-focus-width rgba($button-theme, .5));
     }
 
     @include focus {
@@ -51,7 +51,7 @@
       @include gradient-bg($button-theme, 180deg);
 
       @include hover {
-        box-shadow: 0 0 0 $button-focus-width rgba($button-theme, .5);
+        box-shadow: box-shadow(0 0 0 $button-focus-width rgba($button-theme, .5));
       }
 
       @include focus {
@@ -129,7 +129,7 @@
       position: relative;
       border-right: 0; // remove border to remove border spacing between minimal button groups
       border-left: 0; // remove border to remove border spacing between minimal button groups
-      box-shadow: none; // remove focus box shadow
+      box-shadow: box-shadow(none); // remove focus box shadow
 
       @include after {
         content: "";
@@ -157,7 +157,7 @@
           @include animation(flash); // flash animation for underline
           bottom: 20%;
           // stylelint-disable-next-line declaration-no-important
-          box-shadow: none !important;
+          box-shadow: box-shadow(none) !important;
         }
       }
 
@@ -177,7 +177,7 @@
 
     // active comes in the end to override previous styles
     @include active {
-      box-shadow: none; // no shadow in clicked state
+      box-shadow: box-shadow(none); // no shadow in clicked state
       @include animation(none); // disable animations and play again on click event
     }
 

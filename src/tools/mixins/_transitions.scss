@@ -70,26 +70,26 @@
     $imported-pulse: true;
     @keyframes pulse {
       from {
-        box-shadow: 0 0 0 0 currentColor;
+        box-shadow: box-shadow(0 0 0 0 currentColor);
       }
       75% {
-        box-shadow: 0 0 0 ($input-focus-width * 1.5) transparent;
+        box-shadow: box-shadow(0 0 0 ($input-focus-width * 1.5) transparent);
       }
       76% {
-        box-shadow: none;
+        box-shadow: box-shadow(none);
       }
     }
   } @else if $name == pulse-solid and not $imported-pulse-solid {
     $imported-pulse-solid: true;
     @keyframes pulse-solid {
       from {
-        box-shadow: 0 0 0 0 $gray-500;
+        box-shadow: box-shadow(0 0 0 0 $gray-500);
       }
       75% {
-        box-shadow: 0 0 0 ($input-focus-width * 1.5) transparent;
+        box-shadow: box-shadow(0 0 0 ($input-focus-width * 1.5) transparent);
       }
       76% {
-        box-shadow: none;
+        box-shadow: box-shadow(none);
       }
     }
   } @else if $name == flash and not $imported-flash {
