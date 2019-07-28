@@ -35,9 +35,6 @@
             @error "invalid type `#{type-of($shadow)}` or value `#{$shadow}` of $shadow inside $shadows `#{shadows}` . Type must be `list` or value must be valid shadow value";
           }
 
-          @if length($shadow) < 3 and length($shadow) > 5 {
-            @error "invalid length #{length($shadow)} of $shadow `#{$shadow}` inside $shadows `#{shadows}`. shadow must have 5 parameters";
-          }
           $result: suffix($result, ",") + $shadow;
         }
       }
