@@ -19,6 +19,9 @@ $input-theme:                                    $gray-600 !default;
 $input-padding-y:                                .375em !default;
 $input-padding-x:                                .75em !default;
 $input-font-family:                              null !default;
+
 $input-focus-width:                              .2rem !default;
+$input-focus-box-shadow:                         0 0 0 $input-focus-width !default; // color is explicitly defined on usage
+
 $input-disabled-background:                      $input-theme !default;
 $input-disabled-opacity:                         .65 !default;

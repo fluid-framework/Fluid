@@ -27,7 +27,7 @@
     @include transition($button-transition);
 
     @include hover {
-      box-shadow: box-shadow(0 0 0 $button-focus-width rgba($button-theme, .5));
+      box-shadow: box-shadow($button-focus-box-shadow rgba($button-theme, .5));
     }
 
     @include focus {
@@ -51,7 +51,7 @@
       @include gradient-bg($button-theme, 180deg);
 
       @include hover {
-        box-shadow: box-shadow(0 0 0 $button-focus-width rgba($button-theme, .5));
+        box-shadow: box-shadow($button-focus-box-shadow rgba($button-theme, .5));
       }
 
       @include focus {
