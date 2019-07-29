@@ -21,6 +21,6 @@ $button-border-color:                            $input-border-color !default;
 //
 $button-theme:                                   $input-theme !default;
 $button-disabled-background:                     $input-disabled-background !default;
-$button-iscircle-padding:                        1em !default;
+$button-iscircle-padding:                        0.5em !default;
 $button-transition:                              color, background-color, border-color, box-shadow !default;
 $button-transition-minimal:                      box-shadow, bottom !default;
