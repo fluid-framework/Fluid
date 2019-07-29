@@ -50,26 +50,21 @@
 
 // outline button
 @mixin button-design-outline-varient($color) {
-  border-color: $color;
-  color: $color;
-  $focus-background: clr-step($color, -2);
   $active-border: clr-step($color, 4);
 
   @include hover {
+    border-color: $color;
     box-shadow: box-shadow($button-focus-box-shadow rgba($color, .5));
   }
 
   @include focus {
-    background-color: rgba($focus-background, .25);
+    border-color: $color;
+    color: $color;
   }
 
   @include active {
     border-color: $active-border;
     color: $active-border;
-  }
-
-  &.is-loading {
-    @include loading-spinner-color($color);
   }
 }
 
