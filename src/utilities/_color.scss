@@ -29,7 +29,7 @@
       a.#{map-get($config,"selector")}-#{$color} {
         @include hover-focus {
           // stylelint-disable-next-line declaration-no-important
-          color: clr-step($link-color, $link-hover-dark-step) !important;
+          color: clr-step($value, $link-hover-dark-step) !important;
         }
       }
     }
