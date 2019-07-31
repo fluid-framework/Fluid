@@ -14,7 +14,7 @@
     margin-top: 2.25px; // Using px unit to keep spacing constant regardless of font-size
     margin-bottom: 2.25px; // Using px unit to keep spacing constant regardless of font-size
     border: $border-width-default solid transparent;
-    border-radius: border-radius($button-border-radius);
+    border-radius: border-radius($button-border-radius, 0);
     color: $body-color;
     background-color: transparent;
     text-align: center;
