@@ -116,7 +116,7 @@ pre {
       top: 5px;
       right: -1px;
       padding: $pre-code-langbadge-padding;
-      color: clr-auto($pre-code-langbadge-background, $black, $white);
+      color: $pre-code-langbadge-color;
       background: $pre-code-langbadge-background;
       text-transform: $pre-code-langbadge-texttransform;
       font-weight: $pre-code-langbadge-fontweight;
