@@ -106,7 +106,7 @@ pre {
   > code {
     @include fontsize(inherit);
     position: relative;
-    display: block;
+    display: inline-block;
     padding: $pre-code-padding;
     border-left: $border-width-wide solid $primary;
     @include border-radius-left(0);
