@@ -252,13 +252,13 @@ input[type="month"] {
   // centered within the input
   // See https://bugs.webkit.org/show_bug.cgi?id=139848
   // and https://github.com/twbs/bootstrap/issues/11266
-  -webkit-appearance: textfield;
+  @extend %-webkitappearance-textfield;
 }
 
 textarea {
   @extend %overflow-auto; // Remove the default vertical scrollbar in IE
   resize: vertical; // Textareas should really only resize vertically so they don't break their (horizontal) containers
-  -webkit-appearance: textfield; // Use the same borders as textfields
+  @extend %-webkitappearance-textfield; // Use the same borders as textfields
 }
 
 fieldset {
@@ -298,19 +298,14 @@ progress {
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-  height: 0; // Correct the cursor style of increment and decrement buttons in Chrometyle of increment and decrement buttons in Chrome
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
+  height: 0; // Correct the cursor style of increment and decrement buttons in Chrome
 }
 
 [type="search"] {
   outline-offset: -2px; // Correct the outline style in Safari
   // This overrides the extra rounded corners on search inputs in iOS so that we can style them our self
   // For details, see https://github.com/twbs/bootstrap/issues/11586
-  -webkit-appearance: textfield;
+  @extend %-webkitappearance-textfield;
 }
 
 ::-webkit-search-decoration {
@@ -369,6 +364,10 @@ template {
 
 %-webkitappearance-button {
   -webkit-appearance: button;
+}
+
+%-webkitappearance-textfield {
+  -webkit-appearance: textfield;
 }
 
 %color-inherit {
