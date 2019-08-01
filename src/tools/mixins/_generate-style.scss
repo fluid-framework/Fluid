@@ -1,7 +1,77 @@
 //
-// DOC : Add Documentation
+// Generate Style
 //
 
+//
+// generate-style
+// used to quickly create style based on options inside $config.
+//
+// Parameters:
+// {Map} $config - Map containing options to generate style from
+//
+// Options:
+// The $config map contains following options:
+//
+// {String,List} `properties`:
+// properties to generate style for
+//
+// {String,List,Map} `values`:
+// (Keys) are used in combination with selector option to generate unique selector. null keys can be used to avoid unique selector.
+// (values) to be Used for properties.
+//
+// {String} `selector`:
+// selector for generated style. Empty string in combination with `disable-prefix-values-keys` option can be to generate selector
+// totally based on values.
+//
+// [optional] {String,List,Map} `infixes`:
+// (values) used to suffix properties
+// (keys) used to infix selector option and values option
+//
+// [optional] {Boolean} `responsive`:
+// generate responsive styles inside media query.
+//
+// [optional] {Boolean} `enable-important-values`:
+// Use !important for values.
+//
+// [optional] {Boolean} `disable-prefix-values-keys`:
+// disable prefixing keys inside values options.
+// Mostly used to disable prefixing when null selector option is used because without this options result selector leads to
+// dash `-` in selector start
+//
+// [optional] {Boolean} `disable-prefix-infixes-keys`:
+// disable prefixing keys inside infixes options.
+// Mostly used to disable prefixing when infixes are merged with selector e.g mx-*, where m is selector x is infix and -* is values
+//
+// [optional] {Boolean} `disable-prefix-infixes-values`:
+// disable prefixing values inside infixes options.
+// Mostly used to disable prefixing when only infixes option values are used as a property with empty properties option
+//
+//
+// Example:
+//
+// $config: (
+//   properties: box-shadow,
+//   selector: shadow,
+//   values: (
+//     sm: 1px 1px 3px 0 rgba($black, .075),
+//     null: 1px 4px 6px 0 rgba($black, .15),
+//     lg: 2px 10px 15px 0 rgba($black, .175),
+//     round: 0 5px 15px rgba($black, .15),
+//     none: none
+//   ),
+//   enable-important-values: true
+// );
+//
+// @include generate-style($config);
+//
+// Output:
+//
+// .shadow-sm { box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .075) !important; }
+// .shadow { box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, .15) !important; }
+// .shadow-lg { box-shadow: 2px 10px 15px 0 rgba(0, 0, 0, .175) !important; }
+// .shadow-round { box-shadow: 0 5px 15px rgba(0, 0, 0, .15) !important; }
+// .shadow-none { box-shadow: none !important; }
+//
 @mixin generate-style($config) {
   $properties: map-get($config, "properties");
   $values: to-map(map-get($config, "values"));

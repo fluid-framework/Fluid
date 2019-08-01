@@ -5,7 +5,7 @@
 // Parameters:
 // {String} $short - abbreviate / acronym
 // {Map} $short-words - map containing abbreviate / acronym (keys) and words (values)
-// {boolean} $convert - weather to convert the word to readable words
+// {Boolean} $convert - weather to convert the word to readable words
 //
 // Example of use:
 // $short-words: (sm: mobile, md: tablet, lg: desktop, xl: large);
@@ -54,7 +54,7 @@
 // Parameters:
 // {String} $short - abbreviate / acronym form of breakpoint
 // [optional] {Map} $short-words - map containing abbreviate / acronym (keys) and words (values)
-// [optional] {boolean} $convert - weather to convert the word to readable breakpoints
+// [optional] {Boolean} $convert - weather to convert the word to readable breakpoints
 //
 // Example of use:
 // $short-words: (sm: mobile, md: tablet, lg: desktop, xl: large);
