@@ -20,7 +20,6 @@
   //
 
   .column {
-    position: relative;
     box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`
     flex-basis: 0;
     flex-grow: 1;
