@@ -78,7 +78,7 @@
 
   @include hover {
     @include after {
-      box-shadow: box-shadow(0 (-($button-focus-width / 4)) 0 $button-focus-width / 4 rgba($color, .5));
+      box-shadow: box-shadow(0 -1px 0 1px rgba($color, .5));
     }
   }
 
