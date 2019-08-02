@@ -6,14 +6,6 @@
   //
   // Doc : add Doc
   //
-  %clearfix {
-    @include after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-  }
-
   .clearfix {
     @extend %clearfix;
   }

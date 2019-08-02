@@ -51,7 +51,7 @@ strong {
 }
 
 small {
-  @include fontsize(percentage($default-small-quantity)); // Add the correct font size in all browsers
+  @extend %small; // Add the correct font size in all browsers
 }
 
 h1,
@@ -336,72 +336,4 @@ template {
 
 [hidden] {
   display: none !important; // Always hide an element with the `hidden` HTML attribute // Needed for proper display in IE 10-
-}
-
-//
-// Placeholders
-//
-
-%display-block {
-  display: block;
-}
-
-%display-inlineblock {
-  display: inline-block;
-}
-
-%margintop-0 {
-  margin-top: 0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
-}
-
-%verticalalign-baseline {
-  vertical-align: baseline;
-}
-
-%-webkitappearance-none {
-  -webkit-appearance: none;
-}
-
-%-webkitappearance-button {
-  -webkit-appearance: button;
-}
-
-%-webkitappearance-textfield {
-  -webkit-appearance: textfield;
-}
-
-%color-inherit {
-  color: inherit;
-}
-
-%lineheight-inherit {
-  line-height: inherit;
-}
-
-%padding-0 {
-  padding: 0;
-}
-
-%border-0 {
-  border: 0;
-}
-
-%borderstyle-none {
-  border-style: none;
-}
-
-%margin-0 {
-  margin: 0;
-}
-
-%overflow-auto {
-  overflow: auto;
-}
-
-// Prevent `sub` and `sup` elements from affecting the line height in all browsers
-%sub-sup {
-  position: relative;
-  @extend %verticalalign-baseline;
-  line-height: 0;
-  @extend small;
 }

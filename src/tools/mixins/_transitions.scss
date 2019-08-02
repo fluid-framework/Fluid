@@ -3,13 +3,6 @@
 // Transition Mixin
 //
 
-// Placeholder for prefers-reduced-motion query
-%prefers-reduced-motion {
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-}
-
 //
 // transition
 // Mixin using transition function to optimize transition and

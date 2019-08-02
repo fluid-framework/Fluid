@@ -2,15 +2,6 @@
 // Heading Element
 //
 
-%heading {
-  margin-bottom: $headings-margin-bottom;
-  color: $headings-color;
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  font-style: $headings-font-style;
-  line-height: $headings-line-height;
-}
-
 h1 {
   @extend %heading;
   @include fontsize($h1-font-size);

@@ -69,6 +69,8 @@ src
 │   ├───icon
 │   ├───misc
 │   ├───naming
+│   ├───placeholders
+│   │   └───typography
 │   ├───space
 │   ├───theme
 │   └───typography

@@ -1,0 +1,7 @@
+// Placeholder for prefers-reduced-motion query
+%prefers-reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    // stylelint-disable-next-line property-blacklist
+    transition: none;
+  }
+}
