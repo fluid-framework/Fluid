@@ -7,9 +7,7 @@
     padding-left: 0;
 
     > .list-item {
-      // no need to set list-style to none as the list items are already set to display block
-      // instead of display list
-      display: block;
+      display: block; // no need to set list-style to none as the list items are already set to display block instead of display list
     }
   }
 
