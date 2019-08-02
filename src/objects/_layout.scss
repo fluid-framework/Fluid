@@ -17,6 +17,8 @@
   .lyt-header {
     @extend %position-relative;
     z-index: $header-zindex;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: $header-height;
     padding-right: $header-padding-x;
@@ -24,7 +26,6 @@
     border-top: $header-border-top;
     color: $header-color;
     background-color: $header-background;
-    line-height: $header-height;
 
     @include transition($header-transition);
 
