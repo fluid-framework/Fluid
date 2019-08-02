@@ -6,6 +6,9 @@
 
 // Active
 // Generate active state
+//
+// Parameter:
+// [optional] {List} $extra-selectors: list of selectors along with active state
 @mixin active($extra-selectors...) {
   @include not-disabled {
     $selectors: null;
@@ -51,6 +54,9 @@
 
 // Disabled
 // Generate disabled state
+//
+// Parameter:
+// [optional] {List} $extra-selectors: list of selectors along with disabled state
 @mixin disabled($extra-selectors...) {
   $selectors: null;
   @each $selector in $extra-selectors {
@@ -65,6 +71,9 @@
 
 // Disabled
 // Generate not disabled state
+//
+// Parameter:
+// [optional] {List} $extra-selectors: list of selectors along with not disabled state
 @mixin not-disabled($extra-selectors...) {
   $selectors: null;
   @each $selector in $extra-selectors {
