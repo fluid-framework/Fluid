@@ -1,0 +1,42 @@
+//
+// Heading Element
+//
+
+%heading {
+  margin-bottom: $headings-margin-bottom;
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  font-style: $headings-font-style;
+  line-height: $headings-line-height;
+}
+
+h1 {
+  @extend %heading;
+  @include fontsize($h1-font-size);
+}
+
+h2 {
+  @extend %heading;
+  @include fontsize($h2-font-size);
+}
+
+h3 {
+  @extend %heading;
+  @include fontsize($h3-font-size);
+}
+
+h4 {
+  @extend %heading;
+  @include fontsize($h4-font-size);
+}
+
+h5 {
+  @extend %heading;
+  @include fontsize($h5-font-size);
+}
+
+h6 {
+  @extend %heading;
+  @include fontsize($h6-font-size);
+}

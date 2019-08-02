@@ -1,0 +1,39 @@
+//
+// Code Element
+//
+
+code {
+  padding: $code-padding;
+  margin-right: $code-margin-x;
+  margin-left: $code-margin-x;
+  border-radius: border-radius();
+  background: $code-background;
+  @include fontsize($code-font-size);
+}
+
+//
+// Block of code element
+//
+
+pre {
+  > code {
+    @include fontsize(inherit);
+    position: relative;
+    display: inline-block;
+    padding: $pre-code-padding;
+    border-left: $border-width-wide solid $primary;
+    @include border-radius-left(0);
+    @include before {
+      content: attr(fluid-lang);
+      position: absolute;
+      top: 5px;
+      right: -1px;
+      padding: $pre-code-langbadge-padding;
+      color: $pre-code-langbadge-color;
+      background: $pre-code-langbadge-background;
+      text-transform: $pre-code-langbadge-texttransform;
+      font-weight: $pre-code-langbadge-fontweight;
+      @include border-radius-left();
+    }
+  }
+}
