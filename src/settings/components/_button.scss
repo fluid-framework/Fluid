@@ -11,7 +11,6 @@ $button-border-radius:                           $input-border-radius !default;
 $button-font-family:                             $input-font-family !default;
 $button-font-weight:                             $input-font-weight !default;
 $button-line-height:                             $input-line-height !default;
-$button-border-color:                            $input-border-color !default;
 
 $button-focus-box-shadow:                        $input-focus-box-shadow !default;
 
@@ -24,5 +23,7 @@ $button-transition:                              color, background-color, border
 $button-transition-minimal:                      box-shadow, bottom !default;
 
 $button-disabled-background:                     $input-disabled-background !default;
+
+$button-outline-border-color:                    $gray-300 !default;
 
 $button-iscircle-padding:                        .5em !default;

@@ -106,7 +106,7 @@
       //
       // Default Outline Styles
       //
-      border-color: $button-border-color;
+      border-color: $button-outline-border-color;
       color: $button-theme;
 
       @include button-design-outline-varient($button-theme); // Default button theme
