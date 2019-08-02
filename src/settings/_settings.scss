@@ -95,6 +95,7 @@ $generate-component-classes:                  true !default;    // Enable compon
 // Components
 //
 
+@import "./components/control";
 @import "./components/input";
 @import "./components/button";
 @import "./components/list";

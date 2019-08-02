@@ -90,7 +90,7 @@
         box-shadow: box-shadow(0 0 0 0 currentColor);
       }
       75% {
-        box-shadow: box-shadow(0 0 0 ($input-focus-width * 1.5) transparent);
+        box-shadow: box-shadow(0 0 0 ($control-focus-width * 1.5) transparent);
       }
       76% {
         box-shadow: box-shadow(none);
@@ -103,7 +103,7 @@
         box-shadow: box-shadow(0 0 0 0 $gray-500);
       }
       75% {
-        box-shadow: box-shadow(0 0 0 ($input-focus-width * 1.5) transparent);
+        box-shadow: box-shadow(0 0 0 ($control-focus-width * 1.5) transparent);
       }
       76% {
         box-shadow: box-shadow(none);
