@@ -107,7 +107,7 @@
         color: $group-list-color;
         background-color: $group-list-background;
         text-decoration: none;
-        @include transition($button-transition);
+        @include transition($group-list-transition);
 
         @include disabled {
           pointer-events: none;
