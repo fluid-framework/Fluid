@@ -82,7 +82,7 @@
       //
       // Default Outline Styles
       //
-      border-color: $button-outline-border-color;
+      border-color: $button-theme-light;
       color: $button-theme;
 
       @include button-design-outline-varient($button-theme); // Default button theme

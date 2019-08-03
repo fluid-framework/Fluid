@@ -12,10 +12,9 @@ $button-focus-box-shadow:                        $control-focus-box-shadow !defa
 // Setting
 //
 $button-theme:                                   $control-theme !default;
+$button-theme-light:                             $control-theme-light !default;
 $button-transition-minimal:                      box-shadow, bottom !default;
 
 $button-disabled-background:                     $control-disabled-background !default;
-
-$button-outline-border-color:                    $gray-300 !default;
 
 $button-iscircle-padding:                        .5em !default;
