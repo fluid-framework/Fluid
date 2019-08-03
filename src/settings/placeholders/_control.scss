@@ -1,0 +1,44 @@
+%control {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  padding: $control-padding-y $control-padding-x;
+  margin-top: 2.25px; // Used to keep consistent spacing between above and below elements
+  margin-bottom: 2.25px; // Used to keep consistent spacing between above and below elements
+  border: $control-border-width solid $control-border-color;
+  border-radius: border-radius($control-border-radius, 0);
+  color: $control-color;
+  background-color: $control-background;
+  vertical-align: middle;
+  text-decoration: none;
+  font-family: $control-font-family;
+  font-weight: $control-font-weight;
+  line-height: $control-line-height;
+  @include fontsize();
+  @include transition($control-transition);
+
+  @include hover {
+    box-shadow: box-shadow($control-focus-box-shadow rgba($control-theme, .5));
+  }
+
+  @include focus {
+    @include animation(pulse); // pulse animation on click event
+    outline: 0;
+  }
+
+  // using !important on active disable so that they override control states styles
+
+  @include active {
+    // stylelint-disable-next-line declaration-no-important, property-blacklist
+    animation: none !important; // disable animations and play again on click event
+    // stylelint-disable-next-line declaration-no-important
+    box-shadow: box-shadow(none) !important; // no shadow in clicked state
+  }
+
+  @include disabled {
+    // stylelint-disable-next-line declaration-no-important
+    pointer-events: none !important;
+    // stylelint-disable-next-line declaration-no-important
+    opacity: $control-disabled-opacity !important;
+  }
+}

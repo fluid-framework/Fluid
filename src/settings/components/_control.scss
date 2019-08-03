@@ -6,6 +6,7 @@
 //
 // Inherit
 //
+$control-border-width:                           $border-width-default !default;
 $control-border-radius:                          $border-radius-default !default;
 $control-line-height:                            $line-height !default;
 $control-font-weight:                            $font-weight-normal !default;
@@ -16,6 +17,9 @@ $label-margin-bottom:                            $space-default-typography !defa
 // Setting
 //
 $control-theme:                                  $gray-600 !default;
+$control-color:                                  $body-color !default;
+$control-background:                             transparent !default;
+$control-border-color:                           transparent !default;
 $control-padding-y:                              .375em !default;
 $control-padding-x:                              .75em !default;
 $control-font-family:                            null !default;

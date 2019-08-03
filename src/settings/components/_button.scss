@@ -5,21 +5,13 @@
 //
 // Inherit
 //
-$button-padding-x:                               $control-padding-x !default;
-$button-padding-y:                               $control-padding-y !default;
-$button-border-radius:                           $control-border-radius !default;
-$button-font-family:                             $control-font-family !default;
-$button-font-weight:                             $control-font-weight !default;
-$button-line-height:                             $control-line-height !default;
 
 $button-focus-box-shadow:                        $control-focus-box-shadow !default;
 
-$button-disabled-opacity:                        $control-disabled-opacity !default;
 //
 // Setting
 //
 $button-theme:                                   $control-theme !default;
-$button-transition:                              color, background-color, border-color, box-shadow !default;
 $button-transition-minimal:                      box-shadow, bottom !default;
 
 $button-disabled-background:                     $control-disabled-background !default;

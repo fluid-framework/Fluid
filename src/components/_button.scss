@@ -8,32 +8,9 @@
   //
 
   .btn {
-    display: inline-block;
-    user-select: none;
-    padding: $button-padding-y $button-padding-x;
-    margin-top: 2.25px; // Using px unit to keep spacing constant regardless of font-size
-    margin-bottom: 2.25px; // Using px unit to keep spacing constant regardless of font-size
-    border: $border-width-default solid transparent;
-    border-radius: border-radius($button-border-radius, 0);
-    color: $body-color;
-    background-color: transparent;
+    @extend %control;
     text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    font-family: $button-font-family;
-    font-weight: $button-font-weight;
-    line-height: $button-line-height;
-    @include fontsize();
-    @include transition($button-transition);
 
-    @include hover {
-      box-shadow: box-shadow($button-focus-box-shadow rgba($button-theme, .5));
-    }
-
-    @include focus {
-      @include animation(pulse); // pulse animation on click event
-      outline: 0;
-    }
 
     //
     // Theme Variants
@@ -83,7 +60,6 @@
       //
       @include focus {
         @include animation(pulse-solid); // pulse animation on click event
-        outline: 0;
       }
 
       @include active {
@@ -129,7 +105,6 @@
       //
       // Default Minimal Styles
       //
-      position: relative;
       border-right: 0; // remove border to remove border spacing between minimal button groups
       border-left: 0; // remove border to remove border spacing between minimal button groups
       box-shadow: box-shadow(none); // remove focus box shadow
@@ -176,18 +151,6 @@
           border-bottom-color: $button-disabled-background;
         }
       }
-    }
-
-    // active comes in the end to override previous styles
-    @include active {
-      box-shadow: box-shadow(none); // no shadow in clicked state
-      @include animation(none); // disable animations and play again on click event
-    }
-
-    // disable comes in the end to override previous styles
-    @include disabled {
-      pointer-events: none;
-      opacity: $button-disabled-opacity;
     }
   }
 
