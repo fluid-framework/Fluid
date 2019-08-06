@@ -20,9 +20,11 @@
   @include generate-style($config);
   $config: (
     properties: border-top-left-radius border-top-right-radius,
-    selector: round,
+    selector: is-round,
     values: (
-      top: $border-radius-default
+      top-sm: $border-radius-small,
+      top: $border-radius-normal,
+      top-lg: $border-radius-large
     ),
     enable-important-values: true
   );
@@ -31,9 +33,11 @@
 
   $config: (
     properties: border-top-right-radius border-bottom-right-radius,
-    selector: round,
+    selector: is-round,
     values: (
-      right: $border-radius-default
+      right-sm: $border-radius-small,
+      right: $border-radius-normal,
+      right-lg: $border-radius-large
     ),
     enable-important-values: true
   );
@@ -42,9 +46,11 @@
 
   $config: (
     properties: border-bottom-right-radius border-bottom-left-radius,
-    selector: round,
+    selector: is-round,
     values: (
-      bottom: $border-radius-default
+      bottom-sm: $border-radius-small,
+      bottom: $border-radius-normal,
+      bottom-lg: $border-radius-large
     ),
     enable-important-values: true
   );
@@ -53,9 +59,11 @@
 
   $config: (
     properties: border-top-left-radius border-bottom-left-radius,
-    selector: round,
+    selector: is-round,
     values: (
-      left: $border-radius-default
+      left-sm: $border-radius-small,
+      left: $border-radius-normal,
+      left-lg: $border-radius-large
     ),
     enable-important-values: true
   );
