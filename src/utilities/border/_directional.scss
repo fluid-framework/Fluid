@@ -9,7 +9,7 @@
     values: (
       null: $border-defaut
     ),
-    infixes: $directions,
+    infixes: top bottom right left,
     enable-important-values: true
   );
 
