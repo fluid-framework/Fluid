@@ -1,0 +1,19 @@
+//
+// kbd settings
+//
+
+//
+// Inherit
+//
+
+$kbd-padding:                       $code-padding !default;
+$kbd-font-size:                     $code-font-size !default;
+
+//
+// Settings
+//
+$kbd-bg:                            $gray-900 !default;
+$kbd-color:                         clr-auto($kbd-bg, $white, $black) !default;
+$kbd-font-weight:                   $font-weight-light !default;
+
+$nested-kbd-font-weight:            $font-weight-bold !default;
