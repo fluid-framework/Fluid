@@ -10,4 +10,39 @@
     width: $icon-size;
     height: $icon-size;
   }
+
+  .has-icon-left,
+  .has-icon-right {
+    position: relative;
+    > .icon {
+      @include fontsize(inherit);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 12;
+    }
+  }
+
+  .has-icon-left {
+    > .btn,
+    > .input {
+      padding-left: $icon-size + $icon-offset;
+    }
+
+    > .icon.is-left {
+      left: $icon-offset / 2;
+    }
+  }
+
+  .has-icon-right {
+    > .btn,
+    > .input {
+      padding-right: $icon-size + $icon-offset;
+    }
+
+    > .icon.is-right {
+      right: $icon-offset / 2;
+      left: auto;
+    }
+  }
 }
