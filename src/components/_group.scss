@@ -16,7 +16,7 @@
     > .list-item {
       @include fontsize(inherit);
       @include hover-focus {
-        z-index: $group-items-zindex;
+        z-index: $group-items-hover-focus-zindex;
       }
     }
 
