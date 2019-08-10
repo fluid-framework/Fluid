@@ -24,7 +24,6 @@
   }
 
   .has-icon-left {
-    > .btn,
     > .input {
       padding-left: $icon-size + $icon-offset;
     }
@@ -35,7 +34,6 @@
   }
 
   .has-icon-right {
-    > .btn,
     > .input {
       padding-right: $icon-size + $icon-offset;
     }
