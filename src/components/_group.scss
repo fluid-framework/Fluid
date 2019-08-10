@@ -4,6 +4,17 @@
 
 // Used to combine various inputs together
 @if $generate-component-classes {
+  // Group addons
+  .group > .addon:not(.btn):not(.input) {
+    @extend %control;
+    user-select: auto; // allow user to select text inside addon
+    border-color: $group-addon-border-color;
+    background-color: $group-addon-background;
+    @include hover {
+      box-shadow: none; // remove shadows from control when hover
+    }
+  }
+
   //
   // Base styles
   //
@@ -12,6 +23,7 @@
     flex-wrap: wrap;
 
     > .input,
+    > .addon,
     > .btn,
     > .list-item {
       @include fontsize(inherit);
@@ -22,6 +34,7 @@
 
     &:not(.is-y) {
       > .input,
+      > .addon,
       > .btn,
       > .list-item {
         margin-right: -$border-width-default / 2;
@@ -39,6 +52,7 @@
     }
     &.is-y {
       > .input,
+      > .addon,
       > .btn,
       > .list-item {
         margin-top: -$border-width-default / 2;
@@ -58,6 +72,7 @@
     &.is-purge {
       &:not(.is-y) {
         > .input,
+        > .addon,
         > .btn,
         > .list-item {
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
@@ -77,6 +92,7 @@
       }
       &.is-y {
         > .input,
+        > .addon,
         > .btn,
         > .list-item {
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
