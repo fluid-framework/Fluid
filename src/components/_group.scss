@@ -88,8 +88,10 @@
       > .addon,
       > .btn,
       > .list-item {
-        margin-top: -$border-width-default / 2;
-        margin-bottom: -$border-width-default / 2;
+        // stylelint-disable-next-line declaration-no-important
+        margin-top: -$border-width-default / 2 !important;
+        // stylelint-disable-next-line declaration-no-important
+        margin-bottom: -$border-width-default / 2 !important;
         &:not(:first-child):not(:last-child) {
           border-radius: border-radius(0);
         }
