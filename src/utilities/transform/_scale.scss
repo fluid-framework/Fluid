@@ -1,0 +1,18 @@
+//
+// Scale
+//
+
+@if $generate-utility-classes {
+  $config: (
+    properties: transform,
+    selector: flip,
+    values: (
+      x: scaleX(-1),
+      y: scaleY(-1),
+      xy: scale(-1)
+    ),
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
+}
