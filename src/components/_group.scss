@@ -10,8 +10,40 @@
     user-select: auto; // allow user to select text inside addon
     border-color: $group-addon-border-color;
     background-color: $group-addon-background;
+
     @include hover {
       box-shadow: none; // remove shadows from control when hover
+    }
+  }
+
+  // Group lists
+  .group.list {
+    > .list-item {
+      user-select: auto;
+      @extend %control;
+      padding: $group-list-item-padding-y $group-list-item-padding-x;
+      border-color: $group-list-border-color;
+      color: $group-list-color;
+      background-color: $group-list-background;
+
+      @include hover {
+        box-shadow: none;
+      }
+    }
+
+    // Interactable list items
+    > a.list-item,
+    > button.list-item {
+      user-select: none;
+      @include hover {
+        box-shadow: box-shadow($control-focus-box-shadow rgba($control-theme, .5));
+      }
+
+      @include active {
+        border-color: $group-list-active-border-color;
+        color: clr-auto($group-list-active-background);
+        background-color: $group-list-active-background;
+      }
     }
   }
 
@@ -50,6 +82,7 @@
         }
       }
     }
+
     &.is-y {
       > .input,
       > .addon,
@@ -69,6 +102,7 @@
       }
     }
 
+    // purge/unstyle borders and border radius property from items, other than start end and in-between items
     &.is-purge {
       &:not(.is-y) {
         > .input,
@@ -113,35 +147,6 @@
     }
   }
 
-    &.list {
-      display: flex; // override group inline-flex
-      > .list-item {
-        padding: $group-list-item-padding-y $group-list-item-padding-x;
-        // avoid using @mixin to generate borders independent of `$design-shadow-else-border` option
-        border: $border-width-default solid $gray-200;
-        border-radius: border-radius();
-        outline: 0;
-        color: $group-list-color;
-        background-color: $group-list-background;
-        text-decoration: none;
-        @include transition($group-list-transition);
-
-        @include disabled {
-          pointer-events: none;
-          opacity: $group-disabled-opacity;
-          color: $group-list-disabled-color;
-        }
-      }
-
-      > a.list-item,
-      > button.list-item {
-        @include active {
-          border-color: $group-list-active-border-color;
-          color: clr-auto($group-list-active-background);
-          background-color: $group-list-active-background;
-        }
-      }
-    }
   .group.buttons {
     display: inline-flex; // override display property for buttons group
   }
