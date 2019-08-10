@@ -49,14 +49,12 @@
       > .btn {
         margin-right: -$border-width-default / 2;
         margin-left: -$border-width-default / 2;
-        &:not(:first-child):not(:last-child) {
-          border-radius: border-radius(0);
-        }
+        border-radius: border-radius(0);
         &:first-child {
-          @include border-radius-right(0);
+          @include border-radius-left($control-border-radius);
         }
         &:last-child {
-          @include border-radius-left(0);
+          @include border-radius-right($control-border-radius);
         }
       }
     }
@@ -67,14 +65,12 @@
       > .btn {
         margin-top: -$border-width-default / 2;
         margin-bottom: -$border-width-default / 2;
-        &:not(:first-child):not(:last-child) {
-          border-radius: border-radius(0);
-        }
+        border-radius: border-radius(0);
         &:first-child {
-          @include border-radius-bottom(0);
+          @include border-radius-top($control-border-radius);
         }
         &:last-child {
-          @include border-radius-top(0);
+          @include border-radius-bottom($control-border-radius);
         }
       }
     }
@@ -85,18 +81,15 @@
         > .input,
         > .addon,
         > .btn {
-          // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-          border-top: 0;
-          border-bottom: 0;
+          border-top: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
+          border-bottom: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
           border-radius: border-radius(0);
 
           &:first-child {
-            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-left: 0;
+            border-left: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
           }
           &:last-child {
-            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-right: 0;
+            border-right: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
           }
         }
       }
@@ -104,18 +97,15 @@
         > .input,
         > .addon,
         > .btn {
-          // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-          border-right: 0;
-          border-left: 0;
+          border-right: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
+          border-left: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
           border-radius: border-radius(0);
 
           &:first-child {
-            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-top: 0;
+            border-top: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
           }
           &:last-child {
-            // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-bottom: 0;
+            border-bottom: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
           }
         }
       }
