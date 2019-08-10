@@ -134,14 +134,13 @@
         @include after {
           @include animation(flash); // flash animation for underline
           bottom: 20%;
-          // stylelint-disable-next-line declaration-no-important
-          box-shadow: box-shadow(none) !important;
         }
       }
 
       @include active {
         @include after {
           @include animation(none); // disable animations and play again on click event
+          box-shadow: box-shadow(none);
         }
       }
 
