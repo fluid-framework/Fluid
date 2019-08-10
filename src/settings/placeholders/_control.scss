@@ -30,7 +30,7 @@
 
   @include active {
     // stylelint-disable-next-line declaration-no-important, property-blacklist
-    animation: none !important; // disable animations and play again on click event
+    animation: none !important; // disable animations on click event and play again on focus/clickup event
     // stylelint-disable-next-line declaration-no-important
     box-shadow: box-shadow(none) !important; // no shadow in clicked state
   }
