@@ -111,7 +111,7 @@
 
         @include disabled {
           pointer-events: none;
-          opacity: $group-list-item-disabled-opacity;
+          opacity: $group-disabled-opacity;
           color: $group-list-disabled-color;
         }
       }
