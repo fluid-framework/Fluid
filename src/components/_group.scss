@@ -19,7 +19,7 @@
   // Base styles
   //
   .group {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
 
     > .input,
@@ -111,6 +111,7 @@
         }
       }
     }
+  }
 
     &.list {
       display: flex; // override group inline-flex
@@ -141,5 +142,7 @@
         }
       }
     }
+  .group.buttons {
+    display: inline-flex; // override display property for buttons group
   }
 }
