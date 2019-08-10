@@ -15,7 +15,6 @@
   .has-icon-right {
     position: relative;
     > .icon {
-      @include fontsize(inherit);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

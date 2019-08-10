@@ -10,11 +10,5 @@ $group-items-hover-focus-zindex:         10 !default;
 $group-addon-background:                 $light !default;
 $group-addon-border-color:               $control-theme-light !default;
 
-$group-list-color:                       inherit !default;
-$group-list-background:                  $white !default;
-$group-list-border-color:                $gray-200 !default;
-$group-list-item-padding-y:              .75rem !default;
-$group-list-item-padding-x:              1.25rem !default;
-
-$group-list-active-background:           $primary !default;
-$group-list-active-border-color:         transparent !default;
+$group-padding-y-lg:                     .75rem !default;
+$group-padding-x-lg:                     1.25rem !default;

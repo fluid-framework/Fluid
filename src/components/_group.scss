@@ -5,44 +5,17 @@
 // Used to combine various inputs together
 @if $generate-component-classes {
   // Group addons
-  .group > .addon:not(.btn):not(.input) {
+  .group > .addon {
     @extend %control;
-    user-select: auto; // allow user to select text inside addon
-    border-color: $group-addon-border-color;
-    background-color: $group-addon-background;
 
-    @include hover {
-      box-shadow: none; // remove shadows from control when hover
-    }
-  }
+    // separate from control placeholder to keep placeholder Priority/Precedence low
+    &:not(.btn):not(.input) {
+      user-select: auto; // allow user to select text inside addon
+      border-color: $group-addon-border-color;
+      background-color: $group-addon-background;
 
-  // Group lists
-  .group.list {
-    > .list-item {
-      user-select: auto;
-      @extend %control;
-      padding: $group-list-item-padding-y $group-list-item-padding-x;
-      border-color: $group-list-border-color;
-      color: $group-list-color;
-      background-color: $group-list-background;
-
-      @include hover {
-        box-shadow: none;
-      }
-    }
-
-    // Interactable list items
-    > a.list-item,
-    > button.list-item {
-      user-select: none;
-      @include hover {
-        box-shadow: box-shadow($control-focus-box-shadow rgba($control-theme, .5));
-      }
-
-      @include active {
-        border-color: $group-list-active-border-color;
-        color: clr-auto($group-list-active-background);
-        background-color: $group-list-active-background;
+      &:not(a) {
+        pointer-events: none;
       }
     }
   }
@@ -54,11 +27,17 @@
     display: flex;
     flex-wrap: wrap;
 
+    &.is-lg {
+      > .input,
+      > .addon,
+      > .btn {
+        padding: $group-padding-y-lg $group-padding-x-lg;
+      }
+    }
+
     > .input,
     > .addon,
-    > .btn,
-    > .list-item {
-      @include fontsize(inherit);
+    > .btn {
       @include hover-focus {
         z-index: $group-items-hover-focus-zindex;
       }
@@ -67,8 +46,7 @@
     &:not(.is-y) {
       > .input,
       > .addon,
-      > .btn,
-      > .list-item {
+      > .btn {
         margin-right: -$border-width-default / 2;
         margin-left: -$border-width-default / 2;
         &:not(:first-child):not(:last-child) {
@@ -86,12 +64,9 @@
     &.is-y {
       > .input,
       > .addon,
-      > .btn,
-      > .list-item {
-        // stylelint-disable-next-line declaration-no-important
-        margin-top: -$border-width-default / 2 !important;
-        // stylelint-disable-next-line declaration-no-important
-        margin-bottom: -$border-width-default / 2 !important;
+      > .btn {
+        margin-top: -$border-width-default / 2;
+        margin-bottom: -$border-width-default / 2;
         &:not(:first-child):not(:last-child) {
           border-radius: border-radius(0);
         }
@@ -109,8 +84,7 @@
       &:not(.is-y) {
         > .input,
         > .addon,
-        > .btn,
-        > .list-item {
+        > .btn {
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-top: 0;
           border-bottom: 0;
@@ -129,8 +103,7 @@
       &.is-y {
         > .input,
         > .addon,
-        > .btn,
-        > .list-item {
+        > .btn {
           // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
           border-right: 0;
           border-left: 0;
