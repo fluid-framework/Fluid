@@ -4,7 +4,6 @@
 
 @if $generate-utility-classes {
   $config: (
-    responsive: true,
     properties: line-height,
     selector: lh,
     values: (
