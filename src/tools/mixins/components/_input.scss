@@ -1,0 +1,31 @@
+//
+// inputs Mixin
+//
+
+//
+// Theme Variants Mixin
+//
+
+@mixin input-varient($name, $color) {
+  border-color: rgba($color, .5);
+  color: $color;
+
+  @include hover {
+    box-shadow: box-shadow($input-boxshadow-inner, $control-focus-box-shadow rgba($color, .5));
+  }
+
+  @if $name == "valid" or $name == "info" or $name == "warn" or $name == "error" {
+    &.has-icon {
+      @extend %input-state;
+      @if $name == "valid" {
+        background-image: $icon-valid;
+      } @else if $name == "info" {
+        background-image: $icon-info;
+      } @else if $name == "warn" {
+        background-image: $icon-warn;
+      } @else if $name == "error" {
+        background-image: $icon-error;
+      }
+    }
+  }
+}

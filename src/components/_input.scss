@@ -1,0 +1,78 @@
+//
+// input controls
+//
+
+//
+// Base Style
+//
+.input {
+  @extend %control;
+  width: 100%;
+  min-height: $input-minHeight;
+  border-color: $input-border-color;
+  background-color: $input-background;
+  box-shadow: box-shadow($input-boxshadow-inner);
+
+  @include focus {
+    border-color: currentColor;
+    box-shadow: box-shadow(none);
+  }
+
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    &.is-#{$color} {
+      @include input-varient($color, $value);
+    }
+  }
+
+  &.readonly,
+  &[readonly],
+  &:read-only {
+    pointer-events: none;
+    opacity: $control-disabled-opacity;
+    box-shadow: none;
+  }
+}
+
+// unstyle input
+.input.unstyle {
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+// form validation style
+.is-validated .input {
+  @include not-disabled {
+    &:not(.readonly):not([readonly]):not(:read-only) {
+      &:valid {
+        @extend .input.is-valid;
+        @extend .input.is-valid.has-icon;
+      }
+
+      &:invalid {
+        @extend .input.is-error;
+        @extend .input.is-error.has-icon;
+      }
+    }
+  }
+}
+
+.input::-ms-expand {
+  border: 0; // Unstylish the caret on `<select>`s in IE10+
+  background-color: transparent; // Unstylish the caret on `<select>`s in IE10+
+}
+
+.input::placeholder {
+  opacity: 1; // override Firefox's opacity
+  color: $input-placeholder-color;
+}
+
+textarea.input {
+  height: auto; // revert textarea height
+}

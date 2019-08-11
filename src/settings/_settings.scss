@@ -48,12 +48,6 @@ $generate-component-classes:                  true !default;    // Enable compon
 @import "./containers/containers";
 
 //
-// icons
-//
-
-@import "./icon/icon";
-
-//
 // Spacing
 //
 
@@ -93,6 +87,12 @@ $generate-component-classes:                  true !default;    // Enable compon
 @import "./misc/misc";
 
 //
+// icons
+//
+
+@import "./icon/icon";
+
+//
 // Components
 //
 
@@ -115,3 +115,4 @@ $generate-component-classes:                  true !default;    // Enable compon
 @import "./placeholders/typography/heading";
 @import "./placeholders/sanitize";
 @import "./placeholders/control";
+@import "./placeholders/input";

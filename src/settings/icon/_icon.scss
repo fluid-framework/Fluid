@@ -7,3 +7,13 @@
 //
 $icon-size:                 1.75em !default;
 $icon-offset:               .25em !default;
+
+$path-info:                 '<g><circle cx="9" cy="9" r="8"/><path d="m9 13.67v-5.48"/><circle cx="9" cy="5.4" r=".43" stroke-width="#{(1.7 / 2)}"/></g>' !default;
+$path-warn:                 '<g><path d="m9 7v4.2"/><circle cx="9" cy="13.67" r=".43" stroke-width="#{(1.7 / 2)}"/><path d="m10.45 2.52-8.83 15.37h17.67z" stroke-width="2" transform="matrix(.87 0 0 .87 -.06 .1)"/></g>' !default;
+$path-valid:                '<path d="m15.71 4.55-9 9-4.13-4.13"/>' !default;
+$path-error:                '<g><path d="m3.88 3.88 10.42 10.42"/><path d="m14.3 3.88-10.42 10.42"/></g>' !default;
+
+$icon-info:                 url('data:image/svg+xml;utf8,<svg style="stroke:#{str-replace(#{$info},"#","%23")};#{if($design-rounded-else-box,"stroke-linecap:round;stroke-linejoin:round;",null)}fill:none;stroke-width:#{1.7};fill-rule:evenodd" viewbox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">#{$path-info}</svg>') !default;
+$icon-warn:                 url('data:image/svg+xml;utf8,<svg style="stroke:#{str-replace(#{$warn},"#","%23")};#{if($design-rounded-else-box,"stroke-linecap:round;stroke-linejoin:round;",null)}fill:none;stroke-width:#{1.7};fill-rule:evenodd" viewbox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">#{$path-warn}</svg>') !default;
+$icon-valid:                url('data:image/svg+xml;utf8,<svg style="stroke:#{str-replace(#{$valid},"#","%23")};#{if($design-rounded-else-box,"stroke-linecap:round;stroke-linejoin:round;",null)}fill:none;stroke-width:#{2};fill-rule:evenodd" viewbox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">#{$path-valid}</svg>') !default;
+$icon-error:                url('data:image/svg+xml;utf8,<svg style="stroke:#{str-replace(#{$error},"#","%23")};#{if($design-rounded-else-box,"stroke-linecap:round;stroke-linejoin:round;",null)}fill:none;stroke-width:#{2};fill-rule:evenodd" viewbox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">#{$path-error}</svg>') !default;
