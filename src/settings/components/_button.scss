@@ -8,6 +8,8 @@
 
 $button-focus-box-shadow:                        $control-focus-box-shadow !default;
 
+$button-iscircle-padding:                        $control-padding-y !default;
+
 //
 // Setting
 //
@@ -16,5 +18,3 @@ $button-theme-light:                             $control-theme-light !default;
 $button-transition-minimal:                      box-shadow, bottom !default;
 
 $button-disabled-background:                     $control-disabled-background !default;
-
-$button-iscircle-padding:                        .375em !default;
