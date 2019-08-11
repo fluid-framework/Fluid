@@ -25,17 +25,20 @@ pre {
     padding: $pre-code-padding;
     border-left: $border-width-wide solid $primary;
     @include border-radius-left(0);
-    @include before {
-      content: attr(fluid-lang);
-      position: absolute;
-      top: 5px;
-      right: -1px;
-      padding: $pre-code-langbadge-padding;
-      color: $pre-code-langbadge-color;
-      background: $pre-code-langbadge-background;
-      text-transform: $pre-code-langbadge-texttransform;
-      font-weight: $pre-code-langbadge-fontweight;
-      @include border-radius-left();
+
+    &[fluid-lang] {
+      @include before {
+        content: attr(fluid-lang);
+        position: absolute;
+        top: 5px;
+        right: -1px;
+        padding: $pre-code-langbadge-padding;
+        color: $pre-code-langbadge-color;
+        background: $pre-code-langbadge-background;
+        text-transform: $pre-code-langbadge-texttransform;
+        font-weight: $pre-code-langbadge-fontweight;
+        @include border-radius-left();
+      }
     }
   }
 }
