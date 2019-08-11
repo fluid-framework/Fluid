@@ -79,8 +79,7 @@
       }
     }
 
-    // purge/unstyle borders and border radius property from items, other than start end and in-between items
-    &.is-purge {
+    &.is-borderless {
       &:not(.is-y) {
         > .input,
         > .addon,
