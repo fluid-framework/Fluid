@@ -41,6 +41,12 @@
 // Functions related to breakpoints
 @import "./functions/breakpoints";
 
+// Functions related to transitions
+@import "./functions/transitions";
+
+// Functions related to box-shadow
+@import "./functions/box-shadow";
+
 // Functions related to borders
 @import "./functions/border";
 @import "./functions/border-radius";
@@ -57,9 +63,6 @@
 
 // Mixin Used for borders
 @import "./mixins/border-radius";
-
-// Mixin Used for box-shadow
-@import "./mixins/box-shadow";
 
 // Mixin Used for font
 @import "./mixins/font-size";
