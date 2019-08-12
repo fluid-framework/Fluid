@@ -1,0 +1,33 @@
+//
+// Set
+//
+// Used to combine different components and objects into one set
+// The main control needs to be the first child of set
+
+.input-set {
+  position: relative;
+  margin-top: 2.25px;
+  margin-bottom: 2.25px;
+  @include fontsize(1rem);
+
+  > .input {
+    height: 100%;
+    margin: 0; // remove margin from input and apply it to the set
+  }
+
+  &.has-icon-left {
+    > .input {
+      ~ .icon {
+        z-index: $group-items-hover-focus-zindex + 1;
+        pointer-events: none;
+        opacity: $set-input-icon-opacity;
+      }
+
+      @include focus {
+        & ~ .icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

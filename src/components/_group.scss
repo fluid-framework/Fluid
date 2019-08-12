@@ -1,7 +1,8 @@
+// stylelint-disable selector-max-class
 //
 // Group
 //
-// Used to combine various controls together
+// Used to combine various controls and sets together
 
 @if $generate-component-classes {
   // Group addons
@@ -36,6 +37,7 @@
     }
 
     > .input,
+    > .input-set,
     > .addon,
     > .btn {
       @include hover-focus {
@@ -43,11 +45,26 @@
       }
     }
 
-    > .input {
+    > .input,
+    > .input-set {
       flex: 1 1 0; // expand to max width available without overflow from group
     }
 
     &:not(.is-y) {
+      > .input-set {
+        margin-right: -$border-width-default / 2;
+        margin-left: -$border-width-default / 2;
+        > .input {
+          border-radius: border-radius(0);
+        }
+        &:first-child > .input {
+          @include border-radius-left($control-border-radius);
+        }
+        &:last-child > .input {
+          @include border-radius-right($control-border-radius);
+        }
+      }
+
       > .input,
       > .addon,
       > .btn {
@@ -64,6 +81,20 @@
     }
 
     &.is-y {
+      > .input-set {
+        margin-top: -$border-width-default / 2;
+        margin-bottom: -$border-width-default / 2;
+        > .input {
+          border-radius: border-radius(0);
+        }
+        &:first-child > .input {
+          @include border-radius-top($control-border-radius);
+        }
+        &:last-child > .input {
+          @include border-radius-bottom($control-border-radius);
+        }
+      }
+
       > .input,
       > .addon,
       > .btn {
@@ -81,6 +112,21 @@
 
     &.is-borderless {
       &:not(.is-y) {
+        > .input-set {
+          > .input {
+            border-top: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            border-bottom: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            border-radius: border-radius(0);
+          }
+
+          &:first-child > .input {
+            border-left: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+          }
+          &:last-child > .input {
+            border-right: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+          }
+        }
+
         > .input,
         > .addon,
         > .btn {
@@ -97,6 +143,21 @@
         }
       }
       &.is-y {
+        > .input-set {
+          > .input {
+            border-right: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            border-left: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            border-radius: border-radius(0);
+          }
+
+          &:first-child > .input {
+            border-top: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+          }
+          &:last-child > .input {
+            border-bottom: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+          }
+        }
+
         > .input,
         > .addon,
         > .btn {
