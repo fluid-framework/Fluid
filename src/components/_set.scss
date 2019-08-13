@@ -11,6 +11,7 @@
   @include fontsize(1rem);
 
   > .input {
+    @include fontsize(inherit);
     height: 100%;
     margin: 0; // remove margin from input and apply it to the set
   }
@@ -29,5 +30,36 @@
         }
       }
     }
+  }
+}
+
+.is-validated .input-set {
+  > .input ~ .feedback {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    display: none;
+    padding: $set-input-feedback-padding;
+    margin-bottom: $set-input-feedback-arrow-size + $set-input-feedback-offset-bottom;
+    border-radius: border-radius();
+    color: $set-input-feedback-color;
+    background: $set-input-feedback-background;
+    box-shadow: box-shadow($set-input-feedback-shadow);
+
+    @include before {
+      content: "";
+      position: absolute;
+      right: $set-input-feedback-arrow-offset-right;
+      bottom: -($set-input-feedback-arrow-size * 2);
+      @include triangle(bottom, $set-input-feedback-arrow-size, $set-input-feedback-background);
+    }
+  }
+
+  > .input:valid ~ .feedback.is-valid {
+    display: block;
+  }
+
+  > .input:invalid ~ .feedback.is-invalid {
+    display: block;
   }
 }

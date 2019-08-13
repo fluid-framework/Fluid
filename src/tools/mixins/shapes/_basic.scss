@@ -1,0 +1,16 @@
+//
+//
+//
+@mixin triangle($direction: bottom, $size: 6px, $color: currentColor) {
+  $direction-inverse: (
+    top: bottom,
+    right: left,
+    bottom: top,
+    left: right
+  );
+
+  $direction: map-get($direction-inverse, $direction);
+
+  border: $size solid transparent;
+  border-#{$direction}: $size solid $color;
+}
