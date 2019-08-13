@@ -55,11 +55,12 @@
     }
   }
 
-  > .input:valid ~ .feedback.is-valid {
-    display: block;
-  }
-
-  > .input:invalid ~ .feedback.is-invalid {
-    display: block;
+  > .input:required {
+    &:valid ~ .feedback.is-valid {
+      display: block;
+    }
+    &:invalid ~ .feedback.is-invalid {
+      display: block;
+    }
   }
 }
