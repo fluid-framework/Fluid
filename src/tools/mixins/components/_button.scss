@@ -10,7 +10,7 @@
 // Theme Variants Mixin
 //
 
-// Solid button
+// Solid design variant
 @mixin button-design-solid-varient($color) {
   $focus-background: clr-step($color, -2);
   $active-background: clr-step($color, 4);
@@ -48,7 +48,7 @@
   }
 }
 
-// outline button
+// outline design variant
 @mixin button-design-outline-varient($color) {
   $active-border: clr-step($color, 4);
 
@@ -68,7 +68,7 @@
   }
 }
 
-// minimal button
+// minimal design variant
 @mixin button-design-minimal-varient($color) {
   color: $color;
 
