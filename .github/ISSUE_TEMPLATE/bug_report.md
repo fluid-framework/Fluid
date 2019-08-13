@@ -2,8 +2,8 @@
 name: Bug report
 about: Create a report to help us improve
 title: bug
-labels: ""
-assignees: ""
+labels: ''
+assignees: ''
 ---
 
 ##### Describe the bug
@@ -22,6 +22,15 @@ Steps to reproduce the behavior:
 ##### Expected behavior
 
 A clear and concise description of what you expected to happen.
+
+### Checklist
+
+<!-- (Update "[ ]" to "[x]" to check a box) -->
+
+##### Before submitting
+
+- [ ] [Search for duplicate or closed issues](https://github.com/fluid-framework/Fluid/issues?q=is%3Aissue+sort%3Aupdated-desc)
+- [ ] [Validate html](https://html5.validator.nu/)
 
 ##### Screenshots
 
@@ -43,12 +52,3 @@ If applicable, add screenshots to help explain your problem.
 - OS: [e.g. iOS8.1]
 - Browser [e.g. stock browser, safari]
 - Version [e.g. 22]
-
-### Checklist
-
-<!-- (Update "[ ]" to "[x]" to check a box) -->
-
-##### Before submitting
-
-- [ ] [Search for duplicate or closed issues](https://github.com/fluid-framework/Fluid/issues?q=is%3Aissue+sort%3Aupdated-desc)
-- [ ] [Validate html](https://html5.validator.nu/)
