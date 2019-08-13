@@ -32,6 +32,14 @@
   }
 }
 
+// Hover
+// Generate hover state
+@mixin not-hover() {
+  &:not(.hover):not(:hover) {
+    @content;
+  }
+}
+
 // Focus
 // Generate focus state
 @mixin focus() {
