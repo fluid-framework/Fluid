@@ -31,10 +31,8 @@
       }
     }
   }
-}
 
-.is-validated .input-set {
-  > .input ~ .feedback {
+  > .feedback {
     position: absolute;
     right: 0;
     bottom: 100%;
@@ -54,13 +52,23 @@
       @include triangle(bottom, $set-input-feedback-arrow-size, $set-input-feedback-background);
     }
   }
+}
 
+.input-set.is-valid > .feedback.is-valid {
+  @extend %display-block;
+}
+
+.input-set.is-invalid > .feedback.is-invalid {
+  @extend %display-block;
+}
+
+.is-validated .input-set {
   > .input:required {
     &:valid ~ .feedback.is-valid {
-      display: block;
+      @extend %display-block;
     }
     &:invalid ~ .feedback.is-invalid {
-      display: block;
+      @extend %display-block;
     }
   }
 }
