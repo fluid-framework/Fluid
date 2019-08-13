@@ -20,6 +20,7 @@
   <a href="https://en.wikipedia.org/wiki/Brotli">
     <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000&style=for-the-badge"/>
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Ffluid-framework%2FFluid?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffluid-framework%2FFluid.svg?type=shield"/></a>
   <a href="https://github.com/fluid-framework/Fluid/tree/master/LICENSE">
     <img src="https://img.shields.io/github/license/fluid-framework/Fluid.svg?style=for-the-badge&color=805ad5"/>
   </a>
@@ -40,6 +41,9 @@
 <p align="center">
  🚧 Under Heavy Construction 🚧
 </p>
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffluid-framework%2FFluid.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffluid-framework%2FFluid?ref=badge_large)
 
 ## 🚀 Quick Start
 
