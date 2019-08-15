@@ -32,4 +32,8 @@
   .input-set > & ~ .icon {
     color: $color;
   }
+
+  .input-set.has-floating-label > & ~ label {
+    color: $color;
+  }
 }

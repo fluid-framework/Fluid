@@ -25,9 +25,34 @@
       }
 
       @include focus {
-        & ~ .icon {
+        ~ .icon {
           opacity: 1;
         }
+      }
+    }
+  }
+
+  &.has-floating-label > .input[placeholder=" "] {
+    background-color: transparent;
+    box-shadow: none;
+
+    ~ label {
+      position: absolute;
+      top: 50%;
+      left: strip-unit($control-padding-x) * 1rem;
+      transform: translateY(-50%);
+      pointer-events: none;
+      padding: 2px;
+      background: $body-background;
+      line-height: 1;
+      @include transition(top, font-size);
+    }
+
+
+    @include focus(":not(:placeholder-shown)") {
+      ~ label {
+        top: 0%;
+        @include font-size($default-small-quantity * 1em);
       }
     }
   }
