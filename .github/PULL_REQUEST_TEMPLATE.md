@@ -9,7 +9,7 @@ A clear and concise description of what the pull request does.
 ##### Before submitting
 
 - Update code to latest [master branch](https://github.com/fluid-framework/Fluid/tree/master)
-- Test your code. Run `yarn try` to try complying your code.
+- Test your code. Run `yarn try` to test run code.
 
 ##### What kind of change does this PR introduce? (check at least one)
 
