@@ -42,8 +42,16 @@
 
 // Focus
 // Generate focus state
-@mixin focus() {
-  &.focus,
+//
+// Parameter:
+// [optional] {List} $extra-selectors: list of selectors along with focus state
+@mixin focus($extra-selectors...) {
+  $selectors: null;
+  @each $selector in $extra-selectors {
+    $selectors: prefix($selector, "&");
+    $selectors: suffix($selectors, ",");
+  }
+  #{$selectors} &.focus,
   &:focus {
     @content;
   }
