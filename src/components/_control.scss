@@ -71,7 +71,7 @@
     margin-bottom: $control-input-feedback-arrow-size + $control-input-feedback-offset-bottom;
     border-radius: border-radius();
     color: $control-input-feedback-color;
-    background: $control-input-feedback-background;
+    @include gradient-bg($control-input-feedback-background, 180deg);
     box-shadow: box-shadow($control-input-feedback-shadow);
 
     @include before {
