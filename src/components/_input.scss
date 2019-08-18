@@ -6,7 +6,7 @@
 // Base Style
 //
 .input {
-  @extend %control;
+  @extend %controls;
   width: 100%;
   min-height: $input-minHeight;
   border-color: $input-border-color;

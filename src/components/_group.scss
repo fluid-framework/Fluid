@@ -6,7 +6,7 @@
 @if $generate-component-classes {
   // Group addons
   .group > .addon {
-    @extend %control;
+    @extend %controls;
 
     // separate from control placeholder to keep placeholder Priority/Precedence low
     &:not(.btn):not(.input) {
