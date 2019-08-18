@@ -4,7 +4,7 @@
 // Used to combine different components and objects into one set
 // The main control needs to be the first child of set
 
-.input-set {
+.control {
   position: relative;
   margin-top: 2.25px;
   margin-bottom: 2.25px;
@@ -21,7 +21,7 @@
       ~ .icon {
         z-index: $group-items-hover-focus-zindex + 1;
         pointer-events: none;
-        opacity: $set-input-icon-opacity;
+        opacity: $control-input-icon-opacity;
       }
 
       @include focus {
@@ -62,32 +62,32 @@
     right: 0;
     bottom: 100%;
     display: none;
-    padding: $set-input-feedback-padding;
-    margin-bottom: $set-input-feedback-arrow-size + $set-input-feedback-offset-bottom;
+    padding: $control-input-feedback-padding;
+    margin-bottom: $control-input-feedback-arrow-size + $control-input-feedback-offset-bottom;
     border-radius: border-radius();
-    color: $set-input-feedback-color;
-    background: $set-input-feedback-background;
-    box-shadow: box-shadow($set-input-feedback-shadow);
+    color: $control-input-feedback-color;
+    background: $control-input-feedback-background;
+    box-shadow: box-shadow($control-input-feedback-shadow);
 
     @include before {
       content: "";
       position: absolute;
-      right: $set-input-feedback-arrow-offset-right;
-      bottom: -($set-input-feedback-arrow-size * 2);
-      @include triangle(bottom, $set-input-feedback-arrow-size, $set-input-feedback-background);
+      right: $control-input-feedback-arrow-offset-right;
+      bottom: -($control-input-feedback-arrow-size * 2);
+      @include triangle(bottom, $control-input-feedback-arrow-size, $control-input-feedback-background);
     }
   }
 }
 
-.input-set.is-valid > .feedback.is-valid {
+.control.is-valid > .feedback.is-valid {
   @extend %display-block;
 }
 
-.input-set.is-invalid > .feedback.is-invalid {
+.control.is-invalid > .feedback.is-invalid {
   @extend %display-block;
 }
 
-.is-validated .input-set {
+.is-validated .control {
   > .input:required {
     &:valid ~ .feedback.is-valid {
       @extend %display-block;

@@ -36,7 +36,7 @@
     }
 
     > .input,
-    > .input-set,
+    > .control,
     > .addon,
     > .btn {
       @include hover-focus {
@@ -45,12 +45,12 @@
     }
 
     > .input,
-    > .input-set {
+    > .control {
       flex: 1 1 0; // expand to max width available without overflow from group
     }
 
     &:not(.is-y) {
-      > .input-set {
+      > .control {
         margin-right: -$border-width-default / 2;
         margin-left: -$border-width-default / 2;
         > .input {
@@ -80,7 +80,7 @@
     }
 
     &.is-y {
-      > .input-set {
+      > .control {
         margin-top: -$border-width-default / 2;
         margin-bottom: -$border-width-default / 2;
         > .input {
@@ -111,7 +111,7 @@
 
     &.is-borderless {
       &:not(.is-y) {
-        > .input-set {
+        > .control {
           > .input {
             border-top: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
             border-bottom: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
@@ -142,7 +142,7 @@
         }
       }
       &.is-y {
-        > .input-set {
+        > .control {
           > .input {
             border-right: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
             border-left: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option

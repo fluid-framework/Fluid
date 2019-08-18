@@ -1,0 +1,14 @@
+//
+// Set
+//
+
+$control-input-icon-opacity:                             .5 !default;
+
+$control-input-feedback-padding:                         3px 6px !default;
+$control-input-feedback-offset-bottom:                   1px !default;
+$control-input-feedback-background:                      $dark !default;
+$control-input-feedback-color:                           clr-auto($control-input-feedback-background) !default;
+$control-input-feedback-shadow:                          1px 4px 6px 0 rgba($black, .15) !default;
+
+$control-input-feedback-arrow-size:                      6px !default;
+$control-input-feedback-arrow-offset-right:              10px !default;

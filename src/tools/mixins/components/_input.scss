@@ -29,11 +29,11 @@
     }
   }
 
-  .input-set > & ~ .icon {
+  .control > & ~ .icon {
     color: $color;
   }
 
-  .input-set.has-floating-label > & ~ label {
+  .control.has-floating-label > & ~ label {
     color: $color;
   }
 }
