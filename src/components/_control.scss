@@ -1,8 +1,8 @@
 //
-// Set
+// Control
 //
-// Used to combine different components and objects into one set
-// The main control needs to be the first child of set
+// Used to combine different components and objects into one control
+// The main control needs to be the first child of Control class to work properly
 
 .control {
   position: relative;
@@ -16,7 +16,7 @@
   > .input {
     @include fontsize(inherit);
     height: 100%;
-    margin: 0; // remove margin from input and apply it to the set
+    margin: 0; // remove margin from input and apply it to the control class
   }
 
   &.has-icon-left {
