@@ -1,0 +1,31 @@
+//
+// control Settings
+//
+// Shared Settings between various controls
+
+//
+// Inherit
+//
+$controls-border-width:                           $border-width-default !default;
+$controls-border-radius:                          $border-radius-default !default;
+$controls-line-height:                            $line-height !default;
+$controls-font-weight:                            $font-weight-normal !default;
+
+//
+// Setting
+//
+$controls-theme:                                  $gray-600 !default;
+$controls-theme-light:                            $gray-300 !default;
+$controls-color:                                  $body-color !default;
+$controls-background:                             transparent !default;
+$controls-border-color:                           transparent !default;
+$controls-padding-y:                              .375em !default;
+$controls-padding-x:                              .75em !default;
+$controls-font-family:                            null !default;
+$controls-transition:                             color, background-color, border-color, box-shadow !default;
+
+$controls-focus-width:                            .2rem !default;
+$controls-focus-box-shadow:                       0 0 0 $controls-focus-width !default; // color is explicitly defined on usage
+
+$controls-disabled-background:                    $controls-theme !default;
+$controls-disabled-opacity:                       .5 !default;

@@ -11,7 +11,7 @@
   color: $color;
 
   @include hover {
-    box-shadow: box-shadow($input-boxshadow-inner, $control-focus-box-shadow rgba($color, .5));
+    box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-box-shadow rgba($color, .5));
   }
 
   @if $name == "valid" or $name == "info" or $name == "warn" or $name == "error" {

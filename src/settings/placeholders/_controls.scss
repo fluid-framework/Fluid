@@ -2,23 +2,23 @@
   position: relative;
   display: inline-block;
   user-select: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: $controls-padding-y $controls-padding-x;
   margin-top: 2.25px; // Used to keep consistent spacing between above and below elements
   margin-bottom: 2.25px; // Used to keep consistent spacing between above and below elements
-  border: $control-border-width solid $control-border-color;
-  border-radius: border-radius($control-border-radius, 0);
-  color: $control-color;
-  background-color: $control-background;
+  border: $controls-border-width solid $controls-border-color;
+  border-radius: border-radius($controls-border-radius, 0);
+  color: $controls-color;
+  background-color: $controls-background;
   vertical-align: middle;
   text-decoration: none;
-  font-family: $control-font-family;
-  font-weight: $control-font-weight;
-  line-height: $control-line-height;
+  font-family: $controls-font-family;
+  font-weight: $controls-font-weight;
+  line-height: $controls-line-height;
   @include fontsize();
-  @include transition($control-transition);
+  @include transition($controls-transition);
 
   @include hover {
-    box-shadow: box-shadow($control-focus-box-shadow rgba($control-theme, .5));
+    box-shadow: box-shadow($controls-focus-box-shadow rgba($controls-theme, .5));
   }
 
   @include focus {
@@ -39,6 +39,6 @@
     // stylelint-disable-next-line declaration-no-important
     pointer-events: none !important;
     // stylelint-disable-next-line declaration-no-important
-    opacity: $control-disabled-opacity !important;
+    opacity: $controls-disabled-opacity !important;
   }
 }

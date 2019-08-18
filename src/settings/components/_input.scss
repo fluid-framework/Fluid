@@ -10,13 +10,13 @@ $label-margin-bottom:                            $space-default-typography !defa
 //
 // Settings
 //
-$input-minHeight:                                ($control-line-height * 1em) + ($control-padding-y * 2.4) !default;
+$input-minHeight:                                ($controls-line-height * 1em) + ($controls-padding-y * 2.4) !default;
 $input-background:                               $white !default;
-$input-border-color:                             $control-theme-light !default;
+$input-border-color:                             $controls-theme-light !default;
 $input-boxshadow-inner:                         inset 0 1px 2px rgba(clr-auto($input-background), .1) !default;
 
-$input-placeholder-color:                        $control-theme-light !default;
+$input-placeholder-color:                        $controls-theme-light !default;
 
 $input-icon-size:                                1rem * 1.3 !default;
-$input-icon-padding:                             1 + (strip-unit($control-padding-x) * 1rem) * 2 !default;
-$input-icon-position-right:                      (strip-unit($control-padding-x) * 1rem) / 1.5 !default;
+$input-icon-padding:                             1 + (strip-unit($controls-padding-x) * 1rem) * 2 !default;
+$input-icon-position-right:                      (strip-unit($controls-padding-x) * 1rem) / 1.5 !default;
