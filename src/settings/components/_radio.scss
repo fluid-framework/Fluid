@@ -1,0 +1,14 @@
+//
+// Radio Settings
+//
+
+//
+// Settings
+//
+$radio-background:                               $white !default;
+$radio-transition:                               box-shadow, border !default;
+$radio-size:                                     100% !default;
+
+$radio-checked-borderwidth:                      4px !default;
+
+$radio-disabled-background:                      $controls-theme-light !default;

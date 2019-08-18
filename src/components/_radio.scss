@@ -1,0 +1,68 @@
+//
+// Radio
+//
+
+//
+// Base Style
+//
+.radio {
+  @extend %controls;
+
+  @include before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale((($radio-size / 100%) + .1)); // increase size by 0.1 to overlap any remain of radio input
+    width: 100%;
+    height: 100%;
+    border: $border-defaut;
+    border-radius: border-radius(50%, 0);
+    background-color: $radio-background;
+    @include transition($radio-transition);
+  }
+
+  &:checked {
+    @include before {
+      border: $radio-checked-borderwidth solid currentColor;
+    }
+  }
+
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    &.is-#{$color} {
+      color: $value;
+    }
+  }
+
+  @include hover {
+    @include before {
+      box-shadow: box-shadow($controls-focus-box-shadow rgba($controls-theme, .5));
+    }
+  }
+
+  @include focus {
+    @include before {
+      @include animation(pulse); // pulse animation on click event
+    }
+  }
+
+  @include active {
+    @include before {
+      @include animation(none); // disable animations on click event and play again on focus/clickup event
+    }
+  }
+
+  @include hover-focus {
+    @include animation(none); // remove animation over radio input and apply them to ::before
+    box-shadow: none; // remove box shadow over radio input and apply them to ::before
+  }
+
+  @include disabled {
+    @include before {
+      background-color: $radio-disabled-background;
+    }
+  }
+}
