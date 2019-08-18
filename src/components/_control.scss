@@ -10,6 +10,9 @@
   margin-bottom: 2.25px;
   @include fontsize(1rem);
 
+  //
+  // Input Control
+  //
   > .input {
     @include fontsize(inherit);
     height: 100%;
@@ -48,7 +51,6 @@
       @include transition(top, font-size);
     }
 
-
     @include focus(":not(:placeholder-shown)") {
       ~ label {
         top: 0%;
@@ -57,6 +59,9 @@
     }
   }
 
+  //
+  // feedback inside control
+  //
   > .feedback {
     position: absolute;
     right: 0;
@@ -77,14 +82,14 @@
       @include triangle(bottom, $control-input-feedback-arrow-size, $control-input-feedback-background);
     }
   }
-}
 
-.control.is-valid > .feedback.is-valid {
-  @extend %display-block;
-}
+  &.is-valid > .feedback.is-valid {
+    @extend %display-block;
+  }
 
-.control.is-invalid > .feedback.is-invalid {
-  @extend %display-block;
+  &.is-invalid > .feedback.is-invalid {
+    @extend %display-block;
+  }
 }
 
 .is-validated .control {
