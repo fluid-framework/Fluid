@@ -79,7 +79,7 @@
     $selectors: prefix($selector, "&");
     $selectors: suffix($selectors, ",");
   }
-  #{$selectors} &.disabled,
+  #{$selectors} &[disabled],
   &:disabled {
     @content;
   }
@@ -96,7 +96,7 @@
     $selectors: prefix($selector, "&");
     $selectors: suffix($selectors, ",");
   }
-  #{$selectors} &:not(.disabled):not(:disabled) {
+  #{$selectors} &:not([disabled]):not(:disabled) {
     @content;
   }
 }
