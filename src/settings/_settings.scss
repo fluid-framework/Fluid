@@ -105,16 +105,3 @@ $generate-component-classes:                  true !default;    // Enable compon
 @import "./components/group";
 @import "./components/embed";
 @import "./components/breadcrumb";
-
-
-//
-// Placeholders
-//
-
-@import "./placeholders/general";
-@import "./placeholders/clearfix";
-@import "./placeholders/prefers-reduced-motion";
-@import "./placeholders/typography/heading";
-@import "./placeholders/sanitize";
-@import "./placeholders/controls";
-@import "./placeholders/input";
