@@ -70,7 +70,7 @@ $keyframes: (
           from,50%,to { opacity: 1 }
           25%,75% { opacity: 0 }
         }
-      }@else if $name == flash{
+      }@else if $name == spin{
         @keyframes spin {
           100% { transform: rotate(360deg) }
         }
