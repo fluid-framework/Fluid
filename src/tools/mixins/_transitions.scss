@@ -55,24 +55,27 @@ $keyframes: (
       $keyframes: map-merge($keyframes, ($name : false)) !global;
       @if $name == pulse {
         @keyframes pulse {
-          from { box-shadow:#{box-shadow(0 0 0 0 currentColor)} }
-          75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)} }
-          76% { box-shadow: #{box-shadow(none)} }
+          from { box-shadow: #{box-shadow(0 0 0 0 currentColor)}; }
+          75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)}; }
+          76% { box-shadow: #{box-shadow(none)}; }
         }
       }@else if $name == pulse-solid{
         @keyframes pulse-solid {
-          from { box-shadow: #{box-shadow(0 0 0 0 $gray-500)} }
-          75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)} }
-          76% { box-shadow: #{box-shadow(none)} }
+          from { box-shadow: #{box-shadow(0 0 0 0 $gray-500)}; }
+          75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)}; }
+          76% { box-shadow: #{box-shadow(none)}; }
         }
       }@else if $name == flash{
         @keyframes flash {
-          from,50%,to { opacity: 1 }
-          25%,75% { opacity: 0 }
+          from,
+          50%,
+          to { opacity: 1; }
+          25%,
+          75% { opacity: 0; }
         }
       }@else if $name == spin{
         @keyframes spin {
-          100% { transform: rotate(360deg) }
+          100% { transform: rotate(360deg); }
         }
       }
     }
