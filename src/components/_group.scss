@@ -46,7 +46,7 @@
 
     > .input,
     > .control {
-      flex: 1 1 0; // expand to max width available without overflow from group
+      flex: 1 1 0%; // expand to max width available without overflow from group
     }
 
     &:not(.is-y) {
