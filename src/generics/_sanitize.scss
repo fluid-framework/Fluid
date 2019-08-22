@@ -296,9 +296,11 @@ progress {
   @extend %verticalalign-baseline; // progress: Add the correct vertical alignment in Chrome, Firefox, and Opera
 }
 
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: 0; // Correct the cursor style of increment and decrement buttons in Chrome
+// Fix height of inputs with a type of datetime-local, date, month, week, or time
+// See https://github.com/twbs/bootstrap/issues/18842
+::-webkit-datetime-edit {
+  overflow: visible;
+  line-height: 0;
 }
 
 [type="search"] {
