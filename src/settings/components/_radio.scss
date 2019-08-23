@@ -6,8 +6,9 @@
 // Settings
 //
 $radio-background:                               $white !default;
-$radio-transition:                               box-shadow, border !default;
-$radio-size:                                     100% !default;
+$radio-size:                                     1rem !default;
+$radio-bordercolor:                              $controls-theme-light !default;
+$radio-paddingleft:                              $radio-size * 1.5 !default;
 
 $radio-checked-borderwidth:                      4px !default;
 

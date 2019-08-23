@@ -42,3 +42,9 @@
     opacity: $controls-disabled-opacity !important;
   }
 }
+
+%controls-hide {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
