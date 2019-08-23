@@ -22,7 +22,7 @@ $controls-border-color:                           transparent !default;
 $controls-padding-y:                              .375em !default;
 $controls-padding-x:                              .75em !default;
 $controls-font-family:                            null !default;
-$controls-transition:                             color, background-color, border-color, box-shadow !default;
+$controls-transition:                             color, background-color, border, box-shadow !default;
 
 $controls-focus-width:                            .2rem !default;
 $controls-focus-box-shadow:                       0 0 0 $controls-focus-width !default; // color is explicitly defined on usage
