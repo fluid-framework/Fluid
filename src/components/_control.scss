@@ -149,8 +149,8 @@ label.control {
     margin-bottom: $control-input-feedback-arrow-size + $control-input-feedback-offset-bottom;
     border-radius: border-radius();
     color: $control-input-feedback-color;
-    @include gradient-bg($control-input-feedback-background, 180deg);
     box-shadow: box-shadow($control-input-feedback-shadow);
+    @include gradient-bg($control-input-feedback-background, 180deg);
 
     @include before {
       content: "";
