@@ -47,6 +47,7 @@
     text-transform: none;
     // Fallback for where `start` is not supported
     text-align: left;
+    // stylelint-disable-next-line declaration-block-no-duplicate-properties
     text-align: start;
     text-decoration: none;
     letter-spacing: normal;
