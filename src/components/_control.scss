@@ -4,8 +4,16 @@
 // Used to combine different components and objects into one control
 // The main control needs to be the first child of Control class to work properly
 
+label.control {
+  > label {
+    pointer-events: none;
+  }
+}
+
 .control {
   position: relative;
+  display: block;
+  cursor: pointer;
   margin-top: 2.25px;
   margin-bottom: 2.25px;
   @include fontsize(1rem);
