@@ -128,7 +128,7 @@ label.control {
       ~ label {
         @extend %controls-disabled;
         @include before {
-          background-color: $radio-disabled-color;
+          color: $radio-disabled-color;
         }
       }
     }
