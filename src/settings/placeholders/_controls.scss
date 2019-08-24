@@ -36,10 +36,7 @@
   }
 
   @include disabled {
-    // stylelint-disable-next-line declaration-no-important
-    pointer-events: none !important;
-    // stylelint-disable-next-line declaration-no-important
-    opacity: $controls-disabled-opacity !important;
+    @extend %controls-disabled;
   }
 }
 
@@ -47,4 +44,11 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
+}
+
+%controls-disabled {
+  // stylelint-disable-next-line declaration-no-important
+  pointer-events: none !important;
+  // stylelint-disable-next-line declaration-no-important
+  opacity: $controls-disabled-opacity !important;
 }

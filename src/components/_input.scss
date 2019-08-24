@@ -30,8 +30,7 @@
   &.readonly,
   &[readonly],
   &:read-only {
-    pointer-events: none;
-    opacity: $controls-disabled-opacity;
+    @extend %controls-disabled;
     box-shadow: none;
   }
 
