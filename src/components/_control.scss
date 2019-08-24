@@ -113,10 +113,7 @@ label.control {
 
     @include disabled {
       ~ label {
-        // stylelint-disable-next-line declaration-no-important
-        pointer-events: none !important;
-        // stylelint-disable-next-line declaration-no-important
-        opacity: $controls-disabled-opacity !important;
+        @extend %controls-disabled;
         @include before {
           background-color: $radio-disabled-background;
         }
