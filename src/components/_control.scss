@@ -111,15 +111,6 @@ label.control {
       }
     }
 
-    @include disabled {
-      ~ label {
-        @extend %controls-disabled;
-        @include before {
-          background-color: $radio-disabled-background;
-        }
-      }
-    }
-
     //
     // Radio Color variants
     //
@@ -129,6 +120,15 @@ label.control {
           @include before {
             color: $value;
           }
+        }
+      }
+    }
+
+    @include disabled {
+      ~ label {
+        @extend %controls-disabled;
+        @include before {
+          background-color: $radio-disabled-color;
         }
       }
     }
