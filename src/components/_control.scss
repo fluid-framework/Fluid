@@ -81,6 +81,14 @@ label.control {
       }
     }
 
+    @include active {
+      ~ label {
+        @include before {
+          border-color: currentColor;
+        }
+      }
+    }
+
     &:checked {
       ~ label {
         @include before {
