@@ -71,6 +71,76 @@ label.control {
   // Radio Control
   //
   > .radio {
+    &:checked {
+      ~ label {
+        @include before {
+          border: $control-radio-checked-borderwidth solid;
+        }
+      }
+    }
+
+    ~ label {
+      @include before {
+        border-radius: border-radius(50%, 0);
+      }
+    }
+  }
+
+  //
+  // Checkbox Control
+  //
+  > .checkbox {
+    &:checked {
+      ~ label {
+        @include before {
+          background: currentColor;
+        }
+
+        @include after {
+          top: 46.4%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $control-radio_checkbox-size / 4;
+          height: $control-radio_checkbox-size / 2;
+          border: 2px solid $white;
+          border-top-width: 0;
+          border-left-width: 0;
+        }
+      }
+    }
+
+    &:indeterminate {
+      ~ label {
+        @include before {
+          border-color: currentColor;
+          background: currentColor;
+        }
+
+        @include after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 2px;
+          background: #fff;
+        }
+      }
+    }
+
+    ~ label {
+      @include after {
+        content: "";
+        position: absolute;
+        left: $control-radio_checkbox-size / 2;
+      }
+    }
+  }
+
+  //
+  // Radio / Checkbox shared Control
+  //
+  > .checkbox,
+  > .radio {
     @extend %controls-hide;
 
     @include focus {
@@ -81,7 +151,7 @@ label.control {
       }
     }
 
-    @include active {
+    @include active(":checked") {
       ~ label {
         @include before {
           border-color: currentColor;
@@ -89,17 +159,9 @@ label.control {
       }
     }
 
-    &:checked {
-      ~ label {
-        @include before {
-          border: $control-radio-checked-borderwidth solid currentColor;
-        }
-      }
-    }
-
     ~ label {
       cursor: pointer;
-      padding-left: $control-radio-paddingleft;
+      padding-left: $control-radio_checkbox-paddingleft;
       margin-bottom: 0; // override label margin bottom inside control
 
       @include before {
@@ -109,18 +171,17 @@ label.control {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: $control-radio-size;
-        height: $control-radio-size;
+        width: $control-radio_checkbox-size;
+        height: $control-radio_checkbox-size;
         padding: 0; // override controls padding
         margin: 0; // override controls margin
-        border-color: $control-radio-bordercolor;
-        border-radius: border-radius(50%, 0);
-        background-color: $control-radio-background;
+        border-color: $control-radio_checkbox-bordercolor;
+        background-color: $control-radio_checkbox-background;
       }
     }
 
     //
-    // Radio Color variants
+    // Radio / Checkbox Color variants
     //
     @each $color, $value in $theme-colors {
       &.is-#{$color} {
