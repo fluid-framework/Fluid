@@ -30,8 +30,7 @@
   &.readonly,
   &[readonly],
   &:read-only {
-    pointer-events: none;
-    opacity: $controls-disabled-opacity;
+    @extend %controls-disabled;
     box-shadow: none;
   }
 
@@ -44,7 +43,7 @@
     border-radius: border-radius(0);
 
     @include not-hover {
-      box-shadow: none; // remove inner shadow without overriding hover shadow
+      box-shadow: box-shadow(none); // remove inner shadow without overriding hover shadow
     }
   }
 }

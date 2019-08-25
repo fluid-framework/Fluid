@@ -10,16 +10,14 @@
 // Parameter:
 // [optional] {List} $extra-selectors: list of selectors along with active state
 @mixin active($extra-selectors...) {
-  @include not-disabled {
-    $selectors: null;
-    @each $selector in $extra-selectors {
-      $selectors: prefix($selector, "&");
-      $selectors: suffix($selectors, ",");
-    }
-    #{$selectors} &.active,
-    &:active {
-      @content;
-    }
+  $selectors: null;
+  @each $selector in $extra-selectors {
+    $selectors: prefix($selector, "&");
+    $selectors: suffix($selectors, ",");
+  }
+  #{$selectors} &:not([disabled]):not(:disabled).active,
+  &:not([disabled]):not(:disabled):active {
+    @content;
   }
 }
 

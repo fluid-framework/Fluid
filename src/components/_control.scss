@@ -16,7 +16,7 @@ label.control {
   cursor: pointer;
   margin-top: 2.25px;
   margin-bottom: 2.25px;
-  @include fontsize(1rem);
+  @include fontsize($font-size-normal);
 
   //
   // Input Control
@@ -71,6 +71,84 @@ label.control {
   // Radio Control
   //
   > .radio {
+    &:checked {
+      ~ label {
+        @include before {
+          border: $control-radio-checked-borderwidth solid;
+        }
+      }
+    }
+
+    ~ label {
+      @include before {
+        border-radius: border-radius(50%, 0);
+      }
+    }
+  }
+
+  //
+  // Checkbox Control
+  //
+  > .checkbox {
+    &:checked {
+      ~ label {
+        @include before {
+          background: currentColor;
+        }
+
+        @include after {
+          top: 46.4%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $control-radio_checkbox-size / 4;
+          height: $control-radio_checkbox-size / 2;
+          border: 2px solid $white;
+          border-top-width: 0;
+          border-left-width: 0;
+        }
+      }
+    }
+
+    &:indeterminate {
+      ~ label {
+        @include before {
+          border-color: currentColor;
+          background: currentColor;
+        }
+
+        @include after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: $control-radio_checkbox-size / 2;
+          height: 2px;
+          background: #fff;
+        }
+      }
+    }
+
+    @include disabled {
+      ~ label {
+        @include before {
+          background: $controls-theme-light;
+        }
+      }
+    }
+
+    ~ label {
+      @include after {
+        content: "";
+        position: absolute;
+        left: $control-radio_checkbox-size / 2;
+      }
+    }
+  }
+
+  //
+  // Radio / Checkbox shared Control
+  //
+  > .checkbox,
+  > .radio {
     @extend %controls-hide;
 
     @include focus {
@@ -81,17 +159,17 @@ label.control {
       }
     }
 
-    &:checked {
+    @include active(":checked") {
       ~ label {
         @include before {
-          border: $radio-checked-borderwidth solid currentColor;
+          border-color: currentColor;
         }
       }
     }
 
     ~ label {
       cursor: pointer;
-      padding-left: $radio-paddingleft;
+      padding-left: $control-radio_checkbox-paddingleft;
       margin-bottom: 0; // override label margin bottom inside control
 
       @include before {
@@ -101,30 +179,17 @@ label.control {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: $radio-size;
-        height: $radio-size;
+        width: $control-radio_checkbox-size;
+        height: $control-radio_checkbox-size;
         padding: 0; // override controls padding
         margin: 0; // override controls margin
-        border-color: $radio-bordercolor;
-        border-radius: border-radius(50%, 0);
-        background-color: $radio-background;
-      }
-    }
-
-    @include disabled {
-      ~ label {
-        // stylelint-disable-next-line declaration-no-important
-        pointer-events: none !important;
-        // stylelint-disable-next-line declaration-no-important
-        opacity: $controls-disabled-opacity !important;
-        @include before {
-          background-color: $radio-disabled-background;
-        }
+        border-color: $control-radio_checkbox-bordercolor;
+        background-color: $control-radio_checkbox-background;
       }
     }
 
     //
-    // Radio Color variants
+    // Radio / Checkbox Color variants
     //
     @each $color, $value in $theme-colors {
       &.is-#{$color} {
@@ -132,6 +197,15 @@ label.control {
           @include before {
             color: $value;
           }
+        }
+      }
+    }
+
+    @include disabled {
+      ~ label {
+        @extend %controls-disabled;
+        @include before {
+          color: $controls-theme-light;
         }
       }
     }
