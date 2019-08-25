@@ -92,14 +92,14 @@ label.control {
     &:checked {
       ~ label {
         @include before {
-          border: $radio-checked-borderwidth solid currentColor;
+          border: $control-radio-checked-borderwidth solid currentColor;
         }
       }
     }
 
     ~ label {
       cursor: pointer;
-      padding-left: $radio-paddingleft;
+      padding-left: $control-radio-paddingleft;
       margin-bottom: 0; // override label margin bottom inside control
 
       @include before {
@@ -109,13 +109,13 @@ label.control {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: $radio-size;
-        height: $radio-size;
+        width: $control-radio-size;
+        height: $control-radio-size;
         padding: 0; // override controls padding
         margin: 0; // override controls margin
-        border-color: $radio-bordercolor;
+        border-color: $control-radio-bordercolor;
         border-radius: border-radius(50%, 0);
-        background-color: $radio-background;
+        background-color: $control-radio-background;
       }
     }
 
@@ -136,7 +136,7 @@ label.control {
       ~ label {
         @extend %controls-disabled;
         @include before {
-          color: $radio-disabled-color;
+          color: $controls-theme-light;
         }
       }
     }
