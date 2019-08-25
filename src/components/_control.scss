@@ -120,7 +120,7 @@ label.control {
           position: absolute;
           top: 50%;
           transform: translate(-50%, -50%);
-          width: 8px;
+          width: $control-radio_checkbox-size / 2;
           height: 2px;
           background: #fff;
         }
