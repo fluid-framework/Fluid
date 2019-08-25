@@ -16,7 +16,7 @@ label.control {
   cursor: pointer;
   margin-top: 2.25px;
   margin-bottom: 2.25px;
-  @include fontsize(1rem);
+  @include fontsize($font-size-normal);
 
   //
   // Input Control

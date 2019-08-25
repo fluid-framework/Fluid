@@ -14,7 +14,7 @@ $control-input-feedback-arrow-size:                      6px !default;
 $control-input-feedback-arrow-offset-right:              10px !default;
 
 $control-radio_checkbox-background:                      $input-background !default;
-$control-radio_checkbox-size:                            1rem !default;
+$control-radio_checkbox-size:                            $font-size-normal !default;
 $control-radio_checkbox-bordercolor:                     $controls-theme-light !default;
 $control-radio_checkbox-paddingleft:                     $control-radio_checkbox-size * 1.5 !default;
 
