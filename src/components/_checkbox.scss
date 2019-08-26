@@ -58,3 +58,14 @@
   }
 }
 
+
+.is-validated .control {
+  > .checkbox:required {
+    &:checked ~ .feedback.is-valid {
+      @extend %display-block;
+    }
+    &:not(:checked) ~ .feedback.is-invalid {
+      @extend %display-block;
+    }
+  }
+}
