@@ -1,0 +1,60 @@
+//
+// Checkbox Control
+//
+.control {
+  > .checkbox {
+    &:checked {
+      ~ label {
+        @include before {
+          background: currentColor;
+        }
+
+        @include after {
+          top: 46.4%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $control-radio_checkbox-size / 4;
+          height: $control-radio_checkbox-size / 2;
+          border: 2px solid $white;
+          border-top-width: 0;
+          border-left-width: 0;
+        }
+      }
+    }
+
+    &:indeterminate {
+      ~ label {
+        @include before {
+          border-color: currentColor;
+          background: currentColor;
+        }
+
+        @include after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: $control-radio_checkbox-size / 2;
+          height: 2px;
+          background: #fff;
+        }
+      }
+    }
+
+    @include disabled {
+      ~ label {
+        @include before {
+          background: $controls-theme-light;
+        }
+      }
+    }
+
+    ~ label {
+      @include after {
+        content: "";
+        position: absolute;
+        left: $control-radio_checkbox-size / 2;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,20 @@
+//
+// Radio Control
+//
+.control {
+  > .radio {
+    &:checked {
+      ~ label {
+        @include before {
+          border: $control-radio-checked-borderwidth solid;
+        }
+      }
+    }
+
+    ~ label {
+      @include before {
+        border-radius: border-radius(50%, 0);
+      }
+    }
+  }
+}

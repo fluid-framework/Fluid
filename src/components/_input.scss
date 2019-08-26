@@ -88,3 +88,65 @@
 textarea.input {
   height: auto; // revert textarea height
 }
+
+//
+// Input Control
+//
+.control {
+  > .input {
+    @include fontsize(inherit);
+    height: 100%;
+    margin: 0; // remove margin from input and apply it to the control class
+  }
+
+  &.has-icon-left {
+    > .input {
+      ~ .icon {
+        z-index: $group-items-hover-focus-zindex + 1;
+        pointer-events: none;
+        opacity: $control-input-icon-opacity;
+      }
+
+      @include focus {
+        ~ .icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.has-floating-label > .input[placeholder=" "] {
+    background-color: transparent;
+    box-shadow: none;
+
+    ~ label {
+      position: absolute;
+      top: 50%;
+      left: strip-unit($controls-padding-x) * 1rem;
+      transform: translateY(-50%);
+      pointer-events: none;
+      padding: 2px;
+      background: $body-background;
+      line-height: 1;
+      @include transition(top, font-size);
+    }
+
+    @include focus(":not(:placeholder-shown)") {
+      ~ label {
+        top: 0%;
+        @include font-size($default-small-quantity * 1em);
+      }
+    }
+  }
+}
+
+.is-validated .control {
+  > .input:required {
+    &:valid ~ .feedback.is-valid {
+      @extend %display-block;
+    }
+    &:invalid ~ .feedback.is-invalid {
+      @extend %display-block;
+    }
+  }
+}

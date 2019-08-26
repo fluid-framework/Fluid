@@ -1,0 +1,18 @@
+//
+// Radio / Checkbox Control
+//
+
+//
+// Setting
+//
+$control-radio_checkbox-background:                      $input-background !default;
+$control-radio_checkbox-bordercolor:                     $controls-theme-light !default;
+
+// Radio
+$control-radio-checked-borderwidth:                      5px !default;
+
+//
+// Derived
+//
+$control-radio_checkbox-size:                            (strip-unit($font-size-normal) * $font-size) + 2 !default;
+$control-radio_checkbox-paddingleft:                     $control-radio_checkbox-size * 1.5 !default;
