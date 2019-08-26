@@ -59,6 +59,7 @@ label.control {
         margin: 0; // override controls margin
         border-color: $control-radio_checkbox-bordercolor;
         background-color: $control-radio_checkbox-background;
+        @include fontsize(unset); // override controls font-size
       }
     }
 
@@ -79,7 +80,7 @@ label.control {
       ~ label {
         @extend %controls-disabled;
         @include before {
-          color: $controls-theme-light;
+          color: $controls-theme-light
         }
       }
     }
