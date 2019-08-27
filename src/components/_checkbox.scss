@@ -40,14 +40,6 @@
       }
     }
 
-    @include disabled {
-      ~ label {
-        @include before {
-          background: $controls-theme-light;
-        }
-      }
-    }
-
     ~ label {
       @include after {
         content: "";
