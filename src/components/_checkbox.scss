@@ -9,11 +9,11 @@
     &:checked {
       ~ label {
         @include after {
-          top: $checkbox-checked-top;
+          top: $checkbox-checked-arrow-top;
           transform: translate(-50%, -50%) rotate(45deg);
           width: $controls-label-before-size / 4;
           height: $controls-label-before-size / 2;
-          border: $checkbox-checked-borderwidth solid $checkbox-checked-color;
+          border: $checkbox-checked-arrow-borderwidth solid $checkbox-checked-arrow-color;
           border-top-width: 0;
           border-left-width: 0;
         }
