@@ -40,6 +40,70 @@
   }
 }
 
+%controls-label {
+  @include focus {
+    ~ label {
+      @include before {
+        @include animation(pulse); // pulse animation on click event
+      }
+    }
+  }
+
+  @include active(":checked") {
+    ~ label {
+      @include before {
+        border-color: currentColor;
+        background: currentColor;
+      }
+    }
+  }
+
+  ~ label {
+    cursor: pointer;
+    padding-left: $controls-label-paddingleft;
+    margin-bottom: 0; // override label margin bottom inside control
+
+    @include before {
+      @extend %controls;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: $controls-label-before-size;
+      height: $controls-label-before-size;
+      padding: 0; // override controls padding
+      margin: 0; // override controls margin
+      border-color: $controls-label-bordercolor;
+      background-color: $controls-label-background;
+      @include fontsize(unset); // override controls font-size
+    }
+  }
+
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    &.is-#{$color} {
+      ~ label {
+        @include before {
+          color: $value;
+        }
+      }
+    }
+  }
+
+  @include disabled {
+    ~ label {
+      @extend %controls-disabled;
+      @include before {
+        // stylelint-disable-next-line declaration-no-important
+        color: $controls-theme-light !important;
+      }
+    }
+  }
+}
+
 %controls-hide {
   position: absolute;
   z-index: -1;

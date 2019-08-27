@@ -3,18 +3,17 @@
 //
 .control {
   > .checkbox {
+    @extend %controls-hide;
+    @extend %controls-label;
+
     &:checked {
       ~ label {
-        @include before {
-          background: currentColor;
-        }
-
         @include after {
-          top: 46.4%;
+          top: $checkbox-checked-top;
           transform: translate(-50%, -50%) rotate(45deg);
-          width: $control-radio_checkbox-size / 4;
-          height: $control-radio_checkbox-size / 2;
-          border: .12em solid $white;
+          width: $controls-label-before-size / 4;
+          height: $controls-label-before-size / 2;
+          border: $checkbox-checked-borderwidth solid $checkbox-checked-color;
           border-top-width: 0;
           border-left-width: 0;
         }
@@ -33,9 +32,9 @@
           position: absolute;
           top: 50%;
           transform: translate(-50%, -50%);
-          width: $control-radio_checkbox-size / 2;
-          height: 2px;
-          background: #fff;
+          width: $controls-label-before-size / 2;
+          height: $checkbox-indeterminate-height;
+          background: $checkbox-indeterminate-background;
         }
       }
     }
@@ -44,12 +43,11 @@
       @include after {
         content: "";
         position: absolute;
-        left: $control-radio_checkbox-size / 2;
+        left: $controls-label-before-size / 2;
       }
     }
   }
 }
-
 
 .is-validated .control {
   > .checkbox:required {

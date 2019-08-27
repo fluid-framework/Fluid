@@ -3,10 +3,14 @@
 //
 .control {
   > .radio {
-    &:checked {
+    @extend %controls-hide;
+    @extend %controls-label;
+
+    @include active(":checked") {
       ~ label {
         @include before {
-          border: $control-radio-checked-borderwidth solid;
+          border-width: $radio-checked-borderwidth;
+          background-color: $controls-label-background; // override controls-label active and checked state property
         }
       }
     }

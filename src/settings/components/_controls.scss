@@ -29,3 +29,12 @@ $controls-focus-box-shadow:                       0 0 0 $controls-focus-width !d
 
 $controls-disabled-background:                    $controls-theme !default;
 $controls-disabled-opacity:                       .5 !default;
+
+$controls-label-background:                       $white !default;
+$controls-label-bordercolor:                      $controls-theme-light !default;
+
+//
+// Derived
+//
+$controls-label-before-size:                      1.143em !default; // use 16px controls
+$controls-label-paddingleft:                      $controls-label-before-size * 1.5 !default;
