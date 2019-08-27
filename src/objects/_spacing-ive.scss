@@ -14,7 +14,7 @@
   $SIZES: $space-sizes;
   $SIZES: map-remove($SIZES, 0); // Remove 0 in -ive spacing
   $SIZES: map-remove($SIZES, auto); // Remove auto in -ive spacing
-  $SIZES: negate($SIZES, "both"); // add -ive sigh to both size and value
+  $SIZES: negate-map($SIZES, "both"); // add -ive sigh to both size and value
 
   //
   // Basic Margin

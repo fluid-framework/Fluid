@@ -11,12 +11,12 @@
 //
 // Example of use:
 // $a: (foo:1, bar:2, baz:3, qux:4);
-// $result: negate($a, "both") =>  (-foo:-1, -bar:-2, -baz:-3, -qux:-4)
+// $result: negate-map($a, "both") =>  (-foo:-1, -bar:-2, -baz:-3, -qux:-4)
 //
 // Return:
 // {List|Map} processed list or map
 //
-@function negate($list-map, $negate: "value") {
+@function negate-map($list-map, $negate: "value") {
   $result: ();
 
   @if $negate != "both" and $negate != "keys" and $negate != "value" {
