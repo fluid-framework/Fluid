@@ -11,6 +11,8 @@ $switch-width:                          $controls-label-before-size * 2 !default
 $switch-circle-size:                    -.2em !default;
 $switch-circle-transition:              left .2s ease-in-out, background-color .2s ease-in-out !default;
 
+$switch-active-circle-background:       $controls-label-background !default;
+
 //
 // Derived
 //

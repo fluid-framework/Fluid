@@ -10,7 +10,7 @@
       ~ label {
         @include after {
           left: $controls-label-before-size + ($switch-circle-size * -1);
-          background-color: $white;
+          background-color: $switch-active-circle-background;
         }
       }
     }
