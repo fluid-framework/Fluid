@@ -11,8 +11,8 @@
         @include after {
           top: $checkbox-checked-arrow-top;
           transform: translate(-50%, -50%) rotate(45deg);
-          width: $controls-label-before-size / 4;
-          height: $controls-label-before-size / 2;
+          width: $checkbox-checked-arrow-size / 2;
+          height: $checkbox-checked-arrow-size;
           border: $checkbox-checked-arrow-borderwidth solid $checkbox-checked-arrow-color;
           border-top-width: 0;
           border-left-width: 0;
@@ -32,7 +32,7 @@
           position: absolute;
           top: 50%;
           transform: translate(-50%, -50%);
-          width: $controls-label-before-size / 2;
+          width: $checkbox-indeterminate-width;
           height: $checkbox-indeterminate-height;
           background: $checkbox-indeterminate-background;
         }
