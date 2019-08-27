@@ -1,0 +1,39 @@
+//
+// Switch Control
+//
+.control {
+  > .switch {
+    @extend %controls-hide;
+    @extend %controls-label;
+
+    @include active(":checked") {
+      ~ label {
+        @include after {
+          left: $controls-label-before-size + ($switch-circle-size * -1);
+          background-color: $white;
+        }
+      }
+    }
+
+    ~ label {
+      padding-left: $switch-label-paddingleft;
+      @include before {
+        width: $switch-width;
+        border-radius: border-radius($border-radius-pill, 0);
+      }
+
+      @include after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: ($switch-circle-size * -1);
+        transform: translateY(-50%);
+        width: $controls-label-before-size - ($switch-circle-size * -1) * 2;
+        height: $controls-label-before-size - ($switch-circle-size * -1) * 2;
+        border-radius: border-radius(50%, 0);
+        background: $controls-label-bordercolor;
+        @include transition($switch-circle-transition);
+      }
+    }
+  }
+}
