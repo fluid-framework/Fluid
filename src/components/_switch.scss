@@ -9,7 +9,7 @@
     @include active(":checked") {
       ~ label {
         @include after {
-          left: $controls-label-before-size + ($switch-circle-size * -1);
+          left: $controls-label-before-size + ($switch-circle-size / -2);
           background-color: $switch-active-circle-background;
         }
       }
@@ -26,10 +26,10 @@
         content: "";
         position: absolute;
         top: 50%;
-        left: ($switch-circle-size * -1);
+        left: ($switch-circle-size / -2);
         transform: translateY(-50%);
-        width: $controls-label-before-size - ($switch-circle-size * -1) * 2;
-        height: $controls-label-before-size - ($switch-circle-size * -1) * 2;
+        width: $controls-label-before-size + $switch-circle-size;
+        height: $controls-label-before-size + $switch-circle-size;
         border-radius: border-radius(50%, 0);
         background: $controls-label-bordercolor;
         @include transition($switch-circle-transition);
