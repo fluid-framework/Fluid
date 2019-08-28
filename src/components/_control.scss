@@ -50,3 +50,23 @@ label.control {
     @extend %display-block;
   }
 }
+
+.is-validated .control {
+  > .input:required {
+    &:valid ~ .feedback.is-valid {
+      @extend %display-block;
+    }
+    &:invalid ~ .feedback.is-invalid {
+      @extend %display-block;
+    }
+  }
+
+  > .checkbox:required {
+    &:checked ~ .feedback.is-valid {
+      @extend %display-block;
+    }
+    &:not(:checked) ~ .feedback.is-invalid {
+      @extend %display-block;
+    }
+  }
+}

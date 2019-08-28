@@ -139,14 +139,3 @@ textarea.input {
     }
   }
 }
-
-.is-validated .control {
-  > .input:required {
-    &:valid ~ .feedback.is-valid {
-      @extend %display-block;
-    }
-    &:invalid ~ .feedback.is-invalid {
-      @extend %display-block;
-    }
-  }
-}
