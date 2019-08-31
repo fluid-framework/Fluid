@@ -60,8 +60,8 @@
 
   ~ label {
     cursor: pointer;
-    padding-left: $controls-label-paddingleft;
     padding-right: .5rem;
+    padding-left: $controls-label-paddingleft;
     margin-bottom: 0; // override label margin bottom inside control
 
     @include before {
