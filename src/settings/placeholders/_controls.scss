@@ -17,6 +17,11 @@
   @include fontsize();
   @include transition($controls-transition);
 
+  @include active {
+    @include animation(none); // disable animations on click event and play again on focus/clickup event
+    box-shadow: box-shadow(none); // no shadow in clicked state
+  }
+
   @include hover {
     box-shadow: box-shadow($controls-focus-box-shadow rgba($controls-theme, .5));
   }
@@ -24,15 +29,6 @@
   @include focus {
     @include animation(pulse); // pulse animation on click event
     outline: 0;
-  }
-
-  // using !important on active disable so that they override control states styles
-
-  @include active {
-    // stylelint-disable-next-line declaration-no-important, property-blacklist
-    animation: none !important; // disable animations on click event and play again on focus/clickup event
-    // stylelint-disable-next-line declaration-no-important
-    box-shadow: box-shadow(none) !important; // no shadow in clicked state
   }
 
   @include disabled {
@@ -44,9 +40,9 @@
   @include active(":checked") {
     ~ label {
       @include before {
-        animation: none;
         border-color: currentColor;
         background: currentColor;
+        @include animation(none); // disable animations on click event and play again on focus/clickup event
       }
     }
   }
