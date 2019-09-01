@@ -30,8 +30,8 @@
   }
 }
 
-// Hover
-// Generate hover state
+// not-Hover
+// Generate not hovering state
 @mixin not-hover() {
   &:not(.hover):not(:hover) {
     @content;
