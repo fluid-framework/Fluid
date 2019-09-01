@@ -41,19 +41,20 @@
 }
 
 %controls-label {
-  @include focus {
+  @include active(":checked") {
     ~ label {
       @include before {
-        @include animation(pulse); // pulse animation on click event
+        animation: none;
+        border-color: currentColor;
+        background: currentColor;
       }
     }
   }
 
-  @include active(":checked") {
+  @include focus {
     ~ label {
       @include before {
-        border-color: currentColor;
-        background: currentColor;
+        @include animation(pulse); // pulse animation on click event
       }
     }
   }
