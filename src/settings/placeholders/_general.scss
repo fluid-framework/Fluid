@@ -6,10 +6,6 @@
   display: inline-block;
 }
 
-%margintop-0 {
-  margin-top: 0;
-}
-
 %verticalalign-baseline {
   vertical-align: baseline;
 }
@@ -47,6 +43,10 @@
 
 %borderstyle-none {
   border-style: none;
+}
+
+%margintop-0 {
+  margin-top: 0;
 }
 
 %margin-0 {
