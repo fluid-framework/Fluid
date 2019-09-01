@@ -1,0 +1,28 @@
+//
+// Range
+//
+
+//
+// Inherit
+//
+$range-thumb-hover-focus-borderwidth:                   $border-width-wide !default;
+
+//
+// Setting
+//
+$range-track-height:                                    .22rem !default;
+$range-track-background:                                $controls-theme-light !default;
+$range-track-box-shadow:                                inset 0 1px 2px rgba(clr-auto($range-track-background), .2) !default;
+$range-track-transition:                                background !default;
+
+$range-thumb-width:                                     1em !default;
+$range-thumb-background:                                $white !default;
+$range-thumb-border:                                    1px solid $controls-theme !default;
+$range-thumb-box-shadow:                                1px 1px 2px 0 rgba(0, 0, 0, .15) !default;
+$range-thumb-transition:                                transform, border !default;
+
+//
+// Derived
+//
+$range-thumb-hover-focus-scale:                         $default-large-quantity !default;
+$range-thumb-height:                                    $range-thumb-width !default;

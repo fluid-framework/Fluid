@@ -1,0 +1,40 @@
+//
+// Range Control
+//
+
+.range {
+  @extend %controls;
+  display: block; // override %controls inline-block display
+  width: 100%;
+  height: 1.5em; // match height with other controls like checkbox, switch, range
+  padding: $controls-padding-y strip-unit($controls-padding-x) * 1rem; // use rem units for left right padding
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::-webkit-slider-thumb {
+    @extend %range-thumb;
+    margin-top: (strip-unit($range-track-height) - $range-thumb-height) / 2;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @extend %range-track;
+  }
+
+  @include hover {
+    box-shadow: box-shadow(none); // remove %controls hover shadow
+  }
+
+  @include focus {
+    @include animation(none); // remove %controls focus pulse animation
+  }
+
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    &.is-#{$color} {
+      color: $value;
+    }
+  }
+}

@@ -32,6 +32,7 @@
 @import "./settings/placeholders/sanitize";
 @import "./settings/placeholders/controls";
 @import "./settings/placeholders/input";
+@import "./settings/placeholders/range";
 
 //
 // Generics
@@ -83,6 +84,7 @@
 @import "./components/button";
 @import "./components/radio";
 @import "./components/checkbox";
+@import "./components/range";
 @import "./components/switch";
 @import "./components/blockquote";
 @import "./components/list";
