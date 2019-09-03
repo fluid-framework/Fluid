@@ -31,6 +31,7 @@
         width: $controls-label-before-size + $switch-circle-size;
         height: $controls-label-before-size + $switch-circle-size;
         border-radius: border-radius(50%, 0);
+        opacity: inherit; // Fix : disabled opacity on %controls-label in IE
         background: $controls-label-bordercolor;
         @include transition($switch-circle-transition);
       }
