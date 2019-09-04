@@ -1,18 +1,14 @@
-%range-track {
+@mixin range-track() {
   width: 100%;
   height: $range-track-height;
+  border: 0;
   border-radius: border-radius($border-radius-pill, 0);
-  // stylelint-disable-next-line property-no-vendor-prefix
   background-color: $range-track-background;
   box-shadow: box-shadow($range-track-box-shadow);
   @include transition($range-track-transition);
-
-  @include hover-focus {
-    background-color: currentColor;
-  }
 }
 
-%range-thumb {
+@mixin range-thumb() {
   width: $range-thumb-width;
   height: $range-thumb-height;
   border: $range-thumb-border;
@@ -24,9 +20,4 @@
   background: $range-thumb-background;
   box-shadow: box-shadow($range-thumb-box-shadow);
   @include transition($range-thumb-transition);
-
-  @include hover-focus {
-    transform: scale($range-thumb-hover-focus-scale);
-    border-width: $range-thumb-hover-focus-borderwidth;
-  }
 }

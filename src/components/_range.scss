@@ -12,21 +12,81 @@
   -webkit-appearance: none;
   appearance: none;
 
+  // Note : Use Mixin instead of placeholder to split styles across multiple rulesets to have an effect.
+
+  // Thumb
   &::-webkit-slider-thumb {
-    @extend %range-thumb;
+    @include range-thumb;
     margin-top: (strip-unit($range-track-height) - $range-thumb-height) / 2;
   }
 
-  &::-webkit-slider-runnable-track {
-    @extend %range-track;
+  &::-moz-range-thumb {
+    @include range-thumb;
+  }
+
+  &::-ms-thumb {
+    @include range-thumb;
+    margin-top: 0; // Edge
+  }
+
+  @include hover {
+    &::-ms-thumb {
+      margin-top: -($range-thumb-hover-focus-borderwidth - $range-thumb-hover-focus-scale); // Edge
+    }
   }
 
   @include hover {
     box-shadow: box-shadow(none); // remove %controls hover shadow
+
+    &::-webkit-slider-thumb {
+      transform: scale($range-thumb-hover-focus-scale);
+      border-width: $range-thumb-hover-focus-borderwidth;
+    }
+
+    &::-moz-range-thumb {
+      transform: scale($range-thumb-hover-focus-scale);
+      border-width: $range-thumb-hover-focus-borderwidth;
+    }
+
+    &::-ms-thumb {
+      transform: scale($range-thumb-hover-focus-scale);
+      border-width: $range-thumb-hover-focus-borderwidth;
+    }
+  }
+
+  // Track
+  &::-moz-range-track {
+    @include range-track;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include range-track;
+  }
+
+  &::-ms-track {
+    color: transparent; // remove stripped line
+    @include range-track;
+  }
+
+  &::-ms-fill-lower {
+    background: $controls-theme;
   }
 
   @include focus {
     @include animation(none); // remove %controls focus pulse animation
+
+    &::-moz-range-track {
+      background-color: currentColor;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-color: currentColor;
+    }
+
+    &::-ms-fill-lower {
+      color: inherit;
+      background: currentColor;
+    }
   }
 
   //
