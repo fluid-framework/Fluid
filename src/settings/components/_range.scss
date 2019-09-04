@@ -17,7 +17,7 @@ $range-track-transition:                                background !default;
 
 $range-thumb-width:                                     1em !default;
 $range-thumb-background:                                $white !default;
-$range-thumb-border:                                    1px solid $controls-theme !default;
+$range-thumb-border:                                    1px solid currentColor !default;
 $range-thumb-box-shadow:                                1px 1px 2px 0 rgba(0, 0, 0, .15) !default;
 $range-thumb-transition:                                transform, border !default;
 
