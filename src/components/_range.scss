@@ -1,0 +1,95 @@
+//
+// Range Control
+//
+
+.range {
+  @extend %controls;
+  display: block; // override %controls inline-block display
+  width: 100%;
+  height: 1.5em; // match height with other controls like checkbox, switch, range
+  padding: 0 strip-unit($controls-padding-x) * 1rem; // use rem units for left right padding
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+
+  // Note : Use Mixin instead of placeholder to split styles across multiple rulesets to have an effect.
+
+  // Thumb
+  &::-webkit-slider-thumb {
+    @include range-thumb;
+    margin-top: (strip-unit($range-track-height) - $range-thumb-height) / 2;
+  }
+
+  &::-moz-range-thumb {
+    @include range-thumb;
+  }
+
+  &::-ms-thumb {
+    box-sizing: border-box; // override Edge and IE content box-sizing
+    @include range-thumb;
+    margin-top: 0; // Remove Edge negative Margin-top on thumb
+  }
+
+  @include hover {
+    box-shadow: box-shadow(none); // remove %controls hover shadow
+
+    &::-webkit-slider-thumb {
+      transform: scale($range-thumb-hover-focus-scale);
+      border-width: $range-thumb-hover-focus-borderwidth;
+    }
+
+    &::-moz-range-thumb {
+      transform: scale($range-thumb-hover-focus-scale);
+      border-width: $range-thumb-hover-focus-borderwidth;
+    }
+
+    &::-ms-thumb {
+      transform: scale($range-thumb-hover-focus-scale);
+      border-width: $range-thumb-hover-focus-borderwidth;
+    }
+  }
+
+  // Track
+  &::-moz-range-track {
+    @include range-track;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include range-track;
+  }
+
+  &::-ms-track {
+    color: transparent; // remove stripped line
+    @include range-track;
+  }
+
+  &::-ms-fill-lower {
+    background: $controls-theme;
+  }
+
+  @include focus {
+    @include animation(none); // remove %controls focus pulse animation
+
+    &::-moz-range-track {
+      background-color: currentColor;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-color: currentColor;
+    }
+
+    &::-ms-fill-lower {
+      color: inherit;
+      background: currentColor;
+    }
+  }
+
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    &.is-#{$color} {
+      color: $value;
+    }
+  }
+}

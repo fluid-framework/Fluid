@@ -1,0 +1,23 @@
+@mixin range-track() {
+  width: 100%;
+  height: $range-track-height;
+  border: 0;
+  border-radius: border-radius($border-radius-pill, 0);
+  background-color: $range-track-background;
+  box-shadow: box-shadow($range-track-box-shadow);
+  @include transition($range-track-transition);
+}
+
+@mixin range-thumb() {
+  width: $range-thumb-width;
+  height: $range-thumb-height;
+  border: $range-thumb-border;
+  border-color: currentColor;
+  border-radius: border-radius(50%, 0);
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background: $range-thumb-background;
+  box-shadow: box-shadow($range-thumb-box-shadow);
+  @include transition($range-thumb-transition);
+}

@@ -6,7 +6,8 @@
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+[type="range"] {
   // add "hand" cursor to non-disabled button elements.
   @include not-disabled {
     cursor: pointer;
