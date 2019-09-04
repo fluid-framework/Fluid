@@ -25,14 +25,9 @@
   }
 
   &::-ms-thumb {
+    box-sizing: border-box; // override Edge and IE content box-sizing
     @include range-thumb;
-    margin-top: 0; // Edge
-  }
-
-  @include hover {
-    &::-ms-thumb {
-      margin-top: -($range-thumb-hover-focus-borderwidth - $range-thumb-hover-focus-scale); // Edge
-    }
+    margin-top: 0; // Remove Edge negative Margin-top on thumb
   }
 
   @include hover {
