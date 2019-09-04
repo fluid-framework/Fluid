@@ -237,6 +237,10 @@ button,
   @extend %borderstyle-none;
 }
 
+::-ms-thumb {
+  box-sizing: inherit; // Add the correct box sizing in IE and EDGE Range input
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box; // Add the correct box sizing in IE 10-
