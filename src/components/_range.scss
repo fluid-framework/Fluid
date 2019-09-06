@@ -66,7 +66,7 @@
     background: $controls-theme;
   }
 
-  @include focus {
+  @include focus-active {
     @include animation(none); // remove %controls focus pulse animation
 
     &::-moz-range-track {

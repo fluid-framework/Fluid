@@ -66,6 +66,17 @@
   }
 }
 
+// focus-active
+// Generate focus and active state
+@mixin focus-active() {
+  &.focus,
+  &:focus,
+  &:not([disabled]):not(:disabled).active,
+  &:not([disabled]):not(:disabled):active {
+    @content;
+  }
+}
+
 // Disabled
 // Generate disabled state
 //
