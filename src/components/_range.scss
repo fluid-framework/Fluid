@@ -7,7 +7,7 @@
   display: block; // override %controls inline-block display
   width: 100%;
   height: 1.5em; // match height with other controls like checkbox, switch, range
-  padding: 0; // override %controls inline-block display
+  padding: 0; // override %controls padding
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
