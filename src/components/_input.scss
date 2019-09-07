@@ -45,7 +45,6 @@
   &[readonly],
   &:read-only {
     @extend %controls-disabled;
-    box-shadow: none;
   }
 }
 
