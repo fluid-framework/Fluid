@@ -41,8 +41,6 @@
     box-shadow: none;
   }
 
-  &.readonly,
-  &[readonly],
   &:read-only {
     @extend %controls-disabled;
   }
@@ -60,7 +58,7 @@
 // form validation style
 .is-validated .input {
   @include not-disabled {
-    &:not(.readonly):not([readonly]):not(:read-only):required {
+    &:not(:read-only):required {
       &:valid {
         @extend .input.is-valid;
         @extend .input.is-valid.has-icon;
