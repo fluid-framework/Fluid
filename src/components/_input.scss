@@ -13,25 +13,9 @@
   background-color: $input-background;
   box-shadow: box-shadow($input-boxshadow-inner);
 
-  //
-  // Color variants
-  //
-  @each $color, $value in $theme-colors {
-    &.is-#{$color} {
-      @include input-varient($color, $value);
-    }
-  }
-
   @include focus {
     border-color: currentColor;
     box-shadow: box-shadow(none);
-  }
-
-  &.readonly,
-  &[readonly],
-  &:read-only {
-    @extend %controls-disabled;
-    box-shadow: none;
   }
 
   // minimal design variant
@@ -46,16 +30,32 @@
       box-shadow: box-shadow(none); // remove inner shadow without overriding hover shadow
     }
   }
+
+  // unstyle input
+  &.unstyle {
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &.readonly,
+  &[readonly],
+  &:read-only {
+    @extend %controls-disabled;
+    box-shadow: none;
+  }
 }
 
-// unstyle input
-.input.unstyle {
-  padding: 0;
-  margin-right: 0;
-  margin-left: 0;
-  border: 0;
-  background-color: transparent;
-  box-shadow: none;
+//
+// Color variants
+//
+@each $color, $value in $theme-colors {
+  .input.is-#{$color} {
+    @include input-varient($color, $value);
+  }
 }
 
 // form validation style
