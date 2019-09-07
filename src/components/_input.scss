@@ -56,19 +56,15 @@
 }
 
 // form validation style
-.is-validated .input {
-  @include not-disabled {
-    &:not(:read-only):required {
-      &:valid {
-        @extend .input.is-valid;
-        @extend .input.is-valid.has-icon;
-      }
+.is-validated .input:required {
+  &:valid {
+    @extend .input.is-valid;
+    @extend .input.is-valid.has-icon;
+  }
 
-      &:invalid {
-        @extend .input.is-error;
-        @extend .input.is-error.has-icon;
-      }
-    }
+  &:invalid {
+    @extend .input.is-error;
+    @extend .input.is-error.has-icon;
   }
 }
 
