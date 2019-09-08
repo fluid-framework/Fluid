@@ -18,13 +18,13 @@
     &.has-icon {
       @extend %input-state;
       @if $name == "valid" {
-        background-image: $icon-valid;
+        background-image: $icon-check;
       } @else if $name == "info" {
         background-image: $icon-info;
       } @else if $name == "warn" {
-        background-image: $icon-warn;
+        background-image: $icon-warning;
       } @else if $name == "error" {
-        background-image: $icon-error;
+        background-image: $icon-cross;
       }
     }
   }

@@ -11,11 +11,11 @@ $icon-offset:               .25em !default;
 $svg-encode:                ('<':'%3C', '>':'%3E', '#':'%23') !default;
 
 $path-info:                 "<g><circle cx='9' cy='9' r='8'/><path d='m9 13.67v-5.48'/><circle cx='9' cy='5.4' r='.43' stroke-width='#{(1.7 / 2)}'/></g>" !default;
-$path-warn:                 "<g><path d='m9 7v4.2'/><circle cx='9' cy='13.67' r='.43' stroke-width='#{(1.7 / 2)}'/><path d='m10.45 2.52-8.83 15.37h17.67z' stroke-width='2' transform='matrix(.87 0 0 .87 -.06 .1)'/></g>" !default;
-$path-valid:                "<path d='m15.71 4.55-9 9-4.13-4.13'/>" !default;
-$path-error:                "<g><path d='m3.88 3.88 10.42 10.42'/><path d='m14.3 3.88-10.42 10.42'/></g>" !default;
+$path-warning:              "<g><path d='m9 7v4.2'/><circle cx='9' cy='13.67' r='.43' stroke-width='#{(1.7 / 2)}'/><path d='m10.45 2.52-8.83 15.37h17.67z' stroke-width='2' transform='matrix(.87 0 0 .87 -.06 .1)'/></g>" !default;
+$path-check:                "<path d='m15.71 4.55-9 9-4.13-4.13'/>" !default;
+$path-cross:                "<g><path d='m3.88 3.88 10.42 10.42'/><path d='m14.3 3.88-10.42 10.42'/></g>" !default;
 
 $icon-info:                 str-replace(url("data:image/svg+xml,<svg style='stroke:#{$info};#{if($design-rounded-else-box,'stroke-linecap:round;stroke-linejoin:round;',null)}fill:none;stroke-width:#{1.7};fill-rule:evenodd' viewbox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'>#{$path-info}</svg>"), $svg-encode) !default;
-$icon-warn:                 str-replace(url("data:image/svg+xml,<svg style='stroke:#{$warn};#{if($design-rounded-else-box,'stroke-linecap:round;stroke-linejoin:round;',null)}fill:none;stroke-width:#{1.7};fill-rule:evenodd' viewbox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'>#{$path-warn}</svg>"), $svg-encode) !default;
-$icon-valid:                str-replace(url("data:image/svg+xml,<svg style='stroke:#{$valid};#{if($design-rounded-else-box,'stroke-linecap:round;stroke-linejoin:round;',null)}fill:none;stroke-width:#{2};fill-rule:evenodd' viewbox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'>#{$path-valid}</svg>"), $svg-encode) !default;
-$icon-error:                str-replace(url("data:image/svg+xml,<svg style='stroke:#{$error};#{if($design-rounded-else-box,'stroke-linecap:round;stroke-linejoin:round;',null)}fill:none;stroke-width:#{2};fill-rule:evenodd' viewbox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'>#{$path-error}</svg>"), $svg-encode) !default;
+$icon-warning:              str-replace(url("data:image/svg+xml,<svg style='stroke:#{$warn};#{if($design-rounded-else-box,'stroke-linecap:round;stroke-linejoin:round;',null)}fill:none;stroke-width:#{1.7};fill-rule:evenodd' viewbox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'>#{$path-warning}</svg>"), $svg-encode) !default;
+$icon-check:                str-replace(url("data:image/svg+xml,<svg style='stroke:#{$valid};#{if($design-rounded-else-box,'stroke-linecap:round;stroke-linejoin:round;',null)}fill:none;stroke-width:#{2};fill-rule:evenodd' viewbox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'>#{$path-check}</svg>"), $svg-encode) !default;
+$icon-cross:                str-replace(url("data:image/svg+xml,<svg style='stroke:#{$error};#{if($design-rounded-else-box,'stroke-linecap:round;stroke-linejoin:round;',null)}fill:none;stroke-width:#{2};fill-rule:evenodd' viewbox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'>#{$path-cross}</svg>"), $svg-encode) !default;
