@@ -9,6 +9,7 @@
 //
 // Example of use:
 // $result: str-replace('This is just an example', 'just', 'not') => $result: This is not an example
+// $result: str-replace("This is just an example", ("just":"not", "an":"a", "example":"joke")) => $result: This is not a joke
 //
 // Return:
 // {String} String with replaced words
