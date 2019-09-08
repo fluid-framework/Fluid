@@ -87,12 +87,6 @@ $generate-component-classes:                  true !default;    // Enable compon
 @import "./misc/misc";
 
 //
-// icons
-//
-
-@import "./icon/icon";
-
-//
 // Components
 //
 
@@ -108,3 +102,9 @@ $generate-component-classes:                  true !default;    // Enable compon
 @import "./components/group";
 @import "./components/embed";
 @import "./components/breadcrumb";
+
+//
+// icons
+//
+
+@import "./icon/icon";
