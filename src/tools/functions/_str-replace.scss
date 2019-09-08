@@ -15,11 +15,27 @@
 //
 @function str-replace($string, $search, $replace: " ") {
   @if type-of($string) != "string" {
-    @error "The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!";
-  } @else if type-of($search) != "string" {
-    @error "The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `String` is required!";
-  } @else if type-of($replace) != "string" {
-    @error "The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `String` is required!";
+    @error "The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `string` is required!";
+  } @else if type-of($search) != "string" and type-of($search) != "list" {
+    @error "The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `string` or `list` is required!";
+  } @else if type-of($replace) != "string" and type-of($replace) != "list" {
+    @error "The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `string` or `list` is required!";
+  } @else if length($search) != length($replace) {
+    $search-able: null;
+    $replace-able: null;
+    @for $index from 1 to min(length($search), length($replace)) + 1 {
+      $search-able: suffix($search-able, ", ") + nth($search, $index);
+      $replace-able: suffix($replace-able, ", ") + nth($replace, $index);
+    }
+    @warn "There are #{length($search)} `#{$search}` to search and replace by #{length($replace)} `#{$replace}` in string `#{$string}`. Resulting string will only replace #{$search-able} with #{$replace-able}.";
+  }
+
+  @if type-of($search) == "list" {
+    $result: $string;
+    @for $index from 1 to min(length($search), length($replace)) + 1 {
+      $result: str-replace($result, nth($search, $index), nth($replace, $index));
+    }
+    @return $result;
   }
 
   $index: str-index($string, $search);
