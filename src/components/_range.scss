@@ -9,6 +9,8 @@
   height: 1.5em; // match height with other controls like checkbox, switch, range
   padding: 0; // override %controls padding
   // stylelint-disable-next-line property-no-vendor-prefix
+  -moz-appearance: none;
+  // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
 

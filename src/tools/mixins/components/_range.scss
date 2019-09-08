@@ -14,6 +14,8 @@
   border: $range-thumb-border;
   border-radius: border-radius(50%, 0);
   // stylelint-disable-next-line property-no-vendor-prefix
+  -moz-appearance: none;
+  // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
   background: $range-thumb-background;
