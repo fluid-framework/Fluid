@@ -70,6 +70,20 @@ input.input:read-only {
   }
 }
 
+select.input {
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -moz-appearance: none;
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: $icon-caret;
+  @extend %input-state;
+
+  &::-ms-expand {
+    display: none; // Hide caret on `<select>`s in IE
+  }
+}
+
 .input::placeholder {
   opacity: 1; // override Firefox's opacity
   color: $input-placeholder-color;
