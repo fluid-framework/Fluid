@@ -8,7 +8,7 @@
 $icon-size:                 1.75em !default;
 $icon-offset:               .25em !default;
 
-$svg-encode:                ('<':'%3C', '>':'%3E', '#':'%23') !default;
+$svg-encode:                ("<":"%3C", ">":"%3E", "#":"%23") !default;
 
 $path-info:                 "<g><circle cx='9' cy='9' r='8'/><path d='m9 13.67v-5.48'/><circle cx='9' cy='5.4' r='.43' stroke-width='#{(1.7 / 2)}'/></g>" !default;
 $path-warning:              "<g><path d='m9 7v4.2'/><circle cx='9' cy='13.67' r='.43' stroke-width='#{(1.7 / 2)}'/><path d='m10.45 2.52-8.83 15.37h17.67z' stroke-width='2' transform='matrix(.87 0 0 .87 -.06 .1)'/></g>" !default;
