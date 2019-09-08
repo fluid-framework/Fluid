@@ -13,7 +13,7 @@
 //
 @function str-capitalize($string) {
   @if type-of($string) != "string" {
-    @error "The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!";
+    @error "The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `string` is required!";
   }
 
   @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
