@@ -16,7 +16,7 @@
 
   @if $name == "valid" or $name == "info" or $name == "warn" or $name == "error" {
     &.has-icon {
-      @extend %input-state;
+      @extend %controls-validation-icon;
       @if $name == "valid" {
         background-image: $icon-check;
       } @else if $name == "info" {

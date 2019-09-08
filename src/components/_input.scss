@@ -77,7 +77,7 @@ select.input {
   -webkit-appearance: none;
   appearance: none;
   background-image: $icon-caret;
-  @extend %input-state;
+  @extend %controls-validation-icon;
 
   &::-ms-expand {
     display: none; // Hide caret on `<select>`s in IE
