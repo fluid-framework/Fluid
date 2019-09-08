@@ -4,8 +4,8 @@
 //
 // Parameters:
 // {String} $string : String containing the word to replace
-// {String} $search : word to replace
-// [optional] {String} $replace : String to replace with
+// {String, Map} $search : word to replace , if map is supplied key(s) contain string to replace and value(s) contain string to replace with
+// [optional] {String} $replace : String to replace with, if $search is a string
 //
 // Example of use:
 // $result: str-replace('This is just an example', 'just', 'not') => $result: This is not an example
@@ -16,24 +16,16 @@
 @function str-replace($string, $search, $replace: " ") {
   @if type-of($string) != "string" {
     @error "The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `string` is required!";
-  } @else if type-of($search) != "string" and type-of($search) != "list" {
-    @error "The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `string` or `list` is required!";
-  } @else if type-of($replace) != "string" and type-of($replace) != "list" {
-    @error "The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `string` or `list` is required!";
-  } @else if length($search) != length($replace) {
-    $search-able: null;
-    $replace-able: null;
-    @for $index from 1 to min(length($search), length($replace)) + 1 {
-      $search-able: suffix($search-able, ", ") + nth($search, $index);
-      $replace-able: suffix($replace-able, ", ") + nth($replace, $index);
-    }
-    @warn "There are #{length($search)} `#{$search}` to search and replace by #{length($replace)} `#{$replace}` in string `#{$string}`. Resulting string will only replace #{$search-able} with #{$replace-able}.";
+  } @else if type-of($search) != "string" and type-of($search) != "map" {
+    @error "The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `string` or `map` is required!";
+  } @else if type-of($replace) != "string" and type-of($search) != "map" {
+    @error "The argument $replace: `#{$replace}` is of incorrect type: `#{type-of($replace)}`. Type of `string` is required!";
   }
 
-  @if type-of($search) == "list" {
+  @if type-of($search) == "map" {
     $result: $string;
-    @for $index from 1 to min(length($search), length($replace)) + 1 {
-      $result: str-replace($result, nth($search, $index), nth($replace, $index));
+    @each $key, $value in $search {
+      $result: str-replace($result, $key, $value);
     }
     @return $result;
   }
