@@ -68,11 +68,6 @@
   }
 }
 
-.input::-ms-expand {
-  border: 0; // Unstylish the caret on `<select>`s in IE10+
-  background-color: transparent; // Unstylish the caret on `<select>`s in IE10+
-}
-
 .input::placeholder {
   opacity: 1; // override Firefox's opacity
   color: $input-placeholder-color;

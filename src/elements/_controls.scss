@@ -22,3 +22,8 @@ legend {
   margin-bottom: .5rem;
   @include fontsize($font-size-large);
 }
+
+select::-ms-expand {
+  border: 0; // Unstylish the caret on `<select>`s in IE10+
+  background-color: transparent; // Unstylish the caret on `<select>`s in IE10+
+}
