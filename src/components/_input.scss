@@ -41,9 +41,11 @@
     box-shadow: none;
   }
 
-  &:read-only {
-    @extend %controls-disabled;
-  }
+}
+
+textarea.input:read-only,
+input.input:read-only {
+  @extend %controls-disabled;
 }
 
 //
