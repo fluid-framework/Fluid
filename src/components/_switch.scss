@@ -9,8 +9,10 @@
     @include active(":checked") {
       ~ label {
         @include after {
-          left: $controls-label-before-size + ($switch-circle-size / -2);
+          left: $controls-label-before-size + ((($switch-circle-size / 100%) - 1em) / -2);
+          border: 1px solid currentColor;
           background-color: $switch-active-circle-background;
+          box-shadow: none;
         }
       }
     }
@@ -26,14 +28,15 @@
         content: "";
         position: absolute;
         top: 50%;
-        left: ($switch-circle-size / -2);
+        left: ((($switch-circle-size / 100%) - 1em) / -2);
         transform: translateY(-50%);
-        width: $controls-label-before-size + $switch-circle-size;
-        height: $controls-label-before-size + $switch-circle-size;
+        width: $controls-label-before-size + (($switch-circle-size / 100%) - 1em);
+        height: $controls-label-before-size + (($switch-circle-size / 100%) - 1em);
         border-radius: border-radius(50%, 0);
         opacity: inherit; // Fix : disabled opacity on %controls-label in IE
         background: $controls-label-bordercolor;
         @include transition($switch-circle-transition);
+        box-shadow: inset 0 0 0 1px $controls-label-bordercolor, inset 0 0 0 2px $white;
       }
     }
   }
