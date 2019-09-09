@@ -83,7 +83,7 @@ select.input {
   }
 }
 
-.input::-ms-clear{
+.input::-ms-clear {
   color: $controls-theme; // Set IE clear field button color so that it is not affected by .input color
 }
 
