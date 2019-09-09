@@ -40,7 +40,6 @@
     background-color: transparent;
     box-shadow: none;
   }
-
 }
 
 textarea.input:read-only,
@@ -82,6 +81,10 @@ select.input {
   &::-ms-expand {
     display: none; // Hide caret on `<select>`s in IE
   }
+}
+
+.input::-ms-clear{
+  color: $controls-theme; // Set IE clear field button color so that it is not affected by .input color
 }
 
 .input::placeholder {
