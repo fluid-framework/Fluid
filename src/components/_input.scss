@@ -144,6 +144,7 @@ textarea.input {
         @include font-size($default-small-quantity * 1em);
       }
     }
+    // stylelint-disable-next-line property-no-vendor-prefix
     &:not(:-ms-input-placeholder) {
       ~ label {
         top: 0%;
