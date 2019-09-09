@@ -37,10 +37,10 @@
       color: $breadcrumb-active-color;
     }
 
-    &[fluid-separator] {
+    &[data-separator] {
       &:not(:first-child) {
         @include before {
-          content: attr(fluid-separator);
+          content: attr(data-separator);
         }
       }
     }

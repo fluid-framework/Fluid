@@ -26,9 +26,9 @@ pre {
     border-left: $border-width-wide solid $primary;
     @include border-radius-left(0);
 
-    &[fluid-lang] {
+    &[data-lang] {
       @include before {
-        content: attr(fluid-lang);
+        content: attr(data-lang);
         position: absolute;
         top: 5px;
         right: -1px;
