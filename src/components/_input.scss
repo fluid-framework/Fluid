@@ -75,7 +75,7 @@ select.input {
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
-  background-image: $icon-caret;
+  background-image: $icon-caret-down;
   @extend %controls-validation-icon;
 
   &::-ms-expand {
