@@ -56,6 +56,7 @@
   }
 
   ~ label {
+    position: relative;
     cursor: pointer;
     padding-right: .5rem;
     padding-left: $controls-label-paddingleft;
