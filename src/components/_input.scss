@@ -144,5 +144,11 @@ textarea.input {
         @include font-size($default-small-quantity * 1em);
       }
     }
+    &:not(:-ms-input-placeholder) {
+      ~ label {
+        top: 0%;
+        @include font-size($default-small-quantity * 1em);
+      }
+    }
   }
 }
