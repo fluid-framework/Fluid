@@ -5,6 +5,7 @@
 // The main control needs to be the first child of Control class to work properly
 
 label.control {
+  cursor: pointer;
   > label {
     pointer-events: none;
   }
@@ -13,7 +14,6 @@ label.control {
 .control {
   position: relative;
   display: block;
-  cursor: pointer;
   margin-top: 2.25px;
   margin-bottom: 2.25px;
   @include fontsize($font-size-normal);
