@@ -13,6 +13,10 @@
   background-color: $input-background;
   box-shadow: box-shadow($input-boxshadow-inner);
 
+  @include hover {
+    box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-box-shadow rgba($controls-theme, .5));
+  }
+
   @include focus {
     border-color: currentColor;
     box-shadow: box-shadow(none);
