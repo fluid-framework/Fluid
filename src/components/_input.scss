@@ -14,7 +14,7 @@
   box-shadow: box-shadow($input-boxshadow-inner);
 
   @include hover {
-    box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-box-shadow rgba($controls-theme, .5));
+    box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-box-shadow rgba($controls-theme, .5)); // Fix: hover state box-shadow transition
   }
 
   @include focus {
