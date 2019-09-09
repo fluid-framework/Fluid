@@ -124,7 +124,6 @@ textarea.input {
 
   &.has-floating-label > .input[placeholder=" "] {
     background-color: transparent;
-    box-shadow: none;
 
     ~ label {
       position: absolute;
