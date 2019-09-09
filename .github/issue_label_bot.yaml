@@ -1,0 +1,4 @@
+label-alias:
+  bug: 'Bug :bug:'
+  feature_request: 'Feature / Enhancement :bulb:'
+  question: 'question :question:'
