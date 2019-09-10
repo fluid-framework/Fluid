@@ -4,6 +4,14 @@
 // Used to combine different components and objects into one control
 // The main control needs to be the first child of Control class to work properly
 
+.control {
+  position: relative;
+  display: block;
+  margin-top: 2.25px;
+  margin-bottom: 2.25px;
+  @include fontsize($font-size-normal);
+}
+
 // Note: Nested label(s) are strongly discouraged by web standards but still in order
 // to keep accessibility of developers we provide work around to use outer label for
 // browser and inner label for styling controls i.e bending web standards a bit.
@@ -16,13 +24,6 @@ label.control {
   }
 }
 
-.control {
-  position: relative;
-  display: block;
-  margin-top: 2.25px;
-  margin-bottom: 2.25px;
-  @include fontsize($font-size-normal);
-}
 //
 // feedback inside control
 //
