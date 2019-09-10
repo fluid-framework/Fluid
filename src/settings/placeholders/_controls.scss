@@ -16,23 +16,25 @@
   line-height: $controls-line-height;
   @include fontsize();
   @include transition($controls-transition);
+}
 
+%controls-active {
   @include active {
     @include animation(none); // disable animations on click event and play again on focus/clickup event
     box-shadow: box-shadow(none); // no shadow in clicked state
   }
+}
 
+%controls-hover {
   @include hover {
     box-shadow: box-shadow($controls-focus-box-shadow rgba($controls-theme, .5));
   }
+}
 
+%controls-focus {
   @include focus {
     @include animation(pulse); // pulse animation on click event
     outline: 0;
-  }
-
-  @include disabled {
-    @extend %controls-disabled;
   }
 }
 
@@ -64,6 +66,13 @@
 
     @include before {
       @extend %controls;
+      @extend %controls-active;
+      @extend %controls-hover;
+      @extend %controls-focus;
+      @include disabled {
+        @extend %controls-disabled;
+      }
+
       content: "";
       position: absolute;
       top: 50%;
@@ -115,10 +124,8 @@
 }
 
 %controls-disabled {
-  // stylelint-disable-next-line declaration-no-important
-  pointer-events: none !important;
-  // stylelint-disable-next-line declaration-no-important
-  opacity: $controls-disabled-opacity !important;
+  pointer-events: none;
+  opacity: $controls-disabled-opacity;
 }
 
 %controls-validation-icon {

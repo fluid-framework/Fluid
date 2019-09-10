@@ -4,6 +4,7 @@
 
 .range {
   @extend %controls;
+
   display: block; // override %controls inline-block display
   width: 100%;
   height: 1.5em; // match height with other controls like checkbox, switch, range
@@ -13,6 +14,10 @@
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
+
+  @include focus {
+    outline: 0;
+  }
 
   // Note : Use Mixin instead of placeholder to split styles across multiple rulesets to have an effect.
 
@@ -32,8 +37,6 @@
   }
 
   @include hover {
-    box-shadow: box-shadow(none); // remove %controls hover shadow
-
     &::-webkit-slider-thumb {
       transform: scale($range-thumb-hover-focus-scale);
       border-width: $range-thumb-hover-focus-borderwidth;
@@ -69,8 +72,6 @@
   }
 
   @include focus-active {
-    @include animation(none); // remove %controls focus pulse animation
-
     &::-moz-range-track {
       background-color: currentColor;
     }
@@ -92,5 +93,9 @@
     &.is-#{$color} {
       color: $value;
     }
+  }
+
+  @include disabled {
+    @extend %controls-disabled;
   }
 }

@@ -9,8 +9,11 @@
 
   .btn {
     @extend %controls;
-    text-align: center;
+    @extend %controls-active;
+    @extend %controls-hover;
+    @extend %controls-focus;
 
+    text-align: center;
 
     //
     // Theme Variants
@@ -150,6 +153,10 @@
           border-bottom-color: $button-disabled-background;
         }
       }
+    }
+
+    @include disabled{
+      @extend %controls-disabled;
     }
   }
 

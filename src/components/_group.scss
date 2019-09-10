@@ -7,6 +7,9 @@
   // Group addons
   .group > .addon {
     @extend %controls;
+    @extend %controls-active;
+    @extend %controls-hover;
+    @extend %controls-focus;
 
     // separate from control placeholder to keep placeholder Priority/Precedence low
     &:not(.btn):not(.input) {
@@ -22,6 +25,10 @@
           @include animation(none);
         }
       }
+    }
+
+    @include disabled{
+      @extend %controls-disabled;
     }
   }
 

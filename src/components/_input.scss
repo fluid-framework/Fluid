@@ -7,6 +7,10 @@
 //
 .input {
   @extend %controls;
+  @extend %controls-active;
+  @extend %controls-hover;
+  @extend %controls-focus;
+
   width: 100%;
   border-color: $input-border-color;
   background-color: $input-background;
@@ -42,6 +46,10 @@
     border: 0;
     background-color: transparent;
     box-shadow: none;
+  }
+
+  @include disabled {
+    @extend %controls-disabled;
   }
 }
 
