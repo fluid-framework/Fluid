@@ -16,10 +16,10 @@
 
       &:not(a) {
         @include hover {
-          box-shadow: none;
+          box-shadow: box-shadow(none);
         }
         @include focus {
-          animation: none;
+          @include animation(none);
         }
       }
     }
