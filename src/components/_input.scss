@@ -96,8 +96,8 @@ select.input {
 }
 
 textarea.input {
-  min-height: $input-minHeight; // prevent user from decreasing size lower than one row
   height: auto; // revert textarea height
+  min-height: $input-minHeight; // prevent user from decreasing size lower than one row
 }
 
 //
