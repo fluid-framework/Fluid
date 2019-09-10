@@ -15,7 +15,12 @@
       background-color: $group-addon-background;
 
       &:not(a) {
-        pointer-events: none;
+        @include hover {
+          box-shadow: none;
+        }
+        @include focus {
+          animation: none;
+        }
       }
     }
   }
