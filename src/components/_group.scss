@@ -5,30 +5,25 @@
 
 @if $generate-component-classes {
   // Group addons
-  .group > .addon {
-    @extend %controls;
-    @extend %controls-active;
-    @extend %controls-hover;
-    @extend %controls-focus;
+  .group > {
+    .addon {
+      @extend %controls;
 
-    // separate from control placeholder to keep placeholder Priority/Precedence low
-    &:not(.btn):not(.input) {
-      user-select: auto; // allow user to select text inside addon
-      border-color: $group-addon-border-color;
-      background-color: $group-addon-background;
-
-      &:not(a) {
-        @include hover {
-          box-shadow: box-shadow(none);
-        }
-        @include focus {
-          @include animation(none);
-        }
+      // separate from control placeholder to keep placeholder Priority/Precedence low
+      &:not(.btn):not(.input) {
+        user-select: auto; // allow user to select text inside addon
+        border-color: $group-addon-border-color;
+        background-color: $group-addon-background;
       }
     }
 
-    @include disabled{
-      @extend %controls-disabled;
+    a.addon {
+      @extend %controls-active;
+      @extend %controls-hover;
+      @extend %controls-focus;
+      @include disabled {
+        @extend %controls-disabled;
+      }
     }
   }
 
