@@ -37,7 +37,7 @@
     }
 
     > .icon.is-right {
-      left: $icon-offset / 2 + .1; // slightly increase icon offset so that they are visually correctly align
+      right: $icon-offset / 2 + .1; // slightly increase icon offset so that they are visually correctly align
       left: auto;
     }
   }
