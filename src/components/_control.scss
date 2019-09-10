@@ -22,38 +22,37 @@ label.control {
   margin-top: 2.25px;
   margin-bottom: 2.25px;
   @include fontsize($font-size-normal);
+}
+//
+// feedback inside control
+//
+.control > .feedback {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  display: none;
+  padding: $control-feedback-padding;
+  margin-bottom: $control-feedback-arrow-size + $control-feedback-offset-bottom;
+  border-radius: border-radius();
+  color: $control-feedback-color;
+  box-shadow: box-shadow($control-feedback-shadow);
+  @include gradient-bg($control-feedback-background, 180deg);
 
-  //
-  // feedback inside control
-  //
-  > .feedback {
+  @include before {
+    content: "";
     position: absolute;
-    right: 0;
-    bottom: 100%;
-    display: none;
-    padding: $control-feedback-padding;
-    margin-bottom: $control-feedback-arrow-size + $control-feedback-offset-bottom;
-    border-radius: border-radius();
-    color: $control-feedback-color;
-    box-shadow: box-shadow($control-feedback-shadow);
-    @include gradient-bg($control-feedback-background, 180deg);
-
-    @include before {
-      content: "";
-      position: absolute;
-      right: $control-feedback-arrow-offset-right;
-      bottom: -($control-feedback-arrow-size * 2);
-      @include triangle(bottom, $control-feedback-arrow-size, $control-feedback-background);
-    }
+    right: $control-feedback-arrow-offset-right;
+    bottom: -($control-feedback-arrow-size * 2);
+    @include triangle(bottom, $control-feedback-arrow-size, $control-feedback-background);
   }
+}
 
-  &.is-valid > .feedback.is-valid {
-    @extend %display-block;
-  }
+.control.is-valid > .feedback.is-valid {
+  @extend %display-block;
+}
 
-  &.is-invalid > .feedback.is-invalid {
-    @extend %display-block;
-  }
+.control.is-invalid > .feedback.is-invalid {
+  @extend %display-block;
 }
 
 .is-validated .control {
