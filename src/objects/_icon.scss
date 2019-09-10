@@ -27,7 +27,7 @@
     }
 
     > .icon.is-left {
-      left: $icon-offset / 2;
+      left: $icon-offset / 2 + .1; // slightly increase icon offset so that they are visually correctly align
     }
   }
 
@@ -37,7 +37,7 @@
     }
 
     > .icon.is-right {
-      right: $icon-offset / 2;
+      left: $icon-offset / 2 + .1; // slightly increase icon offset so that they are visually correctly align
       left: auto;
     }
   }
