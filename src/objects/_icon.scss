@@ -7,8 +7,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: $icon-size;
-    height: $icon-size;
+    width: $icon-area;
+    height: $icon-area;
   }
 
   .has-icon-left,
@@ -23,7 +23,7 @@
 
   .has-icon-left {
     > .input {
-      padding-left: $icon-size + $icon-offset;
+      padding-left: $icon-area + $icon-offset;
     }
 
     > .icon.is-left {
@@ -33,7 +33,7 @@
 
   .has-icon-right {
     > .input {
-      padding-right: $icon-size + $icon-offset;
+      padding-right: $icon-area + $icon-offset;
     }
 
     > .icon.is-right {
