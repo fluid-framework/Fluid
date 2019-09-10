@@ -28,7 +28,7 @@
         content: "";
         position: absolute;
         top: 50%;
-        left: ((($switch-circle-size / 100%) - 1em) / -2);
+        left: if(((($switch-circle-size / 100%) - 1em) / -2) == 0, 0, ((($switch-circle-size / 100%) - 1em) / -2));
         transform: translateY(-50%);
         width: $controls-label-before-size + (($switch-circle-size / 100%) - 1em);
         height: $controls-label-before-size + (($switch-circle-size / 100%) - 1em);
