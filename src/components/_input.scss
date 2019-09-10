@@ -8,7 +8,6 @@
 .input {
   @extend %controls;
   width: 100%;
-  min-height: $input-minHeight;
   border-color: $input-border-color;
   background-color: $input-background;
   box-shadow: box-shadow($input-boxshadow-inner);
@@ -97,6 +96,7 @@ select.input {
 }
 
 textarea.input {
+  min-height: $input-minHeight; // prevent user from decreasing size lower than one row
   height: auto; // revert textarea height
 }
 
