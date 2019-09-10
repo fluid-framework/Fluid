@@ -42,6 +42,7 @@
 
     > .input,
     > .control,
+    > .addon,
     > .btn {
       @include hover-focus {
         z-index: $group-items-hover-focus-zindex;
