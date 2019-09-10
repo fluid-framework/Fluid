@@ -56,8 +56,8 @@
 
     &:not(.is-y) {
       > .control {
-        margin-right: -$border-width-default / 2;
-        margin-left: -$border-width-default / 2;
+        margin-right: -$controls-border-width / 2;
+        margin-left: -$controls-border-width / 2;
         > .input {
           border-radius: border-radius(0);
         }
@@ -72,8 +72,8 @@
       > .input,
       > .addon,
       > .btn {
-        margin-right: -$border-width-default / 2;
-        margin-left: -$border-width-default / 2;
+        margin-right: -$controls-border-width / 2;
+        margin-left: -$controls-border-width / 2;
         border-radius: border-radius(0);
         &:first-child {
           @include border-radius-left($controls-border-radius);
@@ -86,8 +86,8 @@
 
     &.is-y {
       > .control {
-        margin-top: -$border-width-default / 2;
-        margin-bottom: -$border-width-default / 2;
+        margin-top: -$controls-border-width / 2;
+        margin-bottom: -$controls-border-width / 2;
         > .input {
           border-radius: border-radius(0);
         }
@@ -102,8 +102,8 @@
       > .input,
       > .addon,
       > .btn {
-        margin-top: -$border-width-default / 2;
-        margin-bottom: -$border-width-default / 2;
+        margin-top: -$controls-border-width / 2;
+        margin-bottom: -$controls-border-width / 2;
         border-radius: border-radius(0);
         &:first-child {
           @include border-radius-top($controls-border-radius);
