@@ -8,6 +8,8 @@
   .group > {
     .addon {
       @extend %controls;
+      display: flex; // Center align content in addon
+      align-items: center; // Center align content in addon
 
       // separate from control placeholder to keep placeholder Priority/Precedence low
       &:not(.btn):not(.input) {
