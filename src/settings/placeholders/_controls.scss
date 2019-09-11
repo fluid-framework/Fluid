@@ -61,6 +61,7 @@
     position: relative;
     cursor: pointer;
     padding-right: .5rem;
+    height: 100%; // will make sure label is ::before is properly align even when there is no content inside label
     padding-left: $controls-label-paddingleft;
     margin-bottom: 0; // override label margin bottom inside control
 
