@@ -118,6 +118,10 @@
 }
 
 %controls-hide {
+  // We set position, z-index and opacity instead of setting display and visibility properties
+  // because they would lead to control being hidden from screen readers and other assistive technologies
+  //
+  // Read more : https://alistapart.com/article/now-you-see-me/
   position: absolute;
   z-index: -1;
   opacity: 0;
