@@ -42,8 +42,8 @@ label.control {
   @include before {
     content: "";
     position: absolute;
+    top: 100%;
     right: $control-feedback-arrow-offset-right;
-    bottom: -($control-feedback-arrow-size * 2);
     @include triangle(bottom, $control-feedback-arrow-size, $control-feedback-background);
   }
 }
