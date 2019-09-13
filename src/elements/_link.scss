@@ -10,6 +10,10 @@ a {
     color: clr-step($link-color, $link-hover-dark-step);
     text-decoration: $link-hover-decoration;
   }
+
+  @include disabled {
+    @extend %controls-disabled;
+  }
 }
 
 // And undo these styles for placeholder links/named anchors (without href)

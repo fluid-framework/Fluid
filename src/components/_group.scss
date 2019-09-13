@@ -23,9 +23,6 @@
       @extend %controls-active;
       @extend %controls-hover;
       @extend %controls-focus;
-      @include disabled {
-        @extend %controls-disabled;
-      }
     }
   }
 
