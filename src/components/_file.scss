@@ -64,7 +64,6 @@
   // Java Script : (optional) to update label text from selected file to upload
   // $("input[type=file]").onchange = () => {
   //     if (element.files.length > 0) {
-  //       // const label = $('label[for="' + $(this).attr("id") + '"]');
   //       const label = $('.filename');
   //       $(label).text(element.files[0].name);
   //   };
