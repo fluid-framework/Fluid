@@ -70,15 +70,14 @@
 
 // minimal design variant
 @mixin button-design-minimal-varient($color) {
-  color: $color;
-
-  @include after {
+  @include before {
     border-bottom-color: $color;
   }
 
-  @include hover {
-    @include after {
-      box-shadow: box-shadow(0 -1px 0 1px rgba($color, .5));
+  @include hover-focus {
+    color: $color;
+    @include before {
+      border-bottom-color: $color;
     }
   }
 

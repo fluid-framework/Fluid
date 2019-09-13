@@ -109,17 +109,20 @@
       // Default Minimal Styles
       //
       border-right: 0; // remove border to remove border spacing between minimal button groups
+      border-bottom-color: $controls-theme-light;
       border-left: 0; // remove border to remove border spacing between minimal button groups
+      border-radius: border-radius(0);
       box-shadow: box-shadow(none); // remove focus box shadow
 
-      @include after {
+      @include before {
         content: "";
         position: absolute;
         right: 0;
-        bottom: 0;
-        left: 0;
-        border-bottom: $border-width-default solid;
-
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        border-bottom: $border-width-default * 2 solid;
         @include transition($button-transition-minimal);
       }
 
@@ -132,30 +135,36 @@
         }
       }
 
-      @include focus {
-        @include animation(none); // disable animations and play again on click event
-        @include after {
-          @include animation(flash); // flash animation for underline
-          bottom: 20%;
+      @include active {
+        @include before {
+          @include animation(none);
         }
       }
 
-      @include active {
-        @include after {
-          @include animation(none); // disable animations and play again on click event
-          box-shadow: box-shadow(none);
+      @include hover-focus {
+        @include before {
+          width: 100%;
+        }
+      }
+
+      @include focus {
+        @include animation(none); // disable animations and play again on click event
+        border-bottom-color: transparent;
+        @include before {
+          bottom: 20%;
+          @include animation(flash);
         }
       }
 
       @include disabled {
         color: $button-theme;
-        @include after {
+        @include before {
           border-bottom-color: $button-disabled-background;
         }
       }
     }
 
-    @include disabled{
+    @include disabled {
       @extend %controls-disabled;
     }
   }
