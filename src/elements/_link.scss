@@ -12,7 +12,8 @@ a {
   }
 
   @include disabled {
-    @extend %controls-disabled;
+    pointer-events: none;
+    opacity: $controls-disabled-opacity;
   }
 }
 
