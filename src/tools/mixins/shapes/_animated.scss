@@ -17,6 +17,7 @@
     border: .15em solid currentColor;
     border-right-color: transparent;
     border-radius: 50%;
+    transform: inherit; // reset transform style
     // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
     // stylelint-disable-next-line property-blacklist
     animation: spin 1s infinite linear;
