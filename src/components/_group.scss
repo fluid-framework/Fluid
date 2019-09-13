@@ -5,8 +5,8 @@
 
 @if $generate-component-classes {
   // Group addons
-  .group > {
-    .addon {
+  .group {
+    > .addon {
       @extend %controls;
       display: flex; // Center align content in addon
       align-items: center; // Center align content in addon
@@ -19,7 +19,7 @@
       }
     }
 
-    a.addon {
+    > a.addon {
       @extend %controls-active;
       @extend %controls-hover;
       @extend %controls-focus;
@@ -32,6 +32,7 @@
   //
   // Base styles
   //
+  // stylelint-disable-next-line no-duplicate-selectors
   .group {
     display: flex;
     flex-wrap: wrap;
