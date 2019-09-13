@@ -151,7 +151,6 @@
         @include animation(none); // disable animations and play again on click event
         border-bottom-color: transparent;
         @include before {
-          bottom: 20%;
           @include animation(flash);
         }
       }
