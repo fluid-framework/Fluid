@@ -60,9 +60,13 @@
   ~ label {
     position: relative;
     cursor: pointer;
-    padding-right: .5rem;
-    padding-left: $controls-label-paddingleft;
+    padding-left: 1.143em;
     margin-bottom: 0; // override label margin bottom inside control
+
+    :not(:empty) {
+      padding-right: .5rem;
+      padding-left: $controls-label-paddingleft;
+    }
 
     @include before {
       @extend %controls;
