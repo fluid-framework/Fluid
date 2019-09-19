@@ -34,7 +34,7 @@
         // to avoid adding extra box-shadow override
         // - box-shadow($button-focus-box-shadow rgba($button-theme, 0.5)) is already inside default controls
         @if $button-focus-box-shadow != $controls-focus-box-shadow and $button-theme != $controls-theme {
-          box-shadow: box-shadow($button-focus-box-shadow rgba($button-theme, 0.5));
+          box-shadow: box-shadow($button-focus-box-shadow rgba($button-theme, .5));
         }
       }
 
