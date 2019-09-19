@@ -59,13 +59,13 @@ $keyframes: (
           75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)}; }
           76% { box-shadow: #{box-shadow(none)}; }
         }
-      }@else if $name == pulse-solid{
+      } @else if $name == pulse-solid {
         @keyframes pulse-solid {
           from { box-shadow: #{box-shadow(0 0 0 0 $gray-500)}; }
           75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)}; }
           76% { box-shadow: #{box-shadow(none)}; }
         }
-      }@else if $name == flash{
+      } @else if $name == flash {
         @keyframes flash {
           from,
           50%,
@@ -73,13 +73,13 @@ $keyframes: (
           25%,
           75% { opacity: 0; }
         }
-      }@else if $name == spin{
+      } @else if $name == spin {
         @keyframes spin {
           100% { transform: rotate(360deg); }
         }
       }
     }
   } @else {
-    @error "animation keyframe for animation #{$name} not found.";
+    @error "animation keyframe for animation `#{$name}` not found.";
   }
 }
