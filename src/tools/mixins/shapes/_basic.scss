@@ -12,5 +12,5 @@
   $direction: map-get($direction-inverse, $direction);
 
   border: $size solid transparent;
-  border-#{$direction}: $size solid $color;
+  border-#{$direction}-color: $color;
 }
