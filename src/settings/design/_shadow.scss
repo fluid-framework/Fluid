@@ -1,0 +1,16 @@
+//
+// Shadows Settings
+//
+
+//
+// Setting
+//
+$shadow-small:             1px 1px 3px 0 rgba($black, .075) !default;
+$shadow-normal:            1px 4px 6px 0 rgba($black, .15) !default;
+$shadow-large:             2px 10px 15px 0 rgba($black, .175) !default;
+$shadow-round:             0 5px 15px rgba($black, .15) !default;
+
+//
+// Derived
+//
+$shadow-defaut:            $shadow-normal !default;

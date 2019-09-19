@@ -10,10 +10,10 @@
     properties: box-shadow,
     selector: shadow,
     values: (
-      sm: 1px 1px 3px 0 rgba($black, .075),
-      null: 1px 4px 6px 0 rgba($black, .15),
-      lg: 2px 10px 15px 0 rgba($black, .175),
-      round: 0 5px 15px rgba($black, .15),
+      sm: $shadow-small,
+      null: $shadow-normal,
+      lg: $shadow-large,
+      round: $shadow-round,
       none: none
     ),
     enable-important-values: true
