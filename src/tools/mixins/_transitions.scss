@@ -77,6 +77,8 @@ $keyframes: (
         @keyframes spin {
           100% { transform: rotate(360deg); }
         }
+      } @else {
+        @error "keyframe name exist in $keyframes but actual keyframes are not found";
       }
     }
   } @else {
