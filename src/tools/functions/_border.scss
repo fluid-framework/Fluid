@@ -8,7 +8,7 @@
 //
 // Parameters:
 // {String} $border - border strings
-@function border($border: $border-defaut, $fallback-value: null) {
+@function border($border: $border-default, $fallback-value: null) {
   @if not $design-shadow-else-border {
     @return $border;
   }
