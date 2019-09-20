@@ -1,0 +1,67 @@
+//
+// convert-unit
+// convert a number value from one unit to another
+//
+// Parameters:
+// {Number} $value - value to convert
+// {String} $to_unit - unit to convert value to
+// [optional] {String} $base_font-size - font size at root/body/parent
+//
+// Example of use:
+// $result: convert-unit(7px, rem ,14px) =>  $result: 0.5rem
+// $result: convert-unit(0.5em, px ,14px) =>  $result: 7px
+// $result: convert-unit(7px, % ,14px) =>  $result: 0.5%
+//
+// Return:
+// {Number} Number with converted unit
+//
+@function convert-unit($value, $to_unit, $base_font-size: $font-size) {
+  $from_unit: unit($value);
+  $to_unit: unquote($to_unit);
+  $stripped_value: strip-unit($value);
+  $base_value: strip-unit($base_font-size);
+
+  @if $from_unit == $to_unit {
+    @debug "Cannot convert same units `#{$from_unit}`";
+    @return $value;
+  }
+  @if unit($base_font-size) != px {
+    @error "Not supported root font-size `#{unit($base_value)}`";
+  }
+
+  @if $from_unit == px {
+    @if $to_unit == "em" {
+      @return ($stripped_value / $base_value) * 1em;
+    } @else if $to_unit == "rem" {
+      @return ($stripped_value / $base_value) * 1rem;
+    } @else if $to_unit == "%" {
+      @return percentage($stripped_value / $base_value);
+    }
+  } @else if $from_unit == em {
+    @if $to_unit == "px" {
+      @return ($stripped_value * $base_value) * 1px;
+    } @else if $to_unit == "rem" {
+      @return $stripped_value * 1rem;
+    } @else if $to_unit == "%" {
+      @return percentage($stripped_value);
+    }
+  } @else if $from_unit == rem {
+    @if $to_unit == "px" {
+      @return ($stripped_value * $base_value) * 1px;
+    } @else if $to_unit == "em" {
+      @return $stripped_value * 1em;
+    } @else if $to_unit == "%" {
+      @return percentage($stripped_value);
+    }
+  } @else if $from_unit == "%" {
+    @if $to_unit == "px" {
+      @return ($stripped_value * $base_value / 100) * 1px;
+    } @else if $to_unit == "em" {
+      @return ($stripped_value / 100) * 1em;
+    } @else if $to_unit == "rem" {
+      @return ($stripped_value / 100) * 1rem;
+    }
+  }
+
+  @error "Error when converting from `#{$value}` to unit `#{$to_unit}`";
+}

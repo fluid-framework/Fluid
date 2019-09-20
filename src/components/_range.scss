@@ -24,7 +24,7 @@
   // Thumb
   &::-webkit-slider-thumb {
     @include range-thumb;
-    margin-top: (strip-unit($range-track-height) - $range-thumb-height) / 2;
+    margin-top: convert-unit($range-track-height, unit($range-thumb-height) - $range-thumb-height) / 2;
   }
 
   &::-moz-range-thumb {

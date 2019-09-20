@@ -142,7 +142,7 @@ textarea.input {
     ~ label {
       position: absolute;
       top: 50%;
-      left: strip-unit($controls-padding-x) * 1rem;
+      left: convert-unit($controls-padding-x, rem);
       transform: translateY(-50%);
       pointer-events: none;
       padding: 2px;
