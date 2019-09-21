@@ -34,7 +34,9 @@
       @if $key {
         $string: str-readable($string, $short-words);
       } @else {
-        @warn "acronym / abbreviate `#{$string}` not found inside $short-words map `#{$short-words}`.";
+        @if $enable-debugging {
+          @warn "acronym / abbreviate `#{$string}` not found inside $short-words map `#{$short-words}`.";
+        }
       }
 
       $short: suffix($short, "-") + $string;

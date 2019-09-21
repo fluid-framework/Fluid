@@ -28,7 +28,9 @@
 
     // Warn if the Length of keys and values are not the same
     @if $length-keys != $length-values {
-      @warn "There are #{$length-keys} key(s) `#{$keys}` for #{$length-values} value(s) `#{$values}`. Resulting map will only have #{$min-length} pairs.";
+      @if $enable-debugging {
+        @warn "There are #{$length-keys} key(s) `#{$keys}` for #{$length-values} value(s) `#{$values}`. Resulting map will only have #{$min-length} pairs.";
+      }
     }
 
     // return if keys are empty list

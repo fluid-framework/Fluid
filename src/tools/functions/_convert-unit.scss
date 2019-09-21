@@ -22,7 +22,9 @@
   $base_value: strip-unit($base_font-size);
 
   @if $from_unit == $to_unit {
-    @debug "Cannot convert same units `#{$from_unit}`";
+    @if $enable-debugging {
+      @debug "Cannot convert same units `#{$from_unit}`";
+    }
     @return $value;
   }
   @if unit($base_font-size) != px {
