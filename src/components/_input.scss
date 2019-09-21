@@ -38,16 +38,6 @@
     }
   }
 
-  // unstyle input
-  &.unstyle {
-    padding: 0;
-    margin-right: 0;
-    margin-left: 0;
-    border: 0;
-    background-color: transparent;
-    box-shadow: none;
-  }
-
   @include disabled {
     @extend %controls-disabled;
   }
