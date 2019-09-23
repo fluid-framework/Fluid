@@ -88,7 +88,6 @@ samp {
 }
 
 pre {
-  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
   @extend %overflow-auto; // Don't allow content to break outside
   margin-bottom: 1rem; // Reset browser default of `1em` to use `rem`s
 }

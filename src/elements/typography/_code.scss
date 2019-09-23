@@ -18,6 +18,7 @@ code {
 //
 
 pre {
+  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
   > code {
     @include fontsize(inherit);
     position: relative;
