@@ -74,7 +74,7 @@ p {
 }
 
 hr {
-  border-style: solid; // Reset border-style to solid
+  border-style: solid none; // Reset border-style to solid
   color: $hr-color; // Reset Firefox's gray color
   background-color: currentColor; // Use background and height instead of border for hr
 }
