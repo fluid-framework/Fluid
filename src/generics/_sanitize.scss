@@ -76,13 +76,11 @@ p {
 hr {
   border-style: solid none; // Reset border-style to solid
   color: $hr-color; // Reset Firefox's gray color
-  background-color: currentColor; // Use background and height instead of border for hr
+  background-color: currentColor; // Use background-color instead of border-color for hr  // prevent `hr` look like an input field with `size` attribute
 }
 
 hr:not([size]) {
-  // Set correct height and prevent the `size` attribute to make the `hr` look like an input field
-  // See https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_hr_size
-  height: $hr-height;
+  height: $hr-height; // set correct hr size to $hr-height
 }
 
 abbr[title],
