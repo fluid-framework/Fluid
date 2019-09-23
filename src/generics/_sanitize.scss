@@ -81,7 +81,7 @@ hr {
 
 hr:not([size]) {
   height: $hr-height; // set correct hr size to $hr-height
-  @extend %border-0;
+  @extend %border-0; // set correct hr size to $hr-height
 }
 
 abbr[title],
@@ -127,7 +127,7 @@ dl {
 }
 
 dd {
-  margin-left: 0; // Undo browser default
+  margin-left: 0; // reset browser default
 }
 
 dl dl,
