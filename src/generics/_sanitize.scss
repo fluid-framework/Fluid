@@ -54,23 +54,10 @@ small {
   @extend %small; // Add the correct font size in all browsers
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
-}
-
 // Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari
 h1 {
   margin-bottom: .67em;
   @include fontsize(2em);
-}
-
-p {
-  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
 }
 
 hr {
@@ -119,12 +106,6 @@ sup {
 //
 // List
 //
-
-ul,
-ol,
-dl {
-  @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
-}
 
 dd {
   margin-left: 0; // reset browser default
