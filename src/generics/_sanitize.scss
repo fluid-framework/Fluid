@@ -81,6 +81,7 @@ hr {
 
 hr:not([size]) {
   height: $hr-height; // set correct hr size to $hr-height
+  @extend %border-0;
 }
 
 abbr[title],
