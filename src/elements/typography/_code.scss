@@ -8,10 +8,10 @@ code {
   margin-left: $code-margin-x;
   border-radius: border-radius();
   background: $code-background;
-  @include fontsize($code-font-size);
+  word-wrap: break-word;
   word-break: break-word;
   overflow-wrap: break-word;
-  word-wrap: break-word;
+  @include fontsize($code-font-size);
 }
 
 //
