@@ -60,7 +60,7 @@
   ~ label {
     position: relative;
     cursor: pointer;
-    padding-left: 1.143em;
+    padding-left: convert-unit(16px, em);
     margin-bottom: 0; // override label margin bottom inside control
 
     :not(:empty) {
