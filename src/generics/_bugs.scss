@@ -61,14 +61,13 @@ h1 {
 }
 
 hr {
-  border-style: solid none; // Reset border-style to solid
+  @extend %border-0; // remove border as
   color: $hr-color; // Reset Firefox's gray color
   background-color: currentColor; // Use background-color instead of border-color for hr  // prevent `hr` look like an input field with `size` attribute
 }
 
 hr:not([size]) {
   height: $hr-height; // set correct hr size to $hr-height
-  @extend %border-0; // set correct hr size to $hr-height
 }
 
 abbr[title],
