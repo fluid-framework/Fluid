@@ -44,7 +44,7 @@
     "build": "npm-run-all dist",
     "dist": "npm-run-all -s test dist:**",
     "dist:clean": "shx rm -rf ./dist",
-    "dist:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map-embed",
+    "dist:compile": "node-sass ./src --output ./dist --output-style expanded --indent-type space --indent-width 2 --source-map-embed --source-map temp",
     "dist:vendorPrefix": "postcss ./dist/*.css --dir ./dist --use autoprefixer",
     "dist:optimize:mediaQuery": "foreach -g ./dist/*.css -x \"mqpacker --sort ./dist/#{name}.css ./dist/#{name}.css\"",
     "dist:optimize:duplicateSelectors": "foreach -g ./dist/*.css -x \"postcss ./dist/#{name}.css --output ./dist/#{name}.min.css --use postcss-combine-duplicated-selectors --no-map\"",
