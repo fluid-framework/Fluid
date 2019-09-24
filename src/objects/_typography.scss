@@ -22,6 +22,7 @@
   // Doc : add doc
   //
   .txt-break {
+    word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
   }
