@@ -144,14 +144,14 @@ textarea.input {
     @include focus(":not(:placeholder-shown)") {
       ~ label {
         top: 0%;
-        @include font-size($default-small-quantity * 1em);
+        @include fontsize($default-small-quantity * 1em);
       }
     }
     // stylelint-disable-next-line selector-no-vendor-prefix
     &:not(:-ms-input-placeholder) {
       ~ label {
         top: 0%;
-        @include font-size($default-small-quantity * 1em);
+        @include fontsize($default-small-quantity * 1em);
       }
     }
   }

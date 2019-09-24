@@ -8,10 +8,10 @@ kbd {
   color: $kbd-color;
   background-color: $kbd-bg;
   font-weight: $kbd-font-weight;
-  @include font-size($kbd-font-size);
+  @include fontsize($kbd-font-size);
 
   kbd {
-    @include font-size(100%);
+    @include fontsize(100%);
     font-weight: $nested-kbd-font-weight;
   }
 }
