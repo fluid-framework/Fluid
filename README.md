@@ -45,9 +45,9 @@
 
 - Using Repository
 
-1. [Download](https://github.com/fluid-framework/Fluid/archive/master.zip) Latest master branch
+1. [Download](https://github.com/fluid-framework/Fluid/releases) Latest release distribution
 2. Extract and copy to project folder
-3. Import into page using `<link href="./Fluid-master/dist/fluid.min.css" rel="stylesheet" />`
+3. Import required Css using link tag E.g `<link href="./Fluid/fluid.min.css" rel="stylesheet" />`
 
 ## 📂 Structure
 
