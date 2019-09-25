@@ -19,7 +19,7 @@
     @if ($font-size == 0) or (not $font-size-unit) or ($font-size-unit != "" and $font-size-unit != "px" and $font-size-unit != "rem") {
       font-size: #{$font-size}#{if($important, !important, null)};
     } @else {
-      @include rfs($font-size, $important);
+      // Do Fluid font stuff
     }
   } @else {
     font-size: #{$font-size}#{if($important, !important, null)};
