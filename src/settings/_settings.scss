@@ -7,22 +7,24 @@
 // Options: Quickly modify global styling by enabling or disabling optional features.
 $default-small-quantity:                      .75 !default;     // Default multiplicative value to generate small styles
 $default-large-quantity:                      1.25 !default;    // Default multiplicative value to generate large styles
-$design-solid-else-gradients:                 true !default;    // Let you chose between gradient vs solid design UI
-$design-shadow-else-border:                   true !default;    // Let you chose between shadow vs box border design UI
-$design-rounded-else-box:                     true !default;    // Let you chose between rounded vs box corners design UI
+$design-solid-else-gradients:                 true !default;    // * Let you chose between gradient vs solid design UI
+$design-shadow-else-border:                   true !default;    // * Let you chose between shadow vs box border design UI
+$design-rounded-else-box:                     true !default;    // * Let you chose between rounded vs box corners design UI
 $breakpoints-readable-else-short:             false !default;   // Let you chose between shorter words like `sm` vs understandable words like `mobile`
 $breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints
 $enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
 $enable-transitions:                          true !default;    // Enable transitions and animations
 $enable-prefers-reduced-motion-media-query:   true !default;    // Disable transitions in Reduced Motion Media Query
-$enable-fluid-font-sizes:                     false !default;   // Enable Fluid typography
+$enable-fluid-font-sizes:                     false !default;   // * Enable Fluid typography
 $generate-spacing-classes:                    true !default;    // Enable Spacing Classes
 $generate-grid-classes:                       true !default;    // Enable Grid Classes
 $generate-object-classes:                     true !default;    // Enable object Classes
 $generate-utility-classes:                    true !default;    // Enable utilities Classes
 $generate-component-classes:                  true !default;    // Enable component Classes
 $enable-debugging:                            false !default;   // Enable Debugging Steps
+
+// * Feature not fully implemented yet
 
 //
 // Naming Dictionary
