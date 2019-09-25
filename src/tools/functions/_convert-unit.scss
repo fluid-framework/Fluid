@@ -15,7 +15,7 @@
 // Return:
 // {Number} Number with converted unit
 //
-@function convert-unit($value, $to_unit, $base_font-size: $font-size) {
+@function convert-unit($value, $to_unit, $base_font-size: $default-font-size) {
   $from_unit: unit($value);
   $to_unit: unquote($to_unit);
   $stripped_value: strip-unit($value);
