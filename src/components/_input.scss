@@ -28,7 +28,7 @@
   // minimal design variant
   &.is-min {
     // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
-    padding-bottom: $controls-padding-y - ($border-width-wide - 1) / $font-size;
+    padding-bottom: $controls-padding-y - convert-unit(($border-width-wide - 1), em);
     border-width: 0;
     border-bottom-width: $border-width-wide;
     border-radius: border-radius(0);
