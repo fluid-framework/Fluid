@@ -3,12 +3,6 @@
 //
 
 //
-// Inherit
-//
-$font-size-small:              $default-small-quantity * 1rem !default;
-$font-size-large:              $default-large-quantity * 1rem !default;
-
-//
 // Setting
 //
 $font-size-normal:             1rem !default;
@@ -45,5 +39,7 @@ $line-height:                  1.5 !default;
 //
 // Derived
 //
+$font-size-small:              $default-small-quantity * 1rem !default;
+$font-size-large:              $default-large-quantity * 1rem !default;
 $font-family-default:          $font-family-sans-serif !default;
 $font-weight-default:          $font-weight-normal !default;
