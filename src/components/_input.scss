@@ -27,8 +27,7 @@
 
   // minimal design variant
   &.is-min {
-    // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
-    padding-bottom: $controls-padding-y - convert-unit(($border-width-wide - 1), em);
+    padding-bottom: $controls-padding-y - convert-unit($border-width-wide - 2, em); // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
     border-width: 0;
     border-bottom-width: $border-width-wide;
     border-radius: border-radius(0);
