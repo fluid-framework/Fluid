@@ -11,10 +11,15 @@
 
     @include after {
       content: "";
-      width: 100%;
       align-self: center;
-      margin-left: $controls-padding-x / 2;
+      width: 100%;
       border-top: 1px solid currentColor;
+    }
+
+    &:not(:empty) {
+      @include after {
+        margin-left: $controls-padding-x / 2;
+      }
     }
   }
 }
