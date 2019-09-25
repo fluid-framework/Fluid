@@ -6,7 +6,7 @@
 // Theme Variants Mixin
 //
 
-@mixin input-varient($name, $color) {
+@mixin input-variant($name, $color) {
   border-color: rgba($color, .5);
   color: $color;
 

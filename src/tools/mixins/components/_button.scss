@@ -11,7 +11,7 @@
 //
 
 // Solid design variant
-@mixin button-design-solid-varient($color) {
+@mixin button-design-solid-variant($color) {
   $focus-background: clr-step($color, -2);
   $active-background: clr-step($color, 4);
 
@@ -49,7 +49,7 @@
 }
 
 // outline design variant
-@mixin button-design-outline-varient($color) {
+@mixin button-design-outline-variant($color) {
   $active-border: clr-step($color, 4);
 
   @include hover {
@@ -69,7 +69,7 @@
 }
 
 // minimal design variant
-@mixin button-design-minimal-varient($color) {
+@mixin button-design-minimal-variant($color) {
   @include before {
     border-bottom-color: $color;
   }

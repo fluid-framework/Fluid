@@ -58,7 +58,7 @@
       //
       @each $color, $value in $theme-colors {
         &.is-#{$color} {
-          @include button-design-solid-varient($value);
+          @include button-design-solid-variant($value);
         }
       }
 
@@ -92,12 +92,12 @@
       border-color: $button-theme-light;
       color: $button-theme;
 
-      @include button-design-outline-varient($button-theme); // Default button theme
+      @include button-design-outline-variant($button-theme); // Default button theme
 
       // Color variants
       @each $color, $value in $theme-colors {
         &.is-#{$color} {
-          @include button-design-outline-varient($value);
+          @include button-design-outline-variant($value);
         }
       }
 
@@ -130,12 +130,12 @@
         @include transition($button-transition-minimal);
       }
 
-      @include button-design-minimal-varient($button-theme); // Default button theme
+      @include button-design-minimal-variant($button-theme); // Default button theme
 
       // Color variants
       @each $color, $value in $theme-colors {
         &.is-#{$color} {
-          @include button-design-minimal-varient($value);
+          @include button-design-minimal-variant($value);
         }
       }
 

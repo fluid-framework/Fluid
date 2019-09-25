@@ -52,7 +52,7 @@ input.input:read-only {
 //
 @each $color, $value in $theme-colors {
   .input.is-#{$color} {
-    @include input-varient($color, $value);
+    @include input-variant($color, $value);
   }
 }
 
