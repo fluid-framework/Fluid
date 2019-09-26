@@ -58,7 +58,7 @@
   ~ label {
     position: relative;
     cursor: pointer;
-    padding-left: convert-unit(16px, em);
+    padding-left: $controls-label-paddingleft;
     margin-bottom: 0; // override label margin bottom inside control
 
     :not(:empty) {
