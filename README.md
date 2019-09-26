@@ -43,11 +43,21 @@
 
 ## 🚀 Quick Start
 
-- Using Repository
+##### Using Repository release
 
 1. [Download](https://github.com/fluid-framework/Fluid/releases) Latest release distribution
 2. Extract and copy to project folder
 3. Import required Css using link tag E.g `<link href="./Fluid/fluid.min.css" rel="stylesheet" />`
+
+##### Using NPM
+
+1. Download Package as Direct Dependency `npm install fluid-css`
+2. Import required Css Into project using `import "fluid-css/dist/fluid.css"`
+
+##### Using Yarn
+
+1. Download Package as Direct Dependency `yarn add fluid-css`
+2. Import required Css Into project using `import "fluid-css/dist/fluid.css"`
 
 ## 📂 Structure
 
