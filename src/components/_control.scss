@@ -19,6 +19,7 @@
 // Read more : https://stackoverflow.com/questions/20834755/standards-on-behaviour-of-nested-labels
 label.control {
   cursor: pointer;
+  margin-bottom: 0;
   label {
     pointer-events: none; // disable forwarding pointer events to inner label(s)
   }
