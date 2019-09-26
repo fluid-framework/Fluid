@@ -124,7 +124,7 @@ Fluid uses [autoprefixer](https://github.com/postcss/autoprefixer) for compatibi
 
 ## 🧠 Creators
 
-👨‍💻 **Ashfahan** ◾️ [Github](https://github.com/ashfahan) | [Gitlab](https://gitlab.com/ashfahan)
+👨‍💻 **Ashfahan** ◾️ [GitHub](https://github.com/ashfahan) | [GitLab](https://gitlab.com/ashfahan)
 
 ## 🤝 Sponsors
 
