@@ -3,8 +3,6 @@
   display: inline-block;
   user-select: none;
   padding: $controls-padding-y $controls-padding-x;
-  margin-top: 2.25px; // Used to keep consistent spacing between above and below elements
-  margin-bottom: 2.25px; // Used to keep consistent spacing between above and below elements
   border: $controls-border-width solid $controls-border-color;
   border-radius: border-radius($controls-border-radius, 0);
   color: $controls-color;
@@ -85,7 +83,6 @@
       width: $controls-label-before-size;
       height: $controls-label-before-size;
       padding: 0; // override controls padding
-      margin: 0; // override controls margin
       border-color: $controls-label-bordercolor;
       opacity: inherit;
       background-color: $controls-label-background;

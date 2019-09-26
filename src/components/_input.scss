@@ -106,7 +106,6 @@ textarea.input {
     display: flex; // align content in center based on height
     align-items: center; // align content in center based on height
     height: 100%;
-    margin: 0; // remove margin from input and apply it to the control class
   }
 
   &.has-icon-left {
