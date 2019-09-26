@@ -2,7 +2,6 @@
 // Controls Element
 //
 
-.btn,
 select,
 button,
 [type="file"],
@@ -12,7 +11,7 @@ button,
 [type="range"] {
   // add "hand" cursor to non-disabled button elements.
   @include not-disabled {
-    cursor: pointer;
+    @extend %cursor-pointer;
   }
 }
 
