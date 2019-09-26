@@ -5,10 +5,10 @@
 .range {
   @extend %controls;
 
-  display: block; // override %controls inline-block display
+  display: block; // override %controls style
   width: 100%;
   height: 1.5em; // match height with other controls like checkbox, switch, range
-  padding: 0; // override %controls padding
+  padding: 0; // override %controls style
   // stylelint-disable-next-line property-no-vendor-prefix
   -moz-appearance: none;
   // stylelint-disable-next-line property-no-vendor-prefix
