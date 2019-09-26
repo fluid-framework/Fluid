@@ -24,7 +24,6 @@
   // Thumb
   &::-webkit-slider-thumb {
     @include range-thumb;
-    margin-top: convert-unit($range-track-height, unit($range-thumb-height)) - $range-thumb-height / 2;
   }
 
   &::-moz-range-thumb {
@@ -33,7 +32,6 @@
 
   &::-ms-thumb {
     @include range-thumb;
-    margin-top: 0; // Remove Edge negative Margin-top on thumb
   }
 
   @include hover {

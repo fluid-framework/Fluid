@@ -1,6 +1,9 @@
 @mixin range-track() {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: $range-track-height;
+  margin: 0;
   border: 0;
   border-radius: border-radius($border-radius-pill, 0);
   background-color: $range-track-background;
