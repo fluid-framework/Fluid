@@ -11,7 +11,6 @@
         @include after {
           left: $switch-width - $switch-circle-size;
           background-color: $switch-active-circle-background;
-          box-shadow: none;
         }
       }
     }
@@ -28,13 +27,12 @@
         position: absolute;
         top: 50%;
         left: 0;
-        transform: translateY(-50%) scale(.9); // decrease switch size so that there is a bit of margin on side
+        transform: translateY(-50%) scale($switch-circle-tranform-scale);
         width: $switch-circle-size;
         height: $switch-circle-size;
         border-radius: border-radius($border-radius-circle, 0);
         opacity: inherit; // Fix : disabled opacity on %controls-label in IE
         background: $switch-circle-bordercolor;
-        box-shadow: 0 0 0 1px $switch-circle-bordercolor, inset 0 0 0 1px $white; // Make Circle Appear Bigger
         @include transition($switch-circle-transition);
       }
     }
