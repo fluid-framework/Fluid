@@ -14,23 +14,32 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/fluid-css">
+   <img src="https://img.shields.io/badge/NPM-fluid--css-1890ff?style=for-the-badge"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://travis-ci.com/fluid-framework/Fluid">
+    <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
+  </a>
   <a href="https://en.wikipedia.org/wiki/Gzip">
     <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=35000&max=50000&style=for-the-badge"/>
   </a>
   <a href="https://en.wikipedia.org/wiki/Brotli">
     <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000&style=for-the-badge"/>
   </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/fluid-framework/Fluid/releases">
+    <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?style=for-the-badge&color=805ad5"/>
+  </a>
   <a href="https://github.com/fluid-framework/Fluid/tree/master/LICENSE">
     <img src="https://img.shields.io/github/license/fluid-framework/Fluid.svg?style=for-the-badge&color=805ad5"/>
   </a>
-  <a href="https://github.com/fluid-framework/Fluid/releases">
-    <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?style=for-the-badge"/>
-  </a>
-  <a href="https://travis-ci.com/fluid-framework/Fluid">
-    <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
-  </a>
   <a href="https://github.com/fluid-framework/Fluid/commits">
-    <img src="https://img.shields.io/github/commit-activity/w/fluid-framework/fluid.svg?style=for-the-badge" />
+    <img src="https://img.shields.io/github/commit-activity/w/fluid-framework/fluid.svg?style=for-the-badge&color=805ad5" />
   </a>
   <a href="https://github.com/fluid-framework/Fluid/pulls">
     <img src="https://img.shields.io/badge/Pull%20Request-Welcome_%E2%9D%A4-805ad5.svg?style=for-the-badge" />
