@@ -201,6 +201,8 @@
 
   // useful for button with only icons
   .btn.is-circle {
-    padding: $controls-padding-y $button-iscircle-padding;
+    padding: 0;
+    height: $button-iscircle-size;
+    width: $button-iscircle-size;
   }
 }
