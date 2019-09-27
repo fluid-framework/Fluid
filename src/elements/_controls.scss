@@ -9,9 +9,8 @@ button,
 [type="reset"],
 [type="submit"],
 [type="range"] {
-  // add "hand" cursor to non-disabled button elements.
   @include not-disabled {
-    @extend %cursor-pointer;
+    @extend %cursor-pointer; // add "hand" cursor to non-disabled button elements.
   }
 }
 

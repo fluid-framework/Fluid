@@ -16,7 +16,7 @@
     text-align: center;
 
     @include not-disabled {
-      @extend %cursor-pointer;
+      @extend %cursor-pointer; // add "hand" cursor to non-disabled button elements.
     }
 
     //
