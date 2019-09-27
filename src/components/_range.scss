@@ -84,16 +84,16 @@
     }
   }
 
-  //
-  // Color variants
-  //
-  @each $color, $value in $theme-colors {
-    &.is-#{$color} {
-      color: $value;
-    }
-  }
-
   @include disabled {
     @extend %controls-disabled;
+  }
+}
+
+//
+// Color variants
+//
+@each $color, $value in $theme-colors {
+  .range.is-#{$color} {
+    color: $value;
   }
 }
