@@ -43,8 +43,8 @@
 }
 
 $keyframes: (
-  pulse: true,
-  pulse-solid: true,
+  ripple: true,
+  ripple-gray: true,
   flash: true,
   spin: true,
 ) !default;
@@ -53,14 +53,14 @@ $keyframes: (
   @if map-has-key($keyframes, $name) {
     @if map-get($keyframes, $name) {
       $keyframes: map-merge($keyframes, ($name : false)) !global;
-      @if $name == pulse {
-        @keyframes pulse {
+      @if $name == ripple {
+        @keyframes ripple {
           from { box-shadow: #{box-shadow(0 0 0 0 currentColor)}; }
           75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)}; }
           76% { box-shadow: #{box-shadow(none)}; }
         }
-      } @else if $name == pulse-solid {
-        @keyframes pulse-solid {
+      } @else if $name == ripple-gray {
+        @keyframes ripple-gray {
           from { box-shadow: #{box-shadow(0 0 0 0 $gray-500)}; }
           75% { box-shadow: #{box-shadow(0 0 0 ($controls-focus-width * 1.5) transparent)}; }
           76% { box-shadow: #{box-shadow(none)}; }

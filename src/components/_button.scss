@@ -70,7 +70,7 @@
       // States
       //
       @include focus {
-        @include animation(pulse-solid); // pulse animation on click event
+        @include animation(ripple-gray); // ripple animation on click event
       }
 
       @include active {

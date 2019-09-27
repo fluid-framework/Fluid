@@ -31,7 +31,7 @@
 
 %controls-focus {
   @include focus {
-    @include animation(pulse); // pulse animation on click event
+    @include animation(ripple); // ripple animation on click event
     outline: 0;
   }
 }
@@ -50,7 +50,7 @@
   @include focus {
     ~ label {
       @include before {
-        @include animation(pulse); // pulse animation on click event
+        @include animation(ripple); // ripple animation on click event
       }
     }
   }
