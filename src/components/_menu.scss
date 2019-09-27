@@ -1,0 +1,114 @@
+//
+// Menu
+//
+
+.menu {
+  display: block;
+  padding: $menu-padding-y 0; // reset list style to custom value
+  margin: 0; // reset list style
+  @include fontsize($font-size-normal);
+}
+
+//
+// Menu items
+//
+.menu-item {
+  @extend %controls;
+  display: flex;
+  width: 100%; // reset button style
+  padding-left: $submenu-marginleft; // indent .menu-items in .menu
+  border: 0; // reset button style // override %controls style
+  border-radius: border-radius(0); // override %controls style
+  text-align: left; // reset button style
+  @include menu-variant($controls-theme); // default Menu variant styles
+
+  @include before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 0 solid currentColor;
+    @include transition(
+      $menu-item-before-transition,
+      border-color 2s cubic-bezier(1, 0, 1, 0), // retain border-color till border width be 0 // Required For IE
+      color 2s cubic-bezier(1, 0, 1, 0) // retain border-color till border width be 0 // Required For Edge
+    );
+  }
+
+  &:not(.active) {
+    // Style focus state to show elements is in focus state using tab
+    @include hover-focus {
+      @include before {
+        @include transition($menu-item-before-transition); // remove border-color and color transition to quickly change border-color as border appear
+        border-left-width: $menu-item-before-borderwidth;
+      }
+    }
+  }
+
+  @include hover{
+    text-decoration: none; // reset anchor decoration
+  }
+
+  @include focus {
+    outline: 0; // reset button style
+  }
+
+  @include not-disabled {
+    @extend %cursor-pointer; // add "hand" cursor to non-disabled button elements.
+  }
+
+  @include disabled {
+    @extend %controls-disabled;
+  }
+}
+
+//
+// Color variants
+//
+@each $color, $value in $theme-colors {
+  .menu.is-#{$color} {
+    @include menu-variant($value);
+  }
+}
+
+// Menu Trigger Needs to be First element in submenu
+.menu-trigger {
+  @include after {
+    content: "";
+    align-self: center;
+    margin-top: $menu-trigger-margintop;
+    margin-left: auto; // align .menu-trigger caret to end of flex
+    @include triangle(bottom, $menu-trigger-caret-size, currentColor);
+  }
+
+  &.active {
+    @include after {
+      transform: rotate(180deg) translateY(50%);
+    }
+  }
+
+  &:not(.active) {
+    // Hide everything else inside menu
+    ~ * {
+      display: none;
+    }
+  }
+}
+
+// submenu
+.menu .menu {
+  overflow: hidden; // Prevent .menu-items from going outsize menu after applying margin-left
+  padding: 0; // remove padding from submenu
+  @include fontsize(inherit);
+
+  *:not(.menu-trigger) {
+    @include animation($submenu-animation-name, false, $submenu-animation-duration);
+    margin-left: $submenu-marginleft; // indent submenu items
+  }
+}
+
+// divider inside menu
+.menu > .divider {
+  padding: $controls-padding-y 0;
+}

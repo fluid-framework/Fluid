@@ -46,7 +46,8 @@ $keyframes: (
   ripple: true,
   ripple-gray: true,
   flash: true,
-  spin: true,
+  fadein: true,
+  spin: true
 ) !default;
 
 @mixin include-keyframe($name) {
@@ -71,6 +72,10 @@ $keyframes: (
           50% { opacity: 1; }
           25%,
           75% { opacity: 0; }
+        }
+      } @else if $name == fadein {
+        @keyframes fadein {
+          from { opacity: 0; }
         }
       } @else if $name == spin {
         @keyframes spin {
