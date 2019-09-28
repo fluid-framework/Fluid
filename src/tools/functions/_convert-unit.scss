@@ -2,6 +2,9 @@
 // convert-unit
 // convert a number value from one unit to another
 //
+// Note:
+// Only rem, em, px and % unit are supported
+//
 // Parameters:
 // {Number} $value - value to convert
 // {String} $to_unit - unit to convert value to
