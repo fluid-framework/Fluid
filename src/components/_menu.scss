@@ -72,7 +72,21 @@
   }
 }
 
-// Menu Trigger Needs to be First element in submenu
+//
+// Nested Menu
+//
+// Implementation of Nested menu is not included as it requires a bit of JavaScript
+// Following JavaScript Code implements nested Menu Implementation and work with major Latest Browsers
+//
+// var menutriggers = document.getElementsByClassName("menu-trigger");
+// Object.keys(menutriggers).forEach(function (k) {
+//   menutriggers[k].onclick = function (e) {
+//     e.target.classList.toggle("active");
+//   };
+// });
+//
+
+// Menu Trigger Needs to be First element in nestedMenu
 .menu-trigger {
   @include after {
     content: "";
@@ -96,7 +110,6 @@
   }
 }
 
-// submenu
 .menu .menu {
   overflow: hidden; // Prevent .menu-items from going outsize menu after applying margin-left
   padding: 0; // remove padding from submenu
