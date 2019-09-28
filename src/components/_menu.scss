@@ -16,7 +16,7 @@
   @extend %controls;
   display: flex;
   width: 100%; // reset button style
-  padding-left: $submenu-marginleft; // indent .menu-items in .menu
+  padding-left: $nestedMenu-marginleft; // indent .menu-items in .menu
   border: 0; // reset button style // override %controls style
   border-radius: border-radius(0); // override %controls style
   text-align: left; // reset button style
@@ -112,12 +112,12 @@
 
 .menu .menu {
   overflow: hidden; // Prevent .menu-items from going outsize menu after applying margin-left
-  padding: 0; // remove padding from submenu
+  padding: 0; // remove padding from nested Menu
   @include fontsize(inherit);
 
   *:not(.menu-trigger) {
-    @include animation($submenu-animation-name, false, $submenu-animation-duration);
-    margin-left: $submenu-marginleft; // indent submenu items
+    @include animation($nestedMenu-animation-name, false, $nestedMenu-animation-duration);
+    margin-left: $nestedMenu-marginleft; // indent nested Menu items
   }
 }
 

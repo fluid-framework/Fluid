@@ -10,6 +10,6 @@ $menu-item-before-borderwidth:         $border-width-wide !default;
 $menu-trigger-margintop:               .25em !default;
 $menu-trigger-caret-size:              $control-feedback-arrow-size !default;
 
-$submenu-marginleft:                   $controls-padding-x * 2 !default;
-$submenu-animation-name:               fadein !default;
-$submenu-animation-duration:           .5s !default;
+$nestedMenu-marginleft:                   $controls-padding-x * 2 !default;
+$nestedMenu-animation-name:               fadein !default;
+$nestedMenu-animation-duration:           .5s !default;
