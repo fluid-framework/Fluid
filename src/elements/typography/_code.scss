@@ -25,7 +25,7 @@ pre {
     position: relative;
     display: inline-block;
     padding: $pre-code-padding;
-    border-left: $border-width-wide solid $primary;
+    border-left: $pre-code-borderleft;
     @include border-radius-left(0);
 
     &[data-lang] {

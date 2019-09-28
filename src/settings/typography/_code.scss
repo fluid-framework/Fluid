@@ -16,6 +16,7 @@ $code-margin-x:                        .2em !default;
 $code-padding:                         .2em .4em .1em !default;
 
 $pre-code-padding:                     1em !default;
+$pre-code-borderleft:                  $borderwidth-wide solid $primary !default;
 
 $pre-code-langbadge-background:        $primary !default;
 $pre-code-langbadge-color:             clr-auto($pre-code-langbadge-background, $black, $white) !default;
