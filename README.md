@@ -18,8 +18,8 @@
   <a href="https://github.com/fluid-framework/Fluid/releases">
     <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?label=Github%20release&style=for-the-badge&color=1890ff"/>
   </a>
-  <a href="https://atmospherejs.com/fluidcss/fluid">
-   <img src="https://img.shields.io/badge/METEOR-fluidframework%3Afluid-1890ff?style=for-the-badge"/>
+  <a href="https://atmospherejs.com/fluidframework/fluid-css">
+   <img src="https://img.shields.io/badge/METEOR-fluidframework%3Afluid--css-1890ff?style=for-the-badge"/>
   </a>
   <a href="https://www.npmjs.com/package/fluid-css">
    <img src="https://img.shields.io/badge/NPM-fluid--css-1890ff?style=for-the-badge"/>

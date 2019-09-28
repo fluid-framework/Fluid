@@ -1,5 +1,5 @@
 Package.describe({
-  name: "fluidframework:fluid",
+  name: "fluidframework:fluid-css",
   version: "0.17.0",
   summary: "Modern, Stylish, Easier and Powerful front-end framework for faster web development.",
   git: "https://github.com/fluid-framework/Fluid.git",
