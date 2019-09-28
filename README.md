@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://atmospherejs.com/fluidcss/fluid">
-   <img src="https://img.shields.io/badge/meteor-fluidcss%3Afluid-1890ff?style=for-the-badge"/>
+   <img src="https://img.shields.io/badge/METEOR-fluidframework%3Afluid-1890ff?style=for-the-badge"/>
   </a>
   <a href="https://www.npmjs.com/package/fluid-css">
    <img src="https://img.shields.io/badge/NPM-fluid--css-1890ff?style=for-the-badge"/>
@@ -73,7 +73,7 @@
 
 ##### Using Meteor
 
-1. Download Package using `meteor add fluidcss:fluid`
+1. Download Package using `meteor add fluidframework:fluid`
 2. Import required Css Into project using `import "fluid-css/dist/fluid.css"`
 
 ## 📂 Structure
