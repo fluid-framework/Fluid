@@ -6,7 +6,7 @@
   display: block;
   padding: $menu-padding-y 0; // reset list style to custom value
   margin: 0; // reset list style
-  @include fontsize($font-size-normal);
+  @include fontsize($fontsize-normal);
 }
 
 //
@@ -116,7 +116,7 @@
   @include fontsize(inherit);
 
   *:not(.menu-trigger) {
-    @include animation($nestedMenu-animation-name, false, $nestedMenu-animation-duration);
+    @include animation($nestedMenu-animationname, false, $nestedMenu-animationduration);
     margin-left: $nestedMenu-marginleft; // indent nested Menu items
   }
 }

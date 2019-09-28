@@ -7,7 +7,7 @@
 .control {
   position: relative;
   display: block;
-  @include fontsize($font-size-normal);
+  @include fontsize($fontsize-normal);
 }
 
 // Note: Nested label(s) are strongly discouraged by web standards but still in order

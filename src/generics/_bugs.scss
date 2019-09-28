@@ -19,7 +19,7 @@
 body {
   box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`
   @extend %margin-0; // Remove the margin in all browsers
-  line-height: $line-height; // Correct the line height in all browsers
+  line-height: $lineheight-default; // Correct the line height in all browsers
   -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
   -webkit-tap-highlight-color: transparent; // Change the default tap highlight to be completely transparent in iOS
 }
@@ -47,7 +47,7 @@ main {
 
 b,
 strong {
-  font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
+  font-weight: $fontweight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
 }
 
 small {
@@ -82,7 +82,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family-monospace; // Correct the font in all browsers.
+  font-family: $fontfamily-monospace; // Correct the font in all browsers.
   @include fontsize(1em); // Correct the odd `em` font sizing in all browsers
 }
 
@@ -93,12 +93,12 @@ pre {
 
 sub {
   @extend %sub-sup; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
-  bottom: -$space-default-typography * .5; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
+  bottom: -$space-typography * .5; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
 }
 
 sup {
   @extend %sub-sup; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
-  top: -$space-default-typography; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
+  top: -$space-typography; // Prevent `sub` and `sup` elements from affecting the line height in all browsers
 }
 
 //

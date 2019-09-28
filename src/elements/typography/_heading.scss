@@ -4,30 +4,30 @@
 
 h1 {
   @extend %heading;
-  @include fontsize($h1-font-size);
+  @include fontsize($h1-fontsize);
 }
 
 h2 {
   @extend %heading;
-  @include fontsize($h2-font-size);
+  @include fontsize($h2-fontsize);
 }
 
 h3 {
   @extend %heading;
-  @include fontsize($h3-font-size);
+  @include fontsize($h3-fontsize);
 }
 
 h4 {
   @extend %heading;
-  @include fontsize($h4-font-size);
+  @include fontsize($h4-fontsize);
 }
 
 h5 {
   @extend %heading;
-  @include fontsize($h5-font-size);
+  @include fontsize($h5-fontsize);
 }
 
 h6 {
   @extend %heading;
-  @include fontsize($h6-font-size);
+  @include fontsize($h6-fontsize);
 }

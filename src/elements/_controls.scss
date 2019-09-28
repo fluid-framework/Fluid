@@ -15,12 +15,12 @@ button,
 }
 
 label {
-  margin-bottom: $label-margin-bottom;
+  margin-bottom: $label-marginbottom;
 }
 
 legend {
   margin-bottom: .5rem;
-  @include fontsize($font-size-large);
+  @include fontsize($fontsize-large);
 }
 
 select::-ms-expand {

@@ -5,14 +5,14 @@
 //
 // Inherit
 //
-$label-margin-bottom:                            $space-default-typography !default;
+$label-marginbottom:                             $space-typography !default;
 
 //
 // Settings
 //
-$input-minHeight:                                ($controls-line-height * 1em) + ($controls-padding-y * 2.4) !default;
+$input-minheight:                                ($controls-lineheight * 1em) + ($controls-padding-y * 2.4) !default;
 $input-background:                               $controls-label-background !default;
-$input-border-color:                             $controls-label-bordercolor !default;
+$input-bordercolor:                              $controls-label-bordercolor !default;
 $input-boxshadow-inner:                          inset 0 1px 2px rgba(clr-auto($input-background), .1) !default;
 
 $input-placeholder-color:                        $controls-label-bordercolor !default;

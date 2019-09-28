@@ -5,9 +5,9 @@
   height: $range-track-height;
   margin: 0;
   border: 0;
-  border-radius: border-radius($border-radius-pill, 0);
+  border-radius: border-radius($borderradius-pill, 0);
   background-color: $range-track-background;
-  box-shadow: box-shadow($range-track-box-shadow);
+  box-shadow: box-shadow($range-track-boxshadow);
   @include transition($range-track-transition);
 }
 
@@ -15,13 +15,13 @@
   width: $range-thumb-width;
   height: $range-thumb-height;
   border: $range-thumb-border;
-  border-radius: border-radius($border-radius-circle, 0);
+  border-radius: border-radius($borderradius-circle, 0);
   // stylelint-disable-next-line property-no-vendor-prefix
   -moz-appearance: none;
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
   background: $range-thumb-background;
-  box-shadow: box-shadow($range-thumb-box-shadow);
+  box-shadow: box-shadow($range-thumb-boxshadow);
   @include transition($range-thumb-transition);
 }

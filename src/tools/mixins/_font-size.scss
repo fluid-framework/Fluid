@@ -5,23 +5,23 @@
 
 //
 // Responsive font size
-// Generate font size based on on setting `$enable-fluid-font-sizes`
+// Generate font size based on on setting `$enable-fluid-fontsizes`
 //
 // Parameters:
-// [optional] {String,Number} $font-size - font size in rem and pm , RFS only support px and rem
+// [optional] {String,Number} $fontsize - font size in rem and pm , RFS only support px and rem
 // [optional] {Map} $important - set important in css style
 //
-@mixin fontsize($font-size: $font-size-normal, $important: false) {
-  @if $enable-fluid-font-sizes {
-    $font-size-unit: if(type-of($font-size) == "number", unit($font-size), false);
+@mixin fontsize($fontsize: $fontsize-normal, $important: false) {
+  @if $enable-fluid-fontsizes {
+    $fontsize-unit: if(type-of($fontsize) == "number", unit($fontsize), false);
 
-    // If $font-size is not a number (like inherit) or $font-size has a unit other than px or rem or its value is 0
-    @if ($font-size == 0) or (not $font-size-unit) or ($font-size-unit != "" and $font-size-unit != "px" and $font-size-unit != "rem") {
-      font-size: #{$font-size}#{if($important, !important, null)};
+    // If $fontsize is not a number (like inherit) or $fontsize has a unit other than px or rem or its value is 0
+    @if ($fontsize == 0) or (not $fontsize-unit) or ($fontsize-unit != "" and $fontsize-unit != "px" and $fontsize-unit != "rem") {
+      font-size: #{$fontsize}#{if($important, !important, null)};
     } @else {
       // Do Fluid font stuff
     }
   } @else {
-    font-size: #{$font-size}#{if($important, !important, null)};
+    font-size: #{$fontsize}#{if($important, !important, null)};
   }
 }

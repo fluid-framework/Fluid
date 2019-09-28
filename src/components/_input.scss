@@ -12,12 +12,12 @@
   @extend %controls-focus;
 
   width: 100%;
-  border-color: $input-border-color;
+  border-color: $input-bordercolor;
   background-color: $input-background;
   box-shadow: box-shadow($input-boxshadow-inner);
 
   @include hover {
-    box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-box-shadow rgba($controls-theme, .5)); // Fix: hover state box-shadow transition
+    box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-boxshadow rgba($controls-theme, .5)); // Fix: hover state box-shadow transition
   }
 
   @include focus {
@@ -27,9 +27,9 @@
 
   // minimal design variant
   &.is-min {
-    padding-bottom: $controls-padding-y - convert-unit($border-width-wide - 2, em); // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
+    padding-bottom: $controls-padding-y - convert-unit($borderwidth-wide - 2, em); // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
     border-width: 0;
-    border-bottom-width: $border-width-wide;
+    border-bottom-width: $borderwidth-wide;
     border-radius: border-radius(0);
 
     @include not-hover {
@@ -94,7 +94,7 @@ select.input {
 
 textarea.input {
   height: auto; // revert textarea height
-  min-height: $input-minHeight; // prevent user from decreasing size lower than one row
+  min-height: $input-minheight; // prevent user from decreasing size lower than one row
 }
 
 //

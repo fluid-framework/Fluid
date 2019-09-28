@@ -6,17 +6,19 @@
 // Setting
 //
 $border-color:                    $gray-200 !default;
-$border-width-normal:             1px !default;
-$border-width-wide:               3px !default;
-$border-radius-small:             .25em !default;
-$border-radius-normal:            .5em !default;
-$border-radius-large:             1em !default;
-$border-radius-pill:              50em !default;
-$border-radius-circle:            50% !default;
+
+$borderwidth-normal:              1px !default;
+$borderwidth-wide:                3px !default;
+
+$borderradius-small:              .25em !default;
+$borderradius-normal:             .5em !default;
+$borderradius-large:              1em !default;
+$borderradius-pill:               50em !default;
+$borderradius-circle:             50% !default;
 
 //
 // Derived
 //
-$border-width-default:            $border-width-normal !default;
-$border-radius-default:           $border-radius-small !default;
-$border-default:                  $border-width-default solid $border-color !default;
+$borderwidth-default:             $borderwidth-normal !default;
+$borderradius-default:            $borderradius-small !default;
+$border-default:                  $borderwidth-default solid $border-color !default;

@@ -4,5 +4,5 @@
 
 p {
   @extend %margintop-0; // nuke the top margin for easier control within type scales as it avoids margin collapsing
-  margin-bottom: $space-default-typography;
+  margin-bottom: $space-typography;
 }

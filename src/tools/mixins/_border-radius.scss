@@ -4,25 +4,25 @@
 //
 
 // top side border radius
-@mixin border-radius-top($radius: $border-radius-default, $fallback-value: null) {
+@mixin border-radius-top($radius: $borderradius-default, $fallback-value: null) {
   border-top-left-radius: border-radius($radius, $fallback-value);
   border-top-right-radius: border-radius($radius, $fallback-value);
 }
 
 // right side border radius
-@mixin border-radius-right($radius: $border-radius-default, $fallback-value: null) {
+@mixin border-radius-right($radius: $borderradius-default, $fallback-value: null) {
   border-top-right-radius: border-radius($radius, $fallback-value);
   border-bottom-right-radius: border-radius($radius, $fallback-value);
 }
 
 // bottom side border radius
-@mixin border-radius-bottom($radius: $border-radius-default, $fallback-value: null) {
+@mixin border-radius-bottom($radius: $borderradius-default, $fallback-value: null) {
   border-bottom-right-radius: border-radius($radius, $fallback-value);
   border-bottom-left-radius: border-radius($radius, $fallback-value);
 }
 
 // left side border radius
-@mixin border-radius-left($radius: $border-radius-default, $fallback-value: null) {
+@mixin border-radius-left($radius: $borderradius-default, $fallback-value: null) {
   border-top-left-radius: border-radius($radius, $fallback-value);
   border-bottom-left-radius: border-radius($radius, $fallback-value);
 }

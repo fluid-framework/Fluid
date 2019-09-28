@@ -17,7 +17,7 @@
 
     ~ label {
       @include before {
-        border-radius: border-radius($border-radius-circle, 0);
+        border-radius: border-radius($borderradius-circle, 0);
       }
     }
   }

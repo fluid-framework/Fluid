@@ -8,7 +8,7 @@
 // Parameters:
 // {Number} $value - value to convert
 // {String} $to_unit - unit to convert value to
-// [optional] {String} $base_font-size - font size at root/body/parent
+// [optional] {String} $base_fontsize - font size at root/body/parent
 //
 // Example of use:
 // $result: convert-unit(7px, rem ,14px) =>  $result: 0.5rem
@@ -18,11 +18,11 @@
 // Return:
 // {Number} Number with converted unit
 //
-@function convert-unit($value, $to_unit, $base_font-size: $default-font-size) {
+@function convert-unit($value, $to_unit, $base_fontsize: $default-fontsize) {
   $from_unit: unit($value);
   $to_unit: unquote($to_unit);
   $stripped_value: strip-unit($value);
-  $base_value: strip-unit($base_font-size);
+  $base_value: strip-unit($base_fontsize);
 
   @if $from_unit == $to_unit {
     @if $enable-debugging {
@@ -30,7 +30,7 @@
     }
     @return $value;
   }
-  @if unit($base_font-size) != px {
+  @if unit($base_fontsize) != px {
     @error "Not supported root font-size `#{unit($base_value)}`";
   }
 

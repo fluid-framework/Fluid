@@ -3,15 +3,15 @@
   display: inline-block;
   user-select: none;
   padding: $controls-padding-y $controls-padding-x;
-  border: $controls-border-width solid $controls-border-color;
-  border-radius: border-radius($controls-border-radius, 0);
+  border: $controls-borderwidth solid $controls-bordercolor;
+  border-radius: border-radius($controls-borderradius, 0);
   color: $controls-color;
   background-color: $controls-background;
   vertical-align: middle;
   text-decoration: none;
-  font-family: $controls-font-family;
-  font-weight: $controls-font-weight;
-  line-height: $controls-line-height;
+  font-family: $controls-fontfamily;
+  font-weight: $controls-fontweight;
+  line-height: $controls-lineheight;
   @include fontsize();
   @include transition($controls-transition);
 }
@@ -25,7 +25,7 @@
 
 %controls-hover {
   @include hover {
-    box-shadow: box-shadow($controls-focus-box-shadow rgba($controls-theme, .5));
+    box-shadow: box-shadow($controls-focus-boxshadow rgba($controls-theme, .5));
   }
 }
 

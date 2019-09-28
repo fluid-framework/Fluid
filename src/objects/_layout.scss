@@ -15,7 +15,7 @@
     height: $header-height;
     padding-right: $header-padding-x;
     padding-left: $header-padding-x;
-    border-top: $header-border-top;
+    border-top: $header-bordertop;
     color: $header-color;
     background-color: $header-background;
 
@@ -53,8 +53,8 @@
 
     @include media-breakpoint-above(sm) {
       width: inherit;
-      min-width: $sidebar-min-width;
-      max-width: $sidebar-max-width;
+      min-width: $sidebar-minwidth;
+      max-width: $sidebar-maxwidth;
     }
 
     &:target,

@@ -12,7 +12,7 @@
     list-style: none;
     flex-wrap: wrap;
     padding: $breadcrumb-padding-y $breadcrumb-padding-x;
-    margin-bottom: $breadcrumb-margin-bottom;
+    margin-bottom: $breadcrumb-marginbottom;
     @include fontsize();
 
     a {

@@ -19,7 +19,7 @@
   @include gradient-bg($color, 180deg);
 
   @include hover {
-    box-shadow: box-shadow($button-focus-box-shadow rgba($color, .5));
+    box-shadow: box-shadow($button-focus-boxshadow rgba($color, .5));
   }
 
   @include focus {
@@ -50,7 +50,7 @@
 
   @include hover {
     border-color: $color;
-    box-shadow: box-shadow($button-focus-box-shadow rgba($color, .5));
+    box-shadow: box-shadow($button-focus-boxshadow rgba($color, .5));
   }
 
   @include focus {

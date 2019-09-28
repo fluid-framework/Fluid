@@ -5,7 +5,7 @@
   .title {
     @include fontsize($title-size);
     color: $title-color;
-    line-height: $title-line-height;
+    line-height: $title-lineheight;
 
     &.is-sm {
       @include fontsize($title-size * $default-small-quantity, true);

@@ -7,9 +7,9 @@
     properties: font-family,
     selector: font,
     values: (
-      sans-serif: $font-family-sans-serif,
-      serif: $font-family-serif,
-      monospace: $font-family-monospace
+      sans-serif: $fontfamily-sans-serif,
+      serif: $fontfamily-serif,
+      monospace: $fontfamily-monospace
     ),
     enable-important-values: true
   );

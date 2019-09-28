@@ -9,7 +9,7 @@
 // Header
 $header-background:                  $white !default;
 $header-color:                       clr-auto($header-background) !default;
-$header-border-top:                  $border-width-wide solid $primary !default;
+$header-bordertop:                   $borderwidth-wide solid $primary !default;
 $header-height:                      64px !default;
 $header-padding-x:                   24px !default;
 $header-zindex:                      10 !default;
@@ -33,8 +33,8 @@ $sidebar-color:                      clr-auto($sidebar-background, $white, $dark
 $sidebar-padding:                    28px 14px !default;
 $sidebar-zindex:                     15 !default;
 $sidebar-transition:                 left .5s ease-in-out !default;
-$sidebar-min-width:                  250px !default;
-$sidebar-max-width:                  60vw !default;
+$sidebar-minwidth:                   250px !default;
+$sidebar-maxwidth:                   60vw !default;
 
 $overlay-background:                 rgba($black, .75) !default;
 $overlay-zindex:                     11 !default;

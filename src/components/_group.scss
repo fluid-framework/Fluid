@@ -14,7 +14,7 @@
       // separate from control placeholder to keep placeholder Priority/Precedence low
       &:not(.btn):not(.input) {
         user-select: auto; // allow user to select text inside addon
-        border-color: $group-addon-border-color;
+        border-color: $group-addon-bordercolor;
         background-color: $group-addon-background;
       }
     }
@@ -38,7 +38,7 @@
       > .input,
       > .addon,
       > .btn {
-        padding: $group-padding-y-lg $group-padding-x-lg;
+        padding: $group-lg-padding-y $group-lg-padding-x;
       }
     }
 
@@ -58,60 +58,60 @@
 
     &:not(.is-y) {
       > .control {
-        margin-right: -$controls-border-width / 2;
-        margin-left: -$controls-border-width / 2;
+        margin-right: -$controls-borderwidth / 2;
+        margin-left: -$controls-borderwidth / 2;
         > .input {
           border-radius: border-radius(0);
         }
         &:first-child > .input {
-          @include border-radius-left($controls-border-radius);
+          @include border-radius-left($controls-borderradius);
         }
         &:last-child > .input {
-          @include border-radius-right($controls-border-radius);
+          @include border-radius-right($controls-borderradius);
         }
       }
 
       > .input,
       > .addon,
       > .btn {
-        margin-right: -$controls-border-width / 2;
-        margin-left: -$controls-border-width / 2;
+        margin-right: -$controls-borderwidth / 2;
+        margin-left: -$controls-borderwidth / 2;
         border-radius: border-radius(0);
         &:first-child:not(.is-min) {
-          @include border-radius-left($controls-border-radius);
+          @include border-radius-left($controls-borderradius);
         }
         &:last-child:not(.is-min) {
-          @include border-radius-right($controls-border-radius);
+          @include border-radius-right($controls-borderradius);
         }
       }
     }
 
     &.is-y {
       > .control {
-        margin-top: -$controls-border-width / 2;
-        margin-bottom: -$controls-border-width / 2;
+        margin-top: -$controls-borderwidth / 2;
+        margin-bottom: -$controls-borderwidth / 2;
         > .input {
           border-radius: border-radius(0);
         }
         &:first-child > .input {
-          @include border-radius-top($controls-border-radius);
+          @include border-radius-top($controls-borderradius);
         }
         &:last-child > .input {
-          @include border-radius-bottom($controls-border-radius);
+          @include border-radius-bottom($controls-borderradius);
         }
       }
 
       > .input,
       > .addon,
       > .btn {
-        margin-top: -$controls-border-width / 2;
-        margin-bottom: -$controls-border-width / 2;
+        margin-top: -$controls-borderwidth / 2;
+        margin-bottom: -$controls-borderwidth / 2;
         border-radius: border-radius(0);
         &:first-child:not(.is-min) {
-          @include border-radius-top($controls-border-radius);
+          @include border-radius-top($controls-borderradius);
         }
         &:last-child:not(.is-min) {
-          @include border-radius-bottom($controls-border-radius);
+          @include border-radius-bottom($controls-borderradius);
         }
       }
     }

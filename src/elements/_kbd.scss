@@ -4,14 +4,14 @@
 
 kbd {
   padding: $kbd-padding;
-  border-radius: border-radius($border-radius-small);
+  border-radius: border-radius($borderradius-small);
   color: $kbd-color;
   background-color: $kbd-bg;
-  font-weight: $kbd-font-weight;
-  @include fontsize($kbd-font-size);
+  font-weight: $kbd-fontweight;
+  @include fontsize($kbd-fontsize);
 
   kbd {
     @include fontsize(100%);
-    font-weight: $nested-kbd-font-weight;
+    font-weight: $nested-kbd-fontweight;
   }
 }

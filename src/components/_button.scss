@@ -36,9 +36,9 @@
 
       @include hover {
         // to avoid adding extra box-shadow override
-        // - box-shadow($button-focus-box-shadow rgba($button-theme, 0.5)) is already inside default controls
-        @if $button-focus-box-shadow != $controls-focus-box-shadow and $button-theme != $controls-theme {
-          box-shadow: box-shadow($button-focus-box-shadow rgba($button-theme, .5));
+        // - box-shadow($button-focus-boxshadow rgba($button-theme, 0.5)) is already inside default controls
+        @if $button-focus-boxshadow != $controls-focus-boxshadow and $button-theme != $controls-theme {
+          box-shadow: box-shadow($button-focus-boxshadow rgba($button-theme, .5));
         }
       }
 
@@ -130,7 +130,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 0;
-        border-bottom: $border-width-default * 2 solid;
+        border-bottom: $borderwidth-default * 2 solid;
         @include transition($button-transition-minimal);
       }
 

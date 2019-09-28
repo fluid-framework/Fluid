@@ -7,11 +7,11 @@
     properties: border-radius,
     selector: "is",
     values: (
-      round: $border-radius-normal,
-      round-sm: $border-radius-small,
-      round-lg: $border-radius-large,
-      circle: $border-radius-circle,
-      pill: $border-radius-pill,
+      round: $borderradius-normal,
+      round-sm: $borderradius-small,
+      round-lg: $borderradius-large,
+      circle: $borderradius-circle,
+      pill: $borderradius-pill,
       box: 0
     ),
     enable-important-values: true
@@ -22,9 +22,9 @@
     properties: border-top-left-radius border-top-right-radius,
     selector: is-round,
     values: (
-      top-sm: $border-radius-small,
-      top: $border-radius-normal,
-      top-lg: $border-radius-large
+      top-sm: $borderradius-small,
+      top: $borderradius-normal,
+      top-lg: $borderradius-large
     ),
     enable-important-values: true
   );
@@ -35,9 +35,9 @@
     properties: border-top-right-radius border-bottom-right-radius,
     selector: is-round,
     values: (
-      right-sm: $border-radius-small,
-      right: $border-radius-normal,
-      right-lg: $border-radius-large
+      right-sm: $borderradius-small,
+      right: $borderradius-normal,
+      right-lg: $borderradius-large
     ),
     enable-important-values: true
   );
@@ -48,9 +48,9 @@
     properties: border-bottom-right-radius border-bottom-left-radius,
     selector: is-round,
     values: (
-      bottom-sm: $border-radius-small,
-      bottom: $border-radius-normal,
-      bottom-lg: $border-radius-large
+      bottom-sm: $borderradius-small,
+      bottom: $borderradius-normal,
+      bottom-lg: $borderradius-large
     ),
     enable-important-values: true
   );
@@ -61,9 +61,9 @@
     properties: border-top-left-radius border-bottom-left-radius,
     selector: is-round,
     values: (
-      left-sm: $border-radius-small,
-      left: $border-radius-normal,
-      left-lg: $border-radius-large
+      left-sm: $borderradius-small,
+      left: $borderradius-normal,
+      left-lg: $borderradius-large
     ),
     enable-important-values: true
   );

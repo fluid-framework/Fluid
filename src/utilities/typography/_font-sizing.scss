@@ -4,10 +4,10 @@
 
 @if $generate-utility-classes or $generate-component-classes {
   .is-sm {
-    @include fontsize($font-size-small, true);
+    @include fontsize($fontsize-small, true);
   }
 
   .is-lg {
-    @include fontsize($font-size-large, true);
+    @include fontsize($fontsize-large, true);
   }
 }

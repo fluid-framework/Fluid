@@ -19,7 +19,7 @@
       padding-left: $switch-label-paddingleft;
       @include before {
         width: $switch-width;
-        border-radius: border-radius($border-radius-pill, 0);
+        border-radius: border-radius($borderradius-pill, 0);
       }
 
       @include after {
@@ -30,7 +30,7 @@
         transform: translateY(-50%) scale($switch-circle-tranform-scale);
         width: $switch-circle-size;
         height: $switch-circle-size;
-        border-radius: border-radius($border-radius-circle, 0);
+        border-radius: border-radius($borderradius-circle, 0);
         opacity: inherit; // Fix : disabled opacity on %controls-label in IE
         background: $switch-circle-bordercolor;
         @include transition($switch-circle-transition);

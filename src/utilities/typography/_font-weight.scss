@@ -7,11 +7,11 @@
     properties: font-weight,
     selector: font,
     values: (
-      light: $font-weight-light,
-      lighter: $font-weight-lighter,
-      normal: $font-weight-normal,
-      bold: $font-weight-bold,
-      bolder: $font-weight-bolder
+      light: $fontweight-light,
+      lighter: $fontweight-lighter,
+      normal: $fontweight-normal,
+      bold: $fontweight-bold,
+      bolder: $fontweight-bolder
     ),
     enable-important-values: true
   );

@@ -7,10 +7,10 @@
     properties: box-shadow,
     selector: shadow,
     values: (
-      sm: $shadow-small,
-      null: $shadow-normal,
-      lg: $shadow-large,
-      round: $shadow-round,
+      sm: $boxshadow-small,
+      null: $boxshadow-normal,
+      lg: $boxshadow-large,
+      round: $boxshadow-round,
       none: none
     ),
     enable-important-values: true

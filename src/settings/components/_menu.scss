@@ -2,14 +2,14 @@
 // Menu
 //
 
-$menu-padding-y:                       .35em !default;
+$menu-padding-y:                          .35em !default;
 
-$menu-item-before-transition:          border-width .15s linear !default;
-$menu-item-before-borderwidth:         $border-width-wide !default;
+$menu-item-before-transition:             border-width .15s linear !default;
+$menu-item-before-borderwidth:            $borderwidth-wide !default;
 
-$menu-trigger-margintop:               .25em !default;
-$menu-trigger-caret-size:              $control-feedback-arrow-size !default;
+$menu-trigger-margintop:                  .25em !default;
+$menu-trigger-caret-size:                 $control-feedback-arrow-size !default;
 
 $nestedMenu-marginleft:                   $controls-padding-x * 2 !default;
-$nestedMenu-animation-name:               fadein !default;
-$nestedMenu-animation-duration:           .5s !default;
+$nestedMenu-animationname:                fadein !default;
+$nestedMenu-animationduration:            .5s !default;

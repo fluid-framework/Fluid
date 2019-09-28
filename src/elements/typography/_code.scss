@@ -11,7 +11,7 @@ code {
   word-wrap: break-word;
   word-break: break-word;
   overflow-wrap: break-word;
-  @include fontsize($code-font-size);
+  @include fontsize($code-fontsize);
 }
 
 //
