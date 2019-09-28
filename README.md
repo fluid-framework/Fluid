@@ -16,7 +16,7 @@
 <!-- Distribution Network -->
 <p align="center">
   <a href="https://github.com/fluid-framework/Fluid/releases">
-    <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?label=Github%20release&style=for-the-badge&color=805ad5"/>
+    <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?label=Github%20release&style=for-the-badge&color=1890ff"/>
   </a>
   <a href="https://atmospherejs.com/fluidcss/fluid">
    <img src="https://img.shields.io/badge/METEOR-fluidframework%3Afluid-1890ff?style=for-the-badge"/>
