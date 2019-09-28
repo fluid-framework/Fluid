@@ -13,7 +13,11 @@
   <a href="https://github.com/fluid-framework/fluid/issues/new?template=feature.md&labels=feature">Request feature ✨ </a>
 </p>
 
+<!-- Distribution Network -->
 <p align="center">
+  <a href="https://github.com/fluid-framework/Fluid/releases">
+    <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?label=Github%20release&style=for-the-badge&color=805ad5"/>
+  </a>
   <a href="https://atmospherejs.com/fluidcss/fluid">
    <img src="https://img.shields.io/badge/METEOR-fluidframework%3Afluid-1890ff?style=for-the-badge"/>
   </a>
@@ -22,6 +26,7 @@
   </a>
 </p>
 
+<!-- Status -->
 <p align="center">
   <a href="https://travis-ci.com/fluid-framework/Fluid">
     <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
@@ -34,10 +39,8 @@
   </a>
 </p>
 
+<!-- Info -->
 <p align="center">
-  <a href="https://github.com/fluid-framework/Fluid/releases">
-    <img src="https://img.shields.io/github/package-json/v/fluid-framework/fluid.svg?style=for-the-badge&color=805ad5"/>
-  </a>
   <a href="https://github.com/fluid-framework/Fluid/tree/master/LICENSE">
     <img src="https://img.shields.io/github/license/fluid-framework/Fluid.svg?style=for-the-badge&color=805ad5"/>
   </a>
