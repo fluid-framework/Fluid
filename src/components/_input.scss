@@ -125,8 +125,6 @@ textarea.input {
   }
 
   &.has-floating-label > .input[placeholder=" "] {
-    background-color: transparent;
-
     ~ label {
       position: absolute;
       top: 50%;
@@ -134,7 +132,7 @@ textarea.input {
       transform: translateY(-50%);
       pointer-events: none;
       padding: 2px;
-      background: $body-background;
+      background-color: $input-background;
       line-height: 1;
       @include transition(top, font-size);
     }
