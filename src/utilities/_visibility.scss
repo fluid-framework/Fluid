@@ -5,12 +5,11 @@
 @if $generate-utility-classes {
   $config: (
     properties: visibility,
-    selector: "is-",
+    selector: "is",
     values: (
       visible: visible,
       invisible: hidden
     ),
-    disable-prefix-values-keys: true,
     enable-important-values: true
   );
 

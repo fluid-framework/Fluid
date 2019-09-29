@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: flex-grow,
-    selector: flex,
+    selector: "flex",
     values: (
       grow: 1,
       grow-0: 0

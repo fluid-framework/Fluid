@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: background-color,
-    selector: bg,
+    selector: "bg",
     values:
     map-merge(
       $theme-colors,
@@ -45,7 +45,7 @@
 
     $config: (
       properties: background,
-      selector: bg-gradient,
+      selector: "bg-gradient",
       values:
       map-merge(
         $GRADIENTS,

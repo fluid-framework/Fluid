@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: text-transform,
-    selector: txt,
+    selector: "txt",
     values: (
       lower: lowercase,
       upper: uppercase,

@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: text-shadow,
-    selector: txt-shadow,
+    selector: "txt-shadow",
     values: (
       sm: 1.5px 1.75px 1px rgba($black, .075),
       null: 2px 2.25px 1.5px rgba($black, .15),

@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: cursor,
-    selector: cursor,
+    selector: "cursor",
     values: (
       hand: pointer,
       none: none,

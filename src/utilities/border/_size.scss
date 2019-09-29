@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: border-width,
-    selector: brdr,
+    selector: "brdr",
     values: (
       wide: $borderwidth-wide
     ),

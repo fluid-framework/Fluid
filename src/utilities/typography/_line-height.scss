@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: line-height,
-    selector: lh,
+    selector: "lh",
     values: (
       "1-2": 1.2,
       "1-5": 1.5,

@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: pointer-events,
-    selector: event,
+    selector: "event",
     values: none auto,
     enable-important-values: true
   );

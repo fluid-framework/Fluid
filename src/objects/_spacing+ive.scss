@@ -26,7 +26,7 @@
 
   $config: (
     properties: margin,
-    selector: m,
+    selector: "m",
     values: $SIZES,
     enable-important-values: true
   );
@@ -39,7 +39,7 @@
 
   $config: (
     properties: margin,
-    selector: m,
+    selector: "m",
     values: $SIZES,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
@@ -55,7 +55,7 @@
   $config: (
     responsive: true,
     properties: margin-left margin-right,
-    selector: mx,
+    selector: "mx",
     values: $SIZES,
     enable-important-values: true
   );
@@ -69,7 +69,7 @@
   $config: (
     responsive: true,
     properties: margin-top margin-bottom,
-    selector: my,
+    selector: "my",
     values: $SIZES,
     enable-important-values: true
   );
@@ -83,7 +83,7 @@
   $config: (
     responsive: true,
     properties: padding,
-    selector: p,
+    selector: "p",
     values: $SIZES,
     enable-important-values: true
   );
@@ -97,7 +97,7 @@
   $config: (
     responsive: true,
     properties: padding,
-    selector: p,
+    selector: "p",
     values: $SIZES,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
@@ -113,7 +113,7 @@
   $config: (
     responsive: true,
     properties: padding-left padding-right,
-    selector: px,
+    selector: "px",
     values: $SIZES,
     enable-important-values: true
   );
@@ -127,7 +127,7 @@
   $config: (
     responsive: true,
     properties: padding-top padding-bottom,
-    selector: py,
+    selector: "py",
     values: $SIZES,
     enable-important-values: true
   );

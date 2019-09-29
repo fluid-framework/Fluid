@@ -10,7 +10,7 @@
 
   $config: (
     properties: transform,
-    selector: rotate,
+    selector: "rotate",
     values: $ROTATIONS,
     enable-important-values: true
   );

@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: filter,
-    selector: svg-shadow,
+    selector: "svg-shadow",
     values: (
       sm: drop-shadow(-.62rem .125rem .05rem rgba(0, 0, 0, .075)),
       null: drop-shadow(-.25rem .5rem .2rem rgba(0, 0, 0, .15)),

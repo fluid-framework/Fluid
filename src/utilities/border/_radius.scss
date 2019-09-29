@@ -20,7 +20,7 @@
   @include generate-style($config);
   $config: (
     properties: border-top-left-radius border-top-right-radius,
-    selector: is-round,
+    selector: "is-round",
     values: (
       top-sm: $borderradius-small,
       top: $borderradius-normal,
@@ -33,7 +33,7 @@
 
   $config: (
     properties: border-top-right-radius border-bottom-right-radius,
-    selector: is-round,
+    selector: "is-round",
     values: (
       right-sm: $borderradius-small,
       right: $borderradius-normal,
@@ -46,7 +46,7 @@
 
   $config: (
     properties: border-bottom-right-radius border-bottom-left-radius,
-    selector: is-round,
+    selector: "is-round",
     values: (
       bottom-sm: $borderradius-small,
       bottom: $borderradius-normal,
@@ -59,7 +59,7 @@
 
   $config: (
     properties: border-top-left-radius border-bottom-left-radius,
-    selector: is-round,
+    selector: "is-round",
     values: (
       left-sm: $borderradius-small,
       left: $borderradius-normal,

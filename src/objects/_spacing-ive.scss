@@ -22,7 +22,7 @@
 
   $config: (
     properties: margin,
-    selector: m,
+    selector: "m",
     values: $SIZES,
     enable-important-values: true
   );
@@ -35,7 +35,7 @@
 
   $config: (
     properties: margin,
-    selector: m,
+    selector: "m",
     values: $SIZES,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
@@ -52,7 +52,7 @@
   $config: (
     responsive: true,
     properties: margin-left margin-right,
-    selector: mx,
+    selector: "mx",
     values: $SIZES,
     enable-important-values: true
   );
@@ -67,7 +67,7 @@
   $config: (
     responsive: true,
     properties: margin-top margin-bottom,
-    selector: my,
+    selector: "my",
     values: $SIZES,
     enable-important-values: true
   );

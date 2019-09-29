@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: text-decoration,
-    selector: txt-decor,
+    selector: "txt-decor",
     values: none underline,
     enable-important-values: true
   );

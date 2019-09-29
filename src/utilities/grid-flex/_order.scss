@@ -11,7 +11,7 @@
   $config: (
     responsive: true,
     properties: order,
-    selector: order,
+    selector: "order",
     values:
     map-merge(
       $HALFORDERS,
