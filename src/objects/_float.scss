@@ -6,7 +6,8 @@
   // Doc : add Doc
   //
   .float {
-    display: block;
+    // stylelint-disable-next-line declaration-no-important
+    display: block !important; // override display property (e.g flex) to correctly align child elements
     @extend .clearfix;
   }
 }
