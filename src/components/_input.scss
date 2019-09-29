@@ -81,6 +81,12 @@ select.input {
   &::-ms-expand {
     display: none; // Hide caret on `<select>`s in IE
   }
+
+  // Remove blue background in IE
+  &::-ms-value {
+    color: $controls-color;
+    background: $input-background;
+  }
 }
 
 .input::-ms-clear {
