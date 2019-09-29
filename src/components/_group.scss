@@ -63,10 +63,10 @@
         > .input {
           border-radius: border-radius(0);
         }
-        &:first-child > .input {
+        &:first-child > .input:not(.is-min) {
           @include border-radius-left($controls-borderradius);
         }
-        &:last-child > .input {
+        &:last-child > .input:not(.is-min) {
           @include border-radius-right($controls-borderradius);
         }
       }
@@ -93,10 +93,10 @@
         > .input {
           border-radius: border-radius(0);
         }
-        &:first-child > .input {
+        &:first-child > .input:not(.is-min) {
           @include border-radius-top($controls-borderradius);
         }
-        &:last-child > .input {
+        &:last-child > .input:not(.is-min) {
           @include border-radius-bottom($controls-borderradius);
         }
       }
