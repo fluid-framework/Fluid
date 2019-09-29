@@ -6,7 +6,7 @@
   // Doc : add Doc
   //
   .float {
-    @extend %clearfix;
     display: block;
+    @extend .clearfix;
   }
 }

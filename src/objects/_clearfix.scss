@@ -7,6 +7,10 @@
   // Doc : add Doc
   //
   .clearfix {
-    @extend %clearfix;
+    @include after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
 }
