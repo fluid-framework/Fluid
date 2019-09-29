@@ -4,6 +4,10 @@
 .control {
   > .file {
     @extend %controls-hide;
+
+    ~ label {
+      margin-bottom: 0; // override label style inside control
+    }
   }
 
   // we don't style file inputs label intentionally to allow users to style them as they want
