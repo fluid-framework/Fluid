@@ -5,7 +5,7 @@
 @if $generate-utility-classes {
   $config: (
     properties: border-style,
-    selector: "brdr",
+    selector: "border",
     values: dotted dashed solid double groove ridge inset outset,
     enable-important-values: true
   );
