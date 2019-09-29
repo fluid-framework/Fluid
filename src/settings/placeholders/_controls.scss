@@ -1,3 +1,9 @@
+//
+// Placeholders Used for various controls
+//
+
+// Basic styles for normal controls where style are directly applied on elements
+// e.g Button, Group Addon, Input, Textarea, Select, Menu, Range and %controls-label(s) label
 %controls {
   position: relative;
   display: inline-block;
@@ -16,6 +22,8 @@
   @include transition($controls-transition);
 }
 
+// Basic active state styles for normal controls where style are directly applied on elements
+// e.g Button, Group Addon, Input, Textarea, Select and %controls-label(s) label
 %controls-active {
   @include active {
     @include animation(none); // disable animations on click event and play again on focus/clickup event
@@ -23,12 +31,17 @@
   }
 }
 
+// Basic hover state styles for normal controls where style are directly applied on elements
+// e.g Button, Group Addon, Input, Textarea, Select and %controls-label(s) label
 %controls-hover {
   @include hover {
     box-shadow: box-shadow($controls-focus-boxshadow rgba($controls-theme, .5));
   }
 }
 
+
+// Basic focus state styles for normal controls where style are directly applied on elements
+// e.g Button, Group Addon, Input, Textarea, Select and %controls-label(s) label
 %controls-focus {
   @include focus {
     @include animation(ripple); // ripple animation on click event
@@ -36,6 +49,8 @@
   }
 }
 
+// Basic styles for controls where style are not directly applied on elements but on their label instead
+// e.g Checkbox, Radio and Switch
 %controls-label {
   @include active(":checked") {
     ~ label {
@@ -118,6 +133,8 @@
   }
 }
 
+// Basic styles to hide controls from visual appearance
+// e.g Checkbox, Radio, Switch and File
 %controls-hide {
   // We set position, z-index and opacity instead of setting display and visibility properties
   // because they would lead to control being hidden from screen readers and other assistive technologies
@@ -128,11 +145,15 @@
   opacity: 0;
 }
 
+// Basic styles for disabled controls
+// e.g Button, Input, Textarea, Select, Menu, Range and %controls-label(s) label
 %controls-disabled {
   pointer-events: none;
   opacity: $controls-disabled-opacity;
 }
 
+// Basic styles for showing validation icon on controls using background image
+// e.g Input, Textarea and Select
 %controls-validation-icon {
   padding-right: $input-icon-padding;
   background-repeat: no-repeat;
