@@ -13,7 +13,7 @@
 
   .has-icon-left,
   .has-icon-right {
-    position: relative;
+    @extend %position-relative;
     > .icon {
       position: absolute;
       top: 50%;
