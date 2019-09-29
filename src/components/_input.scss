@@ -78,6 +78,12 @@ select.input {
   background-image: $icon-caret-down;
   @extend %controls-validation-icon;
 
+  &[multiple],
+  &[size]:not([size="1"]) {
+    padding-right: $controls-padding-y;
+    background-image: none;
+  }
+
   &::-ms-expand {
     display: none; // Hide caret on `<select>`s in IE
   }
