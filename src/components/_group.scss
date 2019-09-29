@@ -55,7 +55,7 @@
       flex: 1 1 0%; // expand to max space available without overflow from group
     }
 
-    &:not(.is-y) {
+    &:not([class*="is-y"]) {
       > .control {
         margin-right: -$controls-borderwidth / 2;
         margin-left: -$controls-borderwidth / 2;
@@ -85,7 +85,7 @@
       }
     }
 
-    &.is-y {
+    &[class*="is-y"] {
       > .control {
         margin-top: -$controls-borderwidth / 2;
         margin-bottom: -$controls-borderwidth / 2;
@@ -116,7 +116,7 @@
     }
 
     &.is-borderless {
-      &:not(.is-y) {
+      &:not([class*="is-y"]) {
         > .control {
           > .input {
             border-top: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
@@ -147,7 +147,7 @@
           }
         }
       }
-      &.is-y {
+      &[class*="is-y"] {
         > .control {
           > .input {
             border-right: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
