@@ -12,8 +12,10 @@
 // Options:
 // The $config map contains following options:
 //
-// {String,List} `properties`:
-// properties to generate style for
+// {String,List,Map} `properties`:
+// properties to generate style for. When some property supplied as Map its value remains constant in all styles
+// (Keys) property name.
+// (values) property value.
 //
 // {String,List,Map} `values`:
 // (Keys) are used in combination with selector option to generate unique selector. null keys can be used to avoid unique selector.
@@ -103,8 +105,19 @@
 
           .#{$selector}#{$infix-key}#{$key}#{$breakpoint-suffix} {
             @each $property in $properties {
+              @if type-of($property) != string and type-of($property) != map {
+                @error "The $property:`#{$property}` inside $properties: `#{$properties}` for $selector: `#{$selector}` is of incorrect type: `#{type-of($property)}`. Type of `string` or `map` is required!";
+              }
+
               $enable-important-values: if($enable-important-values, !important, null);
-              #{$property}#{$infix-value}: $value $enable-important-values;
+
+              @if type-of($property) == string {
+                #{$property}#{$infix-value}: $value $enable-important-values;
+              } @else {
+                @each $key, $value in $property {
+                  #{$key}#{$infix-value}: $value $enable-important-values;
+                }
+              }
             }
           }
         }
