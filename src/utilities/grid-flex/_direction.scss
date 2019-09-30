@@ -9,7 +9,9 @@
     selector: "is",
     values: (
       x: row,
-      y: column
+      y: column,
+      x-rev: row-reverse,
+      y-rev: column-reverse
     ),
     enable-important-values: true
   );
