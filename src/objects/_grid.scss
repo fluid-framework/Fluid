@@ -38,26 +38,6 @@
     }
   }
 
-  @each $breakpoint in map-keys($breakpoints) {
-    @include media-breakpoint-above($breakpoint) {
-      $breakpoint: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-prefix);
-
-      // Grid child Auto width
-      .is-auto#{$breakpoint} {
-        flex: none; // Make .column inflexible and set it sizing according to width and height
-        width: auto;
-      }
-
-      // Grid child sizing classes
-      @for $i from 1 through $grid-columns {
-        .is-#{$i}#{$breakpoint} {
-          flex: none; // Make .column inflexible and set it sizing according to width and height
-          width: grid-col-width($i);
-        }
-      }
-    }
-  }
-
   //
   // Grid offset
   //

@@ -3,22 +3,33 @@
 //
 
 @if $generate-utility-classes {
+
+  $WIDTH: ();
+  @for $i from 1 through $grid-columns {
+    $WIDTH: map-merge($WIDTH, ($i : grid-col-width($i)));
+  }
+
+  $config: (
+    responsive: true,
+    properties: width (flex: none), // Make flex item inflexible and set it sizing according to width and height
+    selector: "w",
+    values: map-merge($WIDTH, (auto: auto)),
+    enable-important-values: true
+  );
+
+  @include generate-style($config);
+
   $config: (
     properties: width,
     selector: "w",
-    values:
-    map-merge(
-      $sizes,
-      (
-        25vw: 25vw,
-        50vw: 50vw,
-        75vw: 75vw,
-        100vw: 100vw,
-        auto: auto,
-        fit: fit-content,
-        vmax: 100vmax,
-        vmin: 100vmin,
-      )
+    values: (
+      25vw: 25vw,
+      50vw: 50vw,
+      75vw: 75vw,
+      100vw: 100vw,
+      fit: fit-content,
+      vmax: 100vmax,
+      vmin: 100vmin
     ),
     enable-important-values: true
   );
