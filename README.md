@@ -32,10 +32,7 @@
     <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
   </a>
   <a href="https://bundlephobia.com/result?p=fluid-css">
-    <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=35000&max=50000&style=for-the-badge"/>
-  </a>
-  <a href="https://en.wikipedia.org/wiki/Brotli">
-    <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=brotli&label=Brotli_size&softmax=30000&max=50000&style=for-the-badge"/>
+    <img src="https://img.shields.io/bundlephobia/minzip/fluid-css?color=%2344CC11&label=Gzip%20Size&style=for-the-badge">
   </a>
 </p>
 
