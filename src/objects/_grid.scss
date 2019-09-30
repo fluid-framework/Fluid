@@ -29,9 +29,8 @@
 
   .column {
     box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`
-    flex-basis: 0;
-    flex-grow: 1;
-    width: 100%;
+    flex: 1 0 0%; // Make .column flexible
+    max-width: 100%; // Wrap .column inside grid when with auto sizing classes on IE
 
     // Grid Gap
     @if $enable-grid-gap {
@@ -45,16 +44,15 @@
 
       // Grid child Auto width
       .is-auto#{$breakpoint} {
-        flex: 0 0 auto;
+        flex: none; // Make .column inflexible and set it sizing according to width and height
         width: auto;
-        max-width: 100%;
       }
 
       // Grid child sizing classes
       @for $i from 1 through $grid-columns {
         .is-#{$i}#{$breakpoint} {
-          flex: 0 0 grid-col-width($i);
-          max-width: grid-col-width($i);
+          flex: none; // Make .column inflexible and set it sizing according to width and height
+          width: grid-col-width($i);
         }
       }
     }
@@ -68,7 +66,7 @@
     @include media-breakpoint-above($breakpoint, $breakpoints) {
       $breakpoint: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-prefix);
 
-      // removing last column because cannot offset a whole grid
+      // removing last .column because cannot offset a whole grid
       @for $i from 1 through ($grid-columns - 1) {
         .off-#{$i}#{$breakpoint} {
           margin-left: grid-col-width($i);
