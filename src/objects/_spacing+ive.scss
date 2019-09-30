@@ -18,8 +18,6 @@
 */
 
 @if $generate-spacing-classes {
-  $SIZES: $space-sizes;
-
   //
   // Basic Margin
   //
@@ -27,7 +25,7 @@
   $config: (
     properties: margin,
     selector: "m",
-    values: $SIZES,
+    values: $space-sizes,
     enable-important-values: true
   );
 
@@ -40,7 +38,7 @@
   $config: (
     properties: margin,
     selector: "m",
-    values: $SIZES,
+    values: $space-sizes,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
     enable-important-values: true
@@ -56,7 +54,7 @@
     responsive: true,
     properties: margin-left margin-right,
     selector: "mx",
-    values: $SIZES,
+    values: $space-sizes,
     enable-important-values: true
   );
 
@@ -70,7 +68,7 @@
     responsive: true,
     properties: margin-top margin-bottom,
     selector: "my",
-    values: $SIZES,
+    values: $space-sizes,
     enable-important-values: true
   );
 
@@ -84,7 +82,7 @@
     responsive: true,
     properties: padding,
     selector: "p",
-    values: $SIZES,
+    values: $space-sizes,
     enable-important-values: true
   );
 
@@ -98,7 +96,7 @@
     responsive: true,
     properties: padding,
     selector: "p",
-    values: $SIZES,
+    values: $space-sizes,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
     enable-important-values: true
@@ -114,7 +112,7 @@
     responsive: true,
     properties: padding-left padding-right,
     selector: "px",
-    values: $SIZES,
+    values: $space-sizes,
     enable-important-values: true
   );
 
@@ -128,7 +126,7 @@
     responsive: true,
     properties: padding-top padding-bottom,
     selector: "py",
-    values: $SIZES,
+    values: $space-sizes,
     enable-important-values: true
   );
 
