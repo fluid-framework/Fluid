@@ -74,7 +74,7 @@
     position: relative;
     cursor: pointer;
     padding-left: $controls-label-paddingleft;
-    margin-bottom: 0; // override label margin bottom inside control
+    margin-bottom: 0; // override label style inside control
 
     :not(:empty) {
       padding-right: .5rem;
