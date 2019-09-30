@@ -31,7 +31,7 @@
   <a href="https://travis-ci.com/fluid-framework/Fluid">
     <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
   </a>
-  <a href="https://en.wikipedia.org/wiki/Gzip">
+  <a href="https://bundlephobia.com/result?p=fluid-css">
     <img src="https://img.badgesize.io/https://github.com/fluid-framework/Fluid/tree/master/dist/fluid.min.css?compression=gzip&label=Gzip_size&softmax=35000&max=50000&style=for-the-badge"/>
   </a>
   <a href="https://en.wikipedia.org/wiki/Brotli">
