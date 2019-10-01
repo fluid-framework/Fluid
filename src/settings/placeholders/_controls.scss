@@ -32,7 +32,7 @@
 }
 
 // Basic hover state styles for normal controls where style are directly applied on elements
-// e.g Button, Group Addon, Input, Textarea, Select and %controls-label(s) label
+// e.g Button, Group Addon, Textarea, Select and %controls-label(s) label
 %controls-hover {
   @include hover {
     box-shadow: box-shadow($controls-focus-boxshadow rgba($controls-theme, .5));
