@@ -18,12 +18,6 @@
         background-color: $group-addon-background;
       }
     }
-
-    > a.addon {
-      @extend %controls-active;
-      @extend %controls-hover;
-      @extend %controls-focus;
-    }
   }
 
   //
