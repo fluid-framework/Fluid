@@ -10,15 +10,15 @@
 
   // Remove gap from grid layout
   @if $enable-grid-gap {
-    .is-gap-0 > .column {
+    .has-gap-0 > .column {
       padding: 0;
     }
 
-    .is-gap-sm > .column {
+    .has-gap-sm > .column {
       padding: $grid-gap / 4;
     }
 
-    .is-gap-lg > .column {
+    .has-gap-lg > .column {
       padding: $grid-gap;
     }
   }
