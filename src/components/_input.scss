@@ -8,7 +8,6 @@
 .input {
   @extend %controls;
   @extend %controls-active;
-  @extend %controls-hover;
   @extend %controls-focus;
 
   width: 100%;
