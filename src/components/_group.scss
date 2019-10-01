@@ -51,7 +51,7 @@
     }
 
     > .input,
-    > .control {
+    > .control:not(.addon) {
       flex: 1 1 0%; // expand to max space available without overflow from group
     }
 
