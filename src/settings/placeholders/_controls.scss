@@ -39,7 +39,6 @@
   }
 }
 
-
 // Basic focus state styles for normal controls where style are directly applied on elements
 // e.g Button, Group Addon, Input, Textarea, Select and %controls-label(s) label
 %controls-focus {
@@ -52,7 +51,15 @@
 // Basic styles for controls where style are not directly applied on elements but on their label instead
 // e.g Checkbox, Radio and Switch
 %controls-label {
-  @include active(":checked") {
+  @include active {
+    ~ label {
+      @include before {
+        opacity: .5;
+      }
+    }
+  }
+
+  &:checked {
     ~ label {
       @include before {
         border-color: currentColor;

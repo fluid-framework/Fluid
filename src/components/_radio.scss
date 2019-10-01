@@ -6,7 +6,7 @@
     @extend %controls-hide;
     @extend %controls-label;
 
-    @include active(":checked") {
+    &:checked {
       ~ label {
         @include before {
           border-width: $radio-checked-borderwidth;
