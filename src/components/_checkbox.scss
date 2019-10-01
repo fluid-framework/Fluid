@@ -34,7 +34,6 @@
           transform: translate(-50%, -50%);
           width: $checkbox-indeterminate-width;
           height: $checkbox-indeterminate-height;
-          opacity: inherit;  // Fix : disabled opacity on %controls-label in IE
           background: $checkbox-indeterminate-background;
         }
       }
