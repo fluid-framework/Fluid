@@ -18,6 +18,7 @@ $header-transition:                  height .35s ease-in-out, line-height .35s e
 // main and body layout
 $body-background:                    $light !default;
 $body-color:                         clr-auto($body-background, $white, $dark) !default;
+$main-background:                    $body-background !default;
 $main-zindex:                        1 !default;
 
 // Footer

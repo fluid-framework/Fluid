@@ -32,7 +32,7 @@
   .lyt-main {
     @extend %position-relative;
     z-index: $main-zindex;
-    background: $body-background;
+    background: $main-background;
   }
 
   //
