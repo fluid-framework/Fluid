@@ -7,6 +7,7 @@
   padding: $menu-padding-y 0; // reset list style to custom value
   margin: 0; // reset list style
   @include fontsize($fontsize-normal);
+  @include menu-variant($controls-theme); // default Menu variant styles
 }
 
 //
@@ -20,7 +21,6 @@
   border: 0; // reset button style // override %controls style
   border-radius: border-radius(0); // override %controls style
   text-align: left; // reset button style
-  @include menu-variant($controls-theme); // default Menu variant styles
 
   @include before {
     content: "";
