@@ -125,10 +125,8 @@
   @include disabled {
     ~ label {
       // Separate style from %controls-disabled placeholder to Fix : disabled opacity on %controls-label in IE
-      // stylelint-disable-next-line declaration-no-important
-      pointer-events: none !important;
-      // stylelint-disable-next-line declaration-no-important
-      opacity: $controls-disabled-opacity !important;
+      pointer-events: none;
+      opacity: $controls-disabled-opacity;
       @include before {
         // stylelint-disable-next-line declaration-no-important
         color: $controls-theme-light !important;
