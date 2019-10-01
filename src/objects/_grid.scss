@@ -8,21 +8,6 @@
     flex-wrap: wrap; // wrap grid to multiline if overflow
   }
 
-  // Remove gap from grid layout
-  @if $enable-grid-gap {
-    .has-gap-0 > .column {
-      padding: 0;
-    }
-
-    .has-gap-sm > .column {
-      padding: $grid-gap / 4;
-    }
-
-    .has-gap-lg > .column {
-      padding: $grid-gap;
-    }
-  }
-
   //
   // Grid column
   //
@@ -35,6 +20,24 @@
     // Grid Gap
     @if $enable-grid-gap {
       padding: $grid-gap / 2;
+    }
+  }
+
+  //
+  // Grid Gap
+  //
+
+  @if $enable-grid-gap {
+    .has-gap-0 > .column {
+      padding: 0;
+    }
+
+    .has-gap-sm > .column {
+      padding: $grid-gap / 4;
+    }
+
+    .has-gap-lg > .column {
+      padding: $grid-gap;
     }
   }
 
