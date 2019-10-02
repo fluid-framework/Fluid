@@ -45,60 +45,56 @@
 
     &:not(.is-y) {
       > .control {
-        margin-right: -$controls-borderwidth / 2;
-        margin-left: -$controls-borderwidth / 2;
+        @extend %group-margin-x;
         > .input {
-          border-radius: border-radius(0);
+          @extend %group-borderradius-0;
         }
         &:first-child > .input:not(.is-min) {
-          @include border-radius-left($controls-borderradius);
+          @extend %group-borderradius-left;
         }
         &:last-child > .input:not(.is-min) {
-          @include border-radius-right($controls-borderradius);
+          @extend %group-borderradius-right;
         }
       }
 
       > .input,
       > .addon,
       > .btn {
-        margin-right: -$controls-borderwidth / 2;
-        margin-left: -$controls-borderwidth / 2;
-        border-radius: border-radius(0);
+        @extend %group-margin-x;
+        @extend %group-borderradius-0;
         &:first-child:not(.is-min) {
-          @include border-radius-left($controls-borderradius);
+          @extend %group-borderradius-left;
         }
         &:last-child:not(.is-min) {
-          @include border-radius-right($controls-borderradius);
+          @extend %group-borderradius-right;
         }
       }
     }
 
     &.is-y {
       > .control {
-        margin-top: -$controls-borderwidth / 2;
-        margin-bottom: -$controls-borderwidth / 2;
+        @extend %group-margin-y;
         > .input {
-          border-radius: border-radius(0);
+          @extend %group-borderradius-0;
         }
         &:first-child > .input:not(.is-min) {
-          @include border-radius-top($controls-borderradius);
+          @extend %group-borderradius-top;
         }
         &:last-child > .input:not(.is-min) {
-          @include border-radius-bottom($controls-borderradius);
+          @extend %group-borderradius-bottom;
         }
       }
 
       > .input,
       > .addon,
       > .btn {
-        margin-top: -$controls-borderwidth / 2;
-        margin-bottom: -$controls-borderwidth / 2;
-        border-radius: border-radius(0);
+        @extend %group-margin-y;
+        @extend %group-borderradius-0;
         &:first-child:not(.is-min) {
-          @include border-radius-top($controls-borderradius);
+          @extend %group-borderradius-top;
         }
         &:last-child:not(.is-min) {
-          @include border-radius-bottom($controls-borderradius);
+          @extend %group-borderradius-bottom;
         }
       }
     }
@@ -107,62 +103,58 @@
       &:not(.is-y) {
         > .control {
           > .input {
-            border-top: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-bottom: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-radius: border-radius(0);
+            @extend %group-border-y-0;
+            @extend %group-borderradius-0;
           }
 
           &:first-child > .input {
-            border-left: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-left-0;
           }
           &:last-child > .input {
-            border-right: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-right-0;
           }
         }
 
         > .input,
         > .addon,
         > .btn {
-          border-top: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
-          border-bottom: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
-          border-radius: border-radius(0);
+          @extend %group-border-y-0;
+          @extend %group-borderradius-0;
 
           &:first-child {
-            border-left: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-left-0;
           }
           &:last-child {
-            border-right: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-right-0;
           }
         }
       }
       &.is-y {
         > .control {
           > .input {
-            border-right: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-left: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
-            border-radius: border-radius(0);
+            @extend %group-border-x-0;
+            @extend %group-borderradius-0;
           }
 
           &:first-child > .input {
-            border-top: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-top-0;
           }
           &:last-child > .input {
-            border-bottom: 0; // avoid using @mixin to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-bottom-0;
           }
         }
 
         > .input,
         > .addon,
         > .btn {
-          border-right: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
-          border-left: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
-          border-radius: border-radius(0);
+          @extend %group-border-x-0;
+          @extend %group-borderradius-0;
 
           &:first-child {
-            border-top: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-top-0;
           }
           &:last-child {
-            border-bottom: 0; // avoid using @mixin border to remove borders independent of `$design-shadow-else-border` option
+            @extend %group-border-bottom-0;
           }
         }
       }
