@@ -8,8 +8,8 @@
   .addon {
     @extend %controls;
     display: flex; // override %controls style to use align-items
-    align-items: center; // Center align content in addon
     user-select: auto; // allow user to select text inside addon
+    align-items: center; // Center align content in addon
     border-color: $group-addon-bordercolor;
     background-color: $group-addon-background;
   }
