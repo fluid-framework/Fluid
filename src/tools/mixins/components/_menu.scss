@@ -10,7 +10,7 @@
     // Style focus state to show elements is in focus state using tab
     @include hover-focus {
       color: $color;
-      background-color: clr-step($color, -8);
+      background-color: clr-step($color, -9);
     }
 
     &.active {
