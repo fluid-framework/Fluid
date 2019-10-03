@@ -15,6 +15,16 @@
 // {Color} value of color step
 //
 @function clr-step($color, $step, $color-step-interval: 10%) {
+  @if unit($color-step-interval) != "%" {
+    @error "invalid value of $color-step-interval `#{$color-step-interval}` , The value unit must be `%`";
+  }
+  @if not unitless($step) {
+    @error "invalid value of $step `#{$step}` , The value must not have a unit";
+  }
+  @if $step * $color-step-interval > 100 or $step * $color-step-interval < -100 {
+    @error "invalid value of $step `#{$step}` , The value must be in-between `#{100% / $color-step-interval}` - `#{-1 * 100% / $color-step-interval }`";
+  }
+
   $base-color: if($step > 0, $black, $white);
   $step: abs($step);
   @return mix($base-color, $color, $step * $color-step-interval);
