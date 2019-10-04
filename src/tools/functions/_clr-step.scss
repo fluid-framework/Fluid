@@ -25,6 +25,10 @@
     @error "invalid value of $step `#{$step}` , The value must be in-between `#{100% / $color-step-interval}` - `#{-1 * 100% / $color-step-interval }`";
   }
 
+  // invert clr-step function output depending on $design-theme
+  $theme-color: if($design-theme == light, 1, -1);
+  $step: $step * $theme-color;
+
   $base-color: if($step > 0, $black, $white);
   $step: abs($step);
   @return mix($base-color, $color, $step * $color-step-interval);

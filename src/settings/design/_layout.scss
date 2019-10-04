@@ -16,7 +16,7 @@ $header-zindex:                      10 !default;
 $header-transition:                  height .35s ease-in-out, line-height .35s ease-in-out !default;
 
 // main and body layout
-$body-background:                    $light !default;
+$body-background:                    if($design-theme == light, $light, $dark) !default;
 $body-color:                         clr-auto($body-background, $white, $dark) !default;
 $main-background:                    $body-background !default;
 $main-zindex:                        1 !default;
