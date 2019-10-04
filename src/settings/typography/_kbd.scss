@@ -13,7 +13,7 @@ $kbd-fontsize:                      $code-fontsize !default;
 // Settings
 //
 $kbd-background:                    $gray-900 !default;
-$kbd-color:                         clr-auto($kbd-bg, $white, $black) !default;
+$kbd-color:                         clr-auto($kbd-background, $white, $black) !default;
 $kbd-fontweight:                    $fontweight-light !default;
 
 $nested-kbd-fontweight:             $fontweight-bold !default;
