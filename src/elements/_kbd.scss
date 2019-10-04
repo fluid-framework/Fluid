@@ -6,7 +6,7 @@ kbd {
   padding: $kbd-padding;
   border-radius: border-radius($borderradius-small);
   color: $kbd-color;
-  background-color: $kbd-bg;
+  background-color: $kbd-background;
   font-weight: $kbd-fontweight;
   @include fontsize($kbd-fontsize);
 
