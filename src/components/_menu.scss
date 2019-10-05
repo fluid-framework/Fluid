@@ -93,14 +93,13 @@
   @include after {
     content: "";
     align-self: center;
-    margin-top: $menu-trigger-margintop;
     margin-left: auto; // align .menu-trigger caret to end of flex
     @include triangle(bottom, $menu-trigger-caret-size, currentColor);
   }
 
   &.active {
     @include after {
-      transform: rotate(180deg) translateY(50%);
+      transform: rotate(180deg);
     }
   }
 

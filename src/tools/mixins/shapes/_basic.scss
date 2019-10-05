@@ -2,15 +2,16 @@
 // Basic Shapes
 //
 @mixin triangle($direction: bottom, $size: 6px, $color: currentColor) {
-  $direction-inverse: (
+  $direction-inverse-map: (
     top: bottom,
     right: left,
     bottom: top,
     left: right
   );
 
-  $direction: map-get($direction-inverse, $direction);
+  $direction-inverse: map-get($direction-inverse-map, $direction);
 
   border: $size solid transparent;
-  border-#{$direction}-color: $color;
+  border-#{$direction-inverse}-color: $color;
+  border-#{$direction}: 0;
 }
