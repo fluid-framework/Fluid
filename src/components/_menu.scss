@@ -118,7 +118,7 @@
   @include fontsize(inherit);
 
   *:not(.menu-trigger) {
-    @include animation($nestedMenu-animationname, false, $nestedMenu-animationduration);
+    @include animation($nestedMenu-animationname, $nestedMenu-animationduration);
     margin-left: $nestedMenu-marginleft; // indent nested Menu items
   }
 }

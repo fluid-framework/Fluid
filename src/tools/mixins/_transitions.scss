@@ -30,14 +30,14 @@
 // [optional] {Time} $duration - Duration of animation
 // [optional] {Animation function} $function - Animation function
 //
-@mixin animation($name, $infinite: false, $duration: 1s, $function: ease-out) {
+@mixin animation($name, $duration: 1s, $function: ease-out, $infinite: false) {
   @if $enable-transitions {
     @if ($name == none) {
       animation: none;
     } @else {
       @include include-keyframe($name);
       $infinite: if($infinite, infinite, null);
-      animation: $name $duration $function both $infinite;
+      animation: $name $duration $function $infinite both;
     }
   }
 }
