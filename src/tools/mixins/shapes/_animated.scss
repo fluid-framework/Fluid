@@ -18,9 +18,8 @@
     border: .15em solid currentColor;
     border-right-color: transparent;
     border-radius: 50%;
-    // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
     // stylelint-disable-next-line property-blacklist
-    animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear; // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
     color: $color;
     @include include-keyframe(spin);
   }
