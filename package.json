@@ -78,7 +78,7 @@
     "node": ">=8"
   },
   "files": [
-    "dist/{css}",
-    "src/{scss}"
+    "dist/*",
+    "src/*"
   ]
 }
