@@ -254,7 +254,6 @@ input[type="month"] {
 textarea {
   @extend %overflow-auto; // Remove the default vertical scrollbar in IE
   resize: vertical; // Textareas should really only resize vertically so they don't break their (horizontal) containers
-  @extend %-webkitappearance-textfield; // Use the same borders as textfields
 }
 
 fieldset {
