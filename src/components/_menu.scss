@@ -17,7 +17,7 @@
   @extend %controls;
   display: flex;
   width: 100%; // reset button style
-  padding-left: $nestedMenu-marginleft; // indent .menu-items in .menu
+  padding-left: $nestedMenu-marginleft; // indent .menu-item in .menu
   border: 0; // reset button style // override %controls style
   border-radius: border-radius(0); // override %controls style
   color: inherit; // reset %controls style
@@ -112,7 +112,7 @@
 }
 
 .menu .menu {
-  overflow: hidden; // Prevent .menu-items from going outsize menu after applying margin-left
+  overflow: hidden; // Prevent .menu-item from going outsize menu after applying margin-left
   padding: 0; // remove padding from nested Menu
   @include fontsize(inherit);
 
