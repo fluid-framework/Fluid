@@ -40,22 +40,24 @@
   // Doc : add Doc
   //
   .lyt-sidebar {
-    @extend %position-fixed;
-    top: 0;
-    bottom: 0;
-    left: -100%;
-    z-index: $sidebar-zindex;
-    overflow: auto;
     width: 100%;
     color: $sidebar-color;
     background-color: $sidebar-background;
-    @include transition($sidebar-transition);
 
     @include media-breakpoint-above(sm) {
       width: inherit;
       min-width: $sidebar-minwidth;
       max-width: $sidebar-maxwidth;
     }
+  }
+
+  .lyt-sidebar.fixed {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    z-index: $sidebar-zindex;
+    overflow: auto;
+    @include transition($sidebar-transition);
 
     &:target,
     &.active {
