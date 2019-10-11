@@ -11,7 +11,8 @@
       $theme-colors,
       (
         white: $white,
-        black: $black
+        black: $black,
+        hide: transparent
       )
     ),
     enable-important-values: true
