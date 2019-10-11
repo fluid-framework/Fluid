@@ -47,7 +47,6 @@
     z-index: $sidebar-zindex;
     overflow: auto;
     width: 100%;
-    padding: $sidebar-padding;
     color: $sidebar-color;
     background-color: $sidebar-background;
     @include transition($sidebar-transition);
