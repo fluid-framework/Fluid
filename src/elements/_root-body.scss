@@ -14,6 +14,7 @@ body {
   color: $body-color;
   background-color: $body-background; // As a best practice, apply a default `background-color`.
   text-align: left; // Set an explicit initial text-align value
+  text-align: start; // Set an explicit initial text-align value
   tab-size: 4; // Use a 4-space tab width in all browsers
   font-family: $fontfamily-default; // add native font family stack to the browser
   font-weight: $fontweight-default; // add font-weight to normalize the font-weight
