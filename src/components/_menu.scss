@@ -33,10 +33,9 @@
     border-left-color: inherit;
     @include transition(
       $menu-item-before-transition,
-      border-color .5s cubic-bezier(1, 0, 1, 0), // retain border-color till border width be 0
+      border-color .5s cubic-bezier(1, 0, 1, 0) // retain border-color till border width be 0
     );
   }
-
 
   &:not(.active) {
     // Style focus state to show elements in there focus state like button or anchors with href
