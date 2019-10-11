@@ -88,7 +88,24 @@
 // });
 //
 
-// Menu Trigger Needs to be First element in nestedMenu
+// Nested Menu Support
+.menu .menu {
+  overflow: hidden; // Prevent .menu-item from going outsize menu after applying margin-left
+  padding: 0; // remove padding from nested Menu
+  @include fontsize(inherit);
+
+  * {
+    @include animation($nestedMenu-animationname, $nestedMenu-animationduration, ease-out, false, backwards);
+    margin-left: $nestedMenu-marginleft; // indent nested Menu items
+  }
+
+  .menu-trigger {
+    @include animation(none); // override style from nested Menu items
+    margin-left: 0; // override style from nested Menu items
+  }
+}
+
+// .menu-trigger Needs to be First element in nested menu
 .menu-trigger {
   @include after {
     content: "";
@@ -108,17 +125,6 @@
     ~ * {
       display: none;
     }
-  }
-}
-
-.menu .menu {
-  overflow: hidden; // Prevent .menu-item from going outsize menu after applying margin-left
-  padding: 0; // remove padding from nested Menu
-  @include fontsize(inherit);
-
-  *:not(.menu-trigger) {
-    @include animation($nestedMenu-animationname, $nestedMenu-animationduration);
-    margin-left: $nestedMenu-marginleft; // indent nested Menu items
   }
 }
 
