@@ -13,7 +13,7 @@ $header-bordertop:                   $borderwidth-wide solid $primary !default;
 $header-height:                      64px !default;
 $header-padding-x:                   24px !default;
 $header-zindex:                      10 !default;
-$header-transition:                  height .35s ease-in-out, line-height .35s ease-in-out !default;
+$header-transition:                  min-height .35s ease-in-out, line-height .35s ease-in-out !default;
 
 // main and body layout
 $body-background:                    if($design-theme == light, $light, $dark) !default;

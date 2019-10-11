@@ -23,7 +23,7 @@
     @include transition($header-transition);
 
     &.is-collapse {
-      height: $header-height-collapsed;
+      min-height: $header-height-collapsed;
     }
   }
 
