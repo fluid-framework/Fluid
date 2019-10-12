@@ -150,6 +150,7 @@
       }
 
       @include hover-focus {
+      @include hover-focus-active {
         @include before {
           width: 100%;
         }

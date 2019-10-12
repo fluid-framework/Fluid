@@ -32,7 +32,7 @@
     left: 0;
     border-left: 0 solid;
     border-left-color: inherit;
-    @include transition($menu-item-before-transition, border-color 0.5s cubic-bezier(1, 0, 1, 0)); // retain border-color till border width be 0
+    @include transition($menu-item-before-transition, border-color .5s cubic-bezier(1, 0, 1, 0)); // retain border-color till border width be 0
   }
 
   &:not(.active) {
