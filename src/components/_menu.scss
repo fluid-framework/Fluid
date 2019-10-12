@@ -4,7 +4,7 @@
 
 .menu {
   display: block;
-  padding: $menu-padding-y 0; // reset list style to custom value
+  padding: 0; // reset list style to custom value
   margin: 0; // reset list style
   @include fontsize($fontsize-normal);
   @include menu-variant($controls-theme); // default Menu variant styles
@@ -91,7 +91,6 @@
 // Nested Menu Support
 .menu .menu {
   overflow: hidden; // Prevent .menu-item from going outsize menu after applying margin-left
-  padding: 0; // remove padding from nested Menu
   @include fontsize(inherit);
 
   * {
