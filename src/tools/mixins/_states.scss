@@ -77,6 +77,17 @@
   }
 }
 
+@mixin hover-focus-active() {
+  &.hover,
+  &:hover,
+  &.focus,
+  &:focus,
+  &:not([disabled]):not(:disabled).active,
+  &:not([disabled]):not(:disabled):active {
+    @content;
+  }
+}
+
 // Disabled
 // Generate disabled state
 //

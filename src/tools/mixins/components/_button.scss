@@ -66,11 +66,19 @@
 
 // minimal design variant
 @mixin button-design-minimal-variant($color) {
+  $active-border: clr-step($color, 4);
 
   @include hover-focus {
     color: $color;
     @include before {
       border-bottom-color: $color;
+    }
+  }
+
+  @include active {
+    color: $active-border;
+    @include before {
+      border-bottom-color: $active-border;
     }
   }
 
