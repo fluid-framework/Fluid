@@ -7,7 +7,7 @@
     @extend %controls-label;
 
     &:checked {
-      ~ label {
+      ~ .label {
         @include after {
           top: $checkbox-checked-arrow-top;
           transform: translate(-50%, -50%) rotate(45deg);
@@ -21,7 +21,7 @@
     }
 
     &:indeterminate {
-      ~ label {
+      ~ .label {
         @include before {
           border-color: currentColor;
           background: currentColor;
@@ -39,7 +39,7 @@
       }
     }
 
-    ~ label {
+    ~ .label {
       @include after {
         content: "";
         position: absolute;

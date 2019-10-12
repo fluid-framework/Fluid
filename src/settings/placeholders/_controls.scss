@@ -52,7 +52,7 @@
 // e.g Checkbox, Radio and Switch
 %controls-label {
   @include active {
-    ~ label {
+    ~ .label {
       @include before {
         opacity: .5;
       }
@@ -60,7 +60,7 @@
   }
 
   &:checked {
-    ~ label {
+    ~ .label {
       @include before {
         border-color: currentColor;
         background: currentColor;
@@ -70,14 +70,14 @@
   }
 
   @include focus {
-    ~ label {
+    ~ .label {
       @include before {
         @include animation(ripple); // ripple animation on click event
       }
     }
   }
 
-  ~ label {
+  ~ .label {
     position: relative;
     cursor: pointer;
     padding-left: $controls-label-paddingleft;
@@ -113,7 +113,7 @@
   //
   @each $color, $value in $theme-colors {
     &.is-#{$color} {
-      ~ label {
+      ~ .label {
         @include before {
           color: $value;
         }
@@ -122,7 +122,7 @@
   }
 
   @include disabled {
-    ~ label {
+    ~ .label {
       // Separate style from %controls-disabled placeholder to Fix : disabled opacity on %controls-label in IE
       pointer-events: none;
       opacity: $controls-disabled-opacity;

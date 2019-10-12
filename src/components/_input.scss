@@ -136,7 +136,7 @@ textarea.input {
   }
 
   &.has-floating-label > .input[placeholder=" "] {
-    ~ label {
+    ~ .label {
       position: absolute;
       top: 50%;
       left: convert-unit($controls-padding-x, rem);
@@ -149,14 +149,14 @@ textarea.input {
     }
 
     @include focus(":not(:placeholder-shown)") {
-      ~ label {
+      ~ .label {
         top: 0%;
         @include fontsize($default-small-quantity * 1em);
       }
     }
     // stylelint-disable-next-line selector-no-vendor-prefix
     &:not(:-ms-input-placeholder) {
-      ~ label {
+      ~ .label {
         top: 0%;
         @include fontsize($default-small-quantity * 1em);
       }

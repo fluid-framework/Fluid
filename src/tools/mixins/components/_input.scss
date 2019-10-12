@@ -33,7 +33,7 @@
     color: $color;
   }
 
-  .control.has-floating-label > & ~ label {
+  .control.has-floating-label > & ~ .label {
     color: $color;
   }
 }

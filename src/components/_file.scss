@@ -5,7 +5,7 @@
   > .file {
     @extend %controls-hide;
 
-    ~ label {
+    ~ .label {
       margin-bottom: 0; // override label style inside control
     }
   }

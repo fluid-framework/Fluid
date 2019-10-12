@@ -10,17 +10,8 @@
   @include fontsize($fontsize-normal);
 }
 
-// Note: Nested label(s) are strongly discouraged by web standards but still in order
-// to keep accessibility of developers we provide work around to use outer label for
-// browser and inner label for styling controls i.e bending web standards a bit.
-//
-// Read more : https://stackoverflow.com/questions/20834755/standards-on-behaviour-of-nested-labels
 label.control {
-  cursor: pointer;
   margin-bottom: 0;
-  label {
-    pointer-events: none; // disable forwarding pointer events to inner label(s)
-  }
 }
 
 //

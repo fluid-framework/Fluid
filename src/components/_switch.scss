@@ -7,7 +7,7 @@
     @extend %controls-label;
 
     &:checked {
-      ~ label {
+      ~ .label {
         @include after {
           left: $switch-width - $switch-circle-size;
           background-color: $switch-active-circle-background;
@@ -15,7 +15,7 @@
       }
     }
 
-    ~ label {
+    ~ .label {
       padding-left: $switch-label-paddingleft;
       @include before {
         width: $switch-width;
