@@ -4,7 +4,7 @@
 
 .menu {
   display: block;
-  padding: 0; // reset list style to custom value
+  padding: 0; // reset list style
   margin: 0; // reset list style
   @include fontsize($fontsize-normal);
   @include menu-variant($controls-theme); // default Menu variant styles
@@ -105,7 +105,7 @@
 
   .menu-trigger {
     @include animation(none); // override style from nested Menu items
-    padding-right: $controls-padding-x; // add padding to prevent content from going outside menu after applying margin-left
+    padding-right: $controls-padding-x; // restore padding to default value
     margin-left: 0; // override style from nested Menu items
   }
 }
