@@ -21,8 +21,8 @@
   border: 0; // reset button style // override %controls style
   border-radius: border-radius(0); // override %controls style
   color: inherit; // reset %controls style
-  text-align: left; // reset button style
   @include fontsize(inherit);
+  text-align: inherit; // reset button style
 
   @include before {
     content: "";
