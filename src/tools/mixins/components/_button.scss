@@ -66,9 +66,6 @@
 
 // minimal design variant
 @mixin button-design-minimal-variant($color) {
-  @include before {
-    border-bottom-color: $color;
-  }
 
   @include hover-focus {
     color: $color;
