@@ -124,7 +124,7 @@
   }
 
   ~ * {
-    @include animation($nestedMenu-animationname, 5s, ease-out, false, backwards);
+    @include animation($nestedMenu-animationname, $nestedMenu-animationduration, ease-out, false, backwards);
   }
 
   &:not(.active) {
