@@ -7,6 +7,8 @@ $menu-item-before-borderwidth:            $borderwidth-wide !default;
 
 $menu-trigger-caret-size:                 $control-feedback-arrow-size !default;
 
+$menu-divider-padding:                    $controls-padding-y !default;
+$menu-trigger-caret-color:                currentColor !default;
 $nestedMenu-indent:                       $controls-padding-x * 2 !default;
 $nestedMenu-animationname:                fadein !default;
 $nestedMenu-animationduration:            .3s !default;

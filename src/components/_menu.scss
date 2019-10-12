@@ -114,7 +114,7 @@
     content: "";
     align-self: center;
     margin-left: auto; // align .menu-trigger caret to end of flex
-    @include triangle(bottom, $menu-trigger-caret-size, currentColor);
+    @include triangle(bottom, $menu-trigger-caret-size, $menu-trigger-caret-color);
   }
 
   &.active {
@@ -137,5 +137,5 @@
 
 // divider inside menu
 .menu > .divider {
-  padding: $controls-padding-y 0;
+  padding: $menu-divider-padding;
 }
