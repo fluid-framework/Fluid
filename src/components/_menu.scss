@@ -15,7 +15,7 @@
 //
 .menu-item {
   @extend %controls;
-  display: flex;
+  display: block; // reset button styles
   width: 100%; // reset button style
   padding-left: $nestedMenu-marginleft; // indent .menu-item in .menu
   border: 0; // reset button style // override %controls style
@@ -107,6 +107,8 @@
 
 // .menu-trigger Needs to be First element in nested menu
 .menu-trigger {
+  display: flex;
+
   @include after {
     content: "";
     align-self: center;
