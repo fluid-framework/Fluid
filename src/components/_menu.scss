@@ -32,10 +32,7 @@
     left: 0;
     border-left: 0 solid;
     border-left-color: inherit;
-    @include transition(
-      $menu-item-before-transition,
-      border-color .5s cubic-bezier(1, 0, 1, 0) // retain border-color till border width be 0
-    );
+    @include transition($menu-item-before-transition, border-color 0.5s cubic-bezier(1, 0, 1, 0)); // retain border-color till border width be 0
   }
 
   &:not(.active) {
@@ -93,6 +90,7 @@
   overflow: hidden; // Prevent .menu-item from going outsize menu after applying margin-left
   @include fontsize(inherit);
 
+  // Nested menu items
   * {
     @include animation($nestedMenu-animationname, $nestedMenu-animationduration, ease-out, false, backwards);
     padding-right: $nestedMenu-indent + $controls-padding-x; // add padding to prevent content from going outside menu after applying margin-left
@@ -106,7 +104,7 @@
   .menu-trigger {
     @include animation(none); // override style from nested Menu items
     padding-right: $controls-padding-x; // restore padding to default value
-    margin-left: 0; // override style from nested Menu items
+    margin-left: 0; // override style from nested menu items
   }
 }
 
