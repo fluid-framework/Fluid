@@ -106,8 +106,8 @@
 
   .menu-trigger {
     @include animation(none); // override style from nested Menu items
-    margin-left: 0; // override style from nested Menu items
     padding-right: $controls-padding-x; // add padding to prevent content from going outside menu after applying margin-left
+    margin-left: 0; // override style from nested Menu items
   }
 }
 
