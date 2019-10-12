@@ -131,7 +131,7 @@
         transform: translateX(-50%);
         width: 0;
         border-bottom: $borderwidth-default * 2 solid;
-        @include transition($button-transition-minimal);
+        @include transition($button-transition-minimal-before);
       }
 
       @include button-design-minimal-variant($button-theme); // Default button theme
