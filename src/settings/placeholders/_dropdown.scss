@@ -1,0 +1,13 @@
+%dropdown-fill-gaps {
+  content: "";
+  position: absolute;
+  top: -$dropdown-menu-margin;
+  right: -$dropdown-menu-margin;
+  bottom: -$dropdown-menu-margin;
+  left: -$dropdown-menu-margin;
+  z-index: -1; // prevent from overriding inner elements
+
+  @if $enable-debugging {
+    background: rgba($red, .5);
+  }
+}

@@ -1,0 +1,22 @@
+//
+// Dropdowns
+//
+
+//
+// Inherit
+//
+$dropdown-menu-borderradius:        $borderradius-default !default;
+$dropdown-menu-boxshadow:           $boxshadow-round !default;
+
+$dropdown-trigger-caret-size:       $menu-trigger-caret-size !default;
+
+//
+// Setting
+//
+$dropdown-menu-background:          $white !default;
+$dropdown-menu-padding-y:           .35em !default;
+$dropdown-menu-margin:              .25em !default;
+$dropdown-menu-minwidth:            100% !default;
+$dropdown-menu-zindex:              14 !default;
+
+$dropdown-trigger-caret-color:      currentColor !default;
