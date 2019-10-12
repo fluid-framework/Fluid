@@ -14,6 +14,7 @@ body {
   color: $body-color;
   background-color: $body-background; // As a best practice, apply a default `background-color`.
   text-align: left; // Set an explicit initial text-align value
+  // stylelint-disable-next-line declaration-block-no-duplicate-properties
   text-align: start; // Set an explicit initial text-align value
   tab-size: 4; // Use a 4-space tab width in all browsers
   font-family: $fontfamily-default; // add native font family stack to the browser
