@@ -19,6 +19,7 @@
   .has-icon-left,
   .has-icon-right {
     @extend %position-relative;
+
     > .icon {
       position: absolute;
       top: 50%;

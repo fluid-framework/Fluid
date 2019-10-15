@@ -14,7 +14,7 @@
 //
 @function list-next($list, $value) {
   $index: index($list, $value);
-  @if not $index  {
+  @if not $index {
     @error "value `#{$value}` not found in `#{$list}`";
   }
   @return if($index < length($list), nth($list, $index + 1), null);

@@ -13,8 +13,10 @@
 
   .list.is-inline {
     @extend %display-block;
+
     > .list-item {
       @extend %display-inlineblock;
+
       &:not(:last-child) {
         margin-right: $list-inline-padding;
       }

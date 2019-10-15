@@ -15,6 +15,7 @@
     $selectors: prefix($selector, "&");
     $selectors: suffix($selectors, ",");
   }
+
   #{$selectors} &:not([disabled]):not(:disabled).active,
   &:not([disabled]):not(:disabled):active {
     @content;
@@ -49,6 +50,7 @@
     $selectors: prefix($selector, "&");
     $selectors: suffix($selectors, ",");
   }
+
   #{$selectors} &.focus,
   &:focus {
     @content;
@@ -99,6 +101,7 @@
     $selectors: prefix($selector, "&");
     $selectors: suffix($selectors, ",");
   }
+
   #{$selectors} &[disabled],
   &:disabled {
     @content;
@@ -116,6 +119,7 @@
     $selectors: prefix($selector, "&");
     $selectors: suffix($selectors, ",");
   }
+
   #{$selectors} &:not([disabled]):not(:disabled) {
     @content;
   }

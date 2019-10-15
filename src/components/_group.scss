@@ -46,12 +46,15 @@
     &:not(.is-y) {
       > .control {
         @extend %group-margin-x;
+
         > .input {
           @extend %group-borderradius-0;
         }
+
         &:first-child > .input:not(.is-min) {
           @extend %group-borderradius-left;
         }
+
         &:last-child > .input:not(.is-min) {
           @extend %group-borderradius-right;
         }
@@ -62,9 +65,11 @@
       > .btn {
         @extend %group-margin-x;
         @extend %group-borderradius-0;
+
         &:first-child:not(.is-min) {
           @extend %group-borderradius-left;
         }
+
         &:last-child:not(.is-min) {
           @extend %group-borderradius-right;
         }
@@ -74,12 +79,15 @@
     &.is-y {
       > .control {
         @extend %group-margin-y;
+
         > .input {
           @extend %group-borderradius-0;
         }
+
         &:first-child > .input:not(.is-min) {
           @extend %group-borderradius-top;
         }
+
         &:last-child > .input:not(.is-min) {
           @extend %group-borderradius-bottom;
         }
@@ -90,9 +98,11 @@
       > .btn {
         @extend %group-margin-y;
         @extend %group-borderradius-0;
+
         &:first-child:not(.is-min) {
           @extend %group-borderradius-top;
         }
+
         &:last-child:not(.is-min) {
           @extend %group-borderradius-bottom;
         }
@@ -110,6 +120,7 @@
           &:first-child > .input {
             @extend %group-border-left-0;
           }
+
           &:last-child > .input {
             @extend %group-border-right-0;
           }
@@ -124,11 +135,13 @@
           &:first-child {
             @extend %group-border-left-0;
           }
+
           &:last-child {
             @extend %group-border-right-0;
           }
         }
       }
+
       &.is-y {
         > .control {
           > .input {
@@ -139,6 +152,7 @@
           &:first-child > .input {
             @extend %group-border-top-0;
           }
+
           &:last-child > .input {
             @extend %group-border-bottom-0;
           }
@@ -153,6 +167,7 @@
           &:first-child {
             @extend %group-border-top-0;
           }
+
           &:last-child {
             @extend %group-border-bottom-0;
           }

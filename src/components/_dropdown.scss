@@ -69,6 +69,7 @@
     bottom: 100%;
     margin: 0 0 $dropdown-menu-margin 0;
   }
+
   > .dropdown-trigger::after {
     transform: scale(-1) translateX(-$dropdown-trigger-caret-size / 2);
   }

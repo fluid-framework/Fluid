@@ -51,6 +51,7 @@ label.control {
     &:valid ~ .feedback.is-valid {
       @extend %display-block;
     }
+
     &:invalid ~ .feedback.is-invalid {
       @extend %display-block;
     }
@@ -60,6 +61,7 @@ label.control {
     &:checked ~ .feedback.is-valid {
       @extend %display-block;
     }
+
     &:not(:checked) ~ .feedback.is-invalid {
       @extend %display-block;
     }
