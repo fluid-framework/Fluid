@@ -14,6 +14,6 @@ $button-iscircle-size:                           2.35em !default;
 //
 $button-theme:                                   $controls-theme !default;
 $button-theme-light:                             $controls-theme-light !default;
-$button-transition-minimal-before:               width, color !default;
+$button-transition-minimal-before:               width, border-bottom-color !default;
 
 $button-disabled-background:                     $controls-disabled-background !default;
