@@ -16,7 +16,7 @@
       max-width: $container-maxwidth;
     }
 
-    & + & {
+    + .container {
       margin-top: .5rem;
     }
   }
