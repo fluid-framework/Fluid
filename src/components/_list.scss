@@ -6,7 +6,7 @@
   .list {
     padding-left: 0;
 
-    > .list-item {
+    > li {
       @extend %display-block; // no need to set list-style to none as the list items are already set to display block instead of display list
     }
   }
@@ -14,7 +14,7 @@
   .list.is-inline {
     @extend %display-block;
 
-    > .list-item {
+    > li {
       @extend %display-inlineblock;
 
       &:not(:last-child) {
