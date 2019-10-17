@@ -23,19 +23,27 @@
     border-color: currentColor;
     box-shadow: box-shadow(none);
   }
+}
 
-  // minimal design variant
-  &.is-min {
-    padding-bottom: $controls-padding-y - convert-unit($borderwidth-wide - 2, em); // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
-    border-width: 0;
-    border-bottom-width: $borderwidth-wide;
-    border-radius: border-radius(0);
+//
+// Theme Variants
+//
 
-    @include not-hover {
-      box-shadow: box-shadow(none); // remove inner shadow without overriding hover shadow
-    }
+// minimal design variant
+.input.is-min {
+  padding-bottom: $controls-padding-y - convert-unit($borderwidth-wide - 2, em); // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
+  border-width: 0;
+  border-bottom-width: $borderwidth-wide;
+  border-radius: border-radius(0);
+
+  @include not-hover {
+    box-shadow: box-shadow(none); // remove inner shadow without overriding hover shadow
   }
+}
 
+// disabled button need to be at end to override previous selectors
+// stylelint-disable-next-line no-duplicate-selectors
+.input {
   @include disabled {
     @extend %controls-disabled;
   }
