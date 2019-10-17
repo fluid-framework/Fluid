@@ -18,159 +18,162 @@
     @include not-disabled {
       @extend %cursor-pointer; // add "hand" cursor to non-disabled button elements.
     }
+  }
 
+  //
+  // Theme Variants
+  //
+
+  // Solid Theme
+  .btn.is-sld {
     //
-    // Theme Variants
+    // Default Solid Styles
     //
+    $focus-background: clr-step($button-theme, -2);
+    $active-background: clr-step($button-theme, 4);
 
-    // Solid Theme
-    &.is-sld {
-      //
-      // Default Solid Styles
-      //
-      $focus-background: clr-step($button-theme, -2);
-      $active-background: clr-step($button-theme, 4);
+    color: clr-auto($button-theme);
+    @include gradient-bg($button-theme, 180deg);
 
-      color: clr-auto($button-theme);
-      @include gradient-bg($button-theme, 180deg);
-
-      @include hover {
-        // to avoid adding extra box-shadow override
-        // - box-shadow($button-focus-boxshadow rgba($button-theme, 0.5)) is already inside default controls
-        @if $button-focus-boxshadow != $controls-focus-boxshadow and $button-theme != $controls-theme {
-          box-shadow: box-shadow($button-focus-boxshadow rgba($button-theme, .5));
-        }
-      }
-
-      @include focus {
-        @include gradient-bg($focus-background, 180deg);
-      }
-
-      @include active {
-        color: clr-auto($active-background);
-        @if $design-solid-else-gradients {
-          background-color: $active-background;
-        }
-      }
-
-      &.is-loading {
-        @include loading-spinner-color(clr-auto($button-theme));
-      }
-
-      //
-      // Color variants
-      //
-      @each $color, $value in $theme-colors {
-        &.is-#{$color} {
-          @include button-design-solid-variant($value);
-        }
-      }
-
-      //
-      // States
-      //
-      @include focus {
-        @include animation(ripple-gray); // ripple animation on click event
-      }
-
-      @include active {
-        @if not $design-solid-else-gradients {
-          background-image: none; // Remove the gradient for the pressed/active state
-        }
-      }
-
-      @include disabled {
-        color: $white;
-        background: $button-disabled-background;
-        @if not $design-solid-else-gradients {
-          background-image: none; // Remove CSS gradients if they're enabled
-        }
+    @include hover {
+      // to avoid adding extra box-shadow override
+      // - box-shadow($button-focus-boxshadow rgba($button-theme, 0.5)) is already inside default controls
+      @if $button-focus-boxshadow != $controls-focus-boxshadow and $button-theme != $controls-theme {
+        box-shadow: box-shadow($button-focus-boxshadow rgba($button-theme, .5));
       }
     }
 
-    // Outline theme
-    &.is-out {
-      //
-      // Default Outline Styles
-      //
-      border-color: $button-theme-light;
+    @include focus {
+      @include gradient-bg($focus-background, 180deg);
+    }
+
+    @include active {
+      color: clr-auto($active-background);
+      @if $design-solid-else-gradients {
+        background-color: $active-background;
+      }
+    }
+
+    &.is-loading {
+      @include loading-spinner-color(clr-auto($button-theme));
+    }
+
+    //
+    // Color variants
+    //
+    @each $color, $value in $theme-colors {
+      &.is-#{$color} {
+        @include button-design-solid-variant($value);
+      }
+    }
+
+    //
+    // States
+    //
+    @include focus {
+      @include animation(ripple-gray); // ripple animation on click event
+    }
+
+    @include active {
+      @if not $design-solid-else-gradients {
+        background-image: none; // Remove the gradient for the pressed/active state
+      }
+    }
+
+    @include disabled {
+      color: $white;
+      background: $button-disabled-background;
+      @if not $design-solid-else-gradients {
+        background-image: none; // Remove CSS gradients if they're enabled
+      }
+    }
+  }
+
+  // Outline theme
+  .btn.is-out {
+    //
+    // Default Outline Styles
+    //
+    border-color: $button-theme-light;
+    color: $button-theme;
+
+    @include button-design-outline-variant($button-theme); // Default button theme
+
+    // Color variants
+    @each $color, $value in $theme-colors {
+      &.is-#{$color} {
+        @include button-design-outline-variant($value);
+      }
+    }
+
+    @include disabled {
+      border-color: $button-disabled-background;
       color: $button-theme;
+    }
+  }
 
-      @include button-design-outline-variant($button-theme); // Default button theme
+  // Minimal theme
+  .btn.is-min {
+    //
+    // Default Minimal Styles
+    //
+    border-right: 0; // remove border to remove border spacing between minimal button groups
+    border-bottom-color: $controls-theme-light;
+    border-left: 0; // remove border to remove border spacing between minimal button groups
+    border-radius: border-radius(0);
+    box-shadow: box-shadow(none); // remove focus box shadow
 
-      // Color variants
-      @each $color, $value in $theme-colors {
-        &.is-#{$color} {
-          @include button-design-outline-variant($value);
-        }
-      }
+    @include before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      border-bottom: $borderwidth-default * 2 solid;
+      @include transition($button-transition-minimal-before);
+    }
 
-      @include disabled {
-        border-color: $button-disabled-background;
-        color: $button-theme;
+    @include button-design-minimal-variant($button-theme); // Default button theme
+
+    // Color variants
+    @each $color, $value in $theme-colors {
+      &.is-#{$color} {
+        @include button-design-minimal-variant($value);
       }
     }
 
-    // Minimal theme
-    &.is-min {
-      //
-      // Default Minimal Styles
-      //
-      border-right: 0; // remove border to remove border spacing between minimal button groups
-      border-bottom-color: $controls-theme-light;
-      border-left: 0; // remove border to remove border spacing between minimal button groups
-      border-radius: border-radius(0);
-      box-shadow: box-shadow(none); // remove focus box shadow
-
+    @include active {
       @include before {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        border-bottom: $borderwidth-default * 2 solid;
-        @include transition($button-transition-minimal-before);
-      }
-
-      @include button-design-minimal-variant($button-theme); // Default button theme
-
-      // Color variants
-      @each $color, $value in $theme-colors {
-        &.is-#{$color} {
-          @include button-design-minimal-variant($value);
-        }
-      }
-
-      @include active {
-        @include before {
-          @include animation(none);
-        }
-      }
-
-      @include hover-focus-active {
-        @include before {
-          width: 100%;
-        }
-      }
-
-      @include focus {
-        @include animation(none); // disable animations and play again on click event
-        border-bottom-color: transparent;
-        @include before {
-          @include animation(flash);
-        }
-      }
-
-      @include disabled {
-        color: $button-theme;
-        @include before {
-          border-bottom-color: $button-disabled-background;
-        }
+        @include animation(none);
       }
     }
 
+    @include hover-focus-active {
+      @include before {
+        width: 100%;
+      }
+    }
+
+    @include focus {
+      @include animation(none); // disable animations and play again on click event
+      border-bottom-color: transparent;
+      @include before {
+        @include animation(flash);
+      }
+    }
+
+    @include disabled {
+      color: $button-theme;
+      @include before {
+        border-bottom-color: $button-disabled-background;
+      }
+    }
+  }
+
+  // stylelint-disable-next-line no-duplicate-selectors
+  .btn {
     @include disabled {
       @extend %controls-disabled;
     }
