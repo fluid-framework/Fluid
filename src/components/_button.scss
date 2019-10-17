@@ -172,6 +172,7 @@
     }
   }
 
+  // disabled button need to be at end to override previous selectors
   // stylelint-disable-next-line no-duplicate-selectors
   .btn {
     @include disabled {
