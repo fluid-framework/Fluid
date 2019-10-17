@@ -63,7 +63,7 @@
     &.active {
       left: 0;
 
-      & ~ .overlay {
+      ~ .overlay {
         @extend %overlay-active;
       }
     }
