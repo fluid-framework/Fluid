@@ -73,3 +73,16 @@
     // };
   }
 }
+
+// form validation style
+.is-validated .file:required {
+  &:valid ~ .input.label {
+    @extend .input.is-valid;
+    @extend .input.is-valid.has-icon;
+  }
+
+  &:invalid ~ .input.label {
+    @extend .input.is-error;
+    @extend .input.is-error.has-icon;
+  }
+}

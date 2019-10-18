@@ -47,6 +47,7 @@ label.control {
 }
 
 .is-validated .control {
+  > .file:required,
   > .input:required {
     &:valid ~ .feedback.is-valid {
       @extend %display-block;
