@@ -48,15 +48,15 @@
         @extend %group-margin-x;
 
         > .input {
-          @extend %group-borderradius-0;
+          @extend %group-borderradius-0 !optional;
         }
 
         &:first-child > .input:not(.is-min) {
-          @extend %group-borderradius-left;
+          @extend %group-borderradius-left !optional;
         }
 
         &:last-child > .input:not(.is-min) {
-          @extend %group-borderradius-right;
+          @extend %group-borderradius-right !optional;
         }
       }
 
@@ -64,14 +64,14 @@
       > .addon,
       > .btn {
         @extend %group-margin-x;
-        @extend %group-borderradius-0;
+        @extend %group-borderradius-0 !optional;
 
         &:first-child:not(.is-min) {
-          @extend %group-borderradius-left;
+          @extend %group-borderradius-left !optional;
         }
 
         &:last-child:not(.is-min) {
-          @extend %group-borderradius-right;
+          @extend %group-borderradius-right !optional;
         }
       }
     }
@@ -81,15 +81,15 @@
         @extend %group-margin-y;
 
         > .input {
-          @extend %group-borderradius-0;
+          @extend %group-borderradius-0 !optional;
         }
 
         &:first-child > .input:not(.is-min) {
-          @extend %group-borderradius-top;
+          @extend %group-borderradius-top !optional;
         }
 
         &:last-child > .input:not(.is-min) {
-          @extend %group-borderradius-bottom;
+          @extend %group-borderradius-bottom !optional;
         }
       }
 
@@ -97,14 +97,14 @@
       > .addon,
       > .btn {
         @extend %group-margin-y;
-        @extend %group-borderradius-0;
+        @extend %group-borderradius-0 !optional;
 
         &:first-child:not(.is-min) {
-          @extend %group-borderradius-top;
+          @extend %group-borderradius-top !optional;
         }
 
         &:last-child:not(.is-min) {
-          @extend %group-borderradius-bottom;
+          @extend %group-borderradius-bottom !optional;
         }
       }
     }
@@ -114,7 +114,7 @@
         > .control {
           > .input {
             @extend %group-border-y-0;
-            @extend %group-borderradius-0;
+            @extend %group-borderradius-0 !optional;
           }
 
           &:first-child > .input {
@@ -130,7 +130,7 @@
         > .addon,
         > .btn {
           @extend %group-border-y-0;
-          @extend %group-borderradius-0;
+          @extend %group-borderradius-0 !optional;
 
           &:first-child {
             @extend %group-border-left-0;
@@ -146,7 +146,7 @@
         > .control {
           > .input {
             @extend %group-border-x-0;
-            @extend %group-borderradius-0;
+            @extend %group-borderradius-0 !optional;
           }
 
           &:first-child > .input {
@@ -162,7 +162,7 @@
         > .addon,
         > .btn {
           @extend %group-border-x-0;
-          @extend %group-borderradius-0;
+          @extend %group-borderradius-0 !optional;
 
           &:first-child {
             @extend %group-border-top-0;
