@@ -105,7 +105,7 @@
 // Css approach works fine with simple dropdown but they are not recommended for complex structure and they break UX
 // e.g When used with mega dropdown inside .lyt-header, menu closes before user can interact with it. its because
 // as soon as user moves cursor to interact with menu he loses .dropdown hover state and menu closes.
-.dropdown.is-hover {
+.dropdown.on-hover {
   // to interact with nested menu
   .dropdown {
     @include hover {
