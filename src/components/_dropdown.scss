@@ -115,8 +115,7 @@
     }
 
     // Prevent dropdown from closing between gaps by creating additional area around dropdown
-    > .menu::before,
-    > .dropdown-items::before {
+    > .menu::before {
       @extend %dropdown-fill-gaps;
     }
   }
@@ -129,8 +128,7 @@
   }
 
   // Prevent dropdown from closing between gaps by creating additional area around dropdown
-  > .menu::before,
-  > .dropdown-items::before {
+  > .menu::before {
     @extend %dropdown-fill-gaps;
   }
 }
