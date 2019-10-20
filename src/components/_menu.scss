@@ -108,7 +108,7 @@
 
 // .menu-trigger Needs to be First element in nested menu
 .menu-trigger {
-  display: flex;
+  display: inline-flex;
 
   @include after {
     content: "";

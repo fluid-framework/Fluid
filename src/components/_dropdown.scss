@@ -44,7 +44,7 @@
 //
 .dropdown-trigger {
   @include fontsize(inherit);
-  display: flex;
+  display: inline-flex;
 
   @include after {
     content: "";
