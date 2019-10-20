@@ -6,8 +6,8 @@
   //
   // Doc : add Doc
   //
-  .sr-only,
-  .sr-only-focusable:not(:focus) {
+  .sr,
+  .sr-on-focus:not(:focus) {
     position: absolute;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
