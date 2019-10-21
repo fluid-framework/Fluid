@@ -4,7 +4,9 @@
 @if $generate-object-classes {
   .divider {
     display: flex;
+    height: 100%; // spread to full height when vertical
     opacity: $controls-disabled-opacity;
+    text-align: center; // align text in center when vertical
     white-space: nowrap; // prevent wrapping of text
 
     @include before-after {
@@ -12,6 +14,15 @@
       align-self: center;
       width: 100%;
       border-top: 1px solid currentColor;
+    }
+
+    &.is-y {
+      @include before-after {
+        width: auto; // override horizontal style
+        height: 100%;
+        border-top: 0; // override horizontal style
+        border-left: 1px solid currentColor;
+      }
     }
 
     &:not(:empty) {
