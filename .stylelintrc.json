@@ -28,6 +28,10 @@
     "selector-max-universal": 1,
     "selector-no-vendor-prefix": true,
 
+    "selector-pseudo-class-blacklist": ["focus", "hover", "active", "disabled"],
+
+    "selector-pseudo-element-blacklist": ["before", "after"],
+
     "order/properties-order": [
       "counter-reset",
       "counter-increment",

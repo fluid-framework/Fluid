@@ -70,8 +70,10 @@
     margin: 0 0 $dropdown-menu-margin 0;
   }
 
-  > .dropdown-trigger::after {
-    transform: scale(-1) translateX(-$dropdown-trigger-caret-size / 2);
+  > .dropdown-trigger {
+    @include after {
+      transform: scale(-1) translateX(-$dropdown-trigger-caret-size / 2);
+    }
   }
 }
 
@@ -82,8 +84,10 @@
     margin: 0 0 0 $dropdown-menu-margin;
   }
 
-  > .dropdown-trigger::after {
-    transform: rotate(270deg) translateY($dropdown-trigger-caret-size / 2);
+  > .dropdown-trigger {
+    @include after {
+      transform: rotate(270deg) translateY($dropdown-trigger-caret-size / 2);
+    }
   }
 }
 
@@ -94,8 +98,10 @@
     margin: 0 $dropdown-menu-margin 0 0;
   }
 
-  > .dropdown-trigger::after {
-    transform: rotate(90deg) translateY(-$dropdown-trigger-caret-size / 2);
+  > .dropdown-trigger {
+    @include after {
+      transform: rotate(90deg) translateY(-$dropdown-trigger-caret-size / 2);
+    }
   }
 }
 
@@ -115,8 +121,10 @@
     }
 
     // Prevent dropdown from closing between gaps by creating additional area around dropdown
-    > .menu::before {
-      @extend %dropdown-fill-gaps;
+    > .menu {
+      @include before {
+        @extend %dropdown-fill-gaps;
+      }
     }
   }
 
@@ -128,8 +136,10 @@
   }
 
   // Prevent dropdown from closing between gaps by creating additional area around dropdown
-  > .menu::before {
-    @extend %dropdown-fill-gaps;
+  > .menu {
+    @include before {
+      @extend %dropdown-fill-gaps;
+    }
   }
 }
 
