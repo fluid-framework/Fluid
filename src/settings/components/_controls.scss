@@ -19,7 +19,6 @@ $controls-theme-light:                            $gray-300 !default;
 $controls-color:                                  $body-color !default;
 $controls-background:                             transparent !default;
 $controls-bordercolor:                            transparent !default;
-$controls-padding-y:                              .375em !default;
 $controls-padding-x:                              .75em !default;
 $controls-fontfamily:                             null !default;
 $controls-transition:                             color, background-color, border, box-shadow !default;
@@ -36,5 +35,8 @@ $controls-label-bordercolor:                      $controls-theme-light !default
 //
 // Derived
 //
+
+$controls-padding-y:                              $controls-padding-x / 2 !default;
+
 $controls-label-before-size:                      convert-unit(16px, em) !default; // use 16px controls
 $controls-label-paddingleft:                      $controls-label-before-size * 1.5 !default;
