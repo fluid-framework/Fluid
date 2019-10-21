@@ -7,7 +7,7 @@
     opacity: $controls-disabled-opacity;
     white-space: nowrap; // prevent wrapping of text
 
-    @include after {
+    @include before-after {
       content: "";
       align-self: center;
       width: 100%;
@@ -15,8 +15,8 @@
     }
 
     &:not(:empty) {
-      @include after {
-        margin-left: $controls-padding-x / 2;
+      @include before-after {
+        margin: $controls-padding-y $controls-padding-x / 2;
       }
     }
   }
