@@ -5,9 +5,7 @@
   .divider {
     display: flex;
     opacity: $controls-disabled-opacity;
-    color: $dark; // override color // Idea : let divider inherit color ?
     white-space: nowrap; // prevent wrapping of text
-    line-height: $lineheight-default; // override line-height to default because margin calculations depend on it
 
     @include after {
       content: "";
