@@ -7,6 +7,10 @@
     @include fontsize($fontsize-small, true);
   }
 
+  .is-md {
+    @include fontsize($fontsize-normal, true);
+  }
+
   .is-lg {
     @include fontsize($fontsize-large, true);
   }
