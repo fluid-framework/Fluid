@@ -5,6 +5,8 @@
 //
 // Modifiers:
 //  is-y : Makes Divider Vertical
+//  is-left : align text position to left inside divider
+//  is-right : align text position to right inside divider
 //
 @if $generate-object-classes {
   .divider {
@@ -34,6 +36,18 @@
       @include before-after {
         margin: $controls-padding-y $controls-padding-x / 2;
       }
+    }
+  }
+
+  .divider.is-left {
+    @include before {
+      width: 5%;
+    }
+  }
+
+  .divider.is-right {
+    @include after {
+      width: 5%;
     }
   }
 }
