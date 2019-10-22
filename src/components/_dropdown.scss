@@ -14,7 +14,7 @@
     min-width: $dropdown-menu-minwidth;
     padding: $dropdown-menu-padding-y 0;
     margin-top: $dropdown-menu-margin;
-    border-radius: border-radius();
+    border-radius: border-radius($dropdown-menu-borderradius);
     background-color: $dropdown-menu-background;
     box-shadow: box-shadow($dropdown-menu-boxshadow);
     @include fontsize(inherit);
