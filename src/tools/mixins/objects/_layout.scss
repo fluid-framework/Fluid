@@ -1,6 +1,0 @@
-@mixin overlay-active() {
-  visibility: visible;
-  @if $enable-transitions {
-    opacity: 1;
-  }
-}
