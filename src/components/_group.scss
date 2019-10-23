@@ -21,6 +21,8 @@
   .group {
     display: flex;
     flex-wrap: wrap;
+    margin-right: $controls-borderwidth / 2;
+    margin-left: $controls-borderwidth / 2;
 
     &.is-lg {
       > .addon,
