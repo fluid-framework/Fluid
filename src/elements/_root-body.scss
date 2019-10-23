@@ -3,7 +3,8 @@
 //
 
 :root {
-  @include fontsize($default-fontsize); // set the font size at root, this will lead to consistent rem unit among all browsers
+  // stylelint-disable-next-line property-blacklist
+  font-size: $default-fontsize; // set the font size at root, this will lead to consistent rem unit among all browsers
 }
 
 //

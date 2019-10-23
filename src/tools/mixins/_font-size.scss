@@ -12,15 +12,15 @@
 // [optional] {Map} $important - set important in css style
 //
 @mixin fontsize($fontsize: $fontsize-normal, $important: false) {
-  @if $enable-fluid-fontsizes {
-    $fontsize-unit: if(type-of($fontsize) == "number", unit($fontsize), false);
+  $fontsize-unit: if(type-of($fontsize) == "number", unit($fontsize), false);
 
-    // If $fontsize is not a number (like inherit) or $fontsize has a unit other than px or rem or its value is 0
-    @if ($fontsize == 0) or (not $fontsize-unit) or ($fontsize-unit != "" and $fontsize-unit != "px" and $fontsize-unit != "rem") {
-      font-size: #{$fontsize}#{if($important, !important, null)};
-    } @else {
-      // Do Fluid font stuff
-    }
+  @if $fontsize-unit == "px" {
+    @error "invalid value of font-size `#{$fontsize}` , The value unit must not be `px`";
+  }
+
+  @if $enable-fluid-fontsizes {
+    // Do Fluid font stuff
+    @error "This feature `fluid-fontsizes` is under development";
   } @else {
     font-size: #{$fontsize}#{if($important, !important, null)};
   }
