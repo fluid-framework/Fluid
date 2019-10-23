@@ -2,98 +2,100 @@
 // Range Control
 //
 
-.range {
-  @extend %controls;
+@if $generate-component-classes {
+  .range {
+    @extend %controls;
 
-  display: block; // override %controls style
-  width: 100%;
-  height: 1.5em; // match height with other controls like checkbox, switch, range
-  padding: 0; // override %controls style
-  // stylelint-disable-next-line property-no-vendor-prefix
-  -moz-appearance: none;
-  // stylelint-disable-next-line property-no-vendor-prefix
-  -webkit-appearance: none;
-  appearance: none;
+    display: block; // override %controls style
+    width: 100%;
+    height: 1.5em; // match height with other controls like checkbox, switch, range
+    padding: 0; // override %controls style
+    // stylelint-disable-next-line property-no-vendor-prefix
+    -moz-appearance: none;
+    // stylelint-disable-next-line property-no-vendor-prefix
+    -webkit-appearance: none;
+    appearance: none;
 
-  @include focus {
-    outline: 0;
-  }
+    @include focus {
+      outline: 0;
+    }
 
-  // Note : Using Mixin instead of placeholder to split styles across multiple rulesets to have an effect.
+    // Note : Using Mixin instead of placeholder to split styles across multiple rulesets to have an effect.
 
-  // Thumb
-  &::-webkit-slider-thumb {
-    @include range-thumb;
-  }
-
-  &::-moz-range-thumb {
-    @include range-thumb;
-  }
-
-  &::-ms-thumb {
-    @include range-thumb;
-  }
-
-  @include hover {
+    // Thumb
     &::-webkit-slider-thumb {
-      transform: scale($range-thumb-hover-focus-scale);
-      border-width: $range-thumb-hover-focus-borderwidth;
+      @include range-thumb;
     }
 
     &::-moz-range-thumb {
-      transform: scale($range-thumb-hover-focus-scale);
-      border-width: $range-thumb-hover-focus-borderwidth;
+      @include range-thumb;
     }
 
     &::-ms-thumb {
-      transform: scale($range-thumb-hover-focus-scale);
-      border-width: $range-thumb-hover-focus-borderwidth;
+      @include range-thumb;
     }
-  }
 
-  // Track
-  &::-moz-range-track {
-    @include range-track;
-  }
+    @include hover {
+      &::-webkit-slider-thumb {
+        transform: scale($range-thumb-hover-focus-scale);
+        border-width: $range-thumb-hover-focus-borderwidth;
+      }
 
-  &::-webkit-slider-runnable-track {
-    @include range-track;
-  }
+      &::-moz-range-thumb {
+        transform: scale($range-thumb-hover-focus-scale);
+        border-width: $range-thumb-hover-focus-borderwidth;
+      }
 
-  &::-ms-track {
-    color: transparent; // remove stripped line
-    @include range-track;
-  }
+      &::-ms-thumb {
+        transform: scale($range-thumb-hover-focus-scale);
+        border-width: $range-thumb-hover-focus-borderwidth;
+      }
+    }
 
-  &::-ms-fill-lower {
-    background: $controls-theme;
-  }
-
-  @include focus-active {
+    // Track
     &::-moz-range-track {
-      background-color: currentColor;
+      @include range-track;
     }
 
     &::-webkit-slider-runnable-track {
-      background-color: currentColor;
+      @include range-track;
+    }
+
+    &::-ms-track {
+      color: transparent; // remove stripped line
+      @include range-track;
     }
 
     &::-ms-fill-lower {
-      color: inherit;
-      background: currentColor;
+      background: $controls-theme;
+    }
+
+    @include focus-active {
+      &::-moz-range-track {
+        background-color: currentColor;
+      }
+
+      &::-webkit-slider-runnable-track {
+        background-color: currentColor;
+      }
+
+      &::-ms-fill-lower {
+        color: inherit;
+        background: currentColor;
+      }
+    }
+
+    @include disabled {
+      @extend %controls-disabled;
     }
   }
 
-  @include disabled {
-    @extend %controls-disabled;
-  }
-}
-
-//
-// Color variants
-//
-@each $color, $value in $theme-colors {
-  .range.is-#{$color} {
-    color: $value;
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    .range.is-#{$color} {
+      color: $value;
+    }
   }
 }

@@ -4,67 +4,69 @@
 // Used to combine different components and objects into one control
 // The main control needs to be the first child of Control class to work properly
 
-.control {
-  position: relative;
-  display: block;
-  @include fontsize($fontsize-normal);
-}
+@if $generate-component-classes {
+  .control {
+    position: relative;
+    display: block;
+    @include fontsize($fontsize-normal);
+  }
 
-label.control {
-  margin-bottom: 0;
-}
+  label.control {
+    margin-bottom: 0;
+  }
 
-//
-// feedback inside control
-//
-.control > .feedback {
-  position: absolute;
-  right: 0;
-  bottom: 100%;
-  display: none;
-  padding: $control-feedback-padding;
-  margin-bottom: $control-feedback-arrow-size + $control-feedback-offset-bottom;
-  border-radius: border-radius();
-  color: $control-feedback-color;
-  box-shadow: box-shadow($control-feedback-shadow);
-  @include gradient-bg($control-feedback-background, 180deg);
-
-  @include before {
-    content: "";
+  //
+  // feedback inside control
+  //
+  .control > .feedback {
     position: absolute;
-    top: 100%;
-    right: $control-feedback-arrow-offset-right;
-    @include triangle(bottom, $control-feedback-arrow-size, $control-feedback-background);
-  }
-}
+    right: 0;
+    bottom: 100%;
+    display: none;
+    padding: $control-feedback-padding;
+    margin-bottom: $control-feedback-arrow-size + $control-feedback-offset-bottom;
+    border-radius: border-radius();
+    color: $control-feedback-color;
+    box-shadow: box-shadow($control-feedback-shadow);
+    @include gradient-bg($control-feedback-background, 180deg);
 
-.control.is-valid > .feedback.is-valid {
-  @extend %display-block;
-}
-
-.control.is-invalid > .feedback.is-invalid {
-  @extend %display-block;
-}
-
-.is-validated .control {
-  > .file:required,
-  > .input:required {
-    &:valid ~ .feedback.is-valid {
-      @extend %display-block;
-    }
-
-    &:invalid ~ .feedback.is-invalid {
-      @extend %display-block;
+    @include before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: $control-feedback-arrow-offset-right;
+      @include triangle(bottom, $control-feedback-arrow-size, $control-feedback-background);
     }
   }
 
-  > input[type="checkbox"]:required {
-    &:checked ~ .feedback.is-valid {
-      @extend %display-block;
+  .control.is-valid > .feedback.is-valid {
+    @extend %display-block;
+  }
+
+  .control.is-invalid > .feedback.is-invalid {
+    @extend %display-block;
+  }
+
+  .is-validated .control {
+    > .file:required,
+    > .input:required {
+      &:valid ~ .feedback.is-valid {
+        @extend %display-block;
+      }
+
+      &:invalid ~ .feedback.is-invalid {
+        @extend %display-block;
+      }
     }
 
-    &:not(:checked) ~ .feedback.is-invalid {
-      @extend %display-block;
+    > input[type="checkbox"]:required {
+      &:checked ~ .feedback.is-valid {
+        @extend %display-block;
+      }
+
+      &:not(:checked) ~ .feedback.is-invalid {
+        @extend %display-block;
+      }
     }
   }
 }

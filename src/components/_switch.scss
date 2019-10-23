@@ -1,38 +1,40 @@
 //
 // Switch Control
 //
-.control {
-  > .switch {
-    @extend %controls-hide;
-    @extend %controls-label;
+@if $generate-component-classes {
+  .control {
+    > .switch {
+      @extend %controls-hide;
+      @extend %controls-label;
 
-    &:checked {
-      ~ .label {
-        @include after {
-          left: $switch-width - $switch-circle-size;
-          background-color: $switch-active-circle-background;
+      &:checked {
+        ~ .label {
+          @include after {
+            left: $switch-width - $switch-circle-size;
+            background-color: $switch-active-circle-background;
+          }
         }
       }
-    }
 
-    ~ .label {
-      padding-left: $switch-label-paddingleft;
-      @include before {
-        width: $switch-width;
-        border-radius: border-radius($borderradius-pill, 0);
-      }
+      ~ .label {
+        padding-left: $switch-label-paddingleft;
+        @include before {
+          width: $switch-width;
+          border-radius: border-radius($borderradius-pill, 0);
+        }
 
-      @include after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%) scale($switch-circle-tranform-scale);
-        width: $switch-circle-size;
-        height: $switch-circle-size;
-        border-radius: border-radius($borderradius-circle, 0);
-        background: $switch-circle-bordercolor;
-        @include transition($switch-circle-transition);
+        @include after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%) scale($switch-circle-tranform-scale);
+          width: $switch-circle-size;
+          height: $switch-circle-size;
+          border-radius: border-radius($borderradius-circle, 0);
+          background: $switch-circle-bordercolor;
+          @include transition($switch-circle-transition);
+        }
       }
     }
   }

@@ -1,49 +1,51 @@
 //
 // Checkbox Control
 //
-.control {
-  > .checkbox {
-    @extend %controls-hide;
-    @extend %controls-label;
+@if $generate-component-classes {
+  .control {
+    > .checkbox {
+      @extend %controls-hide;
+      @extend %controls-label;
 
-    &:checked {
-      ~ .label {
-        @include after {
-          top: $checkbox-checked-arrow-top;
-          transform: translate(-50%, -50%) rotate(45deg);
-          width: $checkbox-checked-arrow-size / 2;
-          height: $checkbox-checked-arrow-size;
-          border: $checkbox-checked-arrow-borderwidth solid $checkbox-checked-arrow-color;
-          border-top-width: 0;
-          border-left-width: 0;
+      &:checked {
+        ~ .label {
+          @include after {
+            top: $checkbox-checked-arrow-top;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: $checkbox-checked-arrow-size / 2;
+            height: $checkbox-checked-arrow-size;
+            border: $checkbox-checked-arrow-borderwidth solid $checkbox-checked-arrow-color;
+            border-top-width: 0;
+            border-left-width: 0;
+          }
         }
       }
-    }
 
-    &:indeterminate {
-      ~ .label {
-        @include before {
-          border-color: currentColor;
-          background: currentColor;
+      &:indeterminate {
+        ~ .label {
+          @include before {
+            border-color: currentColor;
+            background: currentColor;
+          }
+
+          @include after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: $checkbox-indeterminate-width;
+            height: $checkbox-indeterminate-height;
+            background: $checkbox-indeterminate-background;
+          }
         }
+      }
 
+      ~ .label {
         @include after {
           content: "";
           position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          width: $checkbox-indeterminate-width;
-          height: $checkbox-indeterminate-height;
-          background: $checkbox-indeterminate-background;
+          left: $controls-label-before-size / 2;
         }
-      }
-    }
-
-    ~ .label {
-      @include after {
-        content: "";
-        position: absolute;
-        left: $controls-label-before-size / 2;
       }
     }
   }

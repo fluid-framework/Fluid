@@ -2,7 +2,9 @@
 // Blockquote
 //
 
-.blockquote {
-  padding: .4rem .8rem;
-  border-left: $borderwidth-wide solid $primary;
+@if $generate-component-classes {
+  .blockquote {
+    padding: .4rem .8rem;
+    border-left: $borderwidth-wide solid $primary;
+  }
 }

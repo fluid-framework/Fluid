@@ -1,88 +1,90 @@
 //
 // File Control
 //
-.control {
-  > .file {
-    @extend %controls-hide;
+@if $generate-component-classes {
+  .control {
+    > .file {
+      @extend %controls-hide;
 
-    ~ .label {
-      margin-bottom: 0; // override label style inside control
+      ~ .label {
+        margin-bottom: 0; // override label style inside control
+      }
+
+      // we don't style file inputs label intentionally to allow users to style them as they want
+      //
+      // E.g they can style them using .input class to make it look like input with text inside or
+      // make them look like button with .btn class and its modifiers
+
+      // Snippet: file upload as Button
+      //
+      // <div class="control">
+      //   <input class="file" id="file" type="file">
+      //   <label class="label btn is-sld is-primary" for="file">
+      //     <div class="icon is-left"><i class="fas fa-file-upload"></i></div>
+      //     Upload
+      //   </label>
+      // </div>
+
+      // Snippet: file upload as Input with button
+      // https://jsfiddle.net/ashfahan/jcoe2nyg/
+      //
+      // HTML:
+      // <div class="group">
+      //   <div class="control">
+      //     <input class="file" id="file" type="file">
+      //     <label class="label input" for="file">
+      //       Upload File
+      //     </label>
+      //   </div>
+      //   <button class="btn is-out is-primary">
+      //     <div class="icon is-left"><i class="fas fa-file-upload"></i></div>
+      //     Upload
+      //   </button>
+      // </div>
+      //
+      // Java Script : (optional) to update label text from selected file to upload
+      // $("input[type=file]").onchange = () => {
+      //   if (element.files.length > 0) {
+      //     const label = $('label[for="' + $(this).attr("id") + '"]');
+      //     $(label).text(element.files[0].name);
+      //   }
+      // };
+
+      // Snippet: file upload as button with Input inside it
+      //
+      // <div class="control">
+      //   <input class="file" id="file" type="file" required>
+      //   <label class="label btn is-sld is-primary" for="file">
+      //     <div class="mb-5">
+      //       <div class="icon is-left"><i class="far fa-coffee"></i></div>
+      //       Upload
+      //     </div>
+      //     <div class="filename input">
+      //       File Name
+      //     </div>
+      //   </label>
+      // </div>
+      //
+      // Java Script : (optional) to update label text from selected file to upload
+      // $("input[type=file]").onchange = () => {
+      //     if (element.files.length > 0) {
+      //       const label = $('.filename');
+      //       $(label).text(element.files[0].name);
+      //   };
+      // };
+    }
+  }
+
+  // form validation style
+  .is-validated .file:required {
+    &:valid ~ .input.label {
+      @extend .input.is-valid;
+      @extend .input.is-valid.has-icon;
     }
 
-    // we don't style file inputs label intentionally to allow users to style them as they want
-    //
-    // E.g they can style them using .input class to make it look like input with text inside or
-    // make them look like button with .btn class and its modifiers
-
-    // Snippet: file upload as Button
-    //
-    // <div class="control">
-    //   <input class="file" id="file" type="file">
-    //   <label class="label btn is-sld is-primary" for="file">
-    //     <div class="icon is-left"><i class="fas fa-file-upload"></i></div>
-    //     Upload
-    //   </label>
-    // </div>
-
-    // Snippet: file upload as Input with button
-    // https://jsfiddle.net/ashfahan/jcoe2nyg/
-    //
-    // HTML:
-    // <div class="group">
-    //   <div class="control">
-    //     <input class="file" id="file" type="file">
-    //     <label class="label input" for="file">
-    //       Upload File
-    //     </label>
-    //   </div>
-    //   <button class="btn is-out is-primary">
-    //     <div class="icon is-left"><i class="fas fa-file-upload"></i></div>
-    //     Upload
-    //   </button>
-    // </div>
-    //
-    // Java Script : (optional) to update label text from selected file to upload
-    // $("input[type=file]").onchange = () => {
-    //   if (element.files.length > 0) {
-    //     const label = $('label[for="' + $(this).attr("id") + '"]');
-    //     $(label).text(element.files[0].name);
-    //   }
-    // };
-
-    // Snippet: file upload as button with Input inside it
-    //
-    // <div class="control">
-    //   <input class="file" id="file" type="file" required>
-    //   <label class="label btn is-sld is-primary" for="file">
-    //     <div class="mb-5">
-    //       <div class="icon is-left"><i class="far fa-coffee"></i></div>
-    //       Upload
-    //     </div>
-    //     <div class="filename input">
-    //       File Name
-    //     </div>
-    //   </label>
-    // </div>
-    //
-    // Java Script : (optional) to update label text from selected file to upload
-    // $("input[type=file]").onchange = () => {
-    //     if (element.files.length > 0) {
-    //       const label = $('.filename');
-    //       $(label).text(element.files[0].name);
-    //   };
-    // };
-  }
-}
-
-// form validation style
-.is-validated .file:required {
-  &:valid ~ .input.label {
-    @extend .input.is-valid;
-    @extend .input.is-valid.has-icon;
-  }
-
-  &:invalid ~ .input.label {
-    @extend .input.is-error;
-    @extend .input.is-error.has-icon;
+    &:invalid ~ .input.label {
+      @extend .input.is-error;
+      @extend .input.is-error.has-icon;
+    }
   }
 }

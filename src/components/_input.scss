@@ -5,168 +5,170 @@
 //
 // Base Style
 //
-.input {
-  @extend %controls;
-  @extend %controls-active;
-  @extend %controls-focus;
+@if $generate-component-classes {
+  .input {
+    @extend %controls;
+    @extend %controls-active;
+    @extend %controls-focus;
 
-  width: 100%;
-  border-color: $input-bordercolor;
-  background-color: $input-background;
-  box-shadow: box-shadow($input-boxshadow-inner);
+    width: 100%;
+    border-color: $input-bordercolor;
+    background-color: $input-background;
+    box-shadow: box-shadow($input-boxshadow-inner);
 
-  @include hover {
-    box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-boxshadow rgba($controls-theme, .5)); // Fix: hover state box-shadow transition
+    @include hover {
+      box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-boxshadow rgba($controls-theme, .5)); // Fix: hover state box-shadow transition
+    }
+
+    @include focus {
+      border-color: currentColor;
+      box-shadow: box-shadow(none);
+    }
   }
 
-  @include focus {
-    border-color: currentColor;
-    box-shadow: box-shadow(none);
+  //
+  // Theme Variants
+  //
+
+  // minimal design variant
+  .input.is-min {
+    padding-bottom: $controls-padding-y - convert-unit($borderwidth-wide - 2, em); // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
+    border-width: 0;
+    border-bottom-width: $borderwidth-wide;
+    border-radius: border-radius(0);
+
+    @include not-hover {
+      box-shadow: box-shadow(none); // remove inner shadow without overriding hover shadow
+    }
   }
-}
 
-//
-// Theme Variants
-//
-
-// minimal design variant
-.input.is-min {
-  padding-bottom: $controls-padding-y - convert-unit($borderwidth-wide - 2, em); // decrease padding bottom by the same width we are increasing border-bottom to make layout unaffected by design change
-  border-width: 0;
-  border-bottom-width: $borderwidth-wide;
-  border-radius: border-radius(0);
-
-  @include not-hover {
-    box-shadow: box-shadow(none); // remove inner shadow without overriding hover shadow
+  // disabled button need to be at end to override previous selectors
+  // stylelint-disable-next-line no-duplicate-selectors
+  .input {
+    @include disabled {
+      @extend %controls-disabled;
+    }
   }
-}
 
-// disabled button need to be at end to override previous selectors
-// stylelint-disable-next-line no-duplicate-selectors
-.input {
-  @include disabled {
+  textarea.input:read-only,
+  input.input:read-only {
     @extend %controls-disabled;
   }
-}
 
-textarea.input:read-only,
-input.input:read-only {
-  @extend %controls-disabled;
-}
-
-//
-// Color variants
-//
-@each $color, $value in $theme-colors {
-  .input.is-#{$color} {
-    @include input-variant($color, $value);
-  }
-}
-
-// form validation style
-.is-validated .input:required {
-  &:valid {
-    @extend .input.is-valid;
-    @extend .input.is-valid.has-icon;
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    .input.is-#{$color} {
+      @include input-variant($color, $value);
+    }
   }
 
-  &:invalid {
-    @extend .input.is-error;
-    @extend .input.is-error.has-icon;
-  }
-}
+  // form validation style
+  .is-validated .input:required {
+    &:valid {
+      @extend .input.is-valid;
+      @extend .input.is-valid.has-icon;
+    }
 
-select.input {
-  // stylelint-disable-next-line property-no-vendor-prefix
-  -moz-appearance: none;
-  // stylelint-disable-next-line property-no-vendor-prefix
-  -webkit-appearance: none;
-  appearance: none;
-  background-image: $icon-caret-down;
-  @extend %controls-validation-icon;
-
-  &[multiple],
-  &[size]:not([size="1"]) {
-    padding-right: $controls-padding-y;
-    background-image: none;
+    &:invalid {
+      @extend .input.is-error;
+      @extend .input.is-error.has-icon;
+    }
   }
 
-  &::-ms-expand {
-    display: none; // Hide caret on `<select>`s in IE
+  select.input {
+    // stylelint-disable-next-line property-no-vendor-prefix
+    -moz-appearance: none;
+    // stylelint-disable-next-line property-no-vendor-prefix
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: $icon-caret-down;
+    @extend %controls-validation-icon;
+
+    &[multiple],
+    &[size]:not([size="1"]) {
+      padding-right: $controls-padding-y;
+      background-image: none;
+    }
+
+    &::-ms-expand {
+      display: none; // Hide caret on `<select>`s in IE
+    }
+
+    // Remove blue background in IE
+    &::-ms-value {
+      color: $controls-color;
+      background: $input-background;
+    }
   }
 
-  // Remove blue background in IE
-  &::-ms-value {
-    color: $controls-color;
-    background: $input-background;
-  }
-}
-
-.input::-ms-clear {
-  color: $controls-theme; // Set IE clear field button color so that it is not affected by .input color
-}
-
-.input::placeholder {
-  opacity: 1; // override Firefox's opacity
-  color: $input-placeholder-color;
-}
-
-textarea.input {
-  height: auto; // revert textarea height
-  min-height: $input-minheight; // prevent user from decreasing size lower than one row
-}
-
-//
-// Input Control
-//
-.control {
-  > .input {
-    @include fontsize(inherit);
-    display: flex; // align content in center based on height
-    align-items: center; // align content in center based on height
-    height: 100%;
+  .input::-ms-clear {
+    color: $controls-theme; // Set IE clear field button color so that it is not affected by .input color
   }
 
-  &.has-icon-left {
+  .input::placeholder {
+    opacity: 1; // override Firefox's opacity
+    color: $input-placeholder-color;
+  }
+
+  textarea.input {
+    height: auto; // revert textarea height
+    min-height: $input-minheight; // prevent user from decreasing size lower than one row
+  }
+
+  //
+  // Input Control
+  //
+  .control {
     > .input {
-      ~ .icon {
-        z-index: $group-items-hover-focus-zindex + 1;
-        pointer-events: none;
-        opacity: $control-input-icon-opacity;
-      }
+      @include fontsize(inherit);
+      display: flex; // align content in center based on height
+      align-items: center; // align content in center based on height
+      height: 100%;
+    }
 
-      @include focus {
+    &.has-icon-left {
+      > .input {
         ~ .icon {
-          opacity: 1;
+          z-index: $group-items-hover-focus-zindex + 1;
+          pointer-events: none;
+          opacity: $control-input-icon-opacity;
+        }
+
+        @include focus {
+          ~ .icon {
+            opacity: 1;
+          }
         }
       }
     }
-  }
 
-  &.has-floating-label > .input[placeholder=" "] {
-    ~ .label {
-      position: absolute;
-      top: 50%;
-      left: convert-unit($controls-padding-x, rem);
-      transform: translateY(-50%);
-      pointer-events: none;
-      padding: 2px;
-      background-color: $input-background;
-      line-height: 1;
-      @include transition(top, font-size);
-    }
-
-    @include focus(":not(:placeholder-shown)") {
+    &.has-floating-label > .input[placeholder=" "] {
       ~ .label {
-        top: 0%;
-        @include fontsize($default-small-quantity * 1em);
+        position: absolute;
+        top: 50%;
+        left: convert-unit($controls-padding-x, rem);
+        transform: translateY(-50%);
+        pointer-events: none;
+        padding: 2px;
+        background-color: $input-background;
+        line-height: 1;
+        @include transition(top, font-size);
       }
-    }
-    // stylelint-disable-next-line selector-no-vendor-prefix
-    &:not(:-ms-input-placeholder) {
-      ~ .label {
-        top: 0%;
-        @include fontsize($default-small-quantity * 1em);
+
+      @include focus(":not(:placeholder-shown)") {
+        ~ .label {
+          top: 0%;
+          @include fontsize($default-small-quantity * 1em);
+        }
+      }
+      // stylelint-disable-next-line selector-no-vendor-prefix
+      &:not(:-ms-input-placeholder) {
+        ~ .label {
+          top: 0%;
+          @include fontsize($default-small-quantity * 1em);
+        }
       }
     }
   }

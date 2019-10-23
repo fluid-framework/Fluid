@@ -2,135 +2,137 @@
 // Menu
 //
 
-.menu {
-  display: block;
-  padding: 0; // reset list style
-  margin: 0; // reset list style
-  @include fontsize($fontsize-normal);
-  @include menu-variant($controls-theme); // default Menu variant styles
-}
-
-//
-// Menu items
-//
-.menu-item {
-  @extend %controls;
-  display: block; // reset button styles
-  width: 100%; // reset button style
-  padding-left: $nestedMenu-indent; // indent .menu-item in .menu
-  border: 0; // reset button style // override %controls style
-  border-radius: border-radius(0); // override %controls style
-  color: inherit; // override %controls style
-  text-align: inherit; // reset button style
-  @include fontsize(inherit); // override %controls style
-
-  @include before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    border-left: 0 solid;
-    border-left-color: inherit;
-    @include transition($menu-item-before-transition, border-color 1s cubic-bezier(1, 0, 1, 0)); // retain border-color till border width be 0
+@if $generate-component-classes {
+  .menu {
+    display: block;
+    padding: 0; // reset list style
+    margin: 0; // reset list style
+    @include fontsize($fontsize-normal);
+    @include menu-variant($controls-theme); // default Menu variant styles
   }
 
-  &:not(.active) {
-    // Style focus state to show elements in there focus state like button or anchors with href
-    @include hover-focus {
-      @include before {
-        @include transition($menu-item-before-transition); // remove border-color and color transition to quickly change border-color as border appear
-        border-left-width: $menu-item-before-borderwidth;
+  //
+  // Menu items
+  //
+  .menu-item {
+    @extend %controls;
+    display: block; // reset button styles
+    width: 100%; // reset button style
+    padding-left: $nestedMenu-indent; // indent .menu-item in .menu
+    border: 0; // reset button style // override %controls style
+    border-radius: border-radius(0); // override %controls style
+    color: inherit; // override %controls style
+    text-align: inherit; // reset button style
+    @include fontsize(inherit); // override %controls style
+
+    @include before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      border-left: 0 solid;
+      border-left-color: inherit;
+      @include transition($menu-item-before-transition, border-color 1s cubic-bezier(1, 0, 1, 0)); // retain border-color till border width be 0
+    }
+
+    &:not(.active) {
+      // Style focus state to show elements in there focus state like button or anchors with href
+      @include hover-focus {
+        @include before {
+          @include transition($menu-item-before-transition); // remove border-color and color transition to quickly change border-color as border appear
+          border-left-width: $menu-item-before-borderwidth;
+        }
       }
     }
-  }
 
-  @include hover {
-    text-decoration: none; // reset anchor decoration
-  }
+    @include hover {
+      text-decoration: none; // reset anchor decoration
+    }
 
-  @include focus {
-    outline: 0; // reset button style
-  }
+    @include focus {
+      outline: 0; // reset button style
+    }
 
-  @include not-disabled {
-    @extend %cursor-pointer; // add "hand" cursor to non-disabled button elements.
-  }
+    @include not-disabled {
+      @extend %cursor-pointer; // add "hand" cursor to non-disabled button elements.
+    }
 
-  @include disabled {
-    @extend %controls-disabled;
-  }
-}
-
-//
-// Color variants
-//
-@each $color, $value in $theme-colors {
-  .menu.is-#{$color} {
-    @include menu-variant($value);
-  }
-}
-
-//
-// Nested Menu
-//
-// Implementation of Nested menu is not included as it requires a bit of JavaScript
-// Following JavaScript Code implements nested Menu interaction and work with major Latest Browsers
-//
-// var menutriggers = document.getElementsByClassName("menu-trigger");
-// Object.keys(menutriggers).forEach(function (k) {
-//   menutriggers[k].onclick = function (e) {
-//     e.target.classList.toggle("active");
-//   };
-// });
-//
-
-// Nested Menu Support
-.menu > .menu {
-  overflow: hidden; // Prevent .menu-item from going outsize menu after applying margin-left
-  @include fontsize(inherit);
-
-  // Nested menu items
-  > * {
-    padding-right: $nestedMenu-indent + $controls-padding-x; // add padding to prevent content from going outside menu after applying margin-left
-    margin-left: $nestedMenu-indent; // indent nested menu items
-  }
-
-  > .menu {
-    padding-right: 0; // remove padding on nested menu
-  }
-
-  > .menu-trigger {
-    padding-right: $controls-padding-x; // restore padding to default value
-    margin-left: 0; // override style from nested menu items
-  }
-}
-
-// .menu-trigger Needs to be First element in nested menu
-.menu-trigger {
-  display: inline-flex;
-
-  @include after {
-    content: "";
-    align-self: center;
-    margin-left: auto; // align .menu-trigger caret to end of flex
-    @include triangle(bottom, $menu-trigger-caret-size, $menu-trigger-caret-color);
-  }
-
-  &.active {
-    @include after {
-      transform: scale(-1);
+    @include disabled {
+      @extend %controls-disabled;
     }
   }
 
-  ~ * {
-    @include animation($nestedMenu-animationname, $nestedMenu-animationduration);
+  //
+  // Color variants
+  //
+  @each $color, $value in $theme-colors {
+    .menu.is-#{$color} {
+      @include menu-variant($value);
+    }
   }
 
-  &:not(.active) {
-    // Hide everything else inside menu
+  //
+  // Nested Menu
+  //
+  // Implementation of Nested menu is not included as it requires a bit of JavaScript
+  // Following JavaScript Code implements nested Menu interaction and work with major Latest Browsers
+  //
+  // var menutriggers = document.getElementsByClassName("menu-trigger");
+  // Object.keys(menutriggers).forEach(function (k) {
+  //   menutriggers[k].onclick = function (e) {
+  //     e.target.classList.toggle("active");
+  //   };
+  // });
+  //
+
+  // Nested Menu Support
+  .menu > .menu {
+    overflow: hidden; // Prevent .menu-item from going outsize menu after applying margin-left
+    @include fontsize(inherit);
+
+    // Nested menu items
+    > * {
+      padding-right: $nestedMenu-indent + $controls-padding-x; // add padding to prevent content from going outside menu after applying margin-left
+      margin-left: $nestedMenu-indent; // indent nested menu items
+    }
+
+    > .menu {
+      padding-right: 0; // remove padding on nested menu
+    }
+
+    > .menu-trigger {
+      padding-right: $controls-padding-x; // restore padding to default value
+      margin-left: 0; // override style from nested menu items
+    }
+  }
+
+  // .menu-trigger Needs to be First element in nested menu
+  .menu-trigger {
+    display: inline-flex;
+
+    @include after {
+      content: "";
+      align-self: center;
+      margin-left: auto; // align .menu-trigger caret to end of flex
+      @include triangle(bottom, $menu-trigger-caret-size, $menu-trigger-caret-color);
+    }
+
+    &.active {
+      @include after {
+        transform: scale(-1);
+      }
+    }
+
     ~ * {
-      display: none;
+      @include animation($nestedMenu-animationname, $nestedMenu-animationduration);
+    }
+
+    &:not(.active) {
+      // Hide everything else inside menu
+      ~ * {
+        display: none;
+      }
     }
   }
 }
