@@ -64,7 +64,7 @@
       left: 0;
 
       + .overlay {
-        @extend %overlay-active;
+        @include overlay-active;
       }
     }
   }
@@ -72,13 +72,6 @@
   //
   // Doc : add Doc
   //
-
-  %overlay-active {
-    visibility: visible;
-    @if $enable-transitions {
-      opacity: 1;
-    }
-  }
 
   .overlay {
     position: fixed;
@@ -98,7 +91,7 @@
     }
 
     &.active {
-      @extend %overlay-active;
+      @include overlay-active;
     }
   }
 
