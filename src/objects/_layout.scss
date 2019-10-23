@@ -77,13 +77,6 @@
   // Doc : add Doc
   //
 
-  %overlay-active {
-    visibility: visible;
-    @if $enable-transitions {
-      opacity: 1;
-    }
-  }
-
   .overlay {
     position: fixed;
     top: 0;
