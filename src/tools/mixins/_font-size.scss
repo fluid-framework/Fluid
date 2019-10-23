@@ -5,7 +5,7 @@
 
 //
 // Responsive font size
-// Generate font size based on on setting `$enable-fluid-fontsizes`
+// Generate font size based on on setting `$enable-fluid-fontsize`
 //
 // Parameters:
 // [optional] {String,Number} $fontsize - font size in rem and pm , RFS only support px and rem
@@ -18,9 +18,9 @@
     @error "invalid value of font-size `#{$fontsize}` , The value unit must not be `px`";
   }
 
-  @if $enable-fluid-fontsizes {
+  @if $enable-fluid-fontsize {
     // Do Fluid font stuff
-    @error "This feature `fluid-fontsizes` is under development";
+    @error "This feature `fluid-fontsize` is under development";
   } @else {
     font-size: #{$fontsize}#{if($important, !important, null)};
   }
