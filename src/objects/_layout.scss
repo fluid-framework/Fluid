@@ -59,6 +59,10 @@
       max-width: $sidebar-maxwidth;
     }
 
+    + .overlay {
+      z-index: $sidebar-zindex - 1;
+    }
+
     &:target,
     &.active {
       left: 0;
