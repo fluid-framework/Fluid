@@ -19,7 +19,6 @@ $header-transition:                  min-height .35s ease-in-out, line-height .3
 $body-background:                    if($design-theme == light, hsl(0, 0%, 98%), $dark) !default;
 $body-color:                         clr-auto($body-background, $white, $dark) !default;
 $main-background:                    $body-background !default;
-$main-zindex:                        1 !default;
 
 // Footer
 $footer-background:                  $gray-900 !default;
