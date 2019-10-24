@@ -46,6 +46,7 @@
     &:not(.is-y) {
       margin-right: $controls-borderwidth / 2;
       margin-left: $controls-borderwidth / 2;
+
       > .control {
         @extend %group-margin-x;
 
@@ -81,6 +82,7 @@
     &.is-y {
       margin-top: $controls-borderwidth / 2;
       margin-bottom: $controls-borderwidth / 2;
+
       > .control {
         @extend %group-margin-y;
 
