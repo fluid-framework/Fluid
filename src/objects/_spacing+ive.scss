@@ -23,6 +23,7 @@
   //
 
   $config: (
+    responsive: true,
     properties: margin,
     selector: "m",
     values: $space-sizes,
@@ -36,6 +37,7 @@
   //
 
   $config: (
+    responsive: true,
     properties: margin,
     selector: "m",
     values: $space-sizes,
