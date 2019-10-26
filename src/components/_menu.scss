@@ -18,6 +18,7 @@
     @extend %controls;
     display: block; // reset button styles
     width: 100%; // reset button style
+    padding-right: $nestedMenu-indent; // to have equal padding on both sides
     padding-left: $nestedMenu-indent; // indent .menu-item in .menu
     border: 0; // reset button style // override %controls style
     border-radius: border-radius(0); // override %controls style
@@ -93,7 +94,7 @@
 
     // Nested menu items
     > * {
-      padding-right: $nestedMenu-indent + $controls-padding-x; // add padding to prevent content from going outside menu after applying margin-left
+      padding-right: $nestedMenu-indent * 2; // add padding to prevent content from going outside menu after applying margin-left
       margin-left: $nestedMenu-indent; // indent nested menu items
     }
 
@@ -102,7 +103,7 @@
     }
 
     > .menu-trigger {
-      padding-right: $controls-padding-x; // restore padding to default value
+      padding-right: $nestedMenu-indent; // restore padding to default value
       margin-left: 0; // override style from nested menu items
     }
   }
