@@ -55,26 +55,28 @@
 
 ## 🚀 Quick Start
 
-##### Using Repository release
+##### Using CDN
 
-1. [Download](https://github.com/fluid-framework/Fluid/releases) Latest release distribution
-2. Extract and copy to project folder
-3. Import required Css using link tag E.g `<link href="./Fluid/fluid.min.css" rel="stylesheet" />`
+1. Just copy stylelint link into HTML <head> tag `https://cdn.jsdelivr.net/npm/fluid-css/dist/fluid.min.css`.
+2. Start using Fluid
 
 ##### Using NPM
 
 1. Download Package as Direct Dependency `npm install fluid-css`
 2. Import required Css Into project using `import "fluid-css/dist/fluid.css"`
+3. Start using Fluid
 
 ##### Using Yarn
 
 1. Download Package as Direct Dependency `yarn add fluid-css`
 2. Import required Css Into project using `import "fluid-css/dist/fluid.css"`
+3. Start using Fluid
 
 ##### Using Meteor
 
 1. Download Package using `meteor add fluidframework:fluid`
 2. Import required Css Into project using `import "fluid-css/dist/fluid.css"`
+3. Start using Fluid
 
 ## 📂 Structure
 
