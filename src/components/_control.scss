@@ -7,7 +7,6 @@
 @if $generate-component-classes {
   .control {
     position: relative;
-    display: block;
     @include fontsize($fontsize-normal);
   }
 
