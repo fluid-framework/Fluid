@@ -125,7 +125,6 @@
       @include fontsize(inherit);
       display: flex; // align content in center based on height
       align-items: center; // align content in center based on height
-      height: 100%;
     }
 
     &.has-icon-left {

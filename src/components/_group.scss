@@ -27,6 +27,11 @@
       > .btn {
         padding: $group-lg-padding-y $group-lg-padding-x;
       }
+
+      .input {
+        padding-top: $group-lg-padding-y;
+        padding-bottom: $group-lg-padding-y;
+      }
     }
 
     > .input,
