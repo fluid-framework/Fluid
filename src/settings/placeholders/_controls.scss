@@ -79,7 +79,7 @@
 
   ~ .label {
     position: relative;
-    cursor: pointer;
+    cursor: $controls-label-cursor;
     padding-left: $controls-label-paddingleft;
     margin-bottom: 0; // override label style inside control
 
