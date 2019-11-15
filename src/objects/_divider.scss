@@ -11,10 +11,10 @@
 @if $generate-object-classes {
   .divider {
     display: flex;
+    width: 100%;
     opacity: $controls-disabled-opacity;
     text-align: center; // align text in center when vertical
     white-space: nowrap; // prevent wrapping of text
-    width: 100%;
 
     @include before-after {
       content: "";
@@ -24,16 +24,16 @@
       border: $borderwidth-normal / 2 solid currentColor;
     }
 
-    &.is-y {
-      width: auto; // override horizontal style
-      height: 100%; // spread to full height when vertical
-    }
-
     &:not(:empty) {
       @include before-after {
         margin: $controls-padding-y / 2 $controls-padding-x / 2;
       }
     }
+  }
+
+  .divider.is-y {
+    width: auto; // override horizontal style
+    height: 100%; // spread to full height when vertical
   }
 
   .divider.is-start {
