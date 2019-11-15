@@ -21,16 +21,12 @@
       align-self: center;
       width: inherit;
       height: inherit;
-      border-top: 1px solid currentColor;
+      border: $borderwidth-normal / 2 solid currentColor;
     }
 
     &.is-y {
       width: auto; // override horizontal style
       height: 100%; // spread to full height when vertical
-
-      @include before-after {
-        border-left: 1px solid currentColor;
-      }
     }
 
     &:not(:empty) {
