@@ -14,19 +14,21 @@
     opacity: $controls-disabled-opacity;
     text-align: center; // align text in center when vertical
     white-space: nowrap; // prevent wrapping of text
+    width: 100%; // override horizontal style
 
     @include before-after {
       content: "";
       align-self: center;
-      width: 100%;
+      width: inherit;
+      height: inherit;
       border-top: 1px solid currentColor;
     }
 
     &.is-y {
+      width: auto; // override horizontal style
+      height: 100%; // spread to full height when vertical
+
       @include before-after {
-        width: auto; // override horizontal style
-        height: 100%;
-        border-top: 0; // override horizontal style
         border-left: 1px solid currentColor;
       }
     }
