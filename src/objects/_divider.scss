@@ -14,7 +14,7 @@
     opacity: $controls-disabled-opacity;
     text-align: center; // align text in center when vertical
     white-space: nowrap; // prevent wrapping of text
-    width: 100%; // override horizontal style
+    width: 100%;
 
     @include before-after {
       content: "";
