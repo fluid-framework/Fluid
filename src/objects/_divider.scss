@@ -11,7 +11,6 @@
 @if $generate-object-classes {
   .divider {
     display: flex;
-    height: 100%; // spread to full height when vertical
     opacity: $controls-disabled-opacity;
     text-align: center; // align text in center when vertical
     white-space: nowrap; // prevent wrapping of text
