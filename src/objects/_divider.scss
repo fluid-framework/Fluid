@@ -5,8 +5,8 @@
 //
 // Modifiers:
 //  is-y : Makes Divider Vertical
-//  is-left : align text position to left inside divider
-//  is-right : align text position to right inside divider
+//  is-start : align text position to start of divider
+//  is-end : align text position to end of divider
 //
 @if $generate-object-classes {
   .divider {
@@ -36,15 +36,31 @@
     }
   }
 
-  .divider.is-left {
-    @include before {
-      width: 5%;
+  .divider.is-start {
+    &:not(.is-y) {
+      @include before {
+        width: 5%;
+      }
+    }
+
+    &.is-y {
+      @include before {
+        height: 5%;
+      }
     }
   }
 
-  .divider.is-right {
-    @include after {
-      width: 5%;
+  .divider.is-end {
+    &:not(.is-y) {
+      @include after {
+        width: 5%;
+      }
+    }
+
+    &.is-y {
+      @include after {
+        height: 5%;
+      }
     }
   }
 }
