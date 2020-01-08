@@ -17,7 +17,8 @@
 *.esproj
 nbproject
 
-
+# Data Files unrelated to source of project
+/data
 
 # Log and Temp extensions
 /temp
