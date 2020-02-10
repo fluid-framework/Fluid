@@ -7,7 +7,7 @@
 // Setting
 //
 // Header
-$header-background:                  if($design-theme == light, $white, $gray-800) !default;
+$header-background:                  if($design-theme == light, $white, $dark) !default;
 $header-color:                       clr-auto($header-background) !default;
 $header-bordertop:                   $borderwidth-wide solid $primary !default;
 $header-height:                      64px !default;
@@ -16,8 +16,8 @@ $header-zindex:                      15 !default;
 $header-transition:                  min-height .35s ease-in-out, line-height .35s ease-in-out !default;
 
 // main and body layout
-$body-background:                    if($design-theme == light, hsl(0, 0%, 98%), $dark) !default;
-$body-color:                         clr-auto($body-background, $white, $dark) !default;
+$body-background:                    if($design-theme == light, hsl(0, 0%, 98%), hsl(0, 0%, 15%)) !default;
+$body-color:                         clr-auto($body-background, $white, $gray-700) !default;
 $main-background:                    $body-background !default;
 
 // Footer
@@ -28,7 +28,7 @@ $footer-padding-y:                   48px !default;
 $footer-zindex:                      0 !default;
 
 // Sidebar
-$sidebar-background:                 if($design-theme == light, $white, $gray-800) !default;
+$sidebar-background:                 if($design-theme == light, $white, $gray-700) !default;
 $sidebar-color:                      clr-auto($sidebar-background, $white, $dark) !default;
 $sidebar-zindex:                     20 !default;
 $sidebar-transition:                 left .5s ease-in-out !default;
