@@ -14,6 +14,7 @@
     @extend %controls-focus;
 
     text-align: center;
+    font-family: $button-font;
 
     @include not-disabled {
       @extend %cursor-pointer; // add "hand" cursor to non-disabled button elements.
