@@ -24,6 +24,28 @@
   }
 
   //
+  // Grid Negative Margin
+  //
+
+  @if $enable-grid-gap {
+    .grid.is-adjust {
+      margin: -1 * ($grid-gap / 2);
+
+      &.has-gap-0 {
+        margin: 0;
+      }
+
+      &.has-gap-sm {
+        margin: -1 * ($grid-gap / 4);
+      }
+
+      &.has-gap-lg {
+        margin: -1 * ($grid-gap);
+      }
+    }
+  }
+
+  //
   // Grid Gap
   //
 
