@@ -9,14 +9,14 @@
   @include after {
     content: "";
     position: absolute;
-    top: calc(50% - (1em / 2));
+    top: calc(50% - (1.14286em / 2));
     right: 0;
     bottom: 0;
-    left: calc(50% - (1em / 2));
+    left: calc(50% - (1.14286em / 2));
     transform: inherit; // reset transform style
-    width: 1em;
-    height: 1em;
-    border: .15em solid currentColor;
+    width: convert-unit(16px, em);
+    height: convert-unit(16px, em);
+    border: .2em solid currentColor;
     border-right-color: transparent;
     border-radius: 50%;
     // stylelint-disable-next-line property-blacklist
