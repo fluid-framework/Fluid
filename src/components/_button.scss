@@ -182,6 +182,17 @@
   }
 
   //
+  // Unstyle Button
+  //
+
+  .btn.is-unstyle {
+    @include animation(none); // remove animation from button
+    @include transition(none); // remove transition from button
+    padding: 0; // remove padding from button
+    box-shadow: none; // remove box-shadow from button
+  }
+
+  //
   // Loading Animation
   //
 

@@ -68,6 +68,22 @@
     }
   }
 
+  //
+  // unstyle input
+  //
+
+  .input.is-unstyle {
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    @include animation(none);
+    background-color: transparent;
+    box-shadow: none;
+    @include hover {
+      box-shadow: none;
+    }
+  }
+
   // form validation style
   .is-validated .input:required {
     &:valid {
