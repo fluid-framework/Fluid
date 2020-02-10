@@ -42,7 +42,7 @@
     @extend %display-block;
   }
 
-  .control.is-invalid > .feedback.is-invalid {
+  .control.is-error > .feedback.is-error {
     @extend %display-block;
   }
 
@@ -53,7 +53,7 @@
         @extend %display-block;
       }
 
-      &:invalid ~ .feedback.is-invalid {
+      &:invalid ~ .feedback.is-error {
         @extend %display-block;
       }
     }
@@ -63,7 +63,7 @@
         @extend %display-block;
       }
 
-      &:not(:checked) ~ .feedback.is-invalid {
+      &:not(:checked) ~ .feedback.is-error {
         @extend %display-block;
       }
     }
