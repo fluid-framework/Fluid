@@ -5,8 +5,8 @@
 //
 // Modifiers:
 //  is-y : Makes Divider Vertical
-//  is-start : align text position to start of divider
-//  is-end : align text position to end of divider
+//  txt-left : align text position to start of divider
+//  txt-right : align text position to end of divider
 //
 @if $generate-object-classes {
   .divider {
@@ -36,7 +36,7 @@
     height: 100%; // spread to full height when vertical
   }
 
-  .divider.is-start {
+  .divider.txt-left {
     &:not(.is-y) {
       @include before {
         width: 5%;
@@ -50,7 +50,7 @@
     }
   }
 
-  .divider.is-end {
+  .divider.txt-right {
     &:not(.is-y) {
       @include after {
         width: 5%;
