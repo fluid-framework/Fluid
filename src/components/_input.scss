@@ -19,11 +19,6 @@
     @include hover {
       box-shadow: box-shadow($input-boxshadow-inner, $controls-focus-boxshadow rgba($controls-theme, .5)); // Fix: hover state box-shadow transition
     }
-
-    @include focus {
-      border-color: currentColor;
-      box-shadow: box-shadow(none);
-    }
   }
 
   //
@@ -61,6 +56,15 @@
   @each $color, $value in $theme-colors {
     .input.is-#{$color} {
       @include input-variant($color, $value);
+    }
+  }
+
+  // stylelint-disable-next-line no-duplicate-selectors
+  .input {
+    // move focus style override after theme selector to override without important
+    @include focus {
+      border-color: currentColor;
+      box-shadow: box-shadow(none);
     }
   }
 
