@@ -8,7 +8,10 @@
     padding: 0; // reset list style
     margin: 0; // reset list style
     @include fontsize($fontsize-normal);
-    @include menu-variant($controls-theme); // default Menu variant styles
+
+    .menu-item {
+      @include menu-variant($controls-theme); // default Menu variant styles
+    }
   }
 
   //
@@ -31,7 +34,8 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 0;
+      // directly use variable value for direction
+      #{$menu-item-border-direction}: 0;
       border-left: 0 solid;
       border-left-color: inherit;
       @include transition($menu-item-before-transition, border-color 1s cubic-bezier(1, 0, 1, 0)); // retain border-color till border width be 0
@@ -68,8 +72,15 @@
   // Color variants
   //
   @each $color, $value in $theme-colors {
-    .menu.is-#{$color} {
-      @include menu-variant($value);
+    @if $menu-item-themes-generate {
+      .menu-item.is-#{$color},
+      .menu.is-#{$color} .menu-item {
+        @include menu-variant($value);
+      }
+    }@else {
+      .menu.is-#{$color} .menu-item {
+        @include menu-variant($value);
+      }
     }
   }
 
