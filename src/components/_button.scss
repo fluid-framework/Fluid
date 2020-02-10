@@ -204,8 +204,8 @@
 
   // useful for button with only icons
   .btn.is-circle {
-    width: $button-iscircle-size;
-    height: $button-iscircle-size;
-    padding: 0;
+    display: inline-flex; // used to fix alignment of icon inside
+    padding: .6em;
+    line-height: 1;
   }
 }
