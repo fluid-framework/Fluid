@@ -11,6 +11,7 @@
     display: flex;
     list-style: none;
     flex-wrap: wrap;
+    align-items: center;
     padding: $breadcrumb-padding-y $breadcrumb-padding-x;
     margin-bottom: $breadcrumb-marginbottom;
     @include fontsize();
