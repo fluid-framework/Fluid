@@ -8,10 +8,12 @@
     selector: "z",
     values: (
       top: 9999,
+      100: 100,
       10: 10,
       0: 0,
       auto: auto,
       -10: -10,
+      -100: -100,
       bottom: -9999
     ),
     enable-important-values: true
