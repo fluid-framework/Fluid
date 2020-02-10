@@ -50,5 +50,29 @@
 
   .is-loading {
     @include loading-spinner($controls-color);
+
+    //
+    // Note : Experimental Feature
+    // Issue : -
+    // Doc : add doc
+    //
+    &:not(.btn) {
+      background-color: $body-background;
+
+      @include before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $overlay-zindex;
+        background-color: inherit;
+      }
+
+      @include after {
+        z-index: $overlay-zindex;
+      }
+    }
   }
 }
