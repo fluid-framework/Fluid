@@ -185,10 +185,9 @@
   //
 
   .btn.is-loading {
-    pointer-events: none;
     // stylelint-disable-next-line declaration-no-important
     color: transparent !important;
-    @include loading-spinner($button-theme);
+    @include loading-spinner-color($button-theme);
   }
 
   //

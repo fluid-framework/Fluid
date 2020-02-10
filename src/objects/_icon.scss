@@ -47,4 +47,8 @@
       left: auto;
     }
   }
+
+  .is-loading {
+    @include loading-spinner($controls-color);
+  }
 }

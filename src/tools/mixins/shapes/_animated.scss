@@ -5,7 +5,8 @@
 // Loading Spinner Shape to indicate loading process
 @mixin loading-spinner($color: $primary) {
   position: relative;
-  @include before {
+  pointer-events: none;
+  @include after {
     content: "";
     position: absolute;
     top: calc(50% - (1em / 2));
@@ -27,7 +28,7 @@
 
 // Mixin to override Loading spinner shape color
 @mixin loading-spinner-color($color) {
-  @include before {
+  @include after {
     color: $color;
   }
 }
