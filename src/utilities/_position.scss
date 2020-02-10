@@ -4,6 +4,7 @@
 
 @if $generate-utility-classes {
   $config: (
+    responsive: true,
     properties: position,
     selector: "",
     values: static relative absolute fixed sticky,
