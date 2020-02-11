@@ -281,7 +281,10 @@
     "scss/dollar-variable-default": [true, { "ignore": "local" }],
     "scss/dollar-variable-no-missing-interpolation": true,
     "scss/no-duplicate-mixins": true,
-    "scss/no-duplicate-dollar-variables": [null, { "ignoreInsideAtRules": ["if", "mixin"] }],
+    "scss/no-duplicate-dollar-variables": [
+      null,
+      { "ignoreInsideAtRules": ["if", "mixin"] }
+    ],
     "scss/operator-no-newline-after": true,
     "scss/operator-no-newline-before": true,
     "scss/operator-no-unspaced": true,
