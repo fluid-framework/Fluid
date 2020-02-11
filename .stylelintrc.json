@@ -1,4 +1,5 @@
 {
+  "_duplicate_rules": { "value-keyword-case": "stylelint-config-standard" },
   "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
   "plugins": ["stylelint-order"],
   "rules": {
