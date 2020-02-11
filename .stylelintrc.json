@@ -20,7 +20,7 @@
     "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never-single-line",
     "selector-max-attribute": 2,
-    "selector-max-class": 4,
+    "selector-max-class": 5,
     "selector-max-combinators": 4,
     "selector-max-compound-selectors": 4,
     "selector-max-id": 0,
