@@ -19,6 +19,6 @@ $h6-fontsize:                  $fontsize-normal !default;
 //
 $headings-color:               $gray-900 !default;
 $headings-fontfamily:          null !default;
-$headings-fontweight:          500 !default;
+$headings-fontweight:          $fontweight-bold !default;
 $headings-fontstyle:           null !default;
 $headings-lineheight:          1.2 !default;
