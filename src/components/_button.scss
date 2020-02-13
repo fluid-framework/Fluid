@@ -34,7 +34,7 @@
     $active-background: clr-step($button-theme, 4);
 
     color: clr-auto($button-theme);
-    @include gradient-bg($button-theme, 180deg);
+    @include gradient-background($button-theme, 180deg);
 
     @include hover {
       // to avoid adding extra box-shadow override
@@ -45,7 +45,7 @@
     }
 
     @include focus {
-      @include gradient-bg($focus-background, 180deg);
+      @include gradient-background($focus-background, 180deg);
     }
 
     @include active {

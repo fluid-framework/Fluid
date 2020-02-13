@@ -27,7 +27,7 @@
     border-radius: border-radius();
     color: $control-feedback-color;
     box-shadow: box-shadow($control-feedback-shadow);
-    @include gradient-bg($control-feedback-background, 180deg);
+    @include gradient-background($control-feedback-background, 180deg);
 
     @include before {
       content: "";
