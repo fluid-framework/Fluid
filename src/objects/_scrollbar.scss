@@ -9,8 +9,7 @@
   // Doc : add doc
   //
 
-  .scrollbar,
-  body * {
+  .scrollbar {
     &::-webkit-scrollbar {
       background-color: transparent;
       height: 7px;
