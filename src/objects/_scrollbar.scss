@@ -11,7 +11,7 @@
 
   .scrollbar {
     &::-webkit-scrollbar {
-      background-color: transparent;
+      background-color: $gray-100;
       height: 7px;
       width: 7px;
     }
