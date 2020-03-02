@@ -34,30 +34,6 @@ $enable-experimental-css:                     true !default;    // Enable Debugg
 @import "./naming/dictionary";
 
 //
-// Breakpoints
-//
-
-@import "./breakpoints/breakpoints";
-
-//
-// Grid
-//
-
-@import "./grid/grid";
-
-//
-// Containers
-//
-
-@import "./containers/containers";
-
-//
-// Spacing
-//
-
-@import "./space/space";
-
-//
 // Theme
 //
 
@@ -67,11 +43,19 @@ $enable-experimental-css:                     true !default;    // Enable Debugg
 // Design
 //
 
+@import "./design/breakpoints";
 @import "./design/border";
 @import "./design/shadow";
-@import "./design/layout";
 @import "./design/link";
-@import "./design/table";
+@import "./design/space";
+
+//
+// Objects
+//
+
+@import "./objects/grid";
+@import "./objects/layout";
+@import "./objects/containers";
 
 //
 // Typography
@@ -95,6 +79,7 @@ $enable-experimental-css:                     true !default;    // Enable Debugg
 // Components
 //
 
+@import "./components/table";
 @import "./components/controls";
 @import "./components/input";
 @import "./components/button";
@@ -114,4 +99,4 @@ $enable-experimental-css:                     true !default;    // Enable Debugg
 // icons
 //
 
-@import "./icon/icon";
+@import "./objects/icon"; // import icon settings at the end only because they are dependent on `$controls-theme` variable

@@ -90,17 +90,14 @@ src
 ├───generics
 ├───objects
 ├───settings
-│   ├───breakpoints
 │   ├───components
-│   ├───containers
 │   ├───design
-│   ├───grid
-│   ├───icon
+│   ├───icons
 │   ├───misc
 │   ├───naming
+│   ├───objects
 │   ├───placeholders
 │   │   └───typography
-│   ├───space
 │   ├───theme
 │   └───typography
 ├───tools
