@@ -27,18 +27,20 @@
     overflow-wrap: break-word;
   }
 
-  //
-  // Note : Experimental and non standard properties
-  // Issue : Not Supported on IE 11
-  // Doc : add doc
-  //
-  .txt-clip {
-    // stylelint-disable-next-line declaration-no-important
-    color: transparent !important;
-    // stylelint-disable-next-line declaration-no-important, property-no-vendor-prefix
-    -webkit-background-clip: text !important;
-    // stylelint-disable-next-line declaration-no-important
-    background-clip: text !important;
+  @if $enable-experimental-css {
+    //
+    // Note : Experimental and non standard properties
+    // Issue : Not Supported on IE 11
+    // Doc : add doc
+    //
+    .txt-clip {
+      // stylelint-disable-next-line declaration-no-important
+      color: transparent !important;
+      // stylelint-disable-next-line declaration-no-important, property-no-vendor-prefix
+      -webkit-background-clip: text !important;
+      // stylelint-disable-next-line declaration-no-important
+      background-clip: text !important;
+    }
   }
 
   //

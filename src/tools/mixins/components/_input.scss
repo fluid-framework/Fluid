@@ -33,7 +33,14 @@
     color: $color;
   }
 
-  .control.has-floating-label > & ~ .label {
-    color: $color;
+  @if $enable-experimental-css {
+    //
+    // Note : Experimental Feature
+    // Issue : Doesn't work on Edge 44
+    // Doc : add doc
+    //
+    .control.has-floating-label > & ~ .label {
+      color: $color;
+    }
   }
 }

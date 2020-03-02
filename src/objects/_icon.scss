@@ -48,30 +48,32 @@
     }
   }
 
-  //
-  // Note : Experimental Feature
-  // Issue : -
-  // Doc : add doc
-  //
-  .is-loading {
-    @include loading-spinner($controls-color);
+  @if $enable-experimental-css {
+    //
+    // Note : Experimental Feature
+    // Issue : -
+    // Doc : add doc
+    //
+    .is-loading {
+      @include loading-spinner($controls-color);
 
-    &:not(.btn) {
-      background-color: $body-background;
+      &:not(.btn) {
+        background-color: $body-background;
 
-      @include before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: $overlay-zindex;
-        background-color: inherit;
-      }
+        @include before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: $overlay-zindex;
+          background-color: inherit;
+        }
 
-      @include after {
-        z-index: $overlay-zindex;
+        @include after {
+          z-index: $overlay-zindex;
+        }
       }
     }
   }

@@ -163,30 +163,37 @@
       }
     }
 
-    &.has-floating-label > .input[placeholder=" "] {
-      ~ .label {
-        position: absolute;
-        top: 50%;
-        left: convert-unit($controls-padding-x, rem);
-        transform: translateY(-50%);
-        pointer-events: none;
-        padding: 2px;
-        background-color: $input-background;
-        line-height: 1;
-        @include transition(top, font-size);
-      }
-
-      @include focus(":not(:placeholder-shown)") {
+    @if $enable-experimental-css {
+      //
+      // Note : Experimental Feature
+      // Issue : Doesn't work on Edge 44
+      // Doc : add doc
+      //
+      &.has-floating-label > .input[placeholder=" "] {
         ~ .label {
-          top: 0%;
-          @include fontsize($default-small-quantity * 1em);
+          position: absolute;
+          top: 50%;
+          left: convert-unit($controls-padding-x, rem);
+          transform: translateY(-50%);
+          pointer-events: none;
+          padding: 2px;
+          background-color: $input-background;
+          line-height: 1;
+          @include transition(top, font-size);
         }
-      }
-      // stylelint-disable-next-line selector-no-vendor-prefix
-      &:not(:-ms-input-placeholder) {
-        ~ .label {
-          top: 0%;
-          @include fontsize($default-small-quantity * 1em);
+
+        @include focus(":not(:placeholder-shown)") {
+          ~ .label {
+            top: 0%;
+            @include fontsize($default-small-quantity * 1em);
+          }
+        }
+        // stylelint-disable-next-line selector-no-vendor-prefix
+        &:not(:-ms-input-placeholder) {
+          ~ .label {
+            top: 0%;
+            @include fontsize($default-small-quantity * 1em);
+          }
         }
       }
     }
