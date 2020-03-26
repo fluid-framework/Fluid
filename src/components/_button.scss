@@ -97,6 +97,10 @@
     //
     border-color: $button-theme-light;
 
+    @include focus-active {
+      border-color: currentColor;
+    }
+
     @include button-design-outline-variant($button-theme); // Default button theme
 
     // Color variants
