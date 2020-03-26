@@ -11,7 +11,6 @@
   padding: $controls-padding-y $controls-padding-x;
   border: $controls-borderwidth solid $controls-bordercolor;
   border-radius: border-radius($controls-borderradius, 0);
-  color: $controls-color;
   background-color: $controls-background;
   vertical-align: middle;
   text-decoration: none;
@@ -102,6 +101,7 @@
       height: $controls-label-before-size;
       padding: 0; // override %controls padding
       border-color: $controls-label-bordercolor;
+      color: $controls-color;
       background-color: $controls-label-background;
       @include fontsize(inherit); // override %controls font-size
     }

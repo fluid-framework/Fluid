@@ -15,6 +15,7 @@
     // stylelint-disable-next-line property-no-vendor-prefix
     -webkit-appearance: none;
     appearance: none;
+    color: $controls-color;
 
     @include focus {
       outline: 0;

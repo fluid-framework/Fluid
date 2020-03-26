@@ -25,7 +25,6 @@
     padding-left: $nestedMenu-indent; // indent .menu-item in .menu
     border: 0; // reset button style // override %controls style
     border-radius: border-radius(0); // override %controls style
-    color: inherit; // override %controls style
     text-align: inherit; // reset button style
     @include fontsize(inherit); // override %controls style
 

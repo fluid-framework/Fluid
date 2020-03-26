@@ -96,7 +96,6 @@
     // Default Outline Styles
     //
     border-color: $button-theme-light;
-    color: $button-theme;
 
     @include button-design-outline-variant($button-theme); // Default button theme
 
