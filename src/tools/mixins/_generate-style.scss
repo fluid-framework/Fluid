@@ -32,6 +32,9 @@
 // [optional] {Boolean} `responsive`:
 // generate responsive styles inside media query.
 //
+// [optional] {Boolean} `reverse-responsive`:
+// invert the responsive media query to be applied below the value.
+//
 // [optional] {Boolean} `enable-important-values`:
 // Use !important for values.
 //
@@ -79,43 +82,84 @@
   $values: to-map(map-get($config, "values"));
   $selector: map-get($config, "selector");
   $infixes: map-has-key($config, "infixes") and map-get($config, "infixes");
-  $responsive: map-has-key($config, responsive) and map-get($config, responsive) == true;
+  $responsive: map-has-key($config, "responsive") and map-get($config, "responsive") == true;
+  $reverse-responsive: map-has-key($config, "reverse-responsive") and map-get($config, "reverse-responsive") == true;
   $enable-important-values: map-has-key($config, "enable-important-values") and map-get($config, "enable-important-values");
   $disable-prefix-values-keys: map-has-key($config, "disable-prefix-values-keys") and map-get($config, "disable-prefix-values-keys");
   $disable-prefix-infixes-keys: map-has-key($config, "disable-prefix-infixes-keys") and map-get($config, "disable-prefix-infixes-keys");
   $disable-prefix-infixes-values: map-has-key($config, "disable-prefix-infixes-values") and map-get($config, "disable-prefix-infixes-values");
 
   @each $breakpoint in map-keys( if($responsive, $breakpoints, (null: null)) ) {
-    @include media-breakpoint-above($breakpoint) {
-      $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-prefix);
-      $infixes: to-map(if($infixes, $infixes, null));
-      @each $infix-key, $infix-value in $infixes {
-        @if not $disable-prefix-infixes-keys {
-          $infix-key: prefix($infix-key, "-");
-        }
-
-        @if not $disable-prefix-infixes-values {
-          $infix-value: prefix($infix-value, "-");
-        }
-
-        @each $key, $value in $values {
-          @if not $disable-prefix-values-keys {
-            $key: prefix($key, "-");
+    @if $reverse-responsive {
+      @include media-breakpoint-below($breakpoint) {
+        $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-prefix);
+        $infixes: to-map(if($infixes, $infixes, null));
+        @each $infix-key, $infix-value in $infixes {
+          @if not $disable-prefix-infixes-keys {
+            $infix-key: prefix($infix-key, "-");
           }
 
-          .#{$selector}#{$infix-key}#{$key}#{$breakpoint-suffix} {
-            @each $property in $properties {
-              @if type-of($property) != string and type-of($property) != map {
-                @error "The $property:`#{$property}` inside $properties: `#{$properties}` for $selector: `#{$selector}` is of incorrect type: `#{type-of($property)}`. Type of `string` or `map` is required!";
+          @if not $disable-prefix-infixes-values {
+            $infix-value: prefix($infix-value, "-");
+          }
+
+          @each $key, $value in $values {
+            @if not $disable-prefix-values-keys {
+              $key: prefix($key, "-");
+            }
+
+            .#{$selector}#{$infix-key}#{$key}#{$breakpoint-suffix} {
+              @each $property in $properties {
+                @if type-of($property) != string and type-of($property) != map {
+                  @error "The $property:`#{$property}` inside $properties: `#{$properties}` for $selector: `#{$selector}` is of incorrect type: `#{type-of($property)}`. Type of `string` or `map` is required!";
+                }
+
+                $enable-important-values: if($enable-important-values, !important, null);
+
+                @if type-of($property) == string {
+                  #{$property}#{$infix-value}: $value $enable-important-values;
+                } @else {
+                  @each $key, $value in $property {
+                    #{$key}#{$infix-value}: $value $enable-important-values;
+                  }
+                }
               }
+            }
+          }
+        }
+      }
+    } @else {
+      @include media-breakpoint-above($breakpoint) {
+        $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-prefix);
+        $infixes: to-map(if($infixes, $infixes, null));
+        @each $infix-key, $infix-value in $infixes {
+          @if not $disable-prefix-infixes-keys {
+            $infix-key: prefix($infix-key, "-");
+          }
 
-              $enable-important-values: if($enable-important-values, !important, null);
+          @if not $disable-prefix-infixes-values {
+            $infix-value: prefix($infix-value, "-");
+          }
 
-              @if type-of($property) == string {
-                #{$property}#{$infix-value}: $value $enable-important-values;
-              } @else {
-                @each $key, $value in $property {
-                  #{$key}#{$infix-value}: $value $enable-important-values;
+          @each $key, $value in $values {
+            @if not $disable-prefix-values-keys {
+              $key: prefix($key, "-");
+            }
+
+            .#{$selector}#{$infix-key}#{$key}#{$breakpoint-suffix} {
+              @each $property in $properties {
+                @if type-of($property) != string and type-of($property) != map {
+                  @error "The $property:`#{$property}` inside $properties: `#{$properties}` for $selector: `#{$selector}` is of incorrect type: `#{type-of($property)}`. Type of `string` or `map` is required!";
+                }
+
+                $enable-important-values: if($enable-important-values, !important, null);
+
+                @if type-of($property) == string {
+                  #{$property}#{$infix-value}: $value $enable-important-values;
+                } @else {
+                  @each $key, $value in $property {
+                    #{$key}#{$infix-value}: $value $enable-important-values;
+                  }
                 }
               }
             }
