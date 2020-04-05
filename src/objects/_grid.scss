@@ -69,26 +69,13 @@
   //
 
   @each $breakpoint in map-keys($breakpoints) {
-    @if $grid-breakpoints-mediaQuery == "above" {
-      @include media-breakpoint-above($breakpoint, $breakpoints) {
-        $breakpoint: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-above-prefix);
+    @include media-breakpoint-above($breakpoint, $breakpoints) {
+      $breakpoint: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-above-prefix);
 
-        // removing last .column because cannot offset a whole grid
-        @for $i from 1 through ($grid-columns - 1) {
-          .off-#{$i}#{$breakpoint} {
-            margin-left: grid-col-width($i);
-          }
-        }
-      }
-    } @else {
-      @include media-breakpoint-below($breakpoint, $breakpoints) {
-        $breakpoint: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-above-prefix);
-
-        // removing last .column because cannot offset a whole grid
-        @for $i from 1 through ($grid-columns - 1) {
-          .off-#{$i}#{$breakpoint} {
-            margin-left: grid-col-width($i);
-          }
+      // removing last .column because cannot offset a whole grid
+      @for $i from 1 through ($grid-columns - 1) {
+        .off-#{$i}#{$breakpoint} {
+          margin-left: grid-col-width($i);
         }
       }
     }
