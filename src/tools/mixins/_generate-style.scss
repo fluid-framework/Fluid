@@ -100,12 +100,13 @@
   $values: to-map(map-get($config, "values"));
   $selector: map-get($config, "selector");
   $infixes: map-has-key($config, "infixes") and map-get($config, "infixes");
+  $reverse-responsive: map-has-key($config, "reverse-responsive") and map-get($config, "reverse-responsive") == true;
   $enable-important-values: map-has-key($config, "enable-important-values") and map-get($config, "enable-important-values");
   $disable-prefix-values-keys: map-has-key($config, "disable-prefix-values-keys") and map-get($config, "disable-prefix-values-keys");
   $disable-prefix-infixes-keys: map-has-key($config, "disable-prefix-infixes-keys") and map-get($config, "disable-prefix-infixes-keys");
   $disable-prefix-infixes-values: map-has-key($config, "disable-prefix-infixes-values") and map-get($config, "disable-prefix-infixes-values");
 
-  $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-below-prefix);
+  $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ if($reverse-responsive, $breakpoints-below-prefix, $breakpoints-above-prefix));
   $infixes: to-map(if($infixes, $infixes, null));
   @each $infix-key, $infix-value in $infixes {
     @if not $disable-prefix-infixes-keys {
