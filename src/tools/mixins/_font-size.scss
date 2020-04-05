@@ -12,6 +12,16 @@
 // [optional] {Map} $important - set important in css style
 //
 @mixin fontsize($fontsize: $fontsize-normal, $important: false) {
+  font-size: #{fontsize($fontsize)}#{if($important, !important, null)};
+}
+
+//
+// fontsize
+// Function alternative to @mixin fontsize. this function can be used over places where style-lint property-blacklist is disabled
+//
+// Parameters:
+// {Number} $radius - border-radius
+@function fontsize($fontsize) {
   $fontsize-unit: if(type-of($fontsize) == "number", unit($fontsize), false);
 
   @if $fontsize-unit == "px" {
@@ -22,6 +32,6 @@
     // Do Fluid font stuff
     @error "This feature `fluid-fontsize` is under development";
   } @else {
-    font-size: #{$fontsize}#{if($important, !important, null)};
+    @return $fontsize;
   }
 }

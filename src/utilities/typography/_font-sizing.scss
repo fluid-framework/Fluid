@@ -3,15 +3,16 @@
 //
 
 @if $generate-utility-classes or $generate-component-classes {
-  .is-sm {
-    @include fontsize($fontsize-small, true);
-  }
+  $config: (
+    properties: font-size,
+    selector: "is",
+    values: (
+      sm: fontsize($fontsize-small),
+      md: fontsize($fontsize-normal),
+      lg: fontsize($fontsize-large)
+    ),
+    enable-important-values: true
+  );
 
-  .is-md {
-    @include fontsize($fontsize-normal, true);
-  }
-
-  .is-lg {
-    @include fontsize($fontsize-large, true);
-  }
+  @include generate-style($config);
 }
