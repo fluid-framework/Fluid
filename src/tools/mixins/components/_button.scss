@@ -30,7 +30,7 @@
     // to avoid adding extra color override
     // - clr-auto(clr-step($button-theme, 4)) is already inside default is-solid button
     color: if(clr-auto($color) != clr-auto($active-default), clr-auto($active-background), null);
-    @if $design-solid-else-gradients {
+    @if $design-solid-or-gradients == "solid" {
       background-color: $active-background;
     }
   }

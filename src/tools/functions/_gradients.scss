@@ -14,7 +14,7 @@
 // {Color} Gradient or background
 //
 @function gradient($color, $angle) {
-  @if not $design-solid-else-gradients {
+  @if $design-solid-or-gradients != "solid" {
     $darker-shade: darken(saturate($color, 7.5%), 7.5%);
     $lighter-shade: lighten(saturate($color, 7.5%), 7.5%);
     @return $color linear-gradient($angle, $darker-shade 0%, $color 70%, $lighter-shade 100%);

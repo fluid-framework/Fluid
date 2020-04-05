@@ -50,7 +50,7 @@
 
     @include active {
       color: clr-auto($active-background);
-      @if $design-solid-else-gradients {
+      @if $design-solid-or-gradients == "solid" {
         background-color: $active-background;
       }
     }
@@ -76,7 +76,7 @@
     }
 
     @include active {
-      @if not $design-solid-else-gradients {
+      @if $design-solid-or-gradients != "solid" {
         background-image: none; // Remove the gradient for the pressed/active state
       }
     }
@@ -84,7 +84,7 @@
     @include disabled {
       color: $white;
       background: $button-disabled-background;
-      @if not $design-solid-else-gradients {
+      @if $design-solid-or-gradients != "solid" {
         background-image: none; // Remove CSS gradients if they're enabled
       }
     }
