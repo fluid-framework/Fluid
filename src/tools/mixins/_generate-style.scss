@@ -92,7 +92,7 @@
   @each $breakpoint in map-keys( if($responsive, $breakpoints, (null: null)) ) {
     @if $reverse-responsive {
       @include media-breakpoint-below($breakpoint) {
-        $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-prefix);
+        $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-below-prefix);
         $infixes: to-map(if($infixes, $infixes, null));
         @each $infix-key, $infix-value in $infixes {
           @if not $disable-prefix-infixes-keys {
@@ -130,7 +130,7 @@
       }
     } @else {
       @include media-breakpoint-above($breakpoint) {
-        $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-prefix);
+        $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-below-prefix);
         $infixes: to-map(if($infixes, $infixes, null));
         @each $infix-key, $infix-value in $infixes {
           @if not $disable-prefix-infixes-keys {

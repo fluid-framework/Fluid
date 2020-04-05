@@ -11,7 +11,8 @@ $design-solid-else-gradients:                 true !default;    // * Let you cho
 $design-shadow-else-border:                   true !default;    // * Let you choose between shadow vs border design UI
 $design-rounded-else-sharp:                   true !default;    // * Let you choose between rounded vs sharp corners design UI
 $breakpoints-readable-else-short:             false !default;   // Let you choose between shorter words like `sm` vs understandable words like `mobile`
-$breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints
+$breakpoints-below-prefix:                    "@" !default;     // Symbol used to prefix classes at given breakpoint and below it
+$breakpoints-above-prefix:                    "@" !default;     // Symbol used to prefix classes at given breakpoint and above it
 $enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
 $enable-transitions:                          true !default;    // Enable transitions and animations
