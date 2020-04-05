@@ -9,7 +9,7 @@ $default-large-quantity:                      1.25 !default;    // Default multi
 $design-theme:                                "light" !default; // * Let you choose between default light theme and dark theme
 $design-solid-else-gradients:                 true !default;    // * Let you choose between gradient vs solid design UI
 $design-shadow-else-border:                   true !default;    // * Let you choose between shadow vs border design UI
-$design-rounded-else-box:                     true !default;    // * Let you choose between rounded vs box corners design UI
+$design-rounded-else-sharp:                   true !default;    // * Let you choose between rounded vs sharp corners design UI
 $breakpoints-readable-else-short:             false !default;   // Let you choose between shorter words like `sm` vs understandable words like `mobile`
 $breakpoints-prefix:                          "@" !default;     // Symbol used to prefix Breakpoints
 $enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements

@@ -9,7 +9,7 @@
 // Parameters:
 // {Number} $radius - border-radius
 @function border-radius($radius: $borderradius-default, $fallback-value: null) {
-  @if $design-rounded-else-box {
+  @if $design-rounded-else-sharp {
     @return $radius;
   }
 
