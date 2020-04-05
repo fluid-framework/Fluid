@@ -3,29 +3,29 @@
 //
 
 // Options: Quickly modify global styling by enabling or disabling optional features.
-$default-fontsize:                            14px !default;    // Default font-size use
-$default-small-quantity:                      .75 !default;     // Default multiplicative value to generate small styles
-$default-large-quantity:                      1.25 !default;    // Default multiplicative value to generate large styles
-$design-theme:                                "light" !default; // * Let you choose between default "light" theme and "dark" theme
-$design-solid-or-gradients:                   "solid" !default; // * Let you choose between "solid" vs "gradient" design UI
-$design-shadow-or-border:                     "shadow" !default;    // * Let you choose between "shadow" vs "border" design UI
-$design-rounded-else-sharp:                   true !default;    // * Let you choose between rounded vs sharp corners design UI
-$breakpoints-readable-else-short:             false !default;   // Let you choose between shorter words like `sm` vs understandable words like `mobile`
-$breakpoints-below-prefix:                    "@" !default;     // Symbol used to prefix classes at given breakpoint and below it
-$breakpoints-above-prefix:                    "@" !default;     // Symbol used to prefix classes at given breakpoint and above it
-$grid-breakpoints-mediaQuery:                 "above" !default; // Let you choose how to apply grid media query either apply it "above" the breakpoint or "below" it
-$enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
-$enable-all-color-variant:                    false !default;   // Generate Every Color styles
-$enable-transitions:                          true !default;    // Enable transitions and animations
-$enable-prefers-reduced-motion-mediaQuery:    true !default;    // Disable transitions in Reduced Motion Media Query
-$enable-fluid-fontsize:                       false !default;   // * Enable Fluid typography
-$generate-spacing-classes:                    true !default;    // Enable Spacing Classes
-$generate-grid-classes:                       true !default;    // Enable Grid Classes
-$generate-object-classes:                     true !default;    // Enable object Classes
-$generate-utility-classes:                    true !default;    // Enable utilities Classes
-$generate-component-classes:                  true !default;    // Enable component Classes
-$enable-debugging:                            false !default;   // Enable Debugging Steps
-$enable-experimental-css:                     true !default;    // Enable Debugging Steps
+$default-fontsize:                                  14px !default;       // Default font-size use
+$default-small-quantity:                            .75 !default;        // Default multiplicative value to generate small styles
+$default-large-quantity:                            1.25 !default;       // Default multiplicative value to generate large styles
+$design-theme:                                      "light" !default;    // * Let you choose between default "light" theme and "dark" theme
+$design-solid-or-gradients:                         "solid" !default;    // * Let you choose between "solid" vs "gradient" design UI
+$design-shadow-or-border:                           "shadow" !default;   // * Let you choose between "shadow" vs "border" design UI
+$design-rounded-else-sharp:                         true !default;       // * Let you choose between rounded vs sharp corners design UI
+$breakpoints-readable-else-short:                   false !default;      // Let you choose between shorter words like `sm` vs understandable words like `mobile`
+$breakpoints-below-prefix:                          "@" !default;        // Symbol used to prefix classes at given breakpoint and below it
+$breakpoints-above-prefix:                          "@" !default;        // Symbol used to prefix classes at given breakpoint and above it
+$grid-breakpoints-mediaQuery:                       "above" !default;    // Let you choose how to apply grid media query either apply it "above" the breakpoint or "below" it
+$enable-grid-gap:                                   true !default;       // Enable Spacing/Gutter between Grid elements
+$enable-all-color-variant:                          false !default;      // Generate Every Color styles
+$enable-transitions:                                true !default;       // Enable transitions and animations
+$enable-prefers-reduced-motion-mediaQuery:          true !default;       // Disable transitions in Reduced Motion Media Query
+$enable-fluid-fontsize:                             false !default;      // * Enable Fluid typography
+$generate-spacing-classes:                          true !default;       // Enable Spacing Classes
+$generate-grid-classes:                             true !default;       // Enable Grid Classes
+$generate-object-classes:                           true !default;       // Enable object Classes
+$generate-utility-classes:                          true !default;       // Enable utilities Classes
+$generate-component-classes:                        true !default;       // Enable component Classes
+$enable-debugging:                                  false !default;      // Enable Debugging Steps
+$enable-experimental-css:                           true !default;       // Enable Debugging Steps
 
 // * Feature not fully implemented yet
 
