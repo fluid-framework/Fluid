@@ -16,7 +16,7 @@
   }
 
   // Filter invalid values
-  // for example `@if $design-shadow-else-border { box-shadow: none, 0 0 currentColor;`
+  // for example `box-shadow: none, 0 0 currentColor` here the "none" causes value to be invalid
   @if length($shadows) > 1 or ($first-value != none and $first-value != null) {
     $result: ();
 
