@@ -1,0 +1,26 @@
+//
+// Grid offset
+//
+
+@if $generate-utility-classes {
+  $OFFSET: ();
+
+  @for $i from 1 through ($grid-columns - 1) {
+    $OFFSET: map-merge(
+      $OFFSET,
+      (
+        $i: grid-col-width($i),
+      )
+    );
+  }
+
+  $config: (
+    properties: margin-left,
+    selector: "off",
+    values: $OFFSET,
+    enable-important-values: true,
+    responsive: true,
+  );
+
+  @include generate-style($config);
+}
