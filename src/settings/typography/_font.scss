@@ -42,7 +42,7 @@ $lineheight-default:          1.5 !default;
 //
 // Derived
 //
-$fontsize-small:              $default-small-quantity * 1rem !default;
-$fontsize-large:              $default-large-quantity * 1rem !default;
+$fontsize-small:              $fontsize-normal * $default-small-quantity !default;
+$fontsize-large:              $fontsize-normal * $default-large-quantity !default;
 $fontfamily-default:          $fontfamily-sans-serif !default;
 $fontweight-default:          $fontweight-normal !default;

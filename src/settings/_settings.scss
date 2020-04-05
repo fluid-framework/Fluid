@@ -3,7 +3,7 @@
 //
 
 // Options: Quickly modify global styling by enabling or disabling optional features.
-$default-fontsize:                                  14px !default;       // Default font-size use
+$default-fontsize:                                  14px !default;       // font-size only used at root and boot
 $default-small-quantity:                            .75 !default;        // Default multiplicative value to generate small styles
 $default-large-quantity:                            1.25 !default;       // Default multiplicative value to generate large styles
 $design-theme:                                      "light" !default;    // * Let you choose between default "light" theme and "dark" theme
