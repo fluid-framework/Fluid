@@ -8,7 +8,7 @@ $default-small-quantity:                      .75 !default;     // Default multi
 $default-large-quantity:                      1.25 !default;    // Default multiplicative value to generate large styles
 $design-theme:                                "light" !default; // * Let you choose between default "light" theme and "dark" theme
 $design-solid-or-gradients:                   "solid" !default; // * Let you choose between "solid" vs "gradient" design UI
-$design-shadow-else-border:                   true !default;    // * Let you choose between shadow vs border design UI
+$design-shadow-or-border:                     "shadow" !default;    // * Let you choose between "shadow" vs "border" design UI
 $design-rounded-else-sharp:                   true !default;    // * Let you choose between rounded vs sharp corners design UI
 $breakpoints-readable-else-short:             false !default;   // Let you choose between shorter words like `sm` vs understandable words like `mobile`
 $breakpoints-below-prefix:                    "@" !default;     // Symbol used to prefix classes at given breakpoint and below it

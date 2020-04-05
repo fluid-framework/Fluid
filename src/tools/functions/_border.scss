@@ -9,7 +9,7 @@
 // Parameters:
 // {String} $border - border strings
 @function border($border: $border-default, $fallback-value: null) {
-  @if not $design-shadow-else-border {
+  @if $design-shadow-or-border != "shadow" {
     @return $border;
   }
 

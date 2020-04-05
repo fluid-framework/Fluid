@@ -9,29 +9,29 @@
 }
 
 %group-border-x-0 {
-  border-right: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
-  border-left: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
+  border-right: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
+  border-left: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
 }
 
 %group-border-y-0 {
-  border-top: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
-  border-bottom: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
+  border-top: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
+  border-bottom: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
 }
 
 %group-border-top-0 {
-  border-top: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
+  border-top: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
 }
 
 %group-border-right-0 {
-  border-right: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
+  border-right: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
 }
 
 %group-border-bottom-0 {
-  border-bottom: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
+  border-bottom: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
 }
 
 %group-border-left-0 {
-  border-left: 0; // avoid using @function border, to remove borders independent of `$design-shadow-else-border` option
+  border-left: 0; // avoid using @function border, to remove borders independent of `$design-shadow-or-border` option
 }
 
 %group-borderradius-0 {
