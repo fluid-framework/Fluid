@@ -10,7 +10,7 @@ $design-theme:                                      "light" !default;    // * Le
 $design-solid-or-gradients:                         "solid" !default;    // * Let you choose between "solid" vs "gradient" design UI
 $design-shadow-or-border:                           "shadow" !default;   // * Let you choose between "shadow" vs "border" design UI
 $design-rounded-or-sharp:                           "rounded" !default;  // * Let you choose between "rounded" vs "sharp" corners design UI
-$breakpoints-readable-else-short:                   false !default;      // Let you choose between shorter words like `sm` vs understandable words like `mobile`
+$breakpoints-short-or-readable:                     "short" !default;    // Let you choose between shorter words like `sm` vs understandable words like `mobile`
 $breakpoints-below-prefix:                          "@" !default;        // Symbol used to prefix classes at given breakpoint and below it
 $breakpoints-above-prefix:                          "@" !default;        // Symbol used to prefix classes at given breakpoint and above it
 $grid-breakpoints-mediaQuery:                       "above" !default;    // Let you choose how to apply grid media query either apply it "above" the breakpoint or "below" it

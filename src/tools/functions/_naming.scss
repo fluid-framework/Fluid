@@ -51,7 +51,7 @@
 
 //
 // name-breakpoint
-// convert breakpoints abbreviate / acronym to readable words based on setting `$breakpoints-readable-else-short`
+// convert breakpoints abbreviate / acronym to readable words based on setting `$breakpoints-short-or-readable`
 //
 // Parameters:
 // {String} $short - abbreviate / acronym form of breakpoint
@@ -63,6 +63,6 @@
 // name-breakpoint(sm, $short-words, true) => mobile
 // name-breakpoint(sm, $short-words, false) => sm
 //
-@function name-breakpoint($breakpoint, $readable: $breakpoints-readable, $convert: $breakpoints-readable-else-short) {
-  @return naming($breakpoint, $breakpoints-readable, $breakpoints-readable-else-short);
+@function name-breakpoint($breakpoint, $readable: $breakpoints-readable, $convert: if($breakpoints-short-or-readable == "short", false, true)) {
+  @return naming($breakpoint, $breakpoints-readable, $convert);
 }
