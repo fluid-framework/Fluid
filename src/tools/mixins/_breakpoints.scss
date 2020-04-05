@@ -14,7 +14,7 @@
 // Example of use:
 // $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // media-breakpoint-above(sm){
-//    @debug 'This media query works in sm and above it';
+//    @debug 'This media query works at 576px and above it';
 // }
 //
 @mixin media-breakpoint-above($breakpoint, $breakpoints: $breakpoints) {
@@ -40,7 +40,7 @@
 // Example of use:
 // $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // media-breakpoint-below(md){
-//    @debug 'This media query works in md and below it';
+//    @debug 'This media query works at 768px and below it';
 // }
 //
 @mixin media-breakpoint-below($breakpoint, $breakpoints: $breakpoints) {
@@ -65,8 +65,8 @@
 //
 // Example of use:
 // $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
-// media-breakpoint-between(md, lg){
-//    @debug 'This media query works in between md and lg only';
+// media-breakpoint-between(sm, lg){
+//    @debug 'This media query works between 576px and 992px';
 // }
 //
 @mixin media-breakpoint-between($minimum, $maximum, $breakpoints: $breakpoints) {
@@ -100,7 +100,7 @@
 // Example of use:
 // $breakpoints: (null: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 // media-breakpoint-only(lg){
-//    @debug 'This media query works only in lg';
+//    @debug 'This media query works only between 992px and 1200px';
 // }
 //
 @mixin media-breakpoint-only($breakpoint, $breakpoints: $breakpoints) {
