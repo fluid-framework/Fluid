@@ -14,7 +14,7 @@
   @if $enable-transitions {
     transition: transition($transitions);
 
-    @if $enable-prefers-reduced-motion-media-query {
+    @if $enable-prefers-reduced-motion-mediaQuery {
       @extend %prefers-reduced-motion;
     }
   }

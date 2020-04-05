@@ -16,7 +16,7 @@ $breakpoints-above-prefix:                    "@" !default;     // Symbol used t
 $enable-grid-gap:                             true !default;    // Enable Spacing/Gutter between Grid elements
 $enable-all-color-variant:                    false !default;   // Generate Every Color styles
 $enable-transitions:                          true !default;    // Enable transitions and animations
-$enable-prefers-reduced-motion-media-query:   true !default;    // Disable transitions in Reduced Motion Media Query
+$enable-prefers-reduced-motion-mediaQuery:    true !default;    // Disable transitions in Reduced Motion Media Query
 $enable-fluid-fontsize:                       false !default;   // * Enable Fluid typography
 $generate-spacing-classes:                    true !default;    // Enable Spacing Classes
 $generate-grid-classes:                       true !default;    // Enable Grid Classes
