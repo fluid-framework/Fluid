@@ -1,23 +1,27 @@
-//
-// Radio Control
-//
-.control {
-  > .radio {
-    @extend %controls-hide;
-    @extend %controls-label;
 
-    &:checked {
-      ~ .label {
-        @include before {
-          border-width: $radio-checked-borderwidth;
-          background-color: $controls-label-background; // override controls-label active and checked state property
+@if $generate-component-classes {
+  //
+  // Radio Control
+  //
+
+  .control {
+    > .radio {
+      @extend %controls-hide;
+      @extend %controls-label;
+
+      &:checked {
+        ~ .label {
+          @include before {
+            border-width: $radio-checked-borderwidth;
+            background-color: $controls-label-background; // override controls-label active and checked state property
+          }
         }
       }
-    }
 
-    ~ .label {
-      @include before {
-        border-radius: border-radius($borderradius-circle, 0);
+      ~ .label {
+        @include before {
+          border-radius: border-radius($borderradius-circle, 0);
+        }
       }
     }
   }
