@@ -137,25 +137,26 @@
     }
 
     > .menu-trigger {
-      padding-right: $nestedMenu-indent; // restore padding to default value
+      padding-right: $nestedMenu-indent + convert-unit($menu-trigger-caret-size, em) * 2; // restore padding to default value
       margin-left: 0; // override style from nested menu items
     }
   }
 
   // .menu-trigger Needs to be First element in nested menu
   .menu-trigger {
-    display: inline-flex;
-
+    padding-right: $nestedMenu-indent + convert-unit($menu-trigger-caret-size, em) * 2; // To prevent content from flowing under `.menu-trigger`'s caret adds Extra padding on right equal to the size of caret
     @include after {
       content: "";
-      align-self: center;
-      margin-left: auto; // align .menu-trigger caret to end of flex
+      position: absolute;
+      top: 50%;
+      right: $nestedMenu-indent;
+      transform: translateY(-50%);
       @include triangle(bottom, $menu-trigger-caret-size, $menu-trigger-caret-color);
     }
 
     &.active {
       @include after {
-        transform: scale(-1);
+        transform: translateY(-50%) rotateX(180deg);
       }
     }
 
