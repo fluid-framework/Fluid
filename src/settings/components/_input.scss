@@ -10,7 +10,7 @@ $label-marginbottom:                             $space-typography !default;
 //
 // Settings
 //
-$input-minheight:                                ($controls-lineheight * 1em) + ($controls-padding-y * 2.4) !default;
+$input-minheight:                                ($controls-lineheight * 1em) + ($controls-padding-y * 2) + (convert-unit($borderwidth-default, em) * 2) !default;
 $input-background:                               $controls-label-background !default;
 $input-bordercolor:                              $controls-label-bordercolor !default;
 $input-boxshadow-inner:                          inset 0 1px 2px rgba(clr-auto($input-background), .1) !default;
