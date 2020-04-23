@@ -156,7 +156,8 @@ table {
 }
 
 th {
-  text-align: inherit; // Matches default `<td>` alignment by inheriting from the `<body>`, or the closest parent with a set `text-align`
+  text-align: inherit; // Matches default `<td>` alignment by inheriting `text-align`
+  text-align: -webkit-match-parent; // Fix alignment for Safari
 }
 
 //
@@ -168,7 +169,7 @@ label {
 }
 
 // Remove the default `border-radius` that macOS Chrome adds
-// Details at https://github.com/twbs/bootstrap/issues/24093
+// See https://github.com/twbs/bootstrap/issues/24093
 button {
   border-radius: 0;
 }
@@ -203,7 +204,7 @@ select {
 }
 
 // Remove the inheritance of word-wrap in Safari
-// Details at https://github.com/twbs/bootstrap/issues/24990
+// See https://github.com/twbs/bootstrap/issues/24990
 select {
   word-wrap: normal;
 }
@@ -231,21 +232,9 @@ input[type="checkbox"] {
   @extend %padding-0; // Remove the padding in IE 10-
 }
 
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-  // Remove the default appearance of temporal inputs to avoid a Mobile Safari
-  // bug where setting a custom line-height prevents text from being vertically
-  // centered within the input
-  // See https://bugs.webkit.org/show_bug.cgi?id=139848
-  // and https://github.com/twbs/bootstrap/issues/11266
-  @extend %-webkitappearance-textfield;
-}
-
 // Remove the dropdown arrow in Chrome from inputs built with datalists.
 //
-// Source: https://stackoverflow.com/a/54997118
+// See https://stackoverflow.com/a/54997118
 
 [list]::-webkit-calendar-picker-indicator {
   display: none;
@@ -270,11 +259,17 @@ fieldset {
 }
 
 legend {
-  @extend %display-block;
-  @extend %padding-0; // Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers.
+  float: left; // The legend will behave like a block element. This way the border of a fieldset wraps around the legend if present.
+  width: 100%;
+  height: auto;
+  white-space: normal; // Correct the text wrapping in IE and Edge.
   @extend %color-inherit; // Correct the color inheritance from `fieldset` elements in IE
-  white-space: normal; // Correct the text wrapping in Edge and IE
+  @extend %padding-0;
   @extend %lineheight-inherit;
+
+  + * {
+    clear: left; // Fix wrapping bug. See https://github.com/twbs/bootstrap/issues/29712
+  }
 }
 
 progress,
@@ -293,9 +288,18 @@ progress {
 
 // Fix height of inputs with a type of datetime-local, date, month, week, or time
 // See https://github.com/twbs/bootstrap/issues/18842
-::-webkit-datetime-edit {
-  overflow: visible;
-  line-height: 0;
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  @extend %padding-0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
 }
 
 [type="search"] {
