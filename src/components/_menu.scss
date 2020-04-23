@@ -85,6 +85,29 @@
   }
 
   //
+  // unstyle menu-item
+  //
+
+  %unstyle-menu-item {
+    color: inherit;
+    background-color: transparent;
+    @include before {
+      content: none;
+    }
+  }
+
+  @if $menu-item-themes-generate {
+    .menu-item.is-unstyle,
+    .menu.is-unstyle .menu-item {
+      @extend %unstyle-menu-item;
+    }
+  }@else {
+    .menu.is-unstyle .menu-item {
+      @extend %unstyle-menu-item;
+    }
+  }
+
+  //
   // Nested Menu
   //
   // Implementation of Nested menu is not included as it requires a bit of JavaScript
