@@ -152,6 +152,7 @@
       right: $nestedMenu-indent;
       transform: translateY(-50%);
       @include triangle(bottom, $menu-trigger-caret-size, $menu-trigger-caret-color);
+      @include transition(transform .15s linear);
     }
 
     &.active {
