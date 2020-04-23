@@ -6,7 +6,7 @@
   .icon {
     display: inline-flex;
     align-items: center;
-    align-self: center; // causes problem in menu-target
+    align-self: center;
     justify-content: center;
     width: $icon-area;
     height: $icon-area;
