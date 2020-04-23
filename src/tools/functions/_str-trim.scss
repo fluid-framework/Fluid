@@ -11,7 +11,7 @@
 // Return:
 // {*} trimmed value
 //
-@function trim($value) {
+@function str-trim($value) {
   @if type-of($value) != "string" {
     @error "The argument $value: `#{$value}` is of incorrect type: `#{type-of($value)}`. Type of `string` is required!";
   }
