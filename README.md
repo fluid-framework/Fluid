@@ -28,8 +28,8 @@
 
 <!-- Status -->
 <p align="center">
-  <a href="https://travis-ci.com/fluid-framework/Fluid">
-    <img src="https://img.shields.io/travis/com/fluid-framework/fluid/master.svg?style=for-the-badge" />
+  <a href="https://github.com/fluid-framework/Fluid/actions">
+    <img src="https://img.shields.io/github/workflow/status/fluid-framework/Fluid/Tests?style=for-the-badge" />
   </a>
   <a href="https://bundlephobia.com/result?p=fluid-css">
     <img src="https://img.shields.io/bundlephobia/minzip/fluid-css?color=%2344CC11&label=Gzip%20Size&style=for-the-badge">
