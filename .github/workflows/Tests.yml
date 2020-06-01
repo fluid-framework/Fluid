@@ -1,0 +1,23 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: clone repository
+      uses: actions/checkout@v2
+
+    - name: Node installation
+      uses: actions/setup-node@v1.4.2
+      with:
+        node-version: '12'
+
+    - name: dependencies installation
+      run: yarn install
+
+    - name: Running Tests
+      run: yarn test
