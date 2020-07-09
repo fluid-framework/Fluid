@@ -90,6 +90,41 @@
     }
   }
 
+  // Solid Theme
+  .btn.is-fillout {
+    padding: ($controls-padding-y - convert-unit($borderwidth-wide - 1, em)) ($controls-padding-x - convert-unit($borderwidth-wide - 1, em)); // decrease padding bottom by the same width we are increasing border to make layout unaffected by design change
+    border-width: $borderwidth-wide;
+    border-color: $button-theme;
+    //
+    // Default Solid Styles
+    //
+    color: clr-auto($button-theme);
+    @include gradient-background($button-theme, 180deg);
+
+    @include button-design-fillout-variant($button-theme); // Default button theme
+
+    // Color variants
+    @each $color, $value in $theme-colors {
+      &.is-#{$color} {
+        @include button-design-fillout-variant($value);
+      }
+    }
+
+    @include hover-focus-active {
+      border-color: currentColor;
+      background: transparent;
+    }
+
+    &.is-loading {
+      @include loading-spinner-color(clr-auto($button-theme));
+    }
+
+    @include disabled {
+      color: $white;
+      background: $button-disabled-background;
+    }
+  }
+
   // Outline theme
   .btn.is-out {
     //
