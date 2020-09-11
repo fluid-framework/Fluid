@@ -14,6 +14,12 @@
     svg {
       vertical-align: baseline;
     }
+
+    @if $icon-space {
+      @include after {
+        content: "\00a0";
+      }
+    }
   }
 
   .has-icon-left,
