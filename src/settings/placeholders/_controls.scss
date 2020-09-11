@@ -141,6 +141,8 @@
   //
   // Read more : https://alistapart.com/article/now-you-see-me/
   position: absolute;
+  top: -999em;
+  left: -999em;
   z-index: -1;
   opacity: 0;
 }
