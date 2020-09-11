@@ -157,9 +157,10 @@
     //
     // Default Minimal Styles
     //
-    border-right: 0; // remove border to remove border spacing between minimal button groups
+    padding: $button-padding-y calc(#{$button-padding-x} + #{$controls-borderwidth}); // add extra padding to account for removed border
+    border-right: 0; // remove transparent border between minimal button groups
     border-bottom-color: $controls-theme-light;
-    border-left: 0; // remove border to remove border spacing between minimal button groups
+    border-left: 0; // remove transparent border between minimal button groups
     border-radius: border-radius(0);
     box-shadow: box-shadow(none); // remove focus box shadow
 
