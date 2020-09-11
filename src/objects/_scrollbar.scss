@@ -26,7 +26,7 @@
       }
 
       // stylelint-disable-next-line selector-pseudo-class-blacklist
-      &::-webkit-scrollbar-thumb:hover {
+      &::-webkit-scrollbar-thumb:focus {
         background-color: $dark;
       }
 
