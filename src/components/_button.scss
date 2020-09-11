@@ -12,6 +12,7 @@
     @extend %controls-active;
     @extend %controls-hover;
     @extend %controls-focus;
+    padding: $button-padding-y $button-padding-x;
 
     text-align: center;
     font-family: $button-font;
