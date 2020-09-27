@@ -25,6 +25,10 @@
     &.is-collapse {
       min-height: $header-height-collapsed;
     }
+
+    &.is-expanded {
+      min-height: $header-height-expanded;
+    }
   }
 
   //

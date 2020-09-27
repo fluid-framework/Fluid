@@ -45,3 +45,4 @@ $overlay-transition:                 opacity .35s ease-in-out, visibility .35s e
 //
 // Header
 $header-height-collapsed:            $header-height * $default-small-quantity !default;
+$header-height-expanded:               $header-height * $default-large-quantity !default;
