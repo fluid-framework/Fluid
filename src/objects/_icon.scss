@@ -16,8 +16,10 @@
     }
 
     @if $icon-space {
-      @include after {
-        content: "\00a0";
+      &:not(:only-child) {
+        @include after {
+          content: "\00a0";
+        }
       }
     }
   }
