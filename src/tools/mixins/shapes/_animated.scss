@@ -19,7 +19,7 @@
     border: .2em solid currentColor;
     border-right-color: transparent;
     border-radius: 50%;
-    // stylelint-disable-next-line property-blacklist
+    // stylelint-disable-next-line property-disallowed-list
     animation: spin 1s infinite linear; // avoid using @mixin animation to generate radius independent of `$enable-transitions` option
     color: $color;
     @include include-keyframe(spin);

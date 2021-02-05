@@ -29,9 +29,9 @@
     "selector-max-universal": 1,
     "selector-no-vendor-prefix": true,
 
-    "selector-pseudo-class-blacklist": ["focus", "hover", "active", "disabled"],
+    "selector-pseudo-class-disallowed-list": ["focus", "hover", "active", "disabled"],
 
-    "selector-pseudo-element-blacklist": ["before", "after"],
+    "selector-pseudo-element-disallowed-list": ["before", "after"],
 
     "order/properties-order": [
       "counter-reset",
@@ -237,7 +237,7 @@
     ],
     "shorthand-property-no-redundant-values": true,
     "property-no-vendor-prefix": true,
-    "property-blacklist": [
+    "property-disallowed-list": [
       "font-size",
       "animation",
       "transition",

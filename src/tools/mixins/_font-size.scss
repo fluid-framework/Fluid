@@ -1,4 +1,4 @@
-// stylelint-disable property-blacklist
+// stylelint-disable property-disallowed-list
 //
 // Font Size
 //
@@ -17,7 +17,7 @@
 
 //
 // fontsize
-// Function alternative to @mixin fontsize. this function can be used over places where style-lint property-blacklist is disabled
+// Function alternative to @mixin fontsize. this function can be used over places where style-lint property-disallowed-list is disabled
 //
 // Parameters:
 // {Number} $radius - border-radius

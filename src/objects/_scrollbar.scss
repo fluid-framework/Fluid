@@ -25,12 +25,12 @@
         background-color: rgba($dark, .65);
       }
 
-      // stylelint-disable-next-line selector-pseudo-class-blacklist
+      // stylelint-disable-next-line selector-pseudo-class-disallowed-list
       &::-webkit-scrollbar-thumb:focus {
         background-color: $dark;
       }
 
-      // stylelint-disable-next-line selector-pseudo-class-blacklist
+      // stylelint-disable-next-line selector-pseudo-class-disallowed-list
       &::-webkit-scrollbar:hover {
         background-color: $gray-200;
       }
