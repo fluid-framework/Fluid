@@ -12,7 +12,7 @@
       "y-50": translateY(50%),
       "y--50": translateY(-50%),
       "50-50": translate(50%, 50%),
-      "-50--50": translate(-50%, -50%),
+      "--50--50": translate(-50%, -50%),
     ),
     enable-important-values: true
   );
