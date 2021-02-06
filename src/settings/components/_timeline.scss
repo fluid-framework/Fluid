@@ -1,0 +1,35 @@
+//
+// Range
+//
+
+//
+// Inherit
+//
+$timeline-defaulttheme:                                      $gray-600 !default;
+
+$timeline-item-line-width:                                   $borderwidth-wide !default;
+$timeline-item-line-background:                              $gray-200 !default;
+
+$timeline-item-dot-borderradius:                             $borderradius-circle !default;
+
+$timeline-date-borderradius:                                 $borderradius-pill !default;
+$timeline-date-shadow:                                       $boxshadow-default !default;
+
+//
+// Setting
+//
+$timeline-item-spacing:                                      5em !default;
+
+$timeline-item-dot-topspace:                                 1em !default;
+$timeline-item-dot-size:                                     1.25em !default;
+$timeline-item-dot-shadow:                                   0 0 0 4px rgba($dark, .3) !default;
+
+$timeline-date-padding:                                      $controls-padding-y * 2 $controls-padding-x * 3 !default; // large Spacing of Controls
+
+$timeline-content-padding:                                   1em 0 3em !default;
+
+//
+// Derived
+//
+$timeline-date-color:                                        clr-auto($timeline-defaulttheme) !default;
+$timeline-date-background:                                   $timeline-defaulttheme !default;

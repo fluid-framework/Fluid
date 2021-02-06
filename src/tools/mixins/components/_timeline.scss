@@ -1,0 +1,44 @@
+//
+// timelines Mixin
+//
+
+//
+// Theme Variants Mixin
+//
+
+@mixin timeline-dual() {
+  .timeline-item {
+    display: grid; // sets the display to grid for dual mode
+    padding-left: 0; // remove and override padding left in item
+
+    @include before-after {
+      left: 50%; // align the line and dot to middle
+    }
+  }
+
+  > *:nth-child(odd) > .timeline-date:first-child, // align date to end when date is first child of item
+  > *:nth-child(even) > .timeline-date:last-child, // align date to end when date is last child of filled item
+  > *:nth-child(odd) > .timeline-content:first-child,// align content to end when content is first child of item
+  > *:nth-child(even) > .timeline-content:last-child // align content to end when content is last child of filled item
+  {
+    justify-self: flex-end;
+    text-align: right;
+  }
+}
+
+//
+// Theme Variants Mixin
+//
+
+@mixin timeline-variant($name, $color) {
+  .timeline-item {
+    @include after {
+      background-color: $color;
+    }
+  }
+
+  .timeline-date {
+    color: clr-auto($color);
+    @include gradient-background($color, 180deg);
+  }
+}
