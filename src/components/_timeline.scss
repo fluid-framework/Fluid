@@ -7,8 +7,8 @@
 //
 .timeline-item {
   position: relative; // to position line in the item
-  padding-left: $timeline-item-spacing / 2;
-  gap: $timeline-item-spacing; // Gap between column in dual mode
+  padding-left: $timeline-item-spacing + $timeline-item-spacing / 2;
+  gap: $timeline-item-spacing * 2; // Gap between column in dual mode
   grid-template-columns: repeat(2, 1fr); // Set no of column to 2 in dual mode
 
   @include before {
@@ -16,7 +16,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: $timeline-item-spacing / 2;
     transform: translateX(-50%);
     width: $timeline-item-line-width;
     background-color: $timeline-item-line-background;
@@ -26,7 +26,7 @@
     content: "";
     position: absolute;
     top: $timeline-item-dot-topspace;
-    left: 0;
+    left: $timeline-item-spacing / 2;
     transform: translateX(-50%);
     width: $timeline-item-dot-size;
     height: $timeline-item-dot-size;
