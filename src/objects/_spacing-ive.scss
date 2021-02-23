@@ -1,16 +1,17 @@
-/**
- * Table of Contents:
- *        Basic Margin
- *        Margin top
- *        Margin right
- *        Margin bottom
- *        Margin left
- *        Margin horizontal
- *        Margin vertical
-* ===============================================
-*/
 
 @if $generate-spacing-classes {
+  /**
+   * Table of Contents:
+   *        Basic Margin
+   *        Margin top
+   *        Margin right
+   *        Margin bottom
+   *        Margin left
+   *        Margin horizontal
+   *        Margin vertical
+  * ===============================================
+  */
+
   $SIZES: $space-sizes;
   $SIZES: map-remove($SIZES, 0); // Remove 0 in -ive spacing
   $SIZES: map-remove($SIZES, auto); // Remove auto in -ive spacing
