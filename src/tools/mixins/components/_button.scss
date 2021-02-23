@@ -88,26 +88,6 @@
   }
 }
 
-@mixin button-design-fillin-variant($color) {
-  $active-border: clr-step($color, 4);
-
-  @include hover-focus {
-    border-color: $color;
-    color: clr-auto($color);
-    @include gradient-background($color, 180deg);
-  }
-
-  @include hover {
-    box-shadow: box-shadow($button-focus-boxshadow rgba($color, .5));
-  }
-
-  @include active {
-    border-color: $active-border;
-    color: clr-auto($color);
-    @include gradient-background($active-border, 180deg);
-  }
-}
-
 // minimal design variant
 @mixin button-design-minimal-variant($color) {
   $active-border: clr-step($color, 4);
