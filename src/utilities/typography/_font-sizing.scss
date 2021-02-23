@@ -16,3 +16,20 @@
 
   @include generate-style($config);
 }
+
+@if $generate-utility-classes or $generate-component-classes {
+  $config: (
+    properties: font-size,
+    selector: "txt",
+    values: (
+      1: fontsize($h1-fontsize),
+      2: fontsize($h2-fontsize),
+      3: fontsize($h3-fontsize),
+      4: fontsize($h4-fontsize),
+      5: fontsize($h5-fontsize),
+    ),
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+}
