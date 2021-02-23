@@ -10,9 +10,9 @@
     @extend %controls;
     @extend %controls-active;
     @extend %controls-focus;
+
     width: 100%;
     border-color: $input-bordercolor;
-
     appearance: none;
     color: $controls-color;
     background-color: $input-background;
