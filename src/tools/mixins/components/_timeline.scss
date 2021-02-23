@@ -17,13 +17,13 @@
   }
 
   // align date to end when date is first child of item
-  > *:nth-child(odd) > .timeline-date:first-child,
+  & > *:nth-child(odd) > .timeline-date:first-child,
   // align date to end when date is last child of filled item
-  > *:nth-child(even) > .timeline-date:last-child,
+  & > *:nth-child(even) > .timeline-date:last-child,
   // align content to end when content is first child of item
-  > *:nth-child(odd) > .timeline-content:first-child,
+  & > *:nth-child(odd) > .timeline-content:first-child,
   // align content to end when content is last child of filled item
-  > *:nth-child(even) > .timeline-content:last-child {
+  & > *:nth-child(even) > .timeline-content:last-child {
     justify-self: flex-end;
     text-align: right;
   }
