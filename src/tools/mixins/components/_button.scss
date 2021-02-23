@@ -62,6 +62,7 @@
   }
 }
 
+// FillOut design variant
 @mixin button-design-fillout-variant($color) {
   $focus-background: clr-step($color, -2);
   $active-background: clr-step($color, 4);
@@ -71,9 +72,9 @@
   // to avoid adding extra color override
   // - clr-auto($button-theme) is already inside default is-solid button
   color: if(clr-auto($color) != clr-auto($button-theme), clr-auto($color), null);
-  @include gradient-background($color, 180deg)
+  @include gradient-background($color, 180deg);
 
-    @include hover {
+  @include hover {
     color: $color;
     box-shadow: box-shadow($button-focus-boxshadow rgba($color, .5));
   }
