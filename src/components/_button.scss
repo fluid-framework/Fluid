@@ -93,7 +93,7 @@
 
   // FillOut Theme
   .btn.is-fillout {
-    padding: ($controls-padding-y - convert-unit($borderwidth-wide - 1, em)) ($controls-padding-x - convert-unit($borderwidth-wide - 1, em)); // decrease padding bottom by the same width we are increasing border to make layout unaffected by design change
+    padding: ($button-padding-y - convert-unit(2px, em)) ($button-padding-x - convert-unit(2px, em)); // decrease padding bottom by the same width we are increasing border to make layout unaffected by design change
     border-width: $borderwidth-wide;
     border-color: $button-theme;
 
