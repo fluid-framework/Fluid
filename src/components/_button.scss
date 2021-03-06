@@ -124,6 +124,7 @@
     @include disabled {
       color: $white;
       background: $button-disabled-background;
+      border-color: transparent;
     }
   }
 
