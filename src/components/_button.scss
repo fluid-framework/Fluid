@@ -158,7 +158,7 @@
     //
     // Default Minimal Styles
     //
-    padding: $button-padding-y calc(#{$button-padding-x} + #{$controls-borderwidth}); // add extra padding to account for removed border
+    padding: $button-padding-y ($button-padding-x + convert-unit(1px, em)); // add extra padding to account for removed border
     border-right: 0; // remove transparent border between minimal button groups
     border-bottom-color: $controls-theme-light;
     border-left: 0; // remove transparent border between minimal button groups
