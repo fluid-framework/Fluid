@@ -128,6 +128,40 @@
     }
   }
 
+  // FillIn Theme
+  .btn.is-fillin {
+    padding: ($button-padding-y - convert-unit(2px, em)) ($button-padding-x - convert-unit(2px, em)); // decrease padding bottom by the same width we are increasing border to make layout unaffected by design change
+    border-width: $borderwidth-wide;
+    border-color: currentColor;
+
+    //
+    // Default FillIn Styles
+    //
+    color: $button-theme;
+    @include button-design-fillin-variant($button-theme); // Default button theme
+
+    // Color variants
+    @each $color, $value in $theme-colors {
+      &.is-#{$color} {
+        @include button-design-fillin-variant($value);
+      }
+    }
+
+    @include focus {
+      @include animation(ripple-gray); // ripple animation on click event
+    }
+
+    &.is-loading {
+      @include loading-spinner-color(clr-auto($button-theme));
+    }
+
+    @include disabled {
+      color: $white;
+      background: $button-disabled-background;
+      border-color: transparent;
+    }
+  }
+
   // Outline theme
   .btn.is-out {
     //
