@@ -56,15 +56,21 @@
         @extend %group-margin-x;
 
         > .input {
-          @extend %group-borderradius-0 !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-0;
+          }
         }
 
         &:first-child > .input:not(.is-min) {
-          @extend %group-borderradius-left !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-left;
+          }
         }
 
         &:last-child > .input:not(.is-min) {
-          @extend %group-borderradius-right !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-right;
+          }
         }
       }
 
@@ -72,14 +78,20 @@
       > .addon,
       > .btn {
         @extend %group-margin-x;
-        @extend %group-borderradius-0 !optional;
+        @if $design-rounded-or-sharp == "rounded" {
+          @extend %group-borderradius-0;
+        }
 
         &:first-child:not(.is-min) {
-          @extend %group-borderradius-left !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-left;
+          }
         }
 
         &:last-child:not(.is-min) {
-          @extend %group-borderradius-right !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-right;
+          }
         }
       }
     }
@@ -92,15 +104,21 @@
         @extend %group-margin-y;
 
         > .input {
-          @extend %group-borderradius-0 !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-0;
+          }
         }
 
         &:first-child > .input:not(.is-min) {
-          @extend %group-borderradius-top !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-top;
+          }
         }
 
         &:last-child > .input:not(.is-min) {
-          @extend %group-borderradius-bottom !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-bottom;
+          }
         }
       }
 
@@ -108,14 +126,20 @@
       > .addon,
       > .btn {
         @extend %group-margin-y;
-        @extend %group-borderradius-0 !optional;
+        @if $design-rounded-or-sharp == "rounded" {
+          @extend %group-borderradius-0;
+        }
 
         &:first-child:not(.is-min) {
-          @extend %group-borderradius-top !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-top;
+          }
         }
 
         &:last-child:not(.is-min) {
-          @extend %group-borderradius-bottom !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-bottom;
+          }
         }
       }
     }
@@ -125,7 +149,9 @@
         > .control {
           > .input {
             @extend %group-border-y-0;
-            @extend %group-borderradius-0 !optional;
+            @if $design-rounded-or-sharp == "rounded" {
+              @extend %group-borderradius-0;
+            }
           }
 
           &:first-child > .input {
@@ -141,7 +167,9 @@
         > .addon,
         > .btn {
           @extend %group-border-y-0;
-          @extend %group-borderradius-0 !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-0;
+          }
 
           &:first-child {
             @extend %group-border-left-0;
@@ -157,7 +185,9 @@
         > .control {
           > .input {
             @extend %group-border-x-0;
-            @extend %group-borderradius-0 !optional;
+            @if $design-rounded-or-sharp == "rounded" {
+              @extend %group-borderradius-0;
+            }
           }
 
           &:first-child > .input {
@@ -173,7 +203,9 @@
         > .addon,
         > .btn {
           @extend %group-border-x-0;
-          @extend %group-borderradius-0 !optional;
+          @if $design-rounded-or-sharp == "rounded" {
+            @extend %group-borderradius-0;
+          }
 
           &:first-child {
             @extend %group-border-top-0;
