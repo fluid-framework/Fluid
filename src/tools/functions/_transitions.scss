@@ -28,7 +28,7 @@
       }
 
       @if length($transition) == 1 {
-        $transition-combined: suffix($transition-combined, ",") + $transition .15s ease-in-out;
+        $transition-combined: suffix($transition-combined, ",") + $transition .2s ease-in-out;
       } @else {
         $transition-combined: suffix($transition-combined, ",") + $transition;
       }
