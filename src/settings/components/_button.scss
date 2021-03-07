@@ -17,6 +17,6 @@ $button-theme:                                   $controls-theme !default;
 $button-theme-light:                             $controls-theme-light !default;
 $button-padding-x:                               $controls-padding-x * 1.13333 !default;
 
-$button-transition-minimal-before:               transform, border-bottom-color !default;
+$button-transition-minimal-before:               transform .35s, border-bottom-color !default;
 
 $button-disabled-background:                     $controls-disabled-background !default;

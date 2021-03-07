@@ -203,7 +203,7 @@
       bottom: -1px;
       left: 0;
       transform: scaleX(0);
-      transform-origin: center;
+      transform-origin: right;
       border-bottom: $borderwidth-default * 2 solid;
       @include transition($button-transition-minimal-before);
     }
@@ -226,6 +226,7 @@
     @include hover-focus-active {
       @include before {
         transform: scaleX(1);
+        transform-origin: left;
       }
     }
 
