@@ -156,9 +156,9 @@
     }
 
     @include disabled {
-      border-color: transparent;
-      color: $white;
-      background: $button-disabled-background;
+      border-color: currentColor;
+      color: $button-disabled-background;
+      background: transparent;
     }
   }
 
@@ -183,8 +183,8 @@
     }
 
     @include disabled {
-      border-color: $button-disabled-background;
-      color: $button-theme;
+      border-color: currentColor;
+      color: $button-disabled-background;
     }
   }
 
