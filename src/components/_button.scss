@@ -203,10 +203,11 @@
     @include before {
       content: "";
       position: absolute;
+      right: 0;
       bottom: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: center;
       border-bottom: $borderwidth-default * 2 solid;
       @include transition($button-transition-minimal-before);
     }
@@ -228,7 +229,7 @@
 
     @include hover-focus-active {
       @include before {
-        width: 100%;
+        transform: scaleX(1);
       }
     }
 
