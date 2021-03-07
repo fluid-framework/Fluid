@@ -203,7 +203,6 @@
     @include before {
       content: "";
       position: absolute;
-      right: 0;
       bottom: -1px;
       left: 50%;
       transform: translateX(-50%);
