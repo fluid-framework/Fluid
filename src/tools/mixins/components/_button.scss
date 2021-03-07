@@ -90,8 +90,8 @@
 
 @mixin button-design-fillin-variant($color) {
   $active-border: clr-step($color, 4);
-  color: $color;
   border-color: currentColor;
+  color: $color;
 
   @include hover-focus {
     border-color: $color;
