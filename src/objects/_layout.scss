@@ -50,7 +50,7 @@
   .lyt-sidebar.fixed {
     top: 0;
     bottom: 0;
-    left: -100%;
+    #{$sidebar-direction}: -100%;
     z-index: $sidebar-zindex;
     overflow: auto;
     width: 100%;
@@ -68,7 +68,7 @@
 
     &:target,
     &.active {
-      left: 0;
+      #{$sidebar-direction}: 0;
 
       + .overlay {
         @extend %overlay-active;

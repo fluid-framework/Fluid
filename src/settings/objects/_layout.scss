@@ -31,7 +31,8 @@ $footer-zindex:                      0 !default;
 $sidebar-background:                 if($design-theme == light, $white, $gray-700) !default;
 $sidebar-color:                      clr-auto($sidebar-background, $white, $dark) !default;
 $sidebar-zindex:                     20 !default;
-$sidebar-transition:                 left .5s ease-in-out !default;
+$sidebar-direction:                  left !default;
+$sidebar-transition:                 #{$sidebar-direction} .5s ease-in-out !default;
 $sidebar-minwidth:                   250px !default;
 $sidebar-maxwidth:                   60vw !default;
 
