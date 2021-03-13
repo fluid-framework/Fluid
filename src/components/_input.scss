@@ -88,14 +88,18 @@
 
   // form validation style
   .is-validated .input:required {
-    &:valid {
-      @extend .input.is-valid;
-      @extend .input.is-valid.has-icon;
+    @if $input-valid-classname {
+      &:valid {
+        @extend .input.is-#{$input-valid-classname};
+        @extend .input.is-#{$input-valid-classname}.has-icon;
+      }
     }
 
-    &:invalid {
-      @extend .input.is-error;
-      @extend .input.is-error.has-icon;
+    @if $input-error-classname {
+      &:invalid {
+        @extend .input.is-#{$input-error-classname};
+        @extend .input.is-#{$input-error-classname}.has-icon;
+      }
     }
   }
 

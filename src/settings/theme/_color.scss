@@ -91,3 +91,14 @@ $theme-colors: (
 @if $enable-all-color-variant {
   $theme-colors: map-merge($colors, $theme-colors);
 }
+
+$valid-classname:            if(map-get($theme-colors, "valid"), "valid", false) !default;
+$error-classname:            if(map-get($theme-colors, "error"), "error", false) !default;
+
+@if $valid-classname == false {
+  @warn "Valid ClassName Not Found";
+}
+
+@if $error-classname == false {
+  @warn "Error ClassName Not Found";
+}
