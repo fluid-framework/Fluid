@@ -1,0 +1,16 @@
+//
+// Rotation
+//
+
+@if $generate-utility-classes {
+  $config: (
+    properties: transform,
+    selector: "trans",
+    values: (
+      "none": none,
+    ),
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+}
