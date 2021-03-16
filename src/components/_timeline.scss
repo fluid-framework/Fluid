@@ -72,8 +72,9 @@
 
 // responsive dual mode
 @each $breakpoint in map-keys($breakpoints) {
+  $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-above-prefix);
+
   @include media-breakpoint-above($breakpoint) {
-    $breakpoint-suffix: prefix(name-breakpoint($breakpoint), "\\"+ $breakpoints-above-prefix);
 
     .timeline.is-dual#{$breakpoint-suffix} {
       @include timeline-dual;
