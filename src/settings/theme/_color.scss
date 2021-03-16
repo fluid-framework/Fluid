@@ -92,6 +92,9 @@ $theme-colors: (
   $theme-colors: map-merge($colors, $theme-colors);
 }
 
+$white-contrast:             $white !default;
+$dark-contrast:              $gray-900 !default;
+
 $valid-classname:            if(map-get($theme-colors, "valid"), "valid", false) !default;
 $error-classname:            if(map-get($theme-colors, "error"), "error", false) !default;
 

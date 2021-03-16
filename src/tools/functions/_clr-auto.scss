@@ -12,7 +12,7 @@
 // Return:
 // {Color} Returns $dark for light color and $light for dark color
 //
-@function clr-auto($color, $light: $white, $dark: $gray-900) {
+@function clr-auto($color, $light: $white-contrast, $dark: $dark-contrast) {
   $lightContrast: clr-contrast($color, $light);
   $darkContrast: clr-contrast($color, $dark);
 
