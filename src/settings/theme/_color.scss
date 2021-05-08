@@ -99,9 +99,9 @@ $valid-classname:            if(map-get($theme-colors, "valid"), "valid", false)
 $error-classname:            if(map-get($theme-colors, "error"), "error", false) !default;
 
 @if $valid-classname == false {
-  @warn "Valid ClassName Not Found";
+  @warn "Valid Theme Color Not Found";
 }
 
 @if $error-classname == false {
-  @warn "Error ClassName Not Found";
+  @warn "Error Theme Color Not Found";
 }
