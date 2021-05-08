@@ -10,7 +10,6 @@
 /build
 
 # Local editor settings
-.vscode/*
 .settings
 .project
 .tmproj
