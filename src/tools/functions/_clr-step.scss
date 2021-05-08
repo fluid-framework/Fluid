@@ -14,7 +14,7 @@
 // Return:
 // {Color} value of color step
 //
-@function clr-step($color, $step, $color-step-interval: 10%) {
+@function clr-step($color, $step, $color-step-interval: 10%, $design-theme: "light", $black: black, $white: white) {
   @if unit($color-step-interval) != "%" {
     @error "invalid value of $color-step-interval `#{$color-step-interval}` , The value unit must be `%`";
   }
