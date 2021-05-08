@@ -56,7 +56,7 @@
     width: 100%;
     @include transition($sidebar-transition);
 
-    @include media-breakpoint-above(sm) {
+    @include media-breakpoint-above($sidebar-full-breakpoint) {
       width: inherit;
       min-width: $sidebar-minwidth;
       max-width: $sidebar-maxwidth;

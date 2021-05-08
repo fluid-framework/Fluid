@@ -35,6 +35,7 @@ $sidebar-direction:                  left !default;
 $sidebar-transition:                 #{$sidebar-direction} .5s ease-in-out !default;
 $sidebar-minwidth:                   250px !default;
 $sidebar-maxwidth:                   60vw !default;
+$sidebar-full-breakpoint:            sm !default;
 
 // Overlay
 $overlay-background:                 rgba($black, .75) !default;
