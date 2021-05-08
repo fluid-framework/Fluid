@@ -9,6 +9,7 @@
 // Header
 $header-background:                  if($design-theme == light, $white, $dark) !default;
 $header-color:                       clr-auto($header-background) !default;
+$header-blur:                        .2rem !default;
 $header-bordertop:                   $borderwidth-wide solid $primary !default;
 $header-height:                      64px !default;
 $header-padding-x:                   24px !default;
