@@ -21,7 +21,6 @@
     background-color: $header-background;
 
     @if $enable-experimental-css {
-      -webkit-backdrop-filter: blur($header-blur);
       backdrop-filter: blur($header-blur);
     }
 
