@@ -7,14 +7,15 @@
     properties: transform,
     selector: "trans",
     values: (
-      "x-50": translateX(50%),
-      "x--50": translateX(-50%),
-      "y-50": translateY(50%),
-      "y--50": translateY(-50%),
-      "50-50": translate(50%, 50%),
+      "-x-50": translateX(50%),
+      "-x--50": translateX(-50%),
+      "-y-50": translateY(50%),
+      "-y--50": translateY(-50%),
+      "-50-50": translate(50%, 50%),
       "--50--50": translate(-50%, -50%),
     ),
-    enable-important-values: true
+    disable-prefix-values-keys: true,
+    enable-important-values: true,
   );
 
   @include generate-style($config);
