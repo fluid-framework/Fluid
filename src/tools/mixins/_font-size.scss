@@ -12,7 +12,7 @@
 // [optional] {Map} $important - set important in css style
 //
 @mixin fontsize($fontsize: $fontsize-normal, $important: false) {
-  font-size: #{fontsize($fontsize)}#{if($important, !important, null)};
+  font-size: fontsize($fontsize #{if($important, !important, null)});
 }
 
 //
