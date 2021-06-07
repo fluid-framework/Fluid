@@ -200,11 +200,11 @@
       content: "";
       position: absolute;
       right: 0;
-      bottom: -1px;
+      bottom: $button-min-after-bottom;
       left: 0;
       transform: scaleX(0);
       transform-origin: right;
-      border-bottom: $borderwidth-default * 2 solid;
+      border-bottom: $button-min-after-bordersize solid;
       @include transition($button-transition-minimal-before);
     }
 

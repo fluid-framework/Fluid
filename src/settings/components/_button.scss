@@ -20,3 +20,6 @@ $button-padding-x:                               $controls-padding-x * 1.13333 !
 $button-transition-minimal-before:               transform .35s, border-bottom-color !default;
 
 $button-disabled-background:                     $controls-disabled-background !default;
+
+$button-min-after-bottom:                        -1px !default;
+$button-min-after-bordersize:                    $borderwidth-default * 2 !default;
