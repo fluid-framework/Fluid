@@ -41,7 +41,7 @@
     "test": "npm-run-all -p test:**",
     "test:usedVar": "fusv ./src",
     "test:style": "stylelint src/**/*.scss",
-    "test:compile": "node-sass ./src --output ./dist",
+    "test:compile": "node-sass ./src --output ./temp",
     "build": "npm-run-all dist",
     "dist": "npm-run-all -s test dist:**",
     "dist:clean": "shx rm -rf ./dist",
