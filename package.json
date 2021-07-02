@@ -33,7 +33,7 @@
     "url": "https://github.com/fluid-framework/fluid/issues/"
   },
   "scripts": {
-    "prepack": "husky install",
+    "prepare": "husky install",
     "start": "npm-run-all -s watch",
     "watch": "node-sass ./src --output ./temp/ --output-style compact --indent-type space --indent-width 2 --source-map true -w",
     "try": "npm-run-all -s lint test",
