@@ -1,0 +1,50 @@
+//
+// Text Decoration
+//
+
+@if $generate-utility-classes {
+  //
+  // Underline
+  //
+  $config: (
+    properties: text-decoration,
+    selector: "txt",
+    values: (
+      "decor-none": none,
+      "underline": underline,
+    ),
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // Italic
+  //
+  $config: (
+    properties: font-style,
+    selector: "txt",
+    values: italic,
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // Shadow
+  //
+  $config: (
+    properties: text-shadow,
+    selector: "txt-shadow",
+    values: (
+      sm: 1.5px 1.75px 1px rgba($black, .075),
+      null: 2px 2.25px 1.5px rgba($black, .15),
+      lg: 4px 4.25px 3px rgba($black, .175),
+      round: 0 0 3px rgba($black, .15),
+      none: none,
+    ),
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+}

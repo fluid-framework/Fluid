@@ -7,8 +7,13 @@
     responsive: true,
     properties: text-align,
     selector: "txt",
-    values: left right center justify,
-    enable-important-values: true
+    values: (
+      start: left,
+      end: right,
+      center: center,
+      justify: justify,
+    ),
+    enable-important-values: true,
   );
 
   @include generate-style($config);
@@ -17,7 +22,7 @@
     properties: vertical-align,
     selector: "txt",
     values: baseline top middle bottom sub super,
-    enable-important-values: true
+    enable-important-values: true,
   );
 
   @include generate-style($config);

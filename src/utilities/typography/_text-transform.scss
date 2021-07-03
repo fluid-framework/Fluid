@@ -11,7 +11,18 @@
       upper: uppercase,
       cap: capitalize,
     ),
-    enable-important-values: true
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  $config: (
+    properties: writing-mode,
+    selector: "txt",
+    values: (
+      vertical: vertical-lr,
+    ),
+    enable-important-values: true,
   );
 
   @include generate-style($config);
