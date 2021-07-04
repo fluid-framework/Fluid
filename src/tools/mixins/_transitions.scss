@@ -47,6 +47,17 @@ $keyframes: (
   ripple-gray: true,
   flash: true,
   fadein: true,
+  fadeout: true,
+  grayscalein: true,
+  grayscaleout: true,
+  blurin: true,
+  blurout: true,
+  zoomin: true,
+  zoomin-reverse: true,
+  zoomout: true,
+  zoomout-reverse: true,
+  elevate: true,
+  elevate-reverse: true,
   spin: true
 ) !default;
 
@@ -77,6 +88,54 @@ $keyframes: (
       } @else if $name == fadein {
         @keyframes fadein {
           from { opacity: 0; }
+        }
+      } @else if $name == fadeout {
+        @keyframes fadeout {
+          to { opacity: 0; }
+        }
+      } @else if $name == grayscaleout {
+        @keyframes grayscaleout {
+          from { filter: grayscale(100); }
+        }
+      } @else if $name == grayscalein {
+        @keyframes grayscalein {
+          to { filter: grayscale(100); }
+        }
+      } @else if $name == blurout {
+        @keyframes blurout {
+          from { filter: blur(2px); }
+        }
+      } @else if $name == blurin {
+        @keyframes blurin {
+          to { filter: blur(2px); }
+        }
+      } @else if $name == zoomin-reverse {
+        @keyframes zoomin-reverse {
+          from { transform: scale(1.1); }
+        }
+      } @else if $name == zoomin {
+        @keyframes zoomin {
+          to { transform: scale(1.1); }
+        }
+      } @else if $name == zoomout-reverse {
+        @keyframes zoomout-reverse {
+          from { transform: scale(.95); }
+          to { transform: scale(1); }
+        }
+      } @else if $name == zoomout {
+        @keyframes zoomout {
+          from { transform: scale(1); }
+          to { transform: scale(.95); }
+        }
+      } @else if $name == elevate-reverse {
+        @keyframes elevate-reverse {
+          from { transform: translateY(-1em); }
+          to { transform: translateY(0); }
+        }
+      } @else if $name == elevate {
+        @keyframes elevate {
+          from { transform: translateY(0); }
+          to { transform: translateY(-1em); }
         }
       } @else if $name == spin {
         @keyframes spin {

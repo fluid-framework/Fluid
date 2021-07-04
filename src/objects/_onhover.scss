@@ -1,0 +1,161 @@
+//
+// Onhover Show
+//
+
+@if $generate-object-classes {
+  %onhover-fadein {
+    @include animation(fadein, .25s);
+  }
+  %onhover-grayscalein {
+    @include animation(grayscalein, .25s);
+  }
+  %onhover-blurin {
+    @include animation(blurin, .25s);
+  }
+  %onhover-zoomin {
+    @include animation(zoomin, .25s);
+  }
+  %onhover-zoomout {
+    @include animation(zoomout, .25s);
+  }
+  %onhover-elevate {
+    @include animation(elevate, .25s);
+  }
+
+  //
+  // Onhover fadein
+  //
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-suffix: prefix(
+      name-breakpoint($breakpoint),
+      "\\"+ $breakpoints-above-prefix
+    );
+
+    .onhover-fadein#{$breakpoint-suffix} {
+      @include media-breakpoint-above($breakpoint) {
+        @include animation(fadeout, .25s);
+      }
+      @include hover {
+        @extend %onhover-fadein;
+      }
+    }
+  }
+
+  //
+  // Onhover grayscale
+  //
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-suffix: prefix(
+      name-breakpoint($breakpoint),
+      "\\"+ $breakpoints-above-prefix
+    );
+
+    .onhover-grayscale#{$breakpoint-suffix} {
+      @include media-breakpoint-above($breakpoint) {
+        @include animation(grayscaleout, .25s);
+      }
+      @include hover {
+        @extend %onhover-grayscalein;
+      }
+    }
+  }
+
+  //
+  // Onhover blur
+  //
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-suffix: prefix(
+      name-breakpoint($breakpoint),
+      "\\"+ $breakpoints-above-prefix
+    );
+
+    .onhover-blur#{$breakpoint-suffix} {
+      @include media-breakpoint-above($breakpoint) {
+        @include animation(blurout, .25s);
+      }
+      @include hover {
+        @extend %onhover-blurin;
+      }
+    }
+  }
+
+  //
+  // Onhover zoomin
+  //
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-suffix: prefix(
+      name-breakpoint($breakpoint),
+      "\\"+ $breakpoints-above-prefix
+    );
+
+    .onhover-zoomin#{$breakpoint-suffix} {
+      @include media-breakpoint-above($breakpoint) {
+        @include animation(zoomin-reverse, .25s);
+      }
+      @include hover {
+        @extend %onhover-zoomin;
+      }
+    }
+  }
+
+  //
+  // Onhover zoomout
+  //
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-suffix: prefix(
+      name-breakpoint($breakpoint),
+      "\\"+ $breakpoints-above-prefix
+    );
+
+    .onhover-zoomout#{$breakpoint-suffix} {
+      @include media-breakpoint-above($breakpoint) {
+        @include animation(zoomout-reverse, .25s);
+      }
+      @include hover {
+        @extend %onhover-zoomout;
+      }
+    }
+  }
+
+  .onhover-elevate {
+    @include transition(transform);
+
+    @include hover {
+      transform: translateY(-2rem);
+    }
+  }
+
+  //
+  // Onhover elevate
+  //
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-suffix: prefix(
+      name-breakpoint($breakpoint),
+      "\\"+ $breakpoints-above-prefix
+    );
+
+    .onhover-elevate#{$breakpoint-suffix} {
+      @include media-breakpoint-above($breakpoint) {
+        @include animation(elevate-reverse, .25s);
+      }
+      @include hover {
+        @extend %onhover-elevate;
+      }
+    }
+  }
+
+  //
+  // Onhover Parent
+  //
+  .onhover-parent {
+    position: relative;
+
+    [class*="onhover-"] {
+      @include before {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+      }
+    }
+  }
+}
