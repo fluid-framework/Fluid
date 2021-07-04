@@ -47,4 +47,30 @@
   );
 
   @include generate-style($config);
+
+  //
+  // Stroke
+  //
+
+  $txt-stoke-color-map: map-merge(
+    $theme-colors,
+    (
+      body: $body-color,
+      black: $black,
+      white: $white,
+    )
+  );
+
+  @each $color, $value in $txt-stoke-color-map {
+    $txt-stoke-color-map: map-merge($txt-stoke-color-map, ($color: $value .03em));
+  }
+
+  $config: (
+    properties: -webkit-text-stroke text-stroke,
+    selector: "outline",
+    values: $txt-stoke-color-map,
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
 }
