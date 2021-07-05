@@ -1,21 +1,20 @@
-
 @if $generate-spacing-classes {
   /**
    * Table of Contents:
    *        Basic Margin
+   *        Margin horizontal
+   *        Margin vertical
    *        Margin top
    *        Margin right
    *        Margin bottom
    *        Margin left
-   *        Margin horizontal
-   *        Margin vertical
    *        Basic Padding
+   *        padding horizontal
+   *        padding vertical
    *        Padding top
    *        Padding right
    *        Padding bottom
    *        Padding left
-   *        padding horizontal
-   *        padding vertical
   * ===============================================
   */
 
@@ -28,7 +27,35 @@
     properties: margin,
     selector: "m",
     values: $space-sizes,
-    enable-important-values: true
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // Margin horizontal
+  //
+
+  $config: (
+    responsive: true,
+    properties: margin-left margin-right,
+    selector: "mx",
+    values: $space-sizes,
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // Margin vertical
+  //
+
+  $config: (
+    responsive: true,
+    properties: margin-top margin-bottom,
+    selector: "my",
+    values: $space-sizes,
+    enable-important-values: true,
   );
 
   @include generate-style($config);
@@ -44,35 +71,7 @@
     values: $space-sizes,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
-    enable-important-values: true
-  );
-
-  @include generate-style($config);
-
-  //
-  //  Margin horizontal
-  //
-
-  $config: (
-    responsive: true,
-    properties: margin-left margin-right,
-    selector: "mx",
-    values: $space-sizes,
-    enable-important-values: true
-  );
-
-  @include generate-style($config);
-
-  //
-  //  Margin vertical
-  //
-
-  $config: (
-    responsive: true,
-    properties: margin-top margin-bottom,
-    selector: "my",
-    values: $space-sizes,
-    enable-important-values: true
+    enable-important-values: true,
   );
 
   @include generate-style($config);
@@ -86,7 +85,35 @@
     properties: padding,
     selector: "p",
     values: $space-sizes,
-    enable-important-values: true
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // padding horizontal
+  //
+
+  $config: (
+    responsive: true,
+    properties: padding-left padding-right,
+    selector: "px",
+    values: $space-sizes,
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // padding vertical
+  //
+
+  $config: (
+    responsive: true,
+    properties: padding-top padding-bottom,
+    selector: "py",
+    values: $space-sizes,
+    enable-important-values: true,
   );
 
   @include generate-style($config);
@@ -102,35 +129,7 @@
     values: $space-sizes,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
-    enable-important-values: true
-  );
-
-  @include generate-style($config);
-
-  //
-  //  padding horizontal
-  //
-
-  $config: (
-    responsive: true,
-    properties: padding-left padding-right,
-    selector: "px",
-    values: $space-sizes,
-    enable-important-values: true
-  );
-
-  @include generate-style($config);
-
-  //
-  //  padding vertical
-  //
-
-  $config: (
-    responsive: true,
-    properties: padding-top padding-bottom,
-    selector: "py",
-    values: $space-sizes,
-    enable-important-values: true
+    enable-important-values: true,
   );
 
   @include generate-style($config);

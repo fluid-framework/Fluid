@@ -1,14 +1,13 @@
-
 @if $generate-spacing-classes {
   /**
    * Table of Contents:
    *        Basic Margin
+   *        Margin horizontal
+   *        Margin vertical
    *        Margin top
    *        Margin right
    *        Margin bottom
    *        Margin left
-   *        Margin horizontal
-   *        Margin vertical
   * ===============================================
   */
 
@@ -26,7 +25,35 @@
     properties: margin,
     selector: "m",
     values: $SIZES,
-    enable-important-values: true
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // Margin horizontal
+  //
+
+  $config: (
+    responsive: true,
+    properties: margin-left margin-right,
+    selector: "mx",
+    values: $SIZES,
+    enable-important-values: true,
+  );
+
+  @include generate-style($config);
+
+  //
+  // Margin vertical
+  //
+
+  $config: (
+    responsive: true,
+    properties: margin-top margin-bottom,
+    selector: "my",
+    values: $SIZES,
+    enable-important-values: true,
   );
 
   @include generate-style($config);
@@ -42,37 +69,7 @@
     values: $SIZES,
     infixes: $directions,
     disable-prefix-infixes-keys: true,
-    enable-important-values: true
-  );
-
-  @include generate-style($config);
-
-  //
-  //  Margin horizontal
-  //
-
-  // Idea : remove because it isn't used often ?
-  $config: (
-    responsive: true,
-    properties: margin-left margin-right,
-    selector: "mx",
-    values: $SIZES,
-    enable-important-values: true
-  );
-
-  @include generate-style($config);
-
-  //
-  //  Margin vertical
-  //
-
-  // Idea : remove because it isn't used often ?
-  $config: (
-    responsive: true,
-    properties: margin-top margin-bottom,
-    selector: "my",
-    values: $SIZES,
-    enable-important-values: true
+    enable-important-values: true,
   );
 
   @include generate-style($config);
