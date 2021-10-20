@@ -1,0 +1,19 @@
+//
+// Containers Settings
+//
+
+//
+// Inherit
+//
+$scrollbar-thumb-radius:             $borderradius-pill !default;
+
+//
+// Setting
+//
+$scrollbar-width:                    7px !default;
+$scrollbar-height:                   7px !default;
+$scrollbar-background:               $gray-100 !default;
+$scrollbar-hover-background:         $gray-200 !default;
+
+$scrollbar-thumb-background:         rgba($dark, .65) !default;
+$scrollbar-thumb-focus-background:   $dark !default;
